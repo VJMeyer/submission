@@ -28,7 +28,7 @@ book:
     - index.qmd
     - chapters/intro.qmd
     - chapters/summary.qmd
-    - ref/references.qmd
+    - article/ref/references.qmd
 #    - chapters/intro.qmd
 #    - chapters/01-intro.qmd
 #    - chapters/02-methods.qmd
@@ -47,7 +47,7 @@ book:
       - icon: twitter 
         href: https://twitter.com/
 
-bibliography: ref/references.bib
+bibliography: article/ref/references.bib
 
 format:
   html:

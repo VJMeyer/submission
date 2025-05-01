@@ -29,7 +29,7 @@ key-points:
   - A web scraping script was developed to pull data from the Instituto Geogràphico Nacional into a machine-readable form for analysis
   - Earthquake events on La Palma are consistent with the presence of both mantle and crustal reservoirs.
 date: last-modified
-bibliography: references.bib
+bibliography: ref/references.bib
 citation:
   container-title: Earth and Space Science
 number-sections: true
