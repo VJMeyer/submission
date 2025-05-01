@@ -276,21 +276,55 @@ To learn more about Quarto books visit
 
 \bookmarksetup{startatroot}
 
+\chapter{AMTAIR}\label{amtair}
+
+\bookmarksetup{startatroot}
+
 \chapter{Introduction}\label{introduction}
 
 This is a book created from markdown and executable code.
 
 See Knuth (1984) for additional discussion of literate programming.
 
+Regular markdown and \(E=mc^2\) equations.
+
+\begin{align}
+a &= b + c \\
+d &= e * f
+\end{align}
+
+\section{Quarto}\label{quarto}
+
+Quarto enables you to weave together content and executable code into a
+finished document. To learn more about Quarto see
+\url{https://quarto.org}.
+
+\section{Running Code}\label{running-code}
+
+When you click the \textbf{Render} button a document will be generated
+that includes both content and the output of embedded code. You can
+embed code like this:
+
 \begin{Shaded}
 \begin{Highlighting}[]
-\DecValTok{1} \SpecialCharTok{+} \DecValTok{1}
+\DecValTok{1} \OperatorTok{+} \DecValTok{1}
 \end{Highlighting}
 \end{Shaded}
 
 \begin{verbatim}
-[1] 2
+2
 \end{verbatim}
+
+You can add options to executable code like this
+
+\begin{verbatim}
+4
+\end{verbatim}
+
+The \texttt{echo:\ false} option disables the printing of code (only
+output is displayed).
+
+More markdown.
 
 \bookmarksetup{startatroot}
 

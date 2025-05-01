@@ -1,7 +1,15 @@
+---
+title: "AMTAIR"
+author: "Valentin Jakob Meyer"
+format: html
+editor: visual
+---
+
 # Introduction
 
 This is a book created from markdown and executable code.
 
+See @knuth84 for additional discussion of literate programming.
 
 Regular markdown and $E=mc^2$ equations.
 
@@ -10,11 +18,6 @@ a &= b + c \\
 d &= e * f
 \end{align}
 
-More markdown.
-
-```{r}
-1 + 1
-```
 
 
 ## Quarto
@@ -38,4 +41,4 @@ You can add options to executable code like this
 
 The `echo: false` option disables the printing of code (only output is displayed).
 
-
+More markdown.

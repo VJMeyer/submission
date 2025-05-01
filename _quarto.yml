@@ -16,7 +16,7 @@ book:
     - index.qmd
     - chapters/intro.qmd
     - chapters/summary.qmd
-    - chapters/references.qmd
+    - ref/references.qmd
 #    - chapters/intro.qmd
 #    - chapters/01-intro.qmd
 #    - chapters/02-methods.qmd
@@ -34,23 +34,25 @@ book:
         href: https://github.com/
       - icon: twitter 
         href: https://twitter.com/
-bibliography: references.bib
+
+bibliography: ref/references.bib
 
 format:
+  html:
+    theme: cosmo
+    code-fold: true
+
   pdf:
     pdf-engine: lualatex
     pdf-engine-opt: "-shell-escape"
-    template-partials:
-      - styles/journal-template.tex
-    include-in-header:
-      text/pdfx-setup.tex     # loads \usepackage[a-2b]{pdfx}
+#    template-partials:
+#      - latex/journal-template.tex
+#    include-in-header:
+#      latex/pdfx-setup.tex     # loads \usepackage[a-2b]{pdfx}
 #      latex/preamble.tex    # Claude suggestion
 #    documentclass: scrreprt    # Claude suggestion
 #    keep-tex: true            # Claude suggestion
 #    documentclass: book    # Claude suggestion
 #    template: latex/template.tex    # Claude suggestion
-  html:
-    theme: cosmo
-    code-fold: true
 
   latex: default             # emits .tex on demand
