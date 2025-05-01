@@ -1,9 +1,4 @@
----
-title: "AMTAIR"
-author: "Valentin Jakob Meyer"
-format: html
-editor: visual
----
+
 
 # Introduction
 
@@ -17,8 +12,6 @@ Regular markdown and $E=mc^2$ equations.
 a &= b + c \\
 d &= e * f
 \end{align}
-
-
 
 ## Quarto
 

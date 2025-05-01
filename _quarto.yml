@@ -1,8 +1,18 @@
 project:
   type: book
-  output-dir: docs   # keeps root tidy
+  output-dir: _docs   # keeps root tidy
 
 #toc: true
+
+profiles:
+  manuscript:
+    project:
+      type: manuscript
+      output-dir: article/_docs   # keeps root tidy
+    execute: false          # e.g. re-use cached code
+    format:
+      pdf:
+        template: journal.cls
 
 book:
   title: "Automating the Modelling of Transformative Artificial Intelligence Risks"
