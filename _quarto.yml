@@ -1,0 +1,26 @@
+project:
+  type: book
+  output-dir: _build   # keeps root tidy
+
+book:
+  title: "submission"
+  author: "Norah Jones"
+  date: "5/1/2025"
+  chapters:
+    - index.qmd
+    - intro.qmd
+    - summary.qmd
+    - references.qmd
+
+bibliography: references.bib
+
+format:
+  html:
+    theme:
+      - cosmo
+      - brand
+  pdf:
+    documentclass: scrreprt
+
+editor: visual
+
