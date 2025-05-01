@@ -7,3 +7,6 @@ In summary, this book has no content whatsoever.
 ```
 
 {{< embed ../article/notebooks/explore-earthquakes.qmd >}}
+
+{{< embed ../article/notebooks/AMTAIR_Prototype_example_carlsmith.ipynb >}}
+
