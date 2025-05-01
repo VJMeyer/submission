@@ -47,7 +47,7 @@ book:
       - icon: twitter 
         href: https://twitter.com/
 
-bibliography: article/ref/references.bib
+bibliography: article/ref/MAref.bib
 
 format:
   html:
