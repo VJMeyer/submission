@@ -1,0 +1,38 @@
+project:
+  type: book
+  output-dir: _build   # keeps root tidy
+
+book:
+  title: "Automating the Modelling of Transformative Artificial Intelligence Risks"
+  author: "Valentin Jakob Meyer"
+  chapters:
+    - index.qmd
+    - text/01-intro.qmd
+    - text/02-methods.qmd
+    - chapters/03-results.qmd
+    - text/99-appendix.qmd
+    - intro.qmd
+    - methodology.qmd
+    # etc.
+
+bibliography: bib/references.bib
+csl: bib/apa.csl
+
+format:
+  pdf:
+    pdf-engine: lualatex
+    pdf-engine-opt: "-shell-escape"
+    template-partials:
+      - styles/journal-template.tex
+    include-in-header:
+      text/pdfx-setup.tex     # loads \usepackage[a-2b]{pdfx}
+#      latex/preamble.tex    # Claude suggestion
+#    documentclass: scrreprt    # Claude suggestion
+#    keep-tex: true            # Claude suggestion
+#    documentclass: book    # Claude suggestion
+#    template: latex/template.tex    # Claude suggestion
+  html:
+    theme: cosmo
+    code-fold: true
+
+  latex: default             # emits .tex on demand
