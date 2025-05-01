@@ -28,14 +28,15 @@ book:
     - index.qmd
     - chapters/intro.qmd
     - chapters/summary.qmd
-    - article/ref/references.qmd
 #    - chapters/intro.qmd
 #    - chapters/01-intro.qmd
 #    - chapters/02-methods.qmd
 #    - chapters/03-results.qmd
-#    - chapters/99-appendix.qmd
+    - chapters/appendixA.qmd
 #    - chapters/methodology.qmd
     # etc.
+    - article/ref/references.qmd
+
 #  appendices:
 #    - tools.qmd
 #    - resources.qmd
