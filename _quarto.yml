@@ -14,9 +14,16 @@ book:
   cover-image: cover.png
   chapters:
     - index.qmd
-    - intro.qmd
-    - summary.qmd
-    - references.qmd
+    - chapters/intro.qmd
+    - chapters/summary.qmd
+    - chapters/references.qmd
+#    - chapters/intro.qmd
+#    - chapters/01-intro.qmd
+#    - chapters/02-methods.qmd
+#    - chapters/03-results.qmd
+#    - chapters/99-appendix.qmd
+#    - chapters/methodology.qmd
+    # etc.
 #  appendices:
 #    - tools.qmd
 #    - resources.qmd

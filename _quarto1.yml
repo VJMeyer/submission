@@ -7,12 +7,12 @@ book:
   author: "Valentin Jakob Meyer"
   chapters:
     - index.qmd
-#    - intro.qmd
-#    - text/01-intro.qmd
-#    - text/02-methods.qmd
+#    - chapters/intro.qmd
+#    - chapters/01-intro.qmd
+#    - chapters/02-methods.qmd
 #    - chapters/03-results.qmd
-#    - text/99-appendix.qmd
-#    - methodology.qmd
+#    - chapters/99-appendix.qmd
+#    - chapters/methodology.qmd
     # etc.
 
 bibliography: bib/references.bib
