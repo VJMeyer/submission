@@ -21,9 +21,9 @@ book:
   search: true
   repo-url: https://github.com/VJMeyer/submission
   repo-actions: [edit]
-  downloads: [pdf, epub]
+  downloads: [pdf, epub]     # vs markdown, html etc.
   sharing: [twitter, facebook]
-  cover-image: cover.png
+  cover-image: article/images/cover.png
   chapters:
     - index.qmd
     - chapters/intro.qmd
