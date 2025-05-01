@@ -6,13 +6,13 @@ book:
   title: "Automating the Modelling of Transformative Artificial Intelligence Risks"
   author: "Valentin Jakob Meyer"
   chapters:
-    - index.qmd
-    - text/01-intro.qmd
-    - text/02-methods.qmd
-    - chapters/03-results.qmd
-    - text/99-appendix.qmd
+#    - index.qmd
     - intro.qmd
-    - methodology.qmd
+#    - text/01-intro.qmd
+#    - text/02-methods.qmd
+#    - chapters/03-results.qmd
+#    - text/99-appendix.qmd
+#    - methodology.qmd
     # etc.
 
 bibliography: bib/references.bib
