@@ -1,17 +1,32 @@
 project:
   type: book
-  output-dir: _build   # keeps root tidy
+  output-dir: docs   # keeps root tidy
 
 book:
   title: "Automating the Modelling of Transformative Artificial Intelligence Risks"
   author: "Valentin Jakob Meyer"
   date: "5/1/2025"
+  search: true
+  repo-url: https://github.com/VJMeyer/submission
+  repo-actions: [edit]
+  downloads: [pdf, epub]
+  sharing: [twitter, facebook]
+  cover-image: cover.png
   chapters:
     - index.qmd
     - intro.qmd
     - summary.qmd
     - references.qmd
-
+#  appendices:
+#    - tools.qmd
+#    - resources.qmd
+  page-footer: 
+    left: "Copyright 2025, Valentin Meyer" 
+    right: 
+      - icon: github
+        href: https://github.com/
+      - icon: twitter 
+        href: https://twitter.com/
 bibliography: references.bib
 
 format:
