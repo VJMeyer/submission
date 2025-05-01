@@ -1,0 +1,8 @@
+Regular markdown and $E=mc^2$ equations.
+
+\begin{align}
+a &= b + c \\
+d &= e * f
+\end{align}
+
+More markdown.
