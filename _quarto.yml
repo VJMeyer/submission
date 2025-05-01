@@ -2,6 +2,8 @@ project:
   type: book
   output-dir: docs   # keeps root tidy
 
+#toc: true
+
 book:
   title: "Automating the Modelling of Transformative Artificial Intelligence Risks"
   author: "Valentin Jakob Meyer"
