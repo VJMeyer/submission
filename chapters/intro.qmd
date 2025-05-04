@@ -1,10 +1,8 @@
-
-
 # Introduction
 
-This is a book created from markdown and executable code.
+This is a booooook created from markdown and executable code.
 
-See @knuth84 for additional discussion of literate programming.
+See [@knuth84] and @knuth84 for additional discussion of literate programming.
 
 Regular markdown and $E=mc^2$ equations.
 
@@ -35,3 +33,7 @@ You can add options to executable code like this
 The `echo: false` option disables the printing of code (only output is displayed).
 
 More markdown.
+
+## ToDo's
+
+// Double slash creates a new task
