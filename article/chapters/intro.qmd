@@ -32,6 +32,13 @@ You can add options to executable code like this
 
 The `echo: false` option disables the printing of code (only output is displayed).
 
+
+```{python}
+1 + 1
+```
+
+
+
 More markdown.
 
 ## ToDo's

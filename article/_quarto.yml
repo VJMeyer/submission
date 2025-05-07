@@ -15,5 +15,5 @@ format:
   jats: default
   agu-pdf: default
 
-
-
+manuscript:
+  article: thesis.qmd

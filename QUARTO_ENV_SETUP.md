@@ -1,6 +1,9 @@
 
 # Quarto-Python-R Unified Environment Setup (Mac, Apple Silicon)
 
+<!-- [ ] Update Environment Setup Instructions -->
+
+
 This document describes the full, reproducible setup process to ensure the **same Python/R environment** is available across:
 - **Terminal**
 - **RStudio** (via `reticulate`)
@@ -79,6 +82,8 @@ conda env export --name quarto-env > environment.yml
 ```
 
 ### 6.2. Recommended Git Structure
+
+<!-- [ ] Update with actual Git Structure-->
 
 ```
 project/

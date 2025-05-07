@@ -26,14 +26,16 @@ book:
   cover-image: article/images/cover.png
   chapters:
     - index.qmd
-    - chapters/intro.qmd
-    - chapters/summary.qmd
-#    - chapters/intro.qmd
-#    - chapters/01-intro.qmd
-#    - chapters/02-methods.qmd
-#    - chapters/03-results.qmd
-    - chapters/appendixA.qmd
-#    - chapters/methodology.qmd
+    - article/chapters/intro.qmd
+    - article/chapters/summary.qmd
+    - article/chapters/OutlineDraft9.2.qmd
+    - article/chapters/Draft9.2_sec2.3-4.4_feedback.qmd
+#    - article/chapters/intro.qmd
+#    - article/chapters/01-intro.qmd
+#    - article/chapters/02-methods.qmd
+#    - article/chapters/03-results.qmd
+    - article/chapters/appendixA.qmd
+#    - article/chapters/methodology.qmd
     # etc.
     - article/ref/references.qmd
 

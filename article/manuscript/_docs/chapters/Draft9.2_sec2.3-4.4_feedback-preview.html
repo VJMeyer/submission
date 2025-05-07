@@ -1,0 +1,1325 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+    <meta charset="utf-8">
+    <meta name="generator" content="quarto-1.7.29">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+    <title>draft9.2_sec2.3-4.4_feedback</title>
+    <style>
+      code{white-space: pre-wrap;}
+      span.smallcaps{font-variant: small-caps;}
+      div.columns{display: flex; gap: min(4vw, 1.5em);}
+      div.column{flex: auto; overflow-x: auto;}
+      div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+      ul.task-list{list-style: none;}
+      ul.task-list li input[type="checkbox"] {
+        width: 0.8em;
+        margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+        vertical-align: middle;
+      }
+      /* CSS for syntax highlighting */
+      html { -webkit-text-size-adjust: 100%; }
+      pre > code.sourceCode { white-space: pre; position: relative; }
+      pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+      pre > code.sourceCode > span:empty { height: 1.2em; }
+      .sourceCode { overflow: visible; }
+      code.sourceCode > span { color: inherit; text-decoration: inherit; }
+      div.sourceCode { margin: 1em 0; }
+      pre.sourceCode { margin: 0; }
+      @media screen {
+      div.sourceCode { overflow: auto; }
+      }
+      @media print {
+      pre > code.sourceCode { white-space: pre-wrap; }
+      pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+      }
+      pre.numberSource code
+        { counter-reset: source-line 0; }
+      pre.numberSource code > span
+        { position: relative; left: -4em; counter-increment: source-line; }
+      pre.numberSource code > span > a:first-child::before
+        { content: counter(source-line);
+          position: relative; left: -1em; text-align: right; vertical-align: baseline;
+          border: none; display: inline-block;
+          -webkit-touch-callout: none; -webkit-user-select: none;
+          -khtml-user-select: none; -moz-user-select: none;
+          -ms-user-select: none; user-select: none;
+          padding: 0 4px; width: 4em;
+        }
+      pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+      div.sourceCode
+        {   }
+      @media screen {
+      pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+      }
+    </style>
+
+    <style>
+      body.hypothesis-enabled #quarto-embed-header {
+        padding-right: 36px;
+      }
+
+      #quarto-embed-header {
+        height: 3em;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        border-bottom: solid 1px;
+      }
+
+      #quarto-embed-header h6 {
+        font-size: 1.1em;
+        padding-top: 0.6em;
+        margin-left: 1em;
+        margin-right: 1em;
+        font-weight: 400;
+      }
+
+      #quarto-embed-header a.quarto-back-link,
+      #quarto-embed-header a.quarto-download-embed {
+        font-size: 0.8em;
+        margin-top: 1em;
+        margin-bottom: 1em;
+        margin-left: 1em;
+        margin-right: 1em;
+      }
+
+      .quarto-back-container {
+        padding-left: 0.5em;
+        display: flex;
+      }
+
+      .headroom {
+          will-change: transform;
+          transition: transform 200ms linear;
+      }
+
+      .headroom--pinned {
+          transform: translateY(0%);
+      }
+
+      .headroom--unpinned {
+          transform: translateY(-100%);
+      }      
+    </style>
+
+    <script>
+    window.document.addEventListener("DOMContentLoaded", function () {
+
+      var header = window.document.querySelector("#quarto-embed-header");
+      const titleBannerEl = window.document.querySelector("body > #title-block-header");
+      if (titleBannerEl) {
+        titleBannerEl.style.paddingTop = header.clientHeight + "px";
+      }
+      const contentEl = window.document.getElementById('quarto-content');
+      for (const child of contentEl.children) {
+        child.style.paddingTop = header.clientHeight + "px";
+        child.style.marginTop = "1em";
+      }
+
+      // Use the article root if the `back` call doesn't work. This isn't perfect
+      // but should typically work
+      window.quartoBackToArticle = () => {
+        var currentUrl = window.location.href;
+        window.history.back();
+        setTimeout(() => {
+            // if location was not changed in 100 ms, then there is no history back
+            if(currentUrl === window.location.href){              
+                // redirect to site root
+                window.location.href = "../index.html";
+            }
+        }, 100);
+      }
+
+      const headroom = new window.Headroom(header, {
+        tolerance: 5,
+        onPin: function () {
+        },
+        onUnpin: function () {
+        },
+      });
+      headroom.init();
+    });
+    </script>
+
+    
+<script src="../site_libs/manuscript-notebook/headroom.min.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-0815c480559380816a4d1ea211a47e91.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap-8a894fcc3cb5e37eb5bf30def131be2f.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+     <script async="" src="https://hypothes.is/embed.js"></script>
+<script>
+  window.document.addEventListener("DOMContentLoaded", function (_event) {
+    document.body.classList.add('hypothesis-enabled');
+  });
+</script>  
+      </head>
+
+  <body class="quarto-notebook quarto-light">
+    <div id="quarto-embed-header" class="headroom fixed-top bg-primary">
+      
+      <a onclick="window.quartoBackToArticle(); return false;" class="btn btn-primary quarto-back-link" href=""><i class="bi bi-caret-left"></i> Back to Article</a>
+      <h6><i class="bi bi-journal-code"></i> 2.3 The Epistemic Challenge of Policy Evaluation</h6>
+
+            <a href="../chapters/Draft9.2_sec2.3-4.4_feedback.qmd" class="btn btn-primary quarto-download-embed" download="Draft9.2_sec2.3-4.4_feedback.qmd">Download Source</a>
+          </div>
+
+     <div id="quarto-content" class="page-columns page-rows-contents page-layout-article toc-left">
+<div id="quarto-sidebar-toc-left" class="sidebar toc-left">
+  <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Table of contents</h2>
+   
+  <ul>
+  <li><a href="#the-epistemic-challenge-of-policy-evaluation" id="toc-the-epistemic-challenge-of-policy-evaluation" class="nav-link active" data-scroll-target="#the-epistemic-challenge-of-policy-evaluation">2.3 The Epistemic Challenge of Policy Evaluation</a></li>
+  <li><a href="#argument-mapping-and-formal-representations" id="toc-argument-mapping-and-formal-representations" class="nav-link" data-scroll-target="#argument-mapping-and-formal-representations">2.4 Argument Mapping and Formal Representations</a></li>
+  <li><a href="#the-mtair-framework-achievements-and-limitations" id="toc-the-mtair-framework-achievements-and-limitations" class="nav-link" data-scroll-target="#the-mtair-framework-achievements-and-limitations">2.5 The MTAIR Framework: Achievements and Limitations</a></li>
+  <li><a href="#own-position-and-argument" id="toc-own-position-and-argument" class="nav-link" data-scroll-target="#own-position-and-argument">3. Own Position and Argument</a>
+  <ul class="collapse">
+  <li><a href="#the-amtair-solution-automation-and-integration" id="toc-the-amtair-solution-automation-and-integration" class="nav-link" data-scroll-target="#the-amtair-solution-automation-and-integration">3.1 The AMTAIR Solution: Automation and Integration</a></li>
+  <li><a href="#the-two-stage-extraction-process" id="toc-the-two-stage-extraction-process" class="nav-link" data-scroll-target="#the-two-stage-extraction-process">3.2 The Two-Stage Extraction Process</a></li>
+  <li><a href="#bayesdown-bridging-qualitative-and-quantitative-representation" id="toc-bayesdown-bridging-qualitative-and-quantitative-representation" class="nav-link" data-scroll-target="#bayesdown-bridging-qualitative-and-quantitative-representation">3.3 BayesDown: Bridging Qualitative and Quantitative Representation</a></li>
+  <li><a href="#interactive-visualization-and-exploration" id="toc-interactive-visualization-and-exploration" class="nav-link" data-scroll-target="#interactive-visualization-and-exploration">3.4 Interactive Visualization and Exploration</a></li>
+  <li><a href="#beyond-extraction-toward-policy-evaluation" id="toc-beyond-extraction-toward-policy-evaluation" class="nav-link" data-scroll-target="#beyond-extraction-toward-policy-evaluation">3.5 Beyond Extraction: Toward Policy Evaluation</a></li>
+  </ul></li>
+  <li><a href="#implementation-the-amtair-prototype" id="toc-implementation-the-amtair-prototype" class="nav-link" data-scroll-target="#implementation-the-amtair-prototype">4. Implementation: The AMTAIR Prototype</a>
+  <ul class="collapse">
+  <li><a href="#system-architecture-and-data-flow" id="toc-system-architecture-and-data-flow" class="nav-link" data-scroll-target="#system-architecture-and-data-flow">4.1 System Architecture and Data Flow</a></li>
+  <li><a href="#the-rain-sprinkler-lawn-implementation" id="toc-the-rain-sprinkler-lawn-implementation" class="nav-link" data-scroll-target="#the-rain-sprinkler-lawn-implementation">4.2 The Rain-Sprinkler-Lawn Implementation</a></li>
+  <li><a href="#application-to-carlsmiths-model" id="toc-application-to-carlsmiths-model" class="nav-link" data-scroll-target="#application-to-carlsmiths-model">4.3 Application to Carlsmith’s Model</a></li>
+  </ul></li>
+  </ul>
+</nav>
+</div>
+<div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
+</div>
+<main class="content" id="quarto-document-content">      <section id="the-epistemic-challenge-of-policy-evaluation" class="level3">
+<h3 class="anchored" data-anchor-id="the-epistemic-challenge-of-policy-evaluation">2.3 The Epistemic Challenge of Policy Evaluation</h3>
+<p>Evaluating policy interventions for AI governance presents unique epistemic challenges that traditional policy analysis methods struggle to address. These challenges arise from the complex causal chains, deep uncertainty, divergent worldviews, and limited empirical grounding that characterize the domain.</p>
+<p>Traditional policy analysis relies heavily on historical precedent, empirical data, and established causal models. Cost-benefit analysis quantifies the predicted impacts of interventions based on observed relationships between variables. Scenario planning explores different futures but typically lacks probability estimates. Expert elicitation captures specialist knowledge but often fails to systematically represent interdependencies between factors. None of these approaches fully addresses the specific challenges of AI governance policy evaluation.</p>
+<p>Four unique difficulties define the epistemic landscape of AI governance:</p>
+<p>First, <strong>complex causal chains with limited empirical grounding</strong> characterize the relationship between governance interventions and risk outcomes. Unlike domains like public health, where interventions have measurable effects on well-defined outcomes, AI governance involves extended causal chains where actions today might influence technological development paths, institutional behaviors, and ultimately risk profiles decades in the future. These chains cannot be empirically tested through traditional methods, yet understanding them is essential for effective governance.</p>
+<p>Second, <strong>deep uncertainty about future capability development</strong> creates a challenging environment for prediction. While some aspects of technology evolution follow discernible patterns, transformative capabilities often emerge unexpectedly through conceptual breakthroughs. This uncertainty isn’t merely quantitative (what are the error bars on our predictions?) but qualitative (what kinds of capabilities might emerge?), creating fundamental challenges for traditional forecasting methods that rely on extrapolation from past trends.</p>
+<p>Third, <strong>divergent worldviews about fundamental risk factors</strong> complicate consensus-building around governance approaches. Experts disagree not just about probability estimates but about which factors matter most and how they relate causally. Some emphasize technical alignment challenges, others focus on competitive dynamics between developers, and still others prioritize institutional oversight mechanisms. Each worldview implies different intervention priorities, yet traditional policy analysis lacks tools for systematically comparing perspectives.</p>
+<p>Fourth, <strong>limited opportunities for experimental testing</strong> prevent iterative refinement of governance approaches. Unlike domains where small-scale pilots can test intervention efficacy before wider implementation, many AI governance interventions must be designed without the benefit of experimental evidence. If certain risks materialize only once systems reach advanced capabilities, learning from experience comes too late.</p>
+<p>Addressing these challenges requires explicit representation across multiple dimensions:</p>
+<ul>
+<li><p><strong>Uncertainty across multiple parameters:</strong> The approach must represent not just uncertainty about outcomes but uncertainty about the relationships between variables and the structure of the causal model itself.</p></li>
+<li><p><strong>Conditional dependencies between variables:</strong> The system needs to capture how different factors influence each other, enabling understanding of complex chains of causation from interventions to outcomes.</p></li>
+<li><p><strong>Comparable representation of different worldviews:</strong> To facilitate productive discourse across perspectives, the approach must represent diverse causal models in a common framework that highlights both agreements and disagreements.</p></li>
+<li><p><strong>Continuous evidence integration mechanisms:</strong> As new information emerges—from theoretical insights, empirical observations, or expert judgments—the system should update its representations to reflect current knowledge.</p></li>
+</ul>
+<p>Historical analogues provide partial insights but no complete template. Nuclear governance established verification protocols and international monitoring, but over a longer timeframe than likely available for AI. Pandemic response developed early warning systems and response protocols, but struggles with similar challenges in predicting novel pathogen emergence. Climate governance demonstrates the difficulty of establishing effective international coordination mechanisms for slow-moving, high-impact risks.</p>
+<p>What distinguishes AI governance is the combination of accelerating technological development, distributed creation capability, and potentially irreversible consequences once certain thresholds are crossed. This unique profile necessitates novel approaches to policy evaluation that can handle the epistemic challenges described above while providing actionable insights for governance.</p>
+<p>The formal modeling approach developed in this thesis addresses these challenges by making assumptions explicit, facilitating structured comparison of worldviews, and enabling rigorous exploration of intervention impacts across scenarios. By transforming implicit models into explicit representations, it creates a foundation for more productive discourse about governance priorities and approaches, even amid deep uncertainty about future developments.</p>
+</section>
+<section id="argument-mapping-and-formal-representations" class="level3">
+<h3 class="anchored" data-anchor-id="argument-mapping-and-formal-representations">2.4 Argument Mapping and Formal Representations</h3>
+<p>Argument mapping provides a bridge between natural language reasoning and formal probabilistic models, enabling the transformation of complex qualitative arguments into structured representations suitable for computational analysis. This section explores two key intermediate representations—ArgDown and BayesDown—that facilitate this transformation process.</p>
+<p>Argument maps are structured visualizations that represent the logical relationships between claims, evidence, and objections. Unlike free-form text, they make explicit how different statements support or challenge one another, forcing clarity about the logical structure of arguments. Traditional argument maps typically include:</p>
+<ul>
+<li>Statements (claims, premises, conclusions) presented as nodes</li>
+<li>Support and attack relationships shown as arrows between nodes</li>
+<li>Hierarchical organization reflecting logical dependencies</li>
+</ul>
+<p>These visualizations help identify unstated assumptions, circular reasoning, and gaps in argumentation. However, traditional argument mapping has limited expressivity for representing uncertainty—a crucial element in complex domains like AI risk assessment.</p>
+<p>ArgDown extends the concept of argument mapping into a structured text format with a consistent syntax. Developed by Christian Voigt at Karlsruhe Institute of Technology, ArgDown provides a markdown-like notation for representing arguments in a hierarchical structure that can be automatically visualized and analyzed. The basic syntax is:</p>
+<pre><code>[Statement]: Description of the statement.
+ + [Supporting_Statement]: Description of supporting statement.
+   + [Further_Support]: Description of additional support.
+ - [Opposing_Statement]: Description of opposing statement.</code></pre>
+<p>For the AMTAIR project, we adapt ArgDown to focus on causal relationships rather than general argumentation, using a modified syntax where the hierarchical structure represents causal influence:</p>
+<pre><code>[Effect]: Description of effect. {"instantiations": ["effect_TRUE", "effect_FALSE"]}
+ + [Cause1]: Description of first cause. {"instantiations": ["cause1_TRUE", "cause1_FALSE"]}
+ + [Cause2]: Description of second cause. {"instantiations": ["cause2_TRUE", "cause2_FALSE"]}
+   + [Root_Cause]: A cause that influences Cause2. {"instantiations": ["root_TRUE", "root_FALSE"]}</code></pre>
+<p>This adaptation adds metadata in JSON format to specify possible states (instantiations) of each variable, preparing the structure for probabilistic enhancement. The hierarchical relationships (indented with plus signs) represent causal influence, creating a directed graph structure.</p>
+<p>The Rain-Sprinkler-Lawn example in ArgDown format illustrates this structure:</p>
+<pre><code>[Grass_Wet]: Concentrated moisture on, between and around the blades of grass. {"instantiations": ["grass_wet_TRUE", "grass_wet_FALSE"]}
+ + [Rain]: Tears of angles crying high up in the skies hitting the ground. {"instantiations": ["rain_TRUE", "rain_FALSE"]}
+ + [Sprinkler]: Activation of a centrifugal force based CO2 droplet distribution system. {"instantiations": ["sprinkler_TRUE", "sprinkler_FALSE"]}
+   + [Rain]</code></pre>
+<p>This representation captures the causal structure (both Rain and Sprinkler influence Grass_Wet, and Rain also influences Sprinkler) and specifies the possible states of each variable. However, it lacks probability information, which is where BayesDown extends the representation.</p>
+<p>BayesDown builds on ArgDown by adding probability metadata, transforming a purely structural representation into a complete Bayesian network specification. The enhanced format includes:</p>
+<pre><code>[Node]: Description. {
+  "instantiations": ["node_TRUE", "node_FALSE"],
+  "priors": {
+    "p(node_TRUE)": "0.7",
+    "p(node_FALSE)": "0.3"
+  },
+  "posteriors": {
+    "p(node_TRUE|parent_TRUE)": "0.9",
+    "p(node_TRUE|parent_FALSE)": "0.4",
+    "p(node_FALSE|parent_TRUE)": "0.1",
+    "p(node_FALSE|parent_FALSE)": "0.6"
+  }
+}</code></pre>
+<p>The Rain-Sprinkler-Lawn example in BayesDown format illustrates this enhancement:</p>
+<pre><code>[Grass_Wet]: Concentrated moisture on grass. {
+  "instantiations": ["grass_wet_TRUE", "grass_wet_FALSE"],
+  "priors": {"p(grass_wet_TRUE)": "0.322", "p(grass_wet_FALSE)": "0.678"},
+  "posteriors": {
+    "p(grass_wet_TRUE|sprinkler_TRUE,rain_TRUE)": "0.99",
+    "p(grass_wet_TRUE|sprinkler_TRUE,rain_FALSE)": "0.9",
+    "p(grass_wet_TRUE|sprinkler_FALSE,rain_TRUE)": "0.8",
+    "p(grass_wet_TRUE|sprinkler_FALSE,rain_FALSE)": "0.0"
+  }
+}
+ + [Rain]: Water falling from the sky. {
+   "instantiations": ["rain_TRUE", "rain_FALSE"],
+   "priors": {"p(rain_TRUE)": "0.2", "p(rain_FALSE)": "0.8"}
+ }
+ + [Sprinkler]: Artificial watering system. {
+   "instantiations": ["sprinkler_TRUE", "sprinkler_FALSE"],
+   "priors": {"p(sprinkler_TRUE)": "0.44838", "p(sprinkler_FALSE)": "0.55162"},
+   "posteriors": {
+     "p(sprinkler_TRUE|rain_TRUE)": "0.01", 
+     "p(sprinkler_TRUE|rain_FALSE)": "0.4"
+   }
+ }
+   + [Rain]</code></pre>
+<p>This representation now contains all the information needed to construct a complete Bayesian network: variables with their possible states, causal relationships between variables, prior probabilities for root nodes, and conditional probability tables for nodes with parents.</p>
+<p>The transformation workflow from natural language to BayesDown involves several steps:</p>
+<ol type="1">
+<li>Identify key variables and their possible states from the text</li>
+<li>Determine causal relationships between variables</li>
+<li>Represent the structure in ArgDown format</li>
+<li>Generate probability questions based on the structure</li>
+<li>Answer these questions (manually or via LLM)</li>
+<li>Incorporate probability answers into BayesDown format</li>
+</ol>
+<p>This progressive transformation preserves the narrative richness of the original text while adding formal structure. The intermediate representations (ArgDown and BayesDown) remain human-readable, maintaining the connection to the original arguments while enabling computational analysis.</p>
+<p>The key innovation in this approach is the separation of structure extraction from probability quantification, which aligns with how experts typically approach complex arguments. First, they identify what factors matter and how they relate causally, then they consider how probable different scenarios are based on those relationships. This two-stage process makes the extraction more robust and the resulting representations more interpretable.</p>
+</section>
+<section id="the-mtair-framework-achievements-and-limitations" class="level3">
+<h3 class="anchored" data-anchor-id="the-mtair-framework-achievements-and-limitations">2.5 The MTAIR Framework: Achievements and Limitations</h3>
+<p>The Modeling Transformative AI Risks (MTAIR) project, led by David Manheim and colleagues, represents a significant precursor to the current research. Launched in 2021, MTAIR aimed to create structured representations of existential risks from advanced AI using Bayesian networks, directed acyclic graphs, and probabilistic modeling. Understanding its achievements and limitations provides important context for the current AMTAIR approach.</p>
+<p>MTAIR emerged from the recognition that AI risk discussions often involved complex causal arguments with implicit probability judgments that were difficult to compare or integrate. By formalizing these arguments in structured models, the project sought to make assumptions explicit, enable quantitative analysis, and facilitate more productive discourse across different perspectives on AI risk.</p>
+<p>The framework’s key innovations included:</p>
+<ol type="1">
+<li><p><strong>Explicit representation of uncertainty through probability distributions:</strong> Rather than presenting point estimates, MTAIR captured uncertainty about parameters using distributions, acknowledging the significant uncertainty in AI risk assessment.</p></li>
+<li><p><strong>Hierarchical structure for complex scenarios:</strong> The approach used nested models that allowed exploration of different levels of detail, from high-level risk factors to specific technical mechanisms.</p></li>
+<li><p><strong>Integration of diverse expert judgments:</strong> The framework incorporated perspectives from various specialists, creating a more comprehensive view than any single expert could provide.</p></li>
+</ol>
+<p>The project’s practical impact extended beyond its technical achievements. It influenced research prioritization by identifying critical uncertainties that warranted further investigation. It enhanced discourse quality by providing a shared vocabulary and structure for discussing causal pathways to risk. It also created visual representations that made complex arguments more accessible to stakeholders without technical backgrounds.</p>
+<p>Despite these achievements, MTAIR faced several important limitations:</p>
+<ol type="1">
+<li><p><strong>Manual labor intensity limiting scalability:</strong> Creating and updating models required substantial expert time, limiting the number and complexity of models that could be developed and maintained. As one team member noted, “It often took several days of work to formalize even relatively straightforward arguments.”</p></li>
+<li><p><strong>Static nature of models once constructed:</strong> The models were essentially snapshots that did not automatically update as new information emerged, requiring manual revision to remain current.</p></li>
+<li><p><strong>Limited accessibility for non-technical stakeholders:</strong> While visual representations improved accessibility, understanding and interacting with the models still required specialized knowledge.</p></li>
+<li><p><strong>Challenges in representing multiple worldviews simultaneously:</strong> Comparing different perspectives required creating separate models, making it difficult to identify specific points of agreement and disagreement.</p></li>
+</ol>
+<p>These limitations motivate the current research in automating the extraction and transformation process. As AI capabilities advance and the volume of relevant research grows, manual approaches cannot keep pace with the need for comprehensive, up-to-date models. Automation addresses the scalability limitation by dramatically reducing the time required to create formal representations of expert arguments.</p>
+<p>Moreover, incorporating frontier LLMs into the pipeline enables new capabilities that were not feasible in the original MTAIR framework. These include:</p>
+<ol type="1">
+<li>Processing larger volumes of literature to capture more diverse perspectives</li>
+<li>Generating intermediate representations that preserve narrative structure</li>
+<li>Automating the creation of probability questions based on model structure</li>
+<li>Facilitating integration with live data sources for continuous updates</li>
+</ol>
+<p>By building on MTAIR’s foundation while addressing its key limitations, the current research maintains continuity with established approaches to AI risk modeling while pushing the boundaries of what’s possible through automation and enhanced representation formats.</p>
+<p>The evolution from MTAIR to AMTAIR represents a natural progression: as the field matures and the challenges become more pressing, more sophisticated tools are needed to facilitate coordination and decision-making. Automation doesn’t replace expert judgment but amplifies it, allowing insights to be captured, formalized, and shared more efficiently across the AI governance community.</p>
+</section>
+<section id="own-position-and-argument" class="level2">
+<h2 class="anchored" data-anchor-id="own-position-and-argument">3. Own Position and Argument</h2>
+<section id="the-amtair-solution-automation-and-integration" class="level3">
+<h3 class="anchored" data-anchor-id="the-amtair-solution-automation-and-integration">3.1 The AMTAIR Solution: Automation and Integration</h3>
+<p>The coordination crisis in AI governance isn’t merely a communication problem—it’s a fundamental information processing challenge that scales with the complexity of the domain. As AI capabilities advance and research proliferates, even the most diligent experts cannot manually process, integrate, and analyze the growing volume of specialized knowledge. We need computational tools that augment human capabilities, much as telescopes extend our vision beyond natural limits.</p>
+<p>AMTAIR—Automating Transformative AI Risk Modeling—represents such a tool. It builds upon the MTAIR framework’s conceptual foundation while addressing its core limitations through automation and integration. The approach doesn’t replace human judgment but amplifies it, scaling up our collective ability to make implicit models explicit and enabling more rigorous evaluation of governance options.</p>
+<p>The system architecture implements a five-stage pipeline that transforms unstructured text into interactive, analyzable models:</p>
+<ol type="1">
+<li><p><strong>Text ingestion and preprocessing:</strong> Source documents enter the system, undergo normalization to handle diverse formats, and are stored with citation information preserved.</p></li>
+<li><p><strong>LLM-powered extraction:</strong> Documents are analyzed using a two-stage process that first identifies key variables and relationships (represented in ArgDown), then extracts probability information (represented in BayesDown).</p></li>
+<li><p><strong>Bayesian network construction:</strong> BayesDown representations are transformed into formal Bayesian networks with nodes, edges, and conditional probability tables.</p></li>
+<li><p><strong>Interactive visualization:</strong> The networks are rendered as interactive visualizations that encode probability information through color and provide progressive disclosure of details.</p></li>
+<li><p><strong>Analysis and inference:</strong> The system enables sensitivity analysis, intervention modeling, and comparison across worldviews.</p></li>
+</ol>
+<p>What distinguishes AMTAIR from previous approaches is the central role of frontier language models in automating the extraction and transformation processes. Rather than treating these models as black boxes that generate answers, AMTAIR employs them as cognitive partners in a structured workflow, using carefully designed prompts to extract specific types of information and transform it between representations.</p>
+<p>Consider how this approach differs from traditional methods of knowledge integration. Typically, synthesizing expert perspectives involves reading papers, taking notes, and mentally constructing a composite view—a process limited by individual cognitive capacity and vulnerable to various biases. AMTAIR externalizes this process, making each step explicit and reproducible. The LLM doesn’t determine what’s important; it helps transform expert knowledge into structured formats that humans can more easily analyze and compare.</p>
+<p>The system’s primary innovations lie in three areas:</p>
+<p>First, the <strong>two-stage extraction process</strong> separates structural understanding from probability estimation, mirroring how humans typically approach complex arguments. This separation improves extraction quality by focusing LLMs on distinct cognitive tasks and creates interpretable intermediate representations.</p>
+<p>Second, the <strong>BayesDown representation format</strong> bridges qualitative and quantitative aspects of arguments, maintaining narrative context while enabling mathematical precision. This hybrid format preserves the connection to original texts while supporting computational analysis.</p>
+<p>Third, the <strong>interactive visualization approach</strong> makes complex probabilistic models accessible to non-technical stakeholders through intuitive visual encoding and progressive disclosure of information. This enhances cross-domain communication by creating shared reference points.</p>
+<p>These innovations address specific limitations of the MTAIR framework. Where MTAIR required days of expert time to formalize arguments, AMTAIR can process papers in minutes. Where MTAIR created static snapshots, AMTAIR enables dynamic updating through integration with forecasting platforms. Where MTAIR struggled with accessibility, AMTAIR provides intuitive visualizations with multiple levels of detail.</p>
+<p>The potential impact extends beyond technical achievements. By making implicit models explicit, AMTAIR helps identify genuine disagreements versus terminological confusion. By enabling systematic comparison across worldviews, it facilitates more productive discourse about risk factors and interventions. By supporting counterfactual analysis, it allows policymakers to evaluate governance options across diverse scenarios.</p>
+<p>This isn’t to suggest that computational tools alone can solve the coordination crisis. Human judgment remains essential for interpreting results, contextualizing insights, and making value-laden decisions. But tools like AMTAIR can dramatically enhance our collective ability to process complex information, identify patterns, and evaluate options—capabilities that become increasingly crucial as AI systems grow more powerful and the stakes of governance decisions rise.</p>
+</section>
+<section id="the-two-stage-extraction-process" class="level3">
+<h3 class="anchored" data-anchor-id="the-two-stage-extraction-process">3.2 The Two-Stage Extraction Process</h3>
+<p>The heart of the AMTAIR approach lies in its two-stage extraction process, which transforms unstructured text into structured probabilistic models through distinct steps that mirror human cognitive processes. This separation—extracting structure before probability—creates important advantages for automation quality, intermediate verification, and interpretability.</p>
+<p>When humans analyze complex arguments, they typically first determine what factors matter and how they relate causally, then assess how likely different scenarios are based on those relationships. A climate scientist reading a paper first identifies key variables (emissions, warming, effects) and their causal connections before estimating probabilities of outcomes. This natural cognitive sequence inspired AMTAIR’s two-stage approach.</p>
+<p><strong>Stage 1: Structure Extraction</strong> focuses on identifying key variables and their causal relationships from text, transforming unstructured arguments into ArgDown format. This process involves:</p>
+<ol type="1">
+<li><p><strong>Variable identification:</strong> Determining the key factors discussed in the text, including their possible states (e.g., whether a factor is present/absent or has multiple levels)</p></li>
+<li><p><strong>Relationship mapping:</strong> Establishing how variables influence each other, creating a directed graph of causal connections</p></li>
+<li><p><strong>Hierarchical organization:</strong> Arranging variables according to their causal relationships, from root causes to final effects</p></li>
+<li><p><strong>Metadata attachment:</strong> Annotating each variable with its description and possible states in structured JSON format</p></li>
+</ol>
+<p>The LLM prompt for this stage emphasizes clear identification of causal structure without requiring probability judgments, allowing the model to focus entirely on understanding “what affects what” in the text. This specialized prompt includes detailed instructions about ArgDown syntax, examples of well-formed representations, and guidance for preserving the author’s intended meaning.</p>
+<p>Figure 4 shows a sample of the ArgDown extraction for Carlsmith’s model, illustrating how complex qualitative arguments are transformed into structured representations:</p>
+<p>[FIGURE 4: Sample ArgDown extraction from Carlsmith’s paper showing hierarchical structure of variables related to existential risk]</p>
+<div class="sourceCode" id="cb6"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> parse_markdown_hierarchy_fixed(markdown_text, ArgDown<span class="op">=</span><span class="va">True</span>):</span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>    <span class="co">"""</span></span>
+<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a><span class="co">    Parse ArgDown format into a structured DataFrame with parent-child relationships.</span></span>
+<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a><span class="co">    Args:</span></span>
+<span id="cb6-6"><a href="#cb6-6" aria-hidden="true" tabindex="-1"></a><span class="co">        markdown_text (str): Text in ArgDown format</span></span>
+<span id="cb6-7"><a href="#cb6-7" aria-hidden="true" tabindex="-1"></a><span class="co">        ArgDown (bool): If True, extracts only structure without probabilities</span></span>
+<span id="cb6-8"><a href="#cb6-8" aria-hidden="true" tabindex="-1"></a><span class="co">                       If False, extracts both structure and probability information</span></span>
+<span id="cb6-9"><a href="#cb6-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-10"><a href="#cb6-10" aria-hidden="true" tabindex="-1"></a><span class="co">    Returns:</span></span>
+<span id="cb6-11"><a href="#cb6-11" aria-hidden="true" tabindex="-1"></a><span class="co">        pandas.DataFrame: Structured data with node information, relationships, and attributes</span></span>
+<span id="cb6-12"><a href="#cb6-12" aria-hidden="true" tabindex="-1"></a><span class="co">    """</span></span>
+<span id="cb6-13"><a href="#cb6-13" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Clean and prepare the text</span></span>
+<span id="cb6-14"><a href="#cb6-14" aria-hidden="true" tabindex="-1"></a>    clean_text <span class="op">=</span> remove_comments(markdown_text)</span>
+<span id="cb6-15"><a href="#cb6-15" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-16"><a href="#cb6-16" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Extract basic information about nodes</span></span>
+<span id="cb6-17"><a href="#cb6-17" aria-hidden="true" tabindex="-1"></a>    titles_info <span class="op">=</span> extract_titles_info(clean_text)</span>
+<span id="cb6-18"><a href="#cb6-18" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-19"><a href="#cb6-19" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Determine hierarchical relationships</span></span>
+<span id="cb6-20"><a href="#cb6-20" aria-hidden="true" tabindex="-1"></a>    titles_with_relations <span class="op">=</span> establish_relationships_fixed(titles_info, clean_text)</span>
+<span id="cb6-21"><a href="#cb6-21" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-22"><a href="#cb6-22" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Convert to structured DataFrame format</span></span>
+<span id="cb6-23"><a href="#cb6-23" aria-hidden="true" tabindex="-1"></a>    df <span class="op">=</span> convert_to_dataframe(titles_with_relations, ArgDown)</span>
+<span id="cb6-24"><a href="#cb6-24" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-25"><a href="#cb6-25" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Add derived columns for analysis</span></span>
+<span id="cb6-26"><a href="#cb6-26" aria-hidden="true" tabindex="-1"></a>    df <span class="op">=</span> add_no_parent_no_child_columns_to_df(df)</span>
+<span id="cb6-27"><a href="#cb6-27" aria-hidden="true" tabindex="-1"></a>    df <span class="op">=</span> add_parents_instantiation_columns_to_df(df)</span>
+<span id="cb6-28"><a href="#cb6-28" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-29"><a href="#cb6-29" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> df</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>This key function transforms the ArgDown text into a structured DataFrame, capturing the hierarchical relationships between variables and preparing them for further processing. The function works by identifying node titles, descriptions, and indentation levels, then establishing parent-child relationships based on the hierarchy indicated by indentation.</p>
+<p><strong>Stage 2: Probability Integration</strong> enhances the structural representation with probability information, creating a complete BayesDown specification. This stage involves:</p>
+<ol type="1">
+<li><p><strong>Question generation:</strong> Automatically creating appropriate probability questions based on the network structure</p></li>
+<li><p><strong>Probability extraction:</strong> Obtaining probability estimates for each question, either from the text or through LLM inference</p></li>
+<li><p><strong>Consistency checking:</strong> Ensuring probability distributions sum to 1 and match structural constraints</p></li>
+<li><p><strong>BayesDown integration:</strong> Incorporating probability information into the ArgDown structure</p></li>
+</ol>
+<p>The key innovation in this stage is the automated generation of appropriate probability questions based on network structure. For each node, the system generates questions about prior probabilities (how likely is this variable in isolation?) and conditional probabilities (how likely is this variable given different states of its parents?).</p>
+<p>Figure 5 illustrates how probability questions are derived for a simple node with one parent:</p>
+<p>[FIGURE 5: Diagram showing how probability questions are generated based on network structure]</p>
+<p>For the “Sprinkler” node with parent “Rain,” the system automatically generates questions like:</p>
+<ul>
+<li>What is the probability for Sprinkler=sprinkler_TRUE?</li>
+<li>What is the probability for Sprinkler=sprinkler_TRUE if Rain=rain_TRUE?</li>
+<li>What is the probability for Sprinkler=sprinkler_TRUE if Rain=rain_FALSE?</li>
+</ul>
+<p>These questions are then answered either by extracting explicit probabilities from the text or by having the LLM infer reasonable values based on the author’s arguments. The answers are structured into a complete BayesDown representation that includes both the causal structure and all necessary probability information.</p>
+<p>The visualization below demonstrates the completed extraction for a portion of Carlsmith’s model, showing how variables like “Misaligned Power Seeking” are influenced by multiple factors, each with associated probabilities:</p>
+<p>[VISUALIZATION: Extracted causal structure from Carlsmith’s model with probability information]</p>
+<p>This two-stage approach offers several important advantages:</p>
+<ol type="1">
+<li><p><strong>Improved extraction quality:</strong> By focusing on one cognitive task at a time, the LLM performs better at each stage than it would attempting to extract everything simultaneously.</p></li>
+<li><p><strong>Intermediate verification:</strong> Having ArgDown as an intermediate representation allows human verification before probability extraction, catching structural errors early.</p></li>
+<li><p><strong>Separation of concerns:</strong> Structure and probability can be updated independently, enabling more flexible maintenance as new information emerges.</p></li>
+<li><p><strong>Alignment with human cognition:</strong> The process mirrors how experts approach complex arguments, making the system’s operation more intuitive and interpretable.</p></li>
+</ol>
+<p>Perhaps most importantly, the intermediate ArgDown representation creates a bridge between qualitative and quantitative aspects of arguments. It preserves the narrative structure and conceptual relationships from the original text while preparing for mathematical precision through probability integration. This hybrid approach maintains the strengths of both worlds: the richness of natural language and the rigor of formal models.</p>
+</section>
+<section id="bayesdown-bridging-qualitative-and-quantitative-representation" class="level3">
+<h3 class="anchored" data-anchor-id="bayesdown-bridging-qualitative-and-quantitative-representation">3.3 BayesDown: Bridging Qualitative and Quantitative Representation</h3>
+<p>If the coordination crisis in AI governance stems partly from incompatible languages across domains—technical researchers speaking in mathematical formalisms, policy specialists in institutional frameworks, and ethicists in normative concepts—then effective coordination requires bridges between these domains. BayesDown serves as such a bridge, combining the narrative richness of qualitative argumentation with the precision of quantitative probability judgments.</p>
+<p>Traditional formal representations face a fundamental tradeoff: increase precision and you sacrifice accessibility; enhance accessibility and you lose precision. Mathematical notations offer exactness but exclude many stakeholders. Natural language provides accessibility but permits ambiguity and vagueness. This tradeoff creates communication barriers between technical and policy domains, limiting coordination on complex challenges like AI governance.</p>
+<p>BayesDown disrupts this tradeoff by creating a hybrid representation that preserves strengths from both worlds. Its design follows three key principles:</p>
+<p>First, <strong>human readability</strong> ensures the representation remains interpretable without specialized training. The syntax builds on familiar conventions from markdown and JSON, maintaining hierarchical relationships through indentation and encapsulating technical details within structured metadata. Unlike purely mathematical notations, the format preserves natural language descriptions alongside formal elements.</p>
+<p>Second, <strong>machine processability</strong> enables computational analysis and transformation. The consistent syntax permits automated parsing, formal verification, and conversion to computational models like Bayesian networks. The structured JSON metadata provides clear paths for extracting probability information and mapping it to conditional probability tables.</p>
+<p>Third, <strong>contextual preservation</strong> maintains the connection to original arguments. By including descriptive text alongside formal structure, BayesDown retains the narrative context and qualitative considerations that inform probability judgments. This contextual information helps users interpret the model in light of the original arguments.</p>
+<p>Consider how these principles manifest in the BayesDown syntax. Each node begins with a bracketed title followed by a natural language description, preserving the core statement being formalized. The JSON metadata contains technical information like instantiations, priors, and posteriors, but keeps this information clearly separated from the narrative content. Hierarchical relationships use indentation and plus symbols, creating a visual structure that mirrors causal influence.</p>
+<pre><code>[Existential_Catastrophe]: The destruction of humanity's long-term potential due to AI systems we've lost control over. {
+  "instantiations": ["existential_catastrophe_TRUE", "existential_catastrophe_FALSE"],
+  "priors": {"p(existential_catastrophe_TRUE)": "0.05", "p(existential_catastrophe_FALSE)": "0.95"},
+  "posteriors": {
+    "p(existential_catastrophe_TRUE|human_disempowerment_TRUE)": "0.95",
+    "p(existential_catastrophe_TRUE|human_disempowerment_FALSE)": "0.0"
+  }
+}
+ + [Human_Disempowerment]: Permanent and collective disempowerment of humanity relative to AI systems. {
+   "instantiations": ["human_disempowerment_TRUE", "human_disempowerment_FALSE"],
+   "priors": {"p(human_disempowerment_TRUE)": "0.208", "p(human_disempowerment_FALSE)": "0.792"},
+   "posteriors": {
+     "p(human_disempowerment_TRUE|scale_of_power_seeking_TRUE)": "1.0",
+     "p(human_disempowerment_TRUE|scale_of_power_seeking_FALSE)": "0.0"
+   }
+ }</code></pre>
+<p>This excerpt from the Carlsmith model representation illustrates how BayesDown preserves both the narrative description (“The destruction of humanity’s long-term potential…”) and the precise probability judgments. Someone without technical background can still understand the core claims and their relationships, while someone seeking quantitative precision can find exact probability values.</p>
+<p>The format supports multiple levels of engagement. At the most basic level, readers can follow the hierarchical structure to understand causal relationships between factors. At an intermediate level, they can examine probability judgments to assess the strength of different influences. At the most technical level, they can analyze the complete probabilistic model to perform inference and sensitivity analysis.</p>
+<p>This multi-level accessibility creates important advantages for coordination across domains:</p>
+<ol type="1">
+<li><p><strong>Technical-policy translation:</strong> BayesDown provides a common reference point for technical researchers explaining safety concerns and policy specialists evaluating governance options, reducing communication barriers.</p></li>
+<li><p><strong>Argumentation transparency:</strong> The format makes assumptions explicit, helping identify genuine disagreements versus terminological confusion or unstated premises.</p></li>
+<li><p><strong>Incremental formalization:</strong> BayesDown supports varying levels of formality, from qualitative structure to complete probability specifications, allowing gradual progression from informal to formal representations.</p></li>
+<li><p><strong>Verification flexibility:</strong> Human experts can verify extracted representations at different levels—checking structural correctness without assessing probabilities, or focusing on critical probability judgments without reviewing the entire model.</p></li>
+</ol>
+<p>The hybrid nature of BayesDown aligns with how experts typically communicate complex ideas: combining qualitative explanations with quantitative judgments, using natural language to provide context for formal claims, and adjusting precision based on audience needs. By mirroring these natural communication patterns, BayesDown makes formalization more intuitive and accessible.</p>
+<p>This bridging function extends beyond representation to influence the entire extraction and analysis workflow. When extracting from text, the two-stage process preserves narrative context alongside formal structure. When visualizing models, interactive interfaces provide both qualitative descriptions and quantitative details. When evaluating policies, counterfactual analysis incorporates both mathematical precision and contextual interpretation.</p>
+<p>In the broader context of the coordination crisis, BayesDown demonstrates how thoughtfully designed intermediate representations can overcome communication barriers between domains. Rather than forcing all stakeholders to adopt a single specialized language, it creates a flexible format that accommodates different perspectives while enabling precise analysis—precisely the kind of bridge needed for effective coordination on complex governance challenges.</p>
+</section>
+<section id="interactive-visualization-and-exploration" class="level3">
+<h3 class="anchored" data-anchor-id="interactive-visualization-and-exploration">3.4 Interactive Visualization and Exploration</h3>
+<p>Complex probabilistic models like Bayesian networks contain rich information, but they often remain inaccessible to many stakeholders. A conditional probability table with dozens of values conveys precise relationships, but few can intuitively grasp its implications. This accessibility gap limits the potential for coordinated action on AI governance challenges—what good is formalization if the resulting models remain opaque to most decision-makers?</p>
+<p>AMTAIR addresses this challenge through interactive visualization designed to make complex probabilistic relationships accessible to diverse stakeholders. The approach combines visual encoding of probability information, progressive disclosure of details, and interactive exploration capabilities to create intuitive interfaces for complex models.</p>
+<p>The visualization system follows several key design principles:</p>
+<p>First, <strong>visual encoding of probability</strong> uses color gradients to represent likelihood values. Nodes are colored on a spectrum from red (low probability) to green (high probability) based on their primary state’s probability. This simple visual cue provides immediate insights into which outcomes are more or less likely without requiring numerical interpretation.</p>
+<p>Second, <strong>structural classification</strong> uses border colors to indicate node types based on network position. Blue borders designate root causes (nodes without parents), purple borders mark intermediate nodes (with both parents and children), and magenta borders highlight leaf nodes (final effects without children). This classification helps users understand the causal flow through the network.</p>
+<p>Third, <strong>progressive disclosure</strong> presents information in layers of increasing detail. Basic node information appears in the visualization itself, additional details emerge in tooltips on hover, and comprehensive probability tables display in modal windows on click. This layered approach prevents information overload while ensuring all details remain accessible.</p>
+<p>Fourth, <strong>interactive exploration</strong> allows users to reorganize nodes, zoom in on areas of interest, adjust physics parameters, and investigate probability values. These capabilities transform the visualization from a static image into an explorable knowledge landscape.</p>
+<p>Figure 6 shows the interactive visualization of Carlsmith’s model, highlighting how color, border styling, and layout work together to represent complex causal relationships:</p>
+<p>[FIGURE 6: Interactive visualization of Carlsmith’s model showing color-coded nodes and causal relationships]</p>
+<p>The visualization system implements these principles through a combination of NetworkX for graph representation and PyVis for interactive display, with custom HTML generation for tooltips and modals:</p>
+<div class="sourceCode" id="cb8"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> create_bayesian_network_with_probabilities(df):</span>
+<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a>    <span class="co">"""</span></span>
+<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a><span class="co">    Create an interactive Bayesian network visualization with enhanced probability visualization</span></span>
+<span id="cb8-4"><a href="#cb8-4" aria-hidden="true" tabindex="-1"></a><span class="co">    and node classification based on network structure.</span></span>
+<span id="cb8-5"><a href="#cb8-5" aria-hidden="true" tabindex="-1"></a><span class="co">    """</span></span>
+<span id="cb8-6"><a href="#cb8-6" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Create network structure</span></span>
+<span id="cb8-7"><a href="#cb8-7" aria-hidden="true" tabindex="-1"></a>    G <span class="op">=</span> nx.DiGraph()</span>
+<span id="cb8-8"><a href="#cb8-8" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb8-9"><a href="#cb8-9" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Add nodes with attributes</span></span>
+<span id="cb8-10"><a href="#cb8-10" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> idx, row <span class="kw">in</span> df.iterrows():</span>
+<span id="cb8-11"><a href="#cb8-11" aria-hidden="true" tabindex="-1"></a>        title <span class="op">=</span> row[<span class="st">'Title'</span>]</span>
+<span id="cb8-12"><a href="#cb8-12" aria-hidden="true" tabindex="-1"></a>        description <span class="op">=</span> row[<span class="st">'Description'</span>]</span>
+<span id="cb8-13"><a href="#cb8-13" aria-hidden="true" tabindex="-1"></a>        priors <span class="op">=</span> get_priors(row)</span>
+<span id="cb8-14"><a href="#cb8-14" aria-hidden="true" tabindex="-1"></a>        instantiations <span class="op">=</span> get_instantiations(row)</span>
+<span id="cb8-15"><a href="#cb8-15" aria-hidden="true" tabindex="-1"></a>        </span>
+<span id="cb8-16"><a href="#cb8-16" aria-hidden="true" tabindex="-1"></a>        G.add_node(title, description<span class="op">=</span>description, priors<span class="op">=</span>priors, </span>
+<span id="cb8-17"><a href="#cb8-17" aria-hidden="true" tabindex="-1"></a>                  instantiations<span class="op">=</span>instantiations, posteriors<span class="op">=</span>get_posteriors(row))</span>
+<span id="cb8-18"><a href="#cb8-18" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb8-19"><a href="#cb8-19" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Add edges based on parent-child relationships</span></span>
+<span id="cb8-20"><a href="#cb8-20" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> idx, row <span class="kw">in</span> df.iterrows():</span>
+<span id="cb8-21"><a href="#cb8-21" aria-hidden="true" tabindex="-1"></a>        child <span class="op">=</span> row[<span class="st">'Title'</span>]</span>
+<span id="cb8-22"><a href="#cb8-22" aria-hidden="true" tabindex="-1"></a>        parents <span class="op">=</span> get_parents(row)</span>
+<span id="cb8-23"><a href="#cb8-23" aria-hidden="true" tabindex="-1"></a>        </span>
+<span id="cb8-24"><a href="#cb8-24" aria-hidden="true" tabindex="-1"></a>        <span class="cf">for</span> parent <span class="kw">in</span> parents:</span>
+<span id="cb8-25"><a href="#cb8-25" aria-hidden="true" tabindex="-1"></a>            <span class="cf">if</span> parent <span class="kw">in</span> G.nodes():</span>
+<span id="cb8-26"><a href="#cb8-26" aria-hidden="true" tabindex="-1"></a>                G.add_edge(parent, child)</span>
+<span id="cb8-27"><a href="#cb8-27" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb8-28"><a href="#cb8-28" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Classify nodes based on network structure</span></span>
+<span id="cb8-29"><a href="#cb8-29" aria-hidden="true" tabindex="-1"></a>    classify_nodes(G)</span>
+<span id="cb8-30"><a href="#cb8-30" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb8-31"><a href="#cb8-31" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Create visualization network</span></span>
+<span id="cb8-32"><a href="#cb8-32" aria-hidden="true" tabindex="-1"></a>    net <span class="op">=</span> Network(notebook<span class="op">=</span><span class="va">True</span>, directed<span class="op">=</span><span class="va">True</span>, cdn_resources<span class="op">=</span><span class="st">"in_line"</span>, </span>
+<span id="cb8-33"><a href="#cb8-33" aria-hidden="true" tabindex="-1"></a>                 height<span class="op">=</span><span class="st">"600px"</span>, width<span class="op">=</span><span class="st">"100%"</span>)</span>
+<span id="cb8-34"><a href="#cb8-34" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb8-35"><a href="#cb8-35" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Configure physics for better layout</span></span>
+<span id="cb8-36"><a href="#cb8-36" aria-hidden="true" tabindex="-1"></a>    net.force_atlas_2based(gravity<span class="op">=-</span><span class="dv">50</span>, spring_length<span class="op">=</span><span class="dv">100</span>, spring_strength<span class="op">=</span><span class="fl">0.02</span>)</span>
+<span id="cb8-37"><a href="#cb8-37" aria-hidden="true" tabindex="-1"></a>    net.show_buttons(filter_<span class="op">=</span>[<span class="st">'physics'</span>])</span>
+<span id="cb8-38"><a href="#cb8-38" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb8-39"><a href="#cb8-39" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Add graph to network</span></span>
+<span id="cb8-40"><a href="#cb8-40" aria-hidden="true" tabindex="-1"></a>    net.from_nx(G)</span>
+<span id="cb8-41"><a href="#cb8-41" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb8-42"><a href="#cb8-42" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Enhance node appearance</span></span>
+<span id="cb8-43"><a href="#cb8-43" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> node <span class="kw">in</span> net.nodes:</span>
+<span id="cb8-44"><a href="#cb8-44" aria-hidden="true" tabindex="-1"></a>        node_id <span class="op">=</span> node[<span class="st">'id'</span>]</span>
+<span id="cb8-45"><a href="#cb8-45" aria-hidden="true" tabindex="-1"></a>        node_data <span class="op">=</span> G.nodes[node_id]</span>
+<span id="cb8-46"><a href="#cb8-46" aria-hidden="true" tabindex="-1"></a>        </span>
+<span id="cb8-47"><a href="#cb8-47" aria-hidden="true" tabindex="-1"></a>        <span class="co"># Set border color based on node type</span></span>
+<span id="cb8-48"><a href="#cb8-48" aria-hidden="true" tabindex="-1"></a>        node_type <span class="op">=</span> node_data.get(<span class="st">'node_type'</span>, <span class="st">'unknown'</span>)</span>
+<span id="cb8-49"><a href="#cb8-49" aria-hidden="true" tabindex="-1"></a>        border_color <span class="op">=</span> get_border_color(node_type)</span>
+<span id="cb8-50"><a href="#cb8-50" aria-hidden="true" tabindex="-1"></a>        </span>
+<span id="cb8-51"><a href="#cb8-51" aria-hidden="true" tabindex="-1"></a>        <span class="co"># Set background color based on probability</span></span>
+<span id="cb8-52"><a href="#cb8-52" aria-hidden="true" tabindex="-1"></a>        priors <span class="op">=</span> node_data.get(<span class="st">'priors'</span>, {})</span>
+<span id="cb8-53"><a href="#cb8-53" aria-hidden="true" tabindex="-1"></a>        background_color <span class="op">=</span> get_probability_color(priors)</span>
+<span id="cb8-54"><a href="#cb8-54" aria-hidden="true" tabindex="-1"></a>        </span>
+<span id="cb8-55"><a href="#cb8-55" aria-hidden="true" tabindex="-1"></a>        <span class="co"># Create tooltip and expanded content</span></span>
+<span id="cb8-56"><a href="#cb8-56" aria-hidden="true" tabindex="-1"></a>        tooltip <span class="op">=</span> create_tooltip(node_id, node_data)</span>
+<span id="cb8-57"><a href="#cb8-57" aria-hidden="true" tabindex="-1"></a>        node_data[<span class="st">'expanded_content'</span>] <span class="op">=</span> create_expanded_content(node_id, node_data)</span>
+<span id="cb8-58"><a href="#cb8-58" aria-hidden="true" tabindex="-1"></a>        </span>
+<span id="cb8-59"><a href="#cb8-59" aria-hidden="true" tabindex="-1"></a>        <span class="co"># Set node attributes</span></span>
+<span id="cb8-60"><a href="#cb8-60" aria-hidden="true" tabindex="-1"></a>        node[<span class="st">'title'</span>] <span class="op">=</span> tooltip</span>
+<span id="cb8-61"><a href="#cb8-61" aria-hidden="true" tabindex="-1"></a>        node[<span class="st">'label'</span>] <span class="op">=</span> <span class="ss">f"</span><span class="sc">{</span>node_id<span class="sc">}</span><span class="ch">\n</span><span class="ss">p=</span><span class="sc">{</span>priors<span class="sc">.</span>get(<span class="st">'true_prob'</span>, <span class="fl">0.5</span>)<span class="sc">:.2f}</span><span class="ss">"</span></span>
+<span id="cb8-62"><a href="#cb8-62" aria-hidden="true" tabindex="-1"></a>        node[<span class="st">'shape'</span>] <span class="op">=</span> <span class="st">'box'</span></span>
+<span id="cb8-63"><a href="#cb8-63" aria-hidden="true" tabindex="-1"></a>        node[<span class="st">'color'</span>] <span class="op">=</span> {</span>
+<span id="cb8-64"><a href="#cb8-64" aria-hidden="true" tabindex="-1"></a>            <span class="st">'background'</span>: background_color,</span>
+<span id="cb8-65"><a href="#cb8-65" aria-hidden="true" tabindex="-1"></a>            <span class="st">'border'</span>: border_color,</span>
+<span id="cb8-66"><a href="#cb8-66" aria-hidden="true" tabindex="-1"></a>            <span class="st">'highlight'</span>: {</span>
+<span id="cb8-67"><a href="#cb8-67" aria-hidden="true" tabindex="-1"></a>                <span class="st">'background'</span>: background_color,</span>
+<span id="cb8-68"><a href="#cb8-68" aria-hidden="true" tabindex="-1"></a>                <span class="st">'border'</span>: border_color</span>
+<span id="cb8-69"><a href="#cb8-69" aria-hidden="true" tabindex="-1"></a>            }</span>
+<span id="cb8-70"><a href="#cb8-70" aria-hidden="true" tabindex="-1"></a>        }</span>
+<span id="cb8-71"><a href="#cb8-71" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb8-72"><a href="#cb8-72" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Setup click handling for detailed information</span></span>
+<span id="cb8-73"><a href="#cb8-73" aria-hidden="true" tabindex="-1"></a>    <span class="co"># [Click handling JavaScript code omitted for brevity]</span></span>
+<span id="cb8-74"><a href="#cb8-74" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb8-75"><a href="#cb8-75" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> net.show(<span class="st">'bayesian_network.html'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>Beyond the core visualization, the system includes specialized components that enhance understanding of probabilistic relationships:</p>
+<ol type="1">
+<li><p><strong>Probability bars</strong> provide visual representations of probability distributions, showing relative likelihoods of different states using color-coded horizontal bars with numeric labels.</p></li>
+<li><p><strong>Conditional probability tables</strong> organize complex relationships into structured matrices, displaying how different combinations of parent states influence probability distributions.</p></li>
+<li><p><strong>Sensitivity indicators</strong> highlight which nodes and relationships most significantly affect outcomes, directing attention to critical factors.</p></li>
+</ol>
+<p>These components work together to create an intuitive interface for complex probabilistic models. A user might start by exploring the overall structure to understand key factors and relationships, hover over nodes of interest to see probability summaries, then click on specific nodes to examine detailed conditional probabilities.</p>
+<p>The benefits of this visualization approach extend beyond aesthetic appeal to fundamental improvements in understanding and communication:</p>
+<p>First, <strong>intuitive comprehension</strong> of probability relationships becomes possible even for those without formal training in Bayesian statistics. The color coding provides immediate visual cues about which outcomes are more likely, while interactive exploration allows users to develop intuition about how different factors influence results.</p>
+<p>Second, <strong>cross-stakeholder communication</strong> improves through shared visual reference points. Technical experts can use the visualizations to explain complex relationships to policy specialists, while governance experts can identify institutional factors that might be incorporated into the models.</p>
+<p>Third, <strong>disagreement identification</strong> becomes more precise as stakeholders can point to specific nodes, relationships, or probability values where their views differ, focusing discussion on substantive issues rather than terminological confusion.</p>
+<p>Fourth, <strong>intervention assessment</strong> becomes more concrete as users can see how changing specific factors influences downstream effects, providing intuitive understanding of causal pathways and leverage points.</p>
+<p>The visualization system demonstrates how thoughtful interface design can overcome barriers to understanding complex formal models. By making probabilistic relationships visually intuitive and progressively disclosing details based on user interest, it creates bridges between mathematical precision and human comprehension—precisely the kind of bridge needed to support coordination across domains in AI governance.</p>
+<p>This approach reflects a broader principle: formalization is most valuable when it enhances rather than replaces human understanding. The AMTAIR visualization doesn’t simplify complex relationships; it makes them more accessible by leveraging visual cognition, interactive exploration, and progressive disclosure. This human-centered approach to formalization creates tools that augment rather than replace expert judgment, enhancing our collective ability to understand and address complex governance challenges.</p>
+</section>
+<section id="beyond-extraction-toward-policy-evaluation" class="level3">
+<h3 class="anchored" data-anchor-id="beyond-extraction-toward-policy-evaluation">3.5 Beyond Extraction: Toward Policy Evaluation</h3>
+<p>Formalizing expert knowledge through automated extraction creates valuable epistemic infrastructure, but the ultimate goal extends beyond representation to supporting concrete governance decisions. Once implicit models become explicit through the AMTAIR approach, they enable a crucial capability: systematic evaluation of how policy interventions might affect outcomes across different scenarios.</p>
+<p>This capability addresses a fundamental challenge in AI governance: making decisions under deep uncertainty about future developments. Traditional approaches often rely on point forecasts or vague qualitative judgments, creating environments where rhetoric outweighs evidence and status determines influence. Formal models enable a more disciplined approach, systematically exploring how different interventions perform across a range of assumptions.</p>
+<p>The AMTAIR system supports policy evaluation through three key mechanisms:</p>
+<p>First, <strong>counterfactual analysis</strong> implements Pearl’s do-calculus to simulate interventions on the causal system. Rather than merely observing correlations, this approach explicitly models what happens when we force a variable to take a specific value, accounting for how this intervention propagates through the causal structure. For example, we can ask how requiring safety demonstrations (setting a variable to a specific value) would affect the likelihood of misaligned systems and ultimately existential risk.</p>
+<p>Second, <strong>intervention modeling</strong> provides structured representations of policy options that can be applied to the causal model. Policies are formalized as modifications to specific variables, relationships, or probability distributions, creating concrete representations of how governance actions influence the system. For example, compute governance might be modeled as reducing the probability of rapid capability jumps, while safety standards might increase the likelihood of warning shots.</p>
+<p>Third, <strong>cross-worldview comparison</strong> enables evaluation of interventions across different causal models and probability distributions. Rather than assuming a single correct model, this approach acknowledges legitimate uncertainty about causal structure and relationships, testing how interventions perform across different plausible world models. This identifies “robust” policies that work reasonably well regardless of which worldview proves correct—a crucial capability when decisions must be made despite fundamental disagreements.</p>
+<p>Consider how these mechanisms apply to Carlsmith’s model of existential risk from power-seeking AI. Figure 7 shows the evaluation of a hypothetical governance intervention requiring safety demonstrations before deployment:</p>
+<p>[FIGURE 7: Visualization showing policy impact evaluation across Carlsmith model]</p>
+<p>The analysis simulates how requiring safety demonstrations affects deployment decisions for potentially misaligned systems, and consequently how this influences the probability of misaligned power-seeking and ultimately existential catastrophe. By comparing the baseline probability (5%) with the intervention probability (3.2% in this example), we can quantify the potential risk reduction from this policy.</p>
+<p>The implementation uses counterfactual queries on the Bayesian network:</p>
+<div class="sourceCode" id="cb9"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> evaluate_policy_impact(model, intervention_variable, intervention_value, target_variable, target_value):</span>
+<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a>    <span class="co">"""</span></span>
+<span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a><span class="co">    Evaluate the impact of setting a variable to a specific value on a target outcome.</span></span>
+<span id="cb9-4"><a href="#cb9-4" aria-hidden="true" tabindex="-1"></a><span class="co">    </span></span>
+<span id="cb9-5"><a href="#cb9-5" aria-hidden="true" tabindex="-1"></a><span class="co">    Args:</span></span>
+<span id="cb9-6"><a href="#cb9-6" aria-hidden="true" tabindex="-1"></a><span class="co">        model: Bayesian network model</span></span>
+<span id="cb9-7"><a href="#cb9-7" aria-hidden="true" tabindex="-1"></a><span class="co">        intervention_variable: Variable to intervene on</span></span>
+<span id="cb9-8"><a href="#cb9-8" aria-hidden="true" tabindex="-1"></a><span class="co">        intervention_value: Value to set for intervention</span></span>
+<span id="cb9-9"><a href="#cb9-9" aria-hidden="true" tabindex="-1"></a><span class="co">        target_variable: Outcome variable of interest</span></span>
+<span id="cb9-10"><a href="#cb9-10" aria-hidden="true" tabindex="-1"></a><span class="co">        target_value: Outcome value of interest</span></span>
+<span id="cb9-11"><a href="#cb9-11" aria-hidden="true" tabindex="-1"></a><span class="co">        </span></span>
+<span id="cb9-12"><a href="#cb9-12" aria-hidden="true" tabindex="-1"></a><span class="co">    Returns:</span></span>
+<span id="cb9-13"><a href="#cb9-13" aria-hidden="true" tabindex="-1"></a><span class="co">        dict: Impact analysis including baseline and intervention probabilities</span></span>
+<span id="cb9-14"><a href="#cb9-14" aria-hidden="true" tabindex="-1"></a><span class="co">    """</span></span>
+<span id="cb9-15"><a href="#cb9-15" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Create inference engine</span></span>
+<span id="cb9-16"><a href="#cb9-16" aria-hidden="true" tabindex="-1"></a>    inference <span class="op">=</span> VariableElimination(model)</span>
+<span id="cb9-17"><a href="#cb9-17" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb9-18"><a href="#cb9-18" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Calculate baseline probability</span></span>
+<span id="cb9-19"><a href="#cb9-19" aria-hidden="true" tabindex="-1"></a>    baseline_query <span class="op">=</span> inference.query(variables<span class="op">=</span>[target_variable])</span>
+<span id="cb9-20"><a href="#cb9-20" aria-hidden="true" tabindex="-1"></a>    baseline_prob <span class="op">=</span> baseline_query.values[baseline_query.state_names[target_variable].index(target_value)]</span>
+<span id="cb9-21"><a href="#cb9-21" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb9-22"><a href="#cb9-22" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Calculate intervention probability using do-calculus</span></span>
+<span id="cb9-23"><a href="#cb9-23" aria-hidden="true" tabindex="-1"></a>    intervention_query <span class="op">=</span> inference.query(</span>
+<span id="cb9-24"><a href="#cb9-24" aria-hidden="true" tabindex="-1"></a>        variables<span class="op">=</span>[target_variable],</span>
+<span id="cb9-25"><a href="#cb9-25" aria-hidden="true" tabindex="-1"></a>        evidence<span class="op">=</span>{intervention_variable: intervention_value},</span>
+<span id="cb9-26"><a href="#cb9-26" aria-hidden="true" tabindex="-1"></a>        do<span class="op">=</span>{intervention_variable: intervention_value}  <span class="co"># The do-operation</span></span>
+<span id="cb9-27"><a href="#cb9-27" aria-hidden="true" tabindex="-1"></a>    )</span>
+<span id="cb9-28"><a href="#cb9-28" aria-hidden="true" tabindex="-1"></a>    intervention_prob <span class="op">=</span> intervention_query.values[intervention_query.state_names[target_variable].index(target_value)]</span>
+<span id="cb9-29"><a href="#cb9-29" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb9-30"><a href="#cb9-30" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Calculate impact</span></span>
+<span id="cb9-31"><a href="#cb9-31" aria-hidden="true" tabindex="-1"></a>    absolute_change <span class="op">=</span> intervention_prob <span class="op">-</span> baseline_prob</span>
+<span id="cb9-32"><a href="#cb9-32" aria-hidden="true" tabindex="-1"></a>    relative_change <span class="op">=</span> absolute_change <span class="op">/</span> baseline_prob <span class="op">*</span> <span class="dv">100</span> <span class="cf">if</span> baseline_prob <span class="op">&gt;</span> <span class="dv">0</span> <span class="cf">else</span> <span class="bu">float</span>(<span class="st">'inf'</span>)</span>
+<span id="cb9-33"><a href="#cb9-33" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb9-34"><a href="#cb9-34" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> {</span>
+<span id="cb9-35"><a href="#cb9-35" aria-hidden="true" tabindex="-1"></a>        <span class="st">'baseline_probability'</span>: baseline_prob,</span>
+<span id="cb9-36"><a href="#cb9-36" aria-hidden="true" tabindex="-1"></a>        <span class="st">'intervention_probability'</span>: intervention_prob,</span>
+<span id="cb9-37"><a href="#cb9-37" aria-hidden="true" tabindex="-1"></a>        <span class="st">'absolute_change'</span>: absolute_change,</span>
+<span id="cb9-38"><a href="#cb9-38" aria-hidden="true" tabindex="-1"></a>        <span class="st">'relative_change'</span>: relative_change</span>
+<span id="cb9-39"><a href="#cb9-39" aria-hidden="true" tabindex="-1"></a>    }</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>This function implements the counterfactual analysis, calculating both the baseline probability of the target outcome and the probability after intervention. The <code>do</code> operation ensures proper handling of causal effects rather than merely conditioning on observed values.</p>
+<p>Beyond analyzing individual interventions, the system can evaluate portfolios of complementary policies, identifying synergies and conflicts between different approaches. For example, it might examine how compute governance, safety standards, and liability rules work together to reduce risk more effectively than any single intervention alone.</p>
+<p>The policy evaluation capabilities extend to more sophisticated analyses:</p>
+<ol type="1">
+<li><p><strong>Robustness assessment</strong> examines how sensitive intervention effects are to variations in model parameters, identifying policies that maintain effectiveness despite uncertainty about exact probability values.</p></li>
+<li><p><strong>Option value analysis</strong> evaluates how different policies affect our ability to gather information and make better decisions in the future, capturing the value of preserving flexibility.</p></li>
+<li><p><strong>Intervention portfolio construction</strong> identifies sets of complementary policies that address different aspects of risk, creating more robust governance approaches.</p></li>
+<li><p><strong>Dependency mapping</strong> visualizes prerequisites and enabling conditions between interventions, helping understand sequencing requirements and potential bottlenecks.</p></li>
+</ol>
+<p>These capabilities transform governance discussions from abstract debates about principles to concrete analyses of expected impacts. Rather than merely asserting that a policy would reduce risk, stakeholders can demonstrate specific causal pathways through which the intervention affects outcomes, quantify the magnitude of expected effects, and test robustness across different assumptions.</p>
+<p>This approach doesn’t eliminate value judgments or normative considerations—those remain essential for determining appropriate governance goals and acceptable tradeoffs. But it adds rigor to instrumental reasoning about how different interventions might achieve those goals, reducing the influence of rhetoric, status, and cognitive biases in policy evaluation.</p>
+<p>In the context of the coordination crisis, these policy evaluation capabilities create a shared language for discussing interventions across domains. Technical researchers can express safety concerns in terms of how they affect model variables; policy specialists can formulate governance proposals as interventions on specific factors; ethicists can articulate normative considerations as valued outcomes or constraints on acceptable interventions. This common framework facilitates more productive coordination without requiring all stakeholders to adopt a single specialized vocabulary.</p>
+</section>
+</section>
+<section id="implementation-the-amtair-prototype" class="level2">
+<h2 class="anchored" data-anchor-id="implementation-the-amtair-prototype">4. Implementation: The AMTAIR Prototype</h2>
+<section id="system-architecture-and-data-flow" class="level3">
+<h3 class="anchored" data-anchor-id="system-architecture-and-data-flow">4.1 System Architecture and Data Flow</h3>
+<p>The AMTAIR prototype implements the conceptual architecture described earlier through a modular, extensible system designed to transform text into interactive Bayesian networks. This section details the technical realization of this architecture, explaining how different components interact to enable automated extraction and analysis.</p>
+<p>At its core, the system consists of five main components connected in a sequential pipeline with feedback loops:</p>
+<ol type="1">
+<li><p><strong>Text ingestion and preprocessing</strong> handles the initial transformation of source documents into a standardized format suitable for extraction. This component supports various input formats (PDF, markdown, plain text) and preserves citation information to maintain provenance.</p></li>
+<li><p><strong>LLM-powered extraction pipeline</strong> implements the two-stage process for transforming normalized text into structured representations. The first stage extracts structural information (ArgDown), while the second stage enhances it with probability information (BayesDown).</p></li>
+<li><p><strong>Bayesian network construction</strong> converts BayesDown representations into formal Bayesian networks with nodes, edges, and conditional probability tables. This component includes data transformation, network analysis, and enhancement with derived metrics.</p></li>
+<li><p><strong>Visualization and interaction interface</strong> creates interactive presentations of the Bayesian networks with probability encoding, progressive disclosure, and exploration capabilities. This component generates HTML with embedded JavaScript for interactivity.</p></li>
+<li><p><strong>Analysis and inference engine</strong> enables probabilistic reasoning about the networks, including marginal and conditional probability calculations, sensitivity analysis, and counterfactual evaluation for policy assessment.</p></li>
+</ol>
+<p>Figure 8 illustrates the data flow between these components:</p>
+<p>[FIGURE 8: Diagram showing data flow between system components]</p>
+<p>The implementation uses a combination of Python libraries for different aspects of the pipeline:</p>
+<ul>
+<li><strong>pandas</strong> for structured data manipulation throughout the pipeline</li>
+<li><strong>networkx</strong> for graph representation and analysis</li>
+<li><strong>pgmpy</strong> for Bayesian network construction and inference</li>
+<li><strong>pyvis</strong> for interactive network visualization</li>
+<li><strong>requests</strong> for API calls to language models</li>
+<li><strong>matplotlib</strong> for static visualizations</li>
+</ul>
+<p>This architecture balances several design principles:</p>
+<p><strong>Modularity</strong> ensures that each component can be developed, tested, and improved independently. For example, the extraction pipeline can be enhanced without modifying the visualization system, and different visualization approaches can be implemented without changing the extraction logic.</p>
+<p><strong>Explicitness</strong> makes the transformation process transparent and inspectable at each stage. Rather than using end-to-end black-box processing, the system creates intermediate representations (ArgDown, BayesDown, DataFrames) that can be examined and verified.</p>
+<p><strong>Interactivity</strong> prioritizes human engagement with the results, creating rich interfaces that reveal both structural and probabilistic information through visual encoding and progressive disclosure.</p>
+<p><strong>Extensibility</strong> supports incremental enhancement through well-defined interfaces between components. New capabilities can be added without redesigning the entire system, enabling gradual improvement over time.</p>
+<p>The core code organization reflects this architecture:</p>
+<pre><code>amtair/
+  ├── ingestion/             # Text preprocessing and normalization
+  │   ├── pdf_processor.py
+  │   ├── markdown_processor.py
+  │   └── text_normalizer.py
+  ├── extraction/            # LLM-powered extraction pipeline
+  │   ├── argdown_extractor.py
+  │   ├── bayesdown_enhancer.py
+  │   └── prompt_templates.py
+  ├── network/               # Bayesian network construction
+  │   ├── network_builder.py
+  │   ├── data_transformer.py
+  │   └── metrics_calculator.py
+  ├── visualization/         # Interactive visualization
+  │   ├── network_visualizer.py
+  │   ├── html_generator.py
+  │   └── color_mapper.py
+  ├── analysis/              # Analysis and inference
+  │   ├── inference_engine.py
+  │   ├── sensitivity_analyzer.py
+  │   └── policy_evaluator.py
+  └── utils/                 # Shared utilities
+      ├── data_structures.py
+      ├── file_operations.py
+      └── logging_config.py</code></pre>
+<p>This organization makes dependencies explicit while enabling independent development of different components. For example, the extraction team can enhance prompt templates without affecting the network construction code, and the visualization team can improve the user interface without modifying the underlying data structures.</p>
+<p>The prototype implementation focused on demonstrating the core pipeline functionality rather than building a complete production system. As a result, the current version has certain limitations:</p>
+<ol type="1">
+<li>It relies on external API calls to frontier LLMs rather than deploying models locally.</li>
+<li>It processes documents one at a time rather than ingesting entire literature repositories.</li>
+<li>It implements basic policy evaluation capabilities without the full range of analysis features.</li>
+<li>It focuses on BayesDown as the intermediate representation without supporting alternative formats.</li>
+</ol>
+<p>Despite these limitations, the prototype successfully demonstrates the feasibility of automating the extraction and transformation process, creating a foundation for more sophisticated implementations in the future.</p>
+<p>The architecture’s design anticipates future extensions, including integration with prediction markets for dynamic updating, support for cross-worldview comparison, and enhanced policy evaluation capabilities. These extensions would build on the existing foundation rather than requiring architectural redesign, demonstrating the value of the modular approach.</p>
+</section>
+<section id="the-rain-sprinkler-lawn-implementation" class="level3">
+<h3 class="anchored" data-anchor-id="the-rain-sprinkler-lawn-implementation">4.2 The Rain-Sprinkler-Lawn Implementation</h3>
+<p>Before applying the AMTAIR approach to complex real-world risk assessments, I validated the implementation using the canonical rain-sprinkler-lawn example introduced earlier. This simple but complete example allows step-by-step verification of each component in the pipeline, from initial representation to interactive visualization.</p>
+<p>The rain-sprinkler-lawn scenario has become something of a “Hello World” for Bayesian networks—simple enough to understand intuitively but complex enough to demonstrate conditional independence and inference. It involves three variables: Rain (whether it’s raining), Sprinkler (whether the sprinkler is on), and Grass_Wet (whether the grass is wet). Both rain and the sprinkler can cause the grass to be wet, while rain also influences whether the sprinkler is used (as people typically don’t run sprinklers when it’s already raining).</p>
+<p><strong>Stage 1: ArgDown Representation</strong> captures the structural relationships between these variables without probability information. The implementation starts with this representation:</p>
+<pre><code>[Grass_Wet]: Concentrated moisture on, between and around the blades of grass. {"instantiations": ["grass_wet_TRUE", "grass_wet_FALSE"]}
+ + [Rain]: Tears of angles crying high up in the skies hitting the ground. {"instantiations": ["rain_TRUE", "rain_FALSE"]}
+ + [Sprinkler]: Activation of a centrifugal force based CO2 droplet distribution system. {"instantiations": ["sprinkler_TRUE", "sprinkler_FALSE"]}
+   + [Rain]</code></pre>
+<p>This ArgDown representation captures several key aspects of the scenario:</p>
+<ul>
+<li>The three variables with their natural language descriptions</li>
+<li>Their possible states (TRUE/FALSE for each variable)</li>
+<li>The causal structure (both Rain and Sprinkler influence Grass_Wet, and Rain influences Sprinkler)</li>
+</ul>
+<p>The system processes this representation with the parsing function shown in the previous section, transforming it into a structured DataFrame that explicitly represents parent-child relationships:</p>
+<div class="sourceCode" id="cb12"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Process the ArgDown representation</span></span>
+<span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a>argdown_df <span class="op">=</span> parse_markdown_hierarchy_fixed(argdown_text, ArgDown<span class="op">=</span><span class="va">True</span>)</span>
+<span id="cb12-3"><a href="#cb12-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-4"><a href="#cb12-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Display the results</span></span>
+<span id="cb12-5"><a href="#cb12-5" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(argdown_df[[<span class="st">'Title'</span>, <span class="st">'Description'</span>, <span class="st">'Parents'</span>, <span class="st">'Children'</span>, <span class="st">'instantiations'</span>]])</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>This processing correctly extracts the structural information, identifying that:</p>
+<ul>
+<li>Grass_Wet has parents Rain and Sprinkler, but no children</li>
+<li>Rain has no parents, but is a parent to both Grass_Wet and Sprinkler</li>
+<li>Sprinkler has parent Rain and child Grass_Wet</li>
+</ul>
+<p><strong>Stage 2: BayesDown Enhancement</strong> adds probability information to the structural representation. The implementation first generates appropriate probability questions based on the network structure:</p>
+<div class="sourceCode" id="cb13"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Generate probability questions based on network structure</span></span>
+<span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a>df_with_questions <span class="op">=</span> generate_argdown_with_questions(argdown_df, <span class="st">"ArgDown_WithQuestions.csv"</span>)</span>
+<span id="cb13-3"><a href="#cb13-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-4"><a href="#cb13-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Display sample questions for the Sprinkler node</span></span>
+<span id="cb13-5"><a href="#cb13-5" aria-hidden="true" tabindex="-1"></a>sprinkler_questions <span class="op">=</span> df_with_questions.loc[df_with_questions[<span class="st">'Title'</span>] <span class="op">==</span> <span class="st">'Sprinkler'</span>, <span class="st">'Generate_Positive_Instantiation_Questions'</span>].iloc[<span class="dv">0</span>]</span>
+<span id="cb13-6"><a href="#cb13-6" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(json.loads(sprinkler_questions))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>For the Sprinkler node, this generates questions like:</p>
+<ul>
+<li>What is the probability for Sprinkler=sprinkler_TRUE?</li>
+<li>What is the probability for Sprinkler=sprinkler_TRUE if Rain=rain_TRUE?</li>
+<li>What is the probability for Sprinkler=sprinkler_TRUE if Rain=rain_FALSE?</li>
+</ul>
+<p>After answering these questions (manually or via LLM), the system incorporates the probability information into a complete BayesDown representation:</p>
+<pre><code>[Grass_Wet]: Concentrated moisture on, between and around the blades of grass. {
+  "instantiations": ["grass_wet_TRUE", "grass_wet_FALSE"],
+  "priors": {"p(grass_wet_TRUE)": "0.322", "p(grass_wet_FALSE)": "0.678"},
+  "posteriors": {
+    "p(grass_wet_TRUE|sprinkler_TRUE,rain_TRUE)": "0.99",
+    "p(grass_wet_TRUE|sprinkler_TRUE,rain_FALSE)": "0.9",
+    "p(grass_wet_TRUE|sprinkler_FALSE,rain_TRUE)": "0.8",
+    "p(grass_wet_TRUE|sprinkler_FALSE,rain_FALSE)": "0.0"
+  }
+}
+ + [Rain]: Tears of angles crying high up in the skies hitting the ground. {
+   "instantiations": ["rain_TRUE", "rain_FALSE"],
+   "priors": {"p(rain_TRUE)": "0.2", "p(rain_FALSE)": "0.8"}
+ }
+ + [Sprinkler]: Activation of a centrifugal force based CO2 droplet distribution system. {
+   "instantiations": ["sprinkler_TRUE", "sprinkler_FALSE"],
+   "priors": {"p(sprinkler_TRUE)": "0.44838", "p(sprinkler_FALSE)": "0.55162"},
+   "posteriors": {
+     "p(sprinkler_TRUE|rain_TRUE)": "0.01",
+     "p(sprinkler_TRUE|rain_FALSE)": "0.4"
+   }
+ }
+   + [Rain]</code></pre>
+<p>This BayesDown representation now contains complete probability information:</p>
+<ul>
+<li>Prior probabilities for each variable (e.g., P(Rain=TRUE) = 0.2)</li>
+<li>Conditional probabilities for variables with parents (e.g., P(Sprinkler=TRUE|Rain=TRUE) = 0.01)</li>
+</ul>
+<p><strong>Stage 3: Bayesian Network Construction</strong> transforms the BayesDown representation into a formal Bayesian network with nodes, edges, and conditional probability tables. The implementation extracts the information into a structured DataFrame, then converts this into a network representation:</p>
+<div class="sourceCode" id="cb15"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Extract data from BayesDown representation</span></span>
+<span id="cb15-2"><a href="#cb15-2" aria-hidden="true" tabindex="-1"></a>extracted_df <span class="op">=</span> parse_markdown_hierarchy_fixed(bayesdown_text, ArgDown<span class="op">=</span><span class="va">False</span>)</span>
+<span id="cb15-3"><a href="#cb15-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-4"><a href="#cb15-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Enhance the data with calculated metrics</span></span>
+<span id="cb15-5"><a href="#cb15-5" aria-hidden="true" tabindex="-1"></a>enhanced_df <span class="op">=</span> enhance_extracted_data(extracted_df)</span>
+<span id="cb15-6"><a href="#cb15-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-7"><a href="#cb15-7" aria-hidden="true" tabindex="-1"></a><span class="co"># Create a Bayesian network from the extracted data</span></span>
+<span id="cb15-8"><a href="#cb15-8" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> create_bayesian_network(df):</span>
+<span id="cb15-9"><a href="#cb15-9" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Create network structure</span></span>
+<span id="cb15-10"><a href="#cb15-10" aria-hidden="true" tabindex="-1"></a>    model <span class="op">=</span> BayesianNetwork()</span>
+<span id="cb15-11"><a href="#cb15-11" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb15-12"><a href="#cb15-12" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Add nodes and edges</span></span>
+<span id="cb15-13"><a href="#cb15-13" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> idx, row <span class="kw">in</span> df.iterrows():</span>
+<span id="cb15-14"><a href="#cb15-14" aria-hidden="true" tabindex="-1"></a>        title <span class="op">=</span> row[<span class="st">'Title'</span>]</span>
+<span id="cb15-15"><a href="#cb15-15" aria-hidden="true" tabindex="-1"></a>        parents <span class="op">=</span> row[<span class="st">'Parents'</span>] <span class="cf">if</span> <span class="bu">isinstance</span>(row[<span class="st">'Parents'</span>], <span class="bu">list</span>) <span class="cf">else</span> []</span>
+<span id="cb15-16"><a href="#cb15-16" aria-hidden="true" tabindex="-1"></a>        </span>
+<span id="cb15-17"><a href="#cb15-17" aria-hidden="true" tabindex="-1"></a>        <span class="co"># Add node</span></span>
+<span id="cb15-18"><a href="#cb15-18" aria-hidden="true" tabindex="-1"></a>        model.add_node(title)</span>
+<span id="cb15-19"><a href="#cb15-19" aria-hidden="true" tabindex="-1"></a>        </span>
+<span id="cb15-20"><a href="#cb15-20" aria-hidden="true" tabindex="-1"></a>        <span class="co"># Add edges from parents to this node</span></span>
+<span id="cb15-21"><a href="#cb15-21" aria-hidden="true" tabindex="-1"></a>        <span class="cf">for</span> parent <span class="kw">in</span> parents:</span>
+<span id="cb15-22"><a href="#cb15-22" aria-hidden="true" tabindex="-1"></a>            model.add_edge(parent, title)</span>
+<span id="cb15-23"><a href="#cb15-23" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb15-24"><a href="#cb15-24" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Add CPDs for each node</span></span>
+<span id="cb15-25"><a href="#cb15-25" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> idx, row <span class="kw">in</span> df.iterrows():</span>
+<span id="cb15-26"><a href="#cb15-26" aria-hidden="true" tabindex="-1"></a>        title <span class="op">=</span> row[<span class="st">'Title'</span>]</span>
+<span id="cb15-27"><a href="#cb15-27" aria-hidden="true" tabindex="-1"></a>        parents <span class="op">=</span> row[<span class="st">'Parents'</span>] <span class="cf">if</span> <span class="bu">isinstance</span>(row[<span class="st">'Parents'</span>], <span class="bu">list</span>) <span class="cf">else</span> []</span>
+<span id="cb15-28"><a href="#cb15-28" aria-hidden="true" tabindex="-1"></a>        instantiations <span class="op">=</span> row[<span class="st">'instantiations'</span>] <span class="cf">if</span> <span class="bu">isinstance</span>(row[<span class="st">'instantiations'</span>], <span class="bu">list</span>) <span class="cf">else</span> []</span>
+<span id="cb15-29"><a href="#cb15-29" aria-hidden="true" tabindex="-1"></a>        priors <span class="op">=</span> row[<span class="st">'priors'</span>] <span class="cf">if</span> <span class="bu">isinstance</span>(row[<span class="st">'priors'</span>], <span class="bu">dict</span>) <span class="cf">else</span> {}</span>
+<span id="cb15-30"><a href="#cb15-30" aria-hidden="true" tabindex="-1"></a>        posteriors <span class="op">=</span> row[<span class="st">'posteriors'</span>] <span class="cf">if</span> <span class="bu">isinstance</span>(row[<span class="st">'posteriors'</span>], <span class="bu">dict</span>) <span class="cf">else</span> {}</span>
+<span id="cb15-31"><a href="#cb15-31" aria-hidden="true" tabindex="-1"></a>        </span>
+<span id="cb15-32"><a href="#cb15-32" aria-hidden="true" tabindex="-1"></a>        <span class="co"># Create CPD based on whether node has parents</span></span>
+<span id="cb15-33"><a href="#cb15-33" aria-hidden="true" tabindex="-1"></a>        <span class="cf">if</span> <span class="kw">not</span> parents:  <span class="co"># No parents - use prior probabilities</span></span>
+<span id="cb15-34"><a href="#cb15-34" aria-hidden="true" tabindex="-1"></a>            <span class="co"># Implementation details omitted for brevity</span></span>
+<span id="cb15-35"><a href="#cb15-35" aria-hidden="true" tabindex="-1"></a>        <span class="cf">else</span>:  <span class="co"># Has parents - use conditional probabilities</span></span>
+<span id="cb15-36"><a href="#cb15-36" aria-hidden="true" tabindex="-1"></a>            <span class="co"># Implementation details omitted for brevity</span></span>
+<span id="cb15-37"><a href="#cb15-37" aria-hidden="true" tabindex="-1"></a>            </span>
+<span id="cb15-38"><a href="#cb15-38" aria-hidden="true" tabindex="-1"></a>        <span class="co"># Add CPD to model</span></span>
+<span id="cb15-39"><a href="#cb15-39" aria-hidden="true" tabindex="-1"></a>        model.add_cpds(cpd)</span>
+<span id="cb15-40"><a href="#cb15-40" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb15-41"><a href="#cb15-41" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Check model validity</span></span>
+<span id="cb15-42"><a href="#cb15-42" aria-hidden="true" tabindex="-1"></a>    model.check_model()</span>
+<span id="cb15-43"><a href="#cb15-43" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb15-44"><a href="#cb15-44" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> model</span>
+<span id="cb15-45"><a href="#cb15-45" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-46"><a href="#cb15-46" aria-hidden="true" tabindex="-1"></a><span class="co"># Create the network</span></span>
+<span id="cb15-47"><a href="#cb15-47" aria-hidden="true" tabindex="-1"></a>bayesian_network <span class="op">=</span> create_bayesian_network(enhanced_df)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>The resulting Bayesian network correctly represents the causal structure and probability distributions from the BayesDown representation. This network enables various types of probabilistic inference, such as calculating the probability of rain given that the grass is wet:</p>
+<div class="sourceCode" id="cb16"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Create inference engine</span></span>
+<span id="cb16-2"><a href="#cb16-2" aria-hidden="true" tabindex="-1"></a>inference <span class="op">=</span> VariableElimination(bayesian_network)</span>
+<span id="cb16-3"><a href="#cb16-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb16-4"><a href="#cb16-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Calculate P(Rain=TRUE | Grass_Wet=TRUE)</span></span>
+<span id="cb16-5"><a href="#cb16-5" aria-hidden="true" tabindex="-1"></a>result <span class="op">=</span> inference.query(variables<span class="op">=</span>[<span class="st">'Rain'</span>], evidence<span class="op">=</span>{<span class="st">'Grass_Wet'</span>: <span class="st">'grass_wet_TRUE'</span>})</span>
+<span id="cb16-6"><a href="#cb16-6" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"P(Rain=TRUE | Grass_Wet=TRUE) = </span><span class="sc">{</span>result<span class="sc">.</span>values[<span class="dv">0</span>]<span class="sc">:.3f}</span><span class="ss">"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p><strong>Visual Result</strong> The implementation creates an interactive visualization of the network using the function described in the previous section:</p>
+<div class="sourceCode" id="cb17"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Create interactive visualization</span></span>
+<span id="cb17-2"><a href="#cb17-2" aria-hidden="true" tabindex="-1"></a>visualization <span class="op">=</span> create_bayesian_network_with_probabilities(enhanced_df)</span>
+<span id="cb17-3"><a href="#cb17-3" aria-hidden="true" tabindex="-1"></a>display(visualization)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>Figure 9 shows the resulting visualization with color-coded nodes indicating probability values:</p>
+<p>[FIGURE 9: Interactive visualization of the rain-sprinkler-lawn Bayesian network]</p>
+<p>The visualization correctly encodes the causal structure (arrows from causes to effects) and probability information (node colors indicating likelihood), providing an intuitive representation of the relationships between variables.</p>
+<p><strong>Validation</strong> To verify the implementation’s correctness, I compared computational results from the network with analytical solutions calculated by hand. For example, the probability of wet grass can be calculated analytically:</p>
+<p>P(W=TRUE) = ∑ᵣ,ₛ P(W=TRUE|R=r,S=s) × P(R=r) × P(S=s|R=r)</p>
+<p>Where the sum is over all possible values of r and s. The computational result from the Bayesian network (0.322) matched the analytical calculation, confirming the implementation’s correctness.</p>
+<p>Similarly, posterior probabilities like P(R=TRUE|W=TRUE) were verified against analytical calculations using Bayes’ rule:</p>
+<p>P(R=TRUE|W=TRUE) = P(W=TRUE|R=TRUE) × P(R=TRUE) / P(W=TRUE)</p>
+<p>The rain-sprinkler-lawn implementation demonstrates the complete AMTAIR pipeline functioning correctly on a simple but non-trivial example. Each step in the process—from ArgDown representation through BayesDown enhancement to Bayesian network construction and visualization—performs as expected, transforming a structured representation into an interactive, analyzable model.</p>
+<p>This validation provides confidence that the approach can be successfully applied to more complex, real-world scenarios like Carlsmith’s model of existential risk, which follows the same principles but involves many more variables and relationships.</p>
+</section>
+<section id="application-to-carlsmiths-model" class="level3">
+<h3 class="anchored" data-anchor-id="application-to-carlsmiths-model">4.3 Application to Carlsmith’s Model</h3>
+<p>Having validated the implementation on the canonical rain-sprinkler-lawn example, I applied the AMTAIR approach to a substantially more complex real-world case: Joseph Carlsmith’s model of existential risk from power-seeking AI. This application demonstrates the system’s ability to handle sophisticated multi-level arguments with numerous variables and relationships.</p>
+<p>Carlsmith’s analysis involves dozens of factors organized in a complex causal structure, from root causes like “Advanced AI Capability” and “Instrumental Convergence” through intermediate factors like “APS Systems” and “Misaligned Power Seeking” to final outcomes like “Existential Catastrophe.” The model exhibits several challenging features:</p>
+<ol type="1">
+<li><strong>Multi-level structure</strong> with causal chains spanning multiple steps</li>
+<li><strong>Divergent pathways</strong> where factors influence outcomes through multiple routes</li>
+<li><strong>Complex conditional dependencies</strong> with variables influenced by multiple parents</li>
+<li><strong>Variables with three or more possible states</strong> rather than simple binary outcomes</li>
+<li><strong>Interconnected clusters</strong> where factors form distinct but related argument groups</li>
+</ol>
+<p>The extraction process began with an ArgDown representation capturing the structural relationships between variables:</p>
+<pre><code>[Existential_Catastrophe]: The destruction of humanity's long-term potential due to AI systems we've lost control over. {"instantiations": ["existential_catastrophe_TRUE", "existential_catastrophe_FALSE"]}
+- [Human_Disempowerment]: Permanent and collective disempowerment of humanity relative to AI systems. {"instantiations": ["human_disempowerment_TRUE", "human_disempowerment_FALSE"]}
+    - [Scale_Of_Power_Seeking]: Power-seeking by AI systems scaling to the point of permanently disempowering all of humanity. {"instantiations": ["scale_of_power_seeking_TRUE", "scale_of_power_seeking_FALSE"]}
+        - [Misaligned_Power_Seeking]: Deployed AI systems seeking power in unintended and high-impact ways due to problems with their objectives. {"instantiations": ["misaligned_power_seeking_TRUE", "misaligned_power_seeking_FALSE"]}
+            - [APS_Systems]: AI systems with advanced capabilities, agentic planning, and strategic awareness. {"instantiations": ["aps_systems_TRUE", "aps_systems_FALSE"]}
+                - [Advanced_AI_Capability]: AI systems that outperform humans on tasks that grant significant power in the world. {"instantiations": ["advanced_ai_capability_TRUE", "advanced_ai_capability_FALSE"]}
+                - [Agentic_Planning]: AI systems making and executing plans based on world models to achieve objectives. {"instantiations": ["agentic_planning_TRUE", "agentic_planning_FALSE"]}
+                - [Strategic_Awareness]: AI systems with models accurately representing power dynamics with humans. {"instantiations": ["strategic_awareness_TRUE", "strategic_awareness_FALSE"]}
+            - [Difficulty_Of_Alignment]: It is harder to build aligned systems than misaligned systems that are attractive to deploy. {"instantiations": ["difficulty_of_alignment_TRUE", "difficulty_of_alignment_FALSE"]}
+                - [Instrumental_Convergence]: AI systems with misaligned objectives tend to seek power as an instrumental goal. {"instantiations": ["instrumental_convergence_TRUE", "instrumental_convergence_FALSE"]}
+                - [Problems_With_Proxies]: Optimizing for proxy objectives breaks correlations with intended goals. {"instantiations": ["problems_with_proxies_TRUE", "problems_with_proxies_FALSE"]}
+                - [Problems_With_Search]: Search processes can yield systems pursuing different objectives than intended. {"instantiations": ["problems_with_search_TRUE", "problems_with_search_FALSE"]}
+            - [Deployment_Decisions]: Decisions to deploy potentially misaligned AI systems. {"instantiations": ["deployment_decisions_DEPLOY", "deployment_decisions_WITHHOLD"]}
+                - [Incentives_To_Build_APS]: Strong incentives to build and deploy APS systems. {"instantiations": ["incentives_to_build_aps_STRONG", "incentives_to_build_aps_WEAK"]}
+                    - [Usefulness_Of_APS]: APS systems are very useful for many valuable tasks. {"instantiations": ["usefulness_of_aps_HIGH", "usefulness_of_aps_LOW"]}
+                    - [Competitive_Dynamics]: Competitive pressures between AI developers. {"instantiations": ["competitive_dynamics_STRONG", "competitive_dynamics_WEAK"]}
+                - [Deception_By_AI]: AI systems deceiving humans about their true objectives. {"instantiations": ["deception_by_ai_TRUE", "deception_by_ai_FALSE"]}
+        - [Corrective_Feedback]: Human society implementing corrections after observing problems. {"instantiations": ["corrective_feedback_EFFECTIVE", "corrective_feedback_INEFFECTIVE"]}
+            - [Warning_Shots]: Observable failures in weaker systems before catastrophic risks. {"instantiations": ["warning_shots_OBSERVED", "warning_shots_UNOBSERVED"]}
+            - [Rapid_Capability_Escalation]: AI capabilities escalating very rapidly, allowing little time for correction. {"instantiations": ["rapid_capability_escalation_TRUE", "rapid_capability_escalation_FALSE"]}
+[Barriers_To_Understanding]: Difficulty in understanding the internal workings of advanced AI systems. {"instantiations": ["barriers_to_understanding_HIGH", "barriers_to_understanding_LOW"]}
+- [Misaligned_Power_Seeking]: Deployed AI systems seeking power in unintended and high-impact ways due to problems with their objectives. {"instantiations": ["misaligned_power_seeking_TRUE", "misaligned_power_seeking_FALSE"]}
+[Adversarial_Dynamics]: Potentially adversarial relationships between humans and power-seeking AI. {"instantiations": ["adversarial_dynamics_TRUE", "adversarial_dynamics_FALSE"]}
+- [Misaligned_Power_Seeking]: Deployed AI systems seeking power in unintended and high-impact ways due to problems with their objectives. {"instantiations": ["misaligned_power_seeking_TRUE", "misaligned_power_seeking_FALSE"]}
+[Stakes_Of_Error]: The escalating impact of mistakes with power-seeking AI systems. {"instantiations": ["stakes_of_error_HIGH", "stakes_of_error_LOW"]}
+- [Misaligned_Power_Seeking]: Deployed AI systems seeking power in unintended and high-impact ways due to problems with their objectives. {"instantiations": ["misaligned_power_seeking_TRUE", "misaligned_power_seeking_FALSE"]}</code></pre>
+<p>This representation captures the complex causal structure of Carlsmith’s argument, with 21 variables organized in a multi-level hierarchy. The “Misaligned_Power_Seeking” node appears multiple times, reflecting its role as a central concept that influences several other variables.</p>
+<p>After processing this structure with the AMTAIR system, probability information was added to create a complete BayesDown representation. The following excerpt shows the probability information for a single node (“Deployment_Decisions”):</p>
+<pre><code>[Deployment_Decisions]: Decisions to deploy potentially misaligned AI systems. {
+  "instantiations": ["deployment_decisions_DEPLOY", "deployment_decisions_WITHHOLD"],
+  "priors": {
+    "p(deployment_decisions_DEPLOY)": "0.70",
+    "p(deployment_decisions_WITHHOLD)": "0.30"
+  },
+  "posteriors": {
+    "p(deployment_decisions_DEPLOY|incentives_to_build_aps_STRONG, deception_by_ai_TRUE)": "0.90",
+    "p(deployment_decisions_DEPLOY|incentives_to_build_aps_STRONG, deception_by_ai_FALSE)": "0.75",
+    "p(deployment_decisions_DEPLOY|incentives_to_build_aps_WEAK, deception_by_ai_TRUE)": "0.60",
+    "p(deployment_decisions_DEPLOY|incentives_to_build_aps_WEAK, deception_by_ai_FALSE)": "0.30"
+  }
+}</code></pre>
+<p>This node has two possible states (DEPLOY or WITHHOLD), prior probabilities for each state, and conditional probabilities based on different combinations of its parent variables (“Incentives_To_Build_APS” and “Deception_By_AI”).</p>
+<p>The complete BayesDown representation was processed through the AMTAIR pipeline, resulting in a structured DataFrame and ultimately a Bayesian network. Key extraction steps included:</p>
+<div class="sourceCode" id="cb20"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb20-1"><a href="#cb20-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Extract structured data from BayesDown</span></span>
+<span id="cb20-2"><a href="#cb20-2" aria-hidden="true" tabindex="-1"></a>carlsmith_df <span class="op">=</span> parse_markdown_hierarchy_fixed(carlsmith_bayesdown, ArgDown<span class="op">=</span><span class="va">False</span>)</span>
+<span id="cb20-3"><a href="#cb20-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb20-4"><a href="#cb20-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Enhance with calculated metrics</span></span>
+<span id="cb20-5"><a href="#cb20-5" aria-hidden="true" tabindex="-1"></a>enhanced_carlsmith_df <span class="op">=</span> enhance_extracted_data(carlsmith_df)</span>
+<span id="cb20-6"><a href="#cb20-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb20-7"><a href="#cb20-7" aria-hidden="true" tabindex="-1"></a><span class="co"># Create network and visualization</span></span>
+<span id="cb20-8"><a href="#cb20-8" aria-hidden="true" tabindex="-1"></a>carlsmith_network <span class="op">=</span> create_bayesian_network(enhanced_carlsmith_df)</span>
+<span id="cb20-9"><a href="#cb20-9" aria-hidden="true" tabindex="-1"></a>carlsmith_visualization <span class="op">=</span> create_bayesian_network_with_probabilities(enhanced_carlsmith_df)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>The resulting visualization (Figure 10) shows the complete Carlsmith model with color-coded nodes representing probability values:</p>
+<p>[FIGURE 10: Interactive visualization of Carlsmith’s model showing color-coded nodes and relationships]</p>
+<p>This visualization reveals several structural insights:</p>
+<ol type="1">
+<li><strong>Central importance of “Misaligned_Power_Seeking”</strong> as a hub node with multiple parents and children</li>
+<li><strong>Multiple pathways to “Existential_Catastrophe”</strong> through different intermediate factors</li>
+<li><strong>Clusters of related variables</strong> forming coherent subarguments (e.g., factors affecting alignment difficulty)</li>
+<li><strong>Flow of influence</strong> from technical factors (bottom) through deployment decisions to ultimate outcomes (top)</li>
+</ol>
+<p>The implementation successfully handles the complexity of Carlsmith’s model, correctly processing the multi-level structure, resolving repeated node references, and calculating appropriate probability distributions. The interactive visualization makes this complex model accessible, allowing users to explore different aspects of the argument through intuitive navigation.</p>
+<p>Several key aspects of the implementation were particularly important for handling this complex model:</p>
+<ol type="1">
+<li><p>The <strong>parent-child relationship detection algorithm</strong> correctly identified hierarchical relationships despite the complex structure with repeated nodes and multiple levels.</p></li>
+<li><p>The <strong>probability question generation system</strong> created appropriate questions for all variables, including those with multiple parents requiring factorial combinations of conditional probabilities.</p></li>
+<li><p>The <strong>network enhancement functions</strong> calculated useful metrics like centrality measures and Markov blankets that help interpret the model structure.</p></li>
+<li><p>The <strong>visualization system</strong> effectively presented the complex network through color-coding, interactive exploration, and progressive disclosure of details.</p></li>
+</ol>
+<p>The successful application to Carlsmith’s model demonstrates the AMTAIR approach’s scalability to complex real-world arguments. While the canonical rain-sprinkler-lawn example validated correctness, this application proves practical utility for sophisticated multi-level arguments with dozens of variables and complex interdependencies—precisely the kind of arguments that characterize AI risk assessments.</p>
+<p>This capability addresses a core limitation of the original MTAIR framework: the labor intensity of manual formalization. Where manually converting Carlsmith’s argument to a formal model might take days of expert time, the AMTAIR approach accomplished this in minutes, creating a foundation for further analysis and exploration.</p>
+</section>
+</section>
+     </main>
+<!-- /main column -->  <script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copied!");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copied!");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+        const codeEl = trigger.previousElementSibling.cloneNode(true);
+        for (const childEl of codeEl.children) {
+          if (isCodeAnnotation(childEl)) {
+            childEl.remove();
+          }
+        }
+        return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp('/' + window.location.host + '/');
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>  </div> <!-- /content --> 
+  
+</body></html>

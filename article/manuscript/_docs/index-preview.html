@@ -7,7 +7,7 @@
 
     <meta name="author" content="Steve Purves">
     <meta name="author" content="Rowan Cockett">
-    <meta name="dcterms.date" content="2025-05-01">
+    <meta name="dcterms.date" content="2025-05-07">
     <meta name="keywords" content="La Palma, Earthquakes">
 
     <title>La Palma Earthquakes</title>
@@ -197,10 +197,10 @@
 <meta name="citation_keywords" content="La Palma,Earthquakes">
 <meta name="citation_author" content="Steve Purves">
 <meta name="citation_author" content="Rowan Cockett">
-<meta name="citation_publication_date" content="2025-05-01">
-<meta name="citation_cover_date" content="2025-05-01">
+<meta name="citation_publication_date" content="2025-05-07">
+<meta name="citation_cover_date" content="2025-05-07">
 <meta name="citation_year" content="2025">
-<meta name="citation_online_date" content="2025-05-01">
+<meta name="citation_online_date" content="2025-05-07">
 <meta name="citation_language" content="en">
 <meta name="citation_journal_title" content="Earth and Space Science">
 <meta name="citation_reference" content="citation_title=3rdReview_CHALLENGES_IN_PUBLIC_DEBATE_ON_AGI_VJM;,citation_abstract=Challenges for Public Debates aboutExistential Risk from Artificial General Intelligence “Let an ultraintelligent machine be defined as a machine that can far surpass all the intellectual activities of any man however clever. Since the design of machines is one of these intellectual activities,...;,citation_fulltext_html_url=https://docs.google.com/document/d/1Ml5yAFSI8jM3Hgnt6TLFDgCjVToz2UG6fU32-ZDAR8o/edit?usp=embed_facebook;,citation_language=en-US;,citation_publisher=Google Docs;">
@@ -506,7 +506,7 @@
                 <div>
             <div class="quarto-title-meta-heading">Published</div>
             <div class="quarto-title-meta-contents">
-              <p class="date">May 1, 2025</p>
+              <p class="date">May 7, 2025</p>
             </div>
           </div>
           
@@ -539,9 +539,15 @@
     <h2 id="toc-title">Table of contents</h2>
    
   <ul>
-  <li><a href="#introduction" id="toc-introduction" class="nav-link active" data-scroll-target="#introduction"><span class="header-section-number">1</span> Introduction</a></li>
-  <li><a href="#sec-data-methods" id="toc-sec-data-methods" class="nav-link" data-scroll-target="#sec-data-methods"><span class="header-section-number">2</span> Data &amp; Methods</a></li>
-  <li><a href="#conclusion" id="toc-conclusion" class="nav-link" data-scroll-target="#conclusion"><span class="header-section-number">3</span> Conclusion</a></li>
+  <li><a href="#introduction" id="toc-introduction" class="nav-link active" data-scroll-target="#introduction"><span class="header-section-number">0.1</span> Introduction</a></li>
+  <li><a href="#sec-data-methods" id="toc-sec-data-methods" class="nav-link" data-scroll-target="#sec-data-methods"><span class="header-section-number">0.2</span> Data &amp; Methods</a></li>
+  <li><a href="#conclusion" id="toc-conclusion" class="nav-link" data-scroll-target="#conclusion"><span class="header-section-number">0.3</span> Conclusion</a></li>
+  <li><a href="#introduction-1" id="toc-introduction-1" class="nav-link" data-scroll-target="#introduction-1"><span class="header-section-number">1</span> Introduction</a>
+  <ul class="collapse">
+  <li><a href="#quarto" id="toc-quarto" class="nav-link" data-scroll-target="#quarto"><span class="header-section-number">1.1</span> Quarto</a></li>
+  <li><a href="#running-code" id="toc-running-code" class="nav-link" data-scroll-target="#running-code"><span class="header-section-number">1.2</span> Running Code</a></li>
+  <li><a href="#todos" id="toc-todos" class="nav-link" data-scroll-target="#todos"><span class="header-section-number">1.3</span> ToDo’s</a></li>
+  </ul></li>
   <li><a href="#references" id="toc-references" class="nav-link" data-scroll-target="#references">References</a></li>
   </ul>
 </nav>
@@ -550,8 +556,8 @@
 </div>
 <main class="content quarto-banner-title-block" id="quarto-document-content">      
 
-       <section id="introduction" class="level2" data-number="1">
-<h2 data-number="1" class="anchored" data-anchor-id="introduction"><span class="header-section-number">1</span> Introduction</h2>
+       <section id="introduction" class="level2" data-number="0.1">
+<h2 data-number="0.1" class="anchored" data-anchor-id="introduction"><span class="header-section-number">0.1</span> Introduction</h2>
 <div class="cell-container"><div class="cell-decorator"><pre>In [1]:</pre></div><div class="cell">
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>eruptions <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">1492</span>, <span class="dv">1585</span>, <span class="dv">1646</span>, <span class="dv">1677</span>, <span class="dv">1712</span>, <span class="dv">1949</span>, <span class="dv">1971</span>, <span class="dv">2021</span>)</span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>n_eruptions <span class="ot">&lt;-</span> <span class="fu">length</span>(eruptions)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -585,7 +591,7 @@ Figure&nbsp;1: Timeline of recent earthquakes on La Palma
 <p>Based on data up to and including 1971, eruptions on La Palma happen every 79.8 years on average.</p>
 <p>Studies of the magma systems feeding the volcano, such as <span class="citation" data-cites="marrero2019">Marrero et al. (<a href="#ref-marrero2019" role="doc-biblioref">2019</a>)</span>, have proposed that there are two main magma reservoirs feeding the Cumbre Vieja volcano; one in the mantle (30-40km depth) which charges and in turn feeds a shallower crustal reservoir (10-20km depth).</p>
 <p>Eight eruptions have been recorded since the late 1400s (<a href="#fig-timeline" class="quarto-xref">Figure&nbsp;1</a>).</p>
-<p>Data and methods are discussed in <a href="#sec-data-methods" class="quarto-xref">Section&nbsp;2</a>.</p>
+<p>Data and methods are discussed in <a href="#sec-data-methods" class="quarto-xref">Section&nbsp;0.2</a>.</p>
 <p>Let <span class="math inline">\(x\)</span> denote the number of eruptions in a year. Then, <span class="math inline">\(x\)</span> can be modeled by a Poisson distribution</p>
 <p><span id="eq-poisson"><span class="math display">\[
 p(x) = \frac{e^{-\lambda} \lambda^{x}}{x !}
@@ -678,15 +684,57 @@ Figure&nbsp;3: Locations of earthquakes on La Palma since 2017
 </div>
 <p><a href="#fig-spatial-plot" class="quarto-xref">Figure&nbsp;3</a> shows the location of recent Earthquakes on La Palma.</p>
 </section>
-<section id="sec-data-methods" class="level2" data-number="2">
-<h2 data-number="2" class="anchored" data-anchor-id="sec-data-methods"><span class="header-section-number">2</span> Data &amp; Methods</h2>
+<section id="sec-data-methods" class="level2" data-number="0.2">
+<h2 data-number="0.2" class="anchored" data-anchor-id="sec-data-methods"><span class="header-section-number">0.2</span> Data &amp; Methods</h2>
 </section>
-<section id="conclusion" class="level2" data-number="3">
-<h2 data-number="3" class="anchored" data-anchor-id="conclusion"><span class="header-section-number">3</span> Conclusion</h2>
+<section id="conclusion" class="level2" data-number="0.3">
+<h2 data-number="0.3" class="anchored" data-anchor-id="conclusion"><span class="header-section-number">0.3</span> Conclusion</h2>
+</section>
+<section id="introduction-1" class="level1 quarto-embed-nb-cell" data-notebook="/Users/vjm/Library/Mobile Documents/iCloud~md~obsidian/Documents/Vaulty/2_DoingGood/Studies/P&amp;E/Specializations/MAThesis/submission/article/chapters/section1.qmd" data-notebook-title="Introduction" data-notebook-cellid="5c9cd77a-e4ad-4e45-8208-7fc2a66e21c3" data-number="1">
+<h1 data-number="1"><span class="header-section-number">1</span> Introduction</h1>
+<p>This is a booooook created from markdown and executable code.</p>
+<p>See [<span class="citation" data-cites="knuth84">Knuth (<a href="#ref-knuth84" role="doc-biblioref">1984</a>)</span>] and <span class="citation" data-cites="knuth84">Knuth (<a href="#ref-knuth84" role="doc-biblioref">1984</a>)</span> for additional discussion of literate programming.</p>
+<p>Regular markdown and <span class="math inline">\(E=mc^2\)</span> equations.</p>
+<section id="quarto" class="level2" data-number="1.1">
+<h2 data-number="1.1" class="anchored" data-anchor-id="quarto"><span class="header-section-number">1.1</span> Quarto</h2>
+<p>Quarto enables you to weave together content and executable code into a finished document. To learn more about Quarto see <a href="https://quarto.org" class="uri">https://quarto.org</a>.</p>
+</section>
+<section id="running-code" class="level2" data-number="1.2">
+<h2 data-number="1.2" class="anchored" data-anchor-id="running-code"><span class="header-section-number">1.2</span> Running Code</h2>
+<p>When you click the <strong>Render</strong> button a document will be generated that includes both content and the output of embedded code. You can embed code like this:</p>
+<div class="cell-container"><div class="cell-decorator"><pre>In [1]:</pre></div><div id="3d716343" class="cell" data-execution_count="1">
+<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="dv">1</span> <span class="op">+</span> <span class="dv">1</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display">
+<pre><code>2</code></pre>
+</div>
+</div></div>
+<p>You can add options to executable code like this</p>
+<div class="cell-container"><div class="cell-decorator"><pre>In [2]:</pre></div><div id="98ce45ef" class="cell" data-execution_count="2">
+<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="dv">2</span> <span class="op">*</span> <span class="dv">2</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display">
+<pre><code>4</code></pre>
+</div>
+</div></div>
+<p>The <code>echo: false</code> option disables the printing of code (only output is displayed).</p>
+<div class="cell-container"><div class="cell-decorator"><pre>In [3]:</pre></div><div id="1aa3ab93" class="cell" data-execution_count="3">
+<div class="sourceCode cell-code" id="cb10"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="dv">1</span> <span class="op">+</span> <span class="dv">1</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display">
+<pre><code>2</code></pre>
+</div>
+</div></div>
+<p>More markdown.</p>
+</section>
+<section id="todos" class="level2" data-number="1.3">
+<h2 data-number="1.3" class="anchored" data-anchor-id="todos"><span class="header-section-number">1.3</span> ToDo’s</h2>
+<p>// Double slash creates a new task</p>
+</section>
 </section>
 <section id="references" class="level2 unnumbered">
 <h2 class="unnumbered anchored" data-anchor-id="references">References</h2>
 <div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" role="list">
+<div id="ref-knuth84" class="csl-entry" role="listitem">
+Knuth, Donald E. 1984. <span>“Literate Programming.”</span> <em>Computer Journal</em> 27 (2): 97–111. <a href="https://doi.org/10.1093/comjnl/27.2.97">https://doi.org/10.1093/comjnl/27.2.97</a>.
+</div>
 <div id="ref-marrero2019" class="csl-entry" role="listitem">
 Marrero, José, Alicia García, Manuel Berrocoso, Ángeles Llinares, Antonio Rodríguez-Losada, and R. Ortiz. 2019. <span>“Strategies for the Development of Volcanic Hazard Maps in Monogenetic Volcanic Fields: The Example of <span>La Palma</span> (<span>Canary Islands</span>).”</span> <em>Journal of Applied Volcanology</em> 8 (July). <a href="https://doi.org/10.1186/s13617-019-0085-5">https://doi.org/10.1186/s13617-019-0085-5</a>.
 </div>
