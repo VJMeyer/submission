@@ -1,5 +1,5 @@
 ---
-title: "Automating the Modelling of Transformative Artificial Intelligence Risks"
+title: La Palma Earthquakes
 author:
   - name: Steve Purves
     orcid: 0000-0002-0760-5497
@@ -35,23 +35,7 @@ citation:
 number-sections: true
 ---
 
-<!-- [ ] Figure out Outline to Outline to Draft Workflow -->
-
-<!-- [ ] Figure out Thesis "styling" (book vs manuscript) -->
-<!-- [ ] Setup reliable "save as PDF" -->
-<!-- [ ] Setup "save as LaTeX" -->
-<!-- [ ] Adapt LaTeX / PDF based on (journal) template -->
-
 ## Introduction
-
-<!-- [ ]: Clean up the introduction -->
-
-
-<!-- [ ]: Test Quarto-Code-Links: https://quarto.org/docs/manuscripts/components.html#code-links -->
-
-```{r}
-# [ ]: Configure the Quarto Manuscript options: https://quarto.org/docs/manuscripts/components.html#including-notebooks
-```
 
 ```{r}
 eruptions <- c(1492, 1585, 1646, 1677, 1712, 1949, 1971, 2021)
@@ -119,8 +103,6 @@ La Palma is one of the west most islands in the Volcanic Archipelago of the Cana
 ## Data & Methods {#sec-data-methods}
 
 ## Conclusion
-
-
 
 
 {{< embed chapters/section1.qmd >}}

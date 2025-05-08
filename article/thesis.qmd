@@ -35,6 +35,13 @@ citation:
 number-sections: true
 ---
 
+<!-- [ ] Figure out Outline to Outline to Draft Workflow -->
+
+<!-- [ ] Figure out Thesis "styling" (book vs manuscript) -->
+<!-- [ ] Setup reliable "save as PDF" -->
+<!-- [ ] Setup "save as LaTeX" -->
+<!-- [ ] Adapt LaTeX / PDF based on (journal) template -->
+
 ## Introduction
 
 <!-- [ ]: Clean up the introduction -->
@@ -118,6 +125,14 @@ La Palma is one of the west most islands in the Volcanic Archipelago of the Cana
 
 {{< embed chapters/section1.qmd >}}
 
+```{markdown}
+`r knitr::knit_child("chapters/Outlining-Workflows.md")`
+```
+
+{{< include chapters/Outlining-Workflows.md >}}
+
+
+{{< embed chapters/Outlining-Workflows.md >}}
 
 
 ## References {.unnumbered}
