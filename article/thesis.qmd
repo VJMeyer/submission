@@ -125,15 +125,8 @@ La Palma is one of the west most islands in the Volcanic Archipelago of the Cana
 
 {{< embed chapters/section1.qmd >}}
 
-```{markdown}
-`r knitr::knit_child("chapters/Outlining-Workflows.md")`
-```
 
-{{< include chapters/Outlining-Workflows.md >}}
-
-
-{{< embed chapters/Outlining-Workflows.md >}}
-
+{{< include chapters/Outlining-Workflow.md >}}
 
 ## References {.unnumbered}
 
