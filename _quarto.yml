@@ -30,12 +30,14 @@ book:
     - article/chapters/Introduction.qmd
     - article/chapters/Context.qmd
     - article/chapters/AMTAIR.qmd
-    - article/chapters/Implementation.qmd
+    - article/chapters/Discussion.qmd
     - article/chapters/Conclusion.qmd
-    - article/chapters/intro.qmd
-    - article/chapters/summary.qmd
-    - article/chapters/OutlineDraft9.2.qmd
-    - article/chapters/Draft9.2_sec2.3-4.4_feedback.qmd
+    - article/ref/references.qmd
+    - article/chapters/Appendices.qmd
+#    - article/chapters/intro.qmd
+#    - article/chapters/summary.qmd
+#    - article/chapters/OutlineDraft9.2.qmd
+#    - article/chapters/Draft9.2_sec2.3-4.4_feedback.qmd
 #    - article/chapters/intro.qmd
 #    - article/chapters/01-intro.qmd
 #    - article/chapters/02-methods.qmd
@@ -43,8 +45,6 @@ book:
     - article/chapters/appendixA.qmd
 #    - article/chapters/methodology.qmd
     # etc.
-    - article/ref/references.qmd
-
 #  appendices:
 #    - tools.qmd
 #    - resources.qmd

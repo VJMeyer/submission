@@ -22,7 +22,7 @@
 
 • provides context for discussion (places issue within a larger debate or sphere of relevance)
 
-## Scope:   Aim & Context of the Research
+## Scope:   Aim & Context of the Paper
 
 ## Significance of the Research:    Theory of Change
 
@@ -36,6 +36,6 @@
 
 • provides roadmap indicating structure and key content points of the essay
 
-## Overview:    Structure & Approach of the Paper (Roadmap --- Theory of Change)
+## Overview:    Structure & Approach of the Paper (--- Theory of Change)
 
 ## Table of Contents

@@ -712,11 +712,11 @@
   {
     "objectID": "article/chapters/summary.html",
     "href": "article/chapters/summary.html",
-    "title": "7  Summary",
+    "title": "9  Summary",
     "section": "",
-    "text": "In summary, this book has no content whatsoever.\n\n\nCode\n1 + 1\n\n\n[1] 2\n\n\n\n\n8 Explore Earthquakes\nCharlotte Wickham\nRead a clean version of data:\nCreate spatial plot:\n\n\n\n\n\n\n\n\nFigure 8.1: Locations of earthquakes on La Palma since 2017\n\n\n\n\n\n\n\n9 Converting Notebooks\nYou can convert between .ipynb and .qmd representations of a notebook using the quarto convert command. For example:\nquarto convert basics-jupyter.ipynb quarto convert basics-jupyter.qmd",
+    "text": "In summary, this book has no content whatsoever.\n\n\nCode\n1 + 1\n\n\n[1] 2\n\n\n\n\n10 Explore Earthquakes\nCharlotte Wickham\nRead a clean version of data:\nCreate spatial plot:\n\n\n\n\n\n\n\n\nFigure 10.1: Locations of earthquakes on La Palma since 2017\n\n\n\n\n\n\n\n11 Converting Notebooks\nYou can convert between .ipynb and .qmd representations of a notebook using the quarto convert command. For example:\nquarto convert basics-jupyter.ipynb quarto convert basics-jupyter.qmd",
     "crumbs": [
-      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Summary</span>"
+      "<span class='chapter-number'>9</span>  <span class='chapter-title'>Summary</span>"
     ]
   },
   {
@@ -1422,11 +1422,11 @@
   {
     "objectID": "article/chapters/AMTAIR.html",
     "href": "article/chapters/AMTAIR.html",
-    "title": "3  AMTAIR",
+    "title": "4  AMTAIR",
     "section": "",
-    "text": "20% of Grade:\n• provides critical or constructive evaluation of positions introduced • develops strong (plausible) argument in support of author’s own position/thesis • argument draws on relevant course material • claim/argument demonstrates understanding of the course materials incl. key arguments and core concepts within the debate • claim/argument is original or insightful, possibly even presents an original contribution to the debate\n~ 29% of text ~ 8700 words",
+    "text": "20% of Grade:\n• provides critical or constructive evaluation of positions introduced • develops strong (plausible) argument in support of author’s own position/thesis • argument draws on relevant course material • claim/argument demonstrates understanding of the course materials incl. key arguments and core concepts within the debate • claim/argument is original or insightful, possibly even presents an original contribution to the debate\n~ 29% of text ~ 8700 words\n\n\n5 \n\n\n6 Implementation\nTestText\n\n\n\n\n7 \n\n\n8 Results\nTestText",
     "crumbs": [
-      "<span class='chapter-number'>3</span>  <span class='chapter-title'>AMTAIR</span>"
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>AMTAIR</span>"
     ]
   },
   {
@@ -1454,7 +1454,7 @@
     "href": "article/chapters/Frontmatter.html",
     "title": "1  Frontmatter",
     "section": "",
-    "text": "2 Prefatory Apparatus: Illustrations and Terminology — Quick References",
+    "text": "Prefatory Apparatus: Illustrations and Terminology — Quick References",
     "crumbs": [
       "<span class='chapter-number'>1</span>  <span class='chapter-title'>Frontmatter</span>"
     ]
@@ -1463,8 +1463,8 @@
     "objectID": "article/chapters/Frontmatter.html#list-of-tables",
     "href": "article/chapters/Frontmatter.html#list-of-tables",
     "title": "1  Frontmatter",
-    "section": "2.1 List of Tables",
-    "text": "2.1 List of Tables\nTable 1: Table name\nTable 2: Table name\nTable 3: Table name",
+    "section": "1.1 List of Tables",
+    "text": "1.1 List of Tables\nTable 1: Table name\nTable 2: Table name\nTable 3: Table name",
     "crumbs": [
       "<span class='chapter-number'>1</span>  <span class='chapter-title'>Frontmatter</span>"
     ]
@@ -1473,8 +1473,8 @@
     "objectID": "article/chapters/Frontmatter.html#list-of-graphics-figures",
     "href": "article/chapters/Frontmatter.html#list-of-graphics-figures",
     "title": "1  Frontmatter",
-    "section": "2.2 List of Graphics & Figures",
-    "text": "2.2 List of Graphics & Figures",
+    "section": "1.2 List of Graphics & Figures",
+    "text": "1.2 List of Graphics & Figures",
     "crumbs": [
       "<span class='chapter-number'>1</span>  <span class='chapter-title'>Frontmatter</span>"
     ]
@@ -1483,8 +1483,8 @@
     "objectID": "article/chapters/Frontmatter.html#list-of-abbreviations",
     "href": "article/chapters/Frontmatter.html#list-of-abbreviations",
     "title": "1  Frontmatter",
-    "section": "2.3 List of Abbreviations",
-    "text": "2.3 List of Abbreviations\nesp. especially\nf., ff. following\nincl. including\np., pp. page(s)\nMAD Mutually Assured Destruction",
+    "section": "1.3 List of Abbreviations",
+    "text": "1.3 List of Abbreviations\nesp. especially\nf., ff. following\nincl. including\np., pp. page(s)\nMAD Mutually Assured Destruction",
     "crumbs": [
       "<span class='chapter-number'>1</span>  <span class='chapter-title'>Frontmatter</span>"
     ]
@@ -1493,10 +1493,20 @@
     "objectID": "article/chapters/Frontmatter.html#glossary",
     "href": "article/chapters/Frontmatter.html#glossary",
     "title": "1  Frontmatter",
-    "section": "2.4 Glossary",
-    "text": "2.4 Glossary",
+    "section": "1.4 Glossary",
+    "text": "1.4 Glossary",
     "crumbs": [
       "<span class='chapter-number'>1</span>  <span class='chapter-title'>Frontmatter</span>"
+    ]
+  },
+  {
+    "objectID": "article/chapters/Appendices.html",
+    "href": "article/chapters/Appendices.html",
+    "title": "7  Appendices",
+    "section": "",
+    "text": "8 Appendix A\n\n\n9 Appendix B\n\n\n10 Appendix C\n\n\n11 Appendix D\nTestText\n\n\n12 Affidavit",
+    "crumbs": [
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Appendices</span>"
     ]
   }
 ]

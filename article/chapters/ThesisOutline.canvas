@@ -18,7 +18,7 @@
 		{"id":"16574786e3afea50","type":"group","x":800,"y":2241,"width":400,"height":400,"label":"Methodology"},
 		{"id":"8bc6f3f514ebc996","type":"group","x":-40,"y":3041,"width":400,"height":400,"label":"Implementation"},
 		{"id":"3397eb38e7ebf68b","type":"group","x":800,"y":3041,"width":400,"height":400,"label":"Results"},
-		{"id":"56263be102f968b7","x":26,"y":7680,"width":400,"height":400,"type":"group","label":"Affidavit"},
+		{"id":"56263be102f968b7","x":26,"y":7480,"width":400,"height":400,"type":"group","label":"Affidavit"},
 		{"id":"5eedf6cc06094307","type":"group","x":26,"y":701,"width":400,"height":120,"label":"Abstract"},
 		{"id":"5ab5520237f2a8f2","type":"group","x":26,"y":520,"width":400,"height":120,"label":"Title Page"},
 		{"id":"c1b2f92329385b6b","type":"group","x":26,"y":880,"width":400,"height":120,"label":"Table of Contents"},
