@@ -1,26 +1,27 @@
 ---
 title: "Automating the Modelling of Transformative Artificial Intelligence Risks"
 author:
-  - name: Steve Purves
-    orcid: 0000-0002-0760-5497
+  - name: Valentin Jakob Meyer
+    orcid: 0009-0006-0889-5269
     corresponding: true
-    email: steve@curvenote.com
+    email: Valentin2meyer@gmail.com
     roles:
       - Investigation
       - Project administration
       - Software
       - Visualization
     affiliations:
-      - Curvenote
-  - name: Rowan Cockett
+      - University of Bayreuth
+      - MCMP --- LMU Munich
+  - name: Second Author / Supervisor Name
     orcid: 0000-0002-7859-8394
     corresponding: false
     roles: []
     affiliations:
       - Curvenote
 keywords:
-  - La Palma
-  - Earthquakes
+  - MTAIR
+  - AMTAIR
 abstract: |
   In September 2021, a significant jump in seismic activity on the island of La Palma (Canary Islands, Spain) signaled the start of a volcanic crisis that still continues at the time of writing. Earthquake data is continually collected and published by the Instituto Geográphico Nacional (IGN). ...
 plain-language-summary: |
@@ -42,7 +43,7 @@ number-sections: true
 <!-- [ ] Setup "save as LaTeX" -->
 <!-- [ ] Adapt LaTeX / PDF based on (journal) template -->
 
-## Introduction
+
 
 <!-- [ ]: Clean up the introduction -->
 
@@ -52,6 +53,62 @@ number-sections: true
 ```{r}
 # [ ]: Configure the Quarto Manuscript options: https://quarto.org/docs/manuscripts/components.html#including-notebooks
 ```
+
+
+<!-- 
+# Grading
+
+## Research (10%)
+• demonstrates knowledge of the subject area as drawn from appropriate sources
+• incorporates insights from in-class discussions
+• draws on appropriate additional materials beyond those covered in class (primary as well as secondary sources)
+• covers relevant material at appropriate level of detail
+
+## Structure (10%)
+• outlines project clearly in the introduction
+• discussion follows a logical order
+• order of sections corresponds to outline
+• uses appropriate topic and transition sentences
+• employs proper signposting and cross-referencing throughout paper
+• sections are appropriately numbered and headlined
+
+##Language and Style (10%)
+• employs appropriate tone and academic language
+• uses effective and sophisticated sentence variety, diction, and vocabulary
+• employs correct English spelling and grammar
+• is clearly written and uses appropriate sentence complexity
+• communicates main points effectively / is easy to follow
+• formats citations and references correctly and consistently (e.g. (AUTHOR, YEAR) citation style)
+• names all primary and secondary sources
+• includes a complete list of references with full bibliographic details
+
+ -->
+
+{{< embed chapters/Frontmatter.qmd >}}
+
+{{< embed chapters/Introduction.qmd >}}
+
+{{< embed chapters/Context.qmd >}}
+
+{{< embed chapters/AMTAIR.qmd >}}
+
+{{< embed chapters/Discussion.qmd >}}
+
+{{< embed chapters/Conclusion.qmd >}}
+
+## References {.unnumbered}
+
+:::{#refs}
+
+:::
+
+\\ {{< include chapters/Outlining-Workflow.md >}}
+
+
+
+# Example
+
+## Introduction
 
 ```{r}
 eruptions <- c(1492, 1585, 1646, 1677, 1712, 1949, 1971, 2021)
@@ -120,44 +177,4 @@ La Palma is one of the west most islands in the Volcanic Archipelago of the Cana
 
 ## Conclusion
 
-
-
-<!-- 
-# Grading
-
-## Research (10%)
-• demonstrates knowledge of the subject area as drawn from appropriate sources
-• incorporates insights from in-class discussions
-• draws on appropriate additional materials beyond those covered in class (primary as well as secondary sources)
-• covers relevant material at appropriate level of detail
-
-## Structure (10%)
-• outlines project clearly in the introduction
-• discussion follows a logical order
-• order of sections corresponds to outline
-• uses appropriate topic and transition sentences
-• employs proper signposting and cross-referencing throughout paper
-• sections are appropriately numbered and headlined
-
-##Language and Style (10%)
-• employs appropriate tone and academic language
-• uses effective and sophisticated sentence variety, diction, and vocabulary
-• employs correct English spelling and grammar
-• is clearly written and uses appropriate sentence complexity
-• communicates main points effectively / is easy to follow
-• formats citations and references correctly and consistently (e.g. (AUTHOR, YEAR) citation style)
-• names all primary and secondary sources
-• includes a complete list of references with full bibliographic details
-
- -->
-
 {{< embed chapters/section1.qmd >}}
-
-
-{{< include chapters/Outlining-Workflow.md >}}
-
-## References {.unnumbered}
-
-:::{#refs}
-
-:::

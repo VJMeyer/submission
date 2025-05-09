@@ -1,0 +1,30 @@
+---
+title: "Frontmatter"
+format: html
+---
+
+# Prefatory Apparatus: Illustrations and Terminology --- Quick References {.unnumbered}
+
+## List of Tables
+
+Table 1: 	Table name
+
+Table 2: 	Table name
+
+Table 3:	Table name
+
+## List of Graphics & Figures
+
+## List of Abbreviations
+
+esp.		especially
+
+f., ff.		following
+
+incl.		including
+
+p., pp.		page(s)
+
+MAD		Mutually Assured Destruction
+
+## Glossary

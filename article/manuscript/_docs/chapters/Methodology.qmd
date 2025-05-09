@@ -1,0 +1,3 @@
+# Methodology
+
+Causal Bayesian Networks	—	Directed Acyclical Graphs

@@ -1,15 +1,28 @@
 {
 	"nodes":[
-		{"id":"ef51f849dfab9ce5","type":"group","x":-149,"y":2080,"width":1498,"height":722,"label":"Background/Context"},
+		{"id":"ef51f849dfab9ce5","type":"group","x":-149,"y":2080,"width":1498,"height":722,"label":"Context"},
 		{"id":"eb0cffd9f743682a","type":"group","x":-149,"y":2880,"width":1498,"height":722,"label":"AMTAIR (Own Position/Argument)"},
-		{"id":"079019c1c223550d","x":4560,"y":1120,"width":400,"height":1460,"type":"group","label":"Background/Context"},
-		{"id":"dfa2af9cea742810","x":4960,"y":1120,"width":400,"height":1460,"type":"group","label":"OwnPosition/Argument"},
+		{"id":"079019c1c223550d","type":"group","x":4560,"y":1120,"width":400,"height":1460,"label":"Background/Context"},
+		{"id":"dfa2af9cea742810","type":"group","x":4960,"y":1120,"width":400,"height":1460,"label":"OwnPosition/Argument"},
+		{"id":"94b95058a1de30ef","type":"group","x":-149,"y":440,"width":749,"height":762,"label":"Preface"},
 		{"id":"c4bd6a0ff89e9fec","type":"group","x":-149,"y":1287,"width":749,"height":722,"label":"Introduction"},
 		{"id":"b4b68ae99c4dbbd1","type":"group","x":-149,"y":3680,"width":749,"height":722,"label":"Discussion (Counterclaim/Objection & Rebuttal)"},
 		{"id":"fc1215b2dfa71f96","type":"group","x":-149,"y":4480,"width":749,"height":722,"label":"Conclusion (and Outlook)"},
-		{"id":"f439ff9e1c3357b9","x":4160,"y":1120,"width":400,"height":722,"type":"group","label":"Introduction"},
-		{"id":"d7c52fb32c952037","x":5360,"y":1120,"width":400,"height":722,"type":"group","label":"Counterclaim/Objection &Rebuttal"},
-		{"id":"9a7a33bd51079c82","x":5760,"y":1120,"width":400,"height":722,"type":"group","label":"Conclusion(andOutlook)"}
+		{"id":"29c62aaa2207ebdc","type":"group","x":-149,"y":6880,"width":749,"height":722,"label":"Appendices"},
+		{"id":"ca8851ee30796626","type":"group","x":-149,"y":5280,"width":749,"height":722,"label":"Bibliography"},
+		{"id":"a0fb153062a1079f","type":"group","x":-149,"y":6080,"width":749,"height":722,"label":"Notebooks"},
+		{"id":"f439ff9e1c3357b9","type":"group","x":4160,"y":1120,"width":400,"height":722,"label":"Introduction"},
+		{"id":"d7c52fb32c952037","type":"group","x":5360,"y":1120,"width":400,"height":722,"label":"Counterclaim/Objection &Rebuttal"},
+		{"id":"9a7a33bd51079c82","type":"group","x":5760,"y":1120,"width":400,"height":722,"label":"Conclusion(andOutlook)"},
+		{"id":"8df3ba2824d1197a","type":"group","x":-40,"y":2241,"width":400,"height":400,"label":"Background"},
+		{"id":"16574786e3afea50","type":"group","x":800,"y":2241,"width":400,"height":400,"label":"Methodology"},
+		{"id":"8bc6f3f514ebc996","type":"group","x":-40,"y":3041,"width":400,"height":400,"label":"Implementation"},
+		{"id":"3397eb38e7ebf68b","type":"group","x":800,"y":3041,"width":400,"height":400,"label":"Results"},
+		{"id":"56263be102f968b7","x":26,"y":7680,"width":400,"height":400,"type":"group","label":"Affidavit"},
+		{"id":"5eedf6cc06094307","type":"group","x":26,"y":701,"width":400,"height":120,"label":"Abstract"},
+		{"id":"5ab5520237f2a8f2","type":"group","x":26,"y":520,"width":400,"height":120,"label":"Title Page"},
+		{"id":"c1b2f92329385b6b","type":"group","x":26,"y":880,"width":400,"height":120,"label":"Table of Contents"},
+		{"id":"c140497a3c03345a","type":"group","x":26,"y":1060,"width":400,"height":120,"label":"Prefatory Apparatus"}
 	],
 	"edges":[
 		{"id":"16b77d03008944da","fromNode":"f439ff9e1c3357b9","fromSide":"bottom","toNode":"079019c1c223550d","toSide":"left"}
