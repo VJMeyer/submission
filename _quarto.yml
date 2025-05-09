@@ -26,6 +26,11 @@ book:
   cover-image: article/images/cover.png
   chapters:
     - index.qmd
+    - article/chapters/Introduction.qmd
+    - article/chapters/Context.qmd
+    - article/chapters/AMTAIR.qmd
+    - article/chapters/Discussion.qmd
+    - article/chapters/Conclusion.qmd
     - article/chapters/intro.qmd
     - article/chapters/summary.qmd
     - article/chapters/OutlineDraft9.2.qmd

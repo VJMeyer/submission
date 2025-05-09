@@ -33,3 +33,7 @@ How to think about the trade-off between comprehensiveness and "easy to follow /
 
 After discussing all these questions in detail, as well as the underlying points/vibe, discuss possible ways of accounting and working around/including all the above in the software workflow for writing a MA Thesis with the help of LLMs.
 I have numerous notes, drafts, todo lists, improvement ideas, versions of outlines, etc. please suggest the best possible setups/workflows to produce the best possible master's thesis (specifically iteration/prompting loops involving LLM's such as yourself).
+
+<!-- [ ]: ToDos -->
+% test
+<!-- Comments -->

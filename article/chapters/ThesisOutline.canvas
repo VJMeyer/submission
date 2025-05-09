@@ -1,0 +1,17 @@
+{
+	"nodes":[
+		{"id":"ef51f849dfab9ce5","type":"group","x":-149,"y":2080,"width":1498,"height":722,"label":"Background/Context"},
+		{"id":"eb0cffd9f743682a","type":"group","x":-149,"y":2880,"width":1498,"height":722,"label":"AMTAIR (Own Position/Argument)"},
+		{"id":"079019c1c223550d","x":4560,"y":1120,"width":400,"height":1460,"type":"group","label":"Background/Context"},
+		{"id":"dfa2af9cea742810","x":4960,"y":1120,"width":400,"height":1460,"type":"group","label":"OwnPosition/Argument"},
+		{"id":"c4bd6a0ff89e9fec","type":"group","x":-149,"y":1287,"width":749,"height":722,"label":"Introduction"},
+		{"id":"b4b68ae99c4dbbd1","type":"group","x":-149,"y":3680,"width":749,"height":722,"label":"Discussion (Counterclaim/Objection & Rebuttal)"},
+		{"id":"fc1215b2dfa71f96","type":"group","x":-149,"y":4480,"width":749,"height":722,"label":"Conclusion (and Outlook)"},
+		{"id":"f439ff9e1c3357b9","x":4160,"y":1120,"width":400,"height":722,"type":"group","label":"Introduction"},
+		{"id":"d7c52fb32c952037","x":5360,"y":1120,"width":400,"height":722,"type":"group","label":"Counterclaim/Objection &Rebuttal"},
+		{"id":"9a7a33bd51079c82","x":5760,"y":1120,"width":400,"height":722,"type":"group","label":"Conclusion(andOutlook)"}
+	],
+	"edges":[
+		{"id":"16b77d03008944da","fromNode":"f439ff9e1c3357b9","fromSide":"bottom","toNode":"079019c1c223550d","toSide":"left"}
+	]
+}
