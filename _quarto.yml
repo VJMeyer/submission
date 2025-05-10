@@ -20,7 +20,7 @@ book:
   repo-actions: [edit]
   
   # Available download formats should be PDF, HTML, LATEX, EPUB
-  #downloads: [pdf, epub]
+  downloads: [pdf, epub]
   
   # Social sharing options
   sharing: [twitter, facebook]
@@ -69,4 +69,4 @@ format:
 
 # Bibliography configuration
 bibliography: article/ref/MAref.bib
-csl: article/ref/apa.csl  # Citation style
+#csl: article/ref/apa.csl  # Citation style # has to be excluded as the file does not exist! has to be added later?

@@ -15,7 +15,7 @@ format:
     toc: true
     toc-depth: 3
     number-sections: true
-    css: styles/manuscript.css
+  #  css: styles/manuscript.css   # to be excluded as the file does not exist! has to be added later?
     html-math-method: katex
     
   # PDF with university formatting
