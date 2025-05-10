@@ -1,0 +1,24 @@
+% Required packages
+\usepackage{graphicx}
+\usepackage{geometry}
+\usepackage{fancyhdr}
+\usepackage{titling}
+\usepackage{array}
+\usepackage{booktabs}
+\usepackage{xcolor}
+\usepackage{hyperref}
+\usepackage{setspace}
+\usepackage{microtype}
+
+% Better typography
+\usepackage[protrusion=true,expansion=true]{microtype}
+
+% Spacing
+\onehalfspacing
+
+% Header and footer styling
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[LE,RO]{\slshape\nouppercase{\rightmark}}
+\fancyhead[LO,RE]{\slshape\nouppercase{\leftmark}}
+\fancyfoot[C]{\thepage}

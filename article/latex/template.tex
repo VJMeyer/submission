@@ -1,0 +1,31 @@
+% Custom LaTeX template for University of Bayreuth thesis
+\documentclass[11pt,a4paper]{report}
+
+% Import packages from preamble
+$preamble-includes$
+
+% Page geometry
+\geometry{a4paper, margin=2.5cm}
+
+% Title information from metadata
+\title{$title$}
+\author{$author$}
+\date{$date$}
+
+% Custom metadata fields
+\newcommand{\subtitle}{$subtitle$}
+\newcommand{\fieldofstudy}{$if(metadata-submission.field-of-study)$$metadata-submission.field-of-study$$else$Philosophy \& Economics M.A.$endif$}
+\newcommand{\matriculationnumber}{$if(metadata-submission.matriculation-number)$$metadata-submission.matriculation-number$$else$1828610$endif$}
+\newcommand{\submissiondate}{$if(metadata-submission.submission-date)$$metadata-submission.submission-date$$else$May 26, 2025$endif$}
+\newcommand{\wordcount}{$if(metadata-submission.word-count)$$metadata-submission.word-count$$else$30,000$endif$}
+\newcommand{\email}{$if(email)$$email$$else$Valentin.Meyer@uni-bayreuth.de$endif$}
+
+\begin{document}
+
+% Import custom title page
+\input{latex/title-page.tex}
+
+% Main document content
+$body$
+
+\end{document}
