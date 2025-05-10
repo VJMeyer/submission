@@ -19,8 +19,8 @@ book:
   repo-url: https://github.com/VJMeyer/submission
   repo-actions: [edit]
   
-  # Available download formats
-  downloads: [pdf, epub]
+  # Available download formats should be PDF, HTML, LATEX, EPUB
+  #downloads: [pdf, epub]
   
   # Social sharing options
   sharing: [twitter, facebook]
