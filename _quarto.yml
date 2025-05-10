@@ -1,29 +1,31 @@
+# The master configuration for the Quarto book format
 project:
   type: book
-  output-dir: _docs   # keeps root tidy
+  output-dir: _book  # Separate from manuscript output to avoid confusion
 
-#toc: true
+# Execute all code chunks, caching results for performance
+execute:
+  freeze: auto  # Cache execution results to speed up rendering
+  echo: true    # Show code chunks in output
 
-profiles:
-  manuscript:
-    project:
-      type: manuscript
-      output-dir: article/_docs   # keeps root tidy
-    execute: false          # e.g. re-use cached code
-    format:
-      pdf:
-        template: journal.cls
-
+# Define book structure and metadata
 book:
   title: "Automating the Modelling of Transformative Artificial Intelligence Risks"
   author: "Valentin Jakob Meyer"
-  date: "5/1/2025"
+  date: "2025-05-26"
+  
+  # Navigation and search features
   search: true
   repo-url: https://github.com/VJMeyer/submission
   repo-actions: [edit]
-  downloads: [pdf, epub]     # vs markdown, html etc.
+  
+  # Available download formats
+  downloads: [pdf, epub]
+  
+  # Social sharing options
   sharing: [twitter, facebook]
-  cover-image: article/images/cover.png
+  
+  # Structure of chapters
   chapters:
     - index.qmd
     - article/chapters/Frontmatter.qmd
@@ -34,46 +36,37 @@ book:
     - article/chapters/Conclusion.qmd
     - article/ref/references.qmd
     - article/chapters/Appendices.qmd
-#    - article/chapters/intro.qmd
-#    - article/chapters/summary.qmd
-#    - article/chapters/OutlineDraft9.2.qmd
-#    - article/chapters/Draft9.2_sec2.3-4.4_feedback.qmd
-#    - article/chapters/intro.qmd
-#    - article/chapters/01-intro.qmd
-#    - article/chapters/02-methods.qmd
-#    - article/chapters/03-results.qmd
     - article/chapters/appendixA.qmd
-#    - article/chapters/methodology.qmd
-    # etc.
-#  appendices:
-#    - tools.qmd
-#    - resources.qmd
-  page-footer: 
-    left: "Copyright 2025, Valentin Meyer" 
-    right: 
-      - icon: github
-        href: https://github.com/
-      - icon: twitter 
-        href: https://twitter.com/
 
-bibliography: article/ref/MAref.bib
-
+# Define output formats with specific settings
 format:
+  # HTML output settings
   html:
-    theme: cosmo
-    code-fold: true
-
+    theme: cosmo        # Visual theme for HTML output
+    code-fold: true     # Allow code folding in HTML
+    toc: true           # Include table of contents
+    toc-depth: 3        # Show 3 levels in TOC
+    html-math-method: katex  # Use KaTeX for math rendering
+    self-contained: false    # Don't bundle resources in HTML
+    
+  # PDF output settings
   pdf:
-    pdf-engine: lualatex
-    pdf-engine-opt: "-shell-escape"
-#    template-partials:
-#      - latex/journal-template.tex
-#    include-in-header:
-#      latex/pdfx-setup.tex     # loads \usepackage[a-2b]{pdfx}
-#      latex/preamble.tex    # Claude suggestion
-#    documentclass: scrreprt    # Claude suggestion
-#    keep-tex: true            # Claude suggestion
-#    documentclass: book    # Claude suggestion
-#    template: latex/template.tex    # Claude suggestion
+    documentclass: book  # Use book class for structure
+    template: article/latex/template.tex  # Use custom title page template
+    include-in-header: article/latex/preamble.tex  # Include custom preamble
+    keep-tex: true      # Preserve LaTeX source for Overleaf
+    pdf-engine: lualatex  # Better Unicode support
+    toc: true           # Include table of contents
+    number-sections: true  # Auto-number sections
+    colorlinks: true    # Colored hyperlinks instead of boxes
+    cite-method: biblatex  # Use biblatex for citations
+    
+  # LaTeX output (for direct editing)
+  latex:
+    documentclass: book
+    include-in-header: article/latex/preamble.tex
+    output-file: thesis-book.tex  # Distinct filename for book version
 
-  latex: default             # emits .tex on demand
+# Bibliography configuration
+bibliography: article/ref/MAref.bib
+csl: article/ref/apa.csl  # Citation style

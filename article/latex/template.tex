@@ -1,31 +1,72 @@
-% Custom LaTeX template for University of Bayreuth thesis
-\documentclass[11pt,a4paper]{report}
+% Main template for University of Bayreuth thesis
+\documentclass[12pt,a4paper]{report}
 
-% Import packages from preamble
+% Import custom packages and settings
 $preamble-includes$
 
-% Page geometry
-\geometry{a4paper, margin=2.5cm}
+% Set page geometry
+\usepackage[a4paper,margin=2.5cm]{geometry}
 
-% Title information from metadata
-\title{$title$}
-\author{$author$}
-\date{$date$}
-
-% Custom metadata fields
+% Define custom commands for metadata
 \newcommand{\subtitle}{$subtitle$}
-\newcommand{\fieldofstudy}{$if(metadata-submission.field-of-study)$$metadata-submission.field-of-study$$else$Philosophy \& Economics M.A.$endif$}
-\newcommand{\matriculationnumber}{$if(metadata-submission.matriculation-number)$$metadata-submission.matriculation-number$$else$1828610$endif$}
-\newcommand{\submissiondate}{$if(metadata-submission.submission-date)$$metadata-submission.submission-date$$else$May 26, 2025$endif$}
-\newcommand{\wordcount}{$if(metadata-submission.word-count)$$metadata-submission.word-count$$else$30,000$endif$}
-\newcommand{\email}{$if(email)$$email$$else$Valentin.Meyer@uni-bayreuth.de$endif$}
+\newcommand{\supervisor}{$for(author)$$if(author.role)$$if(author.role=="Supervisor")$$author.name$$endif$$endif$$endfor$}
+\newcommand{\fieldofstudy}{$metadata-submission.field-of-study$}
+\newcommand{\matriculationnumber}{$metadata-submission.matriculation-number$}
+\newcommand{\submissiondate}{$metadata-submission.submission-date$}
+\newcommand{\wordcount}{$metadata-submission.word-count$}
 
+% Standard document begins
 \begin{document}
 
-% Import custom title page
-\input{latex/title-page.tex}
+% Create custom title page
+\begin{titlepage}
+  % University header
+  \begin{center}
+    \includegraphics[width=6cm]{latex/uni-bayreuth-logo.png}\\[1cm]
+    {\Large \supervisor}\\[0.5cm]
+    {\large -- P\&E Master's Programme --}\\[2cm]
+  \end{center}
 
-% Main document content
+  % Title and subtitle
+  \begin{center}
+    \LARGE\textbf{$title$}\\[1cm]
+    {\large --- \\[0.5cm] \subtitle \\[0.5cm] ---}\\[2cm]
+  \end{center}
+  
+  % Thesis designation
+  \begin{center}
+    \large Masters Thesis for the Department of Philosophy
+  \end{center}
+  
+  \vspace{1.5cm}
+  
+  % Author information table
+  \begin{center}
+    \begin{tabular}{ll}
+      \toprule
+      Author: & $author.name$ \\
+      Email: & $author.email$ \\
+      Field of Study: & \fieldofstudy \\
+      Matriculation Number: & \matriculationnumber \\
+      Submission Date: & \submissiondate \\
+      Word Count: & \wordcount \\
+      \bottomrule
+    \end{tabular}
+  \end{center}
+  
+  \vspace{2cm}
+  
+  % Abstract
+  \begin{center}
+    \large\textbf{Abstract:}
+  \end{center}
+  
+  \begin{quotation}
+    $abstract$
+  \end{quotation}
+\end{titlepage}
+
+% Rest of document
 $body$
 
 \end{document}
