@@ -17,6 +17,6 @@ format: html
 1. successively (chunk my chunk) introduce concepts/ideas ---
 and 2. ground each with existing literature
 
-{{< embed Background.qmd >}}
+<!-- {{< embed Background.qmd >}} -->
 
-{{< embed Methodology.qmd >}}
+<!-- {{< embed Methodology.qmd >}} -->
