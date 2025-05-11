@@ -42,7 +42,7 @@ profiles:
         theme: cosmo
         code-fold: true
         toc: true
-        toc-depth: 3
+        toc-depth: 5
       pdf:
         documentclass: book
         geometry: margin=1in
