@@ -1,0 +1,100 @@
+{
+  "cells": [
+    {
+      "cell_type": "markdown",
+      "metadata": {},
+      "source": [
+        "# Introduction\n",
+        "\n",
+        "This is a booooook created from markdown and executable code.\n",
+        "\n",
+        "See [@knuth84] and @knuth84 for additional discussion of literate programming.\n",
+        "\n",
+        "Regular markdown and $E=mc^2$ equations.\n",
+        "\n",
+        "\\begin{align}\n",
+        "a &= b + c \\\\\n",
+        "d &= e * f\n",
+        "\\end{align}\n",
+        "\n",
+        "## Quarto\n",
+        "\n",
+        "Quarto enables you to weave together content and executable code into a finished document. To learn more about Quarto see <https://quarto.org>.\n",
+        "\n",
+        "## Running Code\n",
+        "\n",
+        "When you click the **Render** button a document will be generated that includes both content and the output of embedded code. You can embed code like this:"
+      ],
+      "id": "74a23aae"
+    },
+    {
+      "cell_type": "code",
+      "metadata": {},
+      "source": [
+        "1 + 1"
+      ],
+      "id": "2fdb74a1",
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {},
+      "source": [
+        "You can add options to executable code like this"
+      ],
+      "id": "eb316cd7"
+    },
+    {
+      "cell_type": "code",
+      "metadata": {},
+      "source": [
+        "#| echo: false\n",
+        "2 * 2"
+      ],
+      "id": "801a5df7",
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {},
+      "source": [
+        "The `echo: false` option disables the printing of code (only output is displayed).\n"
+      ],
+      "id": "b8b7a97b"
+    },
+    {
+      "cell_type": "code",
+      "metadata": {},
+      "source": [
+        "1 + 1"
+      ],
+      "id": "310b5885",
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {},
+      "source": [
+        "More markdown.\n",
+        "\n",
+        "## ToDo's\n",
+        "\n",
+        "// Double slash creates a new task"
+      ],
+      "id": "26a3cfd8"
+    }
+  ],
+  "metadata": {
+    "kernelspec": {
+      "name": "python3",
+      "language": "python",
+      "display_name": "Python 3 (ipykernel)",
+      "path": "/Users/vjm/mambaforge/envs/quarto-env/share/jupyter/kernels/python3"
+    }
+  },
+  "nbformat": 4,
+  "nbformat_minor": 5
+}

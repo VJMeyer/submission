@@ -1,72 +1,89 @@
-# The master configuration for the Quarto book format
 project:
-  type: book
-  output-dir: _book  # Separate from manuscript output to avoid confusion
+  type: default
+  output-dir: _output
+  # Use preview to avoid rebuilding everything during development
+  preview:
+    port: 4200
+    browser: false
 
-# Execute all code chunks, caching results for performance
+# Shared execution settings
 execute:
-  freeze: auto  # Cache execution results to speed up rendering
-  echo: true    # Show code chunks in output
+  freeze: auto  # Cache execution results
 
-# Define book structure and metadata
-book:
-  title: "Automating the Modelling of Transformative Artificial Intelligence Risks"
-  author: "Valentin Jakob Meyer"
-  date: "2025-05-26"
-  
-  # Navigation and search features
-  search: true
-  repo-url: https://github.com/VJMeyer/submission
-  repo-actions: [edit]
-  
-  # Available download formats should be PDF, HTML, LATEX, EPUB
-  downloads: [pdf, epub]
-  
-  # Social sharing options
-  sharing: [twitter, facebook]
-  
-  # Structure of chapters
-  chapters:
-    - index.qmd
-    - article/chapters/Frontmatter.qmd
-    - article/chapters/Introduction.qmd
-    - article/chapters/Context.qmd
-    - article/chapters/AMTAIR.qmd
-    - article/chapters/Discussion.qmd
-    - article/chapters/Conclusion.qmd
-    - article/ref/references.qmd
-    - article/chapters/Appendices.qmd
-    - article/chapters/appendixA.qmd
+# Enable profiles for different output types
+profiles:
+  # Book format for interactive reading
+  book:
+    project:
+      type: book
+      output-dir: _book
+    book:
+      title: "Automating the Modelling of Transformative Artificial Intelligence Risks"
+      author: "Valentin Jakob Meyer"
+      date: "2025-05-26"
+      search: true
+      repo-url: https://github.com/VJMeyer/submission
+      repo-actions: [edit]
+      downloads: [pdf, epub, tex]
+      sharing: [twitter, facebook]
+      chapters:
+        - index.qmd
+        - article/chapters/Frontmatter.qmd
+        - article/chapters/Introduction.qmdwerne
+        - article/chapters/Context.qmd
+        - article/chapters/AMTAIR.qmd
+        - article/chapters/Discussion.qmd
+        - article/chapters/Conclusion.qmd
+        - article/ref/references.qmd
+        - article/chapters/Appendices.qmd
+        - article/chapters/appendixA.qmd
+    format:
+      html:
+        theme: cosmo
+        code-fold: true
+        toc: true
+        toc-depth: 3
+      pdf:
+        documentclass: book
+        template: article/latex/template.tex
+        include-in-header: article/latex/preamble.tex
+        keep-tex: true
+        output-file: thesis-book.pdf
+      latex:
+        documentclass: book
+        include-in-header: article/latex/preamble.tex
+        output-file: thesis-book.tex
 
-# Define output formats with specific settings
-format:
-  # HTML output settings
-  html:
-    theme: cosmo        # Visual theme for HTML output
-    code-fold: true     # Allow code folding in HTML
-    toc: true           # Include table of contents
-    toc-depth: 3        # Show 3 levels in TOC
-    html-math-method: katex  # Use KaTeX for math rendering
-    self-contained: false    # Don't bundle resources in HTML
-    
-  # PDF output settings
-  pdf:
-    documentclass: book  # Use book class for structure
-    template: article/latex/template.tex  # Use custom title page template
-    include-in-header: article/latex/preamble.tex  # Include custom preamble
-    keep-tex: true      # Preserve LaTeX source for Overleaf
-    pdf-engine: lualatex  # Better Unicode support
-    toc: true           # Include table of contents
-    number-sections: true  # Auto-number sections
-    colorlinks: true    # Colored hyperlinks instead of boxes
-    cite-method: biblatex  # Use biblatex for citations
-    
-  # LaTeX output (for direct editing)
-  latex:
-    documentclass: book
-    include-in-header: article/latex/preamble.tex
-    output-file: thesis-book.tex  # Distinct filename for book version
+  # Manuscript format for academic submission
+  manuscript:
+    project:
+      type: manuscript
+      output-dir: _manuscript
+    execute:
+      echo: false
+    manuscript:
+      article: article/thesis.qmd
+    format:
+      html:
+        toc: true
+        toc-depth: 3
+        number-sections: true
+      pdf:
+        documentclass: report
+        classoption: [12pt, a4paper, oneside]
+        template: article/latex/template.tex
+        include-in-header: article/latex/preamble.tex
+        pdf-engine: lualatex
+        keep-tex: true
+        output-file: thesis-manuscript.pdf
+        toc: true
+        lot: true
+        lof: true
+        colorlinks: true
+      latex:
+        documentclass: report
+        include-in-header: article/latex/preamble.tex
+        output-file: thesis-manuscript.tex
 
-# Bibliography configuration
+# Shared bibliography configuration
 bibliography: article/ref/MAref.bib
-#csl: article/ref/apa.csl  # Citation style # has to be excluded as the file does not exist! has to be added later?

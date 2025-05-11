@@ -9,7 +9,7 @@ $preamble-includes$
 
 % Define custom commands for metadata
 \newcommand{\subtitle}{$subtitle$}
-\newcommand{\supervisor}{$for(author)$$if(author.role)$$if(author.role=="Supervisor")$$author.name$$endif$$endif$$endfor$}
+\newcommand{\supervisorname}{$for(author)$$if(it.roles)$$for(it.roles)$$if(it=="Supervisor")$$author.name$$endif$$endfor$$endif$$endfor$}
 \newcommand{\fieldofstudy}{$metadata-submission.field-of-study$}
 \newcommand{\matriculationnumber}{$metadata-submission.matriculation-number$}
 \newcommand{\submissiondate}{$metadata-submission.submission-date$}
@@ -19,52 +19,7 @@ $preamble-includes$
 \begin{document}
 
 % Create custom title page
-\begin{titlepage}
-  % University header
-  \begin{center}
-    \includegraphics[width=6cm]{latex/uni-bayreuth-logo.png}\\[1cm]
-    {\Large \supervisor}\\[0.5cm]
-    {\large -- P\&E Master's Programme --}\\[2cm]
-  \end{center}
-
-  % Title and subtitle
-  \begin{center}
-    \LARGE\textbf{$title$}\\[1cm]
-    {\large --- \\[0.5cm] \subtitle \\[0.5cm] ---}\\[2cm]
-  \end{center}
-  
-  % Thesis designation
-  \begin{center}
-    \large Masters Thesis for the Department of Philosophy
-  \end{center}
-  
-  \vspace{1.5cm}
-  
-  % Author information table
-  \begin{center}
-    \begin{tabular}{ll}
-      \toprule
-      Author: & $author.name$ \\
-      Email: & $author.email$ \\
-      Field of Study: & \fieldofstudy \\
-      Matriculation Number: & \matriculationnumber \\
-      Submission Date: & \submissiondate \\
-      Word Count: & \wordcount \\
-      \bottomrule
-    \end{tabular}
-  \end{center}
-  
-  \vspace{2cm}
-  
-  % Abstract
-  \begin{center}
-    \large\textbf{Abstract:}
-  \end{center}
-  
-  \begin{quotation}
-    $abstract$
-  \end{quotation}
-\end{titlepage}
+\input{article/latex/title-page.tex}
 
 % Rest of document
 $body$
