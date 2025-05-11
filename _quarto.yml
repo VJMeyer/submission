@@ -28,15 +28,15 @@ profiles:
       sharing: [twitter, facebook]
       chapters:
         - index.qmd
-        - article/chapters/Frontmatter.qmd
-        - article/chapters/Introduction.qmdwerne
-        - article/chapters/Context.qmd
-        - article/chapters/AMTAIR.qmd
-        - article/chapters/Discussion.qmd
-        - article/chapters/Conclusion.qmd
-        - article/ref/references.qmd
-        - article/chapters/Appendices.qmd
-        - article/chapters/appendixA.qmd
+        - chapters/Frontmatter.qmd
+        - chapters/Introduction.qmdwerne
+        - chapters/Context.qmd
+        - chapters/AMTAIR.qmd
+        - chapters/Discussion.qmd
+        - chapters/Conclusion.qmd
+        - ref/references.qmd
+        - chapters/Appendices.qmd
+        - chapters/appendixA.qmd
     format:
       html:
         theme: cosmo
@@ -45,13 +45,13 @@ profiles:
         toc-depth: 3
       pdf:
         documentclass: book
-        template: article/latex/template.tex
-        include-in-header: article/latex/preamble.tex
+        template: latex/template.tex
+        include-in-header: latex/preamble.tex
         keep-tex: true
         output-file: thesis-book.pdf
       latex:
         documentclass: book
-        include-in-header: article/latex/preamble.tex
+        include-in-header: latex/preamble.tex
         output-file: thesis-book.tex
 
   # Manuscript format for academic submission
@@ -62,7 +62,7 @@ profiles:
     execute:
       echo: false
     manuscript:
-      article: article/thesis.qmd
+      article: thesis.qmd
     format:
       html:
         toc: true
@@ -71,8 +71,8 @@ profiles:
       pdf:
         documentclass: report
         classoption: [12pt, a4paper, oneside]
-        template: article/latex/template.tex
-        include-in-header: article/latex/preamble.tex
+        template: latex/template.tex
+        include-in-header: latex/preamble.tex
         pdf-engine: lualatex
         keep-tex: true
         output-file: thesis-manuscript.pdf
@@ -82,8 +82,8 @@ profiles:
         colorlinks: true
       latex:
         documentclass: report
-        include-in-header: article/latex/preamble.tex
+        include-in-header: latex/preamble.tex
         output-file: thesis-manuscript.tex
 
 # Shared bibliography configuration
-bibliography: article/ref/MAref.bib
+bibliography: ref/MAref.bib
