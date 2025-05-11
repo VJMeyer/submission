@@ -2,9 +2,9 @@ project:
   type: default
   output-dir: _output
   # Use preview to avoid rebuilding everything during development
-  preview:
-    port: 4200
-    browser: false
+#  preview:
+#    port: 4200
+#    browser: false
 
 # Shared execution settings
 execute:
