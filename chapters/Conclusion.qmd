@@ -1,7 +1,5 @@
----
-title: "Conclusion"
-format: html
----
+# Conclusion
+
 
 10% of Grade:
 

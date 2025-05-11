@@ -1,7 +1,4 @@
----
-title: "Appendices"
-format: html
----
+# Appendices
 
 # Appendix A
 

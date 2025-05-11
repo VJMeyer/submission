@@ -1,7 +1,5 @@
----
-title: "AMTAIR"
-format: html
----
+# AMTAIR
+
 
 20% of Grade:
 

@@ -1,7 +1,4 @@
----
-title: "Discussion"
-format: html
----
+# Discussion
 
 10% of Grade:
 

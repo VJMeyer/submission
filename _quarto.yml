@@ -1,6 +1,6 @@
 project:
   type: default
-  output-dir: _output
+  output-dir: _outputs/manuscript
   # Use preview to avoid rebuilding everything during development
 #  preview:
 #    port: 4200
@@ -16,7 +16,7 @@ profiles:
   book:
     project:
       type: book
-      output-dir: _book
+      output-dir: _outputs/book
     book:
       title: "Automating the Modelling of Transformative Artificial Intelligence Risks"
       author: "Valentin Jakob Meyer"
@@ -26,10 +26,12 @@ profiles:
       repo-actions: [edit]
       downloads: [pdf, epub, tex]
       sharing: [twitter, facebook]
+      appendices: true
+      cover-image: images/cover.png
       chapters:
         - index.qmd
         - chapters/Frontmatter.qmd
-        - chapters/Introduction.qmdwerne
+        - chapters/Introduction.qmd
         - chapters/Context.qmd
         - chapters/AMTAIR.qmd
         - chapters/Discussion.qmd
@@ -37,12 +39,23 @@ profiles:
         - ref/references.qmd
         - chapters/Appendices.qmd
         - chapters/appendixA.qmd
+      navbar:
+        pinned: true
+      page-footer: 
+        left: "Copyright 2025, Valentin Meyer" 
+        right: 
+          - icon: github
+            href: https://github.com/
+          - icon: twitter 
+            href: https://twitter.com/
     format:
       html:
         theme: cosmo
         code-fold: true
         toc: true
         toc-depth: 5
+        toc-title: "ToC"
+        page-navigation: true
       pdf:
         documentclass: book
         geometry: margin=1in
@@ -54,12 +67,13 @@ profiles:
         documentclass: book
         include-in-header: latex/preamble.tex
         output-file: thesis-book.tex
+        keep-tex: true
 
   # Manuscript format for academic submission
   manuscript:
     project:
       type: manuscript
-      output-dir: _manuscript
+      output-dir: _outputs/manuscript  # Match default
     execute:
       echo: false
     manuscript:
@@ -74,7 +88,7 @@ profiles:
         classoption: [12pt, a4paper, oneside]
         template: latex/template.tex
         include-in-header: latex/preamble.tex
-        pdf-engine: lualatex
+        pdf-engine: xelatex  # Use same engine across profiles
         keep-tex: true
         output-file: thesis-manuscript.pdf
         toc: true
@@ -85,6 +99,7 @@ profiles:
         documentclass: report
         include-in-header: latex/preamble.tex
         output-file: thesis-manuscript.tex
+        #keep-tex: true
 
 # Shared bibliography configuration
 bibliography: ref/MAref.bib
