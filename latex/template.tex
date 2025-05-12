@@ -1,57 +1,59 @@
-% % Main template for University of Bayreuth thesis
-% \documentclass[12pt,a4paper]{book}      %   vs report
+% Main template for University of Bayreuth thesis
+\documentclass[12pt,a4paper]{book}      %   vs report
 
-% % Import custom packages and settings
-% $preamble-includes$
+% Import custom packages and settings
+$preamble-includes$
 
-% % Set page geometry
-% \usepackage[a4paper,margin=2.5cm]{geometry}
-% \usepackage{graphicx}
-% \usepackage{booktabs}
-% \usepackage{bookmark}
-% \usepackage{hyperref}
+% Set page geometry
+\usepackage[a4paper,margin=2.5cm]{geometry}
+\usepackage{graphicx}
+\usepackage{booktabs}
+\usepackage{bookmark}
+\usepackage{hyperref}
 
-% % Define custom commands for metadata
-% \newcommand{\subtitle}{$subtitle$}
-% \newcommand{\supervisorname}{$if(supervisor)$$supervisor$$else$Supervisor Name$endif$}
-% \newcommand{\fieldofstudy}{$metadata-submission.field-of-study$}
-% \newcommand{\matriculationnumber}{$metadata-submission.matriculation-number$}
-% \newcommand{\submissiondate}{$metadata-submission.submission-date$}
-% \newcommand{\wordcount}{$metadata-submission.word-count$}
-% \providecommand{\tightlist}{%
-%   \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+% Define custom commands for metadata
+\newcommand{\subtitle}{$subtitle$}
+\newcommand{\supervisorname}{$if(supervisor)$$supervisor$$else$Supervisor Name$endif$}
+\newcommand{\fieldofstudy}{$metadata-submission.field-of-study$}
+\newcommand{\matriculationnumber}{$metadata-submission.matriculation-number$}
+\newcommand{\submissiondate}{$metadata-submission.submission-date$}
+\newcommand{\wordcount}{$metadata-submission.word-count$}
+\providecommand{\tightlist}{%
+  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
 
-% % Standard document begins
-% \begin{document}
+% Standard document begins
+\begin{document}
 
-% % Create custom title page
-% \input{latex/title-page.tex}
+% Create custom title page
+\input{latex/title-page.tex}
 
-% % Rest of document
-% $body$
+% Rest of document
+$body$
 
-% \end{document}
-% After loading packages but before \begin{document}
-\AtBeginDocument{
-  % Set up page styles
-  \fancypagestyle{frontmatter}{
-    \fancyhf{}
-    \fancyfoot[C]{\thepage}
-    \renewcommand{\footrulewidth}{0pt}
-  }
+\end{document}
 
-  \fancypagestyle{mainmatter}{
-    \fancyhf{}
-    \fancyhead[LE,RO]{\slshape\nouppercase{\rightmark}}
-    \fancyhead[LO,RE]{\slshape\nouppercase{\leftmark}}
-    \fancyfoot[C]{\thepage}
-  }
-}
 
-% Inside the document, after title page
-\frontmatter
-\pagestyle{frontmatter}
+% % After loading packages but before \begin{document}
+% \AtBeginDocument{
+%   % Set up page styles
+%   \fancypagestyle{frontmatter}{
+%     \fancyhf{}
+%     \fancyfoot[C]{\thepage}
+%     \renewcommand{\footrulewidth}{0pt}
+%   }
 
-% Added automatically before Introduction
-% \mainmatter
-% \pagestyle{mainmatter}
+%   \fancypagestyle{mainmatter}{
+%     \fancyhf{}
+%     \fancyhead[LE,RO]{\slshape\nouppercase{\rightmark}}
+%     \fancyhead[LO,RE]{\slshape\nouppercase{\leftmark}}
+%     \fancyfoot[C]{\thepage}
+%   }
+% }
+
+% % Inside the document, after title page
+% \frontmatter
+% \pagestyle{frontmatter}
+
+% % Added automatically before Introduction
+% % \mainmatter
+% % \pagestyle{mainmatter}

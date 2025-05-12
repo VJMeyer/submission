@@ -4,198 +4,231 @@
 
 
 
-# # SWITCH BETWEEN BOOK AND MAUSCRIPT QUARTO BY (UN-)COMMENTING THE RESPECTIVE SECTION IN THIS _quarto.yml file
+# SWITCH BETWEEN BOOK AND MAUSCRIPT QUARTO BY (UN-)COMMENTING THE RESPECTIVE SECTION IN THIS _quarto.yml file
 
 
 
 
 
 
+project:
+  type: book
+  output-dir: _outputs/book
+
+execute:
+  freeze: auto
+
+book:
+  title: "Automating the Modelling of Transformative Artificial Intelligence Risks"
+  author: "Valentin Jakob Meyer"
+  date: "2025-05-26"
+  search: true
+  repo-url: https://github.com/VJMeyer/submission
+  repo-actions: [edit]
+  downloads: [pdf, epub] #tex?
+  sharing: [twitter, facebook]
+  cover-image: images/cover.png
+  output-file: "complete-book"
+  chapters:
+    - index.qmd
+    - chapters/Frontmatter.qmd
+    - chapters/Introduction.qmd
+    - chapters/Context.qmd
+    - chapters/AMTAIR.qmd
+    - chapters/Discussion.qmd
+    - chapters/Conclusion.qmd
+    - ref/references.qmd
+  appendices:
+    - chapters/Appendices.qmd
+    - chapters/appendixA.qmd
+  navbar:
+    pinned: true
+  page-footer: 
+    left: "Copyright 2025, Valentin Meyer" 
+    right: 
+      - icon: github
+        href: https://github.com/
+      - icon: twitter 
+        href: https://twitter.com/
+
+format:
+  html:
+    theme: cosmo
+    code-fold: true
+    toc: true
+    toc-depth: 5
+    toc-title: "ToC"
+    page-navigation: true
+    site-path: /
+    self-contained: false
+    number-sections: true
+  pdf:
+    documentclass: book
+    geometry: margin=1in
+    template: latex/template.tex
+    include-in-header: latex/preamble.tex
+    keep-tex: true
+    toc: true
+    pdf-engine: xelatex
+    output-file: thesis-book.pdf
+  latex:
+    documentclass: book
+    include-in-header: latex/preamble.tex
+    output-file: thesis-book.tex
+    keep-tex: true
+
+bibliography: ref/MAref.bib
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+# ## Common output settings
+# # format-common: &format-common
+# #   number-sections: true   # Enable section numbering
+# #   toc: true              # Include table of contents
+# #   toc-depth: 4           # Include headings up to level 4
+# #   toc-title: "Contents"  # Custom TOC title
+# #   # Customize section numbering
+# #   include-in-header: 
+# #     text: |
+# #       \setcounter{secnumdepth}{4}
+# #       \renewcommand{\thesection}{\arabic{section}}
+# #       \renewcommand{\thesubsection}{\thesection.\arabic{subsection}}
+
+
+
+# # Master configuration file for thesis project
+# # Controls rendering formats and options
+
+# # Configure which profile to use by uncommenting ONE of these sections
+# # Then run: quarto render
+
+# # MANUSCRIPT PROFILE - Interactive HTML with navigation
 # project:
-#   type: book
-#   output-dir: _outputs/book
+#   type: manuscript  # manuscript format for formal thesis
+#   output-dir: _outputs/manuscript  # Output directory for manuscript format
 
 # execute:
-#   freeze: auto
+#   freeze: auto  # Caches results for faster rendering
+#   echo: false  # Hide code by default
 
-# book:
-#   title: "Automating the Modelling of Transformative Artificial Intelligence Risks"
-#   author: "Valentin Jakob Meyer"
-#   date: "2025-05-26"
-#   search: true
-#   repo-url: https://github.com/VJMeyer/submission
-#   repo-actions: [edit]
-#   downloads: [pdf, epub] #tex?
-#   sharing: [twitter, facebook]
-#   cover-image: images/cover.png
-#   output-file: "complete-book"
-#   chapters:
-#     - index.qmd
-#     - chapters/Frontmatter.qmd
-#     - chapters/Introduction.qmd
-#     - chapters/Context.qmd
-#     - chapters/AMTAIR.qmd
-#     - chapters/Discussion.qmd
-#     - chapters/Conclusion.qmd
-#     - ref/references.qmd
-#   appendices:
-#     - chapters/Appendices.qmd
-#     - chapters/appendixA.qmd
-#   navbar:
-#     pinned: true
-#   page-footer: 
-#     left: "Copyright 2025, Valentin Meyer" 
-#     right: 
-#       - icon: github
-#         href: https://github.com/
-#       - icon: twitter 
-#         href: https://twitter.com/
+
+# # Configure manuscript settings
+# manuscript:
+#   article: thesis.qmd  # Main entry point file
+#   #downloads: [pdf, epub] #tex, MECA Bundle (.zip), MS Word?
+#     # Explicitly list notebooks in desired order
+#   notebooks:  # Include notebooks
+#     - notebook: notebooks/AMTAIR_Prototype_example_carlsmith.ipynb
+#       title: AMTAIR Carlsmith Example
+#     #  url:   https://github.com/VJMeyer/submission/blob/main/notebooks/AMTAIR_Prototype_example_carlsmithIPYNB.ipynb
 
 # format:
 #   html:
-#     theme: cosmo
-#     code-fold: true
 #     toc: true
-#     toc-depth: 5
-#     toc-title: "ToC"
-#     page-navigation: true
-#     site-path: /
-#     self-contained: false
+#     toc-depth: 4
 #     number-sections: true
+#     toc-title: "Table of Contents"
+#     theme: cosmo
+#     #output-file: thesis-manuscript.html
+#    ## PDF output settings
 #   pdf:
-#     documentclass: book
-#     geometry: margin=1in
-#     template: latex/template.tex
-#     include-in-header: latex/preamble.tex
-#     keep-tex: true
-#     toc: true
-#     pdf-engine: xelatex
-#     output-file: thesis-book.pdf
+#     documentclass: report  # Academic report format
+#     classoption: [12pt, a4paper, oneside]  # Paper and font options
+#     template: latex/template.tex  # Custom template
+#     include-in-header: latex/preamble.tex  # LaTeX preamble
+#     pdf-engine: xelatex  # Engine for PDF creation
+#     keep-tex: true  # Keep LaTeX source
+#     output-file: thesis-manuscript.pdf  # Output filename
+#     toc: true  # Include table of contents
+#     lot: true  # List of tables
+#     lof: true  # List of figures
+#     colorlinks: true  # Colored hyperlinks
+
+
+#   # LaTeX source output
 #   latex:
-#     documentclass: book
-#     include-in-header: latex/preamble.tex
-#     output-file: thesis-book.tex
-#     keep-tex: true
+#     documentclass: report  # Academic report format
+#     include-in-header: latex/preamble.tex  # LaTeX preamble
+#     output-file: thesis-manuscript.tex  # Output filename
 
-# bibliography: ref/MAref.bib
-
-
+# # Bibliography configuration
+# bibliography: ref/MAref.bib  # Reference file location
 
 
 
 
+# # Output format configuration
+# # format:
+# #   # HTML output settings
+# #   html:
+# #     <<: *format-common
+# #     toc: true
+# #     number-sections: true
+# #   #  output-dir: _outputs/html/manuscript
+# #     output-file: thesis-manuscript.html
+#   #  toc: true  # Include table of contents
+#   #  toc-depth: 5  # Depth of TOC headings
+#   #  number-sections: false  # Number sections in output
+#   #  site-path: /  # Base path for site
 
 
-
-# Master configuration file for thesis project
-# Controls rendering formats and options
-
-# Configure which profile to use by uncommenting ONE of these sections
-# Then run: quarto render
-
-# MANUSCRIPT PROFILE - Interactive HTML with navigation
-project:
-  type: manuscript  # manuscript format for formal thesis
-  output-dir: _outputs/manuscript  # Output directory for manuscript format
-
-execute:
-  freeze: auto  # Caches results for faster rendering
-  echo: false  # Hide code by default
-
-# Common output settings
-format-common: &format-common
-  number-sections: true   # Enable section numbering
-  toc: true              # Include table of contents
-  toc-depth: 4           # Include headings up to level 4
-  toc-title: "Contents"  # Custom TOC title
-  # Customize section numbering
-  include-in-header: 
-    text: |
-      \setcounter{secnumdepth}{4}
-      \renewcommand{\thesection}{\arabic{section}}
-      \renewcommand{\thesubsection}{\thesection.\arabic{subsection}}
-
-# Configure manuscript settings
-manuscript:
-  article: thesis.qmd  # Main entry point file
-  #downloads: [pdf, epub] #tex, MECA Bundle (.zip), MS Word?
-  # Explicitly list notebooks in desired order
-  notebooks:  # Include notebooks
-    - notebook: notebooks/AMTAIR_Prototype_example_carlsmith.ipynb
-      title: AMTAIR Carlsmith Example
-    #  url:   https://github.com/VJMeyer/submission/blob/main/notebooks/AMTAIR_Prototype_example_carlsmithIPYNB.ipynb
-
-# Output format configuration
-format:
-  # HTML output settings
-  html:
-    <<: *format-common
-    toc: true
-    number-sections: true
-    output-dir: _outputs/html/manuscript
-    output-file: amtair-thesis-manuscript.html
-  #  toc: true  # Include table of contents
-  #  toc-depth: 5  # Depth of TOC headings
-  #  number-sections: false  # Number sections in output
-  #  site-path: /  # Base path for site
-
-  # PDF output settings
-  # pdf:
-  #   documentclass: report  # Academic report format
-  #   classoption: [12pt, a4paper, oneside]  # Paper and font options
-  #   template: latex/template.tex  # Custom template
-  #   include-in-header: latex/preamble.tex  # LaTeX preamble
-  #   pdf-engine: xelatex  # Engine for PDF creation
-  #   keep-tex: true  # Keep LaTeX source
-  #   output-file: thesis-manuscript.pdf  # Output filename
-  #   toc: true  # Include table of contents
-  #   lot: true  # List of tables
-  #   lof: true  # List of figures
-  #   colorlinks: true  # Colored hyperlinks
-
-  pdf:
-    <<: *format-common
-    documentclass: report
-    classoption: [12pt, a4paper, oneside]
-    template: latex/template.tex
-    include-in-header: 
-      - latex/preamble.tex
-      - text: |
-          % Page numbering controls
-          \pagenumbering{roman}  % Front matter uses Roman numerals
+#   # pdf:
+#   #   <<: *format-common
+#   #   documentclass: report
+#   #   classoption: [12pt, a4paper, oneside]
+#   #   template: latex/template.tex
+#   #   include-in-header: 
+#   #     - latex/preamble.tex
+#   #     - text: |
+#   #         % Page numbering controls
+#   #         \pagenumbering{roman}  % Front matter uses Roman numerals
           
-          % Command to switch to main text numbering
-          \newcommand{\startmain}{
-            \clearpage
-            \pagenumbering{arabic}  % Main text uses Arabic numerals
-            \setcounter{page}{1}    % Reset page counter
-          }
+#   #         % Command to switch to main text numbering
+#   #         \newcommand{\startmain}{
+#   #           \clearpage
+#   #           \pagenumbering{arabic}  % Main text uses Arabic numerals
+#   #           \setcounter{page}{1}    % Reset page counter
+#   #         }
           
-          % Command for appendices numbering
-          \newcommand{\startappendix}{
-            \appendix
-            % Continue with Arabic numbers
-          }
-    # Insert commands at specific points in the document
-    include-before-body:
-      text: |
-        % This appears at the beginning of the document
-        % (front matter already using roman numerals)
+#   #         % Command for appendices numbering
+#   #         \newcommand{\startappendix}{
+#   #           \appendix
+#   #           % Continue with Arabic numbers
+#   #         }
+#   #   # Insert commands at specific points in the document
+#   #   include-before-body:
+#   #     text: |
+#   #       % This appears at the beginning of the document
+#   #       % (front matter already using roman numerals)
     
-    include-after-body:
-      text: |
-        % This appears at the end of the document
+#   #   include-after-body:
+#   #     text: |
+#   #       % This appears at the end of the document
     
-    keep-tex: true
-    output-dir: _outputs/pdf/manuscript
-    output-file: amtair-thesis-manuscript.pdf
+#   #   keep-tex: true
+#   #   output-dir: _outputs/pdf/manuscript
+#   #   output-file: amtair-thesis-manuscript.pdf
   
-  # # LaTeX source output
-  # latex:
-  #   documentclass: report  # Academic report format
-  #   include-in-header: latex/preamble.tex  # LaTeX preamble
-  #   output-file: thesis-manuscript.tex  # Output filename
 
-# Bibliography configuration
-bibliography: ref/MAref.bib  # Reference file location
 

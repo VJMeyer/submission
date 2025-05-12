@@ -6,7 +6,7 @@ To learn more about Quarto books visit <https://quarto.org/docs/books>.
 
 # Abstract
 
-# Outline(s)
+# Outline(s): Table of Contents
 
 
 <!-- {{< include chapters/Outlining-Workflow.md >}} -->
