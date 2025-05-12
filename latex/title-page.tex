@@ -1,57 +1,84 @@
 \begin{titlepage}
-  % University header with logo and department
-  \begin{center}
-    \includegraphics[width=4cm]{latex/uni-bayreuth-logo.png}\\[0.5cm]
-    {\large -- P\&E Master's Programme --}\\
-    {\small Chair of Philosophy, Computer Science}\\
-    {\small \& Artificial Intelligence}\\[2cm]
-  \end{center}
+\thispagestyle{empty}% Remove page number from title page
 
-  % Title and subtitle
+% Top header with logo (left) and department (right)
+\begin{minipage}{0.3\textwidth}
+  \includegraphics[width=5cm]{latex/uni-bayreuth-logo.png}
+\end{minipage}
+\hfill
+\begin{minipage}{0.9\textwidth}
   \begin{center}
-    \huge\textbf{$title$}\\[1cm]
-    \begin{minipage}{0.8\textwidth}
-      \begin{center}
-        {\large ---}\\[0.3cm]
-        {\large ``$subtitle$''}\\[0.3cm]
-        {\large ---}\\[1.5cm]
-      \end{center}
-    \end{minipage}
+    -- P\&E Master's Programme --\\
+    Chair of Philosophy, Computer\\
+    Science \& Artificial Intelligence
   \end{center}
-  
-  % Thesis designation
-  \begin{center}
-    \large A thesis submitted at the Department of Philosophy\\[0.3cm]
-    for the degree of Master of Arts in Philosophy \& Economics\\[2cm]
-  \end{center}
-  
-  % Author and supervisor information
-  \begin{minipage}{0.45\textwidth}
-    \begin{flushleft}
-      \textbf{Author:}\\
-      $author.name$\\
-      $author.email$\\
-      Matriculation Number: $metadata-submission.matriculation-number$\\
-      Tel.: +49 (1573) 4512494\\
-      Pielmühler Straße 15\\
-      52066 Lappersdorf
-    \end{flushleft}
-  \end{minipage}
-  \hfill
-  \begin{minipage}{0.45\textwidth}
-    \begin{flushright}
-      \textbf{Supervisor:}\\
-      Dr. Timo Speith\\[1cm]
-      \textbf{Word Count:}\\
-      $metadata-submission.word-count$\\[1cm]
-      \textbf{Source / Identifier:}\\
-      Document URL
-    \end{flushright}
-  \end{minipage}
-  
-  % Date at bottom
-  \vfill
-  \begin{center}
-    $date$
-  \end{center}
+\end{minipage}
+
+% Horizontal rule
+\vspace{1.5cm}
+\hrule
+\vspace{2cm}
+
+% Title in bold
+\begin{center}
+  \Large\textbf{Automating the Modelling of
+Transformative Artificial Intelligence Risks}
+\end{center}
+\vspace{0.2cm}
+
+\begin{center}
+  -----
+\end{center}
+\vspace{0.2cm}
+
+% Subtitle in italics with quotation marks
+\begin{center}
+  \normalsize``\textit{An Epistemic Framework for Leveraging Frontier AI Systems
+to Upscale Conditional Policy Assessments in Bayesian Networks on a Narrow Path towards Existencial Safety }''
+\end{center}
+\vspace{0.2cm}
+
+\begin{center}
+  -----
+\end{center}
+\vspace{0.2cm}
+
+% Thesis designation
+\begin{center}
+  A thesis submitted at the Department of Philosophy\\[0.4cm]
+  for the degree of \textit{Master of Arts in Philosophy \& Economics}
+\end{center}
+
+\vspace{1.5cm}
+% Horizontal rule
+\hrule
+\vspace{1.5cm}
+
+% Author and supervisor information with precise alignment
+\begin{minipage}[t]{0.48\textwidth}
+  \textbf{Author:}\\[0.3cm]
+  Valentin Jakob Meyer\\
+  Valentin.meyer@uni-bayreuth.de\\
+  \textit{Matriculation Number:} 1828610\\
+  \textit{Tel.:} +49 (1573) 4512494\\
+  Pielmühler Straße 15\\
+  52066 Lappersdorf
+\end{minipage}
+\hfill
+\begin{minipage}[t]{0.48\textwidth}
+  \begin{flushright}
+    \textbf{Supervisor:}\\[0.3cm]
+    Dr. Timo Speith\\[0.3cm]
+    \textit{Word Count:}\\
+    30.000\\[0.15cm]
+    \textit{Source / Identifier:}\\
+    Document URL
+  \end{flushright}
+\end{minipage}
+
+% Date at bottom
+\vfill
+\begin{center}
+  26th of May 2025
+\end{center}
 \end{titlepage}
