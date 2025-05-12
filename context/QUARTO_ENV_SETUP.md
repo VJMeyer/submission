@@ -109,3 +109,7 @@ update-quarto-env            # Auto-updates packages (alias)
 - **Do not use `base`** for development
 - This setup is optimized for **Apple Silicon (M1/M2/M3)**
 - For Quarto CLI: no extra config is needed if `QUARTO_PYTHON` is set
+
+
+
+# SWITCH BETWEEN BOOK AND MAUSCRIPT QUARTO BY (UN-)COMMENTING THE RESPECTIVE SECTION IN THE _quarto.yml file
