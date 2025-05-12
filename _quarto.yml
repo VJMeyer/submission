@@ -69,7 +69,7 @@ format:
     include-in-header: latex/preamble.tex
     keep-tex: true
     toc: true
-    pdf-engine: xelatex
+    pdf-engine: lualatex
     output-file: thesis-book.pdf
   latex:
     documentclass: book

@@ -6,10 +6,11 @@ $preamble-includes$
 
 % Set page geometry
 \usepackage[a4paper,margin=2.5cm]{geometry}
+\usepackage{graphicx}
 
 % Define custom commands for metadata
 \newcommand{\subtitle}{$subtitle$}
-\newcommand{\supervisorname}{$for(author)$$if(it.roles)$$for(it.roles)$$if(it=="Supervisor")$$author.name$$endif$$endfor$$endif$$endfor$}
+\newcommand{\supervisorname}{$if(supervisor)$$supervisor$$else$Supervisor Name$endif$}
 \newcommand{\fieldofstudy}{$metadata-submission.field-of-study$}
 \newcommand{\matriculationnumber}{$metadata-submission.matriculation-number$}
 \newcommand{\submissiondate}{$metadata-submission.submission-date$}
@@ -19,7 +20,7 @@ $preamble-includes$
 \begin{document}
 
 % Create custom title page
-\input{article/latex/title-page.tex}
+\input{latex/title-page.tex}
 
 % Rest of document
 $body$
