@@ -87,44 +87,57 @@
 
 
 
+# Master configuration file for thesis project
+# Controls rendering formats and options
 
+# Configure which profile to use by uncommenting ONE of these sections
+# Then run: quarto render
+
+# BOOK PROFILE - Interactive HTML with navigation
 project:
-  type: manuscript
-  output-dir: _outputs/manuscript
+  type: manuscript  # manuscript format for formal thesis
+  output-dir: _outputs/manuscript  # Output directory for manuscript format
 
 execute:
-  freeze: auto
-  echo: false
+  freeze: auto  # Caches results for faster rendering
+  echo: false  # Hide code by default
 
+# Configure manuscript settings
 manuscript:
-  article: thesis.qmd
-  #code-links: repo
-  notebooks:
+  article: thesis.qmd  # Main entry point file
+  notebooks:  # Include notebooks
     - notebook: notebooks/AMTAIR_Prototype_example_carlsmith.ipynb
       title: AMTAIR Carlsmith Example
-  #   url: http://mybinder.org/v2/gh/binder-examples/jupyterlab/master?urlpath=lab/tree/index.ipynb
+    #  url:  
 
+# Output format configuration
 format:
+  # HTML output settings
   html:
-    toc: true
-    toc-depth: 5
-    number-sections: true
-    site-path: /
+    toc: true  # Include table of contents
+    toc-depth: 5  # Depth of TOC headings
+    number-sections: true  # Number sections in output
+    site-path: /  # Base path for site
+  
+  # PDF output settings
   pdf:
-    documentclass: report
-    classoption: [12pt, a4paper, oneside]
-    template: latex/template.tex
-    include-in-header: latex/preamble.tex
-    pdf-engine: xelatex
-    keep-tex: true
-    output-file: thesis-manuscript.pdf
-    toc: true
-    lot: true
-    lof: true
-    colorlinks: true
+    documentclass: report  # Academic report format
+    classoption: [12pt, a4paper, oneside]  # Paper and font options
+    template: latex/template.tex  # Custom template
+    include-in-header: latex/preamble.tex  # LaTeX preamble
+    pdf-engine: xelatex  # Engine for PDF creation
+    keep-tex: true  # Keep LaTeX source
+    output-file: thesis-manuscript.pdf  # Output filename
+    toc: true  # Include table of contents
+    lot: true  # List of tables
+    lof: true  # List of figures
+    colorlinks: true  # Colored hyperlinks
+  
+  # LaTeX source output
   latex:
-    documentclass: report
-    include-in-header: latex/preamble.tex
-    output-file: thesis-manuscript.tex
+    documentclass: report  # Academic report format
+    include-in-header: latex/preamble.tex  # LaTeX preamble
+    output-file: thesis-manuscript.tex  # Output filename
 
-bibliography: ref/MAref.bib
+# Bibliography configuration
+bibliography: ref/MAref.bib  # Reference file location

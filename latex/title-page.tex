@@ -1,42 +1,57 @@
 \begin{titlepage}
-  % University header with logo
+  % University header with logo and department
   \begin{center}
-    \includegraphics[width=6cm]{latex/uni-bayreuth-logo.png}\\[1cm]
-    {\Large Prof. Dr. Timo Speith}\\[0.5cm]
-    {\large -- P\&E Master's Programme --}\\[2cm]
+    \includegraphics[width=4cm]{latex/uni-bayreuth-logo.png}\\[0.5cm]
+    {\large -- P\&E Master's Programme --}\\
+    {\small Chair of Philosophy, Computer Science}\\
+    {\small \& Artificial Intelligence}\\[2cm]
   \end{center}
 
   % Title and subtitle
   \begin{center}
-    \LARGE\textbf{$title$}\\[1cm]
-    {\large --- \\[0.5cm] $subtitle$ \\[0.5cm] ---}\\[2cm]
+    \huge\textbf{$title$}\\[1cm]
+    \begin{minipage}{0.8\textwidth}
+      \begin{center}
+        {\large ---}\\[0.3cm]
+        {\large ``$subtitle$''}\\[0.3cm]
+        {\large ---}\\[1.5cm]
+      \end{center}
+    \end{minipage}
   \end{center}
   
   % Thesis designation
   \begin{center}
-    \large Masters Thesis for the Department of Philosophy
+    \large A thesis submitted at the Department of Philosophy\\[0.3cm]
+    for the degree of Master of Arts in Philosophy \& Economics\\[2cm]
   \end{center}
   
-  % Author information table
+  % Author and supervisor information
+  \begin{minipage}{0.45\textwidth}
+    \begin{flushleft}
+      \textbf{Author:}\\
+      $author.name$\\
+      $author.email$\\
+      Matriculation Number: $metadata-submission.matriculation-number$\\
+      Tel.: +49 (1573) 4512494\\
+      Pielmühler Straße 15\\
+      52066 Lappersdorf
+    \end{flushleft}
+  \end{minipage}
+  \hfill
+  \begin{minipage}{0.45\textwidth}
+    \begin{flushright}
+      \textbf{Supervisor:}\\
+      Dr. Timo Speith\\[1cm]
+      \textbf{Word Count:}\\
+      $metadata-submission.word-count$\\[1cm]
+      \textbf{Source / Identifier:}\\
+      Document URL
+    \end{flushright}
+  \end{minipage}
+  
+  % Date at bottom
+  \vfill
   \begin{center}
-    \begin{tabular}{ll}
-      \toprule
-      Author: & $author.name$ \\
-      Email: & $author.email$ \\
-      Field of Study: & $metadata-submission.field-of-study$ \\
-      Matriculation Number: & $metadata-submission.matriculation-number$ \\
-      Submission Date: & $metadata-submission.submission-date$ \\
-      Word Count: & $metadata-submission.word-count$ \\
-      \bottomrule
-    \end{tabular}
+    $date$
   \end{center}
-  
-  % Abstract
-  \begin{center}
-    \large\textbf{Abstract:}
-  \end{center}
-  
-  \begin{quotation}
-    $abstract$
-  \end{quotation}
 \end{titlepage}
