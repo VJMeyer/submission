@@ -27,20 +27,8 @@ keywords:
   - Risk Assessment
   - Argument Extraction
 abstract: |
-  The coordination crisis in AI governance presents a paradoxical challenge: unprecedented
-  investment in AI safety coexists alongside fundamental coordination failures across technical,
-  policy, and ethical domains. These divisions systematically increase existential risk by creating
-  safety gaps, misallocating resources, and fostering inconsistent approaches to interdependent
-  problems. This thesis introduces AMTAIR (Automating Transformative AI Risk Modeling), a
-  computational approach that addresses this coordination failure by automating the extraction of
-  probabilistic world models from AI safety literature using frontier language models.
-  
-  The AMTAIR system implements an end-to-end pipeline that transforms unstructured text into
-  interactive Bayesian networks through a novel two-stage extraction process: first capturing
-  argument structure in ArgDown format, then enhancing it with probability information in
-  BayesDown. This approach bridges communication gaps between stakeholders by making implicit
-  models explicit, enabling comparison across different worldviews, providing a common language
-  for discussing probabilistic relationships, and supporting policy evaluation across diverse scenarios.
+  This thesis addresses coordination problems in AI safety by creating tools that automatically extract and formalize the assumptions and models underlying different approaches to AI governance.
+  By transforming complex arguments into interactive visualizations showing relationships and probabilities, AMTAIR helps bridge communication gaps between technical researchers, policy specialists, and other stakeholders working to address risks from advanced AI.
 plain-language-summary: |
   This thesis addresses coordination problems in AI safety by creating tools that automatically
   extract and formalize the assumptions and models underlying different approaches to AI governance.
@@ -63,6 +51,27 @@ citation:
   container-title: University of Bayreuth
 number-sections: true
 ---
+
+# Abstract
+
+  The coordination crisis in AI governance presents a paradoxical challenge: unprecedented
+  investment in AI safety coexists alongside fundamental coordination failures across technical,
+  policy, and ethical domains. These divisions systematically increase existential risk by creating
+  safety gaps, misallocating resources, and fostering inconsistent approaches to interdependent
+  problems. This thesis introduces AMTAIR (Automating Transformative AI Risk Modeling), a
+  computational approach that addresses this coordination failure by automating the extraction of
+  probabilistic world models from AI safety literature using frontier language models.
+  
+  The AMTAIR system implements an end-to-end pipeline that transforms unstructured text into
+  interactive Bayesian networks through a novel two-stage extraction process: first capturing
+  argument structure in ArgDown format, then enhancing it with probability information in
+  BayesDown. This approach bridges communication gaps between stakeholders by making implicit
+  models explicit, enabling comparison across different worldviews, providing a common language
+  for discussing probabilistic relationships, and supporting policy evaluation across diverse scenarios.
+
+{{< embed chapters/Frontmatter.qmd >}} 
+
+Text
 
 <!-- [ ] Figure out Outline to Outline to Draft Workflow -->
 
@@ -112,10 +121,7 @@ number-sections: true
 
  -->
 
-{{< embed chapters/Frontmatter.qmd >}} 
-
-
-
+More text
 
 {{< embed chapters/Introduction.qmd >}}
 
