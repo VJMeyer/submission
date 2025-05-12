@@ -4,84 +4,7 @@
 
 
 
-# SWITCH BETWEEN BOOK AND MAUSCRIPT QUARTO BY (UN-)COMMENTING THE RESPECTIVE SECTION IN THIS _quarto.yml file
-
-
-
-
-
-
-project:
-  type: book
-  output-dir: _outputs/book
-
-execute:
-  freeze: auto
-
-book:
-  title: "Automating the Modelling of Transformative Artificial Intelligence Risks"
-  author: "Valentin Jakob Meyer"
-  date: "2025-05-26"
-  search: true
-  repo-url: https://github.com/VJMeyer/submission
-  repo-actions: [edit]
-  downloads: [pdf, epub] #tex?
-  sharing: [twitter, facebook]
-  cover-image: images/cover.png
-  output-file: "complete-book"
-  chapters:
-    - index.qmd
-    - chapters/Frontmatter.qmd
-    - chapters/Introduction.qmd
-    - chapters/Context.qmd
-    - chapters/AMTAIR.qmd
-    - chapters/Discussion.qmd
-    - chapters/Conclusion.qmd
-    - ref/references.qmd
-  appendices:
-    - chapters/Appendices.qmd
-    - chapters/appendixA.qmd
-  navbar:
-    pinned: true
-  page-footer: 
-    left: "Copyright 2025, Valentin Meyer" 
-    right: 
-      - icon: github
-        href: https://github.com/
-      - icon: twitter 
-        href: https://twitter.com/
-
-format:
-  html:
-    theme: cosmo
-    code-fold: true
-    toc: true
-    toc-depth: 5
-    toc-title: "ToC"
-    page-navigation: true
-    site-path: /
-    self-contained: false
-    number-sections: true
-  pdf:
-    documentclass: book
-    geometry: margin=1in
-    template: latex/template.tex
-    include-in-header: latex/preamble.tex
-    keep-tex: true
-    toc: true
-    pdf-engine: xelatex
-    output-file: thesis-book.pdf
-  latex:
-    documentclass: book
-    include-in-header: latex/preamble.tex
-    output-file: thesis-book.tex
-    keep-tex: true
-
-bibliography: ref/MAref.bib
-
-
-
-
+# # SWITCH BETWEEN BOOK AND MAUSCRIPT QUARTO BY (UN-)COMMENTING THE RESPECTIVE SECTION IN THIS _quarto.yml file
 
 
 
@@ -89,37 +12,119 @@ bibliography: ref/MAref.bib
 
 
 # project:
-#   type: manuscript
-#   output-dir: _outputs/manuscript
+#   type: book
+#   output-dir: _outputs/book
 
 # execute:
 #   freeze: auto
-#   echo: false
 
-# manuscript:
-#   article: thesis.qmd
+# book:
+#   title: "Automating the Modelling of Transformative Artificial Intelligence Risks"
+#   author: "Valentin Jakob Meyer"
+#   date: "2025-05-26"
+#   search: true
+#   repo-url: https://github.com/VJMeyer/submission
+#   repo-actions: [edit]
+#   downloads: [pdf, epub] #tex?
+#   sharing: [twitter, facebook]
+#   cover-image: images/cover.png
+#   output-file: "complete-book"
+#   chapters:
+#     - index.qmd
+#     - chapters/Frontmatter.qmd
+#     - chapters/Introduction.qmd
+#     - chapters/Context.qmd
+#     - chapters/AMTAIR.qmd
+#     - chapters/Discussion.qmd
+#     - chapters/Conclusion.qmd
+#     - ref/references.qmd
+#   appendices:
+#     - chapters/Appendices.qmd
+#     - chapters/appendixA.qmd
+#   navbar:
+#     pinned: true
+#   page-footer: 
+#     left: "Copyright 2025, Valentin Meyer" 
+#     right: 
+#       - icon: github
+#         href: https://github.com/
+#       - icon: twitter 
+#         href: https://twitter.com/
 
 # format:
 #   html:
+#     theme: cosmo
+#     code-fold: true
 #     toc: true
-#     toc-depth: 3
-#     number-sections: true
+#     toc-depth: 5
+#     toc-title: "ToC"
+#     page-navigation: true
 #     site-path: /
+#     self-contained: false
+#     number-sections: true
 #   pdf:
-#     documentclass: report
-#     classoption: [12pt, a4paper, oneside]
+#     documentclass: book
+#     geometry: margin=1in
 #     template: latex/template.tex
 #     include-in-header: latex/preamble.tex
-#     pdf-engine: xelatex
 #     keep-tex: true
-#     output-file: thesis-manuscript.pdf
 #     toc: true
-#     lot: true
-#     lof: true
-#     colorlinks: true
+#     pdf-engine: xelatex
+#     output-file: thesis-book.pdf
 #   latex:
-#     documentclass: report
+#     documentclass: book
 #     include-in-header: latex/preamble.tex
-#     output-file: thesis-manuscript.tex
+#     output-file: thesis-book.tex
+#     keep-tex: true
 
 # bibliography: ref/MAref.bib
+
+
+
+
+
+
+
+
+
+
+project:
+  type: manuscript
+  output-dir: _outputs/manuscript
+
+execute:
+  freeze: auto
+  echo: false
+
+manuscript:
+  article: thesis.qmd
+  #code-links: repo
+  notebooks:
+    - notebook: notebooks/AMTAIR_Prototype_example_carlsmith.ipynb
+      title: AMTAIR Carlsmith Example
+  #   url: http://mybinder.org/v2/gh/binder-examples/jupyterlab/master?urlpath=lab/tree/index.ipynb
+
+format:
+  html:
+    toc: true
+    toc-depth: 5
+    number-sections: true
+    site-path: /
+  pdf:
+    documentclass: report
+    classoption: [12pt, a4paper, oneside]
+    template: latex/template.tex
+    include-in-header: latex/preamble.tex
+    pdf-engine: xelatex
+    keep-tex: true
+    output-file: thesis-manuscript.pdf
+    toc: true
+    lot: true
+    lof: true
+    colorlinks: true
+  latex:
+    documentclass: report
+    include-in-header: latex/preamble.tex
+    output-file: thesis-manuscript.tex
+
+bibliography: ref/MAref.bib
