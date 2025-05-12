@@ -1,4 +1,12 @@
-# Context
+---
+title: "Context"
+# Control if this file starts numbering
+numbering:
+  start-at: 2      # Start at Section 1
+  level: 1         # Chapter level
+---
+
+## Context
 
 
 20% of Grade:

@@ -1,13 +1,18 @@
-# Appendices
+---
+title: "Appendices" 
+number: false      # Exclude from section numbering
+---
 
-# Appendix A
+## Appendices
 
-# Appendix B
+## Appendix A
 
-# Appendix C
+## Appendix B
 
-# Appendix D
+## Appendix C
+
+## Appendix D
 
 TestText
 
-# Affidavit
+## Affidavit

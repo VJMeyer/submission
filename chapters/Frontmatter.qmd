@@ -1,4 +1,10 @@
-# Frontmatter
+---
+title: "Frontmatter" 
+number: false      # Exclude from section numbering
+---
+
+
+## Frontmatter
 
 # Prefatory Apparatus: Illustrations and Terminology --- Quick References {.unnumbered}
 

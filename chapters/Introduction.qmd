@@ -1,9 +1,13 @@
 ---
-title: Introduction to AMTAIR
+title: "Introduction"
+# Control if this file starts numbering
+numbering:
+  start-at: 1      # Start at Section 1
+  level: 1         # Chapter level
 ---
 
 
-# Introduction
+## Introduction
 
 
 10% of Grade:

@@ -1,4 +1,12 @@
-# Conclusion
+---
+title: "Conclusion"
+# Control if this file starts numbering
+numbering:
+  start-at: 5      # Start at Section 1
+  level: 1         # Chapter level
+---
+
+## Conclusion
 
 
 10% of Grade:

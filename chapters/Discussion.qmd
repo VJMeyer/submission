@@ -1,4 +1,12 @@
-# Discussion
+---
+title: "Discussion"
+# Control if this file starts numbering
+numbering:
+  start-at: 4      # Start at Section 1
+  level: 1         # Chapter level
+---
+
+## Discussion
 
 10% of Grade:
 
