@@ -1,9 +1,0 @@
-# Background
-
-
-Background/Context: state of the art (MTAIR)
-	…
-	theoretical background considerations
-
-DAG / BayesNet Intro Example — Rain/Sprinkler/Lawn
-

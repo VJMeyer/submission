@@ -7,10 +7,9 @@ numbering:
 ---
 
 
-## AMTAIR
 
 
-20% of Grade:
+### 20% of Grade:
 
 • provides critical or constructive evaluation
 of positions introduced
@@ -26,9 +25,14 @@ possibly even presents an original contribution to the debate
 
 ~ 29% of text ~ 8700 words
 
-<!-- {{< embed Implementation.qmd >}} -->
-
-<!-- {{< embed Results.qmd >}} -->
 
 
+## Own Carlsmith Model Implementation — Explanation
 
+## Own Implementation: Good example from a published paper
+
+{{< include Implementation.md >}}
+
+{{< include Results.md >}}
+
+<!-- No Headings after .md inclusion (creates a fatal bug with the ToC) -->

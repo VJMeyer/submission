@@ -10,6 +10,7 @@ Institution: University of Bayreuth
 Supervisor: Professor Timo Speith  
 Date: September 2024
 
+
 ## Tl;dr
 
 This research proposes the automation of the modeling of transformative AI risks (AMTAIR) and a scalable AI Grand Strategy framework to address existential risks from AI. The project combines Bayesian networks, DAGs, and live forecasting data to create dynamic, adaptive models for strategic decision-making. Building on the MTAIR framework, the research aims to integrate expert input, automate updates using LLMs, and formalize world models within the AI safety community. The resulting tools will help policymakers and researchers develop robust strategies to mitigate AI risks and ensure long-term human survival.
