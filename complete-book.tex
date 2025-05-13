@@ -1,5 +1,5 @@
 % Main template for University of Bayreuth thesis
-\documentclass[12pt,a4paper]{book}      %   vs report
+\documentclass[12pt,a4paper]{report}      %   vs book
 
 % Import custom packages and settings
 
@@ -257,11 +257,12 @@ with introduction
 
 TestText
 
-\section{Affidavit}\label{affidavit}
-
 \chapter{appendixA}\label{appendixa}
 
 testtext
+
+% Add affidavit at the end but still within document environment
+\input{latex/affidavit.tex}
 
 \end{document}
 
