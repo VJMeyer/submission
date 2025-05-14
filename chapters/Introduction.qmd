@@ -12,15 +12,15 @@ numbering:
 
 10% of Grade:
 
-• introduces and motivates the core question or problem
-• provides context for discussion (places issue within a larger debate or sphere of relevance)
-• states precise thesis or position the author will argue for
-• provides roadmap indicating structure and key content points of the essay
+- introduces and motivates the core question or problem
+- provides context for discussion (places issue within a larger debate or sphere of relevance)
+- states precise thesis or position the author will argue for
+- provides roadmap indicating structure and key content points of the essay
 
 ~ 14% of text ~ 4200 words
 
 
-• introduces and motivates the core question or problem
+- introduces and motivates the core question or problem
 
 ## Motivation:  Problem Statement
 
@@ -28,7 +28,7 @@ numbering:
 
 
 
-• provides context for discussion (places issue within a larger debate or sphere of relevance)
+- provides context for discussion (places issue within a larger debate or sphere of relevance)
 
 ## Scope:   Aim & Context of the Research
 
@@ -42,7 +42,7 @@ numbering:
 
 
 
-• provides roadmap indicating structure and key content points of the essay
+- provides roadmap indicating structure and key content points of the essay
 
 ## Overview:    Structure & Approach of the Paper (Roadmap --- Theory of Change)
 

@@ -60,48 +60,12 @@ The AMTAIR system implements an end-to-end pipeline that transforms unstructured
 
 <!-- [ ] Figure out Outline to Outline to Draft Workflow -->
 
-<!-- [ ] Figure out Thesis "styling" (book vs manuscript) -->
-
-<!-- [ ] Setup reliable "save as PDF" -->
-
-<!-- [ ] Setup "save as LaTeX" -->
-
-<!-- [ ] Adapt LaTeX / PDF based on (journal) template -->
-
 <!-- [ ]: Clean up the introduction -->
 
 <!-- [ ]: Test Quarto-Code-Links: https://quarto.org/docs/manuscripts/components.html#code-links -->
 
 ```{r}
 # [ ]: Configure the Quarto Manuscript options: https://quarto.org/docs/manuscripts/components.html#including-notebooks
-```
-
-```{=html}
-<!-- 
-# Grading
-
-
-
-
-## Structure (10%)
-• outlines project clearly in the introduction
-• discussion follows a logical order
-• order of sections corresponds to outline
-• uses appropriate topic and transition sentences
-• employs proper signposting and cross-referencing throughout paper
-• sections are appropriately numbered and headlined
-
-##Language and Style (10%)
-• employs appropriate tone and academic language
-• uses effective and sophisticated sentence variety, diction, and vocabulary
-• employs correct English spelling and grammar
-• is clearly written and uses appropriate sentence complexity
-• communicates main points effectively / is easy to follow
-• formats citations and references correctly and consistently (e.g. (AUTHOR, YEAR) citation style)
-• names all primary and secondary sources
-• includes a complete list of references with full bibliographic details
-
- -->
 ```
 
 ## Grading
@@ -113,11 +77,41 @@ The AMTAIR system implements an end-to-end pipeline that transforms unstructured
 -   draws on appropriate additional materials beyond those covered in class (primary as well as secondary sources)
 -   covers relevant material at appropriate level of detail
 
+## Structure (10%)
+
+-   outlines project clearly in the introduction
+
+-   discussion follows a logical order
+
+-   order of sections corresponds to outline
+
+-   uses appropriate topic and transition sentences
+
+-   employs proper signposting and cross-referencing throughout paper
+
+-   sections are appropriately numbered and headlined
+
 <!-- ::: callout-tip -->
 
-## Callout Test — Language & Style
+## Callout Test — Language & Style (10%)
 
-• employs appropriate tone and academic language • uses effective and sophisticated sentence variety, diction, and vocabulary • employs correct English spelling and grammar • is clearly written and uses appropriate sentence complexity • communicates main points effectively / is easy to follow • formats citations and references correctly and consistently (e.g. (AUTHOR, YEAR) citation style) • names all primary and secondary sources • includes a complete list of references with full bibliographic details <!-- ::: -->
+-   employs appropriate tone and academic language
+
+-   uses effective and sophisticated sentence variety, diction, and vocabulary
+
+-   employs correct English spelling and grammar
+
+-   is clearly written and uses appropriate sentence complexity
+
+-   communicates main points effectively / is easy to follow
+
+-   formats citations and references correctly and consistently (e.g. (AUTHOR, YEAR) citation style)
+
+-   names all primary and secondary sources
+
+-   includes a complete list of references with full bibliographic details
+
+<!-- ::: -->
 
 More text
 
