@@ -21,8 +21,8 @@
 # book:
 #   title: "Automating the Modelling of Transformative Artificial Intelligence Risks"
 #   author: "Valentin Jakob Meyer"
-#   title-block-banner: true
-#   title-block-banner: latex/uni-bayreuth-logo.png
+# #  title-block-banner: true
+# #  title-block-banner: latex/uni-bayreuth-logo.png
 #   date: "2025-05-26"
 #   search: true
 #   repo-url: https://github.com/VJMeyer/submission
@@ -40,6 +40,8 @@
 #     - chapters/Discussion.qmd
 #     - chapters/Conclusion.qmd
 #     - ref/references.qmd
+#   #  - AMTAIR_Prototype/data/example_rain-sprinkler-lawn/AMTAIR_Prototype_example_rain-sprinkler-lawn.ipynb
+#   #  - AMTAIR_Prototype/data/example_carlsmith/AMTAIR_Prototype_example_carlsmith.ipynb
 #   appendices:
 #     - chapters/Appendices.qmd
 #     - chapters/appendixA.qmd
@@ -149,8 +151,14 @@ manuscript:
   #downloads: [pdf, epub] #tex, MECA Bundle (.zip), MS Word?
     # Explicitly list notebooks in desired order
   notebooks:  # Include notebooks
-    - notebook: notebooks/AMTAIR_Prototype_example_carlsmith.ipynb
+    - notebook: AMTAIR_Prototype/data/example_rain-sprinkler-lawn/AMTAIR_Prototype_example_rain-sprinkler-lawn.ipynb
+      title: AMTAIR Rain-Sprinkler-Lawn Example
+    #  url: https://colab.research.google.com/github/VJMeyer/submission/blob/main/AMTAIR_Prototype/data/example_rain-sprinkler-lawn/AMTAIR_Prototype_example_rain-sprinkler-lawn.ipynb
+    - notebook: AMTAIR_Prototype/data/example_carlsmith/AMTAIR_Prototype_example_carlsmith.ipynb
       title: AMTAIR Carlsmith Example
+    #  url: https://colab.research.google.com/github/VJMeyer/submission/blob/main/AMTAIR_Prototype/data/example_carlsmith/AMTAIR_Prototype_example_carlsmith.ipynb
+    #- notebook: notebooks/AMTAIR_Prototype_example_carlsmith.ipynb
+    #  title: AMTAIR Carlsmith Example
     #  url:   https://github.com/VJMeyer/submission/blob/main/notebooks/AMTAIR_Prototype_example_carlsmithIPYNB.ipynb
 
 format:

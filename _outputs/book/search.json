@@ -64,7 +64,17 @@
     "href": "chapters/Introduction.html",
     "title": "1  Introduction",
     "section": "",
-    "text": "1.1 Introduction\n10% of Grade:\n• introduces and motivates the core question or problem • provides context for discussion (places issue within a larger debate or sphere of relevance) • states precise thesis or position the author will argue for • provides roadmap indicating structure and key content points of the essay\n~ 14% of text ~ 4200 words\n• introduces and motivates the core question or problem",
+    "text": "1.1 Introduction\n10% of Grade:\n~ 14% of text ~ 4200 words",
+    "crumbs": [
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Introduction</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/Introduction.html#introduction",
+    "href": "chapters/Introduction.html#introduction",
+    "title": "1  Introduction",
+    "section": "",
+    "text": "introduces and motivates the core question or problem\nprovides context for discussion (places issue within a larger debate or sphere of relevance)\nstates precise thesis or position the author will argue for\nprovides roadmap indicating structure and key content points of the essay\n\n\n\nintroduces and motivates the core question or problem",
     "crumbs": [
       "<span class='chapter-number'>1</span>  <span class='chapter-title'>Introduction</span>"
     ]
@@ -84,7 +94,7 @@
     "href": "chapters/Introduction.html#motivation-research-question",
     "title": "1  Introduction",
     "section": "1.3 Motivation: Research Question",
-    "text": "1.3 Motivation: Research Question\n• provides context for discussion (places issue within a larger debate or sphere of relevance)",
+    "text": "1.3 Motivation: Research Question\n\nprovides context for discussion (places issue within a larger debate or sphere of relevance)",
     "crumbs": [
       "<span class='chapter-number'>1</span>  <span class='chapter-title'>Introduction</span>"
     ]
@@ -114,7 +124,7 @@
     "href": "chapters/Introduction.html#thesis-statement-position-aim-of-the-paper",
     "title": "1  Introduction",
     "section": "1.6 Thesis Statement & Position: (Aim of the Paper)",
-    "text": "1.6 Thesis Statement & Position: (Aim of the Paper)\n• provides roadmap indicating structure and key content points of the essay",
+    "text": "1.6 Thesis Statement & Position: (Aim of the Paper)\n\nprovides roadmap indicating structure and key content points of the essay",
     "crumbs": [
       "<span class='chapter-number'>1</span>  <span class='chapter-title'>Introduction</span>"
     ]
@@ -140,21 +150,91 @@
     ]
   },
   {
+    "objectID": "chapters/Introduction.html#problem-statement-motivation",
+    "href": "chapters/Introduction.html#problem-statement-motivation",
+    "title": "1  Introduction",
+    "section": "1.9 Problem Statement — Motivation",
+    "text": "1.9 Problem Statement — Motivation\nContinued AI Progress:\n\nRapid advancements in AI technology increase both potential benefits and risks.\n\nExistential Risks (AI X-Risk):\n\nAdvanced AI systems could pose significant threats if misaligned with human values.\n\nComplexity Challenges:\n\nThe intricate nature of AI systems complicates policy formulation and understanding.\n\nLimitations of Current Approaches:\n\nMTAIR’s Reliance on Human Labor:\n\nModeling Transformative AI Risks (MTAIR) is constrained by manual cognitive efforts.\n\n\nNeed for Automation:\n\nScaling and automating risk modeling is essential to keep pace with AI developments.\n\n\nOpportunity:\n\nLeveraging new technologies to enhance our ability to model and mitigate AI risks.",
+    "crumbs": [
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Introduction</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/Introduction.html#aim-of-the-paper",
+    "href": "chapters/Introduction.html#aim-of-the-paper",
+    "title": "1  Introduction",
+    "section": "1.10 Aim of the Paper",
+    "text": "1.10 Aim of the Paper\n\n1.10.1 Research Question & Scope\n\n1.10.1.1 Can frontier AI technologies be utilized to automate the modeling of transformative AI risks, so as to allow for the prediction of policy impacts?\nFrontier AI Technology: Today’s most capable AI systems (e.g. GPT4 level LLMs)\nScaling Up: Automating the previously “manual” cognitive labor\nModeling: Formalizing the world views underlying arguments\nTransformative AI: Level of AI capabilities defined by severe impact on the world\nSafety & Governance Literature: Publications, reports etc. concerned with risks from AI\nAutomated Estimation: Non-manual (AI systems + scaffolding), quantified evaluations\nProbability Distributions: Formal expressions of the expectations over future worlds\nConditional Trees of Possible Worlds: “If … then…” reasoning over ways things may play out\nForecasting Policy Impacts: Qualitative & quantitative evaluation of expected outcomes\n\n\n\n1.10.2 Significance of the Research\n\n\n1.10.3",
+    "crumbs": [
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Introduction</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/Introduction.html#theory-of-change-approach-structure-of-the-paper",
+    "href": "chapters/Introduction.html#theory-of-change-approach-structure-of-the-paper",
+    "title": "1  Introduction",
+    "section": "1.11 Theory of Change — Approach & Structure of the Paper",
+    "text": "1.11 Theory of Change — Approach & Structure of the Paper\nMultiplicative Benefits:\n\nAutomation × Live Prediction Market Integrations × Policy Impact Evaluations\n\nExplanation:\nAutomation:\n\nIncreases efficiency and scalability of risk modeling.\nLive Prediction Markets:\nProvides up-to-date, collective intelligence to inform models.\nPolicy Impact Evaluations:\nImproves the accuracy and relevance of policy assessments.\n\nOutcome:\n\nEnhanced ability to develop effective policies that mitigate AI risks.\n\nVisual Aid:\n\nA diagram illustrating how each component amplifies the others, leading to greater overall impact.",
+    "crumbs": [
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Introduction</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/Introduction.html#section-1",
+    "href": "chapters/Introduction.html#section-1",
+    "title": "1  Introduction",
+    "section": "1.12 ",
+    "text": "1.12",
+    "crumbs": [
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Introduction</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/Introduction.html#overview-table-of-contents",
+    "href": "chapters/Introduction.html#overview-table-of-contents",
+    "title": "1  Introduction",
+    "section": "1.13 Overview / Table of Contents",
+    "text": "1.13 Overview / Table of Contents",
+    "crumbs": [
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Introduction</span>"
+    ]
+  },
+  {
     "objectID": "chapters/Context.html",
     "href": "chapters/Context.html",
     "title": "2  Context",
     "section": "",
-    "text": "2.1 Context\n20% of Grade:\n• demonstrates understanding of all relevant core concepts • explains why the question/thesis/problem is relevant in student’s own words (supported by quotations) • situates it within the debate/course material • reconstructs selected arguments and identifies relevant assumptions • describes additional relevant material that has been consulted and integrates it with the course material as well as the research question/thesis/problem\n~ 29% of text ~ 8700 words",
+    "text": "2.0.1 20% of Grade:\n~ 29% of text ~ 8700 words",
     "crumbs": [
       "<span class='chapter-number'>2</span>  <span class='chapter-title'>Context</span>"
     ]
   },
   {
-    "objectID": "chapters/Context.html#context",
-    "href": "chapters/Context.html#context",
+    "objectID": "chapters/Context.html#theoretical-background-considerations",
+    "href": "chapters/Context.html#theoretical-background-considerations",
     "title": "2  Context",
-    "section": "",
-    "text": "successively (chunk my chunk) introduce concepts/ideas — and 2. ground each with existing literature",
+    "section": "2.1 Theoretical Background Considerations",
+    "text": "2.1 Theoretical Background Considerations",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Context</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/Context.html#literature-concepts-terminology",
+    "href": "chapters/Context.html#literature-concepts-terminology",
+    "title": "2  Context",
+    "section": "2.2 Literature, Concepts & Terminology",
+    "text": "2.2 Literature, Concepts & Terminology\n\n2.2.1 DAG / BayesNets\n\n\n2.2.2 State of the art (MTAIR) — Explanation\n\n2.2.2.1 Carlsmith Model (Analytica)\n\n\n\n2.2.3 (Intro) Example — Rain/Sprinkler/Lawn\n/ Rain/Sprinkler/Lawn DAG / BayesNet — Extended Example\n…\nOwn Position/Argument: AMTAIR … Own Rain/Sprinkler/Lawn DAG / BayesNet Implementation",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Context</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/Context.html#methodology",
+    "href": "chapters/Context.html#methodology",
+    "title": "2  Context",
+    "section": "2.3 Methodology",
+    "text": "2.3 Methodology\nMTAIR / Carlsmith Model (Analytica) — Explanation (— is motivation: should come first)\n\n2.3.1 Kialo\n\n\n2.3.2 Rain/Sprinkler/Lawn DAG\n\n\n2.3.3 BayeServer\n\n\n2.3.4 BayesNet — Extended Example\n\n\n2.3.5 Code + documentation",
     "crumbs": [
       "<span class='chapter-number'>2</span>  <span class='chapter-title'>Context</span>"
     ]
@@ -164,7 +244,87 @@
     "href": "chapters/AMTAIR.html",
     "title": "3  AMTAIR",
     "section": "",
-    "text": "3.1 AMTAIR\n20% of Grade:\n• provides critical or constructive evaluation of positions introduced • develops strong (plausible) argument in support of author’s own position/thesis • argument draws on relevant course material • claim/argument demonstrates understanding of the course materials incl. key arguments and core concepts within the debate • claim/argument is original or insightful, possibly even presents an original contribution to the debate\n~ 29% of text ~ 8700 words",
+    "text": "3.0.1 20% of Grade: ~ 29% of text ~ 8700 words",
+    "crumbs": [
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>AMTAIR</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/AMTAIR.html#own-carlsmith-model-implementation-explanation",
+    "href": "chapters/AMTAIR.html#own-carlsmith-model-implementation-explanation",
+    "title": "3  AMTAIR",
+    "section": "3.1 Own Carlsmith Model Implementation — Explanation",
+    "text": "3.1 Own Carlsmith Model Implementation — Explanation",
+    "crumbs": [
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>AMTAIR</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/AMTAIR.html#own-implementation-good-example-from-a-published-paper",
+    "href": "chapters/AMTAIR.html#own-implementation-good-example-from-a-published-paper",
+    "title": "3  AMTAIR",
+    "section": "3.2 Own Implementation: Good example from a published paper",
+    "text": "3.2 Own Implementation: Good example from a published paper",
+    "crumbs": [
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>AMTAIR</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/AMTAIR.html#implementation",
+    "href": "chapters/AMTAIR.html#implementation",
+    "title": "3  AMTAIR",
+    "section": "3.3 Implementation",
+    "text": "3.3 Implementation\nTestText",
+    "crumbs": [
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>AMTAIR</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/AMTAIR.html#results",
+    "href": "chapters/AMTAIR.html#results",
+    "title": "3  AMTAIR",
+    "section": "3.4 Results",
+    "text": "3.4 Results\nTestText",
+    "crumbs": [
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>AMTAIR</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/AMTAIR.html#automated-modeling-pipeline-from-academic-papers-to-political-strategy",
+    "href": "chapters/AMTAIR.html#automated-modeling-pipeline-from-academic-papers-to-political-strategy",
+    "title": "3  AMTAIR",
+    "section": "4.1 Automated Modeling Pipeline — From Academic Papers to Political Strategy",
+    "text": "4.1 Automated Modeling Pipeline — From Academic Papers to Political Strategy\nSuccess of Automation:\n\nDemonstrated feasibility of automated model extraction.\nImproved Forecasting:\nEnhanced accuracy with real-time data integration.\nPolicy Analysis:\nIdentified impactful policies through conditional forecasting.\nScalability Achieved:\nEfficient processing of extensive data sets.\nAddressed Challenges:\nOvercame limitations of manual modeling.",
+    "crumbs": [
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>AMTAIR</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/AMTAIR.html#project-scaling-workflow-pipeline-automation",
+    "href": "chapters/AMTAIR.html#project-scaling-workflow-pipeline-automation",
+    "title": "3  AMTAIR",
+    "section": "4.2 Project Scaling — Workflow Pipeline & Automation",
+    "text": "4.2 Project Scaling — Workflow Pipeline & Automation\nScaling Opportunities:\n\nHorizontal: Incorporate more data sources.\n\nVertical: Add detailed variables.\n\nNew Capabilities:\n\nAdvanced analytics.\n\nReal-time data integration.\n\nRequirements:\n\nSoftware Setup: Robust infrastructure.\n\nFinancial: Funding for APIs and compute resources.\n\nImpact:\n\nBroader, more comprehensive models.\n\nEnhanced policy analysis.",
+    "crumbs": [
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>AMTAIR</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/AMTAIR.html#computational-complexity-computational-tractability",
+    "href": "chapters/AMTAIR.html#computational-complexity-computational-tractability",
+    "title": "3  AMTAIR",
+    "section": "4.3 Computational Complexity — Computational Tractability",
+    "text": "4.3 Computational Complexity — Computational Tractability\nChallenges:\n\nHigh computational demands of complex models.\n\nSolutions:\n\nClustering Worldviews:\n\nGroup similar perspectives to simplify models.\n\nCorrelation Management:\n\nAdjust for variable interdependencies.\n\nEfficient Algorithms:\nUse optimized sampling methods like Monte Carlo.\n\nOutcome:\n\nAchieved efficiency without sacrificing accuracy.\n\nLink to Theory of Change:\n\nScalability amplifies policy impact.",
+    "crumbs": [
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>AMTAIR</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/AMTAIR.html#external-validation-manual-extraction-processing",
+    "href": "chapters/AMTAIR.html#external-validation-manual-extraction-processing",
+    "title": "3  AMTAIR",
+    "section": "4.4 External Validation — Manual Extraction & Processing",
+    "text": "4.4 External Validation — Manual Extraction & Processing\nPurpose:\n\nAssess accuracy of automated methods.\nComparison:\nAutomation Strengths:\n\nSpeed, consistency.\n\nHuman Strengths:\n\nNuanced understanding.\nFindings:\nAutomation excels in data handling.\n\nHuman oversight enhances quality.\nConclusion:\nOptimal results from combining AI with expert input.",
     "crumbs": [
       "<span class='chapter-number'>3</span>  <span class='chapter-title'>AMTAIR</span>"
     ]
@@ -174,7 +334,47 @@
     "href": "chapters/Discussion.html",
     "title": "4  Discussion",
     "section": "",
-    "text": "4.1 Discussion\n10% of Grade:\n• discusses a specific objection to student’s own argument • provides a convincing reply that bolsters or refines the main argument • relates to or extends beyond materials/arguments covered in class\n~ 14% of text ~ 4200 words",
+    "text": "4.1 Discussion\n10% of Grade: ~ 14% of text ~ 4200 words",
+    "crumbs": [
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Discussion</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/Discussion.html#discussion",
+    "href": "chapters/Discussion.html#discussion",
+    "title": "4  Discussion",
+    "section": "",
+    "text": "discusses a specific objection to student’s own argument\nprovides a convincing reply that bolsters or refines the main argument\nrelates to or extends beyond materials/arguments covered in class",
+    "crumbs": [
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Discussion</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/Discussion.html#challenges-problems-red-teaming-problems-failures-downsides",
+    "href": "chapters/Discussion.html#challenges-problems-red-teaming-problems-failures-downsides",
+    "title": "4  Discussion",
+    "section": "5.1 Challenges & Problems — Red Teaming Problems, Failures & Downsides",
+    "text": "5.1 Challenges & Problems — Red Teaming Problems, Failures & Downsides\nPotential Failures:\n\nData Issues: Inaccurate or biased inputs.\n\nModel Limitations: Oversimplifications.\n\nTech Risks: AI misinterpretations.\nRed Teaming:\nStress-testing models to find weaknesses.\nImpact on Theory of Change:\nIdentifying points of failure strengthens the approach.",
+    "crumbs": [
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Discussion</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/Discussion.html#implications-impact-uptake-feedback-loops-uptake-success-green-teaming",
+    "href": "chapters/Discussion.html#implications-impact-uptake-feedback-loops-uptake-success-green-teaming",
+    "title": "4  Discussion",
+    "section": "5.2 Implications & Impact — Uptake, Feedback Loops, Uptake & Success – Green Teaming –",
+    "text": "5.2 Implications & Impact — Uptake, Feedback Loops, Uptake & Success – Green Teaming –\nPotential Outcomes:\n\nFirst-Order: Reduced AI risks through better policies.\n\nSecond-Order: Enhanced collaboration.\n\nThird-Order: Framework applied to other global risks.\nFeedback Loops:\nContinuous model improvement.\n\nAdaptive policy-making.\nGreen Teaming:\nStrategies to maximize positive impacts.",
+    "crumbs": [
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Discussion</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/Discussion.html#known-unknowns-unknown-unknowns-input-data-example-modeling-author-worldviews-from-bibliographies-instead-of-individual-papers",
+    "href": "chapters/Discussion.html#known-unknowns-unknown-unknowns-input-data-example-modeling-author-worldviews-from-bibliographies-instead-of-individual-papers",
+    "title": "4  Discussion",
+    "section": "5.3 Known Unknowns & Unknown Unknowns — Input Data Example: Modeling Author Worldviews from Bibliographies Instead of Individual Papers",
+    "text": "5.3 Known Unknowns & Unknown Unknowns — Input Data Example: Modeling Author Worldviews from Bibliographies Instead of Individual Papers\nPotential Outcomes:\n\nFirst-Order: Reduced AI risks through better policies.\n\nSecond-Order: Enhanced collaboration.\n\nThird-Order: Framework applied to other global risks.\nFeedback Loops:\nContinuous model improvement.\n\nAdaptive policy-making.\nGreen Teaming:\nStrategies to maximize positive impacts.",
     "crumbs": [
       "<span class='chapter-number'>4</span>  <span class='chapter-title'>Discussion</span>"
     ]
@@ -184,7 +384,37 @@
     "href": "chapters/Conclusion.html",
     "title": "5  Conclusion",
     "section": "",
-    "text": "5.1 Conclusion\n10% of Grade:\n• summarizes thesis and line of argument • outlines possible implications • notes outstanding issues / limitations of discussion • points to avenues for further research • overall conclusion is in line with introduction\n~ 14% of text ~ 4200 words",
+    "text": "5.1 The Current State of Things & How to Continue\n10% of Grade: ~ 14% of text ~ 4200 words",
+    "crumbs": [
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Conclusion</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/Conclusion.html#the-current-state-of-things-how-to-continue",
+    "href": "chapters/Conclusion.html#the-current-state-of-things-how-to-continue",
+    "title": "5  Conclusion",
+    "section": "",
+    "text": "summarizes thesis and line of argument\noutlines possible implications\nnotes outstanding issues / limitations of discussion\npoints to avenues for further research\noverall conclusion is in line with introduction",
+    "crumbs": [
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Conclusion</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/Conclusion.html#summary-key-takeaways-findings",
+    "href": "chapters/Conclusion.html#summary-key-takeaways-findings",
+    "title": "5  Conclusion",
+    "section": "5.2 Summary — Key Takeaways & Findings",
+    "text": "5.2 Summary — Key Takeaways & Findings\n\n5.2.1 Assessing Policy Effects:\nEvaluating how different policies alter P(Doom).\n\n\n5.2.2 Conditional Probability:\nCalculating P(Doom | Policy Alpha).\n\n\n5.2.3 Methodology:\nUpdate model parameters based on policy implementation.\nRecompute probabilities accordingly.\n\n\n5.2.4 Purpose:\nInform policymakers of potential policy effectiveness.\nPrioritize interventions that significantly reduce risks.",
+    "crumbs": [
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Conclusion</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/Conclusion.html#outlook-outlook-next-steps-further-research",
+    "href": "chapters/Conclusion.html#outlook-outlook-next-steps-further-research",
+    "title": "5  Conclusion",
+    "section": "5.3 Outlook — Outlook & Next Steps / Further Research",
+    "text": "5.3 Outlook — Outlook & Next Steps / Further Research\n\n5.3.1 Scaling Up:\n\nInclude more variables and data sources.\n\n\n\n5.3.2 Collaboration:\n\nPartner with policymakers and researchers.\n\n\n\n5.3.3 Technological Enhancements:\n\nEmploy advanced AI techniques.\n\n\n\n5.3.4 Potential Impact:\n\nInfluence global AI governance.\n5.3.5 Limitations of the Analysis\n\n\n\n5.3.6 Policy Implications & Recommendations\n\n\n5.3.7 Areas for Future Research\n\n\n5.3.8 Open Questions — Central/Remaining Questions & Feedback\n\n5.3.8.1 Questions:\n\nHow can we improve automation accuracy?\n\nWhat challenges exist in policy implementation?\n\nHow do we mitigate AI model biases?\n\nHow can interdisciplinary efforts enhance outcomes?\n\n\n\n5.3.8.2 Feedback:\n\nInvite thoughts, critiques, and suggestions.\n\n\n\n\n5.3.9 Outlook — Outlook & Next Steps / Further Research",
     "crumbs": [
       "<span class='chapter-number'>5</span>  <span class='chapter-title'>Conclusion</span>"
     ]
