@@ -1,210 +1,52 @@
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
-    <meta charset="utf-8">
-    <meta name="generator" content="quarto-1.7.29">
 
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.7.29">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-    <title>Context</title>
-    <style>
-      code{white-space: pre-wrap;}
-      span.smallcaps{font-variant: small-caps;}
-      div.columns{display: flex; gap: min(4vw, 1.5em);}
-      div.column{flex: auto; overflow-x: auto;}
-      div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
-      ul.task-list{list-style: none;}
-      ul.task-list li input[type="checkbox"] {
-        width: 0.8em;
-        margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
-        vertical-align: middle;
-      }
-    </style>
+<title>background</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
 
-    <style>
-      body.hypothesis-enabled #quarto-embed-header {
-        padding-right: 36px;
-      }
 
-      #quarto-embed-header {
-        height: 3em;
-        width: 100%;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        border-bottom: solid 1px;
-      }
+<script src="Background_files/libs/clipboard/clipboard.min.js"></script>
+<script src="Background_files/libs/quarto-html/quarto.js" type="module"></script>
+<script src="Background_files/libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="Background_files/libs/quarto-html/popper.min.js"></script>
+<script src="Background_files/libs/quarto-html/tippy.umd.min.js"></script>
+<script src="Background_files/libs/quarto-html/anchor.min.js"></script>
+<link href="Background_files/libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="Background_files/libs/quarto-html/quarto-syntax-highlighting-0815c480559380816a4d1ea211a47e91.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="Background_files/libs/bootstrap/bootstrap.min.js"></script>
+<link href="Background_files/libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="Background_files/libs/bootstrap/bootstrap-81267100e462c21b3d6c0d5bf76a3417.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 
-      #quarto-embed-header h6 {
-        font-size: 1.1em;
-        padding-top: 0.6em;
-        margin-left: 1em;
-        margin-right: 1em;
-        font-weight: 400;
-      }
 
-      #quarto-embed-header a.quarto-back-link,
-      #quarto-embed-header a.quarto-download-embed {
-        font-size: 0.8em;
-        margin-top: 1em;
-        margin-bottom: 1em;
-        margin-left: 1em;
-        margin-right: 1em;
-      }
+</head>
 
-      .quarto-back-container {
-        padding-left: 0.5em;
-        display: flex;
-      }
+<body class="fullcontent quarto-light">
 
-      .headroom {
-          will-change: transform;
-          transition: transform 200ms linear;
-      }
+<div id="quarto-content" class="page-columns page-rows-contents page-layout-article">
 
-      .headroom--pinned {
-          transform: translateY(0%);
-      }
-
-      .headroom--unpinned {
-          transform: translateY(-100%);
-      }      
-    </style>
-
-    <script>
-    window.document.addEventListener("DOMContentLoaded", function () {
-
-      var header = window.document.querySelector("#quarto-embed-header");
-      const titleBannerEl = window.document.querySelector("body > #title-block-header");
-      if (titleBannerEl) {
-        titleBannerEl.style.paddingTop = header.clientHeight + "px";
-      }
-      const contentEl = window.document.getElementById('quarto-content');
-      for (const child of contentEl.children) {
-        child.style.paddingTop = header.clientHeight + "px";
-        child.style.marginTop = "1em";
-      }
-
-      // Use the article root if the `back` call doesn't work. This isn't perfect
-      // but should typically work
-      window.quartoBackToArticle = () => {
-        var currentUrl = window.location.href;
-        window.history.back();
-        setTimeout(() => {
-            // if location was not changed in 100 ms, then there is no history back
-            if(currentUrl === window.location.href){              
-                // redirect to site root
-                window.location.href = "../index.html";
-            }
-        }, 100);
-      }
-
-      const headroom = new window.Headroom(header, {
-        tolerance: 5,
-        onPin: function () {
-        },
-        onUnpin: function () {
-        },
-      });
-      headroom.init();
-    });
-    </script>
-
-    
-<script src="../site_libs/manuscript-notebook/headroom.min.js"></script>
-<script src="../site_libs/clipboard/clipboard.min.js"></script>
-<script src="../site_libs/quarto-html/quarto.js" type="module"></script>
-<script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
-<script src="../site_libs/quarto-html/popper.min.js"></script>
-<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="../site_libs/quarto-html/anchor.min.js"></script>
-<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting-0815c480559380816a4d1ea211a47e91.css" rel="stylesheet" id="quarto-text-highlighting-styles">
-<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../site_libs/bootstrap/bootstrap-8a894fcc3cb5e37eb5bf30def131be2f.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
-     
-      </head>
-
-  <body class="quarto-notebook quarto-light">
-    <div id="quarto-embed-header" class="headroom fixed-top bg-primary">
-      
-      <a onclick="window.quartoBackToArticle(); return false;" class="btn btn-primary quarto-back-link" href=""><i class="bi bi-caret-left"></i> Back to Article</a>
-      <h6><i class="bi bi-journal-code"></i> Context</h6>
-
-            <a href="../chapters/Context.qmd" class="btn btn-primary quarto-download-embed" download="Context.qmd">Download Source</a>
-          </div>
-
-     <header id="title-block-header" class="quarto-title-block default toc-left page-columns page-full">
-  <div class="quarto-title-banner page-columns page-full">
-    <div class="quarto-title column-body">
-      <h1 class="title">Context</h1>
-          </div>
-
-    
-    <div class="quarto-title-meta-container">
-      <div class="quarto-title-meta-column-start">
-        
-        <div class="quarto-title-meta">
-
-                
-          
-                
-              </div>
-      </div>
-      <div class="quarto-title-meta-column-end quarto-other-formats-target">
-      </div>
-    </div>
+<main class="content" id="quarto-document-content">
 
 
 
-    <div class="quarto-other-links-text-target">
-    </div>  </div>
-</header><div id="quarto-content" class="page-columns page-rows-contents page-layout-article toc-left">
-<div id="quarto-sidebar-toc-left" class="sidebar toc-left">
-  <nav id="TOC" role="doc-toc" class="toc-active">
-    <h2 id="toc-title">Table of Contents</h2>
-   
-  <ul>
-  <li><a href="#of-grade" id="toc-of-grade" class="nav-link active" data-scroll-target="#of-grade"><span class="header-section-number">0.1</span> 20% of Grade:</a></li>
-  <li><a href="#theoretical-background-considerations" id="toc-theoretical-background-considerations" class="nav-link" data-scroll-target="#theoretical-background-considerations"><span class="header-section-number">1</span> Theoretical Background Considerations</a>
-  <ul>
-  <li><a href="#dag-bayesnets" id="toc-dag-bayesnets" class="nav-link" data-scroll-target="#dag-bayesnets"><span class="header-section-number">1.1</span> DAG / BayesNets</a></li>
-  <li><a href="#state-of-the-art-mtair-explanation" id="toc-state-of-the-art-mtair-explanation" class="nav-link" data-scroll-target="#state-of-the-art-mtair-explanation"><span class="header-section-number">1.2</span> State of the art (MTAIR) — Explanation</a>
-  <ul class="collapse">
-  <li><a href="#carlsmith-model-analytica" id="toc-carlsmith-model-analytica" class="nav-link" data-scroll-target="#carlsmith-model-analytica"><span class="header-section-number">1.2.1</span> Carlsmith Model (Analytica)</a></li>
-  </ul></li>
-  <li><a href="#intro-example-rainsprinklerlawn" id="toc-intro-example-rainsprinklerlawn" class="nav-link" data-scroll-target="#intro-example-rainsprinklerlawn"><span class="header-section-number">1.3</span> (Intro) Example — Rain/Sprinkler/Lawn</a></li>
-  </ul></li>
-  <li><a href="#methodology" id="toc-methodology" class="nav-link" data-scroll-target="#methodology"><span class="header-section-number">2</span> Methodology</a>
-  <ul>
-  <li><a href="#kialo" id="toc-kialo" class="nav-link" data-scroll-target="#kialo"><span class="header-section-number">2.1</span> Kialo</a></li>
-  <li><a href="#rainsprinklerlawn-dag" id="toc-rainsprinklerlawn-dag" class="nav-link" data-scroll-target="#rainsprinklerlawn-dag"><span class="header-section-number">2.2</span> Rain/Sprinkler/Lawn DAG</a></li>
-  <li><a href="#bayeserver" id="toc-bayeserver" class="nav-link" data-scroll-target="#bayeserver"><span class="header-section-number">2.3</span> BayeServer</a></li>
-  <li><a href="#bayesnet-extended-example" id="toc-bayesnet-extended-example" class="nav-link" data-scroll-target="#bayesnet-extended-example"><span class="header-section-number">2.4</span> BayesNet — Extended Example</a></li>
-  <li><a href="#code-documentation" id="toc-code-documentation" class="nav-link" data-scroll-target="#code-documentation"><span class="header-section-number">2.5</span> Code + documentation</a></li>
-  </ul></li>
-  </ul>
-</nav>
-</div>
-<div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
-</div>
-<main class="content quarto-banner-title-block" id="quarto-document-content">      
 
-       <section id="of-grade" class="level3" data-number="0.1">
-<h3 data-number="0.1" class="anchored" data-anchor-id="of-grade"><span class="header-section-number">0.1</span> 20% of Grade:</h3>
-<ul>
-<li><p>demonstrates understanding of all relevant core concepts</p></li>
-<li><p>explains why the question/thesis/problem is relevant in student’s own words (supported by quotations)</p></li>
-<li><p>situates it within the debate/course material</p></li>
-<li><p>reconstructs selected arguments and identifies relevant assumptions</p></li>
-<li><p>describes additional relevant material that has been consulted and integrates it with the course material as well as the research question/thesis/problem</p></li>
-</ul>
-<p>~ 29% of text ~ 8700 words</p>
-<ol type="1">
-<li>successively (chunk my chunk) introduce concepts/ideas — and 2. ground each with existing literature</li>
-</ol>
-<div class="cell-container"><div class="cell-decorator"><pre>In [1]:</pre></div><div id="13aed937-1d85-44c2-9029-10241127bb89" class="cell raw">
 <!-- ---
 title: "Background"
 # Control if this file starts numbering
@@ -212,56 +54,31 @@ numbering:
   start-at: 2      # Start at Section 1
   level: 2         # Chapter level
 --- -->
-</div></div>
+<section id="theoretical-background-considerations" class="level2">
+<h2 class="anchored" data-anchor-id="theoretical-background-considerations">Theoretical Background Considerations</h2>
 </section>
-<section id="theoretical-background-considerations" class="level2" data-number="1">
-<h2 data-number="1" class="anchored" data-anchor-id="theoretical-background-considerations"><span class="header-section-number">1</span> Theoretical Background Considerations</h2>
-<section id="dag-bayesnets" class="level3" data-number="1.1">
-<h3 data-number="1.1" class="anchored" data-anchor-id="dag-bayesnets"><span class="header-section-number">1.1</span> DAG / BayesNets</h3>
+<section id="literature-concepts-terminology" class="level2">
+<h2 class="anchored" data-anchor-id="literature-concepts-terminology">Literature, Concepts &amp; Terminology</h2>
+<section id="dag-bayesnets" class="level3">
+<h3 class="anchored" data-anchor-id="dag-bayesnets">DAG / BayesNets</h3>
 </section>
-<section id="state-of-the-art-mtair-explanation" class="level3" data-number="1.2">
-<h3 data-number="1.2" class="anchored" data-anchor-id="state-of-the-art-mtair-explanation"><span class="header-section-number">1.2</span> State of the art (MTAIR) — Explanation</h3>
-<section id="carlsmith-model-analytica" class="level4" data-number="1.2.1">
-<h4 data-number="1.2.1" class="anchored" data-anchor-id="carlsmith-model-analytica"><span class="header-section-number">1.2.1</span> Carlsmith Model (Analytica)</h4>
+<section id="state-of-the-art-mtair-explanation" class="level3">
+<h3 class="anchored" data-anchor-id="state-of-the-art-mtair-explanation">State of the art (MTAIR) — Explanation</h3>
+<section id="carlsmith-model-analytica" class="level4">
+<h4 class="anchored" data-anchor-id="carlsmith-model-analytica">Carlsmith Model (Analytica)</h4>
 </section>
 </section>
-<section id="intro-example-rainsprinklerlawn" class="level3" data-number="1.3">
-<h3 data-number="1.3" class="anchored" data-anchor-id="intro-example-rainsprinklerlawn"><span class="header-section-number">1.3</span> (Intro) Example — Rain/Sprinkler/Lawn</h3>
+<section id="intro-example-rainsprinklerlawn" class="level3">
+<h3 class="anchored" data-anchor-id="intro-example-rainsprinklerlawn">(Intro) Example — Rain/Sprinkler/Lawn</h3>
 <p>/ Rain/Sprinkler/Lawn DAG / BayesNet — Extended Example</p>
 <pre><code>…</code></pre>
 <p>Own Position/Argument: AMTAIR … Own Rain/Sprinkler/Lawn DAG / BayesNet Implementation</p>
-<div class="cell-container"><div class="cell-decorator"><pre>In [2]:</pre></div><div id="c9a15a3e-382a-46fd-8bbd-e687d41a58b8" class="cell raw">
-<!-- ---
-title: "Methodology"
-# Control if this file starts numbering
-numbering:
-  start-at: 2      # Start at Section 1
-  level: 2         # Chapter level
---- -->
-</div></div>
 </section>
 </section>
-<section id="methodology" class="level2" data-number="2">
-<h2 data-number="2" class="anchored" data-anchor-id="methodology"><span class="header-section-number">2</span> Methodology</h2>
-<p>MTAIR / Carlsmith Model (Analytica) — Explanation (— is motivation: should come first)</p>
-<section id="kialo" class="level3" data-number="2.1">
-<h3 data-number="2.1" class="anchored" data-anchor-id="kialo"><span class="header-section-number">2.1</span> Kialo</h3>
-</section>
-<section id="rainsprinklerlawn-dag" class="level3" data-number="2.2">
-<h3 data-number="2.2" class="anchored" data-anchor-id="rainsprinklerlawn-dag"><span class="header-section-number">2.2</span> Rain/Sprinkler/Lawn DAG</h3>
-</section>
-<section id="bayeserver" class="level3" data-number="2.3">
-<h3 data-number="2.3" class="anchored" data-anchor-id="bayeserver"><span class="header-section-number">2.3</span> BayeServer</h3>
-</section>
-<section id="bayesnet-extended-example" class="level3" data-number="2.4">
-<h3 data-number="2.4" class="anchored" data-anchor-id="bayesnet-extended-example"><span class="header-section-number">2.4</span> BayesNet — Extended Example</h3>
-</section>
-<section id="code-documentation" class="level3" data-number="2.5">
-<h3 data-number="2.5" class="anchored" data-anchor-id="code-documentation"><span class="header-section-number">2.5</span> Code + documentation</h3>
-</section>
-</section>
-     </main>
-<!-- /main column -->  <script id="quarto-html-after-body" type="application/javascript">
+
+</main>
+<!-- /main column -->
+<script id="quarto-html-after-body" type="application/javascript">
   window.document.addEventListener("DOMContentLoaded", function (event) {
     const icon = "";
     const anchorJS = new window.AnchorJS();
@@ -659,6 +476,10 @@ numbering:
       }
     }
   });
-  </script>  </div> <!-- /content --> 
-  
+  </script>
+</div> <!-- /content -->
+
+
+
+
 </body></html>

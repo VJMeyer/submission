@@ -27,10 +27,14 @@ $preamble-includes$
 % Create custom title page
 \input{latex/title-page.tex}
 
+% \pagenumbering{arabic} % Switch to Arabic page numbering
+% \setcounter{page}{1} % Reset page numbers to 1
+
 % Rest of document
 $body$
 
 % Add affidavit at the end but still within document environment
+% \pagenumbering{Roman} % Switch to Roman page numbering
 \input{latex/affidavit.tex}
 
 \end{document}

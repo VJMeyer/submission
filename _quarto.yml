@@ -21,6 +21,8 @@
 # book:
 #   title: "Automating the Modelling of Transformative Artificial Intelligence Risks"
 #   author: "Valentin Jakob Meyer"
+#   title-block-banner: true
+#   title-block-banner: latex/uni-bayreuth-logo.png
 #   date: "2025-05-26"
 #   search: true
 #   repo-url: https://github.com/VJMeyer/submission

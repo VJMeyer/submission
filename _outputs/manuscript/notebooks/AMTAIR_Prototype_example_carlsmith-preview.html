@@ -211,18 +211,25 @@
   <li><a href="#relevance-to-ai-governance" id="toc-relevance-to-ai-governance" class="nav-link" data-scroll-target="#relevance-to-ai-governance"><span class="header-section-number">1.1.2</span> Relevance to AI Governance</a></li>
   </ul></li>
   <li><a href="#notebook-structure-and-workflow" id="toc-notebook-structure-and-workflow" class="nav-link" data-scroll-target="#notebook-structure-and-workflow"><span class="header-section-number">1.2</span> Notebook Structure and Workflow</a></li>
-  </ul></li>
+  <li><a href="#project-context-and-purpose" id="toc-project-context-and-purpose" class="nav-link" data-scroll-target="#project-context-and-purpose"><span class="header-section-number">1.3</span> Project Context and Purpose</a></li>
+  <li><a href="#notebook-overview-and-pipeline" id="toc-notebook-overview-and-pipeline" class="nav-link" data-scroll-target="#notebook-overview-and-pipeline"><span class="header-section-number">1.4</span> Notebook Overview and Pipeline</a></li>
+  <li><a href="#connection-to-masters-thesis" id="toc-connection-to-masters-thesis" class="nav-link" data-scroll-target="#connection-to-masters-thesis"><span class="header-section-number">1.5</span> Connection to Master’s Thesis</a></li>
   <li><a href="#instructions-how-to-use-this-notebook" id="toc-instructions-how-to-use-this-notebook" class="nav-link" data-scroll-target="#instructions-how-to-use-this-notebook"><span class="header-section-number">1.6</span> Instructions — How to use this notebook:</a></li>
+  <li><a href="#key-concepts" id="toc-key-concepts" class="nav-link" data-scroll-target="#key-concepts"><span class="header-section-number">1.7</span> Key Concepts:</a></li>
+  <li><a href="#example-workflow" id="toc-example-workflow" class="nav-link" data-scroll-target="#example-workflow"><span class="header-section-number">1.8</span> Example Workflow:</a></li>
+  <li><a href="#troubleshooting" id="toc-troubleshooting" class="nav-link" data-scroll-target="#troubleshooting"><span class="header-section-number">1.9</span> Troubleshooting:</a></li>
+  </ul></li>
   <li><a href="#environment-setup-and-data-access" id="toc-environment-setup-and-data-access" class="nav-link" data-scroll-target="#environment-setup-and-data-access"><span class="header-section-number">2</span> 0. Environment Setup and Data Access</a></li>
-  <li><a href="#prepare-colabpython-environment-import-libraries-packages" id="toc-prepare-colabpython-environment-import-libraries-packages" class="nav-link" data-scroll-target="#prepare-colabpython-environment-import-libraries-packages"><span class="header-section-number">3</span> 0.1 Prepare Colab/Python Environment — Import Libraries &amp; Packages</a></li>
+  <li><a href="#prepare-colabpython-environment-import-libraries-packages" id="toc-prepare-colabpython-environment-import-libraries-packages" class="nav-link" data-scroll-target="#prepare-colabpython-environment-import-libraries-packages"><span class="header-section-number">3</span> 0.1 Prepare Colab/Python Environment — Import Libraries &amp; Packages</a>
+  <ul>
   <li><a href="#connect-to-github-repository" id="toc-connect-to-github-repository" class="nav-link" data-scroll-target="#connect-to-github-repository"><span class="header-section-number">3.1</span> 0.2 Connect to GitHub Repository</a></li>
   <li><a href="#file-import" id="toc-file-import" class="nav-link" data-scroll-target="#file-import"><span class="header-section-number">3.2</span> 0.3 File Import</a></li>
+  </ul></li>
   <li><a href="#sources-pdfs-of-papers-to-argdown-.md-file" id="toc-sources-pdfs-of-papers-to-argdown-.md-file" class="nav-link" data-scroll-target="#sources-pdfs-of-papers-to-argdown-.md-file"><span class="header-section-number">4</span> 1.0 Sources (PDF’s of Papers) to ArgDown (.md file)</a></li>
   <li><a href="#sources-to-argdown-structured-argument-extraction" id="toc-sources-to-argdown-structured-argument-extraction" class="nav-link" data-scroll-target="#sources-to-argdown-structured-argument-extraction"><span class="header-section-number">5</span> 1. Sources to ArgDown: Structured Argument Extraction</a>
   <ul>
   <li><a href="#process-overview" id="toc-process-overview" class="nav-link" data-scroll-target="#process-overview"><span class="header-section-number">5.1</span> Process Overview</a></li>
   <li><a href="#what-is-argdown" id="toc-what-is-argdown" class="nav-link" data-scroll-target="#what-is-argdown"><span class="header-section-number">5.2</span> What is ArgDown?</a></li>
-  </ul></li>
   <li><a href="#specify-source-document-e.g.-pdf" id="toc-specify-source-document-e.g.-pdf" class="nav-link" data-scroll-target="#specify-source-document-e.g.-pdf"><span class="header-section-number">5.3</span> 1.1 Specify Source Document (e.g.&nbsp;PDF)</a></li>
   <li><a href="#generate-argdown-extraction-prompt" id="toc-generate-argdown-extraction-prompt" class="nav-link" data-scroll-target="#generate-argdown-extraction-prompt"><span class="header-section-number">5.4</span> 1.2 Generate ArgDown Extraction Prompt</a></li>
   <li><a href="#prepare-llm-api-call" id="toc-prepare-llm-api-call" class="nav-link" data-scroll-target="#prepare-llm-api-call"><span class="header-section-number">5.5</span> 1.3 Prepare LLM API Call</a></li>
@@ -232,24 +239,27 @@
   <li><a href="#check-the-graph-structure-with-the-argdown-sandbox-online" id="toc-check-the-graph-structure-with-the-argdown-sandbox-online" class="nav-link" data-scroll-target="#check-the-graph-structure-with-the-argdown-sandbox-online"><span class="header-section-number">5.9</span> 1.6.2 Check the Graph Structure with the ArgDown Sandbox Online</a></li>
   <li><a href="#extract-argdown-graph-information-as-dataframe" id="toc-extract-argdown-graph-information-as-dataframe" class="nav-link" data-scroll-target="#extract-argdown-graph-information-as-dataframe"><span class="header-section-number">5.10</span> 1.7 Extract ArgDown Graph Information as DataFrame</a></li>
   <li><a href="#store-argdown-information-as-argdown.csv-file" id="toc-store-argdown-information-as-argdown.csv-file" class="nav-link" data-scroll-target="#store-argdown-information-as-argdown.csv-file"><span class="header-section-number">5.11</span> 1.8 Store ArgDown Information as ‘ArgDown.csv’ file</a></li>
+  </ul></li>
   <li><a href="#probability-extractions-argdown-.csv-to-bayesdown-.md-plugin-json-syntax" id="toc-probability-extractions-argdown-.csv-to-bayesdown-.md-plugin-json-syntax" class="nav-link" data-scroll-target="#probability-extractions-argdown-.csv-to-bayesdown-.md-plugin-json-syntax"><span class="header-section-number">6</span> 2.0 Probability Extractions: ArgDown (.csv) to BayesDown (.md + plugin JSON syntax)</a></li>
   <li><a href="#argdown-to-bayesdown-adding-probability-information" id="toc-argdown-to-bayesdown-adding-probability-information" class="nav-link" data-scroll-target="#argdown-to-bayesdown-adding-probability-information"><span class="header-section-number">7</span> 2. ArgDown to BayesDown: Adding Probability Information</a>
   <ul>
   <li><a href="#process-overview-1" id="toc-process-overview-1" class="nav-link" data-scroll-target="#process-overview-1"><span class="header-section-number">7.1</span> Process Overview</a></li>
   <li><a href="#what-is-bayesdown" id="toc-what-is-bayesdown" class="nav-link" data-scroll-target="#what-is-bayesdown"><span class="header-section-number">7.2</span> What is BayesDown?</a></li>
-  </ul></li>
   <li><a href="#probability-extraction-questions-argdown.csv-to-argdown_withquestions.csv" id="toc-probability-extraction-questions-argdown.csv-to-argdown_withquestions.csv" class="nav-link" data-scroll-target="#probability-extraction-questions-argdown.csv-to-argdown_withquestions.csv"><span class="header-section-number">7.3</span> 2.1 Probability Extraction Questions — ‘ArgDown.csv’ to ‘ArgDown_WithQuestions.csv’</a></li>
   <li><a href="#argdown_withquestions.csv-to-bayesdownquestions.md" id="toc-argdown_withquestions.csv-to-bayesdownquestions.md" class="nav-link" data-scroll-target="#argdown_withquestions.csv-to-bayesdownquestions.md"><span class="header-section-number">7.4</span> 2.2 ‘ArgDown_WithQuestions.csv’ to ‘BayesDownQuestions.md’</a></li>
   <li><a href="#generate-bayesdown-probability-extraction-prompt" id="toc-generate-bayesdown-probability-extraction-prompt" class="nav-link" data-scroll-target="#generate-bayesdown-probability-extraction-prompt"><span class="header-section-number">7.5</span> 2.3 Generate BayesDown Probability Extraction Prompt</a></li>
   <li><a href="#bayesdown-format-specification" id="toc-bayesdown-format-specification" class="nav-link" data-scroll-target="#bayesdown-format-specification"><span class="header-section-number">7.6</span> 2.3.1 BayesDown Format Specification</a>
-  <ul>
+  <ul class="collapse">
   <li><a href="#core-structure" id="toc-core-structure" class="nav-link" data-scroll-target="#core-structure"><span class="header-section-number">7.6.1</span> Core Structure</a></li>
   </ul></li>
   <li><a href="#test-bayesdown-extraction" id="toc-test-bayesdown-extraction" class="nav-link" data-scroll-target="#test-bayesdown-extraction"><span class="header-section-number">7.7</span> 3.1.2 Test BayesDown Extraction</a></li>
   <li><a href="#check-the-graph-structure-with-the-argdown-sandbox-online-1" id="toc-check-the-graph-structure-with-the-argdown-sandbox-online-1" class="nav-link" data-scroll-target="#check-the-graph-structure-with-the-argdown-sandbox-online-1"><span class="header-section-number">7.8</span> 3.1.2.2 Check the Graph Structure with the ArgDown Sandbox Online</a></li>
-  <li><a href="#extraction" id="toc-extraction" class="nav-link" data-scroll-target="#extraction"><span class="header-section-number">7.9</span> 3.3 Extraction</a></li>
+  <li><a href="#extraction" id="toc-extraction" class="nav-link" data-scroll-target="#extraction"><span class="header-section-number">7.9</span> 3.3 Extraction</a>
+  <ul class="collapse">
   <li><a href="#data-post-processing" id="toc-data-post-processing" class="nav-link" data-scroll-target="#data-post-processing"><span class="header-section-number">7.9.1</span> 3.3 Data-Post-Processing</a></li>
   <li><a href="#download-and-save-finished-data-frame-as-.csv-file" id="toc-download-and-save-finished-data-frame-as-.csv-file" class="nav-link" data-scroll-target="#download-and-save-finished-data-frame-as-.csv-file"><span class="header-section-number">7.9.2</span> 3.4 Download and save finished data frame as .csv file</a></li>
+  </ul></li>
+  </ul></li>
   <li><a href="#analysis-inference-bayesian-network-visualization" id="toc-analysis-inference-bayesian-network-visualization" class="nav-link" data-scroll-target="#analysis-inference-bayesian-network-visualization"><span class="header-section-number">8</span> 4. Analysis &amp; Inference: Bayesian Network Visualization</a>
   <ul>
   <li><a href="#bayesian-network-visualization-approach" id="toc-bayesian-network-visualization-approach" class="nav-link" data-scroll-target="#bayesian-network-visualization-approach"><span class="header-section-number">8.1</span> Bayesian Network Visualization Approach</a>
@@ -258,11 +268,11 @@
   <li><a href="#connection-to-amtair-goals" id="toc-connection-to-amtair-goals" class="nav-link" data-scroll-target="#connection-to-amtair-goals"><span class="header-section-number">8.1.2</span> Connection to AMTAIR Goals</a></li>
   <li><a href="#implementation-structure" id="toc-implementation-structure" class="nav-link" data-scroll-target="#implementation-structure"><span class="header-section-number">8.1.3</span> Implementation Structure</a></li>
   </ul></li>
-  </ul></li>
   <li><a href="#phase-1-dependenciesfunctions" id="toc-phase-1-dependenciesfunctions" class="nav-link" data-scroll-target="#phase-1-dependenciesfunctions"><span class="header-section-number">8.2</span> Phase 1: Dependencies/Functions</a></li>
   <li><a href="#phase-2-node-classification-and-styling-module" id="toc-phase-2-node-classification-and-styling-module" class="nav-link" data-scroll-target="#phase-2-node-classification-and-styling-module"><span class="header-section-number">8.3</span> Phase 2: Node Classification and Styling Module</a></li>
   <li><a href="#phase-3-html-content-generation-module" id="toc-phase-3-html-content-generation-module" class="nav-link" data-scroll-target="#phase-3-html-content-generation-module"><span class="header-section-number">8.4</span> Phase 3: HTML Content Generation Module</a></li>
   <li><a href="#phase-4-main-visualization-function" id="toc-phase-4-main-visualization-function" class="nav-link" data-scroll-target="#phase-4-main-visualization-function"><span class="header-section-number">8.5</span> Phase 4: Main Visualization Function</a></li>
+  </ul></li>
   <li><a href="#quickly-check-html-outputs" id="toc-quickly-check-html-outputs" class="nav-link" data-scroll-target="#quickly-check-html-outputs"><span class="header-section-number">9</span> Quickly check HTML Outputs</a></li>
   <li><a href="#conclusion-from-prototype-to-production" id="toc-conclusion-from-prototype-to-production" class="nav-link" data-scroll-target="#conclusion-from-prototype-to-production"><span class="header-section-number">10</span> Conclusion: From Prototype to Production</a>
   <ul>
@@ -271,8 +281,10 @@
   <li><a href="#connection-to-amtair-project" id="toc-connection-to-amtair-project" class="nav-link" data-scroll-target="#connection-to-amtair-project"><span class="header-section-number">10.3</span> Connection to AMTAIR Project</a></li>
   </ul></li>
   <li><a href="#save-outputs" id="toc-save-outputs" class="nav-link" data-scroll-target="#save-outputs"><span class="header-section-number">11</span> 6.0 Save Outputs</a></li>
-  <li><a href="#saving-and-exporting-results" id="toc-saving-and-exporting-results" class="nav-link" data-scroll-target="#saving-and-exporting-results"><span class="header-section-number">12</span> 6. Saving and Exporting Results</a></li>
+  <li><a href="#saving-and-exporting-results" id="toc-saving-and-exporting-results" class="nav-link" data-scroll-target="#saving-and-exporting-results"><span class="header-section-number">12</span> 6. Saving and Exporting Results</a>
+  <ul>
   <li><a href="#convert-.ipynb-notebook-to-markdown" id="toc-convert-.ipynb-notebook-to-markdown" class="nav-link" data-scroll-target="#convert-.ipynb-notebook-to-markdown"><span class="header-section-number">12.1</span> Convert .ipynb Notebook to MarkDown</a></li>
+  </ul></li>
   </ul>
 </nav>
 </div>
@@ -280,11 +292,7 @@
 </div>
 <main class="content quarto-banner-title-block" id="quarto-document-content">      
 
-       <div id="cell-1" class="cell markdown">
-
-</div>
-<div id="cell-2" class="cell markdown">
-<section id="amtair-prototype-automating-transformative-ai-risk-modeling" class="level1" data-number="1">
+       <section id="amtair-prototype-automating-transformative-ai-risk-modeling" class="level1" data-number="1">
 <h1 data-number="1"><span class="header-section-number">1</span> AMTAIR Prototype: Automating Transformative AI Risk Modeling</h1>
 <section id="executive-summary" class="level2" data-number="1.1">
 <h2 data-number="1.1" class="anchored" data-anchor-id="executive-summary"><span class="header-section-number">1.1</span> Executive Summary</h2>
@@ -312,9 +320,6 @@
 </ol>
 <p>Throughout this notebook, we use the classic rain-sprinkler-lawn example as a canonical test case, demonstrating how a simple causal scenario (rain and sprinkler use affecting wet grass) can be represented, processed, and visualized using our automated pipeline.</p>
 </section>
-</section>
-</div>
-<div id="cell-3" class="cell markdown">
 <section id="project-context-and-purpose" class="level2" data-number="1.3">
 <h2 data-number="1.3" class="anchored" data-anchor-id="project-context-and-purpose"><span class="header-section-number">1.3</span> Project Context and Purpose</h2>
 <p>This notebook implements a prototype of the Automating Transformative AI Risk Modeling (AMTAIR) project, which addresses a critical coordination failure in AI governance by developing computational tools to automate the extraction of probabilistic world models from AI safety literature.</p>
@@ -332,8 +337,6 @@
 <p>The thesis positions this work as a solution to the coordination crisis in AI governance, where the AMTAIR tools provide a crucial bridge between different stakeholder communities by creating formal representations that can be analyzed, compared, and used for policy evaluation.</p>
 <p>For broader context on the project’s motivation and placement within AI governance efforts, see PY_Post0.0 (“The Missing Piece: Why We Need a Grand Strategy for AI”) and PY_AMTAIRDescription, which explain how this technical work contributes to the development of a comprehensive AI safety grand strategy.</p>
 </section>
-</div>
-<div id="cell-4" class="cell markdown">
 <section id="instructions-how-to-use-this-notebook" class="level2" data-number="1.6">
 <h2 data-number="1.6" class="anchored" data-anchor-id="instructions-how-to-use-this-notebook"><span class="header-section-number">1.6</span> Instructions — How to use this notebook:</h2>
 <ol type="1">
@@ -345,9 +348,6 @@
 <li><p><strong>Create and Analyze Bayesian Networks</strong>: Section 4.0 demonstrates how to build Bayesian networks from the extracted data and provides tools for analyzing risk pathways.</p></li>
 <li><p><strong>Save and Export Results</strong>: Sections 5.0-6.0 provide methods for archiving results and exporting visualizations.</p></li>
 </ol>
-</section>
-</div>
-<div id="cell-5" class="cell markdown">
 <blockquote class="blockquote">
 <p><a href="#scrollTo=lt8-AnebGUXr">AMTAIR Prototype Demonstration (Public Colab Notebook)</a></p>
 </blockquote>
@@ -716,8 +716,7 @@
 <p><a href="#scrollTo=pS6AhdiSCLw4">Convert .ipynb Notebook to MarkDown</a></p>
 </blockquote>
 </blockquote>
-</div>
-<div id="cell-6" class="cell markdown">
+</section>
 <section id="key-concepts" class="level2" data-number="1.7">
 <h2 data-number="1.7" class="anchored" data-anchor-id="key-concepts"><span class="header-section-number">1.7</span> Key Concepts:</h2>
 <ul>
@@ -745,21 +744,16 @@
 <li>When processing custom files, ensure they follow the expected format conventions</li>
 </ul>
 </section>
-</div>
-<div id="cell-7" class="cell markdown">
+</section>
 <section id="environment-setup-and-data-access" class="level1" data-number="2">
 <h1 data-number="2"><span class="header-section-number">2</span> 0. Environment Setup and Data Access</h1>
 <p>This section establishes the technical foundation for the AMTAIR prototype by: 1. Installing and importing necessary libraries 2. Setting up access to the GitHub repository 3. Loading example data files</p>
 <p>The environment setup is designed to be run once per session, with flags to prevent redundant installations and imports. This section forms the basis for the subsequent extraction and analysis steps in the pipeline.</p>
 <p>The key goal is to create a reproducible environment where the Bayesian network extraction and visualization can be performed consistently, with appropriate error handling and resource management.</p>
 </section>
-</div>
-<div id="cell-8" class="cell markdown">
 <section id="prepare-colabpython-environment-import-libraries-packages" class="level1" data-number="3">
 <h1 data-number="3"><span class="header-section-number">3</span> 0.1 Prepare Colab/Python Environment — Import Libraries &amp; Packages</h1>
-</section>
-</div>
-<div class="cell-container code-fold"><div class="cell-decorator"><pre>In [9]:</pre></div><div id="cell-9" class="cell" data-quarto-private-1="{&quot;key&quot;:&quot;colab&quot;,&quot;value&quot;:{&quot;base_uri&quot;:&quot;https://localhost:8080/&quot;}}" data-outputid="b474c7e1-0e7e-47f3-a546-9321cff91a6e">
+<div class="cell-container code-fold"><div class="cell-decorator"><pre>In [1]:</pre></div><div id="cell-9" class="cell" data-quarto-private-1="{&quot;key&quot;:&quot;colab&quot;,&quot;value&quot;:{&quot;base_uri&quot;:&quot;https://localhost:8080/&quot;}}" data-outputid="b474c7e1-0e7e-47f3-a546-9321cff91a6e">
 <details class="code-fold">
 <summary>Code</summary>
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co"># @title 0.1 --- Install &amp; Import Libraries &amp; Packages (One-Time Setup) ---</span></span>
@@ -863,15 +857,12 @@
 </div>
 </div>
 </div></div>
-<div id="cell-10" class="cell markdown">
 <section id="connect-to-github-repository" class="level2" data-number="3.1">
 <h2 data-number="3.1" class="anchored" data-anchor-id="connect-to-github-repository"><span class="header-section-number">3.1</span> 0.2 Connect to GitHub Repository</h2>
 <p>The Public GitHub Repo Url in use:</p>
 <p>https://raw.githubusercontent.com/SingularitySmith/AMTAIR_Prototype/main/</p>
 <p>Note: When encountering errors, accessing the data, try using “RAW” Urls.</p>
-</section>
-</div>
-<div class="cell-container code-fold"><div class="cell-decorator"><pre>In [11]:</pre></div><div id="cell-11" class="cell" data-quarto-private-1="{&quot;key&quot;:&quot;colab&quot;,&quot;value&quot;:{&quot;base_uri&quot;:&quot;https://localhost:8080/&quot;}}" data-outputid="2050a62a-f0f1-4450-9fbb-8a75f1cb9422">
+<div class="cell-container code-fold"><div class="cell-decorator"><pre>In [2]:</pre></div><div id="cell-11" class="cell" data-quarto-private-1="{&quot;key&quot;:&quot;colab&quot;,&quot;value&quot;:{&quot;base_uri&quot;:&quot;https://localhost:8080/&quot;}}" data-outputid="2050a62a-f0f1-4450-9fbb-8a75f1cb9422">
 <details class="code-fold">
 <summary>Code</summary>
 <div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="co"># @title 0.2 --- Connect to GitHub Repository --- Load Files</span></span>
@@ -951,24 +942,21 @@
 <span id="cb2-75"><a href="#cb2-75" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(md_content)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 </div></div>
-<div id="cell-12" class="cell markdown">
+</section>
 <section id="file-import" class="level2" data-number="3.2">
 <h2 data-number="3.2" class="anchored" data-anchor-id="file-import"><span class="header-section-number">3.2</span> 0.3 File Import</h2>
-</section>
-</div>
-<div class="cell-container code-fold"><div class="cell-decorator"><pre>In [13]:</pre></div><div id="cell-13" class="cell" data-quarto-private-1="{&quot;key&quot;:&quot;colab&quot;,&quot;value&quot;:{&quot;base_uri&quot;:&quot;https://localhost:8080/&quot;,&quot;height&quot;:122}}" data-outputid="a53a9f50-346a-4399-c6e0-79ee476737f6">
+<div class="cell-container code-fold"><div class="cell-decorator"><pre>In [3]:</pre></div><div id="cell-13" class="cell" data-quarto-private-1="{&quot;key&quot;:&quot;colab&quot;,&quot;value&quot;:{&quot;base_uri&quot;:&quot;https://localhost:8080/&quot;,&quot;height&quot;:122}}" data-outputid="a53a9f50-346a-4399-c6e0-79ee476737f6">
 <details class="code-fold">
 <summary>Code</summary>
 <div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="co"># @title</span></span>
 <span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>md_content</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 </div></div>
-<div id="cell-14" class="cell markdown">
+</section>
+</section>
 <section id="sources-pdfs-of-papers-to-argdown-.md-file" class="level1" data-number="4">
 <h1 data-number="4"><span class="header-section-number">4</span> 1.0 Sources (PDF’s of Papers) to ArgDown (.md file)</h1>
 </section>
-</div>
-<div id="cell-15" class="cell markdown">
 <section id="sources-to-argdown-structured-argument-extraction" class="level1" data-number="5">
 <h1 data-number="5"><span class="header-section-number">5</span> 1. Sources to ArgDown: Structured Argument Extraction</h1>
 <section id="process-overview" class="level2" data-number="5.1">
@@ -986,15 +974,10 @@
  + [SupportingEvidence]: Description of evidence. {"instantiations": ["evidence_TRUE", "evidence_FALSE"]}</code></pre>
 <p>This structure will later be enhanced with probability information to create BayesDown, which can be transformed into a Bayesian network for analysis and visualization.</p>
 </section>
-</section>
-</div>
-<div id="cell-16" class="cell markdown">
 <section id="specify-source-document-e.g.-pdf" class="level2" data-number="5.3">
 <h2 data-number="5.3" class="anchored" data-anchor-id="specify-source-document-e.g.-pdf"><span class="header-section-number">5.3</span> 1.1 Specify Source Document (e.g.&nbsp;PDF)</h2>
 <p>Review the source document, ensure it is suitable for API call and upload to / store it in the correct location.</p>
-</section>
-</div>
-<div class="cell-container code-fold"><div class="cell-decorator"><pre>In [17]:</pre></div><div id="cell-17" class="cell" data-quarto-private-1="{&quot;key&quot;:&quot;colab&quot;,&quot;value&quot;:{&quot;base_uri&quot;:&quot;https://localhost:8080/&quot;,&quot;height&quot;:921}}" data-outputid="9bb61c30-cce4-42b5-9d2d-fa3293a542f1">
+<div class="cell-container code-fold"><div class="cell-decorator"><pre>In [4]:</pre></div><div id="cell-17" class="cell" data-quarto-private-1="{&quot;key&quot;:&quot;colab&quot;,&quot;value&quot;:{&quot;base_uri&quot;:&quot;https://localhost:8080/&quot;,&quot;height&quot;:921}}" data-outputid="9bb61c30-cce4-42b5-9d2d-fa3293a542f1">
 <details class="code-fold">
 <summary>Code</summary>
 <div class="sourceCode cell-code" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="co"># @title 1.1.a) --- MTAIR Online Model (Analytica) ---</span></span>
@@ -1009,13 +992,11 @@
         
 </div>
 </div></div>
-<div id="cell-18" class="cell markdown">
+</section>
 <section id="generate-argdown-extraction-prompt" class="level2" data-number="5.4">
 <h2 data-number="5.4" class="anchored" data-anchor-id="generate-argdown-extraction-prompt"><span class="header-section-number">5.4</span> 1.2 Generate ArgDown Extraction Prompt</h2>
 <p>Generate Extraction Prompt</p>
-</section>
-</div>
-<div class="cell-container code-fold"><div class="cell-decorator"><pre>In [19]:</pre></div><div id="cell-19" class="cell">
+<div class="cell-container code-fold"><div class="cell-decorator"><pre>In [5]:</pre></div><div id="cell-19" class="cell">
 <details class="code-fold">
 <summary>Code</summary>
 <div class="sourceCode cell-code" id="cb6"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="co"># @title 1.2.0 --- Prompt Template Function Definitions ---</span></span>
@@ -1247,13 +1228,11 @@
 <span id="cb6-227"><a href="#cb6-227" aria-hidden="true" tabindex="-1"></a>            <span class="cf">raise</span> <span class="pp">ValueError</span>(<span class="ss">f"Template not found: </span><span class="sc">{</span>template_name<span class="sc">}</span><span class="ss">"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 </div></div>
-<div id="cell-20" class="cell markdown">
+</section>
 <section id="prepare-llm-api-call" class="level2" data-number="5.5">
 <h2 data-number="5.5" class="anchored" data-anchor-id="prepare-llm-api-call"><span class="header-section-number">5.5</span> 1.3 Prepare LLM API Call</h2>
 <p>Combine Systemprompt + API Specifications + ArgDown Instructions + Prompt + Source PDF for API Call</p>
-</section>
-</div>
-<div class="cell-container code-fold"><div class="cell-decorator"><pre>In [21]:</pre></div><div id="cell-21" class="cell">
+<div class="cell-container code-fold"><div class="cell-decorator"><pre>In [6]:</pre></div><div id="cell-21" class="cell">
 <details class="code-fold">
 <summary>Code</summary>
 <div class="sourceCode cell-code" id="cb7"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="co"># @title 1.3.0 --- Provider-Agnostic LLM API Interface ---</span></span>
@@ -1467,7 +1446,7 @@
 <span id="cb7-209"><a href="#cb7-209" aria-hidden="true" tabindex="-1"></a>            <span class="cf">raise</span> <span class="pp">ValueError</span>(<span class="ss">f"Unsupported provider: </span><span class="sc">{</span>provider_name<span class="sc">}</span><span class="ss">"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 </div></div>
-<div class="cell-container code-fold"><div class="cell-decorator"><pre>In [22]:</pre></div><div id="cell-22" class="cell">
+<div class="cell-container code-fold"><div class="cell-decorator"><pre>In [7]:</pre></div><div id="cell-22" class="cell">
 <details class="code-fold">
 <summary>Code</summary>
 <div class="sourceCode cell-code" id="cb8"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="co"># @title 1.3.0 --- API Call Function Definitions ---</span></span>
@@ -1695,7 +1674,7 @@
 <span id="cb8-223"><a href="#cb8-223" aria-hidden="true" tabindex="-1"></a>        json.dump(metadata, <span class="bu">file</span>, indent<span class="op">=</span><span class="dv">2</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 </div></div>
-<div class="cell-container code-fold"><div class="cell-decorator"><pre>In [23]:</pre></div><div id="cell-23" class="cell" data-quarto-private-1="{&quot;key&quot;:&quot;colab&quot;,&quot;value&quot;:{&quot;base_uri&quot;:&quot;https://localhost:8080/&quot;}}" data-outputid="0196650a-6072-4c59-da51-d1d68ba20409">
+<div class="cell-container code-fold"><div class="cell-decorator"><pre>In [8]:</pre></div><div id="cell-23" class="cell" data-quarto-private-1="{&quot;key&quot;:&quot;colab&quot;,&quot;value&quot;:{&quot;base_uri&quot;:&quot;https://localhost:8080/&quot;}}" data-outputid="0196650a-6072-4c59-da51-d1d68ba20409">
 <details class="code-fold">
 <summary>Code</summary>
 <div class="sourceCode cell-code" id="cb9"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="co"># @title 1.3 --- Prepare LLM API Call ---</span></span>
@@ -1765,12 +1744,10 @@ Using provider: openai
 Selected model: gpt-4-turbo</code></pre>
 </div>
 </div></div>
-<div id="cell-24" class="cell markdown">
+</section>
 <section id="make-argdown-extraction-llm-api-call" class="level2" data-number="5.6">
 <h2 data-number="5.6" class="anchored" data-anchor-id="make-argdown-extraction-llm-api-call"><span class="header-section-number">5.6</span> 1.4 Make ArgDown Extraction LLM API Call</h2>
-</section>
-</div>
-<div class="cell-container code-fold"><div class="cell-decorator"><pre>In [25]:</pre></div><div id="cell-25" class="cell" data-quarto-private-1="{&quot;key&quot;:&quot;colab&quot;,&quot;value&quot;:{&quot;base_uri&quot;:&quot;https://localhost:8080/&quot;,&quot;height&quot;:616}}" data-outputid="b23d7130-f97f-481e-c61b-0bc9de389a46">
+<div class="cell-container code-fold"><div class="cell-decorator"><pre>In [9]:</pre></div><div id="cell-25" class="cell" data-quarto-private-1="{&quot;key&quot;:&quot;colab&quot;,&quot;value&quot;:{&quot;base_uri&quot;:&quot;https://localhost:8080/&quot;,&quot;height&quot;:616}}" data-outputid="b23d7130-f97f-481e-c61b-0bc9de389a46">
 <details class="code-fold">
 <summary>Code</summary>
 <div class="sourceCode cell-code" id="cb11"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="co"># @title 1.4 --- Make ArgDown Extraction LLM API Call ---</span></span>
@@ -1885,16 +1862,14 @@ To view examples of installing some common dependencies, click the
 </div>
 </div>
 </div></div>
-<div id="cell-26" class="cell markdown">
+</section>
 <section id="save-argdown-extraction-response" class="level2" data-number="5.7">
 <h2 data-number="5.7" class="anchored" data-anchor-id="save-argdown-extraction-response"><span class="header-section-number">5.7</span> 1.5 Save ArgDown Extraction Response</h2>
 <ol type="1">
 <li><p>Save and log API return</p></li>
 <li><p>Save ArgDown.md file for further Proecessing</p></li>
 </ol>
-</section>
-</div>
-<div class="cell-container code-fold"><div class="cell-decorator"><pre>In [27]:</pre></div><div id="cell-27" class="cell" data-quarto-private-1="{&quot;key&quot;:&quot;colab&quot;,&quot;value&quot;:{&quot;base_uri&quot;:&quot;https://localhost:8080/&quot;,&quot;height&quot;:211}}" data-outputid="9bf13fbc-51bd-4756-cfb1-4db6d0950f00">
+<div class="cell-container code-fold"><div class="cell-decorator"><pre>In [10]:</pre></div><div id="cell-27" class="cell" data-quarto-private-1="{&quot;key&quot;:&quot;colab&quot;,&quot;value&quot;:{&quot;base_uri&quot;:&quot;https://localhost:8080/&quot;,&quot;height&quot;:211}}" data-outputid="9bf13fbc-51bd-4756-cfb1-4db6d0950f00">
 <details class="code-fold">
 <summary>Code</summary>
 <div class="sourceCode cell-code" id="cb13"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="co"># @title 1.5 --- Save ArgDown Extraction Response ---</span></span>
@@ -1977,12 +1952,10 @@ To view examples of installing some common dependencies, click the
 </div>
 </div>
 </div></div>
-<div id="cell-28" class="cell markdown">
+</section>
 <section id="review-and-check-argdown.md-file" class="level2" data-number="5.8">
 <h2 data-number="5.8" class="anchored" data-anchor-id="review-and-check-argdown.md-file"><span class="header-section-number">5.8</span> 1.6 Review and Check ArgDown.md File</h2>
-</section>
-</div>
-<div class="cell-container code-fold"><div class="cell-decorator"><pre>In [29]:</pre></div><div id="cell-29" class="cell" data-quarto-private-1="{&quot;key&quot;:&quot;colab&quot;,&quot;value&quot;:{&quot;base_uri&quot;:&quot;https://localhost:8080/&quot;,&quot;height&quot;:963}}" data-outputid="194286a9-c784-4c0d-bbe2-eada60e27139">
+<div class="cell-container code-fold"><div class="cell-decorator"><pre>In [11]:</pre></div><div id="cell-29" class="cell" data-quarto-private-1="{&quot;key&quot;:&quot;colab&quot;,&quot;value&quot;:{&quot;base_uri&quot;:&quot;https://localhost:8080/&quot;,&quot;height&quot;:963}}" data-outputid="194286a9-c784-4c0d-bbe2-eada60e27139">
 <details class="code-fold">
 <summary>Code</summary>
 <div class="sourceCode cell-code" id="cb14"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a>display(Markdown(md_content))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -1991,13 +1964,11 @@ To view examples of installing some common dependencies, click the
 <p>[Existential_Catastrophe]: The destruction of humanity’s long-term potential due to AI systems we’ve lost control over. {“instantiations”: [“existential_catastrophe_TRUE”, “existential_catastrophe_FALSE”]} - [Human_Disempowerment]: Permanent and collective disempowerment of humanity relative to AI systems. {“instantiations”: [“human_disempowerment_TRUE”, “human_disempowerment_FALSE”]} - [Scale_Of_Power_Seeking]: Power-seeking by AI systems scaling to the point of permanently disempowering all of humanity. {“instantiations”: [“scale_of_power_seeking_TRUE”, “scale_of_power_seeking_FALSE”]} - [Misaligned_Power_Seeking]: Deployed AI systems seeking power in unintended and high-impact ways due to problems with their objectives. {“instantiations”: [“misaligned_power_seeking_TRUE”, “misaligned_power_seeking_FALSE”]} - [APS_Systems]: AI systems with advanced capabilities, agentic planning, and strategic awareness. {“instantiations”: [“aps_systems_TRUE”, “aps_systems_FALSE”]} - [Advanced_AI_Capability]: AI systems that outperform humans on tasks that grant significant power in the world. {“instantiations”: [“advanced_ai_capability_TRUE”, “advanced_ai_capability_FALSE”]} - [Agentic_Planning]: AI systems making and executing plans based on world models to achieve objectives. {“instantiations”: [“agentic_planning_TRUE”, “agentic_planning_FALSE”]} - [Strategic_Awareness]: AI systems with models accurately representing power dynamics with humans. {“instantiations”: [“strategic_awareness_TRUE”, “strategic_awareness_FALSE”]} - [Difficulty_Of_Alignment]: It is harder to build aligned systems than misaligned systems that are attractive to deploy. {“instantiations”: [“difficulty_of_alignment_TRUE”, “difficulty_of_alignment_FALSE”]} - [Instrumental_Convergence]: AI systems with misaligned objectives tend to seek power as an instrumental goal. {“instantiations”: [“instrumental_convergence_TRUE”, “instrumental_convergence_FALSE”]} - [Problems_With_Proxies]: Optimizing for proxy objectives breaks correlations with intended goals. {“instantiations”: [“problems_with_proxies_TRUE”, “problems_with_proxies_FALSE”]} - [Problems_With_Search]: Search processes can yield systems pursuing different objectives than intended. {“instantiations”: [“problems_with_search_TRUE”, “problems_with_search_FALSE”]} - [Deployment_Decisions]: Decisions to deploy potentially misaligned AI systems. {“instantiations”: [“deployment_decisions_DEPLOY”, “deployment_decisions_WITHHOLD”]} - [Incentives_To_Build_APS]: Strong incentives to build and deploy APS systems. {“instantiations”: [“incentives_to_build_aps_STRONG”, “incentives_to_build_aps_WEAK”]} - [Usefulness_Of_APS]: APS systems are very useful for many valuable tasks. {“instantiations”: [“usefulness_of_aps_HIGH”, “usefulness_of_aps_LOW”]} - [Competitive_Dynamics]: Competitive pressures between AI developers. {“instantiations”: [“competitive_dynamics_STRONG”, “competitive_dynamics_WEAK”]} - [Deception_By_AI]: AI systems deceiving humans about their true objectives. {“instantiations”: [“deception_by_ai_TRUE”, “deception_by_ai_FALSE”]} - [Corrective_Feedback]: Human society implementing corrections after observing problems. {“instantiations”: [“corrective_feedback_EFFECTIVE”, “corrective_feedback_INEFFECTIVE”]} - [Warning_Shots]: Observable failures in weaker systems before catastrophic risks. {“instantiations”: [“warning_shots_OBSERVED”, “warning_shots_UNOBSERVED”]} - [Rapid_Capability_Escalation]: AI capabilities escalating very rapidly, allowing little time for correction. {“instantiations”: [“rapid_capability_escalation_TRUE”, “rapid_capability_escalation_FALSE”]} [Barriers_To_Understanding]: Difficulty in understanding the internal workings of advanced AI systems. {“instantiations”: [“barriers_to_understanding_HIGH”, “barriers_to_understanding_LOW”]} - [Misaligned_Power_Seeking]: Deployed AI systems seeking power in unintended and high-impact ways due to problems with their objectives. {“instantiations”: [“misaligned_power_seeking_TRUE”, “misaligned_power_seeking_FALSE”]} [Adversarial_Dynamics]: Potentially adversarial relationships between humans and power-seeking AI. {“instantiations”: [“adversarial_dynamics_TRUE”, “adversarial_dynamics_FALSE”]} - [Misaligned_Power_Seeking]: Deployed AI systems seeking power in unintended and high-impact ways due to problems with their objectives. {“instantiations”: [“misaligned_power_seeking_TRUE”, “misaligned_power_seeking_FALSE”]} [Stakes_Of_Error]: The escalating impact of mistakes with power-seeking AI systems. {“instantiations”: [“stakes_of_error_HIGH”, “stakes_of_error_LOW”]} - [Misaligned_Power_Seeking]: Deployed AI systems seeking power in unintended and high-impact ways due to problems with their objectives. {“instantiations”: [“misaligned_power_seeking_TRUE”, “misaligned_power_seeking_FALSE”]}</p>
 </div>
 </div></div>
-<div id="cell-30" class="cell markdown">
+</section>
 <section id="check-the-graph-structure-with-the-argdown-sandbox-online" class="level2" data-number="5.9">
 <h2 data-number="5.9" class="anchored" data-anchor-id="check-the-graph-structure-with-the-argdown-sandbox-online"><span class="header-section-number">5.9</span> 1.6.2 Check the Graph Structure with the ArgDown Sandbox Online</h2>
 <p>Copy and paste the BayesDown formatted … in the ArgDown Sandbox below to quickly verify that the network renders correctly.</p>
-</section>
-</div>
-<div class="cell-container code-fold"><div class="cell-decorator"><pre>In [31]:</pre></div><div id="cell-31" class="cell" data-quarto-private-1="{&quot;key&quot;:&quot;colab&quot;,&quot;value&quot;:{&quot;base_uri&quot;:&quot;https://localhost:8080/&quot;,&quot;height&quot;:621}}" data-outputid="e70f9717-2d87-4dde-cd67-a1cc36ae0a82">
+<div class="cell-container code-fold"><div class="cell-decorator"><pre>In [12]:</pre></div><div id="cell-31" class="cell" data-quarto-private-1="{&quot;key&quot;:&quot;colab&quot;,&quot;value&quot;:{&quot;base_uri&quot;:&quot;https://localhost:8080/&quot;,&quot;height&quot;:621}}" data-outputid="e70f9717-2d87-4dde-cd67-a1cc36ae0a82">
 <details class="code-fold">
 <summary>Code</summary>
 <div class="sourceCode cell-code" id="cb15"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a><span class="co"># @title 1.6.2 --- ArgDown Online Sandbox ---</span></span>
@@ -2012,7 +1983,7 @@ To view examples of installing some common dependencies, click the
         
 </div>
 </div></div>
-<div id="cell-32" class="cell markdown">
+</section>
 <section id="extract-argdown-graph-information-as-dataframe" class="level2" data-number="5.10">
 <h2 data-number="5.10" class="anchored" data-anchor-id="extract-argdown-graph-information-as-dataframe"><span class="header-section-number">5.10</span> 1.7 Extract ArgDown Graph Information as DataFrame</h2>
 <p>Extract:</p>
@@ -2023,9 +1994,7 @@ To view examples of installing some common dependencies, click the
 <li>Description</li>
 </ul>
 <p>Implementation nodes: - One function for ArgDown and BayesDown extraction, but: - IF YOU ONLY WANT ARGDOWN EXTRACTION: USE ARGUMENT IN FUNCTION CALL “parse_markdown_hierarchy(markdown_text, ArgDown = True)” - so if you set ArgDown = True, it gives you only instantiations, no probabilities.</p>
-</section>
-</div>
-<div class="cell-container code-fold"><div class="cell-decorator"><pre>In [33]:</pre></div><div id="cell-33" class="cell">
+<div class="cell-container code-fold"><div class="cell-decorator"><pre>In [13]:</pre></div><div id="cell-33" class="cell">
 <details class="code-fold">
 <summary>Code</summary>
 <div class="sourceCode cell-code" id="cb16"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a><span class="co"># @title 1.7 --- Parsing ArgDown &amp; BayesDown (.md to .csv) ---</span></span>
@@ -2465,7 +2434,7 @@ To view examples of installing some common dependencies, click the
 <span id="cb16-435"><a href="#cb16-435" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> dataframe</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 </div></div>
-<div class="cell-container code-fold"><div class="cell-decorator"><pre>In [34]:</pre></div><div id="cell-34" class="cell" data-quarto-private-1="{&quot;key&quot;:&quot;colab&quot;,&quot;value&quot;:{&quot;base_uri&quot;:&quot;https://localhost:8080/&quot;,&quot;height&quot;:2474}}" data-outputid="17464a4a-7560-4385-b8ca-940d2f764160">
+<div class="cell-container code-fold"><div class="cell-decorator"><pre>In [14]:</pre></div><div id="cell-34" class="cell" data-quarto-private-1="{&quot;key&quot;:&quot;colab&quot;,&quot;value&quot;:{&quot;base_uri&quot;:&quot;https://localhost:8080/&quot;,&quot;height&quot;:2474}}" data-outputid="17464a4a-7560-4385-b8ca-940d2f764160">
 <details class="code-fold">
 <summary>Code</summary>
 <div class="sourceCode cell-code" id="cb17"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a><span class="co"># example use case:</span></span>
@@ -3103,12 +3072,10 @@ To view examples of installing some common dependencies, click the
   </div>
 </div>
 </div></div>
-<div id="cell-35" class="cell markdown">
+</section>
 <section id="store-argdown-information-as-argdown.csv-file" class="level2" data-number="5.11">
 <h2 data-number="5.11" class="anchored" data-anchor-id="store-argdown-information-as-argdown.csv-file"><span class="header-section-number">5.11</span> 1.8 Store ArgDown Information as ‘ArgDown.csv’ file</h2>
-</section>
-</div>
-<div class="cell-container code-fold"><div class="cell-decorator"><pre>In [36]:</pre></div><div id="cell-36" class="cell">
+<div class="cell-container code-fold"><div class="cell-decorator"><pre>In [15]:</pre></div><div id="cell-36" class="cell">
 <details class="code-fold">
 <summary>Code</summary>
 <div class="sourceCode cell-code" id="cb18"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Assuming 'md_content' holds the markdown text</span></span>
@@ -3119,7 +3086,7 @@ To view examples of installing some common dependencies, click the
 <span id="cb18-6"><a href="#cb18-6" aria-hidden="true" tabindex="-1"></a>result_df.to_csv(<span class="st">'ArgDown.csv'</span>, index<span class="op">=</span><span class="va">False</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 </div></div>
-<div class="cell-container code-fold"><div class="cell-decorator"><pre>In [37]:</pre></div><div id="cell-37" class="cell" data-quarto-private-1="{&quot;key&quot;:&quot;colab&quot;,&quot;value&quot;:{&quot;base_uri&quot;:&quot;https://localhost:8080/&quot;}}" data-outputid="d3db05a2-68b3-439a-9dd2-a48eb350fd18">
+<div class="cell-container code-fold"><div class="cell-decorator"><pre>In [16]:</pre></div><div id="cell-37" class="cell" data-quarto-private-1="{&quot;key&quot;:&quot;colab&quot;,&quot;value&quot;:{&quot;base_uri&quot;:&quot;https://localhost:8080/&quot;}}" data-outputid="d3db05a2-68b3-439a-9dd2-a48eb350fd18">
 <details class="code-fold">
 <summary>Code</summary>
 <div class="sourceCode cell-code" id="cb19"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Test if 'ArgDown.csv' has been saved correctly with the correct information</span></span>
@@ -3306,12 +3273,11 @@ To view examples of installing some common dependencies, click the
 22                                                 []  </code></pre>
 </div>
 </div></div>
-<div id="cell-38" class="cell markdown">
+</section>
+</section>
 <section id="probability-extractions-argdown-.csv-to-bayesdown-.md-plugin-json-syntax" class="level1" data-number="6">
 <h1 data-number="6"><span class="header-section-number">6</span> 2.0 Probability Extractions: ArgDown (.csv) to BayesDown (.md + plugin JSON syntax)</h1>
 </section>
-</div>
-<div id="cell-39" class="cell markdown">
 <section id="argdown-to-bayesdown-adding-probability-information" class="level1" data-number="7">
 <h1 data-number="7"><span class="header-section-number">7</span> 2. ArgDown to BayesDown: Adding Probability Information</h1>
 <section id="process-overview-1" class="level2" data-number="7.1">
@@ -3331,14 +3297,9 @@ To view examples of installing some common dependencies, click the
 }</code></pre>
 <p>The result is a hybrid representation that preserves the narrative structure of arguments while adding the mathematical precision of Bayesian networks.</p>
 </section>
-</section>
-</div>
-<div id="cell-40" class="cell markdown">
 <section id="probability-extraction-questions-argdown.csv-to-argdown_withquestions.csv" class="level2" data-number="7.3">
 <h2 data-number="7.3" class="anchored" data-anchor-id="probability-extraction-questions-argdown.csv-to-argdown_withquestions.csv"><span class="header-section-number">7.3</span> 2.1 Probability Extraction Questions — ‘ArgDown.csv’ to ‘ArgDown_WithQuestions.csv’</h2>
-</section>
-</div>
-<div class="cell-container code-fold"><div class="cell-decorator"><pre>In [41]:</pre></div><div id="cell-41" class="cell" data-quarto-private-1="{&quot;key&quot;:&quot;colab&quot;,&quot;value&quot;:{&quot;base_uri&quot;:&quot;https://localhost:8080/&quot;}}" data-outputid="f5fe89b0-6704-4f08-aeb8-70dba9ae03c2">
+<div class="cell-container code-fold"><div class="cell-decorator"><pre>In [17]:</pre></div><div id="cell-41" class="cell" data-quarto-private-1="{&quot;key&quot;:&quot;colab&quot;,&quot;value&quot;:{&quot;base_uri&quot;:&quot;https://localhost:8080/&quot;}}" data-outputid="f5fe89b0-6704-4f08-aeb8-70dba9ae03c2">
 <details class="code-fold">
 <summary>Code</summary>
 <div class="sourceCode cell-code" id="cb22"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb22-1"><a href="#cb22-1" aria-hidden="true" tabindex="-1"></a><span class="co"># @title 2.1 --- Probability Extraction Questions Generation ---</span></span>
@@ -3568,7 +3529,7 @@ Generating probability questions for each node...
 Generated questions saved to ArgDown_WithQuestions.csv</code></pre>
 </div>
 </div></div>
-<div class="cell-container code-fold"><div class="cell-decorator"><pre>In [42]:</pre></div><div id="cell-42" class="cell" data-quarto-private-1="{&quot;key&quot;:&quot;colab&quot;,&quot;value&quot;:{&quot;base_uri&quot;:&quot;https://localhost:8080/&quot;}}" data-outputid="28508e5d-c520-4cf5-cd82-b2c11e2692ee">
+<div class="cell-container code-fold"><div class="cell-decorator"><pre>In [18]:</pre></div><div id="cell-42" class="cell" data-quarto-private-1="{&quot;key&quot;:&quot;colab&quot;,&quot;value&quot;:{&quot;base_uri&quot;:&quot;https://localhost:8080/&quot;}}" data-outputid="28508e5d-c520-4cf5-cd82-b2c11e2692ee">
 <details class="code-fold">
 <summary>Code</summary>
 <div class="sourceCode cell-code" id="cb24"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb24-1"><a href="#cb24-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Load the data from the ArgDown_WithQuestions CSV file</span></span>
@@ -4483,15 +4444,11 @@ Generated questions saved to ArgDown_WithQuestions.csv</code></pre>
   </div>
 </div>
 </div></div>
-<div id="cell-43" class="cell markdown">
+</section>
 <section id="argdown_withquestions.csv-to-bayesdownquestions.md" class="level2" data-number="7.4">
 <h2 data-number="7.4" class="anchored" data-anchor-id="argdown_withquestions.csv-to-bayesdownquestions.md"><span class="header-section-number">7.4</span> 2.2 ‘ArgDown_WithQuestions.csv’ to ‘BayesDownQuestions.md’</h2>
-</section>
-</div>
-<div id="cell-44" class="cell markdown">
 <p>2.2 Save BayesDown Extraction Questions as ‘BayesDownQuestions.md’</p>
-</div>
-<div class="cell-container code-fold"><div class="cell-decorator"><pre>In [45]:</pre></div><div id="cell-45" class="cell">
+<div class="cell-container code-fold"><div class="cell-decorator"><pre>In [19]:</pre></div><div id="cell-45" class="cell">
 <details class="code-fold">
 <summary>Code</summary>
 <div class="sourceCode cell-code" id="cb26"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb26-1"><a href="#cb26-1" aria-hidden="true" tabindex="-1"></a><span class="co"># @title 2.2 --- BayesDown Questions Generation ---</span></span>
@@ -4724,7 +4681,7 @@ Generated questions saved to ArgDown_WithQuestions.csv</code></pre>
 <span id="cb26-228"><a href="#cb26-228" aria-hidden="true" tabindex="-1"></a>  <span class="cf">return</span> bayesdown_content</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 </div></div>
-<div class="cell-container code-fold"><div class="cell-decorator"><pre>In [46]:</pre></div><div id="cell-46" class="cell" data-quarto-private-1="{&quot;key&quot;:&quot;colab&quot;,&quot;value&quot;:{&quot;base_uri&quot;:&quot;https://localhost:8080/&quot;}}" data-outputid="bfd4b25f-4f1f-4ed8-d93a-f11a512f394f">
+<div class="cell-container code-fold"><div class="cell-decorator"><pre>In [20]:</pre></div><div id="cell-46" class="cell" data-quarto-private-1="{&quot;key&quot;:&quot;colab&quot;,&quot;value&quot;:{&quot;base_uri&quot;:&quot;https://localhost:8080/&quot;}}" data-outputid="bfd4b25f-4f1f-4ed8-d93a-f11a512f394f">
 <details class="code-fold">
 <summary>Code</summary>
 <div class="sourceCode cell-code" id="cb27"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb27-1"><a href="#cb27-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Explicitly set the value of include_questions_as_comments</span></span>
@@ -4756,7 +4713,7 @@ BayesDown Questions saved to BayesDownQuestions.md
 Markdown content saved to BayesDownQuestions.md</code></pre>
 </div>
 </div></div>
-<div class="cell-container code-fold"><div class="cell-decorator"><pre>In [47]:</pre></div><div id="cell-47" class="cell" data-quarto-private-1="{&quot;key&quot;:&quot;colab&quot;,&quot;value&quot;:{&quot;base_uri&quot;:&quot;https://localhost:8080/&quot;}}" data-outputid="0bf29b0a-0a9c-4b5a-b988-a1dbe8f79a61">
+<div class="cell-container code-fold"><div class="cell-decorator"><pre>In [21]:</pre></div><div id="cell-47" class="cell" data-quarto-private-1="{&quot;key&quot;:&quot;colab&quot;,&quot;value&quot;:{&quot;base_uri&quot;:&quot;https://localhost:8080/&quot;}}" data-outputid="0bf29b0a-0a9c-4b5a-b988-a1dbe8f79a61">
 <details class="code-fold">
 <summary>Code</summary>
 <div class="sourceCode cell-code" id="cb29"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb29-1"><a href="#cb29-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Generate BayesDown format</span></span>
@@ -4940,7 +4897,7 @@ BayesDown Format Preview:
 </code></pre>
 </div>
 </div></div>
-<div class="cell-container code-fold"><div class="cell-decorator"><pre>In [48]:</pre></div><div id="cell-48" class="cell" data-quarto-private-1="{&quot;key&quot;:&quot;colab&quot;,&quot;value&quot;:{&quot;base_uri&quot;:&quot;https://localhost:8080/&quot;}}" data-outputid="5c291497-6f69-48b6-827d-20f09a083ff7">
+<div class="cell-container code-fold"><div class="cell-decorator"><pre>In [22]:</pre></div><div id="cell-48" class="cell" data-quarto-private-1="{&quot;key&quot;:&quot;colab&quot;,&quot;value&quot;:{&quot;base_uri&quot;:&quot;https://localhost:8080/&quot;}}" data-outputid="5c291497-6f69-48b6-827d-20f09a083ff7">
 <details class="code-fold">
 <summary>Code</summary>
 <div class="sourceCode cell-code" id="cb31"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb31-1"><a href="#cb31-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Load and print the content of the 'FULL_BayesDownQuestions.md' file</span></span>
@@ -5111,7 +5068,7 @@ BayesDown Format Preview:
 </code></pre>
 </div>
 </div></div>
-<div class="cell-container code-fold"><div class="cell-decorator"><pre>In [49]:</pre></div><div id="cell-49" class="cell" data-quarto-private-1="{&quot;key&quot;:&quot;colab&quot;,&quot;value&quot;:{&quot;base_uri&quot;:&quot;https://localhost:8080/&quot;}}" data-outputid="80e15f1d-449e-406c-b146-d694ddb0e9b8">
+<div class="cell-container code-fold"><div class="cell-decorator"><pre>In [23]:</pre></div><div id="cell-49" class="cell" data-quarto-private-1="{&quot;key&quot;:&quot;colab&quot;,&quot;value&quot;:{&quot;base_uri&quot;:&quot;https://localhost:8080/&quot;}}" data-outputid="80e15f1d-449e-406c-b146-d694ddb0e9b8">
 <details class="code-fold">
 <summary>Code</summary>
 <div class="sourceCode cell-code" id="cb33"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb33-1"><a href="#cb33-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Generate BayesDown format</span></span>
@@ -5160,13 +5117,11 @@ BayesDown Questions saved to BayesDownQuestions.md
 </code></pre>
 </div>
 </div></div>
-<div id="cell-50" class="cell markdown">
+</section>
 <section id="generate-bayesdown-probability-extraction-prompt" class="level2" data-number="7.5">
 <h2 data-number="7.5" class="anchored" data-anchor-id="generate-bayesdown-probability-extraction-prompt"><span class="header-section-number">7.5</span> 2.3 Generate BayesDown Probability Extraction Prompt</h2>
 <p>Generate 2nd Extraction Prompt for Probabilities based on the questions generated from the ‘ArgDown.csv’ extraction</p>
 </section>
-</div>
-<div id="cell-51" class="cell markdown">
 <section id="bayesdown-format-specification" class="level2" data-number="7.6">
 <h2 data-number="7.6" class="anchored" data-anchor-id="bayesdown-format-specification"><span class="header-section-number">7.6</span> 2.3.1 BayesDown Format Specification</h2>
 <p>BayesDown extends ArgDown with probability data in a structured JSON format to represent Bayesian networks. This intermediate representation bridges the gap between natural language arguments and formal probabilistic models, preserving both narrative structure and quantitative relationships.</p>
@@ -5331,16 +5286,9 @@ BayesDown Questions saved to BayesDownQuestions.md
 </div>
 </section>
 </section>
-</div>
-<div id="cell-65" class="cell markdown">
 <section id="test-bayesdown-extraction" class="level2" data-number="7.7">
 <h2 data-number="7.7" class="anchored" data-anchor-id="test-bayesdown-extraction"><span class="header-section-number">7.7</span> 3.1.2 Test BayesDown Extraction</h2>
-</section>
-</div>
-<div id="cell-66" class="cell markdown">
-
-</div>
-<div class="cell-container code-fold"><div class="cell-decorator"><pre>In [54]:</pre></div><div id="cell-67" class="cell" data-quarto-private-1="{&quot;key&quot;:&quot;colab&quot;,&quot;value&quot;:{&quot;base_uri&quot;:&quot;https://localhost:8080/&quot;,&quot;height&quot;:1000}}" data-outputid="a859bf73-6cf1-4ce0-d4c0-4ff827584086">
+<div class="cell-container code-fold"><div class="cell-decorator"><pre>In [24]:</pre></div><div id="cell-67" class="cell" data-quarto-private-1="{&quot;key&quot;:&quot;colab&quot;,&quot;value&quot;:{&quot;base_uri&quot;:&quot;https://localhost:8080/&quot;,&quot;height&quot;:1000}}" data-outputid="a859bf73-6cf1-4ce0-d4c0-4ff827584086">
 <details class="code-fold">
 <summary>Code</summary>
 <div class="sourceCode cell-code" id="cb37"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb37-1"><a href="#cb37-1" aria-hidden="true" tabindex="-1"></a>display(Markdown(md_content_ex_rain)) <span class="co"># view BayesDown file formatted as MarkDown</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -5349,19 +5297,15 @@ BayesDown Questions saved to BayesDownQuestions.md
 <p>[Existential_Catastrophe]: The destruction of humanity’s long-term potential due to AI systems we’ve lost control over. {“instantiations”: [“existential_catastrophe_TRUE”, “existential_catastrophe_FALSE”], “priors”: {“p(existential_catastrophe_TRUE)”: “0.05”, “p(existential_catastrophe_FALSE)”: “0.95”}, “posteriors”: {“p(existential_catastrophe_TRUE|human_disempowerment_TRUE)”: “0.95”, “p(existential_catastrophe_TRUE|human_disempowerment_FALSE)”: “0.0”, “p(existential_catastrophe_FALSE|human_disempowerment_TRUE)”: “0.05”, “p(existential_catastrophe_FALSE|human_disempowerment_FALSE)”: “1.0”}} - [Human_Disempowerment]: Permanent and collective disempowerment of humanity relative to AI systems. {“instantiations”: [“human_disempowerment_TRUE”, “human_disempowerment_FALSE”], “priors”: {“p(human_disempowerment_TRUE)”: “0.208”, “p(human_disempowerment_FALSE)”: “0.792”}, “posteriors”: {“p(human_disempowerment_TRUE|scale_of_power_seeking_TRUE)”: “1.0”, “p(human_disempowerment_TRUE|scale_of_power_seeking_FALSE)”: “0.0”, “p(human_disempowerment_FALSE|scale_of_power_seeking_TRUE)”: “0.0”, “p(human_disempowerment_FALSE|scale_of_power_seeking_FALSE)”: “1.0”}} - [Scale_Of_Power_Seeking]: Power-seeking by AI systems scaling to the point of permanently disempowering all of humanity. {“instantiations”: [“scale_of_power_seeking_TRUE”, “scale_of_power_seeking_FALSE”], “priors”: {“p(scale_of_power_seeking_TRUE)”: “0.208”, “p(scale_of_power_seeking_FALSE)”: “0.792”}, “posteriors”: {“p(scale_of_power_seeking_TRUE|misaligned_power_seeking_TRUE, corrective_feedback_EFFECTIVE)”: “0.25”, “p(scale_of_power_seeking_TRUE|misaligned_power_seeking_TRUE, corrective_feedback_INEFFECTIVE)”: “0.60”, “p(scale_of_power_seeking_TRUE|misaligned_power_seeking_FALSE, corrective_feedback_EFFECTIVE)”: “0.0”, “p(scale_of_power_seeking_TRUE|misaligned_power_seeking_FALSE, corrective_feedback_INEFFECTIVE)”: “0.0”, “p(scale_of_power_seeking_FALSE|misaligned_power_seeking_TRUE, corrective_feedback_EFFECTIVE)”: “0.75”, “p(scale_of_power_seeking_FALSE|misaligned_power_seeking_TRUE, corrective_feedback_INEFFECTIVE)”: “0.40”, “p(scale_of_power_seeking_FALSE|misaligned_power_seeking_FALSE, corrective_feedback_EFFECTIVE)”: “1.0”, “p(scale_of_power_seeking_FALSE|misaligned_power_seeking_FALSE, corrective_feedback_INEFFECTIVE)”: “1.0”}} - [Misaligned_Power_Seeking]: Deployed AI systems seeking power in unintended and high-impact ways due to problems with their objectives. {“instantiations”: [“misaligned_power_seeking_TRUE”, “misaligned_power_seeking_FALSE”], “priors”: {“p(misaligned_power_seeking_TRUE)”: “0.338”, “p(misaligned_power_seeking_FALSE)”: “0.662”}, “posteriors”: {“p(misaligned_power_seeking_TRUE|aps_systems_TRUE, difficulty_of_alignment_TRUE, deployment_decisions_DEPLOY)”: “0.90”, “p(misaligned_power_seeking_TRUE|aps_systems_TRUE, difficulty_of_alignment_TRUE, deployment_decisions_WITHHOLD)”: “0.10”, “p(misaligned_power_seeking_TRUE|aps_systems_TRUE, difficulty_of_alignment_FALSE, deployment_decisions_DEPLOY)”: “0.25”, “p(misaligned_power_seeking_TRUE|aps_systems_TRUE, difficulty_of_alignment_FALSE, deployment_decisions_WITHHOLD)”: “0.05”, “p(misaligned_power_seeking_TRUE|aps_systems_FALSE, difficulty_of_alignment_TRUE, deployment_decisions_DEPLOY)”: “0.0”, “p(misaligned_power_seeking_TRUE|aps_systems_FALSE, difficulty_of_alignment_TRUE, deployment_decisions_WITHHOLD)”: “0.0”, “p(misaligned_power_seeking_TRUE|aps_systems_FALSE, difficulty_of_alignment_FALSE, deployment_decisions_DEPLOY)”: “0.0”, “p(misaligned_power_seeking_TRUE|aps_systems_FALSE, difficulty_of_alignment_FALSE, deployment_decisions_WITHHOLD)”: “0.0”, “p(misaligned_power_seeking_FALSE|aps_systems_TRUE, difficulty_of_alignment_TRUE, deployment_decisions_DEPLOY)”: “0.10”, “p(misaligned_power_seeking_FALSE|aps_systems_TRUE, difficulty_of_alignment_TRUE, deployment_decisions_WITHHOLD)”: “0.90”, “p(misaligned_power_seeking_FALSE|aps_systems_TRUE, difficulty_of_alignment_FALSE, deployment_decisions_DEPLOY)”: “0.75”, “p(misaligned_power_seeking_FALSE|aps_systems_TRUE, difficulty_of_alignment_FALSE, deployment_decisions_WITHHOLD)”: “0.95”, “p(misaligned_power_seeking_FALSE|aps_systems_FALSE, difficulty_of_alignment_TRUE, deployment_decisions_DEPLOY)”: “1.0”, “p(misaligned_power_seeking_FALSE|aps_systems_FALSE, difficulty_of_alignment_TRUE, deployment_decisions_WITHHOLD)”: “1.0”, “p(misaligned_power_seeking_FALSE|aps_systems_FALSE, difficulty_of_alignment_FALSE, deployment_decisions_DEPLOY)”: “1.0”, “p(misaligned_power_seeking_FALSE|aps_systems_FALSE, difficulty_of_alignment_FALSE, deployment_decisions_WITHHOLD)”: “1.0”}} - [APS_Systems]: AI systems with advanced capabilities, agentic planning, and strategic awareness. {“instantiations”: [“aps_systems_TRUE”, “aps_systems_FALSE”], “priors”: {“p(aps_systems_TRUE)”: “0.65”, “p(aps_systems_FALSE)”: “0.35”}, “posteriors”: {“p(aps_systems_TRUE|advanced_ai_capability_TRUE, agentic_planning_TRUE, strategic_awareness_TRUE)”: “1.0”, “p(aps_systems_TRUE|advanced_ai_capability_TRUE, agentic_planning_TRUE, strategic_awareness_FALSE)”: “0.0”, “p(aps_systems_TRUE|advanced_ai_capability_TRUE, agentic_planning_FALSE, strategic_awareness_TRUE)”: “0.0”, “p(aps_systems_TRUE|advanced_ai_capability_TRUE, agentic_planning_FALSE, strategic_awareness_FALSE)”: “0.0”, “p(aps_systems_TRUE|advanced_ai_capability_FALSE, agentic_planning_TRUE, strategic_awareness_TRUE)”: “0.0”, “p(aps_systems_TRUE|advanced_ai_capability_FALSE, agentic_planning_TRUE, strategic_awareness_FALSE)”: “0.0”, “p(aps_systems_TRUE|advanced_ai_capability_FALSE, agentic_planning_FALSE, strategic_awareness_TRUE)”: “0.0”, “p(aps_systems_TRUE|advanced_ai_capability_FALSE, agentic_planning_FALSE, strategic_awareness_FALSE)”: “0.0”, “p(aps_systems_FALSE|advanced_ai_capability_TRUE, agentic_planning_TRUE, strategic_awareness_TRUE)”: “0.0”, “p(aps_systems_FALSE|advanced_ai_capability_TRUE, agentic_planning_TRUE, strategic_awareness_FALSE)”: “1.0”, “p(aps_systems_FALSE|advanced_ai_capability_TRUE, agentic_planning_FALSE, strategic_awareness_TRUE)”: “1.0”, “p(aps_systems_FALSE|advanced_ai_capability_TRUE, agentic_planning_FALSE, strategic_awareness_FALSE)”: “1.0”, “p(aps_systems_FALSE|advanced_ai_capability_FALSE, agentic_planning_TRUE, strategic_awareness_TRUE)”: “1.0”, “p(aps_systems_FALSE|advanced_ai_capability_FALSE, agentic_planning_TRUE, strategic_awareness_FALSE)”: “1.0”, “p(aps_systems_FALSE|advanced_ai_capability_FALSE, agentic_planning_FALSE, strategic_awareness_TRUE)”: “1.0”, “p(aps_systems_FALSE|advanced_ai_capability_FALSE, agentic_planning_FALSE, strategic_awareness_FALSE)”: “1.0”}} - [Advanced_AI_Capability]: AI systems that outperform humans on tasks that grant significant power in the world. {“instantiations”: [“advanced_ai_capability_TRUE”, “advanced_ai_capability_FALSE”], “priors”: {“p(advanced_ai_capability_TRUE)”: “0.80”, “p(advanced_ai_capability_FALSE)”: “0.20”}} - [Agentic_Planning]: AI systems making and executing plans based on world models to achieve objectives. {“instantiations”: [“agentic_planning_TRUE”, “agentic_planning_FALSE”], “priors”: {“p(agentic_planning_TRUE)”: “0.85”, “p(agentic_planning_FALSE)”: “0.15”}} - [Strategic_Awareness]: AI systems with models accurately representing power dynamics with humans. {“instantiations”: [“strategic_awareness_TRUE”, “strategic_awareness_FALSE”], “priors”: {“p(strategic_awareness_TRUE)”: “0.75”, “p(strategic_awareness_FALSE)”: “0.25”}} - [Difficulty_Of_Alignment]: It is harder to build aligned systems than misaligned systems that are attractive to deploy. {“instantiations”: [“difficulty_of_alignment_TRUE”, “difficulty_of_alignment_FALSE”], “priors”: {“p(difficulty_of_alignment_TRUE)”: “0.40”, “p(difficulty_of_alignment_FALSE)”: “0.60”}, “posteriors”: {“p(difficulty_of_alignment_TRUE|instrumental_convergence_TRUE, problems_with_proxies_TRUE, problems_with_search_TRUE)”: “0.85”, “p(difficulty_of_alignment_TRUE|instrumental_convergence_TRUE, problems_with_proxies_TRUE, problems_with_search_FALSE)”: “0.70”, “p(difficulty_of_alignment_TRUE|instrumental_convergence_TRUE, problems_with_proxies_FALSE, problems_with_search_TRUE)”: “0.60”, “p(difficulty_of_alignment_TRUE|instrumental_convergence_TRUE, problems_with_proxies_FALSE, problems_with_search_FALSE)”: “0.40”, “p(difficulty_of_alignment_TRUE|instrumental_convergence_FALSE, problems_with_proxies_TRUE, problems_with_search_TRUE)”: “0.55”, “p(difficulty_of_alignment_TRUE|instrumental_convergence_FALSE, problems_with_proxies_TRUE, problems_with_search_FALSE)”: “0.40”, “p(difficulty_of_alignment_TRUE|instrumental_convergence_FALSE, problems_with_proxies_FALSE, problems_with_search_TRUE)”: “0.30”, “p(difficulty_of_alignment_TRUE|instrumental_convergence_FALSE, problems_with_proxies_FALSE, problems_with_search_FALSE)”: “0.10”, “p(difficulty_of_alignment_FALSE|instrumental_convergence_TRUE, problems_with_proxies_TRUE, problems_with_search_TRUE)”: “0.15”, “p(difficulty_of_alignment_FALSE|instrumental_convergence_TRUE, problems_with_proxies_TRUE, problems_with_search_FALSE)”: “0.30”, “p(difficulty_of_alignment_FALSE|instrumental_convergence_TRUE, problems_with_proxies_FALSE, problems_with_search_TRUE)”: “0.40”, “p(difficulty_of_alignment_FALSE|instrumental_convergence_TRUE, problems_with_proxies_FALSE, problems_with_search_FALSE)”: “0.60”, “p(difficulty_of_alignment_FALSE|instrumental_convergence_FALSE, problems_with_proxies_TRUE, problems_with_search_TRUE)”: “0.45”, “p(difficulty_of_alignment_FALSE|instrumental_convergence_FALSE, problems_with_proxies_TRUE, problems_with_search_FALSE)”: “0.60”, “p(difficulty_of_alignment_FALSE|instrumental_convergence_FALSE, problems_with_proxies_FALSE, problems_with_search_TRUE)”: “0.70”, “p(difficulty_of_alignment_FALSE|instrumental_convergence_FALSE, problems_with_proxies_FALSE, problems_with_search_FALSE)”: “0.90”}} - [Instrumental_Convergence]: AI systems with misaligned objectives tend to seek power as an instrumental goal. {“instantiations”: [“instrumental_convergence_TRUE”, “instrumental_convergence_FALSE”], “priors”: {“p(instrumental_convergence_TRUE)”: “0.75”, “p(instrumental_convergence_FALSE)”: “0.25”}} - [Problems_With_Proxies]: Optimizing for proxy objectives breaks correlations with intended goals. {“instantiations”: [“problems_with_proxies_TRUE”, “problems_with_proxies_FALSE”], “priors”: {“p(problems_with_proxies_TRUE)”: “0.80”, “p(problems_with_proxies_FALSE)”: “0.20”}} - [Problems_With_Search]: Search processes can yield systems pursuing different objectives than intended. {“instantiations”: [“problems_with_search_TRUE”, “problems_with_search_FALSE”], “priors”: {“p(problems_with_search_TRUE)”: “0.70”, “p(problems_with_search_FALSE)”: “0.30”}} - [Deployment_Decisions]: Decisions to deploy potentially misaligned AI systems. {“instantiations”: [“deployment_decisions_DEPLOY”, “deployment_decisions_WITHHOLD”], “priors”: {“p(deployment_decisions_DEPLOY)”: “0.70”, “p(deployment_decisions_WITHHOLD)”: “0.30”}, “posteriors”: {“p(deployment_decisions_DEPLOY|incentives_to_build_aps_STRONG, deception_by_ai_TRUE)”: “0.90”, “p(deployment_decisions_DEPLOY|incentives_to_build_aps_STRONG, deception_by_ai_FALSE)”: “0.75”, “p(deployment_decisions_DEPLOY|incentives_to_build_aps_WEAK, deception_by_ai_TRUE)”: “0.60”, “p(deployment_decisions_DEPLOY|incentives_to_build_aps_WEAK, deception_by_ai_FALSE)”: “0.30”, “p(deployment_decisions_WITHHOLD|incentives_to_build_aps_STRONG, deception_by_ai_TRUE)”: “0.10”, “p(deployment_decisions_WITHHOLD|incentives_to_build_aps_STRONG, deception_by_ai_FALSE)”: “0.25”, “p(deployment_decisions_WITHHOLD|incentives_to_build_aps_WEAK, deception_by_ai_TRUE)”: “0.40”, “p(deployment_decisions_WITHHOLD|incentives_to_build_aps_WEAK, deception_by_ai_FALSE)”: “0.70”}} - [Incentives_To_Build_APS]: Strong incentives to build and deploy APS systems. {“instantiations”: [“incentives_to_build_aps_STRONG”, “incentives_to_build_aps_WEAK”], “priors”: {“p(incentives_to_build_aps_STRONG)”: “0.80”, “p(incentives_to_build_aps_WEAK)”: “0.20”}, “posteriors”: {“p(incentives_to_build_aps_STRONG|usefulness_of_aps_HIGH, competitive_dynamics_STRONG)”: “0.95”, “p(incentives_to_build_aps_STRONG|usefulness_of_aps_HIGH, competitive_dynamics_WEAK)”: “0.80”, “p(incentives_to_build_aps_STRONG|usefulness_of_aps_LOW, competitive_dynamics_STRONG)”: “0.70”, “p(incentives_to_build_aps_STRONG|usefulness_of_aps_LOW, competitive_dynamics_WEAK)”: “0.30”, “p(incentives_to_build_aps_WEAK|usefulness_of_aps_HIGH, competitive_dynamics_STRONG)”: “0.05”, “p(incentives_to_build_aps_WEAK|usefulness_of_aps_HIGH, competitive_dynamics_WEAK)”: “0.20”, “p(incentives_to_build_aps_WEAK|usefulness_of_aps_LOW, competitive_dynamics_STRONG)”: “0.30”, “p(incentives_to_build_aps_WEAK|usefulness_of_aps_LOW, competitive_dynamics_WEAK)”: “0.70”}} - [Usefulness_Of_APS]: APS systems are very useful for many valuable tasks. {“instantiations”: [“usefulness_of_aps_HIGH”, “usefulness_of_aps_LOW”], “priors”: {“p(usefulness_of_aps_HIGH)”: “0.85”, “p(usefulness_of_aps_LOW)”: “0.15”}} - [Competitive_Dynamics]: Competitive pressures between AI developers. {“instantiations”: [“competitive_dynamics_STRONG”, “competitive_dynamics_WEAK”], “priors”: {“p(competitive_dynamics_STRONG)”: “0.75”, “p(competitive_dynamics_WEAK)”: “0.25”}} - [Deception_By_AI]: AI systems deceiving humans about their true objectives. {“instantiations”: [“deception_by_ai_TRUE”, “deception_by_ai_FALSE”], “priors”: {“p(deception_by_ai_TRUE)”: “0.50”, “p(deception_by_ai_FALSE)”: “0.50”}} - [Corrective_Feedback]: Human society implementing corrections after observing problems. {“instantiations”: [“corrective_feedback_EFFECTIVE”, “corrective_feedback_INEFFECTIVE”], “priors”: {“p(corrective_feedback_EFFECTIVE)”: “0.60”, “p(corrective_feedback_INEFFECTIVE)”: “0.40”}, “posteriors”: {“p(corrective_feedback_EFFECTIVE|warning_shots_OBSERVED, rapid_capability_escalation_TRUE)”: “0.40”, “p(corrective_feedback_EFFECTIVE|warning_shots_OBSERVED, rapid_capability_escalation_FALSE)”: “0.80”, “p(corrective_feedback_EFFECTIVE|warning_shots_UNOBSERVED, rapid_capability_escalation_TRUE)”: “0.15”, “p(corrective_feedback_EFFECTIVE|warning_shots_UNOBSERVED, rapid_capability_escalation_FALSE)”: “0.50”, “p(corrective_feedback_INEFFECTIVE|warning_shots_OBSERVED, rapid_capability_escalation_TRUE)”: “0.60”, “p(corrective_feedback_INEFFECTIVE|warning_shots_OBSERVED, rapid_capability_escalation_FALSE)”: “0.20”, “p(corrective_feedback_INEFFECTIVE|warning_shots_UNOBSERVED, rapid_capability_escalation_TRUE)”: “0.85”, “p(corrective_feedback_INEFFECTIVE|warning_shots_UNOBSERVED, rapid_capability_escalation_FALSE)”: “0.50”}} - [Warning_Shots]: Observable failures in weaker systems before catastrophic risks. {“instantiations”: [“warning_shots_OBSERVED”, “warning_shots_UNOBSERVED”], “priors”: {“p(warning_shots_OBSERVED)”: “0.70”, “p(warning_shots_UNOBSERVED)”: “0.30”}} - [Rapid_Capability_Escalation]: AI capabilities escalating very rapidly, allowing little time for correction. {“instantiations”: [“rapid_capability_escalation_TRUE”, “rapid_capability_escalation_FALSE”], “priors”: {“p(rapid_capability_escalation_TRUE)”: “0.45”, “p(rapid_capability_escalation_FALSE)”: “0.55”}} [Barriers_To_Understanding]: Difficulty in understanding the internal workings of advanced AI systems. {“instantiations”: [“barriers_to_understanding_HIGH”, “barriers_to_understanding_LOW”], “priors”: {“p(barriers_to_understanding_HIGH)”: “0.70”, “p(barriers_to_understanding_LOW)”: “0.30”}, “posteriors”: {“p(barriers_to_understanding_HIGH|misaligned_power_seeking_TRUE)”: “0.85”, “p(barriers_to_understanding_HIGH|misaligned_power_seeking_FALSE)”: “0.60”, “p(barriers_to_understanding_LOW|misaligned_power_seeking_TRUE)”: “0.15”, “p(barriers_to_understanding_LOW|misaligned_power_seeking_FALSE)”: “0.40”}} - [Misaligned_Power_Seeking]: Deployed AI systems seeking power in unintended and high-impact ways due to problems with their objectives. {“instantiations”: [“misaligned_power_seeking_TRUE”, “misaligned_power_seeking_FALSE”], “priors”: {“p(misaligned_power_seeking_TRUE)”: “0.338”, “p(misaligned_power_seeking_FALSE)”: “0.662”}} [Adversarial_Dynamics]: Potentially adversarial relationships between humans and power-seeking AI. {“instantiations”: [“adversarial_dynamics_TRUE”, “adversarial_dynamics_FALSE”], “priors”: {“p(adversarial_dynamics_TRUE)”: “0.60”, “p(adversarial_dynamics_FALSE)”: “0.40”}, “posteriors”: {“p(adversarial_dynamics_TRUE|misaligned_power_seeking_TRUE)”: “0.95”, “p(adversarial_dynamics_TRUE|misaligned_power_seeking_FALSE)”: “0.10”, “p(adversarial_dynamics_FALSE|misaligned_power_seeking_TRUE)”: “0.05”, “p(adversarial_dynamics_FALSE|misaligned_power_seeking_FALSE)”: “0.90”}} - [Misaligned_Power_Seeking]: Deployed AI systems seeking power in unintended and high-impact ways due to problems with their objectives. {“instantiations”: [“misaligned_power_seeking_TRUE”, “misaligned_power_seeking_FALSE”], “priors”: {“p(misaligned_power_seeking_TRUE)”: “0.338”, “p(misaligned_power_seeking_FALSE)”: “0.662”}} [Stakes_Of_Error]: The escalating impact of mistakes with power-seeking AI systems. {“instantiations”: [“stakes_of_error_HIGH”, “stakes_of_error_LOW”], “priors”: {“p(stakes_of_error_HIGH)”: “0.85”, “p(stakes_of_error_LOW)”: “0.15”}, “posteriors”: {“p(stakes_of_error_HIGH|misaligned_power_seeking_TRUE)”: “0.95”, “p(stakes_of_error_HIGH|misaligned_power_seeking_FALSE)”: “0.50”, “p(stakes_of_error_LOW|misaligned_power_seeking_TRUE)”: “0.05”, “p(stakes_of_error_LOW|misaligned_power_seeking_FALSE)”: “0.50”}} - [Misaligned_Power_Seeking]: Deployed AI systems seeking power in unintended and high-impact ways due to problems with their objectives. {“instantiations”: [“misaligned_power_seeking_TRUE”, “misaligned_power_seeking_FALSE”], “priors”: {“p(misaligned_power_seeking_TRUE)”: “0.338”, “p(misaligned_power_seeking_FALSE)”: “0.662”}}</p>
 </div>
 </div></div>
-<div id="cell-68" class="cell markdown">
+</section>
 <section id="check-the-graph-structure-with-the-argdown-sandbox-online-1" class="level2" data-number="7.8">
 <h2 data-number="7.8" class="anchored" data-anchor-id="check-the-graph-structure-with-the-argdown-sandbox-online-1"><span class="header-section-number">7.8</span> 3.1.2.2 Check the Graph Structure with the ArgDown Sandbox Online</h2>
 <p>Copy and paste the BayesDown formatted … in the ArgDown Sandbox below to quickly verify that the network renders correctly.</p>
 </section>
-</div>
-<div id="cell-69" class="cell markdown">
 <section id="extraction" class="level2" data-number="7.9">
 <h2 data-number="7.9" class="anchored" data-anchor-id="extraction"><span class="header-section-number">7.9</span> 3.3 Extraction</h2>
 <p>BayesDown Extraction Code already part of ArgDown extraction code, therefore just use same function “parse_markdown_hierarchy(markdown_data)” and ignore the extra argument (“ArgDown”) because it is automatically set to false amd will by default extract BayesDown.</p>
-</section>
-</div>
-<div class="cell-container code-fold"><div class="cell-decorator"><pre>In [57]:</pre></div><div id="cell-70" class="cell" data-quarto-private-1="{&quot;key&quot;:&quot;colab&quot;,&quot;value&quot;:{&quot;base_uri&quot;:&quot;https://localhost:8080/&quot;,&quot;height&quot;:1000}}" data-outputid="515f7e7f-c291-4d26-a515-b3d8c27d0952">
+<div class="cell-container code-fold"><div class="cell-decorator"><pre>In [25]:</pre></div><div id="cell-70" class="cell" data-quarto-private-1="{&quot;key&quot;:&quot;colab&quot;,&quot;value&quot;:{&quot;base_uri&quot;:&quot;https://localhost:8080/&quot;,&quot;height&quot;:1000}}" data-outputid="515f7e7f-c291-4d26-a515-b3d8c27d0952">
 <details class="code-fold">
 <summary>Code</summary>
 <div class="sourceCode cell-code" id="cb38"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb38-1"><a href="#cb38-1" aria-hidden="true" tabindex="-1"></a>result_df <span class="op">=</span> parse_markdown_hierarchy_fixed(md_content_ex_rain)</span>
@@ -6046,13 +5990,10 @@ BayesDown Questions saved to BayesDownQuestions.md
   </div>
 </div>
 </div></div>
-<div id="cell-71" class="cell markdown">
 <section id="data-post-processing" class="level3" data-number="7.9.1">
 <h3 data-number="7.9.1" class="anchored" data-anchor-id="data-post-processing"><span class="header-section-number">7.9.1</span> 3.3 Data-Post-Processing</h3>
 <p>Add rows to data frame that can be calculated from the extracted rows</p>
-</section>
-</div>
-<div class="cell-container code-fold"><div class="cell-decorator"><pre>In [59]:</pre></div><div id="cell-72" class="cell">
+<div class="cell-container code-fold"><div class="cell-decorator"><pre>In [26]:</pre></div><div id="cell-72" class="cell">
 <details class="code-fold">
 <summary>Code</summary>
 <div class="sourceCode cell-code" id="cb39"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb39-1"><a href="#cb39-1" aria-hidden="true" tabindex="-1"></a><span class="co"># @title 3.3.1 Data Post-Processing Functions ---</span></span>
@@ -6235,7 +6176,7 @@ BayesDown Questions saved to BayesDownQuestions.md
 <span id="cb39-178"><a href="#cb39-178" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> enhanced_df</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 </div></div>
-<div class="cell-container code-fold"><div class="cell-decorator"><pre>In [60]:</pre></div><div id="cell-73" class="cell" data-quarto-private-1="{&quot;key&quot;:&quot;colab&quot;,&quot;value&quot;:{&quot;base_uri&quot;:&quot;https://localhost:8080/&quot;}}" data-outputid="178ecadc-13ce-4902-aac3-d8cff4370eed">
+<div class="cell-container code-fold"><div class="cell-decorator"><pre>In [27]:</pre></div><div id="cell-73" class="cell" data-quarto-private-1="{&quot;key&quot;:&quot;colab&quot;,&quot;value&quot;:{&quot;base_uri&quot;:&quot;https://localhost:8080/&quot;}}" data-outputid="178ecadc-13ce-4902-aac3-d8cff4370eed">
 <details class="code-fold">
 <summary>Code</summary>
 <div class="sourceCode cell-code" id="cb40"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb40-1"><a href="#cb40-1" aria-hidden="true" tabindex="-1"></a><span class="co"># @title 3.3 --- Enhance Extracted Data with Network Metrics ---</span></span>
@@ -6365,12 +6306,10 @@ Stakes_Of_Error:
 Enhanced data saved to 'enhanced_extracted_data.csv'</code></pre>
 </div>
 </div></div>
-<div id="cell-74" class="cell markdown">
+</section>
 <section id="download-and-save-finished-data-frame-as-.csv-file" class="level3" data-number="7.9.2">
 <h3 data-number="7.9.2" class="anchored" data-anchor-id="download-and-save-finished-data-frame-as-.csv-file"><span class="header-section-number">7.9.2</span> 3.4 Download and save finished data frame as .csv file</h3>
-</section>
-</div>
-<div class="cell-container code-fold"><div class="cell-decorator"><pre>In [62]:</pre></div><div id="cell-75" class="cell" data-quarto-private-1="{&quot;key&quot;:&quot;colab&quot;,&quot;value&quot;:{&quot;base_uri&quot;:&quot;https://localhost:8080/&quot;}}" data-outputid="3022ca0e-de67-48cb-9951-87d484daccc3">
+<div class="cell-container code-fold"><div class="cell-decorator"><pre>In [28]:</pre></div><div id="cell-75" class="cell" data-quarto-private-1="{&quot;key&quot;:&quot;colab&quot;,&quot;value&quot;:{&quot;base_uri&quot;:&quot;https://localhost:8080/&quot;}}" data-outputid="3022ca0e-de67-48cb-9951-87d484daccc3">
 <details class="code-fold">
 <summary>Code</summary>
 <div class="sourceCode cell-code" id="cb42"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb42-1"><a href="#cb42-1" aria-hidden="true" tabindex="-1"></a><span class="co"># @title 3.4 --- Save Extracted Data for Further Processing ---</span></span>
@@ -6403,7 +6342,9 @@ Enhanced data saved to 'enhanced_extracted_data.csv'</code></pre>
 Note: If using updated data in future steps, the file must be pushed to the GitHub repository</code></pre>
 </div>
 </div></div>
-<div id="cell-76" class="cell markdown">
+</section>
+</section>
+</section>
 <section id="analysis-inference-bayesian-network-visualization" class="level1" data-number="8">
 <h1 data-number="8"><span class="header-section-number">8</span> 4. Analysis &amp; Inference: Bayesian Network Visualization</h1>
 <section id="bayesian-network-visualization-approach" class="level2" data-number="8.1">
@@ -6441,14 +6382,9 @@ Note: If using updated data in future steps, the file must be pushed to the GitH
 <p>The resulting visualization serves as both an analytical tool for experts and a communication tool for broader audiences, bridging the gap between technical and policy domains in AI governance discussions.</p>
 </section>
 </section>
-</section>
-</div>
-<div id="cell-77" class="cell markdown">
 <section id="phase-1-dependenciesfunctions" class="level2" data-number="8.2">
 <h2 data-number="8.2" class="anchored" data-anchor-id="phase-1-dependenciesfunctions"><span class="header-section-number">8.2</span> Phase 1: Dependencies/Functions</h2>
-</section>
-</div>
-<div class="cell-container code-fold"><div class="cell-decorator"><pre>In [65]:</pre></div><div id="cell-78" class="cell">
+<div class="cell-container code-fold"><div class="cell-decorator"><pre>In [29]:</pre></div><div id="cell-78" class="cell">
 <details class="code-fold">
 <summary>Code</summary>
 <div class="sourceCode cell-code" id="cb44"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb44-1"><a href="#cb44-1" aria-hidden="true" tabindex="-1"></a><span class="co"># @title 4.0 --- Bayesian Network Visualization Functions ---</span></span>
@@ -6663,12 +6599,10 @@ Note: If using updated data in future steps, the file must be pushed to the GitH
 <span id="cb44-210"><a href="#cb44-210" aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span> HTML(<span class="ss">f"&lt;p&gt;Error rendering HTML: </span><span class="sc">{</span><span class="bu">str</span>(e)<span class="sc">}</span><span class="ss">&lt;/p&gt;&lt;p&gt;The network visualization has been saved to '</span><span class="sc">{</span>html_file<span class="sc">}</span><span class="ss">'&lt;/p&gt;"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 </div></div>
-<div id="cell-79" class="cell markdown">
+</section>
 <section id="phase-2-node-classification-and-styling-module" class="level2" data-number="8.3">
 <h2 data-number="8.3" class="anchored" data-anchor-id="phase-2-node-classification-and-styling-module"><span class="header-section-number">8.3</span> Phase 2: Node Classification and Styling Module</h2>
-</section>
-</div>
-<div class="cell-container code-fold"><div class="cell-decorator"><pre>In [67]:</pre></div><div id="cell-80" class="cell">
+<div class="cell-container code-fold"><div class="cell-decorator"><pre>In [30]:</pre></div><div id="cell-80" class="cell">
 <details class="code-fold">
 <summary>Code</summary>
 <div class="sourceCode cell-code" id="cb45"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb45-1"><a href="#cb45-1" aria-hidden="true" tabindex="-1"></a><span class="co"># @title 4.1 --- Node Classification and Styling Functions ---</span></span>
@@ -6966,12 +6900,10 @@ Note: If using updated data in future steps, the file must be pushed to the GitH
 <span id="cb45-293"><a href="#cb45-293" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> result</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 </div></div>
-<div id="cell-81" class="cell markdown">
+</section>
 <section id="phase-3-html-content-generation-module" class="level2" data-number="8.4">
 <h2 data-number="8.4" class="anchored" data-anchor-id="phase-3-html-content-generation-module"><span class="header-section-number">8.4</span> Phase 3: HTML Content Generation Module</h2>
-</section>
-</div>
-<div class="cell-container code-fold"><div class="cell-decorator"><pre>In [69]:</pre></div><div id="cell-82" class="cell">
+<div class="cell-container code-fold"><div class="cell-decorator"><pre>In [31]:</pre></div><div id="cell-82" class="cell">
 <details class="code-fold">
 <summary>Code</summary>
 <div class="sourceCode cell-code" id="cb46"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb46-1"><a href="#cb46-1" aria-hidden="true" tabindex="-1"></a><span class="co"># @title 4.2 --- HTML Content Generation Functions ---</span></span>
@@ -7172,12 +7104,10 @@ Note: If using updated data in future steps, the file must be pushed to the GitH
 <span id="cb46-196"><a href="#cb46-196" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> html</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 </div></div>
-<div id="cell-83" class="cell markdown">
+</section>
 <section id="phase-4-main-visualization-function" class="level2" data-number="8.5">
 <h2 data-number="8.5" class="anchored" data-anchor-id="phase-4-main-visualization-function"><span class="header-section-number">8.5</span> Phase 4: Main Visualization Function</h2>
-</section>
-</div>
-<div class="cell-container code-fold"><div class="cell-decorator"><pre>In [71]:</pre></div><div id="cell-84" class="cell">
+<div class="cell-container code-fold"><div class="cell-decorator"><pre>In [32]:</pre></div><div id="cell-84" class="cell">
 <details class="code-fold">
 <summary>Code</summary>
 <div class="sourceCode cell-code" id="cb47"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb47-1"><a href="#cb47-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> create_bayesian_network_with_probabilities(df):</span>
@@ -7356,12 +7286,11 @@ Note: If using updated data in future steps, the file must be pushed to the GitH
 <span id="cb47-174"><a href="#cb47-174" aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span> HTML(<span class="ss">f"&lt;p&gt;Error rendering HTML: </span><span class="sc">{</span><span class="bu">str</span>(e)<span class="sc">}</span><span class="ss">&lt;/p&gt;&lt;p&gt;The network visualization has been saved to '</span><span class="sc">{</span>html_file<span class="sc">}</span><span class="ss">'&lt;/p&gt;"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 </div></div>
-<div id="cell-85" class="cell markdown">
+</section>
+</section>
 <section id="quickly-check-html-outputs" class="level1" data-number="9">
 <h1 data-number="9"><span class="header-section-number">9</span> Quickly check HTML Outputs</h1>
-</section>
-</div>
-<div class="cell-container code-fold"><div class="cell-decorator"><pre>In [73]:</pre></div><div id="cell-86" class="cell" data-quarto-private-1="{&quot;key&quot;:&quot;colab&quot;,&quot;value&quot;:{&quot;base_uri&quot;:&quot;https://localhost:8080/&quot;,&quot;height&quot;:1000}}" data-outputid="fe6085fe-1c64-45dc-ba51-5880b2aa1672">
+<div class="cell-container code-fold"><div class="cell-decorator"><pre>In [33]:</pre></div><div id="cell-86" class="cell" data-quarto-private-1="{&quot;key&quot;:&quot;colab&quot;,&quot;value&quot;:{&quot;base_uri&quot;:&quot;https://localhost:8080/&quot;,&quot;height&quot;:1000}}" data-outputid="fe6085fe-1c64-45dc-ba51-5880b2aa1672">
 <details class="code-fold">
 <summary>Code</summary>
 <div class="sourceCode cell-code" id="cb48"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb48-1"><a href="#cb48-1" aria-hidden="true" tabindex="-1"></a>create_bayesian_network_with_probabilities(result_df)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -7803,7 +7732,7 @@ function highlightFilter(filter) {
 
 </div>
 </div></div>
-<div class="cell-container code-fold"><div class="cell-decorator"><pre>In [74]:</pre></div><div id="cell-87" class="cell" data-quarto-private-1="{&quot;key&quot;:&quot;colab&quot;,&quot;value&quot;:{&quot;base_uri&quot;:&quot;https://localhost:8080/&quot;}}" data-outputid="6fe7c6af-f3d1-4a15-fed4-22420c7e1ce4">
+<div class="cell-container code-fold"><div class="cell-decorator"><pre>In [34]:</pre></div><div id="cell-87" class="cell" data-quarto-private-1="{&quot;key&quot;:&quot;colab&quot;,&quot;value&quot;:{&quot;base_uri&quot;:&quot;https://localhost:8080/&quot;}}" data-outputid="6fe7c6af-f3d1-4a15-fed4-22420c7e1ce4">
 <details class="code-fold">
 <summary>Code</summary>
 <div class="sourceCode cell-code" id="cb49"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb49-1"><a href="#cb49-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Use the function to create and display the visualization</span></span>
@@ -8037,7 +7966,7 @@ function highlightFilter(filter) {
 22                                                 []  </code></pre>
 </div>
 </div></div>
-<div id="cell-88" class="cell markdown">
+</section>
 <section id="conclusion-from-prototype-to-production" class="level1" data-number="10">
 <h1 data-number="10"><span class="header-section-number">10</span> Conclusion: From Prototype to Production</h1>
 <section id="summary-of-achievements" class="level2" data-number="10.1">
@@ -8075,13 +8004,9 @@ function highlightFilter(filter) {
 <p>By transforming unstructured text into formal, analyzable representations, the AMTAIR project helps bridge the gaps between technical researchers, policy specialists, and other stakeholders, enabling more effective coordination in addressing existential risks from advanced AI.</p>
 </section>
 </section>
-</div>
-<div id="cell-89" class="cell markdown">
 <section id="save-outputs" class="level1" data-number="11">
 <h1 data-number="11"><span class="header-section-number">11</span> 6.0 Save Outputs</h1>
 </section>
-</div>
-<div id="cell-90" class="cell markdown">
 <section id="saving-and-exporting-results" class="level1" data-number="12">
 <h1 data-number="12"><span class="header-section-number">12</span> 6. Saving and Exporting Results</h1>
 <p>This section provides tools for saving the notebook results and visualizations in various formats:</p>
@@ -8095,9 +8020,7 @@ function highlightFilter(filter) {
 <p>Instruction:</p>
 <p>Download the ipynb, which you want to convert, on your local computer. Run the code below to upload the ipynb.</p>
 <p>The html version will be downloaded automatically on your local machine. Enjoy it!</p>
-</section>
-</div>
-<div class="cell-container code-fold"><div class="cell-decorator"><pre>In [78]:</pre></div><div id="cell-91" class="cell" data-quarto-private-1="{&quot;key&quot;:&quot;colab&quot;,&quot;value&quot;:{&quot;base_uri&quot;:&quot;https://localhost:8080/&quot;}}" data-outputid="2e9158a8-1ee0-4413-a946-bade1bb5f2da">
+<div class="cell-container code-fold"><div class="cell-decorator"><pre>In [35]:</pre></div><div id="cell-91" class="cell" data-quarto-private-1="{&quot;key&quot;:&quot;colab&quot;,&quot;value&quot;:{&quot;base_uri&quot;:&quot;https://localhost:8080/&quot;}}" data-outputid="2e9158a8-1ee0-4413-a946-bade1bb5f2da">
 <details class="code-fold">
 <summary>Code</summary>
 <div class="sourceCode cell-code" id="cb51"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb51-1"><a href="#cb51-1" aria-hidden="true" tabindex="-1"></a><span class="co"># @title 6.0 --- Save Visualization and Notebook Outputs as .HTML---</span></span>
@@ -8168,12 +8091,9 @@ Saving to: ‘AMTAIR_Prototype_example_rain-sprinkler-lawn.ipynb’
 ✅ Successfully saved HTML version to: AMTAIR_Prototype_example_rain-sprinkler-lawnIPYNB.html</code></pre>
 </div>
 </div></div>
-<div id="cell-92" class="cell markdown">
 <section id="convert-.ipynb-notebook-to-markdown" class="level2" data-number="12.1">
 <h2 data-number="12.1" class="anchored" data-anchor-id="convert-.ipynb-notebook-to-markdown"><span class="header-section-number">12.1</span> Convert .ipynb Notebook to MarkDown</h2>
-</section>
-</div>
-<div class="cell-container code-fold"><div class="cell-decorator"><pre>In [80]:</pre></div><div id="cell-93" class="cell" data-quarto-private-1="{&quot;key&quot;:&quot;colab&quot;,&quot;value&quot;:{&quot;base_uri&quot;:&quot;https://localhost:8080/&quot;}}" data-outputid="bb75526c-e815-453b-be50-88ada76420fc">
+<div class="cell-container code-fold"><div class="cell-decorator"><pre>In [36]:</pre></div><div id="cell-93" class="cell" data-quarto-private-1="{&quot;key&quot;:&quot;colab&quot;,&quot;value&quot;:{&quot;base_uri&quot;:&quot;https://localhost:8080/&quot;}}" data-outputid="bb75526c-e815-453b-be50-88ada76420fc">
 <details class="code-fold">
 <summary>Code</summary>
 <div class="sourceCode cell-code" id="cb53"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb53-1"><a href="#cb53-1" aria-hidden="true" tabindex="-1"></a><span class="co"># @title --- Convert .ipynb Notebook to MarkDown ---</span></span>
@@ -8221,7 +8141,7 @@ Saving to: ‘AMTAIR_Prototype_example_rain-sprinkler-lawn.ipynb’
 </code></pre>
 </div>
 </div></div>
-<div class="cell-container code-fold"><div class="cell-decorator"><pre>In [81]:</pre></div><div id="cell-94" class="cell" data-quarto-private-1="{&quot;key&quot;:&quot;colab&quot;,&quot;value&quot;:{&quot;base_uri&quot;:&quot;https://localhost:8080/&quot;}}" data-outputid="2efa4a9a-719f-4314-d30f-af0f95353e2e">
+<div class="cell-container code-fold"><div class="cell-decorator"><pre>In [37]:</pre></div><div id="cell-94" class="cell" data-quarto-private-1="{&quot;key&quot;:&quot;colab&quot;,&quot;value&quot;:{&quot;base_uri&quot;:&quot;https://localhost:8080/&quot;}}" data-outputid="2efa4a9a-719f-4314-d30f-af0f95353e2e">
 <details class="code-fold">
 <summary>Code</summary>
 <div class="sourceCode cell-code" id="cb55"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb55-1"><a href="#cb55-1" aria-hidden="true" tabindex="-1"></a><span class="co"># @title 6.1 --- Convert Notebook to Markdown Documentation ---</span></span>
@@ -8295,7 +8215,7 @@ Saving to: ‘AMTAIR_Prototype_example_rain-sprinkler-lawn.ipynb’
 ✅ Successfully saved Markdown version to: AMTAIR_Prototype_example_rain-sprinkler-lawnIPYNB.md</code></pre>
 </div>
 </div></div>
-<div class="cell-container code-fold"><div class="cell-decorator"><pre>In [82]:</pre></div><div id="cell-95" class="cell" data-quarto-private-1="{&quot;key&quot;:&quot;colab&quot;,&quot;value&quot;:{&quot;base_uri&quot;:&quot;https://localhost:8080/&quot;}}" data-outputid="1e4332d2-4ea7-49e6-f6dd-3b92447dfced">
+<div class="cell-container code-fold"><div class="cell-decorator"><pre>In [38]:</pre></div><div id="cell-95" class="cell" data-quarto-private-1="{&quot;key&quot;:&quot;colab&quot;,&quot;value&quot;:{&quot;base_uri&quot;:&quot;https://localhost:8080/&quot;}}" data-outputid="1e4332d2-4ea7-49e6-f6dd-3b92447dfced">
 <details class="code-fold">
 <summary>Code</summary>
 <div class="sourceCode cell-code" id="cb57"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb57-1"><a href="#cb57-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> nbformat</span>
@@ -8746,6 +8666,8 @@ AMTAIR_Prototype_ex 100%[===================&gt;]   1.07M  --.-KB/s    in 0.06s
 </code></pre>
 </div>
 </div></div>
+</section>
+</section>
      </main>
 <!-- /main column -->  <script id="quarto-html-after-body" type="application/javascript">
   window.document.addEventListener("DOMContentLoaded", function (event) {

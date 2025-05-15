@@ -1,22 +1,26 @@
 ---
 title: "Automating the Modelling of Transformative Artificial Intelligence Risks"
 subtitle: "An Epistemic Framework for Leveraging Frontier AI Systems to Upscale Conditional Policy Assessments in Bayesian Networks on a Narrow Path towards Existential Safety"
+#title-block-banner: true
+#title-block-banner: latex/uni-bayreuth-logo.png
 author:
   - name: Valentin Jakob Meyer
     orcid: 0009-0006-0889-5269
     corresponding: true
     email: Valentin.Meyer@uni-bayreuth.de
     roles:
-      - Investigation
-      - Project administration
-      - Software
-      - Visualization
+      GraduateAuthor
+#      - Investigation
+#      - Project administration
+#      - Software
+#      - Visualization
     affiliations:
       - University of Bayreuth
       - MCMP — LMU Munich
   - name: Dr. Timo Speith
     corresponding: false
-    roles: [Supervisor]
+    roles: Supervisor
+#      [Supervisor]
     affiliations:
       - University of Bayreuth
 keywords:

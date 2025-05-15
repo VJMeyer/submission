@@ -47,3 +47,80 @@ numbering:
 ## Overview:    Structure & Approach of the Paper (Roadmap --- Theory of Change)
 
 ## Table of Contents
+
+## Problem Statement	—	Motivation
+
+Continued AI Progress:
+
+* Rapid advancements in AI technology increase both potential benefits and risks.
+
+Existential Risks (AI X-Risk):
+
+* Advanced AI systems could pose significant threats if misaligned with human values.
+
+Complexity Challenges:
+
+* The intricate nature of AI systems complicates policy formulation and understanding.
+
+Limitations of Current Approaches:
+
+* MTAIR’s Reliance on Human Labor:  
+  * Modeling Transformative AI Risks (MTAIR) is constrained by manual cognitive efforts.  
+* Need for Automation:  
+  * Scaling and automating risk modeling is essential to keep pace with AI developments.
+
+Opportunity:
+
+* Leveraging new technologies to enhance our ability to model and mitigate AI risks.
+
+## Aim of the Paper
+
+### Research Question & Scope
+
+#### Can frontier AI technologies be utilized to automate the modeling of transformative AI risks, so as to allow for the prediction of policy impacts?
+
+Frontier AI Technology:			Today’s most capable AI systems (e.g. GPT4 level LLMs)  
+Scaling Up:						Automating the previously “manual” cognitive labor  
+Modeling:							Formalizing the world views underlying arguments  
+Transformative AI:			Level of AI capabilities defined by severe impact on the world  
+Safety & Governance Literature:		Publications, reports etc. concerned with risks from AI
+
+Automated Estimation:	    Non-manual (AI systems \+ scaffolding), quantified evaluations  
+Probability Distributions:			Formal expressions of the expectations over future worlds  
+Conditional Trees of Possible Worlds:  “If … then…” reasoning over ways things may play out  
+Forecasting Policy Impacts:		Qualitative & quantitative evaluation of expected outcomes
+
+### Significance of the Research
+
+### 
+
+## Theory of Change	—	Approach & Structure of the Paper
+
+Multiplicative Benefits:
+
+* Automation × Live Prediction Market Integrations × Policy Impact Evaluations
+
+Explanation:  
+	Automation:
+
+* Increases efficiency and scalability of risk modeling.
+
+	Live Prediction Markets:
+
+* Provides up-to-date, collective intelligence to inform models.
+
+	Policy Impact Evaluations:
+
+* Improves the accuracy and relevance of policy assessments.
+
+Outcome:
+
+* Enhanced ability to develop effective policies that mitigate AI risks.
+
+Visual Aid:
+
+* A diagram illustrating how each component amplifies the others, leading to greater overall impact.
+
+## 
+
+## Overview / Table of Contents

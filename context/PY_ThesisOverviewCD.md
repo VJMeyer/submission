@@ -11,14 +11,9 @@ Supervisor: Professor Timo Speith
 Date: September 2024
 
 **
-- provides critical or constructive evaluation of positions introduced
-- develops strong (plausible) argument in support of author’s own position/thesis
-- argument draws on relevant course material claim/argument
-- demonstrate understanding of the course materials incl. key arguments and core concepts within the debate
-- claim/argument is original or insightful, possibly even presents an original contribution to the debate 
 
 
-**
+
 ## Tl;dr
 
 This research proposes the automation of the modeling of transformative AI risks (AMTAIR) and a scalable AI Grand Strategy framework to address existential risks from AI. The project combines Bayesian networks, DAGs, and live forecasting data to create dynamic, adaptive models for strategic decision-making. Building on the MTAIR framework, the research aims to integrate expert input, automate updates using LLMs, and formalize world models within the AI safety community. The resulting tools will help policymakers and researchers develop robust strategies to mitigate AI risks and ensure long-term human survival.
