@@ -1,0 +1,1144 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+
+<head>
+
+<meta charset="utf-8" />
+<meta name="generator" content="quarto-1.7.29" />
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+
+<meta name="author" content="Valentin Jakob Meyer" />
+<meta name="author" content="Dr. Timo Speith" />
+<meta name="dcterms.date" content="2025-05-26" />
+<meta name="keywords" content="AMTAIR, AI Governance, Bayesian Networks, Transformative AI, Risk Assessment, Argument Extraction" />
+
+<title>Automating the Modelling of Transformative Artificial Intelligence Risks</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+/* CSS for citations */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+}
+.hanging-indent div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}</style>
+
+<!-- htmldependencies:E3FAD763 -->
+
+
+</head>
+
+<body>
+
+<div id="quarto-content" class="page-columns page-rows-contents page-layout-article toc-left">
+<div id="quarto-sidebar-toc-left" class="sidebar toc-left">
+  <div id="quarto-toc-target"></div>
+</div>
+<div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+</div>
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default toc-left">
+  <div class="quarto-title-banner">
+    <div class="quarto-title column-body">
+      <h1 class="title">Automating the Modelling of Transformative Artificial Intelligence Risks</h1>
+            <p class="subtitle lead">An Epistemic Framework for Leveraging Frontier AI Systems to Upscale Conditional Policy Assessments in Bayesian Networks on a Narrow Path towards Existential Safety</p>
+          </div>
+
+    
+    <div class="quarto-title-meta-container">
+      <div class="quarto-title-meta-column-start">
+            <div class="quarto-title-meta-author">
+          <div class="quarto-title-meta-heading">Authors</div>
+          <div class="quarto-title-meta-heading">Affiliations</div>
+          
+                <div class="quarto-title-meta-contents">
+            <p class="author">Valentin Jakob Meyer <a href="mailto:Valentin.Meyer@uni-bayreuth.de" class="quarto-title-author-email"><i class="bi bi-envelope"></i></a> <a href="https://orcid.org/0009-0006-0889-5269" class="quarto-title-author-orcid"> <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAA2ZpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMC1jMDYwIDYxLjEzNDc3NywgMjAxMC8wMi8xMi0xNzozMjowMCAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wTU09Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9tbS8iIHhtbG5zOnN0UmVmPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvc1R5cGUvUmVzb3VyY2VSZWYjIiB4bWxuczp4bXA9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC8iIHhtcE1NOk9yaWdpbmFsRG9jdW1lbnRJRD0ieG1wLmRpZDo1N0NEMjA4MDI1MjA2ODExOTk0QzkzNTEzRjZEQTg1NyIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDozM0NDOEJGNEZGNTcxMUUxODdBOEVCODg2RjdCQ0QwOSIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDozM0NDOEJGM0ZGNTcxMUUxODdBOEVCODg2RjdCQ0QwOSIgeG1wOkNyZWF0b3JUb29sPSJBZG9iZSBQaG90b3Nob3AgQ1M1IE1hY2ludG9zaCI+IDx4bXBNTTpEZXJpdmVkRnJvbSBzdFJlZjppbnN0YW5jZUlEPSJ4bXAuaWlkOkZDN0YxMTc0MDcyMDY4MTE5NUZFRDc5MUM2MUUwNEREIiBzdFJlZjpkb2N1bWVudElEPSJ4bXAuZGlkOjU3Q0QyMDgwMjUyMDY4MTE5OTRDOTM1MTNGNkRBODU3Ii8+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8+84NovQAAAR1JREFUeNpiZEADy85ZJgCpeCB2QJM6AMQLo4yOL0AWZETSqACk1gOxAQN+cAGIA4EGPQBxmJA0nwdpjjQ8xqArmczw5tMHXAaALDgP1QMxAGqzAAPxQACqh4ER6uf5MBlkm0X4EGayMfMw/Pr7Bd2gRBZogMFBrv01hisv5jLsv9nLAPIOMnjy8RDDyYctyAbFM2EJbRQw+aAWw/LzVgx7b+cwCHKqMhjJFCBLOzAR6+lXX84xnHjYyqAo5IUizkRCwIENQQckGSDGY4TVgAPEaraQr2a4/24bSuoExcJCfAEJihXkWDj3ZAKy9EJGaEo8T0QSxkjSwORsCAuDQCD+QILmD1A9kECEZgxDaEZhICIzGcIyEyOl2RkgwAAhkmC+eAm0TAAAAABJRU5ErkJggg=="></a></p>
+          </div>
+                <div class="quarto-title-meta-contents">
+                    <p class="affiliation">
+                        University of Bayreuth
+                      </p>
+                    <p class="affiliation">
+                        MCMP — LMU Munich
+                      </p>
+                  </div>
+                      <div class="quarto-title-meta-contents">
+            <p class="author">Dr. Timo Speith </p>
+          </div>
+                <div class="quarto-title-meta-contents">
+                    <p class="affiliation">
+                        University of Bayreuth
+                      </p>
+                  </div>
+                    </div>
+        
+        <div class="quarto-title-meta">
+
+                      
+                <div>
+            <div class="quarto-title-meta-heading">Published</div>
+            <div class="quarto-title-meta-contents">
+              <p class="date">May 26, 2025</p>
+            </div>
+          </div>
+          
+                
+              </div>
+      </div>
+      <div class="quarto-title-meta-column-end quarto-other-formats-target">
+      </div>
+    </div>
+
+    <div>
+      <div class="abstract">
+        <div class="block-title">Abstract</div>
+        <p>This thesis addresses coordination problems in AI safety by creating tools that automatically extract and formalize the assumptions and models underlying different approaches to AI governance. By transforming complex arguments into interactive visualizations showing relationships and probabilities, AMTAIR helps bridge communication gaps between technical researchers, policy specialists, and other stakeholders working to address risks from advanced AI.</p>
+      </div>
+    </div>
+
+    <div>
+      <div class="keywords">
+        <div class="block-title">Keywords</div>
+        <p>AMTAIR, AI Governance, Bayesian Networks, Transformative AI, Risk Assessment, Argument Extraction</p>
+      </div>
+    </div>
+
+    <div class="quarto-other-links-text-target">
+    </div>  </div>
+</header>
+
+  
+
+<nav id="TOC" role="doc-toc">
+    <h2 id="toc-title">Table of Contents</h2>
+   
+  <ul>
+  <li><a href="#abstract" id="toc-abstract">Abstract</a>
+  <ul>
+  <li><a href="#grading" id="toc-grading"><span class="header-section-number">0.1</span> Grading</a>
+  <ul>
+  <li><a href="#research-10" id="toc-research-10"><span class="header-section-number">0.1.1</span> Research (10%)</a></li>
+  </ul></li>
+  <li><a href="#structure-10" id="toc-structure-10"><span class="header-section-number">0.2</span> Structure (10%)</a></li>
+  <li><a href="#callout-test-language-style-10" id="toc-callout-test-language-style-10"><span class="header-section-number">0.3</span> Callout Test — Language &amp; Style (10%)</a></li>
+  </ul></li>
+  <li><a href="#introduction" id="toc-introduction"><span class="header-section-number">1</span> Introduction</a>
+  <ul>
+  <li><a href="#introduction-1" id="toc-introduction-1"><span class="header-section-number">1.1</span> Introduction</a></li>
+  <li><a href="#motivation-problem-statement" id="toc-motivation-problem-statement"><span class="header-section-number">1.2</span> Motivation: Problem Statement</a></li>
+  <li><a href="#motivation-research-question" id="toc-motivation-research-question"><span class="header-section-number">1.3</span> Motivation: Research Question</a></li>
+  <li><a href="#scope-aim-context-of-the-research" id="toc-scope-aim-context-of-the-research"><span class="header-section-number">1.4</span> Scope: Aim &amp; Context of the Research</a></li>
+  <li><a href="#significance-of-the-research-theory-of-change" id="toc-significance-of-the-research-theory-of-change"><span class="header-section-number">1.5</span> Significance of the Research: Theory of Change</a></li>
+  <li><a href="#thesis-statement-position-aim-of-the-paper" id="toc-thesis-statement-position-aim-of-the-paper"><span class="header-section-number">1.6</span> Thesis Statement &amp; Position: (Aim of the Paper)</a></li>
+  <li><a href="#overview-structure-approach-of-the-paper-roadmap-theory-of-change" id="toc-overview-structure-approach-of-the-paper-roadmap-theory-of-change"><span class="header-section-number">1.7</span> Overview: Structure &amp; Approach of the Paper (Roadmap — Theory of Change)</a></li>
+  <li><a href="#table-of-contents" id="toc-table-of-contents"><span class="header-section-number">1.8</span> Table of Contents</a></li>
+  <li><a href="#problem-statement-motivation" id="toc-problem-statement-motivation"><span class="header-section-number">1.9</span> Problem Statement — Motivation</a></li>
+  <li><a href="#aim-of-the-paper" id="toc-aim-of-the-paper"><span class="header-section-number">1.10</span> Aim of the Paper</a>
+  <ul>
+  <li><a href="#research-question-scope" id="toc-research-question-scope"><span class="header-section-number">1.10.1</span> Research Question &amp; Scope</a>
+  <ul>
+  <li><a href="#can-frontier-ai-technologies-be-utilized-to-automate-the-modeling-of-transformative-ai-risks-so-as-to-allow-for-the-prediction-of-policy-impacts" id="toc-can-frontier-ai-technologies-be-utilized-to-automate-the-modeling-of-transformative-ai-risks-so-as-to-allow-for-the-prediction-of-policy-impacts"><span class="header-section-number">1.10.1.1</span> Can frontier AI technologies be utilized to automate the modeling of transformative AI risks, so as to allow for the prediction of policy impacts?</a></li>
+  </ul></li>
+  <li><a href="#significance-of-the-research" id="toc-significance-of-the-research"><span class="header-section-number">1.10.2</span> Significance of the Research</a></li>
+  <li><a href="#section" id="toc-section"><span class="header-section-number">1.10.3</span> </a></li>
+  </ul></li>
+  <li><a href="#theory-of-change-approach-structure-of-the-paper" id="toc-theory-of-change-approach-structure-of-the-paper"><span class="header-section-number">1.11</span> Theory of Change — Approach &amp; Structure of the Paper</a></li>
+  <li><a href="#section-1" id="toc-section-1"><span class="header-section-number">1.12</span> </a></li>
+  <li><a href="#overview-table-of-contents" id="toc-overview-table-of-contents"><span class="header-section-number">1.13</span> Overview / Table of Contents</a></li>
+  </ul></li>
+  <li><a href="#context" id="toc-context"><span class="header-section-number">2</span> Context</a>
+  <ul>
+  <li><a href="#of-grade" id="toc-of-grade"><span class="header-section-number">2.0.1</span> 20% of Grade:</a></li>
+  <li><a href="#theoretical-background-considerations" id="toc-theoretical-background-considerations"><span class="header-section-number">2.1</span> Theoretical Background Considerations</a>
+  <ul>
+  <li><a href="#dag-bayesnets" id="toc-dag-bayesnets"><span class="header-section-number">2.1.1</span> DAG / BayesNets</a></li>
+  <li><a href="#state-of-the-art-mtair-explanation" id="toc-state-of-the-art-mtair-explanation"><span class="header-section-number">2.1.2</span> State of the art (MTAIR) — Explanation</a>
+  <ul>
+  <li><a href="#carlsmith-model-analytica" id="toc-carlsmith-model-analytica"><span class="header-section-number">2.1.2.1</span> Carlsmith Model (Analytica)</a></li>
+  </ul></li>
+  <li><a href="#intro-example-rainsprinklerlawn" id="toc-intro-example-rainsprinklerlawn"><span class="header-section-number">2.1.3</span> (Intro) Example — Rain/Sprinkler/Lawn</a></li>
+  </ul></li>
+  <li><a href="#methodology" id="toc-methodology"><span class="header-section-number">2.2</span> Methodology</a>
+  <ul>
+  <li><a href="#kialo" id="toc-kialo"><span class="header-section-number">2.2.1</span> Kialo</a></li>
+  <li><a href="#rainsprinklerlawn-dag" id="toc-rainsprinklerlawn-dag"><span class="header-section-number">2.2.2</span> Rain/Sprinkler/Lawn DAG</a></li>
+  <li><a href="#bayeserver" id="toc-bayeserver"><span class="header-section-number">2.2.3</span> BayeServer</a></li>
+  <li><a href="#bayesnet-extended-example" id="toc-bayesnet-extended-example"><span class="header-section-number">2.2.4</span> BayesNet — Extended Example</a></li>
+  <li><a href="#code-documentation" id="toc-code-documentation"><span class="header-section-number">2.2.5</span> Code + documentation</a></li>
+  </ul></li>
+  </ul></li>
+  <li><a href="#amtair" id="toc-amtair"><span class="header-section-number">3</span> AMTAIR</a>
+  <ul>
+  <li><a href="#of-grade-29-of-text-8700-words" id="toc-of-grade-29-of-text-8700-words"><span class="header-section-number">3.0.1</span> 20% of Grade: ~ 29% of text ~ 8700 words</a></li>
+  <li><a href="#own-carlsmith-model-implementation-explanation" id="toc-own-carlsmith-model-implementation-explanation"><span class="header-section-number">3.1</span> Own Carlsmith Model Implementation — Explanation</a></li>
+  <li><a href="#own-implementation-good-example-from-a-published-paper" id="toc-own-implementation-good-example-from-a-published-paper"><span class="header-section-number">3.2</span> Own Implementation: Good example from a published paper</a></li>
+  <li><a href="#implementation" id="toc-implementation"><span class="header-section-number">3.3</span> Implementation</a></li>
+  <li><a href="#results" id="toc-results"><span class="header-section-number">3.4</span> Results</a></li>
+  </ul></li>
+  <li><a href="#conclusion" id="toc-conclusion"><span class="header-section-number">6</span> Conclusion</a>
+  <ul>
+  <li><a href="#the-current-state-of-things-how-to-continue" id="toc-the-current-state-of-things-how-to-continue"><span class="header-section-number">6.1</span> The Current State of Things &amp; How to Continue</a></li>
+  <li><a href="#summary-key-takeaways-findings" id="toc-summary-key-takeaways-findings"><span class="header-section-number">6.2</span> Summary — Key Takeaways &amp; Findings</a>
+  <ul>
+  <li><a href="#assessing-policy-effects" id="toc-assessing-policy-effects"><span class="header-section-number">6.2.1</span> Assessing Policy Effects:</a></li>
+  <li><a href="#conditional-probability" id="toc-conditional-probability"><span class="header-section-number">6.2.2</span> Conditional Probability:</a></li>
+  <li><a href="#methodology-1" id="toc-methodology-1"><span class="header-section-number">6.2.3</span> Methodology:</a></li>
+  <li><a href="#purpose" id="toc-purpose"><span class="header-section-number">6.2.4</span> Purpose:</a></li>
+  </ul></li>
+  <li><a href="#outlook-outlook-next-steps-further-research" id="toc-outlook-outlook-next-steps-further-research"><span class="header-section-number">6.3</span> Outlook — Outlook &amp; Next Steps / Further Research</a>
+  <ul>
+  <li><a href="#scaling-up" id="toc-scaling-up"><span class="header-section-number">6.3.1</span> Scaling Up:</a></li>
+  <li><a href="#collaboration" id="toc-collaboration"><span class="header-section-number">6.3.2</span> Collaboration:</a></li>
+  <li><a href="#technological-enhancements" id="toc-technological-enhancements"><span class="header-section-number">6.3.3</span> Technological Enhancements:</a></li>
+  <li><a href="#potential-impact" id="toc-potential-impact"><span class="header-section-number">6.3.4</span> Potential Impact:</a></li>
+  <li><a href="#policy-implications-recommendations" id="toc-policy-implications-recommendations"><span class="header-section-number">6.3.6</span> Policy Implications &amp; Recommendations</a></li>
+  <li><a href="#areas-for-future-research" id="toc-areas-for-future-research"><span class="header-section-number">6.3.7</span> Areas for Future Research</a></li>
+  <li><a href="#open-questions-centralremaining-questions-feedback" id="toc-open-questions-centralremaining-questions-feedback"><span class="header-section-number">6.3.8</span> Open Questions — Central/Remaining Questions &amp; Feedback</a>
+  <ul>
+  <li><a href="#questions" id="toc-questions"><span class="header-section-number">6.3.8.1</span> Questions:</a></li>
+  <li><a href="#feedback" id="toc-feedback"><span class="header-section-number">6.3.8.2</span> Feedback:</a></li>
+  </ul></li>
+  <li><a href="#outlook-outlook-next-steps-further-research-1" id="toc-outlook-outlook-next-steps-further-research-1"><span class="header-section-number">6.3.9</span> Outlook — Outlook &amp; Next Steps / Further Research</a></li>
+  </ul></li>
+  </ul></li>
+  <li><a href="#bibliographyreferences" id="toc-bibliographyreferences">Bibliography/References</a></li>
+  <li><a href="#prefatory-apparatus-illustrations-and-terminology-quick-references" id="toc-prefatory-apparatus-illustrations-and-terminology-quick-references">Prefatory Apparatus: Illustrations and Terminology — Quick References</a>
+  <ul>
+  <li><a href="#list-of-tables" id="toc-list-of-tables">List of Tables</a></li>
+  <li><a href="#list-of-graphics-figures" id="toc-list-of-graphics-figures">List of Graphics &amp; Figures</a></li>
+  <li><a href="#list-of-abbreviations" id="toc-list-of-abbreviations">List of Abbreviations</a></li>
+  <li><a href="#glossary" id="toc-glossary">Glossary</a></li>
+  </ul></li>
+  <li><a href="#appendices" id="toc-appendices"><span class="header-section-number">7</span> Appendices</a>
+  <ul>
+  <li><a href="#appendices-1" id="toc-appendices-1"><span class="header-section-number">7.1</span> Appendices</a></li>
+  <li><a href="#appendix-a" id="toc-appendix-a"><span class="header-section-number">7.2</span> Appendix A</a></li>
+  <li><a href="#appendix-b" id="toc-appendix-b"><span class="header-section-number">7.3</span> Appendix B</a></li>
+  <li><a href="#appendix-c" id="toc-appendix-c"><span class="header-section-number">7.4</span> Appendix C</a></li>
+  <li><a href="#appendix-d" id="toc-appendix-d"><span class="header-section-number">7.5</span> Appendix D</a></li>
+  </ul></li>
+  <li><a href="#notebooks" id="toc-notebooks">Notebooks</a></li>
+  </ul>
+</nav>
+<section id="abstract" class="level1 unnumbered">
+<h1 class="unnumbered">Abstract</h1>
+<p>The coordination crisis in AI governance presents a paradoxical challenge: unprecedented investment in AI safety coexists alongside fundamental coordination failures across technical, policy, and ethical domains. These divisions systematically increase existential risk by creating safety gaps, misallocating resources, and fostering inconsistent approaches to interdependent problems. This thesis introduces AMTAIR (Automating Transformative AI Risk Modeling), a computational approach that addresses this coordination failure by automating the extraction of probabilistic world models from AI safety literature using frontier language models.</p>
+<p>The AMTAIR system implements an end-to-end pipeline that transforms unstructured text into interactive Bayesian networks through a novel two-stage extraction process: first capturing argument structure in ArgDown format, then enhancing it with probability information in BayesDown. This approach bridges communication gaps between stakeholders by making implicit models explicit, enabling comparison across different worldviews, providing a common language for discussing probabilistic relationships, and supporting policy evaluation across diverse scenarios.</p>
+<!-- [ ] Figure out Outline to Outline to Draft Workflow -->
+<!-- [ ]: Clean up the introduction -->
+<!-- [ ]: Test Quarto-Code-Links: https://quarto.org/docs/manuscripts/components.html#code-links -->
+<section id="grading" class="level2" data-number="0.1">
+<h2 data-number="0.1"><span class="header-section-number">0.1</span> Grading</h2>
+<section id="research-10" class="level3" data-number="0.1.1">
+<h3 data-number="0.1.1"><span class="header-section-number">0.1.1</span> Research (10%)</h3>
+<ul>
+<li>demonstrates knowledge of the subject area as drawn from appropriate sources</li>
+<li>incorporates insights from in-class discussions</li>
+<li>draws on appropriate additional materials beyond those covered in class (primary as well as secondary sources)</li>
+<li>covers relevant material at appropriate level of detail</li>
+</ul>
+</section>
+</section>
+<section id="structure-10" class="level2" data-number="0.2">
+<h2 data-number="0.2"><span class="header-section-number">0.2</span> Structure (10%)</h2>
+<ul>
+<li><p>outlines project clearly in the introduction</p></li>
+<li><p>discussion follows a logical order</p></li>
+<li><p>order of sections corresponds to outline</p></li>
+<li><p>uses appropriate topic and transition sentences</p></li>
+<li><p>employs proper signposting and cross-referencing throughout paper</p></li>
+<li><p>sections are appropriately numbered and headlined</p></li>
+</ul>
+<!-- ::: callout-tip -->
+</section>
+<section id="callout-test-language-style-10" class="level2" data-number="0.3">
+<h2 data-number="0.3"><span class="header-section-number">0.3</span> Callout Test — Language &amp; Style (10%)</h2>
+<ul>
+<li><p>employs appropriate tone and academic language</p></li>
+<li><p>uses effective and sophisticated sentence variety, diction, and vocabulary</p></li>
+<li><p>employs correct English spelling and grammar</p></li>
+<li><p>is clearly written and uses appropriate sentence complexity</p></li>
+<li><p>communicates main points effectively / is easy to follow</p></li>
+<li><p>formats citations and references correctly and consistently (e.g. (AUTHOR, YEAR) citation style)</p></li>
+<li><p>names all primary and secondary sources</p></li>
+<li><p>includes a complete list of references with full bibliographic details</p></li>
+</ul>
+<!-- ::: -->
+<p>More text</p>
+</section>
+</section>
+<section id="introduction" class="level1 quarto-embed-nb-cell" data-notebook="/Users/vjm/Library/Mobile Documents/iCloud~md~obsidian/Documents/Vaulty/2_DoingGood/Studies/P&amp;E/Specializations/Test_Sync_MAThesis/submission/chapters/Introduction.qmd" data-notebook-title="Introduction" data-notebook-cellId="f19d721c-c76a-4263-9263-58fc63674fd2" data-number="1">
+<h1 data-number="1"><span class="header-section-number">1</span> Introduction</h1>
+<section id="introduction-1" class="level2" data-number="1.1">
+<h2 data-number="1.1"><span class="header-section-number">1.1</span> Introduction</h2>
+<p>10% of Grade:</p>
+<ul>
+<li>introduces and motivates the core question or problem</li>
+<li>provides context for discussion (places issue within a larger debate or sphere of relevance)</li>
+<li>states precise thesis or position the author will argue for</li>
+<li>provides roadmap indicating structure and key content points of the essay</li>
+</ul>
+<p>~ 14% of text ~ 4200 words</p>
+<ul>
+<li>introduces and motivates the core question or problem</li>
+</ul>
+</section>
+<section id="motivation-problem-statement" class="level2" data-number="1.2">
+<h2 data-number="1.2"><span class="header-section-number">1.2</span> Motivation: Problem Statement</h2>
+</section>
+<section id="motivation-research-question" class="level2" data-number="1.3">
+<h2 data-number="1.3"><span class="header-section-number">1.3</span> Motivation: Research Question</h2>
+<ul>
+<li>provides context for discussion (places issue within a larger debate or sphere of relevance)</li>
+</ul>
+</section>
+<section id="scope-aim-context-of-the-research" class="level2" data-number="1.4">
+<h2 data-number="1.4"><span class="header-section-number">1.4</span> Scope: Aim &amp; Context of the Research</h2>
+</section>
+<section id="significance-of-the-research-theory-of-change" class="level2" data-number="1.5">
+<h2 data-number="1.5"><span class="header-section-number">1.5</span> Significance of the Research: Theory of Change</h2>
+<p>• states precise thesis or position the author will argue for</p>
+</section>
+<section id="thesis-statement-position-aim-of-the-paper" class="level2" data-number="1.6">
+<h2 data-number="1.6"><span class="header-section-number">1.6</span> Thesis Statement &amp; Position: (Aim of the Paper)</h2>
+<ul>
+<li>provides roadmap indicating structure and key content points of the essay</li>
+</ul>
+</section>
+<section id="overview-structure-approach-of-the-paper-roadmap-theory-of-change" class="level2" data-number="1.7">
+<h2 data-number="1.7"><span class="header-section-number">1.7</span> Overview: Structure &amp; Approach of the Paper (Roadmap — Theory of Change)</h2>
+</section>
+<section id="table-of-contents" class="level2" data-number="1.8">
+<h2 data-number="1.8"><span class="header-section-number">1.8</span> Table of Contents</h2>
+</section>
+<section id="problem-statement-motivation" class="level2" data-number="1.9">
+<h2 data-number="1.9"><span class="header-section-number">1.9</span> Problem Statement — Motivation</h2>
+<p>Continued AI Progress:</p>
+<ul>
+<li>Rapid advancements in AI technology increase both potential benefits and risks.</li>
+</ul>
+<p>Existential Risks (AI X-Risk):</p>
+<ul>
+<li>Advanced AI systems could pose significant threats if misaligned with human values.</li>
+</ul>
+<p>Complexity Challenges:</p>
+<ul>
+<li>The intricate nature of AI systems complicates policy formulation and understanding.</li>
+</ul>
+<p>Limitations of Current Approaches:</p>
+<ul>
+<li>MTAIR’s Reliance on Human Labor:
+<ul>
+<li>Modeling Transformative AI Risks (MTAIR) is constrained by manual cognitive efforts.<br />
+</li>
+</ul></li>
+<li>Need for Automation:
+<ul>
+<li>Scaling and automating risk modeling is essential to keep pace with AI developments.</li>
+</ul></li>
+</ul>
+<p>Opportunity:</p>
+<ul>
+<li>Leveraging new technologies to enhance our ability to model and mitigate AI risks.</li>
+</ul>
+</section>
+<section id="aim-of-the-paper" class="level2" data-number="1.10">
+<h2 data-number="1.10"><span class="header-section-number">1.10</span> Aim of the Paper</h2>
+<section id="research-question-scope" class="level3" data-number="1.10.1">
+<h3 data-number="1.10.1"><span class="header-section-number">1.10.1</span> Research Question &amp; Scope</h3>
+<section id="can-frontier-ai-technologies-be-utilized-to-automate-the-modeling-of-transformative-ai-risks-so-as-to-allow-for-the-prediction-of-policy-impacts" class="level4" data-number="1.10.1.1">
+<h4 data-number="1.10.1.1"><span class="header-section-number">1.10.1.1</span> Can frontier AI technologies be utilized to automate the modeling of transformative AI risks, so as to allow for the prediction of policy impacts?</h4>
+<p>Frontier AI Technology: Today’s most capable AI systems (e.g. GPT4 level LLMs)<br />
+Scaling Up: Automating the previously “manual” cognitive labor<br />
+Modeling: Formalizing the world views underlying arguments<br />
+Transformative AI: Level of AI capabilities defined by severe impact on the world<br />
+Safety &amp; Governance Literature: Publications, reports etc. concerned with risks from AI</p>
+<p>Automated Estimation: Non-manual (AI systems + scaffolding), quantified evaluations<br />
+Probability Distributions: Formal expressions of the expectations over future worlds<br />
+Conditional Trees of Possible Worlds: “If … then…” reasoning over ways things may play out<br />
+Forecasting Policy Impacts: Qualitative &amp; quantitative evaluation of expected outcomes</p>
+</section>
+</section>
+<section id="significance-of-the-research" class="level3" data-number="1.10.2">
+<h3 data-number="1.10.2"><span class="header-section-number">1.10.2</span> Significance of the Research</h3>
+</section>
+<section id="section" class="level3" data-number="1.10.3">
+<h3 data-number="1.10.3"><span class="header-section-number">1.10.3</span> </h3>
+</section>
+</section>
+<section id="theory-of-change-approach-structure-of-the-paper" class="level2" data-number="1.11">
+<h2 data-number="1.11"><span class="header-section-number">1.11</span> Theory of Change — Approach &amp; Structure of the Paper</h2>
+<p>Multiplicative Benefits:</p>
+<ul>
+<li>Automation × Live Prediction Market Integrations × Policy Impact Evaluations</li>
+</ul>
+<p>Explanation:<br />
+Automation:</p>
+<ul>
+<li><p>Increases efficiency and scalability of risk modeling.</p>
+<p>Live Prediction Markets:</p></li>
+<li><p>Provides up-to-date, collective intelligence to inform models.</p>
+<p>Policy Impact Evaluations:</p></li>
+<li><p>Improves the accuracy and relevance of policy assessments.</p></li>
+</ul>
+<p>Outcome:</p>
+<ul>
+<li>Enhanced ability to develop effective policies that mitigate AI risks.</li>
+</ul>
+<p>Visual Aid:</p>
+<ul>
+<li>A diagram illustrating how each component amplifies the others, leading to greater overall impact.</li>
+</ul>
+</section>
+<section id="section-1" class="level2" data-number="1.12">
+<h2 data-number="1.12"><span class="header-section-number">1.12</span> </h2>
+</section>
+<section id="overview-table-of-contents" class="level2" data-number="1.13">
+<h2 data-number="1.13"><span class="header-section-number">1.13</span> Overview / Table of Contents</h2>
+</section>
+</section>
+<section id="context" class="level1 quarto-embed-nb-cell" data-notebook="/Users/vjm/Library/Mobile Documents/iCloud~md~obsidian/Documents/Vaulty/2_DoingGood/Studies/P&amp;E/Specializations/Test_Sync_MAThesis/submission/chapters/Context.qmd" data-notebook-title="Context" data-notebook-cellId="c72e7a53-afa2-42e6-8531-cb6abbeedfdb" data-number="2">
+<h1 data-number="2"><span class="header-section-number">2</span> Context</h1>
+<section id="of-grade" class="level3" data-number="2.0.1">
+<h3 data-number="2.0.1"><span class="header-section-number">2.0.1</span> 20% of Grade:</h3>
+<ul>
+<li><p>demonstrates understanding of all relevant core concepts</p></li>
+<li><p>explains why the question/thesis/problem is relevant in student’s own words (supported by quotations)</p></li>
+<li><p>situates it within the debate/course material</p></li>
+<li><p>reconstructs selected arguments and identifies relevant assumptions</p></li>
+<li><p>describes additional relevant material that has been consulted and integrates it with the course material as well as the research question/thesis/problem</p></li>
+</ul>
+<p>~ 29% of text ~ 8700 words</p>
+<ol type="1">
+<li>successively (chunk my chunk) introduce concepts/ideas — and 2. ground each with existing literature</li>
+</ol>
+<!-- ---
+title: "Background"
+# Control if this file starts numbering
+numbering:
+  start-at: 2      # Start at Section 1
+  level: 2         # Chapter level
+--- -->
+</section>
+<section id="theoretical-background-considerations" class="level2" data-number="2.1">
+<h2 data-number="2.1"><span class="header-section-number">2.1</span> Theoretical Background Considerations</h2>
+<section id="dag-bayesnets" class="level3" data-number="2.1.1">
+<h3 data-number="2.1.1"><span class="header-section-number">2.1.1</span> DAG / BayesNets</h3>
+</section>
+<section id="state-of-the-art-mtair-explanation" class="level3" data-number="2.1.2">
+<h3 data-number="2.1.2"><span class="header-section-number">2.1.2</span> State of the art (MTAIR) — Explanation</h3>
+<section id="carlsmith-model-analytica" class="level4" data-number="2.1.2.1">
+<h4 data-number="2.1.2.1"><span class="header-section-number">2.1.2.1</span> Carlsmith Model (Analytica)</h4>
+</section>
+</section>
+<section id="intro-example-rainsprinklerlawn" class="level3" data-number="2.1.3">
+<h3 data-number="2.1.3"><span class="header-section-number">2.1.3</span> (Intro) Example — Rain/Sprinkler/Lawn</h3>
+<p>/ Rain/Sprinkler/Lawn DAG / BayesNet — Extended Example</p>
+<pre><code>…</code></pre>
+<p>Own Position/Argument: AMTAIR … Own Rain/Sprinkler/Lawn DAG / BayesNet Implementation</p>
+<!-- ---
+title: "Methodology"
+# Control if this file starts numbering
+numbering:
+  start-at: 2      # Start at Section 1
+  level: 2         # Chapter level
+--- -->
+</section>
+</section>
+<section id="methodology" class="level2" data-number="2.2">
+<h2 data-number="2.2"><span class="header-section-number">2.2</span> Methodology</h2>
+<p>MTAIR / Carlsmith Model (Analytica) — Explanation (— is motivation: should come first)</p>
+<section id="kialo" class="level3" data-number="2.2.1">
+<h3 data-number="2.2.1"><span class="header-section-number">2.2.1</span> Kialo</h3>
+</section>
+<section id="rainsprinklerlawn-dag" class="level3" data-number="2.2.2">
+<h3 data-number="2.2.2"><span class="header-section-number">2.2.2</span> Rain/Sprinkler/Lawn DAG</h3>
+</section>
+<section id="bayeserver" class="level3" data-number="2.2.3">
+<h3 data-number="2.2.3"><span class="header-section-number">2.2.3</span> BayeServer</h3>
+</section>
+<section id="bayesnet-extended-example" class="level3" data-number="2.2.4">
+<h3 data-number="2.2.4"><span class="header-section-number">2.2.4</span> BayesNet — Extended Example</h3>
+</section>
+<section id="code-documentation" class="level3" data-number="2.2.5">
+<h3 data-number="2.2.5"><span class="header-section-number">2.2.5</span> Code + documentation</h3>
+</section>
+</section>
+</section>
+<section id="amtair" class="level1 quarto-embed-nb-cell" data-notebook="/Users/vjm/Library/Mobile Documents/iCloud~md~obsidian/Documents/Vaulty/2_DoingGood/Studies/P&amp;E/Specializations/Test_Sync_MAThesis/submission/chapters/AMTAIR.qmd" data-notebook-title="AMTAIR" data-notebook-cellId="b6d1ccc7-d5e4-4c44-a778-672548c30c19" data-number="3">
+<h1 data-number="3"><span class="header-section-number">3</span> AMTAIR</h1>
+<section id="of-grade-29-of-text-8700-words" class="level3" data-number="3.0.1">
+<h3 data-number="3.0.1"><span class="header-section-number">3.0.1</span> 20% of Grade: ~ 29% of text ~ 8700 words</h3>
+<ul>
+<li>provides critical or constructive evaluation of positions introduced</li>
+<li>develops strong (plausible) argument in support of author’s own position/thesis</li>
+<li>argument draws on relevant course material claim/argument</li>
+<li>demonstrate understanding of the course materials incl. key arguments and core concepts within the debate</li>
+<li>claim/argument is original or insightful, possibly even presents an original contribution to the debate</li>
+</ul>
+</section>
+<section id="own-carlsmith-model-implementation-explanation" class="level2" data-number="3.1">
+<h2 data-number="3.1"><span class="header-section-number">3.1</span> Own Carlsmith Model Implementation — Explanation</h2>
+</section>
+<section id="own-implementation-good-example-from-a-published-paper" class="level2" data-number="3.2">
+<h2 data-number="3.2"><span class="header-section-number">3.2</span> Own Implementation: Good example from a published paper</h2>
+</section>
+<section id="implementation" class="level2" data-number="3.3">
+<h2 data-number="3.3"><span class="header-section-number">3.3</span> Implementation</h2>
+<p>TestText</p>
+</section>
+<section id="results" class="level2" data-number="3.4">
+<h2 data-number="3.4"><span class="header-section-number">3.4</span> Results</h2>
+<p>TestText</p>
+<!-- No Headings after .md inclusion (creates a fatal bug with the ToC) -->
+</section>
+</section>
+<div class="quarto-embed-nb-cell" data-notebook="/Users/vjm/Library/Mobile Documents/iCloud~md~obsidian/Documents/Vaulty/2_DoingGood/Studies/P&amp;E/Specializations/Test_Sync_MAThesis/submission/chapters/Discussion.qmd" data-notebook-title="Discussion" data-notebook-cellId="24e67ea3-9f1b-4065-99fd-760f4f1a1313">
+<section id="discussion" class="level1" data-number="4">
+<h1 data-number="4"><span class="header-section-number">4</span> Discussion</h1>
+<section id="discussion-1" class="level2" data-number="4.1">
+<h2 data-number="4.1"><span class="header-section-number">4.1</span> Discussion</h2>
+<p>10% of Grade: ~ 14% of text ~ 4200 words</p>
+<ul>
+<li>discusses a specific objection to student’s own argument</li>
+<li>provides a convincing reply that bolsters or refines the main argument</li>
+<li>relates to or extends beyond materials/arguments covered in class</li>
+</ul>
+</section>
+</section>
+<section id="discussion-exchange-controversy-influence" class="level1" data-number="5">
+<h1 data-number="5"><span class="header-section-number">5</span> Discussion — Exchange, Controversy &amp; Influence</h1>
+<section id="challenges-problems-red-teaming-problems-failures-downsides" class="level2" data-number="5.1">
+<h2 data-number="5.1"><span class="header-section-number">5.1</span> Challenges &amp; Problems — Red Teaming Problems, Failures &amp; Downsides</h2>
+<pre><code>Potential Failures:</code></pre>
+<ul>
+<li><p>Data Issues: Inaccurate or biased inputs.</p></li>
+<li><p>Model Limitations: Oversimplifications.</p></li>
+<li><p>Tech Risks: AI misinterpretations.</p>
+<p>Red Teaming:</p></li>
+<li><p>Stress-testing models to find weaknesses.</p>
+<p>Impact on Theory of Change:</p></li>
+<li><p>Identifying points of failure strengthens the approach.</p></li>
+</ul>
+</section>
+<section id="implications-impact-uptake-feedback-loops-uptake-success-green-teaming" class="level2" data-number="5.2">
+<h2 data-number="5.2"><span class="header-section-number">5.2</span> Implications &amp; Impact — Uptake, Feedback Loops, Uptake &amp; Success – Green Teaming –</h2>
+<pre><code>Potential Outcomes:</code></pre>
+<ul>
+<li><p>First-Order: Reduced AI risks through better policies.</p></li>
+<li><p>Second-Order: Enhanced collaboration.</p></li>
+<li><p>Third-Order: Framework applied to other global risks.</p>
+<p>Feedback Loops:</p></li>
+<li><p>Continuous model improvement.</p></li>
+<li><p>Adaptive policy-making.</p>
+<p>Green Teaming:</p></li>
+<li><p>Strategies to maximize positive impacts.</p></li>
+</ul>
+</section>
+<section id="known-unknowns-unknown-unknowns-input-data-example-modeling-author-worldviews-from-bibliographies-instead-of-individual-papers" class="level2" data-number="5.3">
+<h2 data-number="5.3"><span class="header-section-number">5.3</span> Known Unknowns &amp; Unknown Unknowns — Input Data Example: Modeling Author Worldviews from Bibliographies Instead of Individual Papers</h2>
+<pre><code>Potential Outcomes:</code></pre>
+<ul>
+<li><p>First-Order: Reduced AI risks through better policies.</p></li>
+<li><p>Second-Order: Enhanced collaboration.</p></li>
+<li><p>Third-Order: Framework applied to other global risks.</p>
+<p>Feedback Loops:</p></li>
+<li><p>Continuous model improvement.</p></li>
+<li><p>Adaptive policy-making.</p>
+<p>Green Teaming:</p></li>
+<li><p>Strategies to maximize positive impacts.</p></li>
+</ul>
+</section>
+</section>
+</div>
+<section id="conclusion" class="level1 quarto-embed-nb-cell" data-notebook="/Users/vjm/Library/Mobile Documents/iCloud~md~obsidian/Documents/Vaulty/2_DoingGood/Studies/P&amp;E/Specializations/Test_Sync_MAThesis/submission/chapters/Conclusion.qmd" data-notebook-title="Conclusion" data-notebook-cellId="f033ce82-1351-41e0-8370-a2b9558827ea" data-number="6">
+<h1 data-number="6"><span class="header-section-number">6</span> Conclusion</h1>
+<section id="the-current-state-of-things-how-to-continue" class="level2" data-number="6.1">
+<h2 data-number="6.1"><span class="header-section-number">6.1</span> The Current State of Things &amp; How to Continue</h2>
+<p>10% of Grade: ~ 14% of text ~ 4200 words</p>
+<ul>
+<li>summarizes thesis and line of argument</li>
+<li>outlines possible implications</li>
+<li>notes outstanding issues / limitations of discussion</li>
+<li>points to avenues for further research</li>
+<li>overall conclusion is in line with introduction</li>
+</ul>
+</section>
+<section id="summary-key-takeaways-findings" class="level2" data-number="6.2">
+<h2 data-number="6.2"><span class="header-section-number">6.2</span> Summary — Key Takeaways &amp; Findings</h2>
+<section id="assessing-policy-effects" class="level3" data-number="6.2.1">
+<h3 data-number="6.2.1"><span class="header-section-number">6.2.1</span> Assessing Policy Effects:</h3>
+<p>Evaluating how different policies alter P(Doom).</p>
+</section>
+<section id="conditional-probability" class="level3" data-number="6.2.2">
+<h3 data-number="6.2.2"><span class="header-section-number">6.2.2</span> Conditional Probability:</h3>
+<p>Calculating P(Doom | Policy Alpha).</p>
+</section>
+<section id="methodology-1" class="level3" data-number="6.2.3">
+<h3 data-number="6.2.3"><span class="header-section-number">6.2.3</span> Methodology:</h3>
+<p>Update model parameters based on policy implementation.</p>
+<p>Recompute probabilities accordingly.</p>
+</section>
+<section id="purpose" class="level3" data-number="6.2.4">
+<h3 data-number="6.2.4"><span class="header-section-number">6.2.4</span> Purpose:</h3>
+<p>Inform policymakers of potential policy effectiveness.</p>
+<p>Prioritize interventions that significantly reduce risks.</p>
+</section>
+</section>
+<section id="outlook-outlook-next-steps-further-research" class="level2" data-number="6.3">
+<h2 data-number="6.3"><span class="header-section-number">6.3</span> Outlook — Outlook &amp; Next Steps / Further Research</h2>
+<section id="scaling-up" class="level3" data-number="6.3.1">
+<h3 data-number="6.3.1"><span class="header-section-number">6.3.1</span> Scaling Up:</h3>
+<ul>
+<li>Include more variables and data sources.</li>
+</ul>
+</section>
+<section id="collaboration" class="level3" data-number="6.3.2">
+<h3 data-number="6.3.2"><span class="header-section-number">6.3.2</span> Collaboration:</h3>
+<ul>
+<li>Partner with policymakers and researchers.</li>
+</ul>
+</section>
+<section id="technological-enhancements" class="level3" data-number="6.3.3">
+<h3 data-number="6.3.3"><span class="header-section-number">6.3.3</span> Technological Enhancements:</h3>
+<ul>
+<li>Employ advanced AI techniques.</li>
+</ul>
+</section>
+<section id="potential-impact" class="level3" data-number="6.3.4">
+<h3 data-number="6.3.4"><span class="header-section-number">6.3.4</span> Potential Impact:</h3>
+<ul>
+<li><p>Influence global AI governance.</p>
+<h3 id="limitations-of-the-analysis" data-number="6.3.5"><span class="header-section-number">6.3.5</span> Limitations of the Analysis</h3></li>
+</ul>
+</section>
+<section id="policy-implications-recommendations" class="level3" data-number="6.3.6">
+<h3 data-number="6.3.6"><span class="header-section-number">6.3.6</span> Policy Implications &amp; Recommendations</h3>
+</section>
+<section id="areas-for-future-research" class="level3" data-number="6.3.7">
+<h3 data-number="6.3.7"><span class="header-section-number">6.3.7</span> Areas for Future Research</h3>
+</section>
+<section id="open-questions-centralremaining-questions-feedback" class="level3" data-number="6.3.8">
+<h3 data-number="6.3.8"><span class="header-section-number">6.3.8</span> Open Questions — Central/Remaining Questions &amp; Feedback</h3>
+<section id="questions" class="level4" data-number="6.3.8.1">
+<h4 data-number="6.3.8.1"><span class="header-section-number">6.3.8.1</span> Questions:</h4>
+<ul>
+<li>How can we improve automation accuracy?<br />
+</li>
+<li>What challenges exist in policy implementation?<br />
+</li>
+<li>How do we mitigate AI model biases?<br />
+</li>
+<li>How can interdisciplinary efforts enhance outcomes?</li>
+</ul>
+</section>
+<section id="feedback" class="level4" data-number="6.3.8.2">
+<h4 data-number="6.3.8.2"><span class="header-section-number">6.3.8.2</span> Feedback:</h4>
+<ul>
+<li>Invite thoughts, critiques, and suggestions.</li>
+</ul>
+</section>
+</section>
+<section id="outlook-outlook-next-steps-further-research-1" class="level3" data-number="6.3.9">
+<h3 data-number="6.3.9"><span class="header-section-number">6.3.9</span> Outlook — Outlook &amp; Next Steps / Further Research</h3>
+</section>
+</section>
+</section>
+<!-- {{< include context/GradingRubric.md >}} -->
+<section id="bibliographyreferences" class="level2 unnumbered">
+<h2 class="unnumbered">Bibliography/References</h2>
+<div id="refs" role="list">
+
+</div>
+</section>
+<section id="prefatory-apparatus-illustrations-and-terminology-quick-references" class="level1 unnumbered">
+<h1 class="unnumbered">Prefatory Apparatus: Illustrations and Terminology — Quick References</h1>
+<!-- {{< embed chapters/Frontmatter.qmd >}}  -->
+<section id="list-of-tables" class="level2 unnumbered">
+<h2 class="unnumbered">List of Tables</h2>
+<p>Table 1: Table name</p>
+<p>Table 2: Table name</p>
+<p>Table 3: Table name</p>
+</section>
+<section id="list-of-graphics-figures" class="level2 unnumbered">
+<h2 class="unnumbered">List of Graphics &amp; Figures</h2>
+</section>
+<section id="list-of-abbreviations" class="level2 unnumbered">
+<h2 class="unnumbered">List of Abbreviations</h2>
+<p>esp. especially</p>
+<p>f., ff. following</p>
+<p>incl. including</p>
+<p>p., pp. page(s)</p>
+<p>MAD Mutually Assured Destruction</p>
+</section>
+<section id="glossary" class="level2 unnumbered">
+<h2 class="unnumbered">Glossary</h2>
+<dl>
+<dt>term</dt>
+<dd>
+<p>Definition of term</p>
+</dd>
+<dt>Another term</dt>
+<dd>
+<p>Description of second term</p>
+</dd>
+</dl>
+<p>Text</p>
+<!-- # Affidavit {.unnumbered} -->
+</section>
+</section>
+<section id="appendices" class="level1 quarto-embed-nb-cell" data-notebook="/Users/vjm/Library/Mobile Documents/iCloud~md~obsidian/Documents/Vaulty/2_DoingGood/Studies/P&amp;E/Specializations/Test_Sync_MAThesis/submission/chapters/Appendices.qmd" data-notebook-title="Appendices" data-notebook-cellId="66f55ce1-d4e4-4377-be30-005a37fa8c63" data-number="7">
+<h1 data-number="7"><span class="header-section-number">7</span> Appendices</h1>
+<section id="appendices-1" class="level2" data-number="7.1">
+<h2 data-number="7.1"><span class="header-section-number">7.1</span> Appendices</h2>
+</section>
+<section id="appendix-a" class="level2" data-number="7.2">
+<h2 data-number="7.2"><span class="header-section-number">7.2</span> Appendix A</h2>
+</section>
+<section id="appendix-b" class="level2" data-number="7.3">
+<h2 data-number="7.3"><span class="header-section-number">7.3</span> Appendix B</h2>
+</section>
+<section id="appendix-c" class="level2" data-number="7.4">
+<h2 data-number="7.4"><span class="header-section-number">7.4</span> Appendix C</h2>
+</section>
+<section id="appendix-d" class="level2" data-number="7.5">
+<h2 data-number="7.5"><span class="header-section-number">7.5</span> Appendix D</h2>
+<p>TestText</p>
+<!-- ## Affidavit -->
+</section>
+</section>
+<section id="notebooks" class="level1 unnumbered">
+<h1 class="unnumbered">Notebooks</h1>
+</section>
+
+</main>
+<!-- /main column -->
+<script id = "quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copied!");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copied!");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+        const codeEl = trigger.previousElementSibling.cloneNode(true);
+        for (const childEl of codeEl.children) {
+          if (isCodeAnnotation(childEl)) {
+            childEl.remove();
+          }
+        }
+        return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp('/' + window.location.host + '/');
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+</div> <!-- /content -->
+
+</body>
+
+</html>
