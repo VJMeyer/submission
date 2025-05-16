@@ -1,0 +1,182 @@
+---
+title: "Automating the Modelling of Transformative Artificial Intelligence Risks"
+subtitle: "An Epistemic Framework for Leveraging Frontier AI Systems to Upscale Conditional Policy Assessments in Bayesian Networks on a Narrow Path towards Existential Safety"
+#title-block-banner: true
+#title-block-banner: latex/uni-bayreuth-logo.png
+author:
+  - name: Valentin Jakob Meyer
+    orcid: 0009-0006-0889-5269
+    corresponding: true
+    email: Valentin.Meyer@uni-bayreuth.de
+    roles:
+      GraduateAuthor
+#      - Investigation
+#      - Project administration
+#      - Software
+#      - Visualization
+    affiliations:
+      - University of Bayreuth
+      - MCMP — LMU Munich
+  - name: Dr. Timo Speith       # <!-- [ ] add email, supervisor title-->
+    orcid: 0000-0002-6675-154X    # from https://orcid.org/0000-0002-6675-154X
+    corresponding: false
+    roles: Supervisor
+#      [Supervisor]
+    affiliations:
+      - University of Bayreuth
+keywords:
+  - AMTAIR
+  - AI Governance
+  - Bayesian Networks
+  - Transformative AI
+  - Risk Assessment
+  - Argument Extraction
+abstract: |
+  This thesis addresses coordination problems in AI safety by creating tools that automatically extract and formalize the assumptions and models underlying different approaches to AI governance.
+  By transforming complex arguments into interactive visualizations showing relationships and probabilities, AMTAIR helps bridge communication gaps between technical researchers, policy specialists, and other stakeholders working to address risks from advanced AI.
+plain-language-summary: |
+  This thesis addresses coordination problems in AI safety by creating tools that automatically
+  extract and formalize the assumptions and models underlying different approaches to AI governance.
+  By transforming complex arguments into interactive visualizations showing relationships and
+  probabilities, AMTAIR helps bridge communication gaps between technical researchers, policy
+  specialists, and other stakeholders working to address risks from advanced AI.
+key-points:
+  - A novel extraction pipeline transforms argument structures into Bayesian networks through a two-stage process
+  - Interactive visualizations make complex probabilistic relationships accessible to diverse stakeholders
+  - Formal representation enables comparison across different worldviews and assumptions
+  - The approach addresses coordination failures by creating a common language for AI risk assessment
+metadata-submission:
+  field-of-study: "Philosophy & Economics M.A."
+  matriculation-number: 1828610
+  submission-date: "May 26, 2025"
+  word-count: 30000
+date: "2025-05-26"
+bibliography: ref/MAref.bib
+citation:
+  container-title: University of Bayreuth
+number-sections: true
+---
+
+# Abstract {.unnumbered}
+
+The coordination crisis in AI governance presents a paradoxical challenge: unprecedented investment in AI safety coexists alongside fundamental coordination failures across technical, policy, and ethical domains. These divisions systematically increase existential risk by creating safety gaps, misallocating resources, and fostering inconsistent approaches to interdependent problems. This thesis introduces AMTAIR (Automating Transformative AI Risk Modeling), a computational approach that addresses this coordination failure by automating the extraction of probabilistic world models from AI safety literature using frontier language models.
+
+The AMTAIR system implements an end-to-end pipeline that transforms unstructured text into interactive Bayesian networks through a novel two-stage extraction process: first capturing argument structure in ArgDown format, then enhancing it with probability information in BayesDown. This approach bridges communication gaps between stakeholders by making implicit models explicit, enabling comparison across different worldviews, providing a common language for discussing probabilistic relationships, and supporting policy evaluation across diverse scenarios.
+
+<!-- [ ] Figure out Outline to Outline to Draft Workflow -->
+
+<!-- [ ]: Clean up the introduction -->
+
+<!-- [ ]: Test Quarto-Code-Links: https://quarto.org/docs/manuscripts/components.html#code-links -->
+
+```{r}
+# [ ]: Configure the Quarto Manuscript options: https://quarto.org/docs/manuscripts/components.html#including-notebooks
+```
+
+## Grading
+
+### Research (10%)
+
+-   demonstrates knowledge of the subject area as drawn from appropriate sources
+-   incorporates insights from in-class discussions
+-   draws on appropriate additional materials beyond those covered in class (primary as well as secondary sources)
+-   covers relevant material at appropriate level of detail
+
+## Structure (10%)
+
+-   outlines project clearly in the introduction
+
+-   discussion follows a logical order
+
+-   order of sections corresponds to outline
+
+-   uses appropriate topic and transition sentences
+
+-   employs proper signposting and cross-referencing throughout paper
+
+-   sections are appropriately numbered and headlined
+
+<!-- ::: callout-tip -->
+
+## Callout Test — Language & Style (10%)
+
+-   employs appropriate tone and academic language
+
+-   uses effective and sophisticated sentence variety, diction, and vocabulary
+
+-   employs correct English spelling and grammar
+
+-   is clearly written and uses appropriate sentence complexity
+
+-   communicates main points effectively / is easy to follow
+
+-   formats citations and references correctly and consistently (e.g. (AUTHOR, YEAR) citation style)
+
+-   names all primary and secondary sources
+
+-   includes a complete list of references with full bibliographic details
+
+<!-- ::: -->
+
+More text
+
+{{< embed chapters/Introduction.qmd >}}
+
+{{< embed chapters/Context.qmd >}}
+
+{{< embed chapters/AMTAIR.qmd >}}
+
+{{< embed chapters/Discussion.qmd >}}
+
+{{< embed chapters/Conclusion.qmd >}}
+
+<!-- {{< include context/GradingRubric.md >}} -->
+
+## Bibliography/References {.unnumbered}
+
+::: {#refs}
+:::
+
+# Prefatory Apparatus: Illustrations and Terminology --- Quick References {.unnumbered}
+
+<!-- {{< embed chapters/Frontmatter.qmd >}}  -->
+
+## List of Tables {.unnumbered}
+
+Table 1: Table name
+
+Table 2: Table name
+
+Table 3: Table name
+
+## List of Graphics & Figures {.unnumbered}
+
+## List of Abbreviations {.unnumbered}
+
+esp. especially
+
+f., ff. following
+
+incl. including
+
+p., pp. page(s)
+
+MAD Mutually Assured Destruction
+
+## Glossary {.unnumbered}
+
+term
+
+:   Definition of term
+
+Another term
+
+:   Description of second term
+
+Text
+
+<!-- # Affidavit {.unnumbered} -->
+
+{{< embed chapters/Appendices.qmd >}}
+
+# Notebooks {.unnumbered}
