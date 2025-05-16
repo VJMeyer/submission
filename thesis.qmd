@@ -17,7 +17,8 @@ author:
     affiliations:
       - University of Bayreuth
       - MCMP — LMU Munich
-  - name: Dr. Timo Speith
+  - name: Dr. Timo Speith       # <!-- [ ] add email, supervisor title-->
+    orcid: 0000-0002-6675-154X    # from https://orcid.org/0000-0002-6675-154X
     corresponding: false
     roles: Supervisor
 #      [Supervisor]
