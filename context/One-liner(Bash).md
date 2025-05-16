@@ -11,4 +11,4 @@ find . -type f \( -name "*.qmd"  -o -name "*.tex" -o -name "*.yml" \) \
     echo -e "## $file\n"; 
     grep -v -e "<script" -e "<div" -e "<style" -e "</script" -e "</div" -e "</style" "$file" | grep -v "^\s*\\\\n"; 
     echo -e "\n\n"; 
-  done > repo_source_$(date +%Y%m%d).md
+  done > repo_overview/repo_source_$(date +%Y%m%d).md
