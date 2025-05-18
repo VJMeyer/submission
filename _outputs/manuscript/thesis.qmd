@@ -55,7 +55,16 @@ bibliography: ref/MAref.bib
 citation:
   container-title: University of Bayreuth
 number-sections: true
+reference-location: margin
+citation-location: margin   #   https://quarto.org/docs/authoring/article-layout.html
+
 ---
+# Table of Contents
+
+<!-- ::: {.content-visible when-format="pdf"}
+\listoffigures
+::: -->
+
 
 # Abstract {.unnumbered}
 
@@ -65,9 +74,9 @@ The AMTAIR system implements an end-to-end pipeline that transforms unstructured
 
 ## Figure Testing
 
-[![Caption/Title](images/cover.png){#fig-testgraphic fig-alt="Alt Text / Description." fig-align="left" width="20%" fig-scap="Short caption"}](https://vjmeyer.com)
+<!-- [![Caption/Title](images/cover.png){#fig-testgraphic fig-alt="Alt Text / Description." fig-align="left" width="20%" fig-scap="Short caption"}](https://vjmeyer.com) -->
 
-Testing crossreferencing grapics @fig-testgraphic.
+<!-- Testing crossreferencing grapics @fig-testgraphic. -->
 
 <!-- [ ] Figure out Outline to Outline to Draft Workflow -->
 
@@ -123,6 +132,13 @@ Testing crossreferencing grapics @fig-testgraphic.
 -   includes a complete list of references with full bibliographic details
 
 <!-- ::: -->
+<!-- 
+![Caption/Title 2](/images/cover.png){#fig-testgraphic2 fig-scap="Short 2 caption" fig-alt="2nd Alt Text / Description." fig-align="left" width="30%"}
+
+
+
+Testing crossreferencing grapics @fig-testgraphic2. -->
+
 
 More text
 
@@ -155,7 +171,7 @@ Table 2: Table name
 
 Table 3: Table name
 
-## MANUAL List of Graphics & Figures {.unnumbered}
+<!-- ## MANUAL List of Graphics & Figures {.lof} -->
 
 ## MANUAL List of Abbreviations {.unnumbered}
 

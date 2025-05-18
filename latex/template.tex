@@ -1,5 +1,5 @@
 % Main template for University of Bayreuth thesis
-\documentclass[12pt,a4paper]{report}      %   vs book
+\documentclass[12pt,a4paper]{report}
 
 % Import custom packages and settings
 $preamble-includes$
@@ -10,7 +10,6 @@ $preamble-includes$
 \usepackage{booktabs}
 \usepackage{bookmark}
 \usepackage{hyperref}
-%\usepackage(tocbibind)
 
 % Define custom commands for metadata
 \newcommand{\subtitle}{$subtitle$}
@@ -28,20 +27,103 @@ $preamble-includes$
 % Create custom title page
 \input{latex/title-page.tex}
 
-% \pagenumbering{arabic} % Switch to Arabic page numbering
-% \setcounter{page}{1} % Reset page numbers to 1
+% Table of contents
+$if(toc)$
+\tableofcontents
+$endif$
 
-% Rest of document
-% \listoffigures
-% \input{\listoffigures}
 
+
+% Main content
 $body$
 
+% List of figures - explicitly added
+$if(lof)$
+\listoffigures
+$endif$
+
 % Add affidavit at the end but still within document environment
-% \pagenumbering{Roman} % Switch to Roman page numbering
 \input{latex/affidavit.tex}
 
 \end{document}
+
+
+
+
+
+
+% Prior versions of template below
+
+
+
+
+
+
+
+
+
+
+
+
+% % Main template for University of Bayreuth thesis
+% \documentclass[12pt,a4paper]{report}      %   vs book
+
+% % Import custom packages and settings
+% $preamble-includes$
+
+% % Set page geometry
+% \usepackage[a4paper,margin=2.5cm]{geometry}
+% \usepackage{graphicx}
+% \usepackage{booktabs}
+% \usepackage{bookmark}
+% \usepackage{hyperref}
+% %\usepackage(tocbibind)
+
+% % Define custom commands for metadata
+% \newcommand{\subtitle}{$subtitle$}
+% \newcommand{\supervisorname}{$if(supervisor)$$supervisor$$else$Supervisor Name$endif$}
+% \newcommand{\fieldofstudy}{$metadata-submission.field-of-study$}
+% \newcommand{\matriculationnumber}{$metadata-submission.matriculation-number$}
+% \newcommand{\submissiondate}{$metadata-submission.submission-date$}
+% \newcommand{\wordcount}{$metadata-submission.word-count$}
+% \providecommand{\tightlist}{%
+%   \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+
+% % Standard document begins
+% \begin{document}
+
+% % Create custom title page
+% \input{latex/title-page.tex}
+
+% % \pagenumbering{arabic} % Switch to Arabic page numbering
+% % \setcounter{page}{1} % Reset page numbers to 1
+
+% % Rest of document
+% % \listoffigures
+% % \input{\listoffigures}
+
+% $body$
+
+% % Add affidavit at the end but still within document environment
+% % \pagenumbering{Roman} % Switch to Roman page numbering
+% \input{latex/affidavit.tex}
+
+% \end{document}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 % % After loading packages but before \begin{document}
