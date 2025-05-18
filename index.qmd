@@ -4,9 +4,12 @@ This is a Quarto book.
 
 To learn more about Quarto books visit <https://quarto.org/docs/books>.
 
-# Abstract
-
-# Outline(s): Table of Contents
-
+# Abstract {#sec-Abstract}
+```{latex}
+\listoffigures
+```
+# Outline(s): Table of Contents {#sec-ToC}
 
 <!-- {{< include chapters/Outlining-Workflow.md >}} -->
+
+

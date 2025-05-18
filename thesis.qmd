@@ -55,6 +55,9 @@ bibliography: ref/MAref.bib
 citation:
   container-title: University of Bayreuth
 number-sections: true
+reference-location: margin
+citation-location: margin   #   https://quarto.org/docs/authoring/article-layout.html
+
 ---
 
 # Abstract {.unnumbered}

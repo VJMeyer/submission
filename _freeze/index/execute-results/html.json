@@ -1,0 +1,12 @@
+{
+  "hash": "380862e6ee4f890c430355a2fd9313b4",
+  "result": {
+    "engine": "jupyter",
+    "markdown": "# Preface {.unnumbered}\n\nThis is a Quarto book.\n\nTo learn more about Quarto books visit <https://quarto.org/docs/books>.\n\n# Abstract\n```{latex}\n\\listoffigures\n```\n# Outline(s): Table of Contents\n\n<!-- {{< include chapters/Outlining-Workflow.md >}} -->\n\n",
+    "supporting": [
+      "index_files/figure-html"
+    ],
+    "filters": [],
+    "includes": {}
+  }
+}

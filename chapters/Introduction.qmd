@@ -23,6 +23,8 @@ numbering:
 
 Testing crossreferencing grapics @fig-testgraphic2.
 
+\listoffigures
+
 ## Motivation: Problem Statement
 
 ## Motivation: Research Question
