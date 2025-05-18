@@ -1,65 +1,5 @@
 [
   {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "Automating the Modelling of Transformative Artificial Intelligence Risks",
-    "section": "",
-    "text": "Preface\nThis is a Quarto book.\nTo learn more about Quarto books visit https://quarto.org/docs/books.\n\n\nAbstract\n\\listoffigures\n\n\nOutline(s): Table of Contents",
-    "crumbs": [
-      "Preface"
-    ]
-  },
-  {
-    "objectID": "chapters/Frontmatter.html",
-    "href": "chapters/Frontmatter.html",
-    "title": "Frontmatter",
-    "section": "",
-    "text": "Prefatory Apparatus: Illustrations and Terminology — Quick References",
-    "crumbs": [
-      "Frontmatter"
-    ]
-  },
-  {
-    "objectID": "chapters/Frontmatter.html#list-of-tables",
-    "href": "chapters/Frontmatter.html#list-of-tables",
-    "title": "Frontmatter",
-    "section": "List of Tables",
-    "text": "List of Tables\nTable 1: Table name\nTable 2: Table name\nTable 3: Table name",
-    "crumbs": [
-      "Frontmatter"
-    ]
-  },
-  {
-    "objectID": "chapters/Frontmatter.html#list-of-graphics-figures",
-    "href": "chapters/Frontmatter.html#list-of-graphics-figures",
-    "title": "Frontmatter",
-    "section": "List of Graphics & Figures",
-    "text": "List of Graphics & Figures",
-    "crumbs": [
-      "Frontmatter"
-    ]
-  },
-  {
-    "objectID": "chapters/Frontmatter.html#list-of-abbreviations",
-    "href": "chapters/Frontmatter.html#list-of-abbreviations",
-    "title": "Frontmatter",
-    "section": "List of Abbreviations",
-    "text": "List of Abbreviations\nesp. especially\nf., ff. following\nincl. including\np., pp. page(s)\nMAD Mutually Assured Destruction",
-    "crumbs": [
-      "Frontmatter"
-    ]
-  },
-  {
-    "objectID": "chapters/Frontmatter.html#glossary",
-    "href": "chapters/Frontmatter.html#glossary",
-    "title": "Frontmatter",
-    "section": "Glossary",
-    "text": "Glossary",
-    "crumbs": [
-      "Frontmatter"
-    ]
-  },
-  {
     "objectID": "chapters/Introduction.html",
     "href": "chapters/Introduction.html",
     "title": "1  Introduction",
@@ -74,7 +14,7 @@
     "href": "chapters/Introduction.html#introduction",
     "title": "1  Introduction",
     "section": "",
-    "text": "introduces and motivates the core question or problem\nprovides context for discussion (places issue within a larger debate or sphere of relevance)\nstates precise thesis or position the author will argue for\nprovides roadmap indicating structure and key content points of the essay\n\n\n\nintroduces and motivates the core question or problem\n\n\n\n\n\n\n\nFigure 1.1: Caption/Title 2",
+    "text": "introduces and motivates the core question or problem\nprovides context for discussion (places issue within a larger debate or sphere of relevance)\nstates precise thesis or position the author will argue for\nprovides roadmap indicating structure and key content points of the essay\n\n\n\nintroduces and motivates the core question or problem\n\n\n\n\n\n\n\n\nFigure 1.1: Caption/Title 2",
     "crumbs": [
       "<span class='chapter-number'>1</span>  <span class='chapter-title'>Introduction</span>"
     ]
@@ -197,6 +137,66 @@
     "text": "1.13 Overview / Table of Contents",
     "crumbs": [
       "<span class='chapter-number'>1</span>  <span class='chapter-title'>Introduction</span>"
+    ]
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Automating the Modelling of Transformative Artificial Intelligence Risks",
+    "section": "",
+    "text": "Preface\nThis is a Quarto book.\nTo learn more about Quarto books visit https://quarto.org/docs/books.\n\n\nAbstract\n\\listoffigures\n\n\nOutline(s): Table of Contents",
+    "crumbs": [
+      "Preface"
+    ]
+  },
+  {
+    "objectID": "chapters/Frontmatter.html",
+    "href": "chapters/Frontmatter.html",
+    "title": "Frontmatter",
+    "section": "",
+    "text": "Prefatory Apparatus: Illustrations and Terminology — Quick References",
+    "crumbs": [
+      "Frontmatter"
+    ]
+  },
+  {
+    "objectID": "chapters/Frontmatter.html#list-of-tables",
+    "href": "chapters/Frontmatter.html#list-of-tables",
+    "title": "Frontmatter",
+    "section": "List of Tables",
+    "text": "List of Tables\nTable 1: Table name\nTable 2: Table name\nTable 3: Table name",
+    "crumbs": [
+      "Frontmatter"
+    ]
+  },
+  {
+    "objectID": "chapters/Frontmatter.html#list-of-graphics-figures",
+    "href": "chapters/Frontmatter.html#list-of-graphics-figures",
+    "title": "Frontmatter",
+    "section": "List of Graphics & Figures",
+    "text": "List of Graphics & Figures",
+    "crumbs": [
+      "Frontmatter"
+    ]
+  },
+  {
+    "objectID": "chapters/Frontmatter.html#list-of-abbreviations",
+    "href": "chapters/Frontmatter.html#list-of-abbreviations",
+    "title": "Frontmatter",
+    "section": "List of Abbreviations",
+    "text": "List of Abbreviations\nesp. especially\nf., ff. following\nincl. including\np., pp. page(s)\nMAD Mutually Assured Destruction",
+    "crumbs": [
+      "Frontmatter"
+    ]
+  },
+  {
+    "objectID": "chapters/Frontmatter.html#glossary",
+    "href": "chapters/Frontmatter.html#glossary",
+    "title": "Frontmatter",
+    "section": "Glossary",
+    "text": "Glossary",
+    "crumbs": [
+      "Frontmatter"
     ]
   },
   {

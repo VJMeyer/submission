@@ -4,9 +4,8 @@
     "engine": "jupyter",
     "markdown": "# Preface {.unnumbered}\n\nThis is a Quarto book.\n\nTo learn more about Quarto books visit <https://quarto.org/docs/books>.\n\n# Abstract {#sec-Abstract}\n```{latex}\n\\listoffigures\n```\n# Outline(s): Table of Contents {#sec-ToC}\n\n<!-- {{< include chapters/Outlining-Workflow.md >}} -->\n\\listoffigures\n\n",
     "supporting": [
-      "index_files/figure-html"
+      "index_files/figure-docx"
     ],
-    "filters": [],
-    "includes": {}
+    "filters": []
   }
 }
