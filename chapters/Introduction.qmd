@@ -6,72 +6,67 @@ numbering:
   level: 1         # Chapter level
 ---
 
-
 ## Introduction
-
 
 10% of Grade:
 
-- introduces and motivates the core question or problem
-- provides context for discussion (places issue within a larger debate or sphere of relevance)
-- states precise thesis or position the author will argue for
-- provides roadmap indicating structure and key content points of the essay
+-   introduces and motivates the core question or problem
+-   provides context for discussion (places issue within a larger debate or sphere of relevance)
+-   states precise thesis or position the author will argue for
+-   provides roadmap indicating structure and key content points of the essay
 
-~ 14% of text ~ 4200 words
+\~ 14% of text \~ 4200 words
 
+-   introduces and motivates the core question or problem
 
-- introduces and motivates the core question or problem
+[![Caption/Title 2](/images/cover.png){#fig-testgraphic2 fig-scap="Short 2 caption" fig-alt="2nd Alt Text / Description." fig-align="left" width="30%"}](https://vjmeyer.com)
 
-## Motivation:  Problem Statement
+Testing crossreferencing grapics @fig-testgraphic2.
 
-## Motivation:  Research Question
+## Motivation: Problem Statement
 
+## Motivation: Research Question
 
+-   provides context for discussion (places issue within a larger debate or sphere of relevance)
 
-- provides context for discussion (places issue within a larger debate or sphere of relevance)
+## Scope: Aim & Context of the Research
 
-## Scope:   Aim & Context of the Research
-
-## Significance of the Research:    Theory of Change
-
-
+## Significance of the Research: Theory of Change
 
 • states precise thesis or position the author will argue for
 
-## Thesis Statement & Position:    (Aim of the Paper)
+## Thesis Statement & Position: (Aim of the Paper)
 
+-   provides roadmap indicating structure and key content points of the essay
 
-
-- provides roadmap indicating structure and key content points of the essay
-
-## Overview:    Structure & Approach of the Paper (Roadmap --- Theory of Change)
+## Overview: Structure & Approach of the Paper (Roadmap --- Theory of Change)
 
 ## Table of Contents
 
-## Problem Statement	—	Motivation
+## Problem Statement — Motivation
 
 Continued AI Progress:
 
-* Rapid advancements in AI technology increase both potential benefits and risks.
+-   Rapid advancements in AI technology increase both potential benefits and risks.
 
 Existential Risks (AI X-Risk):
 
-* Advanced AI systems could pose significant threats if misaligned with human values.
+-   Advanced AI systems could pose significant threats if misaligned with human values.
 
 Complexity Challenges:
 
-* The intricate nature of AI systems complicates policy formulation and understanding.
+-   The intricate nature of AI systems complicates policy formulation and understanding.
 
 Limitations of Current Approaches:
 
-* MTAIR’s Reliance on Human Labor:  
-  * Modeling Transformative AI Risks (MTAIR) is constrained by manual cognitive efforts.  
-* Need for Automation:  
-  * Scaling and automating risk modeling is essential to keep pace with AI developments.
+-   MTAIR’s Reliance on Human Labor:
+    -   Modeling Transformative AI Risks (MTAIR) is constrained by manual cognitive efforts.\
+-   Need for Automation:
+    -   Scaling and automating risk modeling is essential to keep pace with AI developments.
 
 Opportunity:
 
-* Leveraging new technologies to enhance our ability to model and mitigate AI risks.
+-   Leveraging new technologies to enhance our ability to model and mitigate AI risks.
 
 ## Aim of the Paper
 
@@ -79,47 +74,47 @@ Opportunity:
 
 #### Can frontier AI technologies be utilized to automate the modeling of transformative AI risks, so as to allow for the prediction of policy impacts?
 
-Frontier AI Technology:			Today’s most capable AI systems (e.g. GPT4 level LLMs)  
-Scaling Up:						Automating the previously “manual” cognitive labor  
-Modeling:							Formalizing the world views underlying arguments  
-Transformative AI:			Level of AI capabilities defined by severe impact on the world  
-Safety & Governance Literature:		Publications, reports etc. concerned with risks from AI
+Frontier AI Technology: Today’s most capable AI systems (e.g. GPT4 level LLMs)\
+Scaling Up: Automating the previously “manual” cognitive labor\
+Modeling: Formalizing the world views underlying arguments\
+Transformative AI: Level of AI capabilities defined by severe impact on the world\
+Safety & Governance Literature: Publications, reports etc. concerned with risks from AI
 
-Automated Estimation:	    Non-manual (AI systems \+ scaffolding), quantified evaluations  
-Probability Distributions:			Formal expressions of the expectations over future worlds  
-Conditional Trees of Possible Worlds:  “If … then…” reasoning over ways things may play out  
-Forecasting Policy Impacts:		Qualitative & quantitative evaluation of expected outcomes
+Automated Estimation: Non-manual (AI systems + scaffolding), quantified evaluations\
+Probability Distributions: Formal expressions of the expectations over future worlds\
+Conditional Trees of Possible Worlds: “If … then…” reasoning over ways things may play out\
+Forecasting Policy Impacts: Qualitative & quantitative evaluation of expected outcomes
 
 ### Significance of the Research
 
 ### 
 
-## Theory of Change	—	Approach & Structure of the Paper
+## Theory of Change — Approach & Structure of the Paper
 
 Multiplicative Benefits:
 
-* Automation × Live Prediction Market Integrations × Policy Impact Evaluations
+-   Automation × Live Prediction Market Integrations × Policy Impact Evaluations
 
-Explanation:  
-	Automation:
+Explanation:\
+Automation:
 
-* Increases efficiency and scalability of risk modeling.
+-   Increases efficiency and scalability of risk modeling.
 
-	Live Prediction Markets:
+    Live Prediction Markets:
 
-* Provides up-to-date, collective intelligence to inform models.
+-   Provides up-to-date, collective intelligence to inform models.
 
-	Policy Impact Evaluations:
+    Policy Impact Evaluations:
 
-* Improves the accuracy and relevance of policy assessments.
+-   Improves the accuracy and relevance of policy assessments.
 
 Outcome:
 
-* Enhanced ability to develop effective policies that mitigate AI risks.
+-   Enhanced ability to develop effective policies that mitigate AI risks.
 
 Visual Aid:
 
-* A diagram illustrating how each component amplifies the others, leading to greater overall impact.
+-   A diagram illustrating how each component amplifies the others, leading to greater overall impact.
 
 ## 
 

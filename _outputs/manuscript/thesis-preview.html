@@ -181,6 +181,9 @@
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
 <link href="site_libs/bootstrap/bootstrap-8a894fcc3cb5e37eb5bf30def131be2f.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script src="site_libs/quarto-contrib/glightbox/glightbox.min.js"></script>
+<link href="site_libs/quarto-contrib/glightbox/glightbox.min.css" rel="stylesheet">
+<link href="site_libs/quarto-contrib/glightbox/lightbox.css" rel="stylesheet">
      
       <meta name="citation_title" content="Automating the Modelling of Transformative Artificial Intelligence Risks">
 <meta name="citation_abstract" content="This thesis addresses coordination problems in AI safety by creating tools that automatically extract and formalize the assumptions and models underlying different approaches to AI governance.
@@ -548,12 +551,13 @@ By transforming complex arguments into interactive visualizations showing relati
   <ul>
   <li><a href="#abstract" id="toc-abstract" class="nav-link active" data-scroll-target="#abstract">Abstract</a>
   <ul>
-  <li><a href="#grading" id="toc-grading" class="nav-link" data-scroll-target="#grading"><span class="header-section-number">0.1</span> Grading</a>
+  <li><a href="#figure-testing" id="toc-figure-testing" class="nav-link" data-scroll-target="#figure-testing"><span class="header-section-number">0.1</span> Figure Testing</a></li>
+  <li><a href="#grading" id="toc-grading" class="nav-link" data-scroll-target="#grading"><span class="header-section-number">0.2</span> Grading</a>
   <ul class="collapse">
-  <li><a href="#research-10" id="toc-research-10" class="nav-link" data-scroll-target="#research-10"><span class="header-section-number">0.1.1</span> Research (10%)</a></li>
+  <li><a href="#research-10" id="toc-research-10" class="nav-link" data-scroll-target="#research-10"><span class="header-section-number">0.2.1</span> Research (10%)</a></li>
   </ul></li>
-  <li><a href="#structure-10" id="toc-structure-10" class="nav-link" data-scroll-target="#structure-10"><span class="header-section-number">0.2</span> Structure (10%)</a></li>
-  <li><a href="#callout-test-language-style-10" id="toc-callout-test-language-style-10" class="nav-link" data-scroll-target="#callout-test-language-style-10"><span class="header-section-number">0.3</span> Callout Test — Language &amp; Style (10%)</a></li>
+  <li><a href="#structure-10" id="toc-structure-10" class="nav-link" data-scroll-target="#structure-10"><span class="header-section-number">0.3</span> Structure (10%)</a></li>
+  <li><a href="#callout-test-language-style-10" id="toc-callout-test-language-style-10" class="nav-link" data-scroll-target="#callout-test-language-style-10"><span class="header-section-number">0.4</span> Callout Test — Language &amp; Style (10%)</a></li>
   </ul></li>
   <li><a href="#introduction" id="toc-introduction" class="nav-link" data-scroll-target="#introduction"><span class="header-section-number">1</span> Introduction</a>
   <ul>
@@ -637,9 +641,9 @@ By transforming complex arguments into interactive visualizations showing relati
   <li><a href="#bibliographyreferences" id="toc-bibliographyreferences" class="nav-link" data-scroll-target="#bibliographyreferences">Bibliography/References</a></li>
   <li><a href="#prefatory-apparatus-illustrations-and-terminology-quick-references" id="toc-prefatory-apparatus-illustrations-and-terminology-quick-references" class="nav-link" data-scroll-target="#prefatory-apparatus-illustrations-and-terminology-quick-references">Prefatory Apparatus: Illustrations and Terminology — Quick References</a>
   <ul>
-  <li><a href="#list-of-tables" id="toc-list-of-tables" class="nav-link" data-scroll-target="#list-of-tables">List of Tables</a></li>
-  <li><a href="#list-of-graphics-figures" id="toc-list-of-graphics-figures" class="nav-link" data-scroll-target="#list-of-graphics-figures">List of Graphics &amp; Figures</a></li>
-  <li><a href="#list-of-abbreviations" id="toc-list-of-abbreviations" class="nav-link" data-scroll-target="#list-of-abbreviations">List of Abbreviations</a></li>
+  <li><a href="#manual-list-of-tables" id="toc-manual-list-of-tables" class="nav-link" data-scroll-target="#manual-list-of-tables">MANUAL List of Tables</a></li>
+  <li><a href="#manual-list-of-graphics-figures" id="toc-manual-list-of-graphics-figures" class="nav-link" data-scroll-target="#manual-list-of-graphics-figures">MANUAL List of Graphics &amp; Figures</a></li>
+  <li><a href="#manual-list-of-abbreviations" id="toc-manual-list-of-abbreviations" class="nav-link" data-scroll-target="#manual-list-of-abbreviations">MANUAL List of Abbreviations</a></li>
   <li><a href="#glossary" id="toc-glossary" class="nav-link" data-scroll-target="#glossary">Glossary</a></li>
   </ul></li>
   <li><a href="#appendices" id="toc-appendices" class="nav-link" data-scroll-target="#appendices"><span class="header-section-number">7</span> Appendices</a>
@@ -662,6 +666,19 @@ By transforming complex arguments into interactive visualizations showing relati
 <h1 class="unnumbered">Abstract</h1>
 <p>The coordination crisis in AI governance presents a paradoxical challenge: unprecedented investment in AI safety coexists alongside fundamental coordination failures across technical, policy, and ethical domains. These divisions systematically increase existential risk by creating safety gaps, misallocating resources, and fostering inconsistent approaches to interdependent problems. This thesis introduces AMTAIR (Automating Transformative AI Risk Modeling), a computational approach that addresses this coordination failure by automating the extraction of probabilistic world models from AI safety literature using frontier language models.</p>
 <p>The AMTAIR system implements an end-to-end pipeline that transforms unstructured text into interactive Bayesian networks through a novel two-stage extraction process: first capturing argument structure in ArgDown format, then enhancing it with probability information in BayesDown. This approach bridges communication gaps between stakeholders by making implicit models explicit, enabling comparison across different worldviews, providing a common language for discussing probabilistic relationships, and supporting policy evaluation across diverse scenarios.</p>
+<section id="figure-testing" class="level2" data-number="0.1">
+<h2 data-number="0.1" class="anchored" data-anchor-id="figure-testing"><span class="header-section-number">0.1</span> Figure Testing</h2>
+<div id="fig-testgraphic" class="quarto-float quarto-figure quarto-figure-left anchored" width="20%" alt="Alt Text / Description." data-fig-align="left" data-fig-scap="Short caption">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-testgraphic-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<a href="https://vjmeyer.com"><span class="lightbox" data-gallery="quarto-lightbox-gallery-1"><img src="images/cover.png" class="img-fluid quarto-figure quarto-figure-left figure-img" style="width:20.0%" data-fig-scap="Short caption" alt="Alt Text / Description."></span></a>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-testgraphic-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;1: Caption/Title
+</figcaption>
+</figure>
+</div>
+<p>Testing crossreferencing grapics <a href="#fig-testgraphic" class="quarto-xref">Figure&nbsp;1</a>.</p>
 <!-- [ ] Figure out Outline to Outline to Draft Workflow -->
 <!-- [ ]: Clean up the introduction -->
 <!-- [ ]: Test Quarto-Code-Links: https://quarto.org/docs/manuscripts/components.html#code-links -->
@@ -671,10 +688,11 @@ By transforming complex arguments into interactive visualizations showing relati
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co"># [ ]: Configure the Quarto Manuscript options: https://quarto.org/docs/manuscripts/components.html#including-notebooks</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 </div></div>
-<section id="grading" class="level2" data-number="0.1">
-<h2 data-number="0.1" class="anchored" data-anchor-id="grading"><span class="header-section-number">0.1</span> Grading</h2>
-<section id="research-10" class="level3" data-number="0.1.1">
-<h3 data-number="0.1.1" class="anchored" data-anchor-id="research-10"><span class="header-section-number">0.1.1</span> Research (10%)</h3>
+</section>
+<section id="grading" class="level2" data-number="0.2">
+<h2 data-number="0.2" class="anchored" data-anchor-id="grading"><span class="header-section-number">0.2</span> Grading</h2>
+<section id="research-10" class="level3" data-number="0.2.1">
+<h3 data-number="0.2.1" class="anchored" data-anchor-id="research-10"><span class="header-section-number">0.2.1</span> Research (10%)</h3>
 <ul>
 <li>demonstrates knowledge of the subject area as drawn from appropriate sources</li>
 <li>incorporates insights from in-class discussions</li>
@@ -683,8 +701,8 @@ By transforming complex arguments into interactive visualizations showing relati
 </ul>
 </section>
 </section>
-<section id="structure-10" class="level2" data-number="0.2">
-<h2 data-number="0.2" class="anchored" data-anchor-id="structure-10"><span class="header-section-number">0.2</span> Structure (10%)</h2>
+<section id="structure-10" class="level2" data-number="0.3">
+<h2 data-number="0.3" class="anchored" data-anchor-id="structure-10"><span class="header-section-number">0.3</span> Structure (10%)</h2>
 <ul>
 <li><p>outlines project clearly in the introduction</p></li>
 <li><p>discussion follows a logical order</p></li>
@@ -695,8 +713,8 @@ By transforming complex arguments into interactive visualizations showing relati
 </ul>
 <!-- ::: callout-tip -->
 </section>
-<section id="callout-test-language-style-10" class="level2" data-number="0.3">
-<h2 data-number="0.3" class="anchored" data-anchor-id="callout-test-language-style-10"><span class="header-section-number">0.3</span> Callout Test — Language &amp; Style (10%)</h2>
+<section id="callout-test-language-style-10" class="level2" data-number="0.4">
+<h2 data-number="0.4" class="anchored" data-anchor-id="callout-test-language-style-10"><span class="header-section-number">0.4</span> Callout Test — Language &amp; Style (10%)</h2>
 <ul>
 <li><p>employs appropriate tone and academic language</p></li>
 <li><p>uses effective and sophisticated sentence variety, diction, and vocabulary</p></li>
@@ -711,7 +729,7 @@ By transforming complex arguments into interactive visualizations showing relati
 <p>More text</p>
 </section>
 </section>
-<section id="introduction" class="level1 quarto-embed-nb-cell" data-notebook="/Users/vjm/Library/Mobile Documents/iCloud~md~obsidian/Documents/Vaulty/2_DoingGood/Studies/P&amp;E/Specializations/Test_Sync_MAThesis/submission/chapters/Introduction.qmd" data-notebook-title="Introduction" data-notebook-cellid="f19d721c-c76a-4263-9263-58fc63674fd2" data-number="1">
+<section id="introduction" class="level1 quarto-embed-nb-cell" data-notebook="/Users/vjm/Library/Mobile Documents/iCloud~md~obsidian/Documents/Vaulty/2_DoingGood/Studies/P&amp;E/Specializations/Test_Sync_MAThesis/submission/chapters/Introduction.qmd" data-notebook-title="Introduction" data-notebook-cellid="69a51c74-ead9-4301-a680-a151173a4546" data-number="1">
 <h1 data-number="1"><span class="header-section-number">1</span> Introduction</h1>
 <section id="introduction-1" class="level2" data-number="1.1">
 <h2 data-number="1.1" class="anchored" data-anchor-id="introduction-1"><span class="header-section-number">1.1</span> Introduction</h2>
@@ -726,6 +744,8 @@ By transforming complex arguments into interactive visualizations showing relati
 <ul>
 <li>introduces and motivates the core question or problem</li>
 </ul>
+<!-- [![Caption/Title 2](/images/cover.png){#fig-testgraphic2 fig-scap="Short 2 caption" fig-alt="2nd Alt Text / Description." fig-align="left" width="30%"}](https://vjmeyer.com) -->
+<!-- Testing crossreferencing grapics @fig-testgraphic. -->
 </section>
 <section id="motivation-problem-statement" class="level2" data-number="1.2">
 <h2 data-number="1.2" class="anchored" data-anchor-id="motivation-problem-statement"><span class="header-section-number">1.2</span> Motivation: Problem Statement</h2>
@@ -1098,17 +1118,17 @@ numbering:
 <section id="prefatory-apparatus-illustrations-and-terminology-quick-references" class="level1 unnumbered">
 <h1 class="unnumbered">Prefatory Apparatus: Illustrations and Terminology — Quick References</h1>
 <!-- {{< embed chapters/Frontmatter.qmd >}}  -->
-<section id="list-of-tables" class="level2 unnumbered">
-<h2 class="unnumbered anchored" data-anchor-id="list-of-tables">List of Tables</h2>
+<section id="manual-list-of-tables" class="level2 unnumbered">
+<h2 class="unnumbered anchored" data-anchor-id="manual-list-of-tables">MANUAL List of Tables</h2>
 <p>Table 1: Table name</p>
 <p>Table 2: Table name</p>
 <p>Table 3: Table name</p>
 </section>
-<section id="list-of-graphics-figures" class="level2 unnumbered">
-<h2 class="unnumbered anchored" data-anchor-id="list-of-graphics-figures">List of Graphics &amp; Figures</h2>
+<section id="manual-list-of-graphics-figures" class="level2 unnumbered">
+<h2 class="unnumbered anchored" data-anchor-id="manual-list-of-graphics-figures">MANUAL List of Graphics &amp; Figures</h2>
 </section>
-<section id="list-of-abbreviations" class="level2 unnumbered">
-<h2 class="unnumbered anchored" data-anchor-id="list-of-abbreviations">List of Abbreviations</h2>
+<section id="manual-list-of-abbreviations" class="level2 unnumbered">
+<h2 class="unnumbered anchored" data-anchor-id="manual-list-of-abbreviations">MANUAL List of Abbreviations</h2>
 <p>esp.&nbsp;especially</p>
 <p>f., ff.&nbsp;following</p>
 <p>incl.&nbsp;including</p>
@@ -1553,6 +1573,37 @@ numbering:
       }
     }
   });
-  </script>  </div> <!-- /content --> 
+  </script>  </div> <!-- /content -->  <script>var lightboxQuarto = GLightbox({"closeEffect":"zoom","descPosition":"bottom","loop":false,"openEffect":"zoom","selector":".lightbox"});
+(function() {
+  let previousOnload = window.onload;
+  window.onload = () => {
+    if (previousOnload) {
+      previousOnload();
+    }
+    lightboxQuarto.on('slide_before_load', (data) => {
+      const { slideIndex, slideNode, slideConfig, player, trigger } = data;
+      const href = trigger.getAttribute('href');
+      if (href !== null) {
+        const imgEl = window.document.querySelector(`a[href="${href}"] img`);
+        if (imgEl !== null) {
+          const srcAttr = imgEl.getAttribute("src");
+          if (srcAttr && srcAttr.startsWith("data:")) {
+            slideConfig.href = srcAttr;
+          }
+        }
+      } 
+    });
+  
+    lightboxQuarto.on('slide_after_load', (data) => {
+      const { slideIndex, slideNode, slideConfig, player, trigger } = data;
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(slideNode);
+      }
+    });
+  
+  };
+  
+})();
+          </script> 
   
 </body></html>

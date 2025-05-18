@@ -63,6 +63,12 @@ The coordination crisis in AI governance presents a paradoxical challenge: unpre
 
 The AMTAIR system implements an end-to-end pipeline that transforms unstructured text into interactive Bayesian networks through a novel two-stage extraction process: first capturing argument structure in ArgDown format, then enhancing it with probability information in BayesDown. This approach bridges communication gaps between stakeholders by making implicit models explicit, enabling comparison across different worldviews, providing a common language for discussing probabilistic relationships, and supporting policy evaluation across diverse scenarios.
 
+## Figure Testing
+
+[![Caption/Title](images/cover.png){#fig-testgraphic fig-alt="Alt Text / Description." fig-align="left" width="20%" fig-scap="Short caption"}](https://vjmeyer.com)
+
+Testing crossreferencing grapics @fig-testgraphic.
+
 <!-- [ ] Figure out Outline to Outline to Draft Workflow -->
 
 <!-- [ ]: Clean up the introduction -->
@@ -141,7 +147,7 @@ More text
 
 <!-- {{< embed chapters/Frontmatter.qmd >}}  -->
 
-## List of Tables {.unnumbered}
+## MANUAL List of Tables {.unnumbered}
 
 Table 1: Table name
 
@@ -149,9 +155,9 @@ Table 2: Table name
 
 Table 3: Table name
 
-## List of Graphics & Figures {.unnumbered}
+## MANUAL List of Graphics & Figures {.unnumbered}
 
-## List of Abbreviations {.unnumbered}
+## MANUAL List of Abbreviations {.unnumbered}
 
 esp. especially
 
