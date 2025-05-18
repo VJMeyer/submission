@@ -40,6 +40,7 @@ book:
     - chapters/Discussion.qmd
     - chapters/Conclusion.qmd
     - ref/references.qmd
+  #  - lof.qmd
   #  - AMTAIR_Prototype/data/example_rain-sprinkler-lawn/AMTAIR_Prototype_example_rain-sprinkler-lawn.ipynb
   #  - AMTAIR_Prototype/data/example_carlsmith/AMTAIR_Prototype_example_carlsmith.ipynb
   appendices:

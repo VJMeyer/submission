@@ -155,7 +155,7 @@ Table 2: Table name
 
 Table 3: Table name
 
-## MANUAL List of Graphics & Figures {.unnumbered}
+## MANUAL List of Graphics & Figures {.lof}
 
 ## MANUAL List of Abbreviations {.unnumbered}
 
