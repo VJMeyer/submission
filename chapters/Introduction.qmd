@@ -27,7 +27,7 @@ numbering:
 
 Testing crossreferencing grapics @fig-testgraphic2.
 
-\listoffigures
+<!-- \listoffigures -->
 
 ## Motivation: Problem Statement
 

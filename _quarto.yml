@@ -75,8 +75,8 @@ format:
   pdf:
     documentclass: book
     geometry: margin=1in
-    template: latex/template.tex
-    include-in-header: latex/preamble.tex
+  #  template: latex/template.tex
+  #  include-in-header: latex/preamble.tex
     keep-tex: true
     toc: true
     lof: true

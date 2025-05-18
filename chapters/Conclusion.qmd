@@ -76,6 +76,6 @@ Prioritize interventions that significantly reduce risks.
 
 * Invite thoughts, critiques, and suggestions.
   
-## List of Figures {.lof}
+<!-- ## List of Figures {.lof} -->
 
 ### Outlook — Outlook & Next Steps / Further Research
