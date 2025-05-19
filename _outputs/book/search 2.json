@@ -164,7 +164,7 @@
     "href": "chapters/Introduction.html#aim-of-the-paper",
     "title": "1  Introduction",
     "section": "1.10 Aim of the Paper",
-    "text": "1.10 Aim of the Paper\n\n1.10.1 Research Question & Scope\n\n1.10.1.1 Can frontier AI technologies be utilized to automate the modeling of transformative AI risks, so as to allow for the prediction of policy impacts?\nFrontier AI Technology: Today’s most capable AI systems (e.g. GPT4 level LLMs)\nScaling Up: Automating the previously “manual” cognitive labor\nModeling: Formalizing the world views underlying arguments\nTransformative AI: Level of AI capabilities defined by severe impact on the world\nSafety & Governance Literature: Publications, reports etc. concerned with risks from AI\nAutomated Estimation: Non-manual (AI systems + scaffolding), quantified evaluations\nProbability Distributions: Formal expressions of the expectations over future worlds\nConditional Trees of Possible Worlds: “If … then…” reasoning over ways things may play out\nForecasting Policy Impacts: Qualitative & quantitative evaluation of expected outcomes\n\n\n\n1.10.2 Significance of the Research",
+    "text": "1.10 Aim of the Paper\n\n1.10.1 Research Question & Scope\n\n1.10.1.1 Can frontier AI technologies be utilized to automate the modeling of transformative AI risks, so as to allow for the prediction of policy impacts?\nFrontier AI Technology: Today’s most capable AI systems (e.g. GPT4 level LLMs)\nScaling Up: Automating the previously “manual” cognitive labor\nModeling: Formalizing the world views underlying arguments\nTransformative AI: Level of AI capabilities defined by severe impact on the world\nSafety & Governance Literature: Publications, reports etc. concerned with risks from AI\nAutomated Estimation: Non-manual (AI systems + scaffolding), quantified evaluations\nProbability Distributions: Formal expressions of the expectations over future worlds\nConditional Trees of Possible Worlds: “If … then…” reasoning over ways things may play out\nForecasting Policy Impacts: Qualitative & quantitative evaluation of expected outcomes\n\n\n\n1.10.2 Significance of the Research\n\n\n1.10.3",
     "crumbs": [
       "<span class='chapter-number'>1</span>  <span class='chapter-title'>Introduction</span>"
     ]
@@ -180,8 +180,8 @@
     ]
   },
   {
-    "objectID": "chapters/Introduction.html#section",
-    "href": "chapters/Introduction.html#section",
+    "objectID": "chapters/Introduction.html#section-1",
+    "href": "chapters/Introduction.html#section-1",
     "title": "1  Introduction",
     "section": "1.12 ",
     "text": "1.12",
@@ -204,7 +204,7 @@
     "href": "chapters/Context.html",
     "title": "2  Context",
     "section": "",
-    "text": "20% of Grade:\n~ 29% of text ~ 8700 words",
+    "text": "2.0.1 20% of Grade:\n~ 29% of text ~ 8700 words",
     "crumbs": [
       "<span class='chapter-number'>2</span>  <span class='chapter-title'>Context</span>"
     ]
@@ -234,7 +234,7 @@
     "href": "chapters/Context.html#methodology",
     "title": "2  Context",
     "section": "2.3 Methodology",
-    "text": "2.3 Methodology\nMTAIR / Carlsmith Model (Analytica) — Explanation (— is motivation: should come first)\n\n2.3.1 Kialo\n\n\n2.3.2 Rain/Sprinkler/Lawn DAG\n\n\n2.3.3 BayeServer\n\n\n2.3.4 BayesNet — Extended Example\n\n\n2.3.5 Code + documentation\n\n\n\n\n\n\nFigure 2.1: AMTAIR Automation Pipeline\n\n\n\nTesting crossreferencing grapics Figure 2.1.",
+    "text": "2.3 Methodology\nMTAIR / Carlsmith Model (Analytica) — Explanation (— is motivation: should come first)\n\n2.3.1 Kialo\n\n\n2.3.2 Rain/Sprinkler/Lawn DAG\n\n\n2.3.3 BayeServer\n\n\n2.3.4 BayesNet — Extended Example\n\n\n2.3.5 Code + documentation",
     "crumbs": [
       "<span class='chapter-number'>2</span>  <span class='chapter-title'>Context</span>"
     ]
