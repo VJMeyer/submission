@@ -261,11 +261,6 @@ Table 2: Table name
 
 Table 3: Table name
 
-\section*{List of Graphics \& Figures}\label{list-of-graphics-figures}
-\addcontentsline{toc}{section}{List of Graphics \& Figures}
-
-\markright{List of Graphics \& Figures}
-
 \section*{List of Abbreviations}\label{list-of-abbreviations}
 \addcontentsline{toc}{section}{List of Abbreviations}
 
@@ -280,6 +275,55 @@ incl.~including
 p., pp.~page(s)
 
 MAD Mutually Assured Destruction
+
+\section*{Testing Figures}\label{testing-figures}
+\addcontentsline{toc}{section}{Testing Figures}
+
+\markright{Testing Figures}
+
+\begin{figure}
+
+\href{https://vjmeyer.com}{\includegraphics[width=0.3\linewidth,height=\textheight,keepaspectratio]{images/cover.png}}
+
+\caption[Short 2 caption]{\label{fig-testgraphic2}Caption/Title 2}
+
+\end{figure}%
+
+Testing crossreferencing grapics Figure~\ref{fig-testgraphic2}.
+
+\begin{figure}
+
+\includegraphics[width=0.3\linewidth,height=\textheight,keepaspectratio]{images/cover.png}
+
+\caption[Short 3 caption]{\label{fig-testgraphic3}Caption/Title 3}
+
+\end{figure}%
+
+\begin{figure}
+
+\href{https://github.com/VJMeyer/submission}{\includegraphics[width=0.3\linewidth,height=\textheight,keepaspectratio]{images/cover.png}}
+
+\caption[Short caption 4 list of figures as seen in
+LoF]{\label{fig-Unique_identifier_for_crossreferencing}Example
+Caption/Title 4}
+
+\end{figure}%
+
+Testing crossreferencing grapics
+Figure~\ref{fig-Unique_identifier_for_crossreferencing}.
+fig-scap=``Short caption'' /* Short caption for list of figures */
+fig-alt=``Detailed alt text that describes the image content, type,
+purpose, and meaning'' \textgreater{} \textgreater{} /* Appearance
+options \emph{/ fig-align=``left\textbar center\textbar right''
+width=``X\%'' /} Width as percentage \emph{/ height=``Ypx'' /} Height in
+pixels */ \textgreater{} \textgreater{} /* Source \& linking \emph{/
+fig-link=``https://source-url.com'' /} Makes image clickable to source
+*/ \textgreater{} \textgreater{} /* Layout options \emph{/
+fig-column=``margin\textbar page'' /} Places in margin or spans page
+width \emph{/ fig-pos=``H'' /} Position specifier (LaTeX) */
+\textgreater{} \textgreater{} /* Panels for subfigures (if combining
+multiple) \emph{/ fig-subcap=true /} Enable subcaptions */ \}
+\textgreater{} --\textgreater{}
 
 \section*{Glossary}\label{glossary}
 \addcontentsline{toc}{section}{Glossary}
@@ -492,28 +536,6 @@ Visual Aid:
   A diagram illustrating how each component amplifies the others,
   leading to greater overall impact.
 \end{itemize}
-
-\section{Testing Figures}\label{testing-figures}
-
-\begin{figure}
-
-\href{https://vjmeyer.com}{\includegraphics[width=0.3\linewidth,height=\textheight,keepaspectratio]{images/cover.png}}
-
-\caption[Short 2 caption]{\label{fig-testgraphic2}Caption/Title 2}
-
-\end{figure}%
-
-Testing crossreferencing grapics Figure~\ref{fig-testgraphic2}.
-
-\begin{figure}
-
-\includegraphics[width=0.3\linewidth,height=\textheight,keepaspectratio]{images/cover.png}
-
-\caption[Short 3 caption]{\label{fig-testgraphic3}Caption/Title 3}
-
-\end{figure}%
-
-Testing crossreferencing grapics Figure~\ref{fig-testgraphic3}.
 
 \section{Overview / Table of Contents}\label{overview-table-of-contents}
 

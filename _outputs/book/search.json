@@ -30,21 +30,21 @@
     ]
   },
   {
-    "objectID": "chapters/Frontmatter.html#list-of-graphics-figures",
-    "href": "chapters/Frontmatter.html#list-of-graphics-figures",
-    "title": "Frontmatter",
-    "section": "List of Graphics & Figures",
-    "text": "List of Graphics & Figures",
-    "crumbs": [
-      "Frontmatter"
-    ]
-  },
-  {
     "objectID": "chapters/Frontmatter.html#list-of-abbreviations",
     "href": "chapters/Frontmatter.html#list-of-abbreviations",
     "title": "Frontmatter",
     "section": "List of Abbreviations",
     "text": "List of Abbreviations\nesp. especially\nf., ff. following\nincl. including\np., pp. page(s)\nMAD Mutually Assured Destruction",
+    "crumbs": [
+      "Frontmatter"
+    ]
+  },
+  {
+    "objectID": "chapters/Frontmatter.html#testing-figures",
+    "href": "chapters/Frontmatter.html#testing-figures",
+    "title": "Frontmatter",
+    "section": "Testing Figures",
+    "text": "Testing Figures\n\n\n\n\n\n\nFigure 1: Caption/Title 2\n\n\n\nTesting crossreferencing grapics Figure 1.\n\n\n\n\n\n\nFigure 2: Caption/Title 3\n\n\n\n\n\n\n\n\n\nFigure 3\n\n\n\nTesting crossreferencing grapics Figure 3.  fig-scap=“Short caption” /* Short caption for list of figures */   fig-alt=“Detailed alt text that describes the image content, type, purpose, and meaning” &gt; &gt; /* Appearance options / fig-align=“left|center|right” width=“X%” / Width as percentage / height=“Ypx” / Height in pixels */ &gt; &gt; /* Source & linking / fig-link=“https://source-url.com” / Makes image clickable to source */ &gt; &gt; /* Layout options / fig-column=“margin|page” / Places in margin or spans page width / fig-pos=“H” / Position specifier (LaTeX) */ &gt; &gt; /* Panels for subfigures (if combining multiple) / fig-subcap=true / Enable subcaptions */ } &gt; –&gt;",
     "crumbs": [
       "Frontmatter"
     ]
@@ -180,21 +180,11 @@
     ]
   },
   {
-    "objectID": "chapters/Introduction.html#testing-figures",
-    "href": "chapters/Introduction.html#testing-figures",
-    "title": "1  Introduction",
-    "section": "1.12 Testing Figures",
-    "text": "1.12 Testing Figures\n\n\n\n\n\n\n\nFigure 1.1: Caption/Title 2\n\n\n\nTesting crossreferencing grapics Figure 1.1.\n\n\n\n\n\n\nFigure 1.2: Caption/Title 3\n\n\n\nTesting crossreferencing grapics Figure 1.2.",
-    "crumbs": [
-      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Introduction</span>"
-    ]
-  },
-  {
     "objectID": "chapters/Introduction.html#overview-table-of-contents",
     "href": "chapters/Introduction.html#overview-table-of-contents",
     "title": "1  Introduction",
-    "section": "1.13 Overview / Table of Contents",
-    "text": "1.13 Overview / Table of Contents",
+    "section": "1.12 Overview / Table of Contents",
+    "text": "1.12 Overview / Table of Contents",
     "crumbs": [
       "<span class='chapter-number'>1</span>  <span class='chapter-title'>Introduction</span>"
     ]
