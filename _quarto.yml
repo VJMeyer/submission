@@ -4,207 +4,207 @@
 
 
 
-# # # SWITCH BETWEEN BOOK AND MAUSCRIPT QUARTO BY (UN-)COMMENTING THE RESPECTIVE SECTION IN THIS _quarto.yml file
+# # SWITCH BETWEEN BOOK AND MAUSCRIPT QUARTO BY (UN-)COMMENTING THE RESPECTIVE SECTION IN THIS _quarto.yml file
 
 
 
 
 
 
-# project:
-#   type: book
-#   output-dir: _outputs/book
-
-# execute:
-#   freeze: auto
-
-# book:
-#   title: "Automating the Modelling of Transformative Artificial Intelligence Risks"
-#   author: "Valentin Jakob Meyer"
-# #  lof: true
-# #  title-block-banner: true
-# #  title-block-banner: latex/uni-bayreuth-logo.png
-#   date: "2025-05-26"
-#   search: true
-#   repo-url: https://github.com/VJMeyer/submission
-#   repo-actions: [edit]
-#   downloads: [pdf, epub] #tex?
-#   sharing: [twitter, facebook]
-#   cover-image: images/cover.png
-#   #output-file: "complete-book"
-#   chapters:
-#     - index.qmd
-#     - chapters/Frontmatter.qmd
-#     - chapters/Introduction.qmd
-#     - chapters/Context.qmd
-#     - chapters/AMTAIR.qmd
-#     - chapters/Discussion.qmd
-#     - chapters/Conclusion.qmd
-#     - ref/references.qmd
-#   #  - lof.qmd
-#   #  - AMTAIR_Prototype/data/example_rain-sprinkler-lawn/AMTAIR_Prototype_example_rain-sprinkler-lawn.ipynb
-#   #  - AMTAIR_Prototype/data/example_carlsmith/AMTAIR_Prototype_example_carlsmith.ipynb
-#   appendices:
-#     - chapters/Appendices.qmd
-#     - chapters/appendixA.qmd
-#   navbar:
-#     pinned: true
-#   page-footer: 
-#     left: "Copyright 2025, Valentin Meyer" 
-#     right: 
-#       - icon: github
-#         href: https://github.com/
-#       - icon: twitter 
-#         href: https://twitter.com/
-
-# format:
-#   html:
-#     include-in-header:
-#       text: |
-#         <script src="https://hypothes.is/embed.js" async></script>
-#     theme: cosmo
-#     code-fold: true
-#     toc: true
-#     toc-depth: 5
-#     toc-title: "ToC"
-#     lof: true
-#     page-navigation: true
-#     site-path: /
-#     self-contained: false
-#     number-sections: true
-#   pdf:
-#     documentclass: book
-#     geometry: margin=1in
-#     template: latex/template.tex
-#   #  include-in-header: latex/preamble.tex
-#     keep-tex: true
-#     toc: true
-#     lof: true
-#     pdf-engine: xelatex
-#     include-after-body: latex/affidavit.tex
-#     output-file: thesis-book.pdf
-#   latex:
-#     documentclass: book
-#     include-in-header: latex/preamble.tex
-#     include-after-body: latex/affidavit.tex
-#     output-file: thesis-book.tex
-#     keep-tex: true
-
-#   docx: default
-
-#   #jats: default
-
-#   #odt: default
-
-# bibliography: ref/MAref.bib
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-## Common output settings
-# format-common: &format-common
-#   number-sections: true   # Enable section numbering
-#   toc: true              # Include table of contents
-#   toc-depth: 4           # Include headings up to level 4
-#   toc-title: "Contents"  # Custom TOC title
-#   # Customize section numbering
-#   include-in-header: 
-#     text: |
-#       \setcounter{secnumdepth}{4}
-#       \renewcommand{\thesection}{\arabic{section}}
-#       \renewcommand{\thesubsection}{\thesection.\arabic{subsection}}
-
-
-
-# Master configuration file for thesis project
-# Controls rendering formats and options
-
-# Configure which profile to use by uncommenting ONE of these sections
-# Then run: quarto render
-
-# MANUSCRIPT PROFILE - Interactive HTML with navigation
 project:
-  type: manuscript  # manuscript format for formal thesis
-  output-dir: _outputs/manuscript  # Output directory for manuscript format
+  type: book
+  output-dir: _outputs/book
 
 execute:
-  freeze: auto  # Caches results for faster rendering
-#  echo: false  # Hide code by default
+  freeze: auto
 
-
-# Configure manuscript settings
-manuscript:
-  article: thesis.qmd  # Main entry point file
-  #downloads: [pdf, epub] #tex, MECA Bundle (.zip), MS Word?
-    # Explicitly list notebooks in desired order
-  notebooks:  # Include notebooks
-    - notebook: AMTAIR_Prototype/data/example_rain-sprinkler-lawn/AMTAIR_Prototype_example_rain-sprinkler-lawn.ipynb
-      title: AMTAIR Rain-Sprinkler-Lawn Example
-    #  url: https://colab.research.google.com/github/VJMeyer/submission/blob/main/AMTAIR_Prototype/data/example_rain-sprinkler-lawn/AMTAIR_Prototype_example_rain-sprinkler-lawn.ipynb
-    - notebook: AMTAIR_Prototype/data/example_carlsmith/AMTAIR_Prototype_example_carlsmith.ipynb
-      title: AMTAIR Carlsmith Example
-    #  url: https://colab.research.google.com/github/VJMeyer/submission/blob/main/AMTAIR_Prototype/data/example_carlsmith/AMTAIR_Prototype_example_carlsmith.ipynb
-    #- notebook: notebooks/AMTAIR_Prototype_example_carlsmith.ipynb
-    #  title: AMTAIR Carlsmith Example
-    #  url:   https://github.com/VJMeyer/submission/blob/main/notebooks/AMTAIR_Prototype_example_carlsmithIPYNB.ipynb
+book:
+  title: "Automating the Modelling of Transformative Artificial Intelligence Risks"
+  author: "Valentin Jakob Meyer"
+#  lof: true
+#  title-block-banner: true
+#  title-block-banner: latex/uni-bayreuth-logo.png
+  date: "2025-05-26"
+  search: true
+  repo-url: https://github.com/VJMeyer/submission
+  repo-actions: [edit]
+  downloads: [pdf, epub] #tex?
+  sharing: [twitter, facebook]
+  cover-image: images/cover.png
+  #output-file: "complete-book"
+  chapters:
+    - index.qmd
+    - chapters/Frontmatter.qmd
+    - chapters/Introduction.qmd
+    - chapters/Context.qmd
+    - chapters/AMTAIR.qmd
+    - chapters/Discussion.qmd
+    - chapters/Conclusion.qmd
+    - ref/references.qmd
+  #  - lof.qmd
+  #  - AMTAIR_Prototype/data/example_rain-sprinkler-lawn/AMTAIR_Prototype_example_rain-sprinkler-lawn.ipynb
+  #  - AMTAIR_Prototype/data/example_carlsmith/AMTAIR_Prototype_example_carlsmith.ipynb
+  appendices:
+    - chapters/Appendices.qmd
+    - chapters/appendixA.qmd
+  navbar:
+    pinned: true
+  page-footer: 
+    left: "Copyright 2025, Valentin Meyer" 
+    right: 
+      - icon: github
+        href: https://github.com/
+      - icon: twitter 
+        href: https://twitter.com/
 
 format:
   html:
-    toc: true
-    toc-depth: 4
-    number-sections: true
-    toc-title: "Table of Contents"
-    lof: true
+    include-in-header:
+      text: |
+        <script src="https://hypothes.is/embed.js" async></script>
     theme: cosmo
     code-fold: true
-    #output-file: thesis-manuscript.html
-   ## PDF output settings
+    toc: true
+    toc-depth: 5
+    toc-title: "ToC"
+    lof: true
+    page-navigation: true
+    site-path: /
+    self-contained: false
+    number-sections: true
   pdf:
-    documentclass: report  # Academic report format
-    classoption: [12pt, a4paper, oneside]  # Paper and font options
-    # template: latex/template.tex  # Custom template
-    # include-in-header: latex/preamble.tex  # LaTeX preamble
-    pdf-engine: xelatex  # Engine for PDF creation
-    keep-tex: true  # Keep LaTeX source
-    output-file: thesis-manuscript.pdf  # Output filename
-    toc: true  # Include table of contents
-    lot: true  # List of tables
-    lof: true  # List of figures
-    colorlinks: true  # Colored hyperlinks
+    documentclass: book
+    geometry: margin=1in
+    template: latex/template.tex
+  #  include-in-header: latex/preamble.tex
+    keep-tex: true
+    toc: true
+    lof: true
+    pdf-engine: xelatex
     include-after-body: latex/affidavit.tex
+    output-file: thesis-book.pdf
+  latex:
+    documentclass: book
+    include-in-header: latex/preamble.tex
+    include-after-body: latex/affidavit.tex
+    output-file: thesis-book.tex
+    keep-tex: true
+
+  docx: default
+
+  #jats: default
+
+  #odt: default
+
+bibliography: ref/MAref.bib
 
 
-  # # LaTeX source output
-  # latex:
-  #   documentclass: report  # Academic report format
-  #   include-in-header: latex/preamble.tex  # LaTeX preamble
-  #   output-file: thesis-manuscript.tex  # Output filename
 
-#  docx: default
 
-#  jats: default
 
-#  odt: default
 
-# Bibliography configuration
-bibliography: ref/MAref.bib  # Reference file location
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+# ## Common output settings
+# # format-common: &format-common
+# #   number-sections: true   # Enable section numbering
+# #   toc: true              # Include table of contents
+# #   toc-depth: 4           # Include headings up to level 4
+# #   toc-title: "Contents"  # Custom TOC title
+# #   # Customize section numbering
+# #   include-in-header: 
+# #     text: |
+# #       \setcounter{secnumdepth}{4}
+# #       \renewcommand{\thesection}{\arabic{section}}
+# #       \renewcommand{\thesubsection}{\thesection.\arabic{subsection}}
+
+
+
+# # Master configuration file for thesis project
+# # Controls rendering formats and options
+
+# # Configure which profile to use by uncommenting ONE of these sections
+# # Then run: quarto render
+
+# # MANUSCRIPT PROFILE - Interactive HTML with navigation
+# project:
+#   type: manuscript  # manuscript format for formal thesis
+#   output-dir: _outputs/manuscript  # Output directory for manuscript format
+
+# execute:
+#   freeze: auto  # Caches results for faster rendering
+# #  echo: false  # Hide code by default
+
+
+# # Configure manuscript settings
+# manuscript:
+#   article: thesis.qmd  # Main entry point file
+#   #downloads: [pdf, epub] #tex, MECA Bundle (.zip), MS Word?
+#     # Explicitly list notebooks in desired order
+#   notebooks:  # Include notebooks
+#     - notebook: AMTAIR_Prototype/data/example_rain-sprinkler-lawn/AMTAIR_Prototype_example_rain-sprinkler-lawn.ipynb
+#       title: AMTAIR Rain-Sprinkler-Lawn Example
+#     #  url: https://colab.research.google.com/github/VJMeyer/submission/blob/main/AMTAIR_Prototype/data/example_rain-sprinkler-lawn/AMTAIR_Prototype_example_rain-sprinkler-lawn.ipynb
+#     - notebook: AMTAIR_Prototype/data/example_carlsmith/AMTAIR_Prototype_example_carlsmith.ipynb
+#       title: AMTAIR Carlsmith Example
+#     #  url: https://colab.research.google.com/github/VJMeyer/submission/blob/main/AMTAIR_Prototype/data/example_carlsmith/AMTAIR_Prototype_example_carlsmith.ipynb
+#     #- notebook: notebooks/AMTAIR_Prototype_example_carlsmith.ipynb
+#     #  title: AMTAIR Carlsmith Example
+#     #  url:   https://github.com/VJMeyer/submission/blob/main/notebooks/AMTAIR_Prototype_example_carlsmithIPYNB.ipynb
+
+# format:
+#   html:
+#     toc: true
+#     toc-depth: 4
+#     number-sections: true
+#     toc-title: "Table of Contents"
+#     lof: true
+#     theme: cosmo
+#     code-fold: true
+#     #output-file: thesis-manuscript.html
+#    ## PDF output settings
+#   pdf:
+#     documentclass: report  # Academic report format
+#     classoption: [12pt, a4paper, oneside]  # Paper and font options
+#     # template: latex/template.tex  # Custom template
+#     # include-in-header: latex/preamble.tex  # LaTeX preamble
+#     pdf-engine: xelatex  # Engine for PDF creation
+#     keep-tex: true  # Keep LaTeX source
+#     output-file: thesis-manuscript.pdf  # Output filename
+#     toc: true  # Include table of contents
+#     lot: true  # List of tables
+#     lof: true  # List of figures
+#     colorlinks: true  # Colored hyperlinks
+#     include-after-body: latex/affidavit.tex
+
+
+#   # # LaTeX source output
+#   # latex:
+#   #   documentclass: report  # Academic report format
+#   #   include-in-header: latex/preamble.tex  # LaTeX preamble
+#   #   output-file: thesis-manuscript.tex  # Output filename
+
+# #  docx: default
+
+# #  jats: default
+
+# #  odt: default
+
+# # Bibliography configuration
+# bibliography: ref/MAref.bib  # Reference file location
 
 
 

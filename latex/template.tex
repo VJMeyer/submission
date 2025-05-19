@@ -37,10 +37,18 @@ $endif$
 % Main content
 $body$
 
+
+% Add LOT if requested
+$if(lot)$
+\listoftables
+$endif$
+
 % List of figures - explicitly added
 $if(lof)$
 \listoffigures
 $endif$
+
+
 
 % Add affidavit at the end but still within document environment
 \input{latex/affidavit.tex}

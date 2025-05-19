@@ -19,15 +19,11 @@ numbering:
 
 -   introduces and motivates the core question or problem
 
-<!-- [![Caption/Title 2](/images/cover.png){#fig-testgraphic2 fig-scap="Short 2 caption" fig-alt="2nd Alt Text / Description." fig-align="left" width="30%"}](https://vjmeyer.com) -->
-
-![Caption/Title 2](/images/cover.png){#fig-testgraphic2 fig-scap="Short 2 caption" fig-alt="2nd Alt Text / Description." fig-align="left" width="30%"}
 
 
 
-Testing crossreferencing grapics @fig-testgraphic2.
 
-<!-- \listoffigures -->
+
 
 ## Motivation: Problem Statement
 
@@ -122,6 +118,29 @@ Visual Aid:
 
 -   A diagram illustrating how each component amplifies the others, leading to greater overall impact.
 
-## 
+## Testing Figures
+
+<!-- [![Caption/Title 2](/images/cover.png){#fig-testgraphic2 fig-scap="Short 2 caption" fig-alt="2nd Alt Text / Description." fig-align="left" width="30%"}](https://vjmeyer.com) -->
+
+[![Caption/Title 2](/images/cover.png){#fig-testgraphic2 fig-scap="Short 2 caption" fig-alt="2nd Alt Text / Description." fig-align="left" width="30%"}](https://vjmeyer.com)
+
+
+
+Testing crossreferencing grapics @fig-testgraphic2.
+
+![Caption/Title 3](/images/cover.png){
+  #fig-testgraphic3 
+  fig-scap="Short 3 caption" 
+  fig-alt="This is a cover image showing a conceptual visualization of AI risk modeling. 
+          It illustrates the network structure of probabilistic relationships with nodes 
+          representing key variables and edges showing causal connections. Included to 
+          demonstrate the visual approach of the AMTAIR system."
+  fig-align="left" 
+  width="30%"
+  fig-link="https://source-website.com/original-image"
+}
+
+Testing crossreferencing grapics @fig-testgraphic3.
+
 
 ## Overview / Table of Contents
