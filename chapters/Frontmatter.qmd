@@ -60,6 +60,8 @@ Testing crossreferencing grapics @fig-testgraphic2.
     width="30%"
     }](https://github.com/VJMeyer/submission)
 
+
+
 Testing crossreferencing grapics @fig-Unique_identifier_for_crossreferencing.
 <!-- 
 > 
@@ -82,6 +84,7 @@ Testing crossreferencing grapics @fig-Unique_identifier_for_crossreferencing.
 >
 > /\* Panels for subfigures (if combining multiple) */ fig-subcap=true /* Enable subcaptions \*/ }
 > -->
+
 
 
 ## Glossary{.unnumbered}
