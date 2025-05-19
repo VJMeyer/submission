@@ -61,8 +61,6 @@ citation-location: margin   #   https://quarto.org/docs/authoring/article-layout
 
 # Table of Contents
 
-
-
 # Abstract {.unnumbered}
 
 The coordination crisis in AI governance presents a paradoxical challenge: unprecedented investment in AI safety coexists alongside fundamental coordination failures across technical, policy, and ethical domains. These divisions systematically increase existential risk by creating safety gaps, misallocating resources, and fostering inconsistent approaches to interdependent problems. This thesis introduces AMTAIR (Automating Transformative AI Risk Modeling), a computational approach that addresses this coordination failure by automating the extraction of probabilistic world models from AI safety literature using frontier language models.

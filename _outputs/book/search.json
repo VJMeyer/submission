@@ -10,56 +10,6 @@
     ]
   },
   {
-    "objectID": "chapters/Frontmatter.html",
-    "href": "chapters/Frontmatter.html",
-    "title": "Frontmatter",
-    "section": "",
-    "text": "Prefatory Apparatus: Illustrations and Terminology — Quick References",
-    "crumbs": [
-      "Frontmatter"
-    ]
-  },
-  {
-    "objectID": "chapters/Frontmatter.html#list-of-tables",
-    "href": "chapters/Frontmatter.html#list-of-tables",
-    "title": "Frontmatter",
-    "section": "List of Tables",
-    "text": "List of Tables\nTable 1: Table name\nTable 2: Table name\nTable 3: Table name",
-    "crumbs": [
-      "Frontmatter"
-    ]
-  },
-  {
-    "objectID": "chapters/Frontmatter.html#list-of-graphics-figures",
-    "href": "chapters/Frontmatter.html#list-of-graphics-figures",
-    "title": "Frontmatter",
-    "section": "List of Graphics & Figures",
-    "text": "List of Graphics & Figures",
-    "crumbs": [
-      "Frontmatter"
-    ]
-  },
-  {
-    "objectID": "chapters/Frontmatter.html#list-of-abbreviations",
-    "href": "chapters/Frontmatter.html#list-of-abbreviations",
-    "title": "Frontmatter",
-    "section": "List of Abbreviations",
-    "text": "List of Abbreviations\nesp. especially\nf., ff. following\nincl. including\np., pp. page(s)\nMAD Mutually Assured Destruction",
-    "crumbs": [
-      "Frontmatter"
-    ]
-  },
-  {
-    "objectID": "chapters/Frontmatter.html#glossary",
-    "href": "chapters/Frontmatter.html#glossary",
-    "title": "Frontmatter",
-    "section": "Glossary",
-    "text": "Glossary",
-    "crumbs": [
-      "Frontmatter"
-    ]
-  },
-  {
     "objectID": "chapters/Introduction.html",
     "href": "chapters/Introduction.html",
     "title": "1  Introduction",
@@ -417,6 +367,86 @@
     "text": "5.3 Outlook — Outlook & Next Steps / Further Research\n\n5.3.1 Scaling Up:\n\nInclude more variables and data sources.\n\n\n\n5.3.2 Collaboration:\n\nPartner with policymakers and researchers.\n\n\n\n5.3.3 Technological Enhancements:\n\nEmploy advanced AI techniques.\n\n\n\n5.3.4 Potential Impact:\n\nInfluence global AI governance.\n5.3.5 Limitations of the Analysis\n\n\n\n5.3.6 Policy Implications & Recommendations\n\n\n5.3.7 Areas for Future Research\n\n\n5.3.8 Open Questions — Central/Remaining Questions & Feedback\n\n5.3.8.1 Questions:\n\nHow can we improve automation accuracy?\n\nWhat challenges exist in policy implementation?\n\nHow do we mitigate AI model biases?\n\nHow can interdisciplinary efforts enhance outcomes?\n\n\n\n5.3.8.2 Feedback:\n\nInvite thoughts, critiques, and suggestions.\n\n\n\n\n\n5.3.9 Outlook — Outlook & Next Steps / Further Research",
     "crumbs": [
       "<span class='chapter-number'>5</span>  <span class='chapter-title'>Conclusion</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/Frontmatter.html",
+    "href": "chapters/Frontmatter.html",
+    "title": "Frontmatter",
+    "section": "",
+    "text": "Prefatory Apparatus: Illustrations and Terminology — Quick References",
+    "crumbs": [
+      "Frontmatter"
+    ]
+  },
+  {
+    "objectID": "chapters/Frontmatter.html#list-of-tables",
+    "href": "chapters/Frontmatter.html#list-of-tables",
+    "title": "Frontmatter",
+    "section": "List of Tables",
+    "text": "List of Tables\nTable 1: Table name\nTable 2: Table name\nTable 3: Table name\n\nFigure 1.1: The coordination crisis in AI governance - visualization of fragmentation\n\nFigure 2.1: The Carlsmith model - DAG representation\n\nFigure 3.1: Research design overview - workflow diagram\n\nFigure 3.2: From natural language to BayesDown - transformation process\n\nFigure 4.1: ARPA system architecture - component diagram\n\nFigure 4.2: Visualization of Rain-Sprinkler-Grass_Wet Bayesian network - screenshot\n\nFigure 5.1: Extraction quality metrics - comparative chart\n\nFigure 5.2: Comparative analysis of AI governance worldviews - network visualization\n\nTable 2.1: Comparison of approaches to AI risk modeling\n\nTable 3.1: Probabilistic translation guide for qualitative expressions\n\nTable 4.1: System component responsibilities and interactions\n\nTable 5.1: Policy impact evaluation results - summary metrics",
+    "crumbs": [
+      "Frontmatter"
+    ]
+  },
+  {
+    "objectID": "chapters/Frontmatter.html#list-of-graphics-figures",
+    "href": "chapters/Frontmatter.html#list-of-graphics-figures",
+    "title": "Frontmatter",
+    "section": "List of Graphics & Figures",
+    "text": "List of Graphics & Figures",
+    "crumbs": [
+      "Frontmatter"
+    ]
+  },
+  {
+    "objectID": "chapters/Frontmatter.html#list-of-abbreviations",
+    "href": "chapters/Frontmatter.html#list-of-abbreviations",
+    "title": "Frontmatter",
+    "section": "List of Abbreviations",
+    "text": "List of Abbreviations\nesp. especially\nf., ff. following\nincl. including\np., pp. page(s)\nMAD Mutually Assured Destruction\n\nAI - Artificial Intelligence\n\nAGI - Artificial General Intelligence\n\nARPA - AI Risk Pathway Analyzer\n\nDAG - Directed Acyclic Graph\n\nLLM - Large Language Model\n\nMTAIR - Modeling Transformative AI Risks\n\nP(Doom) - Probability of existential catastrophe from misaligned AI\n\nCPT - Conditional Probability Table",
+    "crumbs": [
+      "Frontmatter"
+    ]
+  },
+  {
+    "objectID": "chapters/Frontmatter.html#glossary",
+    "href": "chapters/Frontmatter.html#glossary",
+    "title": "Frontmatter",
+    "section": "Glossary",
+    "text": "Glossary\n\nArgument mapping: A method for visually representing the structure of arguments\n\nBayesDown: An extension of ArgDown that incorporates probabilistic information\n\nBayesian network: A probabilistic graphical model representing variables and their dependencies\n\nConditional probability: The probability of an event given that another event has occurred\n\nDirected Acyclic Graph (DAG): A graph with directed edges and no cycles\n\nExistential risk: Risk of permanent curtailment of humanity’s potential\n\nPower-seeking AI: AI systems with instrumental incentives to acquire resources and power\n\nPrediction market: A market where participants trade contracts that resolve based on future events\n\nd-separation: A criterion for identifying conditional independence relationships in Bayesian networks\n\nMonte Carlo sampling: A computational technique using random sampling to obtain numerical results",
+    "crumbs": [
+      "Frontmatter"
+    ]
+  },
+  {
+    "objectID": "chapters/Frontmatter.html#sec-citations",
+    "href": "chapters/Frontmatter.html#sec-citations",
+    "title": "Frontmatter",
+    "section": "Citations",
+    "text": "Citations\n(Knuth 1984)\nAdams (1996)\n(Adams 1996)\n\nQuarto Features Incompatible with LaTeX (Below)\n\n\n\n\n\n\n\nAdams, Ernest W. 1996. “Four Probability-Preserving Properties of Inferences.” Journal of Philosophical Logic 25: 1–24.\n\n\nKnuth, Donald E. 1984. “Literate Programming.” Computer Journal 27 (2): 97–111. https://doi.org/10.1093/comjnl/27.2.97.",
+    "crumbs": [
+      "Frontmatter"
+    ]
+  },
+  {
+    "objectID": "chapters/Frontmatter.html#footnotes",
+    "href": "chapters/Frontmatter.html#footnotes",
+    "title": "Frontmatter",
+    "section": "",
+    "text": "Inlines notes are easier to write, since you don’t have to pick an identifier and move down to type the note.↩︎\nHere is the footnote.↩︎",
+    "crumbs": [
+      "Frontmatter"
+    ]
+  },
+  {
+    "objectID": "ref/references.html",
+    "href": "ref/references.html",
+    "title": "Bibliography (References)",
+    "section": "",
+    "text": "Adams, Ernest W. 1996. “Four Probability-Preserving Properties of\nInferences.” Journal of Philosophical Logic 25: 1–24.\n\n\nKnuth, Donald E. 1984. “Literate Programming.” Computer\nJournal 27 (2): 97–111. https://doi.org/10.1093/comjnl/27.2.97.",
+    "crumbs": [
+      "Bibliography (References)"
     ]
   },
   {

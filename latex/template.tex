@@ -10,6 +10,10 @@ $preamble-includes$
 \usepackage{booktabs}
 \usepackage{bookmark}
 \usepackage{hyperref}
+\usepackage[backend=biber]{biblatex}
+\addbibresource{ref/MAref.bib}
+
+
 
 % Define custom commands for metadata
 \newcommand{\subtitle}{$subtitle$}
@@ -48,6 +52,9 @@ $if(lof)$
 \listoffigures
 $endif$
 
+% % Bibliography
+% \bibliography{bibliography}
+% \bibliographystyle{apalike}
 
 
 % Add affidavit at the end but still within document environment

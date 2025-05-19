@@ -1,4 +1,6 @@
-
+---
+number-sections: true
+---
 
 
 ## Frontmatter {.unnumbered}
@@ -12,6 +14,19 @@ Table 1: 	Table name
 Table 2: 	Table name
 
 Table 3:	Table name
+
+* Figure 1.1: The coordination crisis in AI governance \- visualization of fragmentation  
+* Figure 2.1: The Carlsmith model \- DAG representation  
+* Figure 3.1: Research design overview \- workflow diagram  
+* Figure 3.2: From natural language to BayesDown \- transformation process  
+* Figure 4.1: ARPA system architecture \- component diagram  
+* Figure 4.2: Visualization of Rain-Sprinkler-Grass\_Wet Bayesian network \- screenshot  
+* Figure 5.1: Extraction quality metrics \- comparative chart  
+* Figure 5.2: Comparative analysis of AI governance worldviews \- network visualization  
+* Table 2.1: Comparison of approaches to AI risk modeling  
+* Table 3.1: Probabilistic translation guide for qualitative expressions  
+* Table 4.1: System component responsibilities and interactions  
+* Table 5.1: Policy impact evaluation results \- summary metrics
 
 ## List of Graphics & Figures{.unnumbered}
 
@@ -27,4 +42,144 @@ p., pp.		page(s)
 
 MAD		Mutually Assured Destruction
 
-## Glossary{.unnumbered}
+* AI \- Artificial Intelligence  
+* AGI \- Artificial General Intelligence  
+* ARPA \- AI Risk Pathway Analyzer  
+* DAG \- Directed Acyclic Graph  
+* LLM \- Large Language Model  
+* MTAIR \- Modeling Transformative AI Risks  
+* P(Doom) \- Probability of existential catastrophe from misaligned AI  
+* CPT \- Conditional Probability Table
+
+## Glossary {.unnumbered .unlisted} 
+
+* **Argument mapping**: A method for visually representing the structure of arguments  
+* **BayesDown**: An extension of ArgDown that incorporates probabilistic information  
+* **Bayesian network**: A probabilistic graphical model representing variables and their dependencies  
+* **Conditional probability**: The probability of an event given that another event has occurred  
+* **Directed Acyclic Graph (DAG)**: A graph with directed edges and no cycles  
+* **Existential risk**: Risk of permanent curtailment of humanity's potential  
+* **Power-seeking AI**: AI systems with instrumental incentives to acquire resources and power  
+* **Prediction market**: A market where participants trade contracts that resolve based on future events  
+* **d-separation**: A criterion for identifying conditional independence relationships in Bayesian networks  
+* **Monte Carlo sampling**: A computational technique using random sampling to obtain numerical results
+
+
+
+
+# Headings & Potential Headings {#sec-heading}
+
+Notes
+
+Ideas
+
+Citations / Things to reference
+
+<!-- Comments -->
+
+<!-- [ ] ToDos-->
+
+
+
+`verbatim code`
+
+
+
+> Blockquote
+
+
+
+
+Here is an inline note.^[Inlines notes are easier to write,
+since you don't have to pick an identifier and move down to
+type the note.]
+
+
+Here is a footnote reference,[^1] 
+
+[^1]: Here is the footnote.
+
+
+```
+code
+```
+
+```{=latex}
+\renewcommand*{\labelitemi}{\textgreater}
+```
+
+
+Here's some raw inline HTML: `<a>html</a>`{=html}
+
+
+page 1
+
+{{< pagebreak >}}
+
+page 2
+
+
+```{mermaid}
+flowchart LR
+  A[Hard edge] --> B(Round edge)
+  B --> C{Decision}
+  C --> D[Result one]
+  C --> E[Result two]
+```
+
+Testing crossreferencing grapics @fig-automation_pipeline.
+
+Referencing Sections @sec-citations.
+
+headings as @sec-heading.
+
+
+
+## Citations {#sec-citations}
+
+[@knuth84]
+
+@adamsFourProbabilitypreservingProperties1996
+
+
+[@adamsFourProbabilitypreservingProperties1996]
+
+
+
+### Quarto Features Incompatible with LaTeX (Below) {.unnumbered .unlisted}
+
+
+<!-- 
+
+Here is a second footnote reference,[^1] and another.
+
+[^longnote]
+
+
+
+[^longnote]: Here's one with multiple blocks.
+
+    Subsequent paragraphs are indented to show that they
+belong to the previous footnote.
+
+        { some.code }
+
+    The whole paragraph can be indented, or just the first
+    line.  In this way, multi-paragraph footnotes work like
+    multi-paragraph list items.
+
+This paragraph won't be part of the note, because it
+isn't indented. -->
+
+<!-- 
+- [ ] Task 1
+- [x] Task 2 -->
+
+<!-- 
+::: {.hidden}
+$$
+ \def\RR{{\bf R}}
+ \def\bold#1{{\bf #1}}
+$$
+::: -->
+

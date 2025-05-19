@@ -34,12 +34,12 @@ book:
   #output-file: "complete-book"
   chapters:
     - index.qmd
-    - chapters/Frontmatter.qmd
     - chapters/Introduction.qmd
     - chapters/Context.qmd
     - chapters/AMTAIR.qmd
     - chapters/Discussion.qmd
     - chapters/Conclusion.qmd
+    - chapters/Frontmatter.qmd
     - ref/references.qmd
   #  - lof.qmd
   #  - AMTAIR_Prototype/data/example_rain-sprinkler-lawn/AMTAIR_Prototype_example_rain-sprinkler-lawn.ipynb
@@ -83,6 +83,8 @@ format:
     pdf-engine: xelatex
     include-after-body: latex/affidavit.tex
     output-file: thesis-book.pdf
+    cite-method: biblatex
+    biblio-title: Bibliography    	
   latex:
     documentclass: book
     include-in-header: latex/preamble.tex

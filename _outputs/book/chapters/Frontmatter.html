@@ -20,7 +20,27 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
-</style>
+/* CSS for citations */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+  margin-bottom: 0em;
+}
+.hanging-indent div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}</style>
 
 
 <script src="../site_libs/quarto-nav/quarto-nav.js"></script>
@@ -29,8 +49,8 @@ ul.task-list li input[type="checkbox"] {
 <script src="../site_libs/quarto-search/fuse.min.js"></script>
 <script src="../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../">
-<link href="../chapters/Introduction.html" rel="next">
-<link href="../index.html" rel="prev">
+<link href="../ref/references.html" rel="next">
+<link href="../chapters/Conclusion.html" rel="prev">
 <script src="../site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
 <script src="../site_libs/quarto-html/popper.min.js"></script>
@@ -68,6 +88,9 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Search"
   }
 }</script>
+<script src="../site_libs/quarto-diagram/mermaid.min.js"></script>
+<script src="../site_libs/quarto-diagram/mermaid-init.js"></script>
+<link href="../site_libs/quarto-diagram/mermaid.css" rel="stylesheet">
 <script src="https://hypothes.is/embed.js" async=""></script>
 
 
@@ -149,12 +172,6 @@ ul.task-list li input[type="checkbox"] {
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../chapters/Frontmatter.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text">Frontmatter</span></a>
-  </div>
-</li>
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
   <a href="../chapters/Introduction.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Introduction</span></span></a>
   </div>
@@ -185,8 +202,14 @@ ul.task-list li input[type="checkbox"] {
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
+  <a href="../chapters/Frontmatter.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text">Frontmatter</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
   <a href="../ref/references.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">References</span></a>
+ <span class="menu-text">Bibliography (References)</span></a>
   </div>
 </li>
         <li class="sidebar-item sidebar-item-section">
@@ -227,7 +250,10 @@ ul.task-list li input[type="checkbox"] {
   <li><a href="#list-of-tables" id="toc-list-of-tables" class="nav-link" data-scroll-target="#list-of-tables">List of Tables</a></li>
   <li><a href="#list-of-graphics-figures" id="toc-list-of-graphics-figures" class="nav-link" data-scroll-target="#list-of-graphics-figures">List of Graphics &amp; Figures</a></li>
   <li><a href="#list-of-abbreviations" id="toc-list-of-abbreviations" class="nav-link" data-scroll-target="#list-of-abbreviations">List of Abbreviations</a></li>
-  <li><a href="#glossary" id="toc-glossary" class="nav-link" data-scroll-target="#glossary">Glossary</a></li>
+  </ul></li>
+  <li><a href="#sec-heading" id="toc-sec-heading" class="nav-link" data-scroll-target="#sec-heading">Headings &amp; Potential Headings</a>
+  <ul>
+  <li><a href="#sec-citations" id="toc-sec-citations" class="nav-link" data-scroll-target="#sec-citations">Citations</a></li>
   </ul></li>
   </ul>
 <div class="toc-actions"><ul><li><a href="https://github.com/VJMeyer/submission/edit/main/chapters/Frontmatter.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li></ul></div></nav>
@@ -261,6 +287,31 @@ ul.task-list li input[type="checkbox"] {
 <p>Table 1: Table name</p>
 <p>Table 2: Table name</p>
 <p>Table 3: Table name</p>
+<ul>
+<li>Figure 1.1: The coordination crisis in AI governance - visualization of fragmentation<br>
+</li>
+<li>Figure 2.1: The Carlsmith model - DAG representation<br>
+</li>
+<li>Figure 3.1: Research design overview - workflow diagram<br>
+</li>
+<li>Figure 3.2: From natural language to BayesDown - transformation process<br>
+</li>
+<li>Figure 4.1: ARPA system architecture - component diagram<br>
+</li>
+<li>Figure 4.2: Visualization of Rain-Sprinkler-Grass_Wet Bayesian network - screenshot<br>
+</li>
+<li>Figure 5.1: Extraction quality metrics - comparative chart<br>
+</li>
+<li>Figure 5.2: Comparative analysis of AI governance worldviews - network visualization<br>
+</li>
+<li>Table 2.1: Comparison of approaches to AI risk modeling<br>
+</li>
+<li>Table 3.1: Probabilistic translation guide for qualitative expressions<br>
+</li>
+<li>Table 4.1: System component responsibilities and interactions<br>
+</li>
+<li>Table 5.1: Policy impact evaluation results - summary metrics</li>
+</ul>
 </section>
 <section id="list-of-graphics-figures" class="level2 unnumbered">
 <h2 class="unnumbered anchored" data-anchor-id="list-of-graphics-figures">List of Graphics &amp; Figures</h2>
@@ -272,12 +323,143 @@ ul.task-list li input[type="checkbox"] {
 <p>incl.&nbsp;including</p>
 <p>p., pp.&nbsp;page(s)</p>
 <p>MAD Mutually Assured Destruction</p>
+<ul>
+<li>AI - Artificial Intelligence<br>
+</li>
+<li>AGI - Artificial General Intelligence<br>
+</li>
+<li>ARPA - AI Risk Pathway Analyzer<br>
+</li>
+<li>DAG - Directed Acyclic Graph<br>
+</li>
+<li>LLM - Large Language Model<br>
+</li>
+<li>MTAIR - Modeling Transformative AI Risks<br>
+</li>
+<li>P(Doom) - Probability of existential catastrophe from misaligned AI<br>
+</li>
+<li>CPT - Conditional Probability Table</li>
+</ul>
 </section>
-<section id="glossary" class="level2 unnumbered">
-<h2 class="unnumbered anchored" data-anchor-id="glossary">Glossary</h2>
+<section id="glossary" class="level2 unnumbered unlisted">
+<h2 class="unnumbered unlisted anchored" data-anchor-id="glossary">Glossary</h2>
+<ul>
+<li><strong>Argument mapping</strong>: A method for visually representing the structure of arguments<br>
+</li>
+<li><strong>BayesDown</strong>: An extension of ArgDown that incorporates probabilistic information<br>
+</li>
+<li><strong>Bayesian network</strong>: A probabilistic graphical model representing variables and their dependencies<br>
+</li>
+<li><strong>Conditional probability</strong>: The probability of an event given that another event has occurred<br>
+</li>
+<li><strong>Directed Acyclic Graph (DAG)</strong>: A graph with directed edges and no cycles<br>
+</li>
+<li><strong>Existential risk</strong>: Risk of permanent curtailment of humanity’s potential<br>
+</li>
+<li><strong>Power-seeking AI</strong>: AI systems with instrumental incentives to acquire resources and power<br>
+</li>
+<li><strong>Prediction market</strong>: A market where participants trade contracts that resolve based on future events<br>
+</li>
+<li><strong>d-separation</strong>: A criterion for identifying conditional independence relationships in Bayesian networks<br>
+</li>
+<li><strong>Monte Carlo sampling</strong>: A computational technique using random sampling to obtain numerical results</li>
+</ul>
+</section>
+</section>
+<section id="sec-heading" class="level1">
+<h1>Headings &amp; Potential Headings</h1>
+<p>Notes</p>
+<p>Ideas</p>
+<p>Citations / Things to reference</p>
+<!-- Comments -->
+<!-- [ ] ToDos-->
+<p><code>verbatim code</code></p>
+<blockquote class="blockquote">
+<p>Blockquote</p>
+</blockquote>
+<p>Here is an inline note.<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a></p>
+<p>Here is a footnote reference,<a href="#fn2" class="footnote-ref" id="fnref2" role="doc-noteref"><sup>2</sup></a></p>
+<pre><code>code</code></pre>
+<p>Here’s some raw inline HTML: <a>html</a></p>
+<p>page 1</p>
+<div style="page-break-after: always;"></div>
+<p>page 2</p>
+<div class="cell" data-layout-align="default">
+<div class="cell-output-display">
+<div>
+<p></p><figure class="figure"><p></p>
+<div>
+<pre class="mermaid mermaid-js">flowchart LR
+  A[Hard edge] --&gt; B(Round edge)
+  B --&gt; C{Decision}
+  C --&gt; D[Result one]
+  C --&gt; E[Result two]
+</pre>
+</div>
+<p></p></figure><p></p>
+</div>
+</div>
+</div>
+<p>Testing crossreferencing grapics <a href="Context.html#fig-automation_pipeline" class="quarto-xref">Figure&nbsp;<span>2.1</span></a>.</p>
+<p>Referencing Sections <a href="#sec-citations" class="quarto-xref"><span>Citations</span></a>.</p>
+<p>headings as <a href="#sec-heading" class="quarto-xref"><span>Headings &amp; Potential Headings</span></a>.</p>
+<section id="sec-citations" class="level2">
+<h2 class="anchored" data-anchor-id="sec-citations">Citations</h2>
+<p><span class="citation" data-cites="knuth84">(<a href="../ref/references.html#ref-knuth84" role="doc-biblioref">Knuth 1984</a>)</span></p>
+<p><span class="citation" data-cites="adamsFourProbabilitypreservingProperties1996">Adams (<a href="../ref/references.html#ref-adamsFourProbabilitypreservingProperties1996" role="doc-biblioref">1996</a>)</span></p>
+<p><span class="citation" data-cites="adamsFourProbabilitypreservingProperties1996">(<a href="../ref/references.html#ref-adamsFourProbabilitypreservingProperties1996" role="doc-biblioref">Adams 1996</a>)</span></p>
+<section id="quarto-features-incompatible-with-latex-below" class="level3 unnumbered unlisted">
+<h3 class="unnumbered unlisted anchored" data-anchor-id="quarto-features-incompatible-with-latex-below">Quarto Features Incompatible with LaTeX (Below)</h3>
+<!-- 
+
+Here is a second footnote reference,[^1] and another.
+
+[^longnote]
 
 
+
+[^longnote]: Here's one with multiple blocks.
+
+    Subsequent paragraphs are indented to show that they
+belong to the previous footnote.
+
+        { some.code }
+
+    The whole paragraph can be indented, or just the first
+    line.  In this way, multi-paragraph footnotes work like
+    multi-paragraph list items.
+
+This paragraph won't be part of the note, because it
+isn't indented. -->
+<!-- 
+- [ ] Task 1
+- [x] Task 2 -->
+<!-- 
+::: {.hidden}
+$$
+ \def\RR{{\bf R}}
+ \def\bold#1{{\bf #1}}
+$$
+::: -->
+
+
+<div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" role="list" style="display: none">
+<div id="ref-adamsFourProbabilitypreservingProperties1996" class="csl-entry" role="listitem">
+Adams, Ernest W. 1996. <span>“Four Probability-Preserving Properties of Inferences.”</span> <em>Journal of Philosophical Logic</em> 25: 1–24.
+</div>
+<div id="ref-knuth84" class="csl-entry" role="listitem">
+Knuth, Donald E. 1984. <span>“Literate Programming.”</span> <em>Computer Journal</em> 27 (2): 97–111. <a href="https://doi.org/10.1093/comjnl/27.2.97">https://doi.org/10.1093/comjnl/27.2.97</a>.
+</div>
+</div>
 </section>
+</section>
+</section>
+<section id="footnotes" class="footnotes footnotes-end-of-document" role="doc-endnotes">
+<hr>
+<ol>
+<li id="fn1"><p>Inlines notes are easier to write, since you don’t have to pick an identifier and move down to type the note.<a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn2"><p>Here is the footnote.<a href="#fnref2" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+</ol>
 </section>
 
 </main> <!-- /main -->
@@ -682,13 +864,13 @@ ul.task-list li input[type="checkbox"] {
   </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="../index.html" class="pagination-link" aria-label="Preface">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Preface</span>
+      <a href="../chapters/Conclusion.html" class="pagination-link" aria-label="Conclusion">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Conclusion</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="../chapters/Introduction.html" class="pagination-link" aria-label="Introduction">
-        <span class="nav-page-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Introduction</span></span> <i class="bi bi-arrow-right-short"></i>
+      <a href="../ref/references.html" class="pagination-link" aria-label="Bibliography (References)">
+        <span class="nav-page-text">Bibliography (References)</span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>

@@ -91,6 +91,39 @@
 \makeatother
 
 
+% definitions for citeproc citations
+\NewDocumentCommand\citeproctext{}{}
+\NewDocumentCommand\citeproc{mm}{%
+  \begingroup\def\citeproctext{#2}\cite{#1}\endgroup}
+\makeatletter
+ % allow citations to break across lines
+ \let\@cite@ofmt\@firstofone
+ % avoid brackets around text for \cite:
+ \def\@biblabel#1{}
+ \def\@cite#1#2{{#1\if@tempswa , #2\fi}}
+\makeatother
+\newlength{\cslhangindent}
+\setlength{\cslhangindent}{1.5em}
+\newlength{\csllabelwidth}
+\setlength{\csllabelwidth}{3em}
+\newenvironment{CSLReferences}[2] % #1 hanging-indent, #2 entry-spacing
+ {\begin{list}{}{%
+  \setlength{\itemindent}{0pt}
+  \setlength{\leftmargin}{0pt}
+  \setlength{\parsep}{0pt}
+  % turn on hanging indent if param 1 is 1
+  \ifodd #1
+   \setlength{\leftmargin}{\cslhangindent}
+   \setlength{\itemindent}{-1\cslhangindent}
+  \fi
+  % set entry spacing
+  \setlength{\itemsep}{#2\baselineskip}}}
+ {\end{list}}
+\usepackage{calc}
+\newcommand{\CSLBlock}[1]{\hfill\break\parbox[t]{\linewidth}{\strut\ignorespaces#1\strut}}
+\newcommand{\CSLLeftMargin}[1]{\parbox[t]{\csllabelwidth}{\strut#1\strut}}
+\newcommand{\CSLRightInline}[1]{\parbox[t]{\linewidth - \csllabelwidth}{\strut#1\strut}}
+\newcommand{\CSLIndent}[1]{\hspace{\cslhangindent}#1}
 
 
 
@@ -231,60 +264,6 @@ To learn more about Quarto books visit
 \addcontentsline{toc}{chapter}{Outline(s): Table of Contents}
 
 \markboth{Outline(s): Table of Contents}{Outline(s): Table of Contents}
-
-\bookmarksetup{startatroot}
-
-\chapter*{Frontmatter}\label{frontmatter}
-\addcontentsline{toc}{chapter}{Frontmatter}
-
-\markboth{Frontmatter}{Frontmatter}
-
-\bookmarksetup{startatroot}
-
-\chapter*{Prefatory Apparatus: Illustrations and Terminology --- Quick
-References}\label{prefatory-apparatus-illustrations-and-terminology-quick-references}
-\addcontentsline{toc}{chapter}{Prefatory Apparatus: Illustrations and
-Terminology --- Quick References}
-
-\markboth{Prefatory Apparatus: Illustrations and Terminology --- Quick
-References}{Prefatory Apparatus: Illustrations and Terminology --- Quick
-References}
-
-\section*{List of Tables}\label{list-of-tables}
-\addcontentsline{toc}{section}{List of Tables}
-
-\markright{List of Tables}
-
-Table 1: Table name
-
-Table 2: Table name
-
-Table 3: Table name
-
-\section*{List of Graphics \& Figures}\label{list-of-graphics-figures}
-\addcontentsline{toc}{section}{List of Graphics \& Figures}
-
-\markright{List of Graphics \& Figures}
-
-\section*{List of Abbreviations}\label{list-of-abbreviations}
-\addcontentsline{toc}{section}{List of Abbreviations}
-
-\markright{List of Abbreviations}
-
-esp.~especially
-
-f., ff.~following
-
-incl.~including
-
-p., pp.~page(s)
-
-MAD Mutually Assured Destruction
-
-\section*{Glossary}\label{glossary}
-\addcontentsline{toc}{section}{Glossary}
-
-\markright{Glossary}
 
 \bookmarksetup{startatroot}
 
@@ -509,7 +488,7 @@ Visual Aid:
 
 \chapter{Context}\label{context}
 
-\subsection{20\% of Grade:}\label{of-grade}
+\subsection*{20\% of Grade:}\label{of-grade}
 
 \begin{itemize}
 \item
@@ -1006,12 +985,224 @@ Research}\label{outlook-outlook-next-steps-further-research-1}
 
 \bookmarksetup{startatroot}
 
-\chapter*{References}\label{references}
-\addcontentsline{toc}{chapter}{References}
+\chapter*{Frontmatter}\label{frontmatter}
+\addcontentsline{toc}{chapter}{Frontmatter}
 
-\markboth{References}{References}
+\markboth{Frontmatter}{Frontmatter}
+
+\bookmarksetup{startatroot}
+
+\chapter*{Prefatory Apparatus: Illustrations and Terminology --- Quick
+References}\label{prefatory-apparatus-illustrations-and-terminology-quick-references}
+\addcontentsline{toc}{chapter}{Prefatory Apparatus: Illustrations and
+Terminology --- Quick References}
+
+\markboth{Prefatory Apparatus: Illustrations and Terminology --- Quick
+References}{Prefatory Apparatus: Illustrations and Terminology --- Quick
+References}
+
+\section*{List of Tables}\label{list-of-tables}
+\addcontentsline{toc}{section}{List of Tables}
+
+\markright{List of Tables}
+
+Table 1: Table name
+
+Table 2: Table name
+
+Table 3: Table name
+
+\begin{itemize}
+\tightlist
+\item
+  Figure 1.1: The coordination crisis in AI governance - visualization
+  of fragmentation\\
+\item
+  Figure 2.1: The Carlsmith model - DAG representation\\
+\item
+  Figure 3.1: Research design overview - workflow diagram\\
+\item
+  Figure 3.2: From natural language to BayesDown - transformation
+  process\\
+\item
+  Figure 4.1: ARPA system architecture - component diagram\\
+\item
+  Figure 4.2: Visualization of Rain-Sprinkler-Grass\_Wet Bayesian
+  network - screenshot\\
+\item
+  Figure 5.1: Extraction quality metrics - comparative chart\\
+\item
+  Figure 5.2: Comparative analysis of AI governance worldviews - network
+  visualization\\
+\item
+  Table 2.1: Comparison of approaches to AI risk modeling\\
+\item
+  Table 3.1: Probabilistic translation guide for qualitative
+  expressions\\
+\item
+  Table 4.1: System component responsibilities and interactions\\
+\item
+  Table 5.1: Policy impact evaluation results - summary metrics
+\end{itemize}
+
+\section*{List of Graphics \& Figures}\label{list-of-graphics-figures}
+\addcontentsline{toc}{section}{List of Graphics \& Figures}
+
+\markright{List of Graphics \& Figures}
+
+\section*{List of Abbreviations}\label{list-of-abbreviations}
+\addcontentsline{toc}{section}{List of Abbreviations}
+
+\markright{List of Abbreviations}
+
+esp.~especially
+
+f., ff.~following
+
+incl.~including
+
+p., pp.~page(s)
+
+MAD Mutually Assured Destruction
+
+\begin{itemize}
+\tightlist
+\item
+  AI - Artificial Intelligence\\
+\item
+  AGI - Artificial General Intelligence\\
+\item
+  ARPA - AI Risk Pathway Analyzer\\
+\item
+  DAG - Directed Acyclic Graph\\
+\item
+  LLM - Large Language Model\\
+\item
+  MTAIR - Modeling Transformative AI Risks\\
+\item
+  P(Doom) - Probability of existential catastrophe from misaligned AI\\
+\item
+  CPT - Conditional Probability Table
+\end{itemize}
+
+\section*{Glossary}\label{glossary}
+
+\markright{Glossary}
+
+\begin{itemize}
+\tightlist
+\item
+  \textbf{Argument mapping}: A method for visually representing the
+  structure of arguments\\
+\item
+  \textbf{BayesDown}: An extension of ArgDown that incorporates
+  probabilistic information\\
+\item
+  \textbf{Bayesian network}: A probabilistic graphical model
+  representing variables and their dependencies\\
+\item
+  \textbf{Conditional probability}: The probability of an event given
+  that another event has occurred\\
+\item
+  \textbf{Directed Acyclic Graph (DAG)}: A graph with directed edges and
+  no cycles\\
+\item
+  \textbf{Existential risk}: Risk of permanent curtailment of humanity's
+  potential\\
+\item
+  \textbf{Power-seeking AI}: AI systems with instrumental incentives to
+  acquire resources and power\\
+\item
+  \textbf{Prediction market}: A market where participants trade
+  contracts that resolve based on future events\\
+\item
+  \textbf{d-separation}: A criterion for identifying conditional
+  independence relationships in Bayesian networks\\
+\item
+  \textbf{Monte Carlo sampling}: A computational technique using random
+  sampling to obtain numerical results
+\end{itemize}
+
+\bookmarksetup{startatroot}
+
+\chapter*{Headings \& Potential Headings}\label{sec-heading}
+\addcontentsline{toc}{chapter}{Headings \& Potential Headings}
+
+\markboth{Headings \& Potential Headings}{Headings \& Potential
+Headings}
+
+Notes
+
+Ideas
+
+Citations / Things to reference
+
+\texttt{verbatim\ code}
+
+\begin{quote}
+Blockquote
+\end{quote}
+
+Here is an inline note.\footnote{Inlines notes are easier to write,
+  since you don't have to pick an identifier and move down to type the
+  note.}
+
+Here is a footnote reference,\footnote{Here is the footnote.}
+
+\begin{verbatim}
+code
+\end{verbatim}
+
+\renewcommand*{\labelitemi}{\textgreater}
+
+Here's some raw inline HTML:
+
+page 1
+
+\newpage{}
+
+page 2
+
+\includegraphics[width=6.88in,height=1.81in]{chapters/Frontmatter_files/figure-latex/mermaid-figure-2.png}
+
+Testing crossreferencing grapics Figure~\ref{fig-automation_pipeline}.
+
+Referencing Sections \textbf{?@sec-citations}.
+
+headings as \textbf{?@sec-heading}.
+
+\section*{Citations}\label{sec-citations}
+\addcontentsline{toc}{section}{Citations}
+
+\markright{Citations}
+
+(Knuth 1984)
+
+Adams (1996)
+
+(Adams 1996)
+
+\subsection*{Quarto Features Incompatible with LaTeX
+(Below)}\label{quarto-features-incompatible-with-latex-below}
+
+\bookmarksetup{startatroot}
+
+\chapter*{Bibliography (References)}\label{bibliography-references}
+\addcontentsline{toc}{chapter}{Bibliography (References)}
+
+\markboth{Bibliography (References)}{Bibliography (References)}
 
 \phantomsection\label{refs}
+\begin{CSLReferences}{1}{0}
+\bibitem[\citeproctext]{ref-adamsFourProbabilitypreservingProperties1996}
+Adams, Ernest W. 1996. {``Four Probability-Preserving Properties of
+Inferences.''} \emph{Journal of Philosophical Logic} 25: 1--24.
+
+\bibitem[\citeproctext]{ref-knuth84}
+Knuth, Donald E. 1984. {``Literate Programming.''} \emph{Computer
+Journal} 27 (2): 97--111. \url{https://doi.org/10.1093/comjnl/27.2.97}.
+
+\end{CSLReferences}
 
 \cleardoublepage
 \phantomsection
