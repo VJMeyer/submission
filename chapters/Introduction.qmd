@@ -23,8 +23,6 @@ numbering:
 
 ![Caption/Title 2](/images/cover.png){#fig-testgraphic2 fig-scap="Short 2 caption" fig-alt="2nd Alt Text / Description." fig-align="left" width="30%"}
 
-
-
 Testing crossreferencing grapics @fig-testgraphic2.
 
 <!-- \listoffigures -->
@@ -93,7 +91,6 @@ Forecasting Policy Impacts: Qualitative & quantitative evaluation of expected ou
 
 ### Significance of the Research
 
-### 
 
 ## Theory of Change — Approach & Structure of the Paper
 

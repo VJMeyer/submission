@@ -57,14 +57,15 @@ citation:
 number-sections: true
 reference-location: margin
 citation-location: margin   #   https://quarto.org/docs/authoring/article-layout.html
-
 ---
+
 # Table of Contents
 
+```{=html}
 <!-- ::: {.content-visible when-format="pdf"}
 \listoffigures
 ::: -->
-
+```
 
 # Abstract {.unnumbered}
 
@@ -132,13 +133,15 @@ The AMTAIR system implements an end-to-end pipeline that transforms unstructured
 -   includes a complete list of references with full bibliographic details
 
 <!-- ::: -->
+
+```{=html}
 <!-- 
 ![Caption/Title 2](/images/cover.png){#fig-testgraphic2 fig-scap="Short 2 caption" fig-alt="2nd Alt Text / Description." fig-align="left" width="30%"}
 
 
 
 Testing crossreferencing grapics @fig-testgraphic2. -->
-
+```
 
 More text
 
