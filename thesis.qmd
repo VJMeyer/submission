@@ -61,11 +61,7 @@ citation-location: margin   #   https://quarto.org/docs/authoring/article-layout
 
 # Table of Contents
 
-```{=html}
-<!-- ::: {.content-visible when-format="pdf"}
-\listoffigures
-::: -->
-```
+
 
 # Abstract {.unnumbered}
 
