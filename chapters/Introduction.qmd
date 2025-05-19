@@ -19,6 +19,16 @@ numbering:
 
 -   introduces and motivates the core question or problem
 
+<!-- [![Caption/Title 2](/images/cover.png){#fig-testgraphic2 fig-scap="Short 2 caption" fig-alt="2nd Alt Text / Description." fig-align="left" width="30%"}](https://vjmeyer.com) -->
+
+![Caption/Title 2](/images/cover.png){#fig-testgraphic2 fig-scap="Short 2 caption" fig-alt="2nd Alt Text / Description." fig-align="left" width="30%"}
+
+
+
+Testing crossreferencing grapics @fig-testgraphic2.
+
+<!-- \listoffigures -->
+
 ## Motivation: Problem Statement
 
 ## Motivation: Research Question
@@ -112,6 +122,6 @@ Visual Aid:
 
 -   A diagram illustrating how each component amplifies the others, leading to greater overall impact.
 
-
+## 
 
 ## Overview / Table of Contents

@@ -1,0 +1,90 @@
+
+
+
+## Frontmatter {.unnumbered}
+
+# Prefatory Apparatus: Illustrations and Terminology --- Quick References {.unnumbered}
+
+## List of Tables{.unnumbered}
+
+Table 1: 	Table name
+
+Table 2: 	Table name
+
+Table 3:	Table name
+
+<!-- ## List of Graphics & Figures{.unnumbered} -->
+
+## List of Abbreviations{.unnumbered}
+
+esp.		especially
+
+f., ff.		following
+
+incl.		including
+
+p., pp.		page(s)
+
+MAD		Mutually Assured Destruction
+
+## Testing Figures
+
+
+[![Caption/Title 2](/images/cover.png){#fig-testgraphic2 fig-scap="Short 2 caption" fig-alt="2nd Alt Text / Description." fig-align="left" width="30%"}](https://vjmeyer.com)
+
+Testing crossreferencing grapics @fig-testgraphic2.
+
+![Caption/Title 3](/images/cover.png){
+  #fig-testgraphic3
+  fig-scap="Short 3 caption"
+  fig-alt="This is a cover image showing a conceptual visualization of AI risk modeling. 
+          It illustrates the network structure of probabilistic relationships with nodes 
+          representing key variables and edges showing causal connections. Included to 
+          demonstrate the visual approach of the AMTAIR system."
+  fig-align="left"
+  width="30%"
+}
+
+[![Example Caption/Title 4](/images/cover.png){
+    #fig-Unique_identifier_for_crossreferencing 
+    fig-scap="Short caption 4 list of figures as seen in LoF" 
+    fig-alt="Detailed alt text that describes the image content, type, purpose, and meaning.
+            It illustrates the network structure of probabilistic relationships with nodes representing key variables and edges showing causal connections. Included to demonstrate the visual approach of the AMTAIR system.
+            [CHART TYPE]: [Short description]. 
+                DATA: [What data is shown, x/y axes].
+                PURPOSE: [Why it's included, what to look for]. 
+                DETAILS: [Longer description of patterns, anomalies, or key insights].
+                SOURCE: Data from [source name/year]
+            "
+    fig-align="left" 
+    width="30%"
+    }](https://github.com/VJMeyer/submission)
+
+
+
+Testing crossreferencing grapics @fig-Unique_identifier_for_crossreferencing.
+<!-- 
+> 
+>
+> ![Main Caption/Title](/path/to/image.extension){ #fig-id <!-- Unique identifier for cross-referencing --> fig-scap="Short caption" /\* Short caption for list of figures \*/ <!-- fig-alt="[CHART TYPE]: [Short description]. 
+>         DATA: [What data is shown, x/y axes].
+>         PURPOSE: [Why it's included, what to look for]. 
+>         DETAILS: [Longer description of patterns, anomalies, or key insights].
+>         SOURCE: Data from [source name/year]." --> <!-- fig-alt="NETWORK DIAGRAM: Bayesian network visualization of AI risk pathways.
+>         DATA: Nodes represent risk factors with conditional probability values shown by color intensity.
+>         PURPOSE: Demonstrates how the AMTAIR system visually represents complex risk relationships.
+>         DETAILS: Red nodes indicate high-risk variables, with thicker edges showing stronger causal influences. The central cluster represents core alignment factors.
+>         SOURCE: Data from Carlsmith's 2021 AI risk assessment model." --> fig-alt="Detailed alt text that describes the image content, type, purpose, and meaning"
+>
+> /\* Appearance options */ fig-align="left\|center\|right" width="X%" /* Width as percentage */ height="Ypx" /* Height in pixels \*/
+>
+> /\* Source & linking */ fig-link="https://source-url.com" /* Makes image clickable to source \*/
+>
+> /\* Layout options */ fig-column="margin\|page" /* Places in margin or spans page width */ fig-pos="H" /* Position specifier (LaTeX) \*/
+>
+> /\* Panels for subfigures (if combining multiple) */ fig-subcap=true /* Enable subcaptions \*/ }
+> -->
+
+
+
+## Glossary{.unnumbered}

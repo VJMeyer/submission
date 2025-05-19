@@ -30,22 +30,3 @@ and 2. ground each with existing literature
 {{< include Background.md >}} 
 
 {{< include Methodology.md >}}
-
-
-[![AMTAIR Automation Pipeline](/images/pipeline.png){
-  #fig-automation_pipeline
-  fig-scap="Five-step AMTAIR automation pipeline from PDFs to Bayesian networks" 
-  fig-alt="FLOWCHART: Five-step automation pipeline workflow for AMTAIR project.
-          DATA: The pipeline transforms PDFs through ArgDown, BayesDown, CSV, and HTML into Bayesian network visualizations.
-          PURPOSE: Illustrates the core technical process that enables automated extraction of probabilistic models from AI safety literature.
-          DETAILS: Five numbered green steps show: (1) LLM-based extraction from PDFs to ArgDown, (2) ArgDown to BayesDown completion with probabilities, (3) Extracting world-models as CSV data, (4) Software tools for data inference, and (5) Visualization of the resulting Bayesian network.
-          Each step includes example outputs, with the final visualization showing a Rain-Sprinkler-Grass Wet Bayesian network with probability tables.
-          SOURCE: Created by the author to explain the AMTAIR methodology
-          "
-  fig-align="center" 
-  width="100%"
-  }](https://github.com/VJMeyer/submission)
-
-
-Testing crossreferencing grapics @fig-automation_pipeline.
-
