@@ -1,0 +1,66 @@
+0000000000000000000000000000000000000000 ec19341c14598d68d3a5beeff454b7f2cba555d8 VJMeyer <Valentin2meyer@gmail.com> 1746996991 -0600	clone: from https://github.com/VJMeyer/submission.git
+ec19341c14598d68d3a5beeff454b7f2cba555d8 c590fde8b8b7cef71e9e58b55cf5e2fa887275ec VJMeyer <Valentin2meyer@gmail.com> 1746997875 -0600	commit: clean flat repo
+c590fde8b8b7cef71e9e58b55cf5e2fa887275ec fa4451c7b15055f35864ec28500d568f4e95049a VJMeyer <Valentin2meyer@gmail.com> 1746998747 -0600	commit: first new render
+fa4451c7b15055f35864ec28500d568f4e95049a ef5e6f5ee321265b8894105033380417bb9ce503 VJMeyer <Valentin2meyer@gmail.com> 1747001351 -0600	commit: new working repo
+ef5e6f5ee321265b8894105033380417bb9ce503 c6f214f675456d6190385d3edd7c1f1a70025420 VJMeyer <Valentin2meyer@gmail.com> 1747002413 -0600	commit: testing
+c6f214f675456d6190385d3edd7c1f1a70025420 7dd16f3743be3dfd9011f8e1b16bf28ea5c1556b VJMeyer <Valentin2meyer@gmail.com> 1747006459 -0600	commit: book compiling pdf
+7dd16f3743be3dfd9011f8e1b16bf28ea5c1556b 238ee8259e72193e111f4ad5fcb7c6b4e495487e VJMeyer <Valentin2meyer@gmail.com> 1747006672 -0600	commit: attempting pdf
+238ee8259e72193e111f4ad5fcb7c6b4e495487e 9121bd306b3a480a56c41036126a71d820cad6e1 VJMeyer <Valentin2meyer@gmail.com> 1747008967 -0600	commit: working
+9121bd306b3a480a56c41036126a71d820cad6e1 59bc5a7d677a6e7cba400f68251f1f1dab8d3b0a VJMeyer <Valentin2meyer@gmail.com> 1747009873 -0600	commit: tex work
+59bc5a7d677a6e7cba400f68251f1f1dab8d3b0a a13df5e1c3dc07a6c2020064e7948a3025bb8b65 VJMeyer <Valentin2meyer@gmail.com> 1747009874 -0600	commit: Update .DS_Store
+a13df5e1c3dc07a6c2020064e7948a3025bb8b65 cc14adbe19842154424cf62279fb10b9cdf6a92e VJMeyer <Valentin2meyer@gmail.com> 1747010233 -0600	commit: tex
+cc14adbe19842154424cf62279fb10b9cdf6a92e 8afa3f07d7a33ff43329a6eb149b1bf72cb2a7b1 VJMeyer <Valentin2meyer@gmail.com> 1747010697 -0600	commit: compiling latex
+8afa3f07d7a33ff43329a6eb149b1bf72cb2a7b1 b4bfb848293f33fa415f9cafeab1c25af696a67f VJMeyer <Valentin2meyer@gmail.com> 1747020412 -0600	commit: tex title page
+b4bfb848293f33fa415f9cafeab1c25af696a67f 33cb830c12e0bbc0fcea4a3710a0e0ef6d6f4783 VJMeyer <Valentin2meyer@gmail.com> 1747021724 -0600	commit: new title page
+33cb830c12e0bbc0fcea4a3710a0e0ef6d6f4783 77d09d7ec630a7071d9f650624ed8bb0509d078c VJMeyer <Valentin2meyer@gmail.com> 1747024021 -0600	commit: working title page
+77d09d7ec630a7071d9f650624ed8bb0509d078c 2adf193be3e89be24c24958be785a1f049e7b053 VJMeyer <Valentin2meyer@gmail.com> 1747026021 -0600	commit: context update
+2adf193be3e89be24c24958be785a1f049e7b053 6a38be859ab26911311844b3f88033cc03f02d00 VJMeyer <Valentin2meyer@gmail.com> 1747076971 -0600	commit: toc fixing
+6a38be859ab26911311844b3f88033cc03f02d00 922566138709e5fefe246e21ef82c23c45f955ce VJMeyer <Valentin2meyer@gmail.com> 1747078881 -0600	commit: numbering updates
+922566138709e5fefe246e21ef82c23c45f955ce fb17d21eff4e1857267b5d26a338859b8b2fde76 VJMeyer <Valentin2meyer@gmail.com> 1747083580 -0600	commit: working pdf and html
+fb17d21eff4e1857267b5d26a338859b8b2fde76 82e05ced4eecfd8a98faba01caf90e1a1a5c8433 VJMeyer <Valentin2meyer@gmail.com> 1747092699 -0600	commit: sybc
+82e05ced4eecfd8a98faba01caf90e1a1a5c8433 203667d3c960f43ee336bce8a0a5b7e4cc070df1 VJMeyer <Valentin2meyer@gmail.com> 1747100555 -0600	commit: render quarto all file types
+203667d3c960f43ee336bce8a0a5b7e4cc070df1 67087e0db25468d37854dba5100a9d66191965cb VJMeyer <Valentin2meyer@gmail.com> 1747112130 -0600	commit: toc finals
+67087e0db25468d37854dba5100a9d66191965cb 40eef6aa0a170e344e0f0e2abc5743fab166ee40 VJMeyer <Valentin2meyer@gmail.com> 1747261414 -0600	commit: outlining
+40eef6aa0a170e344e0f0e2abc5743fab166ee40 4a023d9f7bcec1b4be69945e25bbdaaf9a94a289 VJMeyer <Valentin2meyer@gmail.com> 1747342382 -0600	commit: sync
+4a023d9f7bcec1b4be69945e25bbdaaf9a94a289 84e2b6014a4d7a29011e432dfa958cb821f1cef4 VJMeyer <Valentin2meyer@gmail.com> 1747342604 -0600	commit: Pull entire AMTAIR_Prototype repo
+84e2b6014a4d7a29011e432dfa958cb821f1cef4 e9b7c464f15ce5a7263b59b65c590e201054320e VJMeyer <Valentin2meyer@gmail.com> 1747342694 -0600	commit: notebook repo upload
+e9b7c464f15ce5a7263b59b65c590e201054320e 2296043bc07eab6fdac5ed0816d2091c1687bfb5 VJMeyer <Valentin2meyer@gmail.com> 1747342704 -0600	commit: notebook repo upload
+2296043bc07eab6fdac5ed0816d2091c1687bfb5 b5205562534cc06e55ade64d230b0b0a5e389e55 VJMeyer <Valentin2meyer@gmail.com> 1747342743 -0600	commit: notebook repo upload
+b5205562534cc06e55ade64d230b0b0a5e389e55 ec869bc0ba4849fbaedf0484e99e702a40b32e1a VJMeyer <Valentin2meyer@gmail.com> 1747342814 -0600	commit: notebook repo upload
+ec869bc0ba4849fbaedf0484e99e702a40b32e1a 0cae50e27aeeb51a0f48a4720648d28bbb3b9e8d VJMeyer <Valentin2meyer@gmail.com> 1747342888 -0600	commit: try reverting changes
+0cae50e27aeeb51a0f48a4720648d28bbb3b9e8d 76aed627d96d45ba5d2eec5748da7472ae9c1616 VJMeyer <Valentin2meyer@gmail.com> 1747342951 -0600	commit: Update .DS_Store
+76aed627d96d45ba5d2eec5748da7472ae9c1616 b522803d97bb5cdb192c336f5bc20c25c431b60b VJMeyer <Valentin2meyer@gmail.com> 1747343407 -0600	commit: .zip
+b522803d97bb5cdb192c336f5bc20c25c431b60b 82a4ef1935a52abb6a2c7b796b624dec410a16fc VJMeyer <Valentin2meyer@gmail.com> 1747343451 -0600	commit: unzip
+82a4ef1935a52abb6a2c7b796b624dec410a16fc 6206ce850c3083947c9a654cd1d794afd812d03b VJMeyer <Valentin2meyer@gmail.com> 1747343494 -0600	commit: delete .zip
+6206ce850c3083947c9a654cd1d794afd812d03b 4d19caaf15d8cea516cd68cafccac74e6006b2d4 VJMeyer <Valentin2meyer@gmail.com> 1747343601 -0600	commit: ? google files
+4d19caaf15d8cea516cd68cafccac74e6006b2d4 0038659a1b9e52efa48ebe6f7b97f3a9d9e474bd VJMeyer <Valentin2meyer@gmail.com> 1747343837 -0600	commit: repo config
+0038659a1b9e52efa48ebe6f7b97f3a9d9e474bd 100c9b73ae38921769cf6c385af6d9b7fdbb52e0 VJMeyer <Valentin2meyer@gmail.com> 1747345386 -0600	commit: repo sync
+100c9b73ae38921769cf6c385af6d9b7fdbb52e0 fb72073c9c18288a6e3482de2c02b0c57b4b65b0 VJMeyer <Valentin2meyer@gmail.com> 1747345410 -0600	commit: notebook .md file delete
+fb72073c9c18288a6e3482de2c02b0c57b4b65b0 0d8512386225f1881190008d873a78ee57f86733 VJMeyer <Valentin2meyer@gmail.com> 1747346832 -0600	commit: sync
+0d8512386225f1881190008d873a78ee57f86733 8be0901a224feba4252ea7dd4baa2f4f7c84846d VJMeyer <Valentin2meyer@gmail.com> 1747361992 -0600	commit: sync
+8be0901a224feba4252ea7dd4baa2f4f7c84846d d06799495512d694dfbd87b3684388e66931f272 VJMeyer <Valentin2meyer@gmail.com> 1747421363 -0600	commit: rendering
+d06799495512d694dfbd87b3684388e66931f272 2f88b1b0ca1f6d56226792f7148a354727af68d1 VJMeyer <Valentin2meyer@gmail.com> 1747421368 -0600	commit: render
+2f88b1b0ca1f6d56226792f7148a354727af68d1 170d161ff3409b431859ba639cdf62f037767353 VJMeyer <Valentin2meyer@gmail.com> 1747426120 -0600	commit: post crash sync
+170d161ff3409b431859ba639cdf62f037767353 a5a6789371428c2a37a06b69c402c1b914cb3a9c VJMeyer <Valentin2meyer@gmail.com> 1747426823 -0600	commit: working oneliner
+a5a6789371428c2a37a06b69c402c1b914cb3a9c 2c71ca4831aa7688c9c0701e6d81767ffd54caf6 VJMeyer <Valentin2meyer@gmail.com> 1747426845 -0600	commit: one-liner
+2c71ca4831aa7688c9c0701e6d81767ffd54caf6 43bfa0a6d741f442cd199cacdd757815a42279b9 VJMeyer <Valentin2meyer@gmail.com> 1747426847 -0600	commit: Update .DS_Store
+43bfa0a6d741f442cd199cacdd757815a42279b9 1bd3746d96562de4c5078ee35586e5d3a6f382d5 VJMeyer <Valentin2meyer@gmail.com> 1747428792 -0600	commit: sync
+1bd3746d96562de4c5078ee35586e5d3a6f382d5 8ade59570bcda1862085f00fcd062f2dd5f5e61e VJMeyer <Valentin2meyer@gmail.com> 1747432184 -0600	commit: sync
+8ade59570bcda1862085f00fcd062f2dd5f5e61e 23950edea1776427c8215afb210582490a873c2e VJMeyer <Valentin2meyer@gmail.com> 1747602754 -0600	commit: pre table of lists inclusion
+23950edea1776427c8215afb210582490a873c2e d854ef0ad70072d218b57d86e94d004c3f17b185 VJMeyer <Valentin2meyer@gmail.com> 1747603473 -0600	commit: post git reset push
+d854ef0ad70072d218b57d86e94d004c3f17b185 bf9bdb23f28a33681b35e5c2b22f96215ce2d6fe VJMeyer <Valentin2meyer@gmail.com> 1747603475 -0600	commit: Create .DS_Store
+bf9bdb23f28a33681b35e5c2b22f96215ce2d6fe 5a0ecb9dadf770adf0ad1b03304bc77b80ce90c3 VJMeyer <Valentin2meyer@gmail.com> 1747603835 -0600	commit: .lof
+5a0ecb9dadf770adf0ad1b03304bc77b80ce90c3 c319f1e67a1e532b40da63fec210d50e2b960463 VJMeyer <Valentin2meyer@gmail.com> 1747605448 -0600	commit: lof trouble
+c319f1e67a1e532b40da63fec210d50e2b960463 9ef2ffcb29ba402525b066ffea7569d184065c2e VJMeyer <Valentin2meyer@gmail.com> 1747606189 -0600	commit: lof trouble
+9ef2ffcb29ba402525b066ffea7569d184065c2e 1f6e8202fe28eedee8a5a74484461295675ac616 VJMeyer <Valentin2meyer@gmail.com> 1747609616 -0600	commit: working toc / lof
+1f6e8202fe28eedee8a5a74484461295675ac616 7a905f36422ec436cd95c3c0e79f4ddb4877b3c3 VJMeyer <Valentin2meyer@gmail.com> 1747611512 -0600	commit: fully working book, manuscript working without tex template
+7a905f36422ec436cd95c3c0e79f4ddb4877b3c3 39ee5e92bd7e1ba03ba7788c9bc01f707785d0ea VJMeyer <Valentin2meyer@gmail.com> 1747612873 -0600	commit: fully working book
+39ee5e92bd7e1ba03ba7788c9bc01f707785d0ea d575283c9fa69e3c19782c8bd43da4c70ff0af17 VJMeyer <Valentin2meyer@gmail.com> 1747615496 -0600	commit: figure syntax example
+d575283c9fa69e3c19782c8bd43da4c70ff0af17 51347e9225693e706a4d7ef716ba15975ffaaffa VJMeyer <Valentin2meyer@gmail.com> 1747618505 -0600	commit: goof
+51347e9225693e706a4d7ef716ba15975ffaaffa 550c6f0315bc42f1b74b12878f25b22a019f4a01 VJMeyer <Valentin2meyer@gmail.com> 1747674719 -0600	commit: pre gemini
+550c6f0315bc42f1b74b12878f25b22a019f4a01 dc8a6abbefa8544ea5b3f2fd4fa43fd13d9d7c9f VJMeyer <Valentin2meyer@gmail.com> 1747675369 -0600	commit: test sync
+dc8a6abbefa8544ea5b3f2fd4fa43fd13d9d7c9f b9b0fb35b7ab8ce5c51ef5d263f92e278b02af2a VJMeyer <Valentin2meyer@gmail.com> 1747676058 -0600	commit: test
+b9b0fb35b7ab8ce5c51ef5d263f92e278b02af2a 7ce4c6f74e7556ab6c0035a22096176e30d570a4 VJMeyer <Valentin2meyer@gmail.com> 1747677195 -0600	commit: new push test
+b9b0fb35b7ab8ce5c51ef5d263f92e278b02af2a 2abe0fe4def0d3ed99bb5c4f97ce4443552bc547 VJMeyer <Valentin2meyer@gmail.com> 1747677575 -0600	commit: git repair
+b9b0fb35b7ab8ce5c51ef5d263f92e278b02af2a b3a448fa96bc703633c29a3e87429e4bee45b5cf VJMeyer <Valentin2meyer@gmail.com> 1747677664 -0600	commit: git fix
+b3a448fa96bc703633c29a3e87429e4bee45b5cf 78f79be7287c3a6f54778c07cd74a1d69a180372 VJMeyer <Valentin2meyer@gmail.com> 1747682931 -0600	commit: test
