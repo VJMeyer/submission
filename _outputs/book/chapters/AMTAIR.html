@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>2&nbsp; Context – Automating the Modelling of Transformative Artificial Intelligence Risks</title>
+<title>3&nbsp; AMTAIR – Automating the Modelling of Transformative Artificial Intelligence Risks</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -29,8 +29,8 @@ ul.task-list li input[type="checkbox"] {
 <script src="../site_libs/quarto-search/fuse.min.js"></script>
 <script src="../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../">
-<link href="../chapters/AMTAIR.html" rel="next">
-<link href="../chapters/Introduction.html" rel="prev">
+<link href="../chapters/Discussion.html" rel="next">
+<link href="../chapters/Context.html" rel="prev">
 <script src="../site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
 <script src="../site_libs/quarto-html/popper.min.js"></script>
@@ -129,7 +129,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../chapters/Context.html"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Context</span></a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../chapters/AMTAIR.html"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">AMTAIR</span></a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
     </div>
@@ -161,13 +161,13 @@ ul.task-list li input[type="checkbox"] {
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../chapters/Context.html" class="sidebar-item-text sidebar-link active">
+  <a href="../chapters/Context.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Context</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../chapters/AMTAIR.html" class="sidebar-item-text sidebar-link">
+  <a href="../chapters/AMTAIR.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">AMTAIR</span></span></a>
   </div>
 </li>
@@ -222,34 +222,27 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">ToC</h2>
    
   <ul>
-  <li><a href="#of-grade" id="toc-of-grade" class="nav-link active" data-scroll-target="#of-grade"><span class="header-section-number">2.0.1</span> 20% of Grade:</a></li>
-  <li><a href="#theoretical-background-considerations" id="toc-theoretical-background-considerations" class="nav-link" data-scroll-target="#theoretical-background-considerations"><span class="header-section-number">2.1</span> Theoretical Background Considerations</a></li>
-  <li><a href="#literature-concepts-terminology" id="toc-literature-concepts-terminology" class="nav-link" data-scroll-target="#literature-concepts-terminology"><span class="header-section-number">2.2</span> Literature, Concepts &amp; Terminology</a>
+  <li><a href="#of-grade-29-of-text-8700-words" id="toc-of-grade-29-of-text-8700-words" class="nav-link active" data-scroll-target="#of-grade-29-of-text-8700-words"><span class="header-section-number">3.0.1</span> 20% of Grade: ~ 29% of text ~ 8700 words</a></li>
+  <li><a href="#own-carlsmith-model-implementation-explanation" id="toc-own-carlsmith-model-implementation-explanation" class="nav-link" data-scroll-target="#own-carlsmith-model-implementation-explanation"><span class="header-section-number">3.1</span> Own Carlsmith Model Implementation — Explanation</a></li>
+  <li><a href="#own-implementation-good-example-from-a-published-paper" id="toc-own-implementation-good-example-from-a-published-paper" class="nav-link" data-scroll-target="#own-implementation-good-example-from-a-published-paper"><span class="header-section-number">3.2</span> Own Implementation: Good example from a published paper</a></li>
+  <li><a href="#implementation" id="toc-implementation" class="nav-link" data-scroll-target="#implementation"><span class="header-section-number">3.3</span> Implementation</a></li>
+  <li><a href="#results" id="toc-results" class="nav-link" data-scroll-target="#results"><span class="header-section-number">3.4</span> Results</a></li>
+  <li><a href="#insights-findings" id="toc-insights-findings" class="nav-link" data-scroll-target="#insights-findings"><span class="header-section-number">4</span> Insights &amp; Findings</a>
   <ul>
-  <li><a href="#dag-bayesnets" id="toc-dag-bayesnets" class="nav-link" data-scroll-target="#dag-bayesnets"><span class="header-section-number">2.2.1</span> DAG / BayesNets</a></li>
-  <li><a href="#state-of-the-art-mtair-explanation" id="toc-state-of-the-art-mtair-explanation" class="nav-link" data-scroll-target="#state-of-the-art-mtair-explanation"><span class="header-section-number">2.2.2</span> State of the art (MTAIR) — Explanation</a>
-  <ul>
-  <li><a href="#carlsmith-model-analytica" id="toc-carlsmith-model-analytica" class="nav-link" data-scroll-target="#carlsmith-model-analytica"><span class="header-section-number">2.2.2.1</span> Carlsmith Model (Analytica)</a></li>
-  </ul></li>
-  <li><a href="#intro-example-rainsprinklerlawn" id="toc-intro-example-rainsprinklerlawn" class="nav-link" data-scroll-target="#intro-example-rainsprinklerlawn"><span class="header-section-number">2.2.3</span> (Intro) Example — Rain/Sprinkler/Lawn</a></li>
-  </ul></li>
-  <li><a href="#methodology" id="toc-methodology" class="nav-link" data-scroll-target="#methodology"><span class="header-section-number">2.3</span> Methodology</a>
-  <ul>
-  <li><a href="#kialo" id="toc-kialo" class="nav-link" data-scroll-target="#kialo"><span class="header-section-number">2.3.1</span> Kialo</a></li>
-  <li><a href="#rainsprinklerlawn-dag" id="toc-rainsprinklerlawn-dag" class="nav-link" data-scroll-target="#rainsprinklerlawn-dag"><span class="header-section-number">2.3.2</span> Rain/Sprinkler/Lawn DAG</a></li>
-  <li><a href="#bayeserver" id="toc-bayeserver" class="nav-link" data-scroll-target="#bayeserver"><span class="header-section-number">2.3.3</span> BayeServer</a></li>
-  <li><a href="#bayesnet-extended-example" id="toc-bayesnet-extended-example" class="nav-link" data-scroll-target="#bayesnet-extended-example"><span class="header-section-number">2.3.4</span> BayesNet — Extended Example</a></li>
-  <li><a href="#code-documentation" id="toc-code-documentation" class="nav-link" data-scroll-target="#code-documentation"><span class="header-section-number">2.3.5</span> Code + documentation</a></li>
+  <li><a href="#automated-modeling-pipeline-from-academic-papers-to-political-strategy" id="toc-automated-modeling-pipeline-from-academic-papers-to-political-strategy" class="nav-link" data-scroll-target="#automated-modeling-pipeline-from-academic-papers-to-political-strategy"><span class="header-section-number">4.1</span> Automated Modeling Pipeline — From Academic Papers to Political Strategy</a></li>
+  <li><a href="#project-scaling-workflow-pipeline-automation" id="toc-project-scaling-workflow-pipeline-automation" class="nav-link" data-scroll-target="#project-scaling-workflow-pipeline-automation"><span class="header-section-number">4.2</span> Project Scaling — Workflow Pipeline &amp; Automation</a></li>
+  <li><a href="#computational-complexity-computational-tractability" id="toc-computational-complexity-computational-tractability" class="nav-link" data-scroll-target="#computational-complexity-computational-tractability"><span class="header-section-number">4.3</span> Computational Complexity — Computational Tractability</a></li>
+  <li><a href="#external-validation-manual-extraction-processing" id="toc-external-validation-manual-extraction-processing" class="nav-link" data-scroll-target="#external-validation-manual-extraction-processing"><span class="header-section-number">4.4</span> External Validation — Manual Extraction &amp; Processing</a></li>
   </ul></li>
   </ul>
-<div class="toc-actions"><ul><li><a href="https://github.com/VJMeyer/submission/edit/main/chapters/Context.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li></ul></div></nav>
+<div class="toc-actions"><ul><li><a href="https://github.com/VJMeyer/submission/edit/main/chapters/AMTAIR.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li></ul></div></nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Context</span></h1>
+<h1 class="title"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">AMTAIR</span></h1>
 </div>
 
 
@@ -266,83 +259,123 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<section id="of-grade" class="level3" data-number="2.0.1">
-<h3 data-number="2.0.1" class="anchored" data-anchor-id="of-grade"><span class="header-section-number">2.0.1</span> 20% of Grade:</h3>
+<section id="of-grade-29-of-text-8700-words" class="level3" data-number="3.0.1">
+<h3 data-number="3.0.1" class="anchored" data-anchor-id="of-grade-29-of-text-8700-words"><span class="header-section-number">3.0.1</span> 20% of Grade: ~ 29% of text ~ 8700 words</h3>
 <ul>
-<li><p>demonstrates understanding of all relevant core concepts</p></li>
-<li><p>explains why the question/thesis/problem is relevant in student’s own words (supported by quotations)</p></li>
-<li><p>situates it within the debate/course material</p></li>
-<li><p>reconstructs selected arguments and identifies relevant assumptions</p></li>
-<li><p>describes additional relevant material that has been consulted and integrates it with the course material as well as the research question/thesis/problem</p></li>
+<li>provides critical or constructive evaluation of positions introduced</li>
+<li>develops strong (plausible) argument in support of author’s own position/thesis</li>
+<li>argument draws on relevant course material claim/argument</li>
+<li>demonstrate understanding of the course materials incl.&nbsp;key arguments and core concepts within the debate</li>
+<li>claim/argument is original or insightful, possibly even presents an original contribution to the debate</li>
 </ul>
-<p>~ 29% of text ~ 8700 words</p>
-<ol type="1">
-<li>successively (chunk my chunk) introduce concepts/ideas — and 2. ground each with existing literature</li>
-</ol>
-<!-- ---
-title: "Background"
-# Control if this file starts numbering
-numbering:
-  start-at: 2      # Start at Section 1
-  level: 2         # Chapter level
---- -->
 </section>
-<section id="theoretical-background-considerations" class="level2" data-number="2.1">
-<h2 data-number="2.1" class="anchored" data-anchor-id="theoretical-background-considerations"><span class="header-section-number">2.1</span> Theoretical Background Considerations</h2>
+<section id="own-carlsmith-model-implementation-explanation" class="level2" data-number="3.1">
+<h2 data-number="3.1" class="anchored" data-anchor-id="own-carlsmith-model-implementation-explanation"><span class="header-section-number">3.1</span> Own Carlsmith Model Implementation — Explanation</h2>
 </section>
-<section id="literature-concepts-terminology" class="level2" data-number="2.2">
-<h2 data-number="2.2" class="anchored" data-anchor-id="literature-concepts-terminology"><span class="header-section-number">2.2</span> Literature, Concepts &amp; Terminology</h2>
-<section id="dag-bayesnets" class="level3" data-number="2.2.1">
-<h3 data-number="2.2.1" class="anchored" data-anchor-id="dag-bayesnets"><span class="header-section-number">2.2.1</span> DAG / BayesNets</h3>
+<section id="own-implementation-good-example-from-a-published-paper" class="level2" data-number="3.2">
+<h2 data-number="3.2" class="anchored" data-anchor-id="own-implementation-good-example-from-a-published-paper"><span class="header-section-number">3.2</span> Own Implementation: Good example from a published paper</h2>
 </section>
-<section id="state-of-the-art-mtair-explanation" class="level3" data-number="2.2.2">
-<h3 data-number="2.2.2" class="anchored" data-anchor-id="state-of-the-art-mtair-explanation"><span class="header-section-number">2.2.2</span> State of the art (MTAIR) — Explanation</h3>
-<section id="carlsmith-model-analytica" class="level4" data-number="2.2.2.1">
-<h4 data-number="2.2.2.1" class="anchored" data-anchor-id="carlsmith-model-analytica"><span class="header-section-number">2.2.2.1</span> Carlsmith Model (Analytica)</h4>
+<section id="implementation" class="level2" data-number="3.3">
+<h2 data-number="3.3" class="anchored" data-anchor-id="implementation"><span class="header-section-number">3.3</span> Implementation</h2>
+<p>TestText</p>
 </section>
+<section id="results" class="level2" data-number="3.4">
+<h2 data-number="3.4" class="anchored" data-anchor-id="results"><span class="header-section-number">3.4</span> Results</h2>
+<p>TestText</p>
 </section>
-<section id="intro-example-rainsprinklerlawn" class="level3" data-number="2.2.3">
-<h3 data-number="2.2.3" class="anchored" data-anchor-id="intro-example-rainsprinklerlawn"><span class="header-section-number">2.2.3</span> (Intro) Example — Rain/Sprinkler/Lawn</h3>
-<p>/ Rain/Sprinkler/Lawn DAG / BayesNet — Extended Example</p>
-<pre><code>…</code></pre>
-<p>Own Position/Argument: AMTAIR … Own Rain/Sprinkler/Lawn DAG / BayesNet Implementation</p>
-<!-- ---
-title: "Methodology"
-# Control if this file starts numbering
-numbering:
-  start-at: 2      # Start at Section 1
-  level: 2         # Chapter level
---- -->
+<section id="insights-findings" class="level1" data-number="4">
+<h1 data-number="4"><span class="header-section-number">4</span> Insights &amp; Findings</h1>
+<section id="automated-modeling-pipeline-from-academic-papers-to-political-strategy" class="level2" data-number="4.1">
+<h2 data-number="4.1" class="anchored" data-anchor-id="automated-modeling-pipeline-from-academic-papers-to-political-strategy"><span class="header-section-number">4.1</span> Automated Modeling Pipeline — From Academic Papers to Political Strategy</h2>
+<pre><code>Success of Automation:</code></pre>
+<ul>
+<li><p>Demonstrated feasibility of automated model extraction.</p>
+<p>Improved Forecasting:</p></li>
+<li><p>Enhanced accuracy with real-time data integration.</p>
+<p>Policy Analysis:</p></li>
+<li><p>Identified impactful policies through conditional forecasting.</p>
+<p>Scalability Achieved:</p></li>
+<li><p>Efficient processing of extensive data sets.</p>
+<p>Addressed Challenges:</p></li>
+<li><p>Overcame limitations of manual modeling.</p></li>
+</ul>
 </section>
+<section id="project-scaling-workflow-pipeline-automation" class="level2" data-number="4.2">
+<h2 data-number="4.2" class="anchored" data-anchor-id="project-scaling-workflow-pipeline-automation"><span class="header-section-number">4.2</span> Project Scaling — Workflow Pipeline &amp; Automation</h2>
+<p>Scaling Opportunities:</p>
+<ul>
+<li>Horizontal: Incorporate more data sources.<br>
+</li>
+<li>Vertical: Add detailed variables.</li>
+</ul>
+<p>New Capabilities:</p>
+<ul>
+<li>Advanced analytics.<br>
+</li>
+<li>Real-time data integration.</li>
+</ul>
+<p>Requirements:</p>
+<ul>
+<li>Software Setup: Robust infrastructure.<br>
+</li>
+<li>Financial: Funding for APIs and compute resources.</li>
+</ul>
+<p>Impact:</p>
+<ul>
+<li>Broader, more comprehensive models.<br>
+</li>
+<li>Enhanced policy analysis.</li>
+</ul>
 </section>
-<section id="methodology" class="level2" data-number="2.3">
-<h2 data-number="2.3" class="anchored" data-anchor-id="methodology"><span class="header-section-number">2.3</span> Methodology</h2>
-<p>MTAIR / Carlsmith Model (Analytica) — Explanation (— is motivation: should come first)</p>
-<section id="kialo" class="level3" data-number="2.3.1">
-<h3 data-number="2.3.1" class="anchored" data-anchor-id="kialo"><span class="header-section-number">2.3.1</span> Kialo</h3>
+<section id="computational-complexity-computational-tractability" class="level2" data-number="4.3">
+<h2 data-number="4.3" class="anchored" data-anchor-id="computational-complexity-computational-tractability"><span class="header-section-number">4.3</span> Computational Complexity — Computational Tractability</h2>
+<p>Challenges:</p>
+<ul>
+<li>High computational demands of complex models.</li>
+</ul>
+<p>Solutions:</p>
+<ul>
+<li>Clustering Worldviews:<br>
+</li>
+<li>Group similar perspectives to simplify models.<br>
+</li>
+<li>Correlation Management:<br>
+</li>
+<li>Adjust for variable interdependencies.<br>
+</li>
+<li>Efficient Algorithms:<br>
+Use optimized sampling methods like Monte Carlo.</li>
+</ul>
+<p>Outcome:</p>
+<ul>
+<li>Achieved efficiency without sacrificing accuracy.</li>
+</ul>
+<p>Link to Theory of Change:</p>
+<ul>
+<li>Scalability amplifies policy impact.</li>
+</ul>
 </section>
-<section id="rainsprinklerlawn-dag" class="level3" data-number="2.3.2">
-<h3 data-number="2.3.2" class="anchored" data-anchor-id="rainsprinklerlawn-dag"><span class="header-section-number">2.3.2</span> Rain/Sprinkler/Lawn DAG</h3>
-</section>
-<section id="bayeserver" class="level3" data-number="2.3.3">
-<h3 data-number="2.3.3" class="anchored" data-anchor-id="bayeserver"><span class="header-section-number">2.3.3</span> BayeServer</h3>
-</section>
-<section id="bayesnet-extended-example" class="level3" data-number="2.3.4">
-<h3 data-number="2.3.4" class="anchored" data-anchor-id="bayesnet-extended-example"><span class="header-section-number">2.3.4</span> BayesNet — Extended Example</h3>
-</section>
-<section id="code-documentation" class="level3" data-number="2.3.5">
-<h3 data-number="2.3.5" class="anchored" data-anchor-id="code-documentation"><span class="header-section-number">2.3.5</span> Code + documentation</h3>
-<div id="fig-automation_pipeline" class="quarto-float quarto-figure quarto-figure-center anchored" width="100%" data-fig-scap="Five-step AMTAIR automation pipeline from PDFs to Bayesian networks" data-fig-align="center" alt="FLOWCHART: Five-step automation pipeline workflow for AMTAIR project.           DATA: The pipeline transforms PDFs through ArgDown, BayesDown, CSV, and HTML into Bayesian network visualizations.           PURPOSE: Illustrates the core technical process that enables automated extraction of probabilistic models from AI safety literature.           DETAILS: Five numbered green steps show: (1) LLM-based extraction from PDFs to ArgDown, (2) ArgDown to BayesDown completion with probabilities, (3) Extracting world-models as CSV data, (4) Software tools for data inference, and (5) Visualization of the resulting Bayesian network.           Each step includes example outputs, with the final visualization showing a Rain-Sprinkler-Grass Wet Bayesian network with probability tables.           SOURCE: Created by the author to explain the AMTAIR methodology           ">
-<figure class="quarto-float quarto-float-fig figure">
-<div aria-describedby="fig-automation_pipeline-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<a href="https://github.com/VJMeyer/submission"><img src="../images/pipeline.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:100.0%" data-fig-scap="Five-step AMTAIR automation pipeline from PDFs to Bayesian networks" alt="FLOWCHART: Five-step automation pipeline workflow for AMTAIR project.           DATA: The pipeline transforms PDFs through ArgDown, BayesDown, CSV, and HTML into Bayesian network visualizations.           PURPOSE: Illustrates the core technical process that enables automated extraction of probabilistic models from AI safety literature.           DETAILS: Five numbered green steps show: (1) LLM-based extraction from PDFs to ArgDown, (2) ArgDown to BayesDown completion with probabilities, (3) Extracting world-models as CSV data, (4) Software tools for data inference, and (5) Visualization of the resulting Bayesian network.           Each step includes example outputs, with the final visualization showing a Rain-Sprinkler-Grass Wet Bayesian network with probability tables.           SOURCE: Created by the author to explain the AMTAIR methodology           "></a>
-</div>
-<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-automation_pipeline-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;2.1: AMTAIR Automation Pipeline
-</figcaption>
-</figure>
-</div>
-<p>Testing crossreferencing grapics <a href="#fig-automation_pipeline" class="quarto-xref">Figure&nbsp;<span>2.1</span></a>.</p>
+<section id="external-validation-manual-extraction-processing" class="level2" data-number="4.4">
+<h2 data-number="4.4" class="anchored" data-anchor-id="external-validation-manual-extraction-processing"><span class="header-section-number">4.4</span> External Validation — Manual Extraction &amp; Processing</h2>
+<pre><code>Purpose:</code></pre>
+<ul>
+<li><p>Assess accuracy of automated methods.</p>
+<p>Comparison:</p></li>
+<li><p>Automation Strengths:<br>
+</p></li>
+<li><p>Speed, consistency.<br>
+</p></li>
+<li><p>Human Strengths:<br>
+</p></li>
+<li><p>Nuanced understanding.</p>
+<p>Findings:</p></li>
+<li><p>Automation excels in data handling.<br>
+</p></li>
+<li><p>Human oversight enhances quality.</p>
+<p>Conclusion:</p></li>
+<li><p>Optimal results from combining AI with expert input.</p></li>
+</ul>
+<!-- No Headings after .md inclusion (creates a fatal bug with the ToC) -->
 
 
 </section>
@@ -750,13 +783,13 @@ Figure&nbsp;2.1: AMTAIR Automation Pipeline
   </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="../chapters/Introduction.html" class="pagination-link" aria-label="Introduction">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Introduction</span></span>
+      <a href="../chapters/Context.html" class="pagination-link" aria-label="Context">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Context</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="../chapters/AMTAIR.html" class="pagination-link" aria-label="AMTAIR">
-        <span class="nav-page-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">AMTAIR</span></span> <i class="bi bi-arrow-right-short"></i>
+      <a href="../chapters/Discussion.html" class="pagination-link" aria-label="Discussion">
+        <span class="nav-page-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Discussion</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>
@@ -768,7 +801,7 @@ Figure&nbsp;2.1: AMTAIR Automation Pipeline
 </div>   
     <div class="nav-footer-center">
       &nbsp;
-    <div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/VJMeyer/submission/edit/main/chapters/Context.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li></ul></div></div>
+    <div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/VJMeyer/submission/edit/main/chapters/AMTAIR.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li></ul></div></div>
     <div class="nav-footer-right">
       <ul class="footer-items list-unstyled">
     <li class="nav-item compact">
