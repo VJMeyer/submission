@@ -67,92 +67,6 @@ MAD		Mutually Assured Destruction
 
 
 
-## Headings & Potential Headings {#sec-heading}
-
-
-
-<!-- Comments for comments -->
-
-<!-- [ ] ToDos for things to do / tasks / reminders (allows "jump to with Taks Tree extension") -->
-
-
-
-`verbatim code formatting for notes and ideas to be included (here)`
-
-```
-Also code blocks for more extensive notes and ideas to be included (here)
-- test 1. 
-- test 2. 
-- test 3.
-2. second
-3. third
-
-```
-
-> Blockquote formatting for "Citations / Things to reference"
-
-
-
-
-Here is an inline note.^[Inlines notes are easier to write,
-since you don't have to pick an identifier and move down to
-type the note.]
-
-
-Here is a footnote reference,[^1] 
-
-[^1]: Here is the footnote.
-
-
-
-
-```{=latex}
-\renewcommand*{\labelitemi}{\textgreater}
-```
-
-
-Here's some raw inline HTML: `<a>html</a>`{=html}
-
-
-page 1
-
-{{< pagebreak >}}
-
-page 2
-
-
-```{mermaid}
-flowchart LR
-  A[Hard edge] --> B(Round edge)
-  B --> C{Decision}
-  C --> D[Result one]
-  C --> E[Result two]
-```
-
-Testing crossreferencing grapics @fig-automation_pipeline.
-
-
-
-
-
-## Citations {#sec-citations .unnumbered .unlisted}
-
-
-
-@adamsFourProbabilitypreservingProperties1996 <!-- preferred because it works with both html, latex and pdf -->
-
-[@adamsFourProbabilitypreservingProperties1996] and [@knuth84]
-
-
-Blah Blah [see @knuth84, pp. 33-35;
-also @growiecExistentialRiskTransformative2024a, chap. 1]
-
-Blah Blah [@knuth84, pp. 33-35,
-38-39 and passim]
-
-Blah Blah [@growiecExistentialRiskTransformative2024a; @knuth84].
-
-Wickham says blah [-@growiecExistentialRiskTransformative2024a]
 
 ### Quarto Features Incompatible with LaTeX (Below) {.unnumbered .unlisted}
 
@@ -199,15 +113,13 @@ $$
 ::: -->
 
 <!-- Preliminary notes -->
-> **Key insight:** This concept connects to X theory
+
 
 <!-- Research to explore -->
 <!-- - [ ] Investigate connection between X and Y
 - [ ] Find supporting evidence for claim Z -->
 
 
-
-## Implementation Details {#sec-amtair-impl}
 
 <!-- TODO: Add diagram of extraction pipeline here -->
 

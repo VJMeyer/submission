@@ -14,7 +14,7 @@
     "href": "chapters/Introduction.html",
     "title": "1  Introduction",
     "section": "",
-    "text": "1.1 Introduction\n10% of Grade:\n~ 14% of text ~ 4200 words\nTesting crossreferencing grapics Figure 1.1.",
+    "text": "1.1 Introduction\nTesting crossreferencing grapics Figure 1.1.",
     "crumbs": [
       "<span class='chapter-number'>1</span>  <span class='chapter-title'>Introduction</span>"
     ]
@@ -24,7 +24,7 @@
     "href": "chapters/Introduction.html#introduction",
     "title": "1  Introduction",
     "section": "",
-    "text": "introduces and motivates the core question or problem\nprovides context for discussion (places issue within a larger debate or sphere of relevance)\nstates precise thesis or position the author will argue for\nprovides roadmap indicating structure and key content points of the essay\n\n\n\nintroduces and motivates the core question or problem\n\n\n\n\n\n\n\n\nFigure 1.1: Caption/Title 2",
+    "text": "10% of Grade:\n\n-   introduces and motivates the core question or problem\n-   provides context for discussion (places issue within a larger debate or sphere of relevance)\n-   states precise thesis or position the author will argue for\n-   provides roadmap indicating structure and key content points of the essay\n\n\\~ 14% of text \\~ 4200 words\n\nintroduces and motivates the core question or problem\n\n\n\n\n\n\n\n\nFigure 1.1: Caption/Title 2",
     "crumbs": [
       "<span class='chapter-number'>1</span>  <span class='chapter-title'>Introduction</span>"
     ]
@@ -154,16 +154,6 @@
     "href": "chapters/Context.html",
     "title": "2  Context",
     "section": "",
-    "text": "20% of Grade:\n~ 29% of text ~ 8700 words",
-    "crumbs": [
-      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Context</span>"
-    ]
-  },
-  {
-    "objectID": "chapters/Context.html#theoretical-background-considerations",
-    "href": "chapters/Context.html#theoretical-background-considerations",
-    "title": "2  Context",
-    "section": "2.1 Theoretical Background Considerations",
     "text": "2.1 Theoretical Background Considerations",
     "crumbs": [
       "<span class='chapter-number'>2</span>  <span class='chapter-title'>Context</span>"
@@ -194,16 +184,6 @@
     "href": "chapters/AMTAIR.html",
     "title": "3  AMTAIR",
     "section": "",
-    "text": "3.0.1 20% of Grade: ~ 29% of text ~ 8700 words",
-    "crumbs": [
-      "<span class='chapter-number'>3</span>  <span class='chapter-title'>AMTAIR</span>"
-    ]
-  },
-  {
-    "objectID": "chapters/AMTAIR.html#own-carlsmith-model-implementation-explanation",
-    "href": "chapters/AMTAIR.html#own-carlsmith-model-implementation-explanation",
-    "title": "3  AMTAIR",
-    "section": "3.1 Own Carlsmith Model Implementation — Explanation",
     "text": "3.1 Own Carlsmith Model Implementation — Explanation",
     "crumbs": [
       "<span class='chapter-number'>3</span>  <span class='chapter-title'>AMTAIR</span>"
@@ -284,7 +264,7 @@
     "href": "chapters/Discussion.html",
     "title": "4  Discussion",
     "section": "",
-    "text": "4.1 Discussion\n10% of Grade: ~ 14% of text ~ 4200 words",
+    "text": "4.1 Discussion",
     "crumbs": [
       "<span class='chapter-number'>4</span>  <span class='chapter-title'>Discussion</span>"
     ]
@@ -294,7 +274,7 @@
     "href": "chapters/Discussion.html#discussion",
     "title": "4  Discussion",
     "section": "",
-    "text": "discusses a specific objection to student’s own argument\nprovides a convincing reply that bolsters or refines the main argument\nrelates to or extends beyond materials/arguments covered in class",
+    "text": "10% of Grade: ~ 14% of text ~ 4200 words\n\n- discusses a specific objection to student’s own argument\n- provides a convincing reply that bolsters or refines the main argument\n- relates to or extends beyond materials/arguments covered in class",
     "crumbs": [
       "<span class='chapter-number'>4</span>  <span class='chapter-title'>Discussion</span>"
     ]
@@ -334,7 +314,7 @@
     "href": "chapters/Conclusion.html",
     "title": "5  Conclusion",
     "section": "",
-    "text": "5.1 The Current State of Things & How to Continue\n10% of Grade: ~ 14% of text ~ 4200 words",
+    "text": "5.1 The Current State of Things & How to Continue",
     "crumbs": [
       "<span class='chapter-number'>5</span>  <span class='chapter-title'>Conclusion</span>"
     ]
@@ -344,7 +324,7 @@
     "href": "chapters/Conclusion.html#the-current-state-of-things-how-to-continue",
     "title": "5  Conclusion",
     "section": "",
-    "text": "summarizes thesis and line of argument\noutlines possible implications\nnotes outstanding issues / limitations of discussion\npoints to avenues for further research\noverall conclusion is in line with introduction",
+    "text": "10% of Grade: ~ 14% of text ~ 4200 words\n\n- summarizes thesis and line of argument \n- outlines possible implications\n- notes outstanding issues / limitations of discussion\n- points to avenues for further research\n- overall conclusion is in line with introduction",
     "crumbs": [
       "<span class='chapter-number'>5</span>  <span class='chapter-title'>Conclusion</span>"
     ]
@@ -414,47 +394,7 @@
     "href": "chapters/Frontmatter.html#glossary",
     "title": "Frontmatter",
     "section": "Glossary",
-    "text": "Glossary\n\nArgument mapping: A method for visually representing the structure of arguments\n\nBayesDown: An extension of ArgDown that incorporates probabilistic information\n\nBayesian network: A probabilistic graphical model representing variables and their dependencies\n\nConditional probability: The probability of an event given that another event has occurred\n\nDirected Acyclic Graph (DAG): A graph with directed edges and no cycles\n\nExistential risk: Risk of permanent curtailment of humanity’s potential\n\nPower-seeking AI: AI systems with instrumental incentives to acquire resources and power\n\nPrediction market: A market where participants trade contracts that resolve based on future events\n\nd-separation: A criterion for identifying conditional independence relationships in Bayesian networks\n\nMonte Carlo sampling: A computational technique using random sampling to obtain numerical results",
-    "crumbs": [
-      "Frontmatter"
-    ]
-  },
-  {
-    "objectID": "chapters/Frontmatter.html#sec-heading",
-    "href": "chapters/Frontmatter.html#sec-heading",
-    "title": "Frontmatter",
-    "section": "Headings & Potential Headings",
-    "text": "Headings & Potential Headings\n\n\nverbatim code formatting for notes and ideas to be included (here)\nAlso code blocks for more extensive notes and ideas to be included (here)\n- test 1. \n- test 2. \n- test 3.\n2. second\n3. third\n\n\nBlockquote formatting for “Citations / Things to reference”\n\nHere is an inline note.1\nHere is a footnote reference,2\nHere’s some raw inline HTML: html\npage 1\n\npage 2\n\n\n\n\n\nflowchart LR\n  A[Hard edge] --&gt; B(Round edge)\n  B --&gt; C{Decision}\n  C --&gt; D[Result one]\n  C --&gt; E[Result two]\n\n\n\n\n\n\nTesting crossreferencing grapics Figure 2.1.",
-    "crumbs": [
-      "Frontmatter"
-    ]
-  },
-  {
-    "objectID": "chapters/Frontmatter.html#sec-citations",
-    "href": "chapters/Frontmatter.html#sec-citations",
-    "title": "Frontmatter",
-    "section": "Citations",
-    "text": "Citations\nAdams (1996) \n(Adams 1996) and (Knuth 1984)\nBlah Blah (see Knuth 1984, 33–35; also Growiec 2024, chap. 1)\nBlah Blah (Knuth 1984, 33–35, 38–39 and passim)\nBlah Blah (Growiec 2024; Knuth 1984).\nWickham says blah (2024)\n\nQuarto Features Incompatible with LaTeX (Below)\n\n\n\n\n\n\nKey insight: This concept connects to X theory",
-    "crumbs": [
-      "Frontmatter"
-    ]
-  },
-  {
-    "objectID": "chapters/Frontmatter.html#sec-amtair-impl",
-    "href": "chapters/Frontmatter.html#sec-amtair-impl",
-    "title": "Frontmatter",
-    "section": "Implementation Details",
-    "text": "Implementation Details\n\n\n\n\n\n\n\nAdams, Ernest W. 1996. “Four Probability-Preserving Properties of Inferences.” Journal of Philosophical Logic 25: 1–24.\n\n\nGrowiec, Jakub. 2024. “Existential Risk from Transformative AI: An Economic Perspective.” Technological and Economic Development of Economy 30 (6): 1682–1708. https://doi.org/10.3846/tede.2024.21525.\n\n\nKnuth, Donald E. 1984. “Literate Programming.” Computer Journal 27 (2): 97–111. https://doi.org/10.1093/comjnl/27.2.97.",
-    "crumbs": [
-      "Frontmatter"
-    ]
-  },
-  {
-    "objectID": "chapters/Frontmatter.html#footnotes",
-    "href": "chapters/Frontmatter.html#footnotes",
-    "title": "Frontmatter",
-    "section": "",
-    "text": "Inlines notes are easier to write, since you don’t have to pick an identifier and move down to type the note.↩︎\nHere is the footnote.↩︎",
+    "text": "Glossary\n\nArgument mapping: A method for visually representing the structure of arguments\n\nBayesDown: An extension of ArgDown that incorporates probabilistic information\n\nBayesian network: A probabilistic graphical model representing variables and their dependencies\n\nConditional probability: The probability of an event given that another event has occurred\n\nDirected Acyclic Graph (DAG): A graph with directed edges and no cycles\n\nExistential risk: Risk of permanent curtailment of humanity’s potential\n\nPower-seeking AI: AI systems with instrumental incentives to acquire resources and power\n\nPrediction market: A market where participants trade contracts that resolve based on future events\n\nd-separation: A criterion for identifying conditional independence relationships in Bayesian networks\n\nMonte Carlo sampling: A computational technique using random sampling to obtain numerical results\n\n\nQuarto Features Incompatible with LaTeX (Below)",
     "crumbs": [
       "Frontmatter"
     ]
@@ -464,7 +404,37 @@
     "href": "ref/references.html",
     "title": "Bibliography (References)",
     "section": "",
-    "text": "Adams, Ernest W. 1996. “Four Probability-Preserving Properties of\nInferences.” Journal of Philosophical Logic 25: 1–24.\n\n\nGrowiec, Jakub. 2024. “Existential Risk from Transformative\nAI: An Economic Perspective.” Technological and\nEconomic Development of Economy 30 (6): 1682–1708. https://doi.org/10.3846/tede.2024.21525.\n\n\nKnuth, Donald E. 1984. “Literate Programming.” Computer\nJournal 27 (2): 97–111. https://doi.org/10.1093/comjnl/27.2.97.",
+    "text": "Headings & Potential Headings\nverbatim code formatting for notes and ideas to be included (here)\nHere is an inline note.1\nHere is a footnote reference,2\nHere’s some raw inline HTML: html\npage 1\npage 2\nflowchart LR\n  A[Hard edge] --&gt; B(Round edge)\n  B --&gt; C{Decision}\n  C --&gt; D[Result one]\n  C --&gt; E[Result two]\nTesting crossreferencing grapics Figure 2.1.",
+    "crumbs": [
+      "Bibliography (References)"
+    ]
+  },
+  {
+    "objectID": "ref/references.html#sec-heading",
+    "href": "ref/references.html#sec-heading",
+    "title": "Bibliography (References)",
+    "section": "",
+    "text": "Also code blocks for more extensive notes and ideas to be included (here)\n- test 1. \n- test 2. \n- test 3.\n2. second\n3. third\n\n\nBlockquote formatting for “Citations / Things to reference”",
+    "crumbs": [
+      "Bibliography (References)"
+    ]
+  },
+  {
+    "objectID": "ref/references.html#sec-citations",
+    "href": "ref/references.html#sec-citations",
+    "title": "Bibliography (References)",
+    "section": "Citations",
+    "text": "Citations\nAdams (1996) \n(Adams 1996) and (Knuth 1984)\nBlah Blah (see Knuth 1984, 33–35; also Growiec 2024, chap. 1)\nBlah Blah (Knuth 1984, 33–35, 38–39 and passim)\nBlah Blah (Growiec 2024; Knuth 1984).\nWickham says blah (2024)\n\n\nAdams, Ernest W. 1996. “Four Probability-Preserving Properties of\nInferences.” Journal of Philosophical Logic 25: 1–24.\n\n\nGrowiec, Jakub. 2024. “Existential Risk from Transformative\nAI: An Economic Perspective.” Technological and\nEconomic Development of Economy 30 (6): 1682–1708. https://doi.org/10.3846/tede.2024.21525.\n\n\nKnuth, Donald E. 1984. “Literate Programming.” Computer\nJournal 27 (2): 97–111. https://doi.org/10.1093/comjnl/27.2.97.",
+    "crumbs": [
+      "Bibliography (References)"
+    ]
+  },
+  {
+    "objectID": "ref/references.html#footnotes",
+    "href": "ref/references.html#footnotes",
+    "title": "Bibliography (References)",
+    "section": "",
+    "text": "Inlines notes are easier to write, since you don’t have to pick an identifier and move down to type the note.↩︎\nHere is the footnote.↩︎",
     "crumbs": [
       "Bibliography (References)"
     ]

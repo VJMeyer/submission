@@ -20,27 +20,7 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
-/* CSS for citations */
-div.csl-bib-body { }
-div.csl-entry {
-  clear: both;
-  margin-bottom: 0em;
-}
-.hanging-indent div.csl-entry {
-  margin-left:2em;
-  text-indent:-2em;
-}
-div.csl-left-margin {
-  min-width:2em;
-  float:left;
-}
-div.csl-right-inline {
-  margin-left:2em;
-  padding-left:1em;
-}
-div.csl-indent {
-  margin-left: 2em;
-}</style>
+</style>
 
 
 <script src="../site_libs/quarto-nav/quarto-nav.js"></script>
@@ -88,9 +68,6 @@ div.csl-indent {
     "search-label": "Search"
   }
 }</script>
-<script src="../site_libs/quarto-diagram/mermaid.min.js"></script>
-<script src="../site_libs/quarto-diagram/mermaid-init.js"></script>
-<link href="../site_libs/quarto-diagram/mermaid.css" rel="stylesheet">
 <script src="https://hypothes.is/embed.js" async=""></script>
 
 
@@ -250,8 +227,6 @@ div.csl-indent {
   <li><a href="#list-of-tables" id="toc-list-of-tables" class="nav-link" data-scroll-target="#list-of-tables">List of Tables</a></li>
   <li><a href="#list-of-graphics-figures" id="toc-list-of-graphics-figures" class="nav-link" data-scroll-target="#list-of-graphics-figures">List of Graphics &amp; Figures</a></li>
   <li><a href="#list-of-abbreviations" id="toc-list-of-abbreviations" class="nav-link" data-scroll-target="#list-of-abbreviations">List of Abbreviations</a></li>
-  <li><a href="#sec-heading" id="toc-sec-heading" class="nav-link" data-scroll-target="#sec-heading">Headings &amp; Potential Headings</a></li>
-  <li><a href="#sec-amtair-impl" id="toc-sec-amtair-impl" class="nav-link" data-scroll-target="#sec-amtair-impl">Implementation Details</a></li>
   </ul></li>
   </ul>
 <div class="toc-actions"><ul><li><a href="https://github.com/VJMeyer/submission/edit/main/chapters/Frontmatter.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li></ul></div></nav>
@@ -362,54 +337,6 @@ div.csl-indent {
 </li>
 <li><strong>Monte Carlo sampling</strong>: A computational technique using random sampling to obtain numerical results</li>
 </ul>
-</section>
-<section id="sec-heading" class="level2">
-<h2 class="anchored" data-anchor-id="sec-heading">Headings &amp; Potential Headings</h2>
-<!-- Comments for comments -->
-<!-- [ ] ToDos for things to do / tasks / reminders (allows "jump to with Taks Tree extension") -->
-<p><code>verbatim code formatting for notes and ideas to be included (here)</code></p>
-<pre><code>Also code blocks for more extensive notes and ideas to be included (here)
-- test 1. 
-- test 2. 
-- test 3.
-2. second
-3. third
-</code></pre>
-<blockquote class="blockquote">
-<p>Blockquote formatting for “Citations / Things to reference”</p>
-</blockquote>
-<p>Here is an inline note.<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a></p>
-<p>Here is a footnote reference,<a href="#fn2" class="footnote-ref" id="fnref2" role="doc-noteref"><sup>2</sup></a></p>
-<p>Here’s some raw inline HTML: <a>html</a></p>
-<p>page 1</p>
-<div style="page-break-after: always;"></div>
-<p>page 2</p>
-<div class="cell" data-layout-align="default">
-<div class="cell-output-display">
-<div>
-<p></p><figure class="figure"><p></p>
-<div>
-<pre class="mermaid mermaid-js">flowchart LR
-  A[Hard edge] --&gt; B(Round edge)
-  B --&gt; C{Decision}
-  C --&gt; D[Result one]
-  C --&gt; E[Result two]
-</pre>
-</div>
-<p></p></figure><p></p>
-</div>
-</div>
-</div>
-<p>Testing crossreferencing grapics <a href="Context.html#fig-automation_pipeline" class="quarto-xref">Figure&nbsp;<span>2.1</span></a>.</p>
-</section>
-<section id="sec-citations" class="level2 unnumbered unlisted">
-<h2 class="unnumbered unlisted anchored" data-anchor-id="sec-citations">Citations</h2>
-<p><span class="citation" data-cites="adamsFourProbabilitypreservingProperties1996">Adams (<a href="../ref/references.html#ref-adamsFourProbabilitypreservingProperties1996" role="doc-biblioref">1996</a>)</span> <!-- preferred because it works with both html, latex and pdf --></p>
-<p><span class="citation" data-cites="adamsFourProbabilitypreservingProperties1996">(<a href="../ref/references.html#ref-adamsFourProbabilitypreservingProperties1996" role="doc-biblioref">Adams 1996</a>)</span> and <span class="citation" data-cites="knuth84">(<a href="../ref/references.html#ref-knuth84" role="doc-biblioref">Knuth 1984</a>)</span></p>
-<p>Blah Blah <span class="citation" data-cites="knuth84 growiecExistentialRiskTransformative2024a">(see <a href="../ref/references.html#ref-knuth84" role="doc-biblioref">Knuth 1984, 33–35</a>; also <a href="../ref/references.html#ref-growiecExistentialRiskTransformative2024a" role="doc-biblioref">Growiec 2024, chap. 1</a>)</span></p>
-<p>Blah Blah <span class="citation" data-cites="knuth84">(<a href="../ref/references.html#ref-knuth84" role="doc-biblioref">Knuth 1984, 33–35, 38–39</a> and passim)</span></p>
-<p>Blah Blah <span class="citation" data-cites="growiecExistentialRiskTransformative2024a knuth84">(<a href="../ref/references.html#ref-growiecExistentialRiskTransformative2024a" role="doc-biblioref">Growiec 2024</a>; <a href="../ref/references.html#ref-knuth84" role="doc-biblioref">Knuth 1984</a>)</span>.</p>
-<p>Wickham says blah <span class="citation" data-cites="growiecExistentialRiskTransformative2024a">(<a href="../ref/references.html#ref-growiecExistentialRiskTransformative2024a" role="doc-biblioref">2024</a>)</span></p>
 <section id="quarto-features-incompatible-with-latex-below" class="level3 unnumbered unlisted">
 <h3 class="unnumbered unlisted anchored" data-anchor-id="quarto-features-incompatible-with-latex-below">Quarto Features Incompatible with LaTeX (Below)</h3>
 <!-- [ ] Trouble shoot and fix referencing sections -->
@@ -452,16 +379,9 @@ $$
 $$
 ::: -->
 <!-- Preliminary notes -->
-<blockquote class="blockquote">
-<p><strong>Key insight:</strong> This concept connects to X theory</p>
-</blockquote>
 <!-- Research to explore -->
 <!-- - [ ] Investigate connection between X and Y
 - [ ] Find supporting evidence for claim Z -->
-</section>
-</section>
-<section id="sec-amtair-impl" class="level2">
-<h2 class="anchored" data-anchor-id="sec-amtair-impl">Implementation Details</h2>
 <!-- TODO: Add diagram of extraction pipeline here -->
 <!-- :::note
 Remember to connect this back to the research question
@@ -472,25 +392,8 @@ Content here
 ::: -->
 
 
-<div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" role="list" style="display: none">
-<div id="ref-adamsFourProbabilitypreservingProperties1996" class="csl-entry" role="listitem">
-Adams, Ernest W. 1996. <span>“Four Probability-Preserving Properties of Inferences.”</span> <em>Journal of Philosophical Logic</em> 25: 1–24.
-</div>
-<div id="ref-growiecExistentialRiskTransformative2024a" class="csl-entry" role="listitem">
-Growiec, Jakub. 2024. <span>“Existential Risk from Transformative <span>AI</span>: An Economic Perspective.”</span> <em>Technological and Economic Development of Economy</em> 30 (6): 1682–1708. <a href="https://doi.org/10.3846/tede.2024.21525">https://doi.org/10.3846/tede.2024.21525</a>.
-</div>
-<div id="ref-knuth84" class="csl-entry" role="listitem">
-Knuth, Donald E. 1984. <span>“Literate Programming.”</span> <em>Computer Journal</em> 27 (2): 97–111. <a href="https://doi.org/10.1093/comjnl/27.2.97">https://doi.org/10.1093/comjnl/27.2.97</a>.
-</div>
-</div>
 </section>
 </section>
-<section id="footnotes" class="footnotes footnotes-end-of-document" role="doc-endnotes">
-<hr>
-<ol>
-<li id="fn1"><p>Inlines notes are easier to write, since you don’t have to pick an identifier and move down to type the note.<a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
-<li id="fn2"><p>Here is the footnote.<a href="#fnref2" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
-</ol>
 </section>
 
 </main> <!-- /main -->

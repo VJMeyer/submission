@@ -7,13 +7,13 @@ numbering:
 ---
 
 ## Discussion
-
+```
 10% of Grade: ~ 14% of text ~ 4200 words
 
 - discusses a specific objection to student’s own argument
 - provides a convincing reply that bolsters or refines the main argument
 - relates to or extends beyond materials/arguments covered in class
-
+```
 
 
 # Discussion		—	Exchange, Controversy & Influence
