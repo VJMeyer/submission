@@ -69,52 +69,29 @@ MAD		Mutually Assured Destruction
 
 ## Headings & Potential Headings {#sec-heading}
 
-Notes
-
-Ideas
 
 
-<!-- Preliminary notes -->
-> **Key insight:** This concept connects to X theory
+<!-- Comments for comments -->
 
-<!-- Research to explore -->
-<!-- - [ ] Investigate connection between X and Y
-- [ ] Find supporting evidence for claim Z -->
+<!-- [ ] ToDos for things to do / tasks / reminders (allows "jump to with Taks Tree extension") -->
 
 
 
-## Implementation Details {#sec-amtair-impl}
+`verbatim code formatting for notes and ideas to be included (here)`
 
-<!-- TODO: Add diagram of extraction pipeline here -->
+```
+Also code blocks for more extensive notes and ideas to be included (here)
+- test 1. 
+- test 2. 
+- test 3.
+2. second
+3. third
 
-The extraction process consists of three main stages...
+```
 
-<!-- :::note
-Remember to connect this back to the research question
-::: -->
-
-
-
-
-
-Citations / Things to reference
-
-<!-- Comments -->
-
-<!-- [ ] ToDos-->
+> Blockquote formatting for "Citations / Things to reference"
 
 
-
-`verbatim code`
-
-
-
-> Blockquote
-
-<!-- ::: {.callout-note}
-## Optional Title
-Content here
-::: -->
 
 
 Here is an inline note.^[Inlines notes are easier to write,
@@ -127,9 +104,7 @@ Here is a footnote reference,[^1]
 [^1]: Here is the footnote.
 
 
-```
-code
-```
+
 
 ```{=latex}
 \renewcommand*{\labelitemi}{\textgreater}
@@ -217,3 +192,26 @@ $$
 $$
 ::: -->
 
+<!-- Preliminary notes -->
+> **Key insight:** This concept connects to X theory
+
+<!-- Research to explore -->
+<!-- - [ ] Investigate connection between X and Y
+- [ ] Find supporting evidence for claim Z -->
+
+
+
+## Implementation Details {#sec-amtair-impl}
+
+<!-- TODO: Add diagram of extraction pipeline here -->
+
+
+<!-- :::note
+Remember to connect this back to the research question
+::: -->
+
+
+<!-- ::: {.callout-note}
+## Optional Title
+Content here
+::: -->
