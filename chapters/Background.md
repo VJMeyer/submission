@@ -9,7 +9,8 @@ numbering:
 
 
 
-## Theoretical Background Considerations
+
+## Background Considerations
 
 ##  Literature, Concepts & Terminology
 
@@ -22,7 +23,31 @@ numbering:
 #### Carlsmith Model (Analytica)
 	
 
+## Theoretical Foundations
 
+### **AI Existential Risk: The Carlsmith Model**
+
+<!-- Examine Joe Carlsmith's probabilistic model of power-seeking AI causing existential catastrophe. Unpack the six key premises and explain why this structured approach serves as an ideal candidate for formal modeling. -->
+
+### **The Epistemic Challenge of Policy Evaluation**
+
+<!-- Explore why evaluating AI governance policies is particularly difficult: complex causal chains, deep uncertainty, divergent worldviews, and limited empirical data. Establish why traditional policy analysis methods are insufficient. -->
+
+### **Argument Mapping and Formal Representations**
+
+<!-- Bridge informal reasoning to formal models by showing how argument maps capture causal relationships and conditional dependencies that can be translated into Bayesian networks. -->
+
+### **Bayesian Networks as Knowledge Representation**
+
+<!-- Introduce Bayesian networks as formal tools for representing uncertainty, causal relationships, and conditional dependencies. Explain key concepts: nodes, edges, conditional probability tables, and inference. -->
+
+### **The MTAIR Framework: Achievements and Limitations**
+
+<!-- Review the MTAIR project's approach to modeling AI risks using Analytica, highlighting both its innovations and limitations, particularly the manual labor intensity that limits scalability. -->
+
+### **"A Narrow Path": Conditional Policy Proposals in Practice**
+
+<!-- Examine "A Narrow Path" as a case study of conditional policy proposals, highlighting how formal modeling could clarify the conditions under which specific policy interventions would be effective. -->
 
 ### (Intro) Example — Rain/Sprinkler/Lawn
 

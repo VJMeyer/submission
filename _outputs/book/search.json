@@ -14,17 +14,17 @@
     "href": "chapters/Introduction.html",
     "title": "1  Introduction",
     "section": "",
-    "text": "1.1 Introduction\nTesting crossreferencing grapics Figure 1.1.",
+    "text": "1.1 Abstract\nTesting crossreferencing grapics Figure 1.1.",
     "crumbs": [
       "<span class='chapter-number'>1</span>  <span class='chapter-title'>Introduction</span>"
     ]
   },
   {
-    "objectID": "chapters/Introduction.html#introduction",
-    "href": "chapters/Introduction.html#introduction",
+    "objectID": "chapters/Introduction.html#abstract",
+    "href": "chapters/Introduction.html#abstract",
     "title": "1  Introduction",
     "section": "",
-    "text": "10% of Grade:\n\n-   introduces and motivates the core question or problem\n-   provides context for discussion (places issue within a larger debate or sphere of relevance)\n-   states precise thesis or position the author will argue for\n-   provides roadmap indicating structure and key content points of the essay\n\n\\~ 14% of text \\~ 4200 words\n\nintroduces and motivates the core question or problem\n\n\n\n\n\n\n\n\nFigure 1.1: Caption/Title 2",
+    "text": "introduces and motivates the core question or problem\n\n\n\n\n\n\n\n\nFigure 1.1: Caption/Title 2",
     "crumbs": [
       "<span class='chapter-number'>1</span>  <span class='chapter-title'>Introduction</span>"
     ]
@@ -124,17 +124,7 @@
     "href": "chapters/Introduction.html#theory-of-change-approach-structure-of-the-paper",
     "title": "1  Introduction",
     "section": "1.11 Theory of Change — Approach & Structure of the Paper",
-    "text": "1.11 Theory of Change — Approach & Structure of the Paper\nMultiplicative Benefits:\n\nAutomation × Live Prediction Market Integrations × Policy Impact Evaluations\n\nExplanation:\nAutomation:\n\nIncreases efficiency and scalability of risk modeling.\nLive Prediction Markets:\nProvides up-to-date, collective intelligence to inform models.\nPolicy Impact Evaluations:\nImproves the accuracy and relevance of policy assessments.\n\nOutcome:\n\nEnhanced ability to develop effective policies that mitigate AI risks.\n\nVisual Aid:\n\nA diagram illustrating how each component amplifies the others, leading to greater overall impact.",
-    "crumbs": [
-      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Introduction</span>"
-    ]
-  },
-  {
-    "objectID": "chapters/Introduction.html#section",
-    "href": "chapters/Introduction.html#section",
-    "title": "1  Introduction",
-    "section": "1.12 ",
-    "text": "1.12",
+    "text": "1.11 Theory of Change — Approach & Structure of the Paper\nMultiplicative Benefits:\n\nAutomation × Live Prediction Market Integrations × Policy Impact Evaluations\n\nExplanation:\nAutomation:\n\nIncreases efficiency and scalability of risk modeling.\nLive Prediction Markets:\nProvides up-to-date, collective intelligence to inform models.\nPolicy Impact Evaluations:\nImproves the accuracy and relevance of policy assessments.\n\nOutcome:\n\nEnhanced ability to develop effective policies that mitigate AI risks.\n\nVisual Aid:\n\nA diagram illustrating how each component amplifies the others, leading to greater overall impact.\n\n\n1.11.1 The Coordination Crisis in AI Governance\n\n\n\n1.11.2 1.2 Research Question and Scope\n\n\n\n1.11.3 1.3 The Multiplicative Benefits Framework\n\n\n\n1.11.4 1.4 From Theory to Practice: A Roadmap",
     "crumbs": [
       "<span class='chapter-number'>1</span>  <span class='chapter-title'>Introduction</span>"
     ]
@@ -143,8 +133,8 @@
     "objectID": "chapters/Introduction.html#overview-table-of-contents",
     "href": "chapters/Introduction.html#overview-table-of-contents",
     "title": "1  Introduction",
-    "section": "1.13 Overview / Table of Contents",
-    "text": "1.13 Overview / Table of Contents",
+    "section": "1.12 Overview / Table of Contents",
+    "text": "1.12 Overview / Table of Contents",
     "crumbs": [
       "<span class='chapter-number'>1</span>  <span class='chapter-title'>Introduction</span>"
     ]
@@ -154,7 +144,7 @@
     "href": "chapters/Context.html",
     "title": "2  Context",
     "section": "",
-    "text": "2.1 Theoretical Background Considerations",
+    "text": "2.1 Background Considerations",
     "crumbs": [
       "<span class='chapter-number'>2</span>  <span class='chapter-title'>Context</span>"
     ]
@@ -164,7 +154,17 @@
     "href": "chapters/Context.html#literature-concepts-terminology",
     "title": "2  Context",
     "section": "2.2 Literature, Concepts & Terminology",
-    "text": "2.2 Literature, Concepts & Terminology\n\n2.2.1 DAG / BayesNets\n\n\n2.2.2 State of the art (MTAIR) — Explanation\n\n2.2.2.1 Carlsmith Model (Analytica)\n\n\n\n2.2.3 (Intro) Example — Rain/Sprinkler/Lawn\n/ Rain/Sprinkler/Lawn DAG / BayesNet — Extended Example\n…\nOwn Position/Argument: AMTAIR … Own Rain/Sprinkler/Lawn DAG / BayesNet Implementation",
+    "text": "2.2 Literature, Concepts & Terminology\n\n2.2.1 DAG / BayesNets\n\n\n2.2.2 State of the art (MTAIR) — Explanation\n\n2.2.2.1 Carlsmith Model (Analytica)",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Context</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/Context.html#theoretical-foundations",
+    "href": "chapters/Context.html#theoretical-foundations",
+    "title": "2  Context",
+    "section": "2.3 Theoretical Foundations",
+    "text": "2.3 Theoretical Foundations\n\n2.3.1 AI Existential Risk: The Carlsmith Model\n\n\n\n2.3.2 The Epistemic Challenge of Policy Evaluation\n\n\n\n2.3.3 Argument Mapping and Formal Representations\n\n\n\n2.3.4 Bayesian Networks as Knowledge Representation\n\n\n\n2.3.5 The MTAIR Framework: Achievements and Limitations\n\n\n\n2.3.6 “A Narrow Path”: Conditional Policy Proposals in Practice\n\n\n\n2.3.7 (Intro) Example — Rain/Sprinkler/Lawn\n/ Rain/Sprinkler/Lawn DAG / BayesNet — Extended Example\n…\nOwn Position/Argument: AMTAIR … Own Rain/Sprinkler/Lawn DAG / BayesNet Implementation",
     "crumbs": [
       "<span class='chapter-number'>2</span>  <span class='chapter-title'>Context</span>"
     ]
@@ -173,8 +173,18 @@
     "objectID": "chapters/Context.html#methodology",
     "href": "chapters/Context.html#methodology",
     "title": "2  Context",
-    "section": "2.3 Methodology",
-    "text": "2.3 Methodology\nMTAIR / Carlsmith Model (Analytica) — Explanation (— is motivation: should come first)\n\n2.3.1 Kialo\n\n\n2.3.2 Rain/Sprinkler/Lawn DAG\n\n\n2.3.3 BayeServer\n\n\n2.3.4 BayesNet — Extended Example\n\n\n2.3.5 Code + documentation\n\n\n\n\n\n\nFigure 2.1: AMTAIR Automation Pipeline\n\n\n\nTesting crossreferencing grapics Figure 2.1.",
+    "section": "2.4 Methodology",
+    "text": "2.4 Methodology\n\n2.4.1 From World Models to Computational Representation\n\n2.4.1.1 Research Design Overview\n\n\n\n2.4.1.2 Formalizing World Models from AI Safety Literature\n\n\n\n2.4.1.3 Directed Acyclic Graphs: Structure and Semantics\n\n\n\n2.4.1.4 Quantification Approaches for Probabilistic Judgments\n\n\n\n2.4.1.5 Inference Techniques for Complex Networks\n\n\n\n2.4.1.6 Integration with Prediction Markets and Forecasting Platforms",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Context</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/Context.html#practical-real-world-examples",
+    "href": "chapters/Context.html#practical-real-world-examples",
+    "title": "2  Context",
+    "section": "2.5 Practical Real World Examples",
+    "text": "2.5 Practical Real World Examples\nMTAIR / Carlsmith Model (Analytica) — Explanation (— is motivation: should come first)\n\n2.5.0.1 Kialo\n\n\n2.5.0.2 Rain/Sprinkler/Lawn DAG\n\n\n2.5.0.3 BayeServer\n\n\n2.5.0.4 BayesNet — Extended Example\n\n\n2.5.0.5 Code + documentation\n\n\n\n\n\n\nFigure 2.1: AMTAIR Automation Pipeline\n\n\n\nTesting crossreferencing grapics Figure 2.1.",
     "crumbs": [
       "<span class='chapter-number'>2</span>  <span class='chapter-title'>Context</span>"
     ]
@@ -204,17 +214,17 @@
     "href": "chapters/AMTAIR.html#implementation",
     "title": "3  AMTAIR",
     "section": "3.3 Implementation",
-    "text": "3.3 Implementation\nTestText",
+    "text": "3.3 Implementation\n\n3.3.0.1 System Architecture and Data Flow\n\n\n\n3.3.0.2 Automated Extraction Pipeline\n\n\n\n3.3.0.3 Network Construction and Visualization\n\n\n\n3.3.0.4 Probabilistic Inference Engine\n\n\n\n3.3.0.5 Prediction Market Integration Module\n\n\n\n3.3.0.6 Policy Evaluation Interface",
     "crumbs": [
       "<span class='chapter-number'>3</span>  <span class='chapter-title'>AMTAIR</span>"
     ]
   },
   {
-    "objectID": "chapters/AMTAIR.html#results",
-    "href": "chapters/AMTAIR.html#results",
+    "objectID": "chapters/AMTAIR.html#results-from-theory-to-application",
+    "href": "chapters/AMTAIR.html#results-from-theory-to-application",
     "title": "3  AMTAIR",
-    "section": "3.4 Results",
-    "text": "3.4 Results\nTestText",
+    "section": "3.4 Results: From Theory to Application",
+    "text": "3.4 Results: From Theory to Application\n\n3.4.0.1 Extraction Quality Assessment\n\n\n\n3.4.0.2 Computational Performance Analysis\n\n\n\n3.4.0.3 Case Study: The Carlsmith Model Formalized\n\n\n\n3.4.0.4 Comparative Analysis of AI Governance Worldviews\n\n\n\n3.4.0.5 Policy Impact Evaluation: Proof of Concept\n\nTestText",
     "crumbs": [
       "<span class='chapter-number'>3</span>  <span class='chapter-title'>AMTAIR</span>"
     ]
@@ -264,17 +274,7 @@
     "href": "chapters/Discussion.html",
     "title": "4  Discussion",
     "section": "",
-    "text": "4.1 Discussion",
-    "crumbs": [
-      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Discussion</span>"
-    ]
-  },
-  {
-    "objectID": "chapters/Discussion.html#discussion",
-    "href": "chapters/Discussion.html#discussion",
-    "title": "4  Discussion",
-    "section": "",
-    "text": "10% of Grade: ~ 14% of text ~ 4200 words\n\n- discusses a specific objection to student’s own argument\n- provides a convincing reply that bolsters or refines the main argument\n- relates to or extends beyond materials/arguments covered in class",
+    "text": "5 Discussion — Exchange, Controversy & Influence",
     "crumbs": [
       "<span class='chapter-number'>4</span>  <span class='chapter-title'>Discussion</span>"
     ]
@@ -305,6 +305,16 @@
     "title": "4  Discussion",
     "section": "5.3 Known Unknowns & Unknown Unknowns — Input Data Example: Modeling Author Worldviews from Bibliographies Instead of Individual Papers",
     "text": "5.3 Known Unknowns & Unknown Unknowns — Input Data Example: Modeling Author Worldviews from Bibliographies Instead of Individual Papers\nPotential Outcomes:\n\nFirst-Order: Reduced AI risks through better policies.\n\nSecond-Order: Enhanced collaboration.\n\nThird-Order: Framework applied to other global risks.\nFeedback Loops:\nContinuous model improvement.\n\nAdaptive policy-making.\nGreen Teaming:\nStrategies to maximize positive impacts.",
+    "crumbs": [
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Discussion</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/Discussion.html#discussion-implications-and-limitations",
+    "href": "chapters/Discussion.html#discussion-implications-and-limitations",
+    "title": "4  Discussion",
+    "section": "5.4 Discussion: Implications and Limitations",
+    "text": "5.4 Discussion: Implications and Limitations\n\n5.4.0.1 Red-Teaming Results: Identifying Failure Modes\n\n\n\n5.4.0.2 Enhancing Epistemic Security in AI Governance\n\n\n\n5.4.0.3 Scaling Challenges and Opportunities\n\n\n\n5.4.0.4 Integration with Existing Governance Frameworks\n\n\n\n5.4.0.5 Known Unknowns and Deep Uncertainties",
     "crumbs": [
       "<span class='chapter-number'>4</span>  <span class='chapter-title'>Discussion</span>"
     ]
@@ -344,7 +354,17 @@
     "href": "chapters/Conclusion.html#outlook-outlook-next-steps-further-research",
     "title": "5  Conclusion",
     "section": "5.3 Outlook — Outlook & Next Steps / Further Research",
-    "text": "5.3 Outlook — Outlook & Next Steps / Further Research\n\n5.3.1 Scaling Up:\n\nInclude more variables and data sources.\n\n\n\n5.3.2 Collaboration:\n\nPartner with policymakers and researchers.\n\n\n\n5.3.3 Technological Enhancements:\n\nEmploy advanced AI techniques.\n\n\n\n5.3.4 Potential Impact:\n\nInfluence global AI governance.\n5.3.5 Limitations of the Analysis\n\n\n\n5.3.6 Policy Implications & Recommendations\n\n\n5.3.7 Areas for Future Research\n\n\n5.3.8 Open Questions — Central/Remaining Questions & Feedback\n\n5.3.8.1 Questions:\n\nHow can we improve automation accuracy?\n\nWhat challenges exist in policy implementation?\n\nHow do we mitigate AI model biases?\n\nHow can interdisciplinary efforts enhance outcomes?\n\n\n\n5.3.8.2 Feedback:\n\nInvite thoughts, critiques, and suggestions.\n\n\n\n\n\n5.3.9 Outlook — Outlook & Next Steps / Further Research",
+    "text": "5.3 Outlook — Outlook & Next Steps / Further Research\n\n5.3.1 Scaling Up:\n\nInclude more variables and data sources.\n\n\n\n5.3.2 Collaboration:\n\nPartner with policymakers and researchers.\n\n\n\n5.3.3 Technological Enhancements:\n\nEmploy advanced AI techniques.\n\n\n\n5.3.4 Potential Impact:\n\nInfluence global AI governance.\n\n\n\n5.3.5 Limitations of the Analysis\n\n\n5.3.6 Policy Implications & Recommendations\n\n\n5.3.7 Areas for Future Research\n\n\n5.3.8 Open Questions — Central/Remaining Questions & Feedback\n\n5.3.8.1 Questions:\n\nHow can we improve automation accuracy?\n\nWhat challenges exist in policy implementation?\n\nHow do we mitigate AI model biases?\n\nHow can interdisciplinary efforts enhance outcomes?\n\n\n\n5.3.8.2 Feedback:\n\nInvite thoughts, critiques, and suggestions.\n\n\n\n\n\n5.3.9 Outlook — Outlook & Next Steps / Further Research",
+    "crumbs": [
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Conclusion</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/Conclusion.html#conclusion-toward-an-adaptive-ai-governance-framework",
+    "href": "chapters/Conclusion.html#conclusion-toward-an-adaptive-ai-governance-framework",
+    "title": "5  Conclusion",
+    "section": "5.4 Conclusion: Toward an Adaptive AI Governance Framework",
+    "text": "5.4 Conclusion: Toward an Adaptive AI Governance Framework\n\n5.4.1 Key Contributions and Findings\n\n\n\n5.4.2 Limitations of the Current Implementation\n\n\n\n5.4.3 Policy Implications and Recommendations\n\n\n\n5.4.4 Future Research Directions\n\n\n\n5.4.5 Concluding Reflections",
     "crumbs": [
       "<span class='chapter-number'>5</span>  <span class='chapter-title'>Conclusion</span>"
     ]
@@ -394,7 +414,37 @@
     "href": "chapters/Frontmatter.html#glossary",
     "title": "Frontmatter",
     "section": "Glossary",
-    "text": "Glossary\n\nArgument mapping: A method for visually representing the structure of arguments\n\nBayesDown: An extension of ArgDown that incorporates probabilistic information\n\nBayesian network: A probabilistic graphical model representing variables and their dependencies\n\nConditional probability: The probability of an event given that another event has occurred\n\nDirected Acyclic Graph (DAG): A graph with directed edges and no cycles\n\nExistential risk: Risk of permanent curtailment of humanity’s potential\n\nPower-seeking AI: AI systems with instrumental incentives to acquire resources and power\n\nPrediction market: A market where participants trade contracts that resolve based on future events\n\nd-separation: A criterion for identifying conditional independence relationships in Bayesian networks\n\nMonte Carlo sampling: A computational technique using random sampling to obtain numerical results\n\n\nQuarto Features Incompatible with LaTeX (Below)",
+    "text": "Glossary\n\nArgument mapping: A method for visually representing the structure of arguments\n\nBayesDown: An extension of ArgDown that incorporates probabilistic information\n\nBayesian network: A probabilistic graphical model representing variables and their dependencies\n\nConditional probability: The probability of an event given that another event has occurred\n\nDirected Acyclic Graph (DAG): A graph with directed edges and no cycles\n\nExistential risk: Risk of permanent curtailment of humanity’s potential\n\nPower-seeking AI: AI systems with instrumental incentives to acquire resources and power\n\nPrediction market: A market where participants trade contracts that resolve based on future events\n\nd-separation: A criterion for identifying conditional independence relationships in Bayesian networks\n\nMonte Carlo sampling: A computational technique using random sampling to obtain numerical results",
+    "crumbs": [
+      "Frontmatter"
+    ]
+  },
+  {
+    "objectID": "chapters/Frontmatter.html#checklists",
+    "href": "chapters/Frontmatter.html#checklists",
+    "title": "Frontmatter",
+    "section": "Checklists ",
+    "text": "Checklists",
+    "crumbs": [
+      "Frontmatter"
+    ]
+  },
+  {
+    "objectID": "chapters/Frontmatter.html#usual-paper-requirements",
+    "href": "chapters/Frontmatter.html#usual-paper-requirements",
+    "title": "Frontmatter",
+    "section": "“Usual paper requirements”",
+    "text": "“Usual paper requirements”\n\nintroduce all terminology\n\ngo through text, make sure all terms are defined, explained (and added to the list of Abbr.) when first mentioned\n\n\nreadership is intelligent and interested but has no prior knowledge",
+    "crumbs": [
+      "Frontmatter"
+    ]
+  },
+  {
+    "objectID": "chapters/Frontmatter.html#format-anything-that-makes-it-easier-to-understand",
+    "href": "chapters/Frontmatter.html#format-anything-that-makes-it-easier-to-understand",
+    "title": "Frontmatter",
+    "section": "(Format:) ~ Anything that makes it easier to understand",
+    "text": "(Format:) ~ Anything that makes it easier to understand\n\nshort sentences\n\nparagraphs (one idea per paragraph)\n\nsimplicity\n\n!limit use of passive voice!\n\nuse active voice, even prefer I over we!\n\nminimise use of “zombi nouns” (don’t turn verbs/adjectives to nouns!)\n\n“find words that can be cut”\n\n– the paper can focus on one aspect of the presentation\n– “open door policy” for (content) questions\n~ demonstrate ability for novel research\n– “solve research question with the tools accessible to you”\n– “show something that has not been shown before / should be publishable in principle”\n– new idea (or criticism) “in this field”\n– Outline idea THEN reading with a purpose (answering concrete questions)\n– “Only” confirm that nobody has published the exact same idea on the same topic\n– pretty much determined by presentation & proposal but narrow down further (& choose supervisor?)\n\nQuarto Features Incompatible with LaTeX (Below)",
     "crumbs": [
       "Frontmatter"
     ]
@@ -414,7 +464,7 @@
     "href": "ref/references.html#sec-heading",
     "title": "Bibliography (References)",
     "section": "",
-    "text": "Also code blocks for more extensive notes and ideas to be included (here)\n- test 1. \n- test 2. \n- test 3.\n2. second\n3. third\n\n\nBlockquote formatting for “Citations / Things to reference”",
+    "text": "Also code blocks for more extensive notes and ideas to be included and checklists\n- test 1. \n- test 2. \n- test 3.\n2. second\n3. third\n\n\nBlockquote formatting for “Citations / Things to reference”",
     "crumbs": [
       "Bibliography (References)"
     ]
@@ -444,51 +494,40 @@
     "href": "chapters/Appendices.html",
     "title": "Appendix A — Appendices",
     "section": "",
-    "text": "A.1 Appendices",
+    "text": "A.1 Appendix A: Technical Implementation Details",
     "crumbs": [
       "Appendices",
       "<span class='chapter-number'>A</span>  <span class='chapter-title'>Appendices</span>"
     ]
   },
   {
-    "objectID": "chapters/Appendices.html#appendix-a",
-    "href": "chapters/Appendices.html#appendix-a",
+    "objectID": "chapters/Appendices.html#appendix-b-model-validation-procedures",
+    "href": "chapters/Appendices.html#appendix-b-model-validation-procedures",
     "title": "Appendix A — Appendices",
-    "section": "A.2 Appendix A",
-    "text": "A.2 Appendix A",
+    "section": "A.2 Appendix B: Model Validation Procedures",
+    "text": "A.2 Appendix B: Model Validation Procedures",
     "crumbs": [
       "Appendices",
       "<span class='chapter-number'>A</span>  <span class='chapter-title'>Appendices</span>"
     ]
   },
   {
-    "objectID": "chapters/Appendices.html#appendix-b",
-    "href": "chapters/Appendices.html#appendix-b",
+    "objectID": "chapters/Appendices.html#appendix-c-case-studies",
+    "href": "chapters/Appendices.html#appendix-c-case-studies",
     "title": "Appendix A — Appendices",
-    "section": "A.3 Appendix B",
-    "text": "A.3 Appendix B",
+    "section": "A.3 Appendix C: Case Studies",
+    "text": "A.3 Appendix C: Case Studies",
     "crumbs": [
       "Appendices",
       "<span class='chapter-number'>A</span>  <span class='chapter-title'>Appendices</span>"
     ]
   },
   {
-    "objectID": "chapters/Appendices.html#appendix-c",
-    "href": "chapters/Appendices.html#appendix-c",
+    "objectID": "chapters/Appendices.html#appendix-d-ethical-considerations",
+    "href": "chapters/Appendices.html#appendix-d-ethical-considerations",
     "title": "Appendix A — Appendices",
-    "section": "A.4 Appendix C",
-    "text": "A.4 Appendix C",
-    "crumbs": [
-      "Appendices",
-      "<span class='chapter-number'>A</span>  <span class='chapter-title'>Appendices</span>"
-    ]
-  },
-  {
-    "objectID": "chapters/Appendices.html#appendix-d",
-    "href": "chapters/Appendices.html#appendix-d",
-    "title": "Appendix A — Appendices",
-    "section": "A.5 Appendix D",
-    "text": "A.5 Appendix D\nTestText",
+    "section": "A.4 Appendix D: Ethical Considerations",
+    "text": "A.4 Appendix D: Ethical Considerations\n\nTestText",
     "crumbs": [
       "Appendices",
       "<span class='chapter-number'>A</span>  <span class='chapter-title'>Appendices</span>"

@@ -3,15 +3,22 @@ title: "Appendices"
 number: false      # Exclude from section numbering
 ---
 
-## Appendices
+## Appendix A: Technical Implementation Details
 
-## Appendix A
+<!-- Detailed documentation of software implementation, including data structures, algorithms, and optimization techniques. -->
 
-## Appendix B
+## Appendix B: Model Validation Procedures
 
-## Appendix C
+<!-- Comprehensive description of validation protocols, including expert review processes, formal verification methods, and empirical testing. -->
 
-## Appendix D
+## Appendix C: Case Studies
+
+<!-- Additional case studies demonstrating application of the system to specific AI governance questions. -->
+
+## Appendix D: Ethical Considerations
+
+<!-- Analysis of ethical dimensions of formal risk modeling, including potential misuses, responsibility considerations, and normative implications. -->
+
 
 TestText
 

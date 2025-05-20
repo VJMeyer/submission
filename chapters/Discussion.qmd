@@ -6,7 +6,6 @@ numbering:
   level: 1         # Chapter level
 ---
 
-## Discussion
 ```
 10% of Grade: ~ 14% of text ~ 4200 words
 
@@ -67,3 +66,26 @@ numbering:
 	Green Teaming:
 
 * Strategies to maximize positive impacts.
+
+
+## Discussion: Implications and Limitations
+
+#### Red-Teaming Results: Identifying Failure Modes
+
+<!-- Present results from systematic attempts to find weaknesses in the approach, including data biases, model limitations, and inference failures. Discuss implications for the reliability of the system's outputs. -->
+
+#### Enhancing Epistemic Security in AI Governance
+
+<!-- Analyze how formal modeling can improve the quality of discourse in AI governance by making assumptions explicit, clarifying disagreements, and highlighting critical uncertainties. -->
+
+#### Scaling Challenges and Opportunities
+
+<!-- Discuss both technical and organizational challenges to scaling the approach, including computational requirements, data quality issues, and coordination mechanisms. Identify opportunities for further development. -->
+
+#### Integration with Existing Governance Frameworks
+
+<!-- Examine how the modeling approach could complement existing AI governance initiatives, including technical standards, regulatory frameworks, and international coordination mechanisms. -->
+
+#### Known Unknowns and Deep Uncertainties
+
+<!-- Acknowledge fundamental limitations of the approach, particularly regarding novel or unprecedented developments in AI that might fall outside the model's structure. Discuss strategies for maintaining model relevance despite deep uncertainty. -->

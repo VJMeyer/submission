@@ -6,7 +6,7 @@ numbering:
   level: 1         # Chapter level
 ---
 
-## Introduction
+
 ```
 10% of Grade:
 
@@ -17,6 +17,19 @@ numbering:
 
 \~ 14% of text \~ 4200 words
 ```
+
+
+## Abstract
+
+<!-- A concise overview highlighting the project's integration of frontier AI, Bayesian networks, and prediction markets to create a scalable framework for evaluating AI governance policies.
+Emphasize both technical contributions and policy relevance. -->
+
+
+
+
+
+
+
 
 
 -   introduces and motivates the core question or problem
@@ -120,6 +133,23 @@ Visual Aid:
 
 -   A diagram illustrating how each component amplifies the others, leading to greater overall impact.
 
-## 
+### The Coordination Crisis in AI Governance
+
+<!-- Frame the problem as one of coordination failure rather than merely technical challenge. Highlight how even with substantial resources and attention, AI governance efforts remain fragmented and inefficient due to lack of systematic modeling approaches. -->
+
+### 1.2 Research Question and Scope
+
+<!-- Primary research question: "Can frontier AI technologies be utilized to automate the modeling of transformative AI risks, enabling robust prediction of policy impacts?" Define boundaries of inquiry, focusing on formal modeling of existential risks from transformative AI. -->
+
+### 1.3 The Multiplicative Benefits Framework
+
+<!-- Establish the central thesis that the combination of (1) automated extraction, (2) prediction market integration, and (3) formal policy evaluation creates multiplicative rather than merely additive benefits for AI governance. This section sets up the theoretical foundation for the entire paper. -->
+
+### 1.4 From Theory to Practice: A Roadmap
+
+<!-- Preview the paper's structure, explaining how each section builds toward a practical implementation of the framework. Emphasize both theoretical rigor and practical utility. -->
+
+
 
 ## Overview / Table of Contents
+

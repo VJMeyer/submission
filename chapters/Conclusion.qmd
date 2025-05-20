@@ -58,7 +58,7 @@ Prioritize interventions that significantly reduce risks.
 
 * Influence global AI governance.
 
-  ### Limitations of the Analysis
+### Limitations of the Analysis
 
 ### Policy Implications & Recommendations
 
@@ -80,3 +80,25 @@ Prioritize interventions that significantly reduce risks.
 <!-- ## List of Figures {.lof} -->
 
 ### Outlook — Outlook & Next Steps / Further Research
+
+## Conclusion: Toward an Adaptive AI Governance Framework
+
+### Key Contributions and Findings
+
+<!-- Summarize the project's main contributions to both the technical understanding of AI risk modeling and the practical implementation of policy evaluation tools. -->
+
+### Limitations of the Current Implementation
+
+<!-- Acknowledge specific limitations of the current system, distinguishing between fundamental constraints and opportunities for improvement in future work. -->
+
+### Policy Implications and Recommendations
+
+<!-- Draw out concrete implications for AI governance, highlighting how formal modeling can inform policy development, implementation, and evaluation. -->
+
+### Future Research Directions
+
+<!-- Outline promising directions for future work, including technical enhancements, expanded applications, and deeper integration with governance processes. -->
+
+### Concluding Reflections
+
+<!-- Close with broader reflections on the role of formal modeling in addressing complex governance challenges, particularly under conditions of deep uncertainty and rapid technological change. -->

@@ -1,28 +1,20 @@
 
 ## Implementation
 
-#### System Architecture and Data Flow
-
-<!-- Present the overall architecture of AMTAIR, showing how different components interact.
-Explain the data pipeline from extraction through modeling to visualization and policy evaluation. -->
-
-#### Automated Extraction Pipeline
-
+System Architecture and Data Flow
+<!-- Present the overall architecture of the P(Doom) calculator, showing how different components interact. Explain the data pipeline from extraction through modeling to visualization and policy evaluation. -->
+Automated Extraction Pipeline
 <!-- Detail the implementation of the automated extraction system, including LLM prompt design, validation procedures, and performance metrics. Provide specific examples showing the transition from text to formal model. -->
 
-#### Network Construction and Visualization
+Network Construction and Visualization
 
 <!-- Describe the implementation of the DAG construction and visualization components, explaining both the mathematical representation and the user interface design considerations. -->
 
-#### Probabilistic Inference Engine
+Probabilistic Inference Engine
 
 <!-- Present the implementation of the inference engine, with particular attention to handling complex networks efficiently. Discuss optimization techniques and computational constraints. -->
 
-#### Prediction Market Integration Module
-
+Prediction Market Integration Module
 <!-- Detail the implementation of connections to prediction markets and forecasting platforms, including API interactions, data processing, and update mechanisms. -->
-
-
-#### Policy Evaluation Interface
-
+4.6 Policy Evaluation Interface
 <!-- Describe the interface for policy evaluation, showing how users can define interventions, set conditions, and analyze outcomes. Explain design choices that enhance interpretability and usability. -->

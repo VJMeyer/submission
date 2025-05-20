@@ -65,6 +65,43 @@ MAD		Mutually Assured Destruction
 * **Monte Carlo sampling**: A computational technique using random sampling to obtain numerical results
 
 
+## Checklists <!-- [ ] Final Checklists -->
+
+## “Usual paper requirements”
+
+* introduce all terminology  
+  - go through text, make sure all terms are defined, explained (and added to the list of Abbr.) when first mentioned  
+* readership is intelligent and interested but has no prior knowledge
+
+## 
+
+## (Format:) \~ Anything that makes it easier to understand
+
+- short sentences  
+- paragraphs (one idea per paragraph)  
+- simplicity  
+- \!limit use of passive voice\!  
+- use active voice, even prefer I over we\!  
+- minimise use of “zombi nouns” (don’t turn verbs/adjectives to nouns\!)  
+- “find words that can be cut”
+
+– the paper can **focus** on **one aspect of the presentation**
+
+– “open door policy” for (content) questions
+
+\~ demonstrate ability for novel research
+
+– “solve research question with the tools accessible to you”
+
+– “show something that has not been shown before / should be publishable in principle”
+
+– new idea (or criticism) “in this field” 
+
+– Outline idea THEN reading with a purpose (answering concrete questions)
+
+– “Only” confirm that nobody has published the exact same idea on the same topic
+
+– pretty much determined by presentation & proposal but narrow down further (& choose supervisor?)
 
 
 

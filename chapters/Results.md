@@ -1,5 +1,25 @@
 
-## Results
+## Results: From Theory to Application
+
+#### Extraction Quality Assessment
+
+<!-- Present results comparing automated extraction to manual expert annotation, analyzing precision, recall, and F1 scores for different types of content (entities, relationships, probabilities). Discuss strengths and limitations of the automated approach. -->
+
+#### Computational Performance Analysis
+<!-- Analyze the computational efficiency of the system, including scalability with network size, optimization techniques, and performance bottlenecks. Present benchmark results for networks of varying complexity. -->
+
+#### Case Study: The Carlsmith Model Formalized
+
+<!-- Demonstrate the system's capabilities by presenting a full formalization of Carlsmith's model, showing how the automated system captures the key premises, conditional dependencies, and probabilistic judgments. -->
+
+#### Comparative Analysis of AI Governance Worldviews
+
+<!-- Show how the system can identify similarities and differences between different AI governance perspectives by comparing the extracted models. Highlight areas of consensus and disagreement across the field. -->
+
+#### Policy Impact Evaluation: Proof of Concept
+
+<!-- Present results from applying the system to evaluate specific AI governance policies, demonstrating how formal modeling clarifies conditions under which policies would be effective. Include sensitivity analyses showing robustness of conclusions. -->
+
 
 TestText
 
