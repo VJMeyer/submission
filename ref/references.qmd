@@ -62,7 +62,7 @@ Also code blocks for more extensive notes and ideas to be included and checklist
 
 ```
 
-> Blockquote formatting for "Citations / Things to reference"
+> Blockquote formatting for "Suggested Citations (e.g. carlsmith 2024 on ...)" and/or claims which require a citation (e.g. claim x should be backed-up by a ciation from the literature)
 
 
 
