@@ -424,7 +424,7 @@
     "href": "chapters/Frontmatter.html#sec-heading",
     "title": "Frontmatter",
     "section": "Headings & Potential Headings",
-    "text": "Headings & Potential Headings\n\n\nverbatim code formatting for notes and ideas to be included (here)\nAlso code blocks for more extensive notes and ideas to be included (here)\n- test 1. \n- test 2. \n- test 3.\n2. second\n3. third\n\n\nBlockquote formatting for “Citations / Things to reference”\n\nHere is an inline note.1\nHere is a footnote reference,2\nHere’s some raw inline HTML: html\npage 1\n\npage 2\n\n\n\n\n\nflowchart LR\n  A[Hard edge] --&gt; B(Round edge)\n  B --&gt; C{Decision}\n  C --&gt; D[Result one]\n  C --&gt; E[Result two]\n\n\n\n\n\n\nTesting crossreferencing grapics Figure 2.1.\nReferencing Sections \\(\\ref{sec-citations}\\).\nheadings as (Headings & Potential Headings).",
+    "text": "Headings & Potential Headings\n\n\nverbatim code formatting for notes and ideas to be included (here)\nAlso code blocks for more extensive notes and ideas to be included (here)\n- test 1. \n- test 2. \n- test 3.\n2. second\n3. third\n\n\nBlockquote formatting for “Citations / Things to reference”\n\nHere is an inline note.1\nHere is a footnote reference,2\nHere’s some raw inline HTML: html\npage 1\n\npage 2\n\n\n\n\n\nflowchart LR\n  A[Hard edge] --&gt; B(Round edge)\n  B --&gt; C{Decision}\n  C --&gt; D[Result one]\n  C --&gt; E[Result two]\n\n\n\n\n\n\nTesting crossreferencing grapics Figure 2.1.",
     "crumbs": [
       "Frontmatter"
     ]
@@ -434,7 +434,7 @@
     "href": "chapters/Frontmatter.html#sec-citations",
     "title": "Frontmatter",
     "section": "Citations",
-    "text": "Citations\n(Knuth 1984)\nAdams (1996) \n(Adams 1996)\nBlah Blah (see Knuth 1984, 33–35; also Growiec 2024, chap. 1)\nBlah Blah (Knuth 1984, 33–35, 38–39 and passim)\nBlah Blah (Growiec 2024; Knuth 1984).\nWickham says blah (2024)\n\nQuarto Features Incompatible with LaTeX (Below)\n\n\n\n\n\nKey insight: This concept connects to X theory",
+    "text": "Citations\nAdams (1996) \n(Adams 1996) and (Knuth 1984)\nBlah Blah (see Knuth 1984, 33–35; also Growiec 2024, chap. 1)\nBlah Blah (Knuth 1984, 33–35, 38–39 and passim)\nBlah Blah (Growiec 2024; Knuth 1984).\nWickham says blah (2024)\n\nQuarto Features Incompatible with LaTeX (Below)\n\n\n\n\n\n\nKey insight: This concept connects to X theory",
     "crumbs": [
       "Frontmatter"
     ]

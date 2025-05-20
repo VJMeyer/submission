@@ -15,6 +15,11 @@ project:
   type: book
   output-dir: _outputs/book
 
+# Add this section to use our custom filter
+# filters:
+#   - _extensions/crossref-bridge.lua
+
+
 execute:
   freeze: auto
 
@@ -80,10 +85,8 @@ format:
     number-sections: true
   #  crossref:
   #    sec-prefix: "Section"
-    cite-method: citeproc
+  #  cite-method: citeproc
   pdf:
-    #documentclass: scrreprt  # Try this KOMA-Script class that works in your test
-    #cite-method: citeproc    # Try the default instead of biblatex temporarily
     documentclass: book
     geometry: margin=1in
     template: latex/template.tex

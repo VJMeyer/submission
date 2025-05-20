@@ -93,35 +93,6 @@ div.csl-indent {
 <link href="../site_libs/quarto-diagram/mermaid.css" rel="stylesheet">
 <script src="https://hypothes.is/embed.js" async=""></script>
 
-  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
-  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
-
-<script type="text/javascript">
-const typesetMath = (el) => {
-  if (window.MathJax) {
-    // MathJax Typeset
-    window.MathJax.typeset([el]);
-  } else if (window.katex) {
-    // KaTeX Render
-    var mathElements = el.getElementsByClassName("math");
-    var macros = [];
-    for (var i = 0; i < mathElements.length; i++) {
-      var texText = mathElements[i].firstChild;
-      if (mathElements[i].tagName == "SPAN") {
-        window.katex.render(texText.data, mathElements[i], {
-          displayMode: mathElements[i].classList.contains('display'),
-          throwOnError: false,
-          macros: macros,
-          fleqn: false
-        });
-      }
-    }
-  }
-}
-window.Quarto = {
-  typesetMath
-};
-</script>
 
 </head>
 
@@ -430,21 +401,26 @@ window.Quarto = {
 </div>
 </div>
 <p>Testing crossreferencing grapics <a href="Context.html#fig-automation_pipeline" class="quarto-xref">Figure&nbsp;<span>2.1</span></a>.</p>
-<p>Referencing Sections <span class="math inline">\(\ref{sec-citations}\)</span>.</p>
-<p>headings as (<a href="#sec-heading" class="quarto-xref"><span>Headings &amp; Potential Headings</span></a>).</p>
 </section>
 <section id="sec-citations" class="level2 unnumbered unlisted">
 <h2 class="unnumbered unlisted anchored" data-anchor-id="sec-citations">Citations</h2>
-<p><span class="citation" data-cites="knuth84">(<a href="../ref/references.html#ref-knuth84" role="doc-biblioref">Knuth 1984</a>)</span></p>
 <p><span class="citation" data-cites="adamsFourProbabilitypreservingProperties1996">Adams (<a href="../ref/references.html#ref-adamsFourProbabilitypreservingProperties1996" role="doc-biblioref">1996</a>)</span> <!-- preferred because it works with both html, latex and pdf --></p>
-<p><span class="citation" data-cites="adamsFourProbabilitypreservingProperties1996">(<a href="../ref/references.html#ref-adamsFourProbabilitypreservingProperties1996" role="doc-biblioref">Adams 1996</a>)</span></p>
+<p><span class="citation" data-cites="adamsFourProbabilitypreservingProperties1996">(<a href="../ref/references.html#ref-adamsFourProbabilitypreservingProperties1996" role="doc-biblioref">Adams 1996</a>)</span> and <span class="citation" data-cites="knuth84">(<a href="../ref/references.html#ref-knuth84" role="doc-biblioref">Knuth 1984</a>)</span></p>
 <p>Blah Blah <span class="citation" data-cites="knuth84 growiecExistentialRiskTransformative2024a">(see <a href="../ref/references.html#ref-knuth84" role="doc-biblioref">Knuth 1984, 33–35</a>; also <a href="../ref/references.html#ref-growiecExistentialRiskTransformative2024a" role="doc-biblioref">Growiec 2024, chap. 1</a>)</span></p>
 <p>Blah Blah <span class="citation" data-cites="knuth84">(<a href="../ref/references.html#ref-knuth84" role="doc-biblioref">Knuth 1984, 33–35, 38–39</a> and passim)</span></p>
 <p>Blah Blah <span class="citation" data-cites="growiecExistentialRiskTransformative2024a knuth84">(<a href="../ref/references.html#ref-growiecExistentialRiskTransformative2024a" role="doc-biblioref">Growiec 2024</a>; <a href="../ref/references.html#ref-knuth84" role="doc-biblioref">Knuth 1984</a>)</span>.</p>
 <p>Wickham says blah <span class="citation" data-cites="growiecExistentialRiskTransformative2024a">(<a href="../ref/references.html#ref-growiecExistentialRiskTransformative2024a" role="doc-biblioref">2024</a>)</span></p>
 <section id="quarto-features-incompatible-with-latex-below" class="level3 unnumbered unlisted">
 <h3 class="unnumbered unlisted anchored" data-anchor-id="quarto-features-incompatible-with-latex-below">Quarto Features Incompatible with LaTeX (Below)</h3>
+<!-- [ ] Trouble shoot and fix referencing sections -->
 <!-- 
+
+Referencing Sections \ref{sec-citations}. Works in PDF.
+
+headings as [@sec-heading]. Works in html
+
+
+
 
 Here is a second footnote reference,[^1] and another.
 

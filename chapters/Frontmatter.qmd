@@ -131,19 +131,18 @@ flowchart LR
 
 Testing crossreferencing grapics @fig-automation_pipeline.
 
-Referencing Sections \ref{sec-citations}.
 
-headings as (@sec-heading).
 
 
 
 ## Citations {#sec-citations .unnumbered .unlisted}
 
-[@knuth84]
+
 
 @adamsFourProbabilitypreservingProperties1996 <!-- preferred because it works with both html, latex and pdf -->
 
-[@adamsFourProbabilitypreservingProperties1996]
+[@adamsFourProbabilitypreservingProperties1996] and [@knuth84]
+
 
 Blah Blah [see @knuth84, pp. 33-35;
 also @growiecExistentialRiskTransformative2024a, chap. 1]
@@ -157,8 +156,15 @@ Wickham says blah [-@growiecExistentialRiskTransformative2024a]
 
 ### Quarto Features Incompatible with LaTeX (Below) {.unnumbered .unlisted}
 
-
+<!-- [ ] Trouble shoot and fix referencing sections -->
 <!-- 
+
+Referencing Sections \ref{sec-citations}. Works in PDF.
+
+headings as [@sec-heading]. Works in html
+
+
+
 
 Here is a second footnote reference,[^1] and another.
 
