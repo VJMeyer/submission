@@ -67,7 +67,7 @@ MAD		Mutually Assured Destruction
 
 
 
-# Headings & Potential Headings {#sec-heading}
+## Headings & Potential Headings {#sec-heading}
 
 Notes
 
