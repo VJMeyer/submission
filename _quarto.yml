@@ -72,11 +72,12 @@ format:
     site-path: /
     self-contained: false
     number-sections: true
+    cite-method: citeproc
   pdf:
     documentclass: book
     geometry: margin=1in
     template: latex/template.tex
-  #  include-in-header: latex/preamble.tex
+    include-in-header: latex/preamble.tex
     keep-tex: true
     toc: true
     lof: true
@@ -84,7 +85,38 @@ format:
     include-after-body: latex/affidavit.tex
     output-file: thesis-book.pdf
     cite-method: biblatex
-    biblio-title: Bibliography    	
+    biblio-title: Bibliography
+    crossref:
+      sec-prefix: "Section"
+  #   documentclass: book
+  #   crossref:
+  #     sec-prefix: "Section"
+  #   include-in-header: 
+  #     text: |
+  #       \usepackage{cleveref}
+  #       \crefformat{section}{#2Section~#1#3}
+  #       \usepackage{etoolbox}
+  #       \makeatletter
+  #       \patchcmd{\@sect}
+  #         {\addcontentsline{toc}{#1}{\ifnum #2>\c@secnumdepth \else
+  #            \protect\numberline{\csname the#1\endcsname}\fi
+  #            #8}}
+  #         {\ifx\@nodistcall\relax\addcontentsline{toc}{#1}{\ifnum #2>\c@secnumdepth \else
+  #            \protect\numberline{\csname the#1\endcsname}\fi
+  #            #8}\fi}
+  #         {}{}
+  #       \makeatother
+  #   geometry: margin=1in
+  #   template: latex/template.tex
+  # #  include-in-header: latex/preamble.tex
+  #   keep-tex: true
+  #   toc: true
+  #   lof: true
+  #   pdf-engine: xelatex
+  #   include-after-body: latex/affidavit.tex
+  #   output-file: thesis-book.pdf
+  #   cite-method: biblatex
+  # #  biblio-title: Bibliography    	
   latex:
     documentclass: book
     include-in-header: latex/preamble.tex

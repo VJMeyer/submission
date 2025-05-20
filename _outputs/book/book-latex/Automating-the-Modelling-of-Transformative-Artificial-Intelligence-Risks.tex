@@ -148,9 +148,30 @@
 \usepackage{hyperref}
 \usepackage{setspace}
 \usepackage{microtype}
+\usepackage{cleveref}
+
+% Callout support
+\usepackage{tcolorbox}
+\tcbuselibrary{skins,breakable}
 
 % Better typography
 \usepackage[protrusion=true,expansion=true]{microtype}
+
+% Callout alternative using mdframed
+\usepackage{mdframed}
+\usepackage{xcolor}
+
+\newenvironment{calloutNote}
+  {\begin{mdframed}[backgroundcolor=blue!5,linecolor=blue!75!black,leftmargin=2mm,rightmargin=2mm]}
+  {\end{mdframed}}
+
+\newenvironment{calloutTip}
+  {\begin{mdframed}[backgroundcolor=green!5,linecolor=green!75!black,leftmargin=2mm,rightmargin=2mm]}
+  {\end{mdframed}}
+
+\newenvironment{calloutWarning}
+  {\begin{mdframed}[backgroundcolor=orange!5,linecolor=orange!75!black,leftmargin=2mm,rightmargin=2mm]}
+  {\end{mdframed}}
 
 % Spacing
 \onehalfspacing
@@ -162,14 +183,113 @@
 \fancyhead[LO,RE]{\slshape\nouppercase{\leftmark}}
 \fancyfoot[C]{\thepage}
 
+% Cross-reference configuration
+\crefformat{section}{Section~#2#1#3}
+\crefformat{figure}{Figure~#2#1#3}
+\crefformat{table}{Table~#2#1#3}
+
 % Custom commands for the affidavit
 \newcommand{\titel}{Automating the Modelling of Transformative Artificial Intelligence Risks}
 \newcommand{\autor}{Valentin Jakob Meyer}
-\newcommand{\myformat}{\today}  % Or define this to format the date as you prefer
+\newcommand{\myformat}{\today}
 
 % Custom commands for the affidavit
 \newcommand{\thesistitle}{Automating the Modelling of Transformative Artificial Intelligence Risks}
 \newcommand{\thesisauthor}{Valentin Jakob Meyer}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+% % Required packages
+% \usepackage{graphicx}
+% \usepackage{geometry}
+% \usepackage{fancyhdr}
+% \usepackage{titling}
+% \usepackage{array}
+% \usepackage{booktabs}
+% \usepackage{xcolor}
+% \usepackage{hyperref}
+% \usepackage{setspace}
+% \usepackage{microtype}
+% \usepackage{tcolorbox}
+% \tcbuselibrary{skins,breakable}
+% \usepackage{etoolbox}
+% \usepackage{cleveref}
+
+% % Better typography
+% \usepackage[protrusion=true,expansion=true]{microtype}
+
+% % Spacing
+% \onehalfspacing
+
+% % Header and footer styling
+% \pagestyle{fancy}
+% \fancyhf{}
+% \fancyhead[LE,RO]{\slshape\nouppercase{\rightmark}}
+% \fancyhead[LO,RE]{\slshape\nouppercase{\leftmark}}
+% \fancyfoot[C]{\thepage}
+
+% % Custom commands for the affidavit
+% \newcommand{\titel}{Automating the Modelling of Transformative Artificial Intelligence Risks}
+% \newcommand{\autor}{Valentin Jakob Meyer}
+% \newcommand{\myformat}{\today}  % Or define this to format the date as you prefer
+
+% % Custom commands for the affidavit
+% \newcommand{\thesistitle}{Automating the Modelling of Transformative Artificial Intelligence Risks}
+% \newcommand{\thesisauthor}{Valentin Jakob Meyer}
+
+
+% % Callout box styles
+% \newtcolorbox{calloutNote}[1][]{
+%   enhanced,
+%   colback=blue!5!white,
+%   colframe=blue!75!black,
+%   title=Note,
+%   fonttitle=\bfseries,
+%   #1
+% }
+
+% \newtcolorbox{calloutTip}[1][]{
+%   enhanced,
+%   colback=green!5!white,
+%   colframe=green!75!black,
+%   title=Tip,
+%   fonttitle=\bfseries,
+%   #1
+% }
+
+% \newtcolorbox{calloutWarning}[1][]{
+%   enhanced,
+%   colback=orange!5!white,
+%   colframe=orange!75!black,
+%   title=Warning,
+%   fonttitle=\bfseries,
+%   #1
+% }
 \makeatletter
 \@ifpackageloaded{bookmark}{}{\usepackage{bookmark}}
 \makeatother
@@ -1135,6 +1255,17 @@ Notes
 
 Ideas
 
+\begin{quote}
+\textbf{Key insight:} This concept connects to X theory
+\end{quote}
+
+\section*{Implementation Details}\label{sec-amtair-impl}
+\addcontentsline{toc}{section}{Implementation Details}
+
+\markright{Implementation Details}
+
+The extraction process consists of three main stages\ldots{}
+
 Citations / Things to reference
 
 \texttt{verbatim\ code}
@@ -1167,12 +1298,11 @@ page 2
 
 Testing crossreferencing grapics Figure~\ref{fig-automation_pipeline}.
 
-Referencing Sections \textbf{?@sec-citations}.
+Referencing Sections \ref{sec-citations}.
 
-headings as \textbf{?@sec-heading}.
+headings as (\textbf{?@sec-heading}).
 
 \section*{Citations}\label{sec-citations}
-\addcontentsline{toc}{section}{Citations}
 
 \markright{Citations}
 
@@ -1181,6 +1311,14 @@ headings as \textbf{?@sec-heading}.
 Adams (1996)
 
 (Adams 1996)
+
+Blah Blah (see Knuth 1984, 33--35; also Growiec 2024, chap. 1)
+
+Blah Blah (Knuth 1984, 33--35, 38--39 and passim)
+
+Blah Blah (Growiec 2024; Knuth 1984).
+
+Wickham says blah (2024)
 
 \subsection*{Quarto Features Incompatible with LaTeX
 (Below)}\label{quarto-features-incompatible-with-latex-below}
@@ -1197,6 +1335,12 @@ Adams (1996)
 \bibitem[\citeproctext]{ref-adamsFourProbabilitypreservingProperties1996}
 Adams, Ernest W. 1996. {``Four Probability-Preserving Properties of
 Inferences.''} \emph{Journal of Philosophical Logic} 25: 1--24.
+
+\bibitem[\citeproctext]{ref-growiecExistentialRiskTransformative2024a}
+Growiec, Jakub. 2024. {``Existential Risk from Transformative {AI}: An
+Economic Perspective.''} \emph{Technological and Economic Development of
+Economy} 30 (6): 1682--1708.
+\url{https://doi.org/10.3846/tede.2024.21525}.
 
 \bibitem[\citeproctext]{ref-knuth84}
 Knuth, Donald E. 1984. {``Literate Programming.''} \emph{Computer

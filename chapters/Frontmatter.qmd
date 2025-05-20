@@ -73,6 +73,30 @@ Notes
 
 Ideas
 
+
+<!-- Preliminary notes -->
+> **Key insight:** This concept connects to X theory
+
+<!-- Research to explore -->
+<!-- - [ ] Investigate connection between X and Y
+- [ ] Find supporting evidence for claim Z -->
+
+
+
+## Implementation Details {#sec-amtair-impl}
+
+<!-- TODO: Add diagram of extraction pipeline here -->
+
+The extraction process consists of three main stages...
+
+<!-- :::note
+Remember to connect this back to the research question
+::: -->
+
+
+
+
+
 Citations / Things to reference
 
 <!-- Comments -->
@@ -87,7 +111,10 @@ Citations / Things to reference
 
 > Blockquote
 
-
+<!-- ::: {.callout-note}
+## Optional Title
+Content here
+::: -->
 
 
 Here is an inline note.^[Inlines notes are easier to write,
@@ -129,22 +156,29 @@ flowchart LR
 
 Testing crossreferencing grapics @fig-automation_pipeline.
 
-Referencing Sections @sec-citations.
+Referencing Sections \ref{sec-citations}.
 
-headings as @sec-heading.
+headings as (@sec-heading).
 
 
 
-## Citations {#sec-citations}
+## Citations {#sec-citations .unnumbered .unlisted}
 
 [@knuth84]
 
-@adamsFourProbabilitypreservingProperties1996
-
+@adamsFourProbabilitypreservingProperties1996 <!-- preferred because it works with both html, latex and pdf -->
 
 [@adamsFourProbabilitypreservingProperties1996]
 
+Blah Blah [see @knuth84, pp. 33-35;
+also @growiecExistentialRiskTransformative2024a, chap. 1]
 
+Blah Blah [@knuth84, pp. 33-35,
+38-39 and passim]
+
+Blah Blah [@growiecExistentialRiskTransformative2024a; @knuth84].
+
+Wickham says blah [-@growiecExistentialRiskTransformative2024a]
 
 ### Quarto Features Incompatible with LaTeX (Below) {.unnumbered .unlisted}
 

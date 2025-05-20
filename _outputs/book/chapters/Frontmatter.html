@@ -93,6 +93,35 @@ div.csl-indent {
 <link href="../site_libs/quarto-diagram/mermaid.css" rel="stylesheet">
 <script src="https://hypothes.is/embed.js" async=""></script>
 
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN") {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
 
 </head>
 
@@ -253,7 +282,7 @@ div.csl-indent {
   </ul></li>
   <li><a href="#sec-heading" id="toc-sec-heading" class="nav-link" data-scroll-target="#sec-heading">Headings &amp; Potential Headings</a>
   <ul>
-  <li><a href="#sec-citations" id="toc-sec-citations" class="nav-link" data-scroll-target="#sec-citations">Citations</a></li>
+  <li><a href="#sec-amtair-impl" id="toc-sec-amtair-impl" class="nav-link" data-scroll-target="#sec-amtair-impl">Implementation Details</a></li>
   </ul></li>
   </ul>
 <div class="toc-actions"><ul><li><a href="https://github.com/VJMeyer/submission/edit/main/chapters/Frontmatter.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li></ul></div></nav>
@@ -370,6 +399,20 @@ div.csl-indent {
 <h1>Headings &amp; Potential Headings</h1>
 <p>Notes</p>
 <p>Ideas</p>
+<!-- Preliminary notes -->
+<blockquote class="blockquote">
+<p><strong>Key insight:</strong> This concept connects to X theory</p>
+</blockquote>
+<!-- Research to explore -->
+<!-- - [ ] Investigate connection between X and Y
+- [ ] Find supporting evidence for claim Z -->
+<section id="sec-amtair-impl" class="level2">
+<h2 class="anchored" data-anchor-id="sec-amtair-impl">Implementation Details</h2>
+<!-- TODO: Add diagram of extraction pipeline here -->
+<p>The extraction process consists of three main stages…</p>
+<!-- :::note
+Remember to connect this back to the research question
+::: -->
 <p>Citations / Things to reference</p>
 <!-- Comments -->
 <!-- [ ] ToDos-->
@@ -377,6 +420,10 @@ div.csl-indent {
 <blockquote class="blockquote">
 <p>Blockquote</p>
 </blockquote>
+<!-- ::: {.callout-note}
+## Optional Title
+Content here
+::: -->
 <p>Here is an inline note.<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a></p>
 <p>Here is a footnote reference,<a href="#fn2" class="footnote-ref" id="fnref2" role="doc-noteref"><sup>2</sup></a></p>
 <pre><code>code</code></pre>
@@ -401,13 +448,18 @@ div.csl-indent {
 </div>
 </div>
 <p>Testing crossreferencing grapics <a href="Context.html#fig-automation_pipeline" class="quarto-xref">Figure&nbsp;<span>2.1</span></a>.</p>
-<p>Referencing Sections <a href="#sec-citations" class="quarto-xref"><span>Citations</span></a>.</p>
-<p>headings as <a href="#sec-heading" class="quarto-xref"><span>Headings &amp; Potential Headings</span></a>.</p>
-<section id="sec-citations" class="level2">
-<h2 class="anchored" data-anchor-id="sec-citations">Citations</h2>
+<p>Referencing Sections <span class="math inline">\(\ref{sec-citations}\)</span>.</p>
+<p>headings as (<a href="#sec-heading" class="quarto-xref"><span>Headings &amp; Potential Headings</span></a>).</p>
+</section>
+<section id="sec-citations" class="level2 unnumbered unlisted">
+<h2 class="unnumbered unlisted anchored" data-anchor-id="sec-citations">Citations</h2>
 <p><span class="citation" data-cites="knuth84">(<a href="../ref/references.html#ref-knuth84" role="doc-biblioref">Knuth 1984</a>)</span></p>
-<p><span class="citation" data-cites="adamsFourProbabilitypreservingProperties1996">Adams (<a href="../ref/references.html#ref-adamsFourProbabilitypreservingProperties1996" role="doc-biblioref">1996</a>)</span></p>
+<p><span class="citation" data-cites="adamsFourProbabilitypreservingProperties1996">Adams (<a href="../ref/references.html#ref-adamsFourProbabilitypreservingProperties1996" role="doc-biblioref">1996</a>)</span> <!-- preferred because it works with both html, latex and pdf --></p>
 <p><span class="citation" data-cites="adamsFourProbabilitypreservingProperties1996">(<a href="../ref/references.html#ref-adamsFourProbabilitypreservingProperties1996" role="doc-biblioref">Adams 1996</a>)</span></p>
+<p>Blah Blah <span class="citation" data-cites="knuth84 growiecExistentialRiskTransformative2024a">(see <a href="../ref/references.html#ref-knuth84" role="doc-biblioref">Knuth 1984, 33–35</a>; also <a href="../ref/references.html#ref-growiecExistentialRiskTransformative2024a" role="doc-biblioref">Growiec 2024, chap. 1</a>)</span></p>
+<p>Blah Blah <span class="citation" data-cites="knuth84">(<a href="../ref/references.html#ref-knuth84" role="doc-biblioref">Knuth 1984, 33–35, 38–39</a> and passim)</span></p>
+<p>Blah Blah <span class="citation" data-cites="growiecExistentialRiskTransformative2024a knuth84">(<a href="../ref/references.html#ref-growiecExistentialRiskTransformative2024a" role="doc-biblioref">Growiec 2024</a>; <a href="../ref/references.html#ref-knuth84" role="doc-biblioref">Knuth 1984</a>)</span>.</p>
+<p>Wickham says blah <span class="citation" data-cites="growiecExistentialRiskTransformative2024a">(<a href="../ref/references.html#ref-growiecExistentialRiskTransformative2024a" role="doc-biblioref">2024</a>)</span></p>
 <section id="quarto-features-incompatible-with-latex-below" class="level3 unnumbered unlisted">
 <h3 class="unnumbered unlisted anchored" data-anchor-id="quarto-features-incompatible-with-latex-below">Quarto Features Incompatible with LaTeX (Below)</h3>
 <!-- 
@@ -446,6 +498,9 @@ $$
 <div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" role="list" style="display: none">
 <div id="ref-adamsFourProbabilitypreservingProperties1996" class="csl-entry" role="listitem">
 Adams, Ernest W. 1996. <span>“Four Probability-Preserving Properties of Inferences.”</span> <em>Journal of Philosophical Logic</em> 25: 1–24.
+</div>
+<div id="ref-growiecExistentialRiskTransformative2024a" class="csl-entry" role="listitem">
+Growiec, Jakub. 2024. <span>“Existential Risk from Transformative <span>AI</span>: An Economic Perspective.”</span> <em>Technological and Economic Development of Economy</em> 30 (6): 1682–1708. <a href="https://doi.org/10.3846/tede.2024.21525">https://doi.org/10.3846/tede.2024.21525</a>.
 </div>
 <div id="ref-knuth84" class="csl-entry" role="listitem">
 Knuth, Donald E. 1984. <span>“Literate Programming.”</span> <em>Computer Journal</em> 27 (2): 97–111. <a href="https://doi.org/10.1093/comjnl/27.2.97">https://doi.org/10.1093/comjnl/27.2.97</a>.
