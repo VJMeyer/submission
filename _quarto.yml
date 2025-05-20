@@ -18,6 +18,12 @@ project:
 execute:
   freeze: auto
 
+# crossref:
+#   sec-prefix: "Section"
+#   fig-prefix: "Figure"
+#   tbl-prefix: "Table"
+#   ref-hyperlink: true
+
 book:
   title: "Automating the Modelling of Transformative Artificial Intelligence Risks"
   author: "Valentin Jakob Meyer"
@@ -72,8 +78,12 @@ format:
     site-path: /
     self-contained: false
     number-sections: true
+  #  crossref:
+  #    sec-prefix: "Section"
     cite-method: citeproc
   pdf:
+    #documentclass: scrreprt  # Try this KOMA-Script class that works in your test
+    #cite-method: citeproc    # Try the default instead of biblatex temporarily
     documentclass: book
     geometry: margin=1in
     template: latex/template.tex
@@ -86,8 +96,8 @@ format:
     output-file: thesis-book.pdf
     cite-method: biblatex
     biblio-title: Bibliography
-    crossref:
-      sec-prefix: "Section"
+  #  crossref:
+  #    sec-prefix: "Section"
   #   documentclass: book
   #   crossref:
   #     sec-prefix: "Section"
