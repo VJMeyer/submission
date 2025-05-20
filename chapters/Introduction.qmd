@@ -6,8 +6,7 @@ numbering:
   level: 1         # Chapter level
 ---
 
-
-```
+```         
 10% of Grade:
 
 -   introduces and motivates the core question or problem
@@ -18,19 +17,12 @@ numbering:
 \~ 14% of text \~ 4200 words
 ```
 
-
 ## Abstract
 
+```{=html}
 <!-- A concise overview highlighting the project's integration of frontier AI, Bayesian networks, and prediction markets to create a scalable framework for evaluating AI governance policies.
 Emphasize both technical contributions and policy relevance. -->
-
-
-
-
-
-
-
-
+```
 
 -   introduces and motivates the core question or problem
 
@@ -149,7 +141,4 @@ Visual Aid:
 
 <!-- Preview the paper's structure, explaining how each section builds toward a practical implementation of the framework. Emphasize both theoretical rigor and practical utility. -->
 
-
-
 ## Overview / Table of Contents
-

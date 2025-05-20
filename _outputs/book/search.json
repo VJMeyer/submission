@@ -184,7 +184,7 @@
     "href": "chapters/Context.html#practical-real-world-examples",
     "title": "2  Context",
     "section": "2.5 Practical Real World Examples",
-    "text": "2.5 Practical Real World Examples\nMTAIR / Carlsmith Model (Analytica) — Explanation (— is motivation: should come first)\n\n2.5.0.1 Kialo\n\n\n2.5.0.2 Rain/Sprinkler/Lawn DAG\n\n\n2.5.0.3 BayeServer\n\n\n2.5.0.4 BayesNet — Extended Example\n\n\n2.5.0.5 Code + documentation\n\n\n\n\n\n\nFigure 2.1: AMTAIR Automation Pipeline\n\n\n\nTesting crossreferencing grapics Figure 2.1.",
+    "text": "2.5 Practical Real World Examples\nMTAIR / Carlsmith Model (Analytica) — Explanation (— is motivation: should come first)\n\n2.5.0.1 Kialo\n\n\n2.5.0.2 Rain/Sprinkler/Lawn DAG\n\n\n2.5.0.3 BayeServer\n\n\n2.5.0.4 BayesNet — Extended Example\n\n\n2.5.0.5 Code + documentation\n\n\n\n\n\n\nFigure 2.1: AMTAIR Automation Pipeline from CITATION\n\n\n\nTesting crossreferencing grapics Figure 6.1.",
     "crumbs": [
       "<span class='chapter-number'>2</span>  <span class='chapter-title'>Context</span>"
     ]
@@ -452,41 +452,51 @@
   {
     "objectID": "ref/references.html",
     "href": "ref/references.html",
-    "title": "Bibliography (References)",
+    "title": "6  Quarto Syntax",
     "section": "",
-    "text": "Headings & Potential Headings\nverbatim code formatting for notes and ideas to be included (here)\nHere is an inline note.1\nHere is a footnote reference,2\nHere’s some raw inline HTML: html\npage 1\npage 2\nflowchart LR\n  A[Hard edge] --&gt; B(Round edge)\n  B --&gt; C{Decision}\n  C --&gt; D[Result one]\n  C --&gt; E[Result two]\nTesting crossreferencing grapics Figure 2.1.",
+    "text": "Figures\nTesting crossreferencing grapics Figure 6.1.",
     "crumbs": [
-      "Bibliography (References)"
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Quarto Syntax</span>"
     ]
   },
   {
-    "objectID": "ref/references.html#sec-heading",
-    "href": "ref/references.html#sec-heading",
-    "title": "Bibliography (References)",
+    "objectID": "ref/references.html#sec-figues",
+    "href": "ref/references.html#sec-figues",
+    "title": "6  Quarto Syntax",
     "section": "",
-    "text": "Also code blocks for more extensive notes and ideas to be included and checklists\n- test 1. \n- test 2. \n- test 3.\n2. second\n3. third\n\n\nBlockquote formatting for “Citations / Things to reference”",
+    "text": "Figure 6.1: AMTAIR Automation Pipeline from Bucknall and Dori-Hacohen (2022)",
     "crumbs": [
-      "Bibliography (References)"
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Quarto Syntax</span>"
     ]
   },
   {
     "objectID": "ref/references.html#sec-citations",
     "href": "ref/references.html#sec-citations",
-    "title": "Bibliography (References)",
+    "title": "6  Quarto Syntax",
     "section": "Citations",
-    "text": "Citations\nAdams (1996) \n(Adams 1996) and (Knuth 1984)\nBlah Blah (see Knuth 1984, 33–35; also Growiec 2024, chap. 1)\nBlah Blah (Knuth 1984, 33–35, 38–39 and passim)\nBlah Blah (Growiec 2024; Knuth 1984).\nWickham says blah (2024)\n\n\nAdams, Ernest W. 1996. “Four Probability-Preserving Properties of\nInferences.” Journal of Philosophical Logic 25: 1–24.\n\n\nGrowiec, Jakub. 2024. “Existential Risk from Transformative\nAI: An Economic Perspective.” Technological and\nEconomic Development of Economy 30 (6): 1682–1708. https://doi.org/10.3846/tede.2024.21525.\n\n\nKnuth, Donald E. 1984. “Literate Programming.” Computer\nJournal 27 (2): 97–111. https://doi.org/10.1093/comjnl/27.2.97.",
+    "text": "Citations\nSoares and Fallenstein (2014) \n(Soares and Fallenstein 2014) and (Knuth 1984)\nBlah Blah (see Knuth 1984, 33–35; also Growiec 2024, chap. 1)\nBlah Blah (Knuth 1984, 33–35, 38–39 and passim)\nBlah Blah (Growiec 2024; Knuth 1984).\nWickham says blah (2024)",
     "crumbs": [
-      "Bibliography (References)"
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Quarto Syntax</span>"
+    ]
+  },
+  {
+    "objectID": "ref/references.html#sec-heading",
+    "href": "ref/references.html#sec-heading",
+    "title": "6  Quarto Syntax",
+    "section": "6.1 Headings & Potential Headings",
+    "text": "6.1 Headings & Potential Headings\n\n\nverbatim code formatting for notes and ideas to be included (here)\nAlso code blocks for more extensive notes and ideas to be included and checklists\n- test 1. \n- test 2. \n- test 3.\n2. second\n3. third\n\n\nBlockquote formatting for “Citations / Things to reference”\n\nHere is an inline note.1\nHere is a footnote reference,2\nHere’s some raw inline HTML: html\npage 1\n\npage 2\n\n\n\n\n\nflowchart LR\n  A[Hard edge] --&gt; B(Round edge)\n  B --&gt; C{Decision}\n  C --&gt; D[Result one]\n  C --&gt; E[Result two]\n\n\n\n\n\n\nTesting crossreferencing grapics Figure 6.1.",
+    "crumbs": [
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Quarto Syntax</span>"
     ]
   },
   {
     "objectID": "ref/references.html#footnotes",
     "href": "ref/references.html#footnotes",
-    "title": "Bibliography (References)",
+    "title": "6  Quarto Syntax",
     "section": "",
     "text": "Inlines notes are easier to write, since you don’t have to pick an identifier and move down to type the note.↩︎\nHere is the footnote.↩︎",
     "crumbs": [
-      "Bibliography (References)"
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Quarto Syntax</span>"
     ]
   },
   {

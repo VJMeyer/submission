@@ -1,4 +1,44 @@
-# Bibliography (References) {.unnumbered}
+# Quarto Syntax
+
+## Figures {#sec-figues .unnumbered .unlisted}
+
+
+[![AMTAIR Automation Pipeline from @bucknall2022](/images/pipeline.png){
+  #fig-automation_pipeline
+  fig-scap="Five-step AMTAIR automation pipeline from PDFs to Bayesian networks" 
+  fig-alt="FLOWCHART: Five-step automation pipeline workflow for AMTAIR project.
+          DATA: The pipeline transforms PDFs through ArgDown, BayesDown, CSV, and HTML into Bayesian network visualizations.
+          PURPOSE: Illustrates the core technical process that enables automated extraction of probabilistic models from AI safety literature.
+          DETAILS: Five numbered green steps show: (1) LLM-based extraction from PDFs to ArgDown, (2) ArgDown to BayesDown completion with probabilities, (3) Extracting world-models as CSV data, (4) Software tools for data inference, and (5) Visualization of the resulting Bayesian network.
+          Each step includes example outputs, with the final visualization showing a Rain-Sprinkler-Grass Wet Bayesian network with probability tables.
+          SOURCE: Created by the author to explain the AMTAIR methodology
+          "
+  fig-align="center" 
+  width="100%"
+  }](https://github.com/VJMeyer/submission)
+
+
+Testing crossreferencing grapics @fig-automation_pipeline.
+
+
+## Citations {#sec-citations .unnumbered .unlisted}
+
+
+
+@soares2014 <!-- preferred because it works with both html, latex and pdf -->
+
+[@soares2014] and [@knuth1984]
+
+
+Blah Blah [see @knuth1984, pp. 33-35; also @growiec2024a, chap. 1]
+
+Blah Blah [@knuth1984, pp. 33-35, 38-39 and passim]
+
+Blah Blah [@growiec2024a; @knuth1984].
+
+Wickham says blah [-@growiec2024a]
+
+
 
 ## Headings & Potential Headings {#sec-heading}
 
@@ -68,23 +108,8 @@ Testing crossreferencing grapics @fig-automation_pipeline.
 
 
 
-## Citations {#sec-citations .unnumbered .unlisted}
 
-
-
-@adamsFourProbabilitypreservingProperties1996 <!-- preferred because it works with both html, latex and pdf -->
-
-[@adamsFourProbabilitypreservingProperties1996] and [@knuth84]
-
-
-Blah Blah [see @knuth84, pp. 33-35; also @growiecExistentialRiskTransformative2024a, chap. 1]
-
-Blah Blah [@knuth84, pp. 33-35, 38-39 and passim]
-
-Blah Blah [@growiecExistentialRiskTransformative2024a; @knuth84].
-
-Wickham says blah [-@growiecExistentialRiskTransformative2024a]
-
+# Bibliography (References) {.unnumbered}
 
 ::: {#refs}
 :::

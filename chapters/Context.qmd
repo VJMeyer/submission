@@ -33,7 +33,7 @@ and 2. ground each with existing literature
 {{< include Methodology.md >}}
 
 
-[![AMTAIR Automation Pipeline](/images/pipeline.png){
+[![AMTAIR Automation Pipeline from CITATION](/images/pipeline.png){
   #fig-automation_pipeline
   fig-scap="Five-step AMTAIR automation pipeline from PDFs to Bayesian networks" 
   fig-alt="FLOWCHART: Five-step automation pipeline workflow for AMTAIR project.
