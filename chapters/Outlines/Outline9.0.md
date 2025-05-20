@@ -1,108 +1,112 @@
 # Automating Transformative AI Risk Modeling: A Computational Approach to Policy Impact Evaluation
 
-[Abstract](#abstract)
+**  
 
-[1\. Introduction: The AI Governance Challenge](#1.-introduction:-the-ai-governance-challenge)
+[Abstract](https://docs.google.com/document/d/1Zhq77iKPOcd2U19uw9RkD3tpuCw9kvRBfgggYWVvEhQ/edit?tab=t.qxzdryyvttav#heading=h.q6er6ecn688s)
 
-[1.1 The Coordination Crisis in AI Governance](#1.1-the-coordination-crisis-in-ai-governance)
+[1. Introduction: The AI Governance Challenge](https://docs.google.com/document/d/1Zhq77iKPOcd2U19uw9RkD3tpuCw9kvRBfgggYWVvEhQ/edit?tab=t.qxzdryyvttav#heading=h.kj7kfcoh0egh)
 
-[1.2 Research Question and Scope](#1.2-research-question-and-scope)
+[1.1 The Coordination Crisis in AI Governance](https://docs.google.com/document/d/1Zhq77iKPOcd2U19uw9RkD3tpuCw9kvRBfgggYWVvEhQ/edit?tab=t.qxzdryyvttav#heading=h.mucls1tqwdoe)
 
-[1.3 The Multiplicative Benefits Framework](#1.3-the-multiplicative-benefits-framework)
+[1.2 Research Question and Scope](https://docs.google.com/document/d/1Zhq77iKPOcd2U19uw9RkD3tpuCw9kvRBfgggYWVvEhQ/edit?tab=t.qxzdryyvttav#heading=h.ec38189w0n0o)
 
-[1.4 From Theory to Practice: A Roadmap](#1.4-from-theory-to-practice:-a-roadmap)
+[1.3 The Multiplicative Benefits Framework](https://docs.google.com/document/d/1Zhq77iKPOcd2U19uw9RkD3tpuCw9kvRBfgggYWVvEhQ/edit?tab=t.qxzdryyvttav#heading=h.wzqv6mb9vsw)
 
-[2\. Theoretical Foundations](#2.-theoretical-foundations)
+[1.4 From Theory to Practice: A Roadmap](https://docs.google.com/document/d/1Zhq77iKPOcd2U19uw9RkD3tpuCw9kvRBfgggYWVvEhQ/edit?tab=t.qxzdryyvttav#heading=h.j7ggd9l3uucl)
 
-[2.1 AI Existential Risk: The Carlsmith Model](#2.1-ai-existential-risk:-the-carlsmith-model)
+[2. Theoretical Foundations](https://docs.google.com/document/d/1Zhq77iKPOcd2U19uw9RkD3tpuCw9kvRBfgggYWVvEhQ/edit?tab=t.qxzdryyvttav#heading=h.i4tb761otcd)
 
-[2.2 The Epistemic Challenge of Policy Evaluation](#2.2-the-epistemic-challenge-of-policy-evaluation)
+[2.1 AI Existential Risk: The Carlsmith Model](https://docs.google.com/document/d/1Zhq77iKPOcd2U19uw9RkD3tpuCw9kvRBfgggYWVvEhQ/edit?tab=t.qxzdryyvttav#heading=h.5801nq1m9dxv)
 
-[2.3 Argument Mapping and Formal Representations](#2.3-argument-mapping-and-formal-representations)
+[2.2 The Epistemic Challenge of Policy Evaluation](https://docs.google.com/document/d/1Zhq77iKPOcd2U19uw9RkD3tpuCw9kvRBfgggYWVvEhQ/edit?tab=t.qxzdryyvttav#heading=h.gnuiaw1llmkj)
 
-[2.4 Bayesian Networks as Knowledge Representation](#2.4-bayesian-networks-as-knowledge-representation)
+[2.3 Argument Mapping and Formal Representations](https://docs.google.com/document/d/1Zhq77iKPOcd2U19uw9RkD3tpuCw9kvRBfgggYWVvEhQ/edit?tab=t.qxzdryyvttav#heading=h.x328y3p5mjij)
 
-[2.5 The MTAIR Framework: Achievements and Limitations](#2.5-the-mtair-framework:-achievements-and-limitations)
+[2.4 Bayesian Networks as Knowledge Representation](https://docs.google.com/document/d/1Zhq77iKPOcd2U19uw9RkD3tpuCw9kvRBfgggYWVvEhQ/edit?tab=t.qxzdryyvttav#heading=h.58w3cz40jzac)
 
-[2.6 "A Narrow Path": Conditional Policy Proposals in Practice](#2.6-"a-narrow-path":-conditional-policy-proposals-in-practice)
+[2.5 The MTAIR Framework: Achievements and Limitations](https://docs.google.com/document/d/1Zhq77iKPOcd2U19uw9RkD3tpuCw9kvRBfgggYWVvEhQ/edit?tab=t.qxzdryyvttav#heading=h.4rsi54k5a48o)
 
-[3\. Methodology: From World Models to Computational Representation](#3.-methodology:-from-world-models-to-computational-representation)
+[2.6 "A Narrow Path": Conditional Policy Proposals in Practice](https://docs.google.com/document/d/1Zhq77iKPOcd2U19uw9RkD3tpuCw9kvRBfgggYWVvEhQ/edit?tab=t.qxzdryyvttav#heading=h.xxqvmjnxopim)
 
-[3.1 Research Design Overview](#3.1-research-design-overview)
+[3. Methodology: From World Models to Computational Representation](https://docs.google.com/document/d/1Zhq77iKPOcd2U19uw9RkD3tpuCw9kvRBfgggYWVvEhQ/edit?tab=t.qxzdryyvttav#heading=h.a7ue6s26mpuo)
 
-[3.2 Formalizing World Models from AI Safety Literature](#3.2-formalizing-world-models-from-ai-safety-literature)
+[3.1 Research Design Overview](https://docs.google.com/document/d/1Zhq77iKPOcd2U19uw9RkD3tpuCw9kvRBfgggYWVvEhQ/edit?tab=t.qxzdryyvttav#heading=h.6oi6yfo53us1)
 
-[3.3 Directed Acyclic Graphs: Structure and Semantics](#3.3-directed-acyclic-graphs:-structure-and-semantics)
+[3.2 Formalizing World Models from AI Safety Literature](https://docs.google.com/document/d/1Zhq77iKPOcd2U19uw9RkD3tpuCw9kvRBfgggYWVvEhQ/edit?tab=t.qxzdryyvttav#heading=h.c6cn1lhikc71)
 
-[3.4 Quantification Approaches for Probabilistic Judgments](#3.4-quantification-approaches-for-probabilistic-judgments)
+[3.3 Directed Acyclic Graphs: Structure and Semantics](https://docs.google.com/document/d/1Zhq77iKPOcd2U19uw9RkD3tpuCw9kvRBfgggYWVvEhQ/edit?tab=t.qxzdryyvttav#heading=h.161tx2lnbef7)
 
-[3.5 Inference Techniques for Complex Networks](#3.5-inference-techniques-for-complex-networks)
+[3.4 Quantification Approaches for Probabilistic Judgments](https://docs.google.com/document/d/1Zhq77iKPOcd2U19uw9RkD3tpuCw9kvRBfgggYWVvEhQ/edit?tab=t.qxzdryyvttav#heading=h.c2sb5ja46t2b)
 
-[3.6 Integration with Prediction Markets and Forecasting Platforms](#3.6-integration-with-prediction-markets-and-forecasting-platforms)
+[3.5 Inference Techniques for Complex Networks](https://docs.google.com/document/d/1Zhq77iKPOcd2U19uw9RkD3tpuCw9kvRBfgggYWVvEhQ/edit?tab=t.qxzdryyvttav#heading=h.wxmzddtg5wy9)
 
-[4\. Implementation: AI Risk Pathway Analyzer (ARPA)](#4.-implementation:-ai-risk-pathway-analyzer-\(arpa\))
+[3.6 Integration with Prediction Markets and Forecasting Platforms](https://docs.google.com/document/d/1Zhq77iKPOcd2U19uw9RkD3tpuCw9kvRBfgggYWVvEhQ/edit?tab=t.qxzdryyvttav#heading=h.ykdglsxra9x)
 
-[4.1 System Architecture and Data Flow](#4.1-system-architecture-and-data-flow)
+[4. Implementation: AI Risk Pathway Analyzer (ARPA)](https://docs.google.com/document/d/1Zhq77iKPOcd2U19uw9RkD3tpuCw9kvRBfgggYWVvEhQ/edit?tab=t.qxzdryyvttav#heading=h.mh18ehtjt52d)
 
-[4.2 Automated Extraction Pipeline](#4.2-automated-extraction-pipeline)
+[4.1 System Architecture and Data Flow](https://docs.google.com/document/d/1Zhq77iKPOcd2U19uw9RkD3tpuCw9kvRBfgggYWVvEhQ/edit?tab=t.qxzdryyvttav#heading=h.m2f1gqwuzctf)
 
-[4.3 Network Construction and Visualization](#4.3-network-construction-and-visualization)
+[4.2 Automated Extraction Pipeline](https://docs.google.com/document/d/1Zhq77iKPOcd2U19uw9RkD3tpuCw9kvRBfgggYWVvEhQ/edit?tab=t.qxzdryyvttav#heading=h.3cprkp50r6x4)
 
-[4.4 Probabilistic Inference Engine](#4.4-probabilistic-inference-engine)
+[4.3 Network Construction and Visualization](https://docs.google.com/document/d/1Zhq77iKPOcd2U19uw9RkD3tpuCw9kvRBfgggYWVvEhQ/edit?tab=t.qxzdryyvttav#heading=h.bmk3951m2nim)
 
-[4.5 Prediction Market Integration Module](#4.5-prediction-market-integration-module)
+[4.4 Probabilistic Inference Engine](https://docs.google.com/document/d/1Zhq77iKPOcd2U19uw9RkD3tpuCw9kvRBfgggYWVvEhQ/edit?tab=t.qxzdryyvttav#heading=h.5okfm22ktp75)
 
-[4.6 Policy Evaluation Interface](#4.6-policy-evaluation-interface)
+[4.5 Prediction Market Integration Module](https://docs.google.com/document/d/1Zhq77iKPOcd2U19uw9RkD3tpuCw9kvRBfgggYWVvEhQ/edit?tab=t.qxzdryyvttav#heading=h.hnjqc99mb0is)
 
-[5\. Results: From Theory to Application](#5.-results:-from-theory-to-application)
+[4.6 Policy Evaluation Interface](https://docs.google.com/document/d/1Zhq77iKPOcd2U19uw9RkD3tpuCw9kvRBfgggYWVvEhQ/edit?tab=t.qxzdryyvttav#heading=h.n23uwu1kcw3)
 
-[5.1 Extraction Quality Assessment](#5.1-extraction-quality-assessment)
+[5. Results: From Theory to Application](https://docs.google.com/document/d/1Zhq77iKPOcd2U19uw9RkD3tpuCw9kvRBfgggYWVvEhQ/edit?tab=t.qxzdryyvttav#heading=h.ofirteaeh35v)
 
-[5.2 Computational Performance Analysis](#5.2-computational-performance-analysis)
+[5.1 Extraction Quality Assessment](https://docs.google.com/document/d/1Zhq77iKPOcd2U19uw9RkD3tpuCw9kvRBfgggYWVvEhQ/edit?tab=t.qxzdryyvttav#heading=h.xeg5oreqsbff)
 
-[5.3 Case Study: The Carlsmith Model Formalized](#5.3-case-study:-the-carlsmith-model-formalized)
+[5.2 Computational Performance Analysis](https://docs.google.com/document/d/1Zhq77iKPOcd2U19uw9RkD3tpuCw9kvRBfgggYWVvEhQ/edit?tab=t.qxzdryyvttav#heading=h.1nvxdstiiv0a)
 
-[5.4 Comparative Analysis of AI Governance Worldviews](#5.4-comparative-analysis-of-ai-governance-worldviews)
+[5.3 Case Study: The Carlsmith Model Formalized](https://docs.google.com/document/d/1Zhq77iKPOcd2U19uw9RkD3tpuCw9kvRBfgggYWVvEhQ/edit?tab=t.qxzdryyvttav#heading=h.ks78a9klj8qz)
 
-[5.5 Policy Impact Evaluation: Proof of Concept](#5.5-policy-impact-evaluation:-proof-of-concept)
+[5.4 Comparative Analysis of AI Governance Worldviews](https://docs.google.com/document/d/1Zhq77iKPOcd2U19uw9RkD3tpuCw9kvRBfgggYWVvEhQ/edit?tab=t.qxzdryyvttav#heading=h.88qlx19rypvn)
 
-[6\. Discussion: Implications and Limitations](#6.-discussion:-implications-and-limitations)
+[5.5 Policy Impact Evaluation: Proof of Concept](https://docs.google.com/document/d/1Zhq77iKPOcd2U19uw9RkD3tpuCw9kvRBfgggYWVvEhQ/edit?tab=t.qxzdryyvttav#heading=h.kr99uco8ks16)
 
-[6.1 Red-Teaming Results: Identifying Failure Modes](#6.1-red-teaming-results:-identifying-failure-modes)
+[6. Discussion: Implications and Limitations](https://docs.google.com/document/d/1Zhq77iKPOcd2U19uw9RkD3tpuCw9kvRBfgggYWVvEhQ/edit?tab=t.qxzdryyvttav#heading=h.j7c229qhr596)
 
-[6.2 Enhancing Epistemic Security in AI Governance](#6.2-enhancing-epistemic-security-in-ai-governance)
+[6.1 Red-Teaming Results: Identifying Failure Modes](https://docs.google.com/document/d/1Zhq77iKPOcd2U19uw9RkD3tpuCw9kvRBfgggYWVvEhQ/edit?tab=t.qxzdryyvttav#heading=h.s176tbi6znjb)
 
-[6.3 Scaling Challenges and Opportunities](#6.3-scaling-challenges-and-opportunities)
+[6.2 Enhancing Epistemic Security in AI Governance](https://docs.google.com/document/d/1Zhq77iKPOcd2U19uw9RkD3tpuCw9kvRBfgggYWVvEhQ/edit?tab=t.qxzdryyvttav#heading=h.jm3oi7quijbg)
 
-[6.4 Integration with Existing Governance Frameworks](#6.4-integration-with-existing-governance-frameworks)
+[6.3 Scaling Challenges and Opportunities](https://docs.google.com/document/d/1Zhq77iKPOcd2U19uw9RkD3tpuCw9kvRBfgggYWVvEhQ/edit?tab=t.qxzdryyvttav#heading=h.fkrz53exnnh5)
 
-[6.5 Known Unknowns and Deep Uncertainties](#6.5-known-unknowns-and-deep-uncertainties)
+[6.4 Integration with Existing Governance Frameworks](https://docs.google.com/document/d/1Zhq77iKPOcd2U19uw9RkD3tpuCw9kvRBfgggYWVvEhQ/edit?tab=t.qxzdryyvttav#heading=h.fiib365w9zrp)
 
-[7\. Conclusion: Toward an Adaptive AI Governance Framework](#7.-conclusion:-toward-an-adaptive-ai-governance-framework)
+[6.5 Known Unknowns and Deep Uncertainties](https://docs.google.com/document/d/1Zhq77iKPOcd2U19uw9RkD3tpuCw9kvRBfgggYWVvEhQ/edit?tab=t.qxzdryyvttav#heading=h.uukfk9ay5781)
 
-[7.1 Key Contributions and Findings](#7.1-key-contributions-and-findings)
+[7. Conclusion: Toward an Adaptive AI Governance Framework](https://docs.google.com/document/d/1Zhq77iKPOcd2U19uw9RkD3tpuCw9kvRBfgggYWVvEhQ/edit?tab=t.qxzdryyvttav#heading=h.9wdkszus2il7)
 
-[7.2 Limitations of the Current Implementation](#7.2-limitations-of-the-current-implementation)
+[7.1 Key Contributions and Findings](https://docs.google.com/document/d/1Zhq77iKPOcd2U19uw9RkD3tpuCw9kvRBfgggYWVvEhQ/edit?tab=t.qxzdryyvttav#heading=h.vz1tq52cqeym)
 
-[7.3 Policy Implications and Recommendations](#7.3-policy-implications-and-recommendations)
+[7.2 Limitations of the Current Implementation](https://docs.google.com/document/d/1Zhq77iKPOcd2U19uw9RkD3tpuCw9kvRBfgggYWVvEhQ/edit?tab=t.qxzdryyvttav#heading=h.s1ypowrbwpo)
 
-[7.4 Future Research Directions](#7.4-future-research-directions)
+[7.3 Policy Implications and Recommendations](https://docs.google.com/document/d/1Zhq77iKPOcd2U19uw9RkD3tpuCw9kvRBfgggYWVvEhQ/edit?tab=t.qxzdryyvttav#heading=h.ngihmzmw2soi)
 
-[7.5 Concluding Reflections](#7.5-concluding-reflections)
+[7.4 Future Research Directions](https://docs.google.com/document/d/1Zhq77iKPOcd2U19uw9RkD3tpuCw9kvRBfgggYWVvEhQ/edit?tab=t.qxzdryyvttav#heading=h.ucgjixr136rq)
 
-[8\. Bibliography](#8.-bibliography)
+[7.5 Concluding Reflections](https://docs.google.com/document/d/1Zhq77iKPOcd2U19uw9RkD3tpuCw9kvRBfgggYWVvEhQ/edit?tab=t.qxzdryyvttav#heading=h.af2w4nu1urqy)
 
-[9\. Appendices](#9.-appendices)
+[8. Bibliography](https://docs.google.com/document/d/1Zhq77iKPOcd2U19uw9RkD3tpuCw9kvRBfgggYWVvEhQ/edit?tab=t.qxzdryyvttav#heading=h.4mtl8i979riy)
 
-[Appendix A: Technical Implementation Details](#appendix-a:-technical-implementation-details)
+[9. Appendices](https://docs.google.com/document/d/1Zhq77iKPOcd2U19uw9RkD3tpuCw9kvRBfgggYWVvEhQ/edit?tab=t.qxzdryyvttav#heading=h.91shy35p321c)
 
-[Appendix B: Model Validation Procedures](#appendix-b:-model-validation-procedures)
+[Appendix A: Technical Implementation Details](https://docs.google.com/document/d/1Zhq77iKPOcd2U19uw9RkD3tpuCw9kvRBfgggYWVvEhQ/edit?tab=t.qxzdryyvttav#heading=h.dujp3eh77ju2)
 
-[Appendix C: Case Studies](#appendix-c:-case-studies)
+[Appendix B: Model Validation Procedures](https://docs.google.com/document/d/1Zhq77iKPOcd2U19uw9RkD3tpuCw9kvRBfgggYWVvEhQ/edit?tab=t.qxzdryyvttav#heading=h.9keii6k724kw)
 
-[Appendix D: Ethical Considerations](#appendix-d:-ethical-considerations)
+[Appendix C: Case Studies](https://docs.google.com/document/d/1Zhq77iKPOcd2U19uw9RkD3tpuCw9kvRBfgggYWVvEhQ/edit?tab=t.qxzdryyvttav#heading=h.1imvbtwbusg2)
 
-## **Abstract** {#abstract}
+[Appendix D: Ethical Considerations](https://docs.google.com/document/d/1Zhq77iKPOcd2U19uw9RkD3tpuCw9kvRBfgggYWVvEhQ/edit?tab=t.qxzdryyvttav#heading=h.xhomlzlhfwcl)
+
+**
+
+## **Abstract**
 
 * **Problem context**: Introduce the coordination crisis in AI governance and its implications for existential risk  
 * **Research gap**: Identify the manual bottleneck in transforming expert knowledge into structured probabilistic models  
@@ -111,9 +115,9 @@
 * **Key results**: Preview findings on extraction quality, worldview comparison, and policy evaluation  
 * **Significance**: Highlight the dual contribution to knowledge extraction methodology and strategic coordination
 
-## **1\. Introduction: The AI Governance Challenge** {#1.-introduction:-the-ai-governance-challenge}
+## **1\. Introduction: The AI Governance Challenge**
 
-### **1.1 The Coordination Crisis in AI Governance** {#1.1-the-coordination-crisis-in-ai-governance}
+### **1.1 The Coordination Crisis in AI Governance**
 
 * **Empirical paradox**: Document the coexistence of unprecedented investment with fundamental coordination failure  
 * **Quantifiable consequences**: Present evidence of how fragmentation systematically increases risks through safety gaps, resource misallocation, and negative-sum dynamics  
@@ -121,7 +125,7 @@
 * **Historical parallels**: Compare to other coordination-intensive domains (nuclear governance, climate change, biosecurity)  
 * **Urgency drivers**: Explain how accelerating capabilities compress available response time
 
-### **1.2 Research Question and Scope** {#1.2-research-question-and-scope}
+### **1.2 Research Question and Scope**
 
 * **Primary question**: "Can frontier AI technologies be utilized to automate the extraction of probabilistic world models from AI safety literature, enabling robust prediction of policy impacts?"  
 * **Component definitions**: Define each element of the question with precision: 'frontier AI', 'automation', 'probabilistic world models', 'policy impacts'  
@@ -129,7 +133,7 @@
 * **Disciplinary positioning**: Situate the work at the intersection of AI safety, knowledge representation, and policy analysis  
 * **Theoretical approach**: Signal the hybrid use of computational methods and philosophical analysis
 
-### **1.3 The Multiplicative Benefits Framework** {#1.3-the-multiplicative-benefits-framework}
+### **1.3 The Multiplicative Benefits Framework**
 
 * **Core thesis**: Present the synergistic combination of (1) automated extraction, (2) prediction market integration, and (3) formal policy evaluation  
 * **Theoretical justification**: Explain how each component addresses specific epistemic challenges  
@@ -137,7 +141,7 @@
 * **Beyond additive improvements**: Provide concrete examples of multiplicative effects (e.g., automation enabling comprehensive market integration, markets informing models, policy evaluation gaining precision from both)  
 * **Preview rain-sprinkler-lawn example**: Introduce the canonical Bayesian network example that will serve as a recurring illustration
 
-### **1.4 From Theory to Practice: A Roadmap** {#1.4-from-theory-to-practice:-a-roadmap}
+### **1.4 From Theory to Practice: A Roadmap**
 
 * **Thesis structure**: Preview the progression from theoretical foundations to practical implementation  
 * **Linkage statements**: Explain how each section builds on previous ones and contributes to the whole  
@@ -145,9 +149,9 @@
 * **Signposts and transitions**: Establish clear navigation guides that will appear throughout the thesis  
 * **Reading guidance**: Suggest different pathways through the thesis for readers with different backgrounds and interests
 
-## **2\. Theoretical Foundations** {#2.-theoretical-foundations}
+## **2\. Theoretical Foundations**
 
-### **2.1 AI Existential Risk: The Carlsmith Model** {#2.1-ai-existential-risk:-the-carlsmith-model}
+### **2.1 AI Existential Risk: The Carlsmith Model**
 
 * **Model introduction**: Present Carlsmith's structured approach to assessing existential risk from power-seeking AI  
 * **Six key premises**: Detail each premise with its original probability estimate:  
@@ -162,7 +166,7 @@
 * **Bayesian network visualization**: Include a preliminary DAG representation of the model  
 * **Limitations identified**: Discuss areas where formal modeling could enhance the original analysis
 
-### **2.2 The Epistemic Challenge of Policy Evaluation** {#2.2-the-epistemic-challenge-of-policy-evaluation}
+### **2.2 The Epistemic Challenge of Policy Evaluation**
 
 * **Unique difficulties**: Analyze challenges specific to AI governance policy evaluation:  
   * Complex causal chains with limited empirical grounding  
@@ -182,7 +186,7 @@
 * **Historical analogs**: Analyze partial parallels from nuclear policy, pandemic response, and climate governance  
 * **Innovation necessity**: Argue for novel approaches given AI's unique characteristics
 
-### **2.3 Argument Mapping and Formal Representations** {#2.3-argument-mapping-and-formal-representations}
+### **2.3 Argument Mapping and Formal Representations**
 
 * **Conceptual bridge**: Position argument mapping as the connection between natural language reasoning and formal models  
 * **Structural elements**: Detail components of argument maps (statements, premises, support/attack relationships)  
@@ -195,7 +199,7 @@
 * **Transformation workflow**: Illustrate the progression from natural language to structured representation  
 * **Preservation of narrative**: Explain how these formalisms maintain the connection to qualitative reasoning
 
-### **2.4 Bayesian Networks as Knowledge Representation** {#2.4-bayesian-networks-as-knowledge-representation}
+### **2.4 Bayesian Networks as Knowledge Representation**
 
 * **Mathematical foundations**: Present the formal definition and properties of Bayesian networks  
   * Directed Acyclic Graphs (DAGs) and their characteristics  
@@ -217,7 +221,7 @@
   * Support for counterfactual reasoning  
 * **Implementation considerations**: Discuss practical aspects of using Bayesian networks
 
-### **2.5 The MTAIR Framework: Achievements and Limitations** {#2.5-the-mtair-framework:-achievements-and-limitations}
+### **2.5 The MTAIR Framework: Achievements and Limitations**
 
 * **Project overview**: Present the Modeling Transformative AI Risks project's origins and approach  
 * **Key innovations**: Highlight the framework's contributions:  
@@ -234,7 +238,7 @@
 * **Automation potential**: Explain how these limitations motivate the current research  
 * **Continuity and evolution**: Position current work as building upon MTAIR's foundation
 
-### **2.6 "A Narrow Path": Conditional Policy Proposals in Practice** {#2.6-"a-narrow-path":-conditional-policy-proposals-in-practice}
+### **2.6 "A Narrow Path": Conditional Policy Proposals in Practice**
 
 * **Case study introduction**: Present "A Narrow Path" as an example of conditional policy proposals  
 * **Core thesis analysis**: Examine the central argument about conditions for AI safety  
@@ -252,9 +256,9 @@
 * **Formalization benefits**: Explain how modeling could enhance such proposals  
 * **Broader implications**: Connect to other conditional strategy approaches in AI governance
 
-## **3\. Methodology: From World Models to Computational Representation** {#3.-methodology:-from-world-models-to-computational-representation}
+## **3\. Methodology: From World Models to Computational Representation**
 
-### **3.1 Research Design Overview** {#3.1-research-design-overview}
+### **3.1 Research Design Overview**
 
 * **Methodological framework**: Present the hybrid approach combining theoretical analysis and technical implementation  
 * **Research phases**: Detail the progression from:  
@@ -271,7 +275,7 @@
 * **Data sources**: Describe the types of documents and platforms integrated  
 * **Validation approach**: Outline methods for quality assessment and benchmarking
 
-### **3.2 Formalizing World Models from AI Safety Literature** {#3.2-formalizing-world-models-from-ai-safety-literature}
+### **3.2 Formalizing World Models from AI Safety Literature**
 
 * **Extraction pipeline overview**: Present the end-to-end process architecture  
 * **LLM prompt engineering**: Detail the approach to structured extraction  
@@ -284,7 +288,7 @@
 * **RAIN-SPRINKLER-LAWN EXAMPLE**: Demonstrate extraction from narrative description to formal representation  
 * **Quality control**: Present methods for ensuring extraction accuracy
 
-### **3.3 Directed Acyclic Graphs: Structure and Semantics** {#3.3-directed-acyclic-graphs:-structure-and-semantics}
+### **3.3 Directed Acyclic Graphs: Structure and Semantics**
 
 * **Mathematical formalism**: Define DAGs with precision and necessary notation  
 * **Structural properties**: Explain key concepts:  
@@ -304,7 +308,7 @@
   * Model boundaries  
 * **Structure validation**: Explain approaches to verifying structural accuracy
 
-### **3.4 Quantification Approaches for Probabilistic Judgments** {#3.4-quantification-approaches-for-probabilistic-judgments}
+### **3.4 Quantification Approaches for Probabilistic Judgments**
 
 * **Probability elicitation**: Explain methods for obtaining probability values:  
   * Direct extraction from explicit statements  
@@ -323,7 +327,7 @@
 * **Correlation handling**: Detail approaches to modeling dependencies between variables  
 * **Quantification validation**: Present methods for ensuring numerical validity
 
-### **3.5 Inference Techniques for Complex Networks** {#3.5-inference-techniques-for-complex-networks}
+### **3.5 Inference Techniques for Complex Networks**
 
 * **Exact inference methods**: Explain approaches for smaller networks:  
   * Variable elimination algorithm  
@@ -344,7 +348,7 @@
   * Approximation heuristics  
 * **Inference validation**: Discuss approaches to verifying inference accuracy
 
-### **3.6 Integration with Prediction Markets and Forecasting Platforms** {#3.6-integration-with-prediction-markets-and-forecasting-platforms}
+### **3.6 Integration with Prediction Markets and Forecasting Platforms**
 
 * **Live data integration**: Explain the architecture for connecting with external platforms  
 * **API interfacing**: Detail the technical implementation of data connections  
@@ -361,9 +365,9 @@
   * Conflict resolution for contradictory information  
 * **Feedback loops**: Describe how the model can inform forecasting priorities
 
-## **4\. Implementation: AI Risk Pathway Analyzer (ARPA)** {#4.-implementation:-ai-risk-pathway-analyzer-(arpa)}
+## **4\. Implementation: AI Risk Pathway Analyzer (ARPA)**
 
-### **4.1 System Architecture and Data Flow** {#4.1-system-architecture-and-data-flow}
+### **4.1 System Architecture and Data Flow**
 
 * **Component overview**: Present the five main system components:  
   * Text ingestion and preprocessing  
@@ -386,7 +390,7 @@
   * **CODE EXAMPLE**: Show high-level module organization  
 * **Development workflow**: Explain the iterative implementation process
 
-### **4.2 Automated Extraction Pipeline** {#4.2-automated-extraction-pipeline}
+### **4.2 Automated Extraction Pipeline**
 
 * **BayesDown as intermediary**: Detail the role of structured intermediate representation  
 * **Extraction algorithm**: Present the step-by-step process:  
@@ -412,7 +416,7 @@
   * Specialized templates for different source types  
 * **Edge case handling**: Address challenges with complex arguments
 
-### **4.3 Network Construction and Visualization** {#4.3-network-construction-and-visualization}
+### **4.3 Network Construction and Visualization**
 
 * **Data transformation**: Explain the process from extracted data to Bayesian network:  
   * Node creation with attributes  
@@ -440,7 +444,7 @@
   * Static images  
   * Data exports
 
-### **4.4 Probabilistic Inference Engine** {#4.4-probabilistic-inference-engine}
+### **4.4 Probabilistic Inference Engine**
 
 * **Implementation approach**: Detail the inference capabilities:  
   * Query types supported  
@@ -465,7 +469,7 @@
   * Complex conditional dependencies  
 * **Validation**: Explain methods for ensuring inference accuracy
 
-### **4.5 Prediction Market Integration Module** {#4.5-prediction-market-integration-module}
+### **4.5 Prediction Market Integration Module**
 
 * **Platform connections**: Detail implemented integrations:  
   * Metaculus API  
@@ -493,7 +497,7 @@
   * Data format inconsistencies  
   * Authentication complexities
 
-### **4.6 Policy Evaluation Interface** {#4.6-policy-evaluation-interface}
+### **4.6 Policy Evaluation Interface**
 
 * **Interface design**: Present the user interaction approach:  
   * Policy specification mechanisms  
@@ -520,9 +524,9 @@
   * Robust policy identification  
   * **CODE EXAMPLE**: Show analysis function
 
-## **5\. Results: From Theory to Application** {#5.-results:-from-theory-to-application}
+## **5\. Results: From Theory to Application**
 
-### **5.1 Extraction Quality Assessment** {#5.1-extraction-quality-assessment}
+### **5.1 Extraction Quality Assessment**
 
 * **Evaluation methodology**: Present the approach to quality assessment:  
   * Comparison metrics (precision, recall, F1)  
@@ -545,7 +549,7 @@
 * **Success and failure examples**: Present illustrative cases  
 * **Improvement potential**: Identify areas for extraction enhancement
 
-### **5.2 Computational Performance Analysis** {#5.2-computational-performance-analysis}
+### **5.2 Computational Performance Analysis**
 
 * **Benchmark methodology**: Explain the performance testing approach  
 * **Results by network size**: Present findings for different scales:  
@@ -568,7 +572,7 @@
   * Query complexity  
 * **Resource requirements**: Detail computational needs for different scenarios
 
-### **5.3 Case Study: The Carlsmith Model Formalized** {#5.3-case-study:-the-carlsmith-model-formalized}
+### **5.3 Case Study: The Carlsmith Model Formalized**
 
 * **Complete formalization**: Present the transformed model:  
   * Variables for each premise and sub-premise  
@@ -596,7 +600,7 @@
   * Alternative pathways  
   * Temporal dynamics
 
-### **5.4 Comparative Analysis of AI Governance Worldviews** {#5.4-comparative-analysis-of-ai-governance-worldviews}
+### **5.4 Comparative Analysis of AI Governance Worldviews**
 
 * **Worldview selection**: Present the approach to selecting diverse perspectives:  
   * Criteria for inclusion  
@@ -625,7 +629,7 @@
   * Different weighting of similar factors  
 * **Implications for discourse**: Explain how this analysis can improve coordination
 
-### **5.5 Policy Impact Evaluation: Proof of Concept** {#5.5-policy-impact-evaluation:-proof-of-concept}
+### **5.5 Policy Impact Evaluation: Proof of Concept**
 
 * **Evaluated policies**: Present the selection of governance proposals:  
   * Compute governance approaches  
@@ -654,9 +658,9 @@
   * Complementary combinations  
 * **Practical recommendations**: Present actionable conclusions
 
-## **6\. Discussion: Implications and Limitations** {#6.-discussion:-implications-and-limitations}
+## **6\. Discussion: Implications and Limitations**
 
-### **6.1 Red-Teaming Results: Identifying Failure Modes** {#6.1-red-teaming-results:-identifying-failure-modes}
+### **6.1 Red-Teaming Results: Identifying Failure Modes**
 
 * **Red-teaming methodology**: Present the adversarial testing approach:  
   * Test design and execution  
@@ -686,7 +690,7 @@
 * **COUNTERCLAIM**: Address the objection that these failure modes invalidate the approach  
 * **REBUTTAL**: Provide evidence that the benefits outweigh limitations when properly managed
 
-### **6.2 Enhancing Epistemic Security in AI Governance** {#6.2-enhancing-epistemic-security-in-ai-governance}
+### **6.2 Enhancing Epistemic Security in AI Governance**
 
 * **Epistemic security concept**: Define and contextualize for AI governance:  
   * Information quality assurance  
@@ -711,7 +715,7 @@
   * **ROADMAP**: Show implementation timeline  
 * **Measurement approach**: Explain how to assess epistemic improvements
 
-### **6.3 Scaling Challenges and Opportunities** {#6.3-scaling-challenges-and-opportunities}
+### **6.3 Scaling Challenges and Opportunities**
 
 * **Technical scaling issues**: Analyze computational constraints:  
   * Network size limitations  
@@ -737,7 +741,7 @@
   * **TABLE**: Present scaling scenarios with requirements  
 * **Strategic prioritization**: Recommend optimal scaling trajectory
 
-### **6.4 Integration with Existing Governance Frameworks** {#6.4-integration-with-existing-governance-frameworks}
+### **6.4 Integration with Existing Governance Frameworks**
 
 * **Current landscape**: Analyze existing AI governance initiatives:  
   * Technical standards development  
@@ -767,7 +771,7 @@
   * Unified risk assessment framework  
   * **ROADMAP**: Present integration timeline
 
-### **6.5 Known Unknowns and Deep Uncertainties** {#6.5-known-unknowns-and-deep-uncertainties}
+### **6.5 Known Unknowns and Deep Uncertainties**
 
 * **Fundamental limitations**: Acknowledge constraints of the approach:  
   * Novel capabilities outside historical patterns  
@@ -793,9 +797,9 @@
   * **FRAMEWORK**: Show decision protocol  
 * **Research directions**: Identify priorities for addressing key uncertainties
 
-## **7\. Conclusion: Toward an Adaptive AI Governance Framework** {#7.-conclusion:-toward-an-adaptive-ai-governance-framework}
+## **7\. Conclusion: Toward an Adaptive AI Governance Framework**
 
-### **7.1 Key Contributions and Findings** {#7.1-key-contributions-and-findings}
+### **7.1 Key Contributions and Findings**
 
 * **Methodological innovations**: Summarize advances in automated modeling:  
   * BayesDown as intermediate representation  
@@ -819,7 +823,7 @@
   * **FRAMEWORK**: Present theoretical contribution  
 * **Connection to research question**: Assess how findings address the central inquiry
 
-### **7.2 Limitations of the Current Implementation** {#7.2-limitations-of-the-current-implementation}
+### **7.2 Limitations of the Current Implementation**
 
 * **Technical constraints**: Acknowledge system limitations:  
   * Extraction quality boundaries  
@@ -843,7 +847,7 @@
   * Research frontiers requiring innovation  
 * **Impact on applicability**: Explain how limitations affect use cases
 
-### **7.3 Policy Implications and Recommendations** {#7.3-policy-implications-and-recommendations}
+### **7.3 Policy Implications and Recommendations**
 
 * **General implications**: Present broad insights for AI governance:  
   * Value of formal modeling for policy development  
@@ -868,7 +872,7 @@
   * **FRAMEWORK**: Present evaluation approach  
 * **Priority actions**: Identify highest-value near-term steps
 
-### **7.4 Future Research Directions** {#7.4-future-research-directions}
+### **7.4 Future Research Directions**
 
 * **Technical enhancements**: Outline promising developments:  
   * Advanced extraction algorithms  
@@ -897,7 +901,7 @@
   * Long-term theoretical developments  
   * **TABLE**: Present research agenda
 
-### **7.5 Concluding Reflections** {#7.5-concluding-reflections}
+### **7.5 Concluding Reflections**
 
 * **Historical context**: Place work in broader AI governance trajectory  
 * **Philosophical considerations**: Reflect on the role of formal modeling:  
@@ -922,7 +926,7 @@
   * Vision for coordinated governance  
 * **Final perspective**: Conclude with broader implications for humanity's future with AI
 
-## **8\. Bibliography** {#8.-bibliography}
+## **8\. Bibliography**
 
 * **AI safety and governance literature**: Include key works:  
   * Bostrom (2014), Superintelligence  
@@ -943,9 +947,9 @@
   * LLM papers on structured extraction  
   * Argument mapping literature (ArgDown)
 
-## **9\. Appendices** {#9.-appendices}
+## **9\. Appendices**
 
-### **Appendix A: Technical Implementation Details** {#appendix-a:-technical-implementation-details}
+### **Appendix A: Technical Implementation Details**
 
 * **Environment setup**: Detail software requirements and configuration  
 * **Full code listings**: Provide complete implementation:  
@@ -958,7 +962,7 @@
 * **Development workflow**: Explain implementation process  
 * **Performance optimization**: Detail techniques and results
 
-### **Appendix B: Model Validation Procedures** {#appendix-b:-model-validation-procedures}
+### **Appendix B: Model Validation Procedures**
 
 * **Expert review protocols**: Document validation methodology  
 * **Formal verification methods**: Explain consistency checking  
@@ -966,14 +970,14 @@
 * **Validation datasets**: Describe benchmark development  
 * **Full validation results**: Present comprehensive findings
 
-### **Appendix C: Case Studies** {#appendix-c:-case-studies}
+### **Appendix C: Case Studies**
 
 * **Extended Carlsmith model analysis**: Provide detailed formalization  
 * **"A Narrow Path" formalization**: Present complete modeling  
 * **Additional AI governance worldviews**: Include further perspectives  
 * **Policy evaluation examples**: Present detailed case analyses
 
-### **Appendix D: Ethical Considerations** {#appendix-d:-ethical-considerations}
+### **Appendix D: Ethical Considerations**
 
 * **Potential misuse analysis**: Identify risks and safeguards  
 * **Responsibility framework**: Present accountability structure  
