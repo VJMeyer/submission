@@ -50,7 +50,7 @@ MTAIR / Carlsmith Model (Analytica) — Explanation (--- is motivation: should c
 
 
 
-### Rain/Sprinkler/Lawn DAG
+### Rain-Sprinkler-Grass DAG
 
 
 

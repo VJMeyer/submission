@@ -9,13 +9,18 @@ numbering:
 ## The Current State of Things & How to Continue
 
 ```
-10% of Grade: ~ 14% of text ~ 4200 words ~ 10 pages
+### 10% of Grade: ~ 14% of text ~ 4200 words ~ 10 pages
 
-- summarizes thesis and line of argument 
+- summarizes thesis and line of argument
+
 - outlines possible implications
+
 - notes outstanding issues / limitations of discussion
+
 - points to avenues for further research
+
 - overall conclusion is in line with introduction
+
 ```
 
 ## Summary	— Key Takeaways & Findings
