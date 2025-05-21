@@ -5,6 +5,20 @@ number-sections: true
 
 ## Frontmatter {.unnumbered}
 
+### **Acknowledgments**
+
+* Academic supervisor (Prof. Timo Speith) and institution (University of Bayreuth)  
+* Research collaborators, especially those connected to the original MTAIR project  
+* Technical advisors who provided feedback on implementation aspects  
+* Funding sources and those who provided computational resources or API access  
+* Personal supporters who enabled the research through encouragement and feedback
+
+
+
+
+
+
+
 # Prefatory Apparatus: Illustrations and Terminology --- Quick References {.unnumbered}
 
 ## List of Tables{.unnumbered}

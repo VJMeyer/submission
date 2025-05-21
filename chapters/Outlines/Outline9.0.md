@@ -110,14 +110,20 @@
 
 * **Problem context**: Introduce the coordination crisis in AI governance and its implications for existential risk  
 * **Research gap**: Identify the manual bottleneck in transforming expert knowledge into structured probabilistic models  
+* Present the research question: Can frontier AI technologies automate the modeling of transformative AI risks to enable robust policy impact prediction?  
 * **Thesis statement**: Assert that frontier AI technologies can automate the extraction of probabilistic world models from AI safety literature, enabling robust policy impact prediction  
 * **Methodological approach**: Outline the combined use of LLMs, structured intermediate representations, and Bayesian networks  
-* **Key results**: Preview findings on extraction quality, worldview comparison, and policy evaluation  
-* **Significance**: Highlight the dual contribution to knowledge extraction methodology and strategic coordination
+* **Key results**: Preview findings on extraction quality, world-model evaluation and policy evaluation  
+* **Significance**: Highlight the dual contribution to knowledge extraction methodology and strategic coordination (practical significance for AI governance)
 
 ## **1\. Introduction: The AI Governance Challenge**
 
+<annotation>This section sets the stage by establishing the coordination problem in AI governance as a critical risk factor, introducing the central research question, and outlining the thesis's approach. It should connect theoretical concerns with practical methodologies and preview the structure of the thesis.</annotation>
+
 ### **1.1 The Coordination Crisis in AI Governance**
+
+<annotation>Frame the problem as one of coordination failure rather than merely technical challenge. Describe how technical safety researchers, policy specialists, ethicists, and strategy researchers operate with different terminologies, priorities, and theories of change—creating fragmentation that systematically increases risk through safety gaps, resource misallocation, negative-sum dynamics, and capability-governance gaps.</annotation>
+
 
 * **Empirical paradox**: Document the coexistence of unprecedented investment with fundamental coordination failure  
 * **Quantifiable consequences**: Present evidence of how fragmentation systematically increases risks through safety gaps, resource misallocation, and negative-sum dynamics  
@@ -127,6 +133,9 @@
 
 ### **1.2 Research Question and Scope**
 
+<annotation>Clearly articulate the primary research question: "Can frontier AI technologies be utilized to automate the modeling of transformative AI risks, enabling robust prediction of policy impacts?" Define each component of the question precisely, establish boundaries of the investigation (focusing on existential risks from misaligned AI rather than other governance challenges), and note potential broader applications.</annotation>
+
+
 * **Primary question**: "Can frontier AI technologies be utilized to automate the extraction of probabilistic world models from AI safety literature, enabling robust prediction of policy impacts?"  
 * **Component definitions**: Define each element of the question with precision: 'frontier AI', 'automation', 'probabilistic world models', 'policy impacts'  
 * **Study boundaries**: Explicitly state scope limitations (focus on existential risk from misaligned AI, not addressing all governance challenges)  
@@ -135,6 +144,8 @@
 
 ### **1.3 The Multiplicative Benefits Framework**
 
+<annotation>Establish the central thesis that the combination of (1) automated extraction, (2) prediction market integration, and (3) formal policy evaluation creates multiplicative rather than merely additive benefits for AI governance. Explain how each component enhances the others, creating a system more valuable than the sum of its parts—automation enables comprehensive prediction market integration, markets inform models, policy evaluation gains precision from both, etc.</annotation>
+
 * **Core thesis**: Present the synergistic combination of (1) automated extraction, (2) prediction market integration, and (3) formal policy evaluation  
 * **Theoretical justification**: Explain how each component addresses specific epistemic challenges  
 * **Causal diagram**: Include visual representation of how components interact and enhance each other's value  
@@ -142,6 +153,8 @@
 * **Preview rain-sprinkler-lawn example**: Introduce the canonical Bayesian network example that will serve as a recurring illustration
 
 ### **1.4 From Theory to Practice: A Roadmap**
+
+<annotation>Preview the thesis structure, explaining how each section builds toward a practical implementation of the framework. Emphasize both theoretical rigor and practical utility, showing how the thesis aims not merely to advance academic understanding but to provide actionable tools for improving coordination in AI governance.</annotation>
 
 * **Thesis structure**: Preview the progression from theoretical foundations to practical implementation  
 * **Linkage statements**: Explain how each section builds on previous ones and contributes to the whole  

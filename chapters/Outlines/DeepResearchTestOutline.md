@@ -4,7 +4,7 @@
 
 ## **1. Introduction**
 
-- **Coordination crisis in AI governance:** Open with a striking example of how misaligned priorities between AI researchers, policymakers, and ethicists lead to fragmented efforts. Highlight the paradox of unprecedented AI investment coexisting with fundamental coordination failures, resulting in safety gaps and misallocated resources (e.g. redundant projects, conflicting regulations). Emphasize that these divisions **increase existential risk** by preventing unified responses to AI threats.
+- **Coordination crisis in AI governance:** Open with a striking example of how misunderstandings between AI researchers working on different threat scenarios lead to incompatible policy proposals, each of which, if enacted causing severe harm because it neglected other important considerations. Highlight the paradox of unprecedented AI investment coexisting with fundamental coordination failures, resulting in safety gaps (e.g. conflicting regulations). Emphasize that these divisions **increase existential risk** by preventing unified, coherent responses to AI threats which account for all risk pathways.
     
     - Explain how **different stakeholders** operate on incompatible assumptions (technical metrics vs. ethical principles vs. geopolitical interests), undermining a shared strategy. Draw parallels to historical coordination failures in nuclear safety or climate change to illustrate stakes.
         
@@ -14,7 +14,7 @@
     
     - Define _“frontier AI”_ (cutting-edge language models) and _“probabilistic world models”_ (formal structures capturing assumptions and uncertainties about AI risks).
         
-    - Clarify scope boundaries: the focus is on existential risk from **misaligned AI** (power-seeking AI scenario), not general AI ethics or all governance problems. Note that the approach centers on **knowledge representation and risk modeling**, intersecting philosophy (argumentation theory) and economics (policy evaluation).
+    - Clarify scope boundaries: the focus is on applying the new methodology to existential risks related to **misaligned AI, competitive pressures etc.** (e.g. power-seeking AI scenario), not general AI ethics. Note that the approach centers on **knowledge representation and risk modeling**, intersecting philosophy (argumentation theory) and economics (policy evaluation).
         
     - Justify this scope: tackling this specific modeling problem can yield insights for the broader AI governance challenge without overextending into unrelated debates.
         
