@@ -20,6 +20,10 @@
 
 Testing crossreferencing grapics @fig-automation_pipeline.
 
+![Caption/Title 2](/images/cover.png){#fig-testgraphic2 fig-scap="Short 2 caption" fig-alt="2nd Alt Text / Description." fig-align="left" width="30%"}
+
+Testing crossreferencing grapics @fig-testgraphic2.
+
 
 ## Citations {#sec-citations .unnumbered .unlisted}
 
@@ -30,17 +34,21 @@ Testing crossreferencing grapics @fig-automation_pipeline.
 [@soares2014] and [@knuth1984]
 
 
-Blah Blah [see @knuth1984, pp. 33-35; also @growiec2024a, chap. 1]
+Blah Blah [see @knuth1984, pp. 33-35; also @growiec2024, chap. 1]
 
 Blah Blah [@knuth1984, pp. 33-35, 38-39 and passim]
 
-Blah Blah [@growiec2024a; @knuth1984].
+Blah Blah [@growiec2024; @knuth1984].
 
-Wickham says blah [-@growiec2024a]
+Growiec says blah [-@growiec2024]
 
 
 
 ## Headings & Potential Headings {#sec-heading}
+
+
+## Sidebars for comments {.sidebar}
+Create Sidebars by applying the .sidebar attribute to a level 1 heading (for global sidebars) or level 2 heading (for page level sidebars).
 
 
 

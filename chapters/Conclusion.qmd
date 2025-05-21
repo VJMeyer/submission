@@ -6,10 +6,10 @@ numbering:
   level: 1         # Chapter level
 ---
 
-## The Current State of Things & How to Continue
+# The Current State of Things & How to Continue
 
 ```
-10% of Grade: ~ 14% of text ~ 4200 words
+10% of Grade: ~ 14% of text ~ 4200 words ~ 10 pages
 
 - summarizes thesis and line of argument 
 - outlines possible implications

@@ -14,17 +14,7 @@
     "href": "chapters/Introduction.html",
     "title": "1  Introduction",
     "section": "",
-    "text": "1.1 Abstract\nTesting crossreferencing grapics Figure 1.1.",
-    "crumbs": [
-      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Introduction</span>"
-    ]
-  },
-  {
-    "objectID": "chapters/Introduction.html#abstract",
-    "href": "chapters/Introduction.html#abstract",
-    "title": "1  Introduction",
-    "section": "",
-    "text": "introduces and motivates the core question or problem\n\n\n\n\n\n\n\n\nFigure 1.1: Caption/Title 2",
+    "text": "1.1 Abstract\n[x]  introduces and motivates the core question or problem",
     "crumbs": [
       "<span class='chapter-number'>1</span>  <span class='chapter-title'>Introduction</span>"
     ]
@@ -34,7 +24,7 @@
     "href": "chapters/Introduction.html#motivation-problem-statement",
     "title": "1  Introduction",
     "section": "1.2 Motivation: Problem Statement",
-    "text": "1.2 Motivation: Problem Statement",
+    "text": "1.2 Motivation: Problem Statement\n    AIs are (on the path to) getting smarter than humans\n    Humanities (de-centralized) collective information processing, sense-making AND coordination/cooperation is falling behind\n    BUT new technology/AI also enables new modes/methods of collective information processing\n    therefore this thesis/AMTAIR aspires to be an epistemic tool that enables/empowers humanity (collectively)",
     "crumbs": [
       "<span class='chapter-number'>1</span>  <span class='chapter-title'>Introduction</span>"
     ]
@@ -44,7 +34,7 @@
     "href": "chapters/Introduction.html#motivation-research-question",
     "title": "1  Introduction",
     "section": "1.3 Motivation: Research Question",
-    "text": "1.3 Motivation: Research Question\n\nprovides context for discussion (places issue within a larger debate or sphere of relevance)",
+    "text": "1.3 Motivation: Research Question\n- [ ] provides context for discussion (places issue within a larger debate or sphere of relevance)",
     "crumbs": [
       "<span class='chapter-number'>1</span>  <span class='chapter-title'>Introduction</span>"
     ]
@@ -64,7 +54,7 @@
     "href": "chapters/Introduction.html#significance-of-the-research-theory-of-change",
     "title": "1  Introduction",
     "section": "1.5 Significance of the Research: Theory of Change",
-    "text": "1.5 Significance of the Research: Theory of Change\n• states precise thesis or position the author will argue for",
+    "text": "1.5 Significance of the Research: Theory of Change\n-[ ] states precise thesis or position the author will argue for",
     "crumbs": [
       "<span class='chapter-number'>1</span>  <span class='chapter-title'>Introduction</span>"
     ]
@@ -74,7 +64,7 @@
     "href": "chapters/Introduction.html#thesis-statement-position-aim-of-the-paper",
     "title": "1  Introduction",
     "section": "1.6 Thesis Statement & Position: (Aim of the Paper)",
-    "text": "1.6 Thesis Statement & Position: (Aim of the Paper)\n\nprovides roadmap indicating structure and key content points of the essay",
+    "text": "1.6 Thesis Statement & Position: (Aim of the Paper)\nAMTAIR is a new epistemic tool/framework that enables/empowers humanities collective information processing, comprehension and thereby enables the necessary coordination ... (to compete with AIs?)\n[ ] provides roadmap indicating structure and key content points of the essay",
     "crumbs": [
       "<span class='chapter-number'>1</span>  <span class='chapter-title'>Introduction</span>"
     ]
@@ -334,7 +324,7 @@
     "href": "chapters/Conclusion.html#the-current-state-of-things-how-to-continue",
     "title": "5  Conclusion",
     "section": "",
-    "text": "10% of Grade: ~ 14% of text ~ 4200 words\n\n- summarizes thesis and line of argument \n- outlines possible implications\n- notes outstanding issues / limitations of discussion\n- points to avenues for further research\n- overall conclusion is in line with introduction",
+    "text": "10% of Grade: ~ 14% of text ~ 4200 words ~ 10 pages\n\n- summarizes thesis and line of argument \n- outlines possible implications\n- notes outstanding issues / limitations of discussion\n- points to avenues for further research\n- overall conclusion is in line with introduction",
     "crumbs": [
       "<span class='chapter-number'>5</span>  <span class='chapter-title'>Conclusion</span>"
     ]
@@ -454,7 +444,7 @@
     "href": "ref/references.html",
     "title": "6  Quarto Syntax",
     "section": "",
-    "text": "Figures\nTesting crossreferencing grapics Figure 6.1.",
+    "text": "Figures\nTesting crossreferencing grapics Figure 6.1.\nTesting crossreferencing grapics Figure 6.2.",
     "crumbs": [
       "<span class='chapter-number'>6</span>  <span class='chapter-title'>Quarto Syntax</span>"
     ]
@@ -464,7 +454,7 @@
     "href": "ref/references.html#sec-figues",
     "title": "6  Quarto Syntax",
     "section": "",
-    "text": "Figure 6.1: AMTAIR Automation Pipeline from Bucknall and Dori-Hacohen (2022)",
+    "text": "Figure 6.1: AMTAIR Automation Pipeline from Bucknall and Dori-Hacohen (2022)\n\n\n\n\n\n\n\n\n\n\nFigure 6.2: Caption/Title 2",
     "crumbs": [
       "<span class='chapter-number'>6</span>  <span class='chapter-title'>Quarto Syntax</span>"
     ]
@@ -474,7 +464,7 @@
     "href": "ref/references.html#sec-citations",
     "title": "6  Quarto Syntax",
     "section": "Citations",
-    "text": "Citations\nSoares and Fallenstein (2014) \n(Soares and Fallenstein 2014) and (Knuth 1984)\nBlah Blah (see Knuth 1984, 33–35; also Growiec 2024, chap. 1)\nBlah Blah (Knuth 1984, 33–35, 38–39 and passim)\nBlah Blah (Growiec 2024; Knuth 1984).\nWickham says blah (2024)",
+    "text": "Citations\nSoares and Fallenstein (2014) \n(Soares and Fallenstein 2014) and (Knuth 1984)\nBlah Blah (see Knuth 1984, 33–35; also Growiec 2024, chap. 1)\nBlah Blah (Knuth 1984, 33–35, 38–39 and passim)\nBlah Blah (Growiec 2024; Knuth 1984).\nGrowiec says blah (2024)",
     "crumbs": [
       "<span class='chapter-number'>6</span>  <span class='chapter-title'>Quarto Syntax</span>"
     ]
@@ -484,7 +474,17 @@
     "href": "ref/references.html#sec-heading",
     "title": "6  Quarto Syntax",
     "section": "6.1 Headings & Potential Headings",
-    "text": "6.1 Headings & Potential Headings\n\n\nverbatim code formatting for notes and ideas to be included (here)\nAlso code blocks for more extensive notes and ideas to be included and checklists\n- test 1. \n- test 2. \n- test 3.\n2. second\n3. third\n\n\nBlockquote formatting for “Citations / Things to reference”\n\nHere is an inline note.1\nHere is a footnote reference,2\nHere’s some raw inline HTML: html\npage 1\n\npage 2\n\n\n\n\n\nflowchart LR\n  A[Hard edge] --&gt; B(Round edge)\n  B --&gt; C{Decision}\n  C --&gt; D[Result one]\n  C --&gt; E[Result two]\n\n\n\n\n\n\nTesting crossreferencing grapics Figure 6.1.",
+    "text": "6.1 Headings & Potential Headings",
+    "crumbs": [
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Quarto Syntax</span>"
+    ]
+  },
+  {
+    "objectID": "ref/references.html#sidebars-for-comments",
+    "href": "ref/references.html#sidebars-for-comments",
+    "title": "6  Quarto Syntax",
+    "section": "6.2 Sidebars for comments",
+    "text": "6.2 Sidebars for comments\nCreate Sidebars by applying the .sidebar attribute to a level 1 heading (for global sidebars) or level 2 heading (for page level sidebars).\n\n\nverbatim code formatting for notes and ideas to be included (here)\nAlso code blocks for more extensive notes and ideas to be included and checklists\n- test 1. \n- test 2. \n- test 3.\n2. second\n3. third\n\n\nBlockquote formatting for “Suggested Citations (e.g. carlsmith 2024 on …)” and/or claims which require a citation (e.g. claim x should be backed-up by a ciation from the literature)\n\nHere is an inline note.1\nHere is a footnote reference,2\nHere’s some raw inline HTML: html\npage 1\n\npage 2\n\n\n\n\n\nflowchart LR\n  A[Hard edge] --&gt; B(Round edge)\n  B --&gt; C{Decision}\n  C --&gt; D[Result one]\n  C --&gt; E[Result two]\n\n\n\n\n\n\nTesting crossreferencing grapics Figure 6.1.",
     "crumbs": [
       "<span class='chapter-number'>6</span>  <span class='chapter-title'>Quarto Syntax</span>"
     ]

@@ -9,7 +9,7 @@ numbering:
 
 
 ```
-### 20% of Grade: ~ 29% of text ~ 8700 words {.unnumbered .unlisted}
+### 20% of Grade: ~ 29% of text ~ 8700 words ~ 20 pages
 
 - demonstrates understanding of all relevant core concepts
 
