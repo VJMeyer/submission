@@ -222,29 +222,34 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">ToC</h2>
    
   <ul>
-  <li><a href="#implementation" id="toc-implementation" class="nav-link active" data-scroll-target="#implementation"><span class="header-section-number">3.1</span> Implementation</a>
+  <li><a href="#rain-sprinkler-grass-example" id="toc-rain-sprinkler-grass-example" class="nav-link active" data-scroll-target="#rain-sprinkler-grass-example"><span class="header-section-number">3.1</span> Rain-Sprinkler-Grass Example</a></li>
+  <li><a href="#software-implementation" id="toc-software-implementation" class="nav-link" data-scroll-target="#software-implementation"><span class="header-section-number">3.2</span> Software Implementation</a>
   <ul>
-  <li><a href="#system-architecture-and-data-flow" id="toc-system-architecture-and-data-flow" class="nav-link" data-scroll-target="#system-architecture-and-data-flow"><span class="header-section-number">3.1.1</span> System Architecture and Data Flow</a></li>
-  <li><a href="#automated-extraction-pipeline" id="toc-automated-extraction-pipeline" class="nav-link" data-scroll-target="#automated-extraction-pipeline"><span class="header-section-number">3.1.2</span> Automated Extraction Pipeline</a></li>
-  <li><a href="#network-construction-and-visualization" id="toc-network-construction-and-visualization" class="nav-link" data-scroll-target="#network-construction-and-visualization"><span class="header-section-number">3.1.3</span> Network Construction and Visualization</a></li>
-  <li><a href="#probabilistic-inference-engine" id="toc-probabilistic-inference-engine" class="nav-link" data-scroll-target="#probabilistic-inference-engine"><span class="header-section-number">3.1.4</span> Probabilistic Inference Engine</a></li>
-  <li><a href="#prediction-market-integration-module" id="toc-prediction-market-integration-module" class="nav-link" data-scroll-target="#prediction-market-integration-module"><span class="header-section-number">3.1.5</span> Prediction Market Integration Module</a></li>
-  <li><a href="#policy-evaluation-interface" id="toc-policy-evaluation-interface" class="nav-link" data-scroll-target="#policy-evaluation-interface"><span class="header-section-number">3.1.6</span> Policy Evaluation Interface</a></li>
+  <li><a href="#system-architecture-and-data-flow-overview" id="toc-system-architecture-and-data-flow-overview" class="nav-link" data-scroll-target="#system-architecture-and-data-flow-overview"><span class="header-section-number">3.2.1</span> System Architecture (and Data Flow) Overview</a></li>
+  <li><a href="#automated-extraction-pipeline" id="toc-automated-extraction-pipeline" class="nav-link" data-scroll-target="#automated-extraction-pipeline"><span class="header-section-number">3.2.2</span> Automated Extraction Pipeline:</a></li>
+  <li><a href="#the-two-stage-extraction-from-carlsmith" id="toc-the-two-stage-extraction-from-carlsmith" class="nav-link" data-scroll-target="#the-two-stage-extraction-from-carlsmith"><span class="header-section-number">3.2.3</span> The Two-Stage Extraction from Carlsmith</a></li>
+  <li><a href="#network-construction-and-visualization" id="toc-network-construction-and-visualization" class="nav-link" data-scroll-target="#network-construction-and-visualization"><span class="header-section-number">3.2.4</span> Network Construction and Visualization</a></li>
   </ul></li>
-  <li><a href="#results-analysis-from-theory-to-application" id="toc-results-analysis-from-theory-to-application" class="nav-link" data-scroll-target="#results-analysis-from-theory-to-application"><span class="header-section-number">3.2</span> Results &amp; Analysis: From Theory to Application</a>
+  <li><a href="#inference-extensions" id="toc-inference-extensions" class="nav-link" data-scroll-target="#inference-extensions"><span class="header-section-number">3.3</span> Inference &amp; Extensions</a>
   <ul>
-  <li><a href="#extraction-quality-assessment" id="toc-extraction-quality-assessment" class="nav-link" data-scroll-target="#extraction-quality-assessment"><span class="header-section-number">3.2.1</span> Extraction Quality Assessment</a></li>
-  <li><a href="#computational-performance-analysis" id="toc-computational-performance-analysis" class="nav-link" data-scroll-target="#computational-performance-analysis"><span class="header-section-number">3.2.2</span> Computational Performance Analysis</a></li>
-  <li><a href="#case-study-the-carlsmith-model-formalized" id="toc-case-study-the-carlsmith-model-formalized" class="nav-link" data-scroll-target="#case-study-the-carlsmith-model-formalized"><span class="header-section-number">3.2.3</span> Case Study: The Carlsmith Model Formalized</a></li>
-  <li><a href="#comparative-analysis-of-ai-governance-worldviews" id="toc-comparative-analysis-of-ai-governance-worldviews" class="nav-link" data-scroll-target="#comparative-analysis-of-ai-governance-worldviews"><span class="header-section-number">3.2.4</span> Comparative Analysis of AI Governance Worldviews</a></li>
-  <li><a href="#policy-impact-evaluation-proof-of-concept" id="toc-policy-impact-evaluation-proof-of-concept" class="nav-link" data-scroll-target="#policy-impact-evaluation-proof-of-concept"><span class="header-section-number">3.2.5</span> Policy Impact Evaluation: Proof of Concept</a></li>
+  <li><a href="#probabilistic-inference-engine" id="toc-probabilistic-inference-engine" class="nav-link" data-scroll-target="#probabilistic-inference-engine"><span class="header-section-number">3.3.1</span> Probabilistic Inference Engine</a></li>
+  <li><a href="#policy-evaluation-interface" id="toc-policy-evaluation-interface" class="nav-link" data-scroll-target="#policy-evaluation-interface"><span class="header-section-number">3.3.2</span> Policy Evaluation Interface</a></li>
+  <li><a href="#prediction-market-integration-module" id="toc-prediction-market-integration-module" class="nav-link" data-scroll-target="#prediction-market-integration-module"><span class="header-section-number">3.3.3</span> Prediction Market Integration Module</a></li>
   </ul></li>
-  <li><a href="#insights-findings" id="toc-insights-findings" class="nav-link" data-scroll-target="#insights-findings"><span class="header-section-number">3.3</span> Insights &amp; Findings</a>
+  <li><a href="#results-analysis-from-theory-to-application" id="toc-results-analysis-from-theory-to-application" class="nav-link" data-scroll-target="#results-analysis-from-theory-to-application"><span class="header-section-number">3.4</span> Results &amp; Analysis: From Theory to Application</a>
   <ul>
-  <li><a href="#automated-modeling-pipeline-from-academic-papers-to-political-strategy" id="toc-automated-modeling-pipeline-from-academic-papers-to-political-strategy" class="nav-link" data-scroll-target="#automated-modeling-pipeline-from-academic-papers-to-political-strategy"><span class="header-section-number">3.3.1</span> Automated Modeling Pipeline — From Academic Papers to Political Strategy</a></li>
-  <li><a href="#project-scaling-workflow-pipeline-automation" id="toc-project-scaling-workflow-pipeline-automation" class="nav-link" data-scroll-target="#project-scaling-workflow-pipeline-automation"><span class="header-section-number">3.3.2</span> Project Scaling — Workflow Pipeline &amp; Automation</a></li>
-  <li><a href="#computational-complexity-computational-tractability" id="toc-computational-complexity-computational-tractability" class="nav-link" data-scroll-target="#computational-complexity-computational-tractability"><span class="header-section-number">3.3.3</span> Computational Complexity — Computational Tractability</a></li>
-  <li><a href="#external-validation-manual-extraction-processing" id="toc-external-validation-manual-extraction-processing" class="nav-link" data-scroll-target="#external-validation-manual-extraction-processing"><span class="header-section-number">3.3.4</span> External Validation — Manual Extraction &amp; Processing</a></li>
+  <li><a href="#extraction-quality-assessment" id="toc-extraction-quality-assessment" class="nav-link" data-scroll-target="#extraction-quality-assessment"><span class="header-section-number">3.4.1</span> Extraction Quality Assessment</a></li>
+  <li><a href="#computational-performance-analysis" id="toc-computational-performance-analysis" class="nav-link" data-scroll-target="#computational-performance-analysis"><span class="header-section-number">3.4.2</span> Computational Performance Analysis</a></li>
+  <li><a href="#case-study-the-carlsmith-model-formalized" id="toc-case-study-the-carlsmith-model-formalized" class="nav-link" data-scroll-target="#case-study-the-carlsmith-model-formalized"><span class="header-section-number">3.4.3</span> Case Study: The Carlsmith Model Formalized</a></li>
+  <li><a href="#comparative-analysis-of-ai-governance-worldviews" id="toc-comparative-analysis-of-ai-governance-worldviews" class="nav-link" data-scroll-target="#comparative-analysis-of-ai-governance-worldviews"><span class="header-section-number">3.4.4</span> Comparative Analysis of AI Governance Worldviews</a></li>
+  <li><a href="#policy-impact-evaluation-proof-of-concept" id="toc-policy-impact-evaluation-proof-of-concept" class="nav-link" data-scroll-target="#policy-impact-evaluation-proof-of-concept"><span class="header-section-number">3.4.5</span> Policy Impact Evaluation: Proof of Concept</a></li>
+  </ul></li>
+  <li><a href="#insights-findings" id="toc-insights-findings" class="nav-link" data-scroll-target="#insights-findings"><span class="header-section-number">3.5</span> Insights &amp; Findings</a>
+  <ul>
+  <li><a href="#automated-modeling-pipeline-from-academic-papers-to-political-strategy" id="toc-automated-modeling-pipeline-from-academic-papers-to-political-strategy" class="nav-link" data-scroll-target="#automated-modeling-pipeline-from-academic-papers-to-political-strategy"><span class="header-section-number">3.5.1</span> Automated Modeling Pipeline — From Academic Papers to Political Strategy</a></li>
+  <li><a href="#project-scaling-workflow-pipeline-automation" id="toc-project-scaling-workflow-pipeline-automation" class="nav-link" data-scroll-target="#project-scaling-workflow-pipeline-automation"><span class="header-section-number">3.5.2</span> Project Scaling — Workflow Pipeline &amp; Automation</a></li>
+  <li><a href="#computational-complexity-computational-tractability" id="toc-computational-complexity-computational-tractability" class="nav-link" data-scroll-target="#computational-complexity-computational-tractability"><span class="header-section-number">3.5.3</span> Computational Complexity — Computational Tractability</a></li>
+  <li><a href="#external-validation-manual-extraction-processing" id="toc-external-validation-manual-extraction-processing" class="nav-link" data-scroll-target="#external-validation-manual-extraction-processing"><span class="header-section-number">3.5.4</span> External Validation — Manual Extraction &amp; Processing</a></li>
   </ul></li>
   </ul>
 <div class="toc-actions"><ul><li><a href="https://github.com/VJMeyer/submission/edit/main/chapters/AMTAIR.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li></ul></div></nav>
@@ -284,8 +289,20 @@ ul.task-list li input[type="checkbox"] {
 - claim/argument is original or insightful, possibly even presents an original contribution to the debate </code></pre>
 <!-- ## Own Carlsmith Model Implementation — Explanation -->
 <!-- ## Own Implementation: Good example from a published paper -->
-<section id="implementation" class="level2" data-number="3.1">
-<h2 data-number="3.1" class="anchored" data-anchor-id="implementation"><span class="header-section-number">3.1</span> Implementation</h2>
+<!-- [ ] Update / Replace Colab links (Section-Headings) -->
+<!-- [ ] Balance Code (Snippets) Inclusion vs. Cross-Referencing -->
+<section id="rain-sprinkler-grass-example" class="level2" data-number="3.1">
+<h2 data-number="3.1" class="anchored" data-anchor-id="rain-sprinkler-grass-example"><span class="header-section-number">3.1</span> Rain-Sprinkler-Grass Example</h2>
+</section>
+<section id="software-implementation" class="level2" data-number="3.2">
+<h2 data-number="3.2" class="anchored" data-anchor-id="software-implementation"><span class="header-section-number">3.2</span> Software Implementation</h2>
+<section id="system-architecture-and-data-flow-overview" class="level3" data-number="3.2.1">
+<h3 data-number="3.2.1" class="anchored" data-anchor-id="system-architecture-and-data-flow-overview"><span class="header-section-number">3.2.1</span> System Architecture (and Data Flow) Overview</h3>
+<!--
+Present the overall architecture of AMTAIR, showing how different components interact.
+
+Explain the data pipeline from extraction through modeling to visualization and policy evaluation.
+-->
 <blockquote class="blockquote">
 <p><a href="#scrollTo=lt8-AnebGUXr">AMTAIR Prototype Demonstration (Public Colab Notebook)</a></p>
 </blockquote>
@@ -367,6 +384,37 @@ ul.task-list li input[type="checkbox"] {
 <p><a href="#scrollTo=y-ix4Rp5fE9m">0.3 File Import</a></p>
 </blockquote>
 </blockquote>
+</section>
+<section id="automated-extraction-pipeline" class="level3" data-number="3.2.2">
+<h3 data-number="3.2.2" class="anchored" data-anchor-id="automated-extraction-pipeline"><span class="header-section-number">3.2.2</span> Automated Extraction Pipeline:</h3>
+</section>
+<section id="the-two-stage-extraction-from-carlsmith" class="level3" data-number="3.2.3">
+<h3 data-number="3.2.3" class="anchored" data-anchor-id="the-two-stage-extraction-from-carlsmith"><span class="header-section-number">3.2.3</span> The Two-Stage Extraction from Carlsmith</h3>
+<!-- Detail the implementation of the automated extraction system, including LLM prompt design, validation procedures, and performance metrics.
+
+Provide specific examples showing the transition from text to formal model. -->
+<pre><code>
+- **Process overview:** Explain the separation of structure and probability extraction
+
+- **Stage 1: Structure extraction**
+
+- **Process details:** Outline the steps for extracting argument structure
+
+- **CODE EXAMPLE:** Show key function for ArgDown parsing
+
+- **Visualization:** Demonstrate structural extraction for Carlsmith model
+
+- **Stage 2: Probability integration**
+
+- **Process details:** Explain how probability information is incorporated
+
+- **Question generation:** Show how appropriate questions are derived from structure
+
+- **CODE EXAMPLE:** Show key function for BayesDown enhancement
+
+- **Visualization:** Demonstrate probability extraction for Carlsmith model
+
+</code></pre>
 <blockquote class="blockquote">
 <p><a href="#scrollTo=52XyPlte5HrU">1.0 Sources (PDF’s of Papers) to ArgDown (.md file)</a></p>
 </blockquote>
@@ -573,6 +621,10 @@ ul.task-list li input[type="checkbox"] {
 </blockquote>
 </blockquote>
 </blockquote>
+</section>
+<section id="network-construction-and-visualization" class="level3" data-number="3.2.4">
+<h3 data-number="3.2.4" class="anchored" data-anchor-id="network-construction-and-visualization"><span class="header-section-number">3.2.4</span> Network Construction and Visualization</h3>
+<!-- Describe the implementation of the DAG construction and visualization components, explaining both the mathematical representation and the user interface design considerations. -->
 <blockquote class="blockquote">
 <p><a href="#scrollTo=t3zl7vKMECMg">4.0 Analysis &amp; Inference: Bayesian Network Visualization</a></p>
 </blockquote>
@@ -654,75 +706,64 @@ ul.task-list li input[type="checkbox"] {
 <p><a href="#scrollTo=pS6AhdiSCLw4">Convert .ipynb Notebook to MarkDown</a></p>
 </blockquote>
 </blockquote>
-<section id="system-architecture-and-data-flow" class="level3" data-number="3.1.1">
-<h3 data-number="3.1.1" class="anchored" data-anchor-id="system-architecture-and-data-flow"><span class="header-section-number">3.1.1</span> System Architecture and Data Flow</h3>
-<!--
-Present the overall architecture of AMTAIR, showing how different components interact.
-
-Explain the data pipeline from extraction through modeling to visualization and policy evaluation.
--->
 </section>
-<section id="automated-extraction-pipeline" class="level3" data-number="3.1.2">
-<h3 data-number="3.1.2" class="anchored" data-anchor-id="automated-extraction-pipeline"><span class="header-section-number">3.1.2</span> Automated Extraction Pipeline</h3>
-<!-- Detail the implementation of the automated extraction system, including LLM prompt design, validation procedures, and performance metrics.
-Provide specific examples showing the transition from text to formal model. -->
 </section>
-<section id="network-construction-and-visualization" class="level3" data-number="3.1.3">
-<h3 data-number="3.1.3" class="anchored" data-anchor-id="network-construction-and-visualization"><span class="header-section-number">3.1.3</span> Network Construction and Visualization</h3>
-<!-- Describe the implementation of the DAG construction and visualization components, explaining both the mathematical representation and the user interface design considerations. -->
-</section>
-<section id="probabilistic-inference-engine" class="level3" data-number="3.1.4">
-<h3 data-number="3.1.4" class="anchored" data-anchor-id="probabilistic-inference-engine"><span class="header-section-number">3.1.4</span> Probabilistic Inference Engine</h3>
+<section id="inference-extensions" class="level2" data-number="3.3">
+<h2 data-number="3.3" class="anchored" data-anchor-id="inference-extensions"><span class="header-section-number">3.3</span> Inference &amp; Extensions</h2>
+<!-- Preview possible Impementations -->
+<!-- [ ] Highlight some of the "Inference Enabled by the BNs -->
+<section id="probabilistic-inference-engine" class="level3" data-number="3.3.1">
+<h3 data-number="3.3.1" class="anchored" data-anchor-id="probabilistic-inference-engine"><span class="header-section-number">3.3.1</span> Probabilistic Inference Engine</h3>
 <!-- Present the implementation of the inference engine, with particular attention to handling complex networks efficiently.
 
 Discuss optimization techniques and computational constraints. -->
 </section>
-<section id="prediction-market-integration-module" class="level3" data-number="3.1.5">
-<h3 data-number="3.1.5" class="anchored" data-anchor-id="prediction-market-integration-module"><span class="header-section-number">3.1.5</span> Prediction Market Integration Module</h3>
-<!-- Detail the implementation of connections to prediction markets and forecasting platforms, including API interactions, data processing, and update mechanisms. -->
-</section>
-<section id="policy-evaluation-interface" class="level3" data-number="3.1.6">
-<h3 data-number="3.1.6" class="anchored" data-anchor-id="policy-evaluation-interface"><span class="header-section-number">3.1.6</span> Policy Evaluation Interface</h3>
+<section id="policy-evaluation-interface" class="level3" data-number="3.3.2">
+<h3 data-number="3.3.2" class="anchored" data-anchor-id="policy-evaluation-interface"><span class="header-section-number">3.3.2</span> Policy Evaluation Interface</h3>
 <!-- Describe the interface for policy evaluation, showing how users can define interventions, set conditions, and analyze outcomes.
 
 Explain design choices that enhance interpretability and usability. -->
 </section>
+<section id="prediction-market-integration-module" class="level3" data-number="3.3.3">
+<h3 data-number="3.3.3" class="anchored" data-anchor-id="prediction-market-integration-module"><span class="header-section-number">3.3.3</span> Prediction Market Integration Module</h3>
+<!-- Detail the implementation of connections to prediction markets and forecasting platforms, including API interactions, data processing, and update mechanisms. -->
 </section>
-<section id="results-analysis-from-theory-to-application" class="level2" data-number="3.2">
-<h2 data-number="3.2" class="anchored" data-anchor-id="results-analysis-from-theory-to-application"><span class="header-section-number">3.2</span> Results &amp; Analysis: From Theory to Application</h2>
-<section id="extraction-quality-assessment" class="level3" data-number="3.2.1">
-<h3 data-number="3.2.1" class="anchored" data-anchor-id="extraction-quality-assessment"><span class="header-section-number">3.2.1</span> Extraction Quality Assessment</h3>
+</section>
+<section id="results-analysis-from-theory-to-application" class="level2" data-number="3.4">
+<h2 data-number="3.4" class="anchored" data-anchor-id="results-analysis-from-theory-to-application"><span class="header-section-number">3.4</span> Results &amp; Analysis: From Theory to Application</h2>
+<section id="extraction-quality-assessment" class="level3" data-number="3.4.1">
+<h3 data-number="3.4.1" class="anchored" data-anchor-id="extraction-quality-assessment"><span class="header-section-number">3.4.1</span> Extraction Quality Assessment</h3>
 <!-- Present results comparing automated extraction to manual expert annotation, analyzing precision, recall, and F1 scores for different types of content (entities, relationships, probabilities).
 
 Discuss strengths and limitations of the automated approach. -->
 </section>
-<section id="computational-performance-analysis" class="level3" data-number="3.2.2">
-<h3 data-number="3.2.2" class="anchored" data-anchor-id="computational-performance-analysis"><span class="header-section-number">3.2.2</span> Computational Performance Analysis</h3>
+<section id="computational-performance-analysis" class="level3" data-number="3.4.2">
+<h3 data-number="3.4.2" class="anchored" data-anchor-id="computational-performance-analysis"><span class="header-section-number">3.4.2</span> Computational Performance Analysis</h3>
 <!-- Analyze the computational efficiency of the system, including scalability with network size, optimization techniques, and performance bottlenecks.
 
 Present benchmark results for networks of varying complexity. -->
 </section>
-<section id="case-study-the-carlsmith-model-formalized" class="level3" data-number="3.2.3">
-<h3 data-number="3.2.3" class="anchored" data-anchor-id="case-study-the-carlsmith-model-formalized"><span class="header-section-number">3.2.3</span> Case Study: The Carlsmith Model Formalized</h3>
+<section id="case-study-the-carlsmith-model-formalized" class="level3" data-number="3.4.3">
+<h3 data-number="3.4.3" class="anchored" data-anchor-id="case-study-the-carlsmith-model-formalized"><span class="header-section-number">3.4.3</span> Case Study: The Carlsmith Model Formalized</h3>
 <!-- Demonstrate the system's capabilities by presenting a full formalization of Carlsmith's model, showing how the automated system captures the key premises, conditional dependencies, and probabilistic judgments. -->
 </section>
-<section id="comparative-analysis-of-ai-governance-worldviews" class="level3" data-number="3.2.4">
-<h3 data-number="3.2.4" class="anchored" data-anchor-id="comparative-analysis-of-ai-governance-worldviews"><span class="header-section-number">3.2.4</span> Comparative Analysis of AI Governance Worldviews</h3>
+<section id="comparative-analysis-of-ai-governance-worldviews" class="level3" data-number="3.4.4">
+<h3 data-number="3.4.4" class="anchored" data-anchor-id="comparative-analysis-of-ai-governance-worldviews"><span class="header-section-number">3.4.4</span> Comparative Analysis of AI Governance Worldviews</h3>
 <!-- Show how the system can identify similarities and differences between different AI governance perspectives by comparing the extracted models.
 
 Highlight areas of consensus and disagreement across the field. -->
 </section>
-<section id="policy-impact-evaluation-proof-of-concept" class="level3" data-number="3.2.5">
-<h3 data-number="3.2.5" class="anchored" data-anchor-id="policy-impact-evaluation-proof-of-concept"><span class="header-section-number">3.2.5</span> Policy Impact Evaluation: Proof of Concept</h3>
+<section id="policy-impact-evaluation-proof-of-concept" class="level3" data-number="3.4.5">
+<h3 data-number="3.4.5" class="anchored" data-anchor-id="policy-impact-evaluation-proof-of-concept"><span class="header-section-number">3.4.5</span> Policy Impact Evaluation: Proof of Concept</h3>
 <!-- Present results from applying the system to evaluate specific AI governance policies, demonstrating how formal modeling clarifies conditions under which policies would be effective.
 
 Include sensitivity analyses showing robustness of conclusions. -->
 </section>
 </section>
-<section id="insights-findings" class="level2" data-number="3.3">
-<h2 data-number="3.3" class="anchored" data-anchor-id="insights-findings"><span class="header-section-number">3.3</span> Insights &amp; Findings</h2>
-<section id="automated-modeling-pipeline-from-academic-papers-to-political-strategy" class="level3" data-number="3.3.1">
-<h3 data-number="3.3.1" class="anchored" data-anchor-id="automated-modeling-pipeline-from-academic-papers-to-political-strategy"><span class="header-section-number">3.3.1</span> Automated Modeling Pipeline — From Academic Papers to Political Strategy</h3>
+<section id="insights-findings" class="level2" data-number="3.5">
+<h2 data-number="3.5" class="anchored" data-anchor-id="insights-findings"><span class="header-section-number">3.5</span> Insights &amp; Findings</h2>
+<section id="automated-modeling-pipeline-from-academic-papers-to-political-strategy" class="level3" data-number="3.5.1">
+<h3 data-number="3.5.1" class="anchored" data-anchor-id="automated-modeling-pipeline-from-academic-papers-to-political-strategy"><span class="header-section-number">3.5.1</span> Automated Modeling Pipeline — From Academic Papers to Political Strategy</h3>
 <pre><code>Success of Automation:</code></pre>
 <ul>
 <li><p>Demonstrated feasibility of automated model extraction.</p>
@@ -736,8 +777,8 @@ Include sensitivity analyses showing robustness of conclusions. -->
 <li><p>Overcame limitations of manual modeling.</p></li>
 </ul>
 </section>
-<section id="project-scaling-workflow-pipeline-automation" class="level3" data-number="3.3.2">
-<h3 data-number="3.3.2" class="anchored" data-anchor-id="project-scaling-workflow-pipeline-automation"><span class="header-section-number">3.3.2</span> Project Scaling — Workflow Pipeline &amp; Automation</h3>
+<section id="project-scaling-workflow-pipeline-automation" class="level3" data-number="3.5.2">
+<h3 data-number="3.5.2" class="anchored" data-anchor-id="project-scaling-workflow-pipeline-automation"><span class="header-section-number">3.5.2</span> Project Scaling — Workflow Pipeline &amp; Automation</h3>
 <p>Scaling Opportunities:</p>
 <ul>
 <li>Horizontal: Incorporate more data sources.<br>
@@ -763,8 +804,8 @@ Include sensitivity analyses showing robustness of conclusions. -->
 <li>Enhanced policy analysis.</li>
 </ul>
 </section>
-<section id="computational-complexity-computational-tractability" class="level3" data-number="3.3.3">
-<h3 data-number="3.3.3" class="anchored" data-anchor-id="computational-complexity-computational-tractability"><span class="header-section-number">3.3.3</span> Computational Complexity — Computational Tractability</h3>
+<section id="computational-complexity-computational-tractability" class="level3" data-number="3.5.3">
+<h3 data-number="3.5.3" class="anchored" data-anchor-id="computational-complexity-computational-tractability"><span class="header-section-number">3.5.3</span> Computational Complexity — Computational Tractability</h3>
 <p>Challenges:</p>
 <ul>
 <li>High computational demands of complex models.</li>
@@ -791,8 +832,8 @@ Use optimized sampling methods like Monte Carlo.</li>
 <li>Scalability amplifies policy impact.</li>
 </ul>
 </section>
-<section id="external-validation-manual-extraction-processing" class="level3" data-number="3.3.4">
-<h3 data-number="3.3.4" class="anchored" data-anchor-id="external-validation-manual-extraction-processing"><span class="header-section-number">3.3.4</span> External Validation — Manual Extraction &amp; Processing</h3>
+<section id="external-validation-manual-extraction-processing" class="level3" data-number="3.5.4">
+<h3 data-number="3.5.4" class="anchored" data-anchor-id="external-validation-manual-extraction-processing"><span class="header-section-number">3.5.4</span> External Validation — Manual Extraction &amp; Processing</h3>
 <pre><code>Purpose:</code></pre>
 <ul>
 <li><p>Assess accuracy of automated methods.</p>
