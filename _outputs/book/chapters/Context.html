@@ -256,10 +256,12 @@ ul.task-list li input[type="checkbox"] {
   <li><a href="#practical-real-world-examples" id="toc-practical-real-world-examples" class="nav-link" data-scroll-target="#practical-real-world-examples"><span class="header-section-number">2.5</span> Practical Real World Examples</a>
   <ul>
   <li><a href="#kialo" id="toc-kialo" class="nav-link" data-scroll-target="#kialo"><span class="header-section-number">2.5.0.1</span> Kialo</a></li>
-  <li><a href="#rainsprinklerlawn-dag" id="toc-rainsprinklerlawn-dag" class="nav-link" data-scroll-target="#rainsprinklerlawn-dag"><span class="header-section-number">2.5.0.2</span> Rain/Sprinkler/Lawn DAG</a></li>
-  <li><a href="#bayeserver" id="toc-bayeserver" class="nav-link" data-scroll-target="#bayeserver"><span class="header-section-number">2.5.0.3</span> BayeServer</a></li>
-  <li><a href="#bayesnet-extended-example" id="toc-bayesnet-extended-example" class="nav-link" data-scroll-target="#bayesnet-extended-example"><span class="header-section-number">2.5.0.4</span> BayesNet — Extended Example</a></li>
-  <li><a href="#code-documentation" id="toc-code-documentation" class="nav-link" data-scroll-target="#code-documentation"><span class="header-section-number">2.5.0.5</span> Code + documentation</a></li>
+  <li><a href="#bayeserver" id="toc-bayeserver" class="nav-link" data-scroll-target="#bayeserver"><span class="header-section-number">2.5.0.2</span> BayeServer</a></li>
+  <li><a href="#bayesnet-extended-example" id="toc-bayesnet-extended-example" class="nav-link" data-scroll-target="#bayesnet-extended-example"><span class="header-section-number">2.5.0.3</span> BayesNet — Extended Example</a></li>
+  <li><a href="#rainsprinklerlawn-dag" id="toc-rainsprinklerlawn-dag" class="nav-link" data-scroll-target="#rainsprinklerlawn-dag"><span class="header-section-number">2.5.1</span> Rain/Sprinkler/Lawn DAG</a>
+  <ul>
+  <li><a href="#code-documentation" id="toc-code-documentation" class="nav-link" data-scroll-target="#code-documentation"><span class="header-section-number">2.5.1.1</span> Code + documentation</a></li>
+  </ul></li>
   </ul></li>
   </ul>
 <div class="toc-actions"><ul><li><a href="https://github.com/VJMeyer/submission/edit/main/chapters/Context.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li></ul></div></nav>
@@ -399,18 +401,17 @@ numbering:
 <section id="kialo" class="level4" data-number="2.5.0.1">
 <h4 data-number="2.5.0.1" class="anchored" data-anchor-id="kialo"><span class="header-section-number">2.5.0.1</span> Kialo</h4>
 </section>
-<section id="rainsprinklerlawn-dag" class="level4" data-number="2.5.0.2">
-<h4 data-number="2.5.0.2" class="anchored" data-anchor-id="rainsprinklerlawn-dag"><span class="header-section-number">2.5.0.2</span> Rain/Sprinkler/Lawn DAG</h4>
+<section id="bayeserver" class="level4" data-number="2.5.0.2">
+<h4 data-number="2.5.0.2" class="anchored" data-anchor-id="bayeserver"><span class="header-section-number">2.5.0.2</span> BayeServer</h4>
 </section>
-<section id="bayeserver" class="level4" data-number="2.5.0.3">
-<h4 data-number="2.5.0.3" class="anchored" data-anchor-id="bayeserver"><span class="header-section-number">2.5.0.3</span> BayeServer</h4>
+<section id="bayesnet-extended-example" class="level4" data-number="2.5.0.3">
+<h4 data-number="2.5.0.3" class="anchored" data-anchor-id="bayesnet-extended-example"><span class="header-section-number">2.5.0.3</span> BayesNet — Extended Example</h4>
 </section>
-<section id="bayesnet-extended-example" class="level4" data-number="2.5.0.4">
-<h4 data-number="2.5.0.4" class="anchored" data-anchor-id="bayesnet-extended-example"><span class="header-section-number">2.5.0.4</span> BayesNet — Extended Example</h4>
-</section>
-<section id="code-documentation" class="level4" data-number="2.5.0.5">
-<h4 data-number="2.5.0.5" class="anchored" data-anchor-id="code-documentation"><span class="header-section-number">2.5.0.5</span> Code + documentation</h4>
-<div id="fig-automation_pipeline" class="quarto-float quarto-figure quarto-figure-center anchored" data-fig-scap="Five-step AMTAIR automation pipeline from PDFs to Bayesian networks" width="100%" alt="FLOWCHART: Five-step automation pipeline workflow for AMTAIR project.           DATA: The pipeline transforms PDFs through ArgDown, BayesDown, CSV, and HTML into Bayesian network visualizations.           PURPOSE: Illustrates the core technical process that enables automated extraction of probabilistic models from AI safety literature.           DETAILS: Five numbered green steps show: (1) LLM-based extraction from PDFs to ArgDown, (2) ArgDown to BayesDown completion with probabilities, (3) Extracting world-models as CSV data, (4) Software tools for data inference, and (5) Visualization of the resulting Bayesian network.           Each step includes example outputs, with the final visualization showing a Rain-Sprinkler-Grass Wet Bayesian network with probability tables.           SOURCE: Created by the author to explain the AMTAIR methodology           " data-fig-align="center">
+<section id="rainsprinklerlawn-dag" class="level3" data-number="2.5.1">
+<h3 data-number="2.5.1" class="anchored" data-anchor-id="rainsprinklerlawn-dag"><span class="header-section-number">2.5.1</span> Rain/Sprinkler/Lawn DAG</h3>
+<section id="code-documentation" class="level4" data-number="2.5.1.1">
+<h4 data-number="2.5.1.1" class="anchored" data-anchor-id="code-documentation"><span class="header-section-number">2.5.1.1</span> Code + documentation</h4>
+<div id="fig-automation_pipeline" class="quarto-float quarto-figure quarto-figure-center anchored" data-fig-scap="Five-step AMTAIR automation pipeline from PDFs to Bayesian networks" alt="FLOWCHART: Five-step automation pipeline workflow for AMTAIR project.           DATA: The pipeline transforms PDFs through ArgDown, BayesDown, CSV, and HTML into Bayesian network visualizations.           PURPOSE: Illustrates the core technical process that enables automated extraction of probabilistic models from AI safety literature.           DETAILS: Five numbered green steps show: (1) LLM-based extraction from PDFs to ArgDown, (2) ArgDown to BayesDown completion with probabilities, (3) Extracting world-models as CSV data, (4) Software tools for data inference, and (5) Visualization of the resulting Bayesian network.           Each step includes example outputs, with the final visualization showing a Rain-Sprinkler-Grass Wet Bayesian network with probability tables.           SOURCE: Created by the author to explain the AMTAIR methodology           " data-fig-align="center" width="100%">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-automation_pipeline-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <a href="https://github.com/VJMeyer/submission"><img src="../images/pipeline.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:100.0%" data-fig-scap="Five-step AMTAIR automation pipeline from PDFs to Bayesian networks" alt="FLOWCHART: Five-step automation pipeline workflow for AMTAIR project.           DATA: The pipeline transforms PDFs through ArgDown, BayesDown, CSV, and HTML into Bayesian network visualizations.           PURPOSE: Illustrates the core technical process that enables automated extraction of probabilistic models from AI safety literature.           DETAILS: Five numbered green steps show: (1) LLM-based extraction from PDFs to ArgDown, (2) ArgDown to BayesDown completion with probabilities, (3) Extracting world-models as CSV data, (4) Software tools for data inference, and (5) Visualization of the resulting Bayesian network.           Each step includes example outputs, with the final visualization showing a Rain-Sprinkler-Grass Wet Bayesian network with probability tables.           SOURCE: Created by the author to explain the AMTAIR methodology           "></a>
@@ -423,6 +424,7 @@ Figure&nbsp;2.1: AMTAIR Automation Pipeline from CITATION
 <p>Testing crossreferencing grapics <a href="../ref/references.html#fig-automation_pipeline" class="quarto-xref">Figure&nbsp;<span>6.1</span></a>.</p>
 
 
+</section>
 </section>
 </section>
 

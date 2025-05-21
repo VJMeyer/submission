@@ -41,18 +41,21 @@ MTAIR / Carlsmith Model (Analytica) — Explanation (--- is motivation: should c
 #### Kialo
 
 
-
-
-#### Rain/Sprinkler/Lawn DAG
-
-
-
-
 #### BayeServer
 
 
 
 #### BayesNet — Extended Example
+
+
+
+
+### Rain/Sprinkler/Lawn DAG
+
+
+
+
+
 
 
 

@@ -174,7 +174,7 @@
     "href": "chapters/Context.html#practical-real-world-examples",
     "title": "2  Context",
     "section": "2.5 Practical Real World Examples",
-    "text": "2.5 Practical Real World Examples\nMTAIR / Carlsmith Model (Analytica) — Explanation (— is motivation: should come first)\n\n2.5.0.1 Kialo\n\n\n2.5.0.2 Rain/Sprinkler/Lawn DAG\n\n\n2.5.0.3 BayeServer\n\n\n2.5.0.4 BayesNet — Extended Example\n\n\n2.5.0.5 Code + documentation\n\n\n\n\n\n\nFigure 2.1: AMTAIR Automation Pipeline from CITATION\n\n\n\nTesting crossreferencing grapics Figure 6.1.",
+    "text": "2.5 Practical Real World Examples\nMTAIR / Carlsmith Model (Analytica) — Explanation (— is motivation: should come first)\n\n2.5.0.1 Kialo\n\n\n2.5.0.2 BayeServer\n\n\n2.5.0.3 BayesNet — Extended Example\n\n\n2.5.1 Rain/Sprinkler/Lawn DAG\n\n2.5.1.1 Code + documentation\n\n\n\n\n\n\nFigure 2.1: AMTAIR Automation Pipeline from CITATION\n\n\n\nTesting crossreferencing grapics Figure 6.1.",
     "crumbs": [
       "<span class='chapter-number'>2</span>  <span class='chapter-title'>Context</span>"
     ]
@@ -314,7 +314,17 @@
     "href": "chapters/Conclusion.html",
     "title": "5  Conclusion",
     "section": "",
-    "text": "6 The Current State of Things & How to Continue",
+    "text": "5.1 The Current State of Things & How to Continue",
+    "crumbs": [
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Conclusion</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/Conclusion.html#the-current-state-of-things-how-to-continue",
+    "href": "chapters/Conclusion.html#the-current-state-of-things-how-to-continue",
+    "title": "5  Conclusion",
+    "section": "",
+    "text": "10% of Grade: ~ 14% of text ~ 4200 words ~ 10 pages\n\n- summarizes thesis and line of argument \n- outlines possible implications\n- notes outstanding issues / limitations of discussion\n- points to avenues for further research\n- overall conclusion is in line with introduction",
     "crumbs": [
       "<span class='chapter-number'>5</span>  <span class='chapter-title'>Conclusion</span>"
     ]
@@ -323,8 +333,8 @@
     "objectID": "chapters/Conclusion.html#summary-key-takeaways-findings",
     "href": "chapters/Conclusion.html#summary-key-takeaways-findings",
     "title": "5  Conclusion",
-    "section": "6.1 Summary — Key Takeaways & Findings",
-    "text": "6.1 Summary — Key Takeaways & Findings\n\n6.1.1 Assessing Policy Effects:\nEvaluating how different policies alter P(Doom).\n\n\n6.1.2 Conditional Probability:\nCalculating P(Doom | Policy Alpha).\n\n\n6.1.3 Methodology:\nUpdate model parameters based on policy implementation.\nRecompute probabilities accordingly.\n\n\n6.1.4 Purpose:\nInform policymakers of potential policy effectiveness.\nPrioritize interventions that significantly reduce risks.",
+    "section": "5.2 Summary — Key Takeaways & Findings",
+    "text": "5.2 Summary — Key Takeaways & Findings\n\n5.2.1 Assessing Policy Effects:\nEvaluating how different policies alter P(Doom).\n\n\n5.2.2 Conditional Probability:\nCalculating P(Doom | Policy Alpha).\n\n\n5.2.3 Methodology:\nUpdate model parameters based on policy implementation.\nRecompute probabilities accordingly.\n\n\n5.2.4 Purpose:\nInform policymakers of potential policy effectiveness.\nPrioritize interventions that significantly reduce risks.",
     "crumbs": [
       "<span class='chapter-number'>5</span>  <span class='chapter-title'>Conclusion</span>"
     ]
@@ -333,8 +343,8 @@
     "objectID": "chapters/Conclusion.html#outlook-outlook-next-steps-further-research",
     "href": "chapters/Conclusion.html#outlook-outlook-next-steps-further-research",
     "title": "5  Conclusion",
-    "section": "6.2 Outlook — Outlook & Next Steps / Further Research",
-    "text": "6.2 Outlook — Outlook & Next Steps / Further Research\n\n6.2.1 Scaling Up:\n\nInclude more variables and data sources.\n\n\n\n6.2.2 Collaboration:\n\nPartner with policymakers and researchers.\n\n\n\n6.2.3 Technological Enhancements:\n\nEmploy advanced AI techniques.\n\n\n\n6.2.4 Potential Impact:\n\nInfluence global AI governance.\n\n\n\n6.2.5 Limitations of the Analysis\n\n\n6.2.6 Policy Implications & Recommendations\n\n\n6.2.7 Areas for Future Research\n\n\n6.2.8 Open Questions — Central/Remaining Questions & Feedback\n\n6.2.8.1 Questions:\n\nHow can we improve automation accuracy?\n\nWhat challenges exist in policy implementation?\n\nHow do we mitigate AI model biases?\n\nHow can interdisciplinary efforts enhance outcomes?\n\n\n\n6.2.8.2 Feedback:\n\nInvite thoughts, critiques, and suggestions.\n\n\n\n\n\n6.2.9 Outlook — Outlook & Next Steps / Further Research",
+    "section": "5.3 Outlook — Outlook & Next Steps / Further Research",
+    "text": "5.3 Outlook — Outlook & Next Steps / Further Research\n\n5.3.1 Scaling Up:\n\nInclude more variables and data sources.\n\n\n\n5.3.2 Collaboration:\n\nPartner with policymakers and researchers.\n\n\n\n5.3.3 Technological Enhancements:\n\nEmploy advanced AI techniques.\n\n\n\n5.3.4 Potential Impact:\n\nInfluence global AI governance.\n\n\n\n5.3.5 Limitations of the Analysis\n\n\n5.3.6 Policy Implications & Recommendations\n\n\n5.3.7 Areas for Future Research\n\n\n5.3.8 Open Questions — Central/Remaining Questions & Feedback\n\n5.3.8.1 Questions:\n\nHow can we improve automation accuracy?\n\nWhat challenges exist in policy implementation?\n\nHow do we mitigate AI model biases?\n\nHow can interdisciplinary efforts enhance outcomes?\n\n\n\n5.3.8.2 Feedback:\n\nInvite thoughts, critiques, and suggestions.\n\n\n\n\n\n5.3.9 Outlook — Outlook & Next Steps / Further Research",
     "crumbs": [
       "<span class='chapter-number'>5</span>  <span class='chapter-title'>Conclusion</span>"
     ]
@@ -343,8 +353,8 @@
     "objectID": "chapters/Conclusion.html#conclusion-toward-an-adaptive-ai-governance-framework",
     "href": "chapters/Conclusion.html#conclusion-toward-an-adaptive-ai-governance-framework",
     "title": "5  Conclusion",
-    "section": "6.3 Conclusion: Toward an Adaptive AI Governance Framework",
-    "text": "6.3 Conclusion: Toward an Adaptive AI Governance Framework\n\n6.3.1 Key Contributions and Findings\n\n\n\n6.3.2 Limitations of the Current Implementation\n\n\n\n6.3.3 Policy Implications and Recommendations\n\n\n\n6.3.4 Future Research Directions\n\n\n\n6.3.5 Concluding Reflections",
+    "section": "5.4 Conclusion: Toward an Adaptive AI Governance Framework",
+    "text": "5.4 Conclusion: Toward an Adaptive AI Governance Framework\n\n5.4.1 Key Contributions and Findings\n\n\n\n5.4.2 Limitations of the Current Implementation\n\n\n\n5.4.3 Policy Implications and Recommendations\n\n\n\n5.4.4 Future Research Directions\n\n\n\n5.4.5 Concluding Reflections",
     "crumbs": [
       "<span class='chapter-number'>5</span>  <span class='chapter-title'>Conclusion</span>"
     ]
@@ -464,17 +474,7 @@
     "href": "ref/references.html#sec-heading",
     "title": "6  Quarto Syntax",
     "section": "6.1 Headings & Potential Headings",
-    "text": "6.1 Headings & Potential Headings",
-    "crumbs": [
-      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Quarto Syntax</span>"
-    ]
-  },
-  {
-    "objectID": "ref/references.html#sidebars-for-comments",
-    "href": "ref/references.html#sidebars-for-comments",
-    "title": "6  Quarto Syntax",
-    "section": "6.2 Sidebars for comments",
-    "text": "6.2 Sidebars for comments\nCreate Sidebars by applying the .sidebar attribute to a level 1 heading (for global sidebars) or level 2 heading (for page level sidebars).\n\n\nverbatim code formatting for notes and ideas to be included (here)\nAlso code blocks for more extensive notes and ideas to be included and checklists\n- test 1. \n- test 2. \n- test 3.\n2. second\n3. third\n\n\nBlockquote formatting for “Suggested Citations (e.g. carlsmith 2024 on …)” and/or claims which require a citation (e.g. claim x should be backed-up by a ciation from the literature)\n\nHere is an inline note.1\nHere is a footnote reference,2\nHere’s some raw inline HTML: html\npage 1\n\npage 2\n\n\n\n\n\nflowchart LR\n  A[Hard edge] --&gt; B(Round edge)\n  B --&gt; C{Decision}\n  C --&gt; D[Result one]\n  C --&gt; E[Result two]\n\n\n\n\n\n\nTesting crossreferencing grapics Figure 6.1.",
+    "text": "6.1 Headings & Potential Headings\n\n\nverbatim code formatting for notes and ideas to be included (here)\nAlso code blocks for more extensive notes and ideas to be included and checklists\n- test 1. \n- test 2. \n- test 3.\n2. second\n3. third\n\n\nBlockquote formatting for “Suggested Citations (e.g. carlsmith 2024 on …)” and/or claims which require a citation (e.g. claim x should be backed-up by a ciation from the literature)\n\nHere is an inline note.1\nHere is a footnote reference,2\nHere’s some raw inline HTML: html\npage 1\n\npage 2\n\n\n\n\n\nflowchart LR\n  A[Hard edge] --&gt; B(Round edge)\n  B --&gt; C{Decision}\n  C --&gt; D[Result one]\n  C --&gt; E[Result two]\n\n\n\n\n\n\nTesting crossreferencing grapics Figure 6.1.",
     "crumbs": [
       "<span class='chapter-number'>6</span>  <span class='chapter-title'>Quarto Syntax</span>"
     ]
