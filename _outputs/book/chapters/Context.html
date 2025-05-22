@@ -20,7 +20,27 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
-</style>
+/* CSS for citations */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+  margin-bottom: 0em;
+}
+.hanging-indent div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}</style>
 
 
 <script src="../site_libs/quarto-nav/quarto-nav.js"></script>
@@ -70,6 +90,35 @@ ul.task-list li input[type="checkbox"] {
 }</script>
 <script src="https://hypothes.is/embed.js" async=""></script>
 
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN") {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
 
 </head>
 
@@ -222,25 +271,67 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">ToC</h2>
    
   <ul>
-  <li><a href="#sec-context-background" id="toc-sec-context-background" class="nav-link active" data-scroll-target="#sec-context-background"><span class="header-section-number">3</span> Context &amp; Background</a>
+  <li><a href="#sec-context" id="toc-sec-context" class="nav-link active" data-scroll-target="#sec-context"><span class="header-section-number">3</span> Context &amp; Background</a>
   <ul>
   <li><a href="#sec-theoretical-foundations" id="toc-sec-theoretical-foundations" class="nav-link" data-scroll-target="#sec-theoretical-foundations"><span class="header-section-number">3.1</span> Theoretical Foundations</a>
   <ul>
-  <li><a href="#sec-carlsmith-model" id="toc-sec-carlsmith-model" class="nav-link" data-scroll-target="#sec-carlsmith-model"><span class="header-section-number">3.1.1</span> AI Existential Risk: The Carlsmith Model</a></li>
-  <li><a href="#sec-epistemic-challenge" id="toc-sec-epistemic-challenge" class="nav-link" data-scroll-target="#sec-epistemic-challenge"><span class="header-section-number">3.1.2</span> The Epistemic Challenge of Policy Evaluation</a></li>
+  <li><a href="#sec-carlsmith-model" id="toc-sec-carlsmith-model" class="nav-link" data-scroll-target="#sec-carlsmith-model"><span class="header-section-number">3.1.1</span> AI Existential Risk: The Carlsmith Model</a>
+  <ul class="collapse">
+  <li><a href="#sec-carlsmith-ideal" id="toc-sec-carlsmith-ideal" class="nav-link" data-scroll-target="#sec-carlsmith-ideal"><span class="header-section-number">3.1.1.1</span> Why Carlsmith as Ideal Formalization Target</a></li>
+  </ul></li>
+  <li><a href="#sec-epistemic-challenge" id="toc-sec-epistemic-challenge" class="nav-link" data-scroll-target="#sec-epistemic-challenge"><span class="header-section-number">3.1.2</span> The Epistemic Challenge of Policy Evaluation</a>
+  <ul class="collapse">
+  <li><a href="#sec-unique-difficulties" id="toc-sec-unique-difficulties" class="nav-link" data-scroll-target="#sec-unique-difficulties"><span class="header-section-number">3.1.2.1</span> Unique Difficulties in AI Governance</a></li>
+  <li><a href="#sec-traditional-limitations" id="toc-sec-traditional-limitations" class="nav-link" data-scroll-target="#sec-traditional-limitations"><span class="header-section-number">3.1.2.2</span> Limitations of Traditional Policy Analysis</a></li>
+  </ul></li>
   <li><a href="#sec-argument-mapping" id="toc-sec-argument-mapping" class="nav-link" data-scroll-target="#sec-argument-mapping"><span class="header-section-number">3.1.3</span> Argument Mapping and Formal Representations</a></li>
-  <li><a href="#sec-bayesian-networks" id="toc-sec-bayesian-networks" class="nav-link" data-scroll-target="#sec-bayesian-networks"><span class="header-section-number">3.1.4</span> Bayesian Networks as Knowledge Representation</a></li>
-  <li><a href="#sec-mtair-framework" id="toc-sec-mtair-framework" class="nav-link" data-scroll-target="#sec-mtair-framework"><span class="header-section-number">3.1.5</span> The MTAIR Framework: Achievements and Limitations</a></li>
-  <li><a href="#sec-narrow-path" id="toc-sec-narrow-path" class="nav-link" data-scroll-target="#sec-narrow-path"><span class="header-section-number">3.1.6</span> “A Narrow Path”: Conditional Policy Proposals in Practice</a></li>
+  <li><a href="#sec-bayesian-networks" id="toc-sec-bayesian-networks" class="nav-link" data-scroll-target="#sec-bayesian-networks"><span class="header-section-number">3.1.4</span> Bayesian Networks as Knowledge Representation</a>
+  <ul class="collapse">
+  <li><a href="#sec-mathematical-foundations" id="toc-sec-mathematical-foundations" class="nav-link" data-scroll-target="#sec-mathematical-foundations"><span class="header-section-number">3.1.4.1</span> Mathematical Foundations</a></li>
+  <li><a href="#sec-rain-sprinkler-example" id="toc-sec-rain-sprinkler-example" class="nav-link" data-scroll-target="#sec-rain-sprinkler-example"><span class="header-section-number">3.1.4.2</span> The Rain-Sprinkler-Grass Example</a></li>
+  <li><a href="#sec-modeling-advantages" id="toc-sec-modeling-advantages" class="nav-link" data-scroll-target="#sec-modeling-advantages"><span class="header-section-number">3.1.4.3</span> Advantages for AI Risk Modeling</a></li>
+  </ul></li>
+  <li><a href="#sec-argument-mapping" id="toc-sec-argument-mapping" class="nav-link" data-scroll-target="#sec-argument-mapping"><span class="header-section-number">3.1.5</span> Argument Mapping and Formal Representations</a>
+  <ul class="collapse">
+  <li><a href="#sec-natural-to-formal" id="toc-sec-natural-to-formal" class="nav-link" data-scroll-target="#sec-natural-to-formal"><span class="header-section-number">3.1.5.1</span> From Natural Language to Formal Models</a></li>
+  <li><a href="#sec-bayesdown-innovation" id="toc-sec-bayesdown-innovation" class="nav-link" data-scroll-target="#sec-bayesdown-innovation"><span class="header-section-number">3.1.5.2</span> BayesDown: The Critical Innovation</a></li>
+  </ul></li>
+  <li><a href="#sec-mtair-framework" id="toc-sec-mtair-framework" class="nav-link" data-scroll-target="#sec-mtair-framework"><span class="header-section-number">3.1.6</span> The MTAIR Framework: Achievements and Limitations</a>
+  <ul class="collapse">
+  <li><a href="#sec-mtair-innovations" id="toc-sec-mtair-innovations" class="nav-link" data-scroll-target="#sec-mtair-innovations"><span class="header-section-number">3.1.6.1</span> MTAIR’s Innovations</a></li>
+  <li><a href="#sec-mtair-limitations" id="toc-sec-mtair-limitations" class="nav-link" data-scroll-target="#sec-mtair-limitations"><span class="header-section-number">3.1.6.2</span> Fundamental Limitations Motivating AMTAIR</a></li>
+  </ul></li>
+  <li><a href="#sec-narrow-path" id="toc-sec-narrow-path" class="nav-link" data-scroll-target="#sec-narrow-path"><span class="header-section-number">3.1.7</span> “A Narrow Path”: Conditional Policy Proposals in Practice</a></li>
   </ul></li>
   <li><a href="#sec-methodology" id="toc-sec-methodology" class="nav-link" data-scroll-target="#sec-methodology"><span class="header-section-number">3.2</span> Methodology</a>
   <ul>
-  <li><a href="#sec-research-design" id="toc-sec-research-design" class="nav-link" data-scroll-target="#sec-research-design"><span class="header-section-number">3.2.1</span> Research Design Overview</a></li>
+  <li><a href="#sec-research-design" id="toc-sec-research-design" class="nav-link" data-scroll-target="#sec-research-design"><span class="header-section-number">3.2.1</span> Research Design Overview</a>
+  <ul class="collapse">
+  <li><a href="#sec-hybrid-approach" id="toc-sec-hybrid-approach" class="nav-link" data-scroll-target="#sec-hybrid-approach"><span class="header-section-number">3.2.1.1</span> Hybrid Theoretical-Empirical Approach</a></li>
+  <li><a href="#sec-iterative-process" id="toc-sec-iterative-process" class="nav-link" data-scroll-target="#sec-iterative-process"><span class="header-section-number">3.2.1.2</span> Iterative Development Process</a></li>
+  </ul></li>
   <li><a href="#sec-formalizing-world-models" id="toc-sec-formalizing-world-models" class="nav-link" data-scroll-target="#sec-formalizing-world-models"><span class="header-section-number">3.2.2</span> Formalizing World Models from AI Safety Literature</a></li>
-  <li><a href="#sec-directed-acyclic-graphs" id="toc-sec-directed-acyclic-graphs" class="nav-link" data-scroll-target="#sec-directed-acyclic-graphs"><span class="header-section-number">3.2.3</span> Directed Acyclic Graphs: Structure and Semantics</a></li>
-  <li><a href="#sec-quantification-approaches" id="toc-sec-quantification-approaches" class="nav-link" data-scroll-target="#sec-quantification-approaches"><span class="header-section-number">3.2.4</span> Quantification Approaches for Probabilistic Judgments</a></li>
-  <li><a href="#sec-inference-techniques" id="toc-sec-inference-techniques" class="nav-link" data-scroll-target="#sec-inference-techniques"><span class="header-section-number">3.2.5</span> Inference Techniques for Complex Networks</a></li>
-  <li><a href="#sec-prediction-markets" id="toc-sec-prediction-markets" class="nav-link" data-scroll-target="#sec-prediction-markets"><span class="header-section-number">3.2.6</span> Integration with Prediction Markets and Forecasting Platforms</a></li>
+  <li><a href="#sec-natural-to-computational" id="toc-sec-natural-to-computational" class="nav-link" data-scroll-target="#sec-natural-to-computational"><span class="header-section-number">3.2.3</span> From Natural Language to Computational Models</a>
+  <ul class="collapse">
+  <li><a href="#sec-two-stage-extraction" id="toc-sec-two-stage-extraction" class="nav-link" data-scroll-target="#sec-two-stage-extraction"><span class="header-section-number">3.2.3.1</span> The Two-Stage Extraction Process</a></li>
+  <li><a href="#sec-llm-integration" id="toc-sec-llm-integration" class="nav-link" data-scroll-target="#sec-llm-integration"><span class="header-section-number">3.2.3.2</span> LLM Integration Strategy</a></li>
+  </ul></li>
+  <li><a href="#sec-dag-structure" id="toc-sec-dag-structure" class="nav-link" data-scroll-target="#sec-dag-structure"><span class="header-section-number">3.2.4</span> Directed Acyclic Graphs: Structure and Semantics</a>
+  <ul class="collapse">
+  <li><a href="#sec-formal-properties" id="toc-sec-formal-properties" class="nav-link" data-scroll-target="#sec-formal-properties"><span class="header-section-number">3.2.4.1</span> Formal Properties</a></li>
+  <li><a href="#sec-causal-interpretation" id="toc-sec-causal-interpretation" class="nav-link" data-scroll-target="#sec-causal-interpretation"><span class="header-section-number">3.2.4.2</span> Causal Interpretation</a></li>
+  </ul></li>
+  <li><a href="#sec-quantification" id="toc-sec-quantification" class="nav-link" data-scroll-target="#sec-quantification"><span class="header-section-number">3.2.5</span> Quantification of Probabilistic Judgments</a>
+  <ul class="collapse">
+  <li><a href="#sec-qualitative-to-quantitative" id="toc-sec-qualitative-to-quantitative" class="nav-link" data-scroll-target="#sec-qualitative-to-quantitative"><span class="header-section-number">3.2.5.1</span> From Qualitative to Quantitative</a></li>
+  <li><a href="#sec-expert-elicitation" id="toc-sec-expert-elicitation" class="nav-link" data-scroll-target="#sec-expert-elicitation"><span class="header-section-number">3.2.5.2</span> Expert Elicitation Methods</a></li>
+  </ul></li>
+  <li><a href="#sec-inference-techniques" id="toc-sec-inference-techniques" class="nav-link" data-scroll-target="#sec-inference-techniques"><span class="header-section-number">3.2.6</span> Inference Techniques for Complex Networks</a></li>
+  <li><a href="#sec-prediction-markets" id="toc-sec-prediction-markets" class="nav-link" data-scroll-target="#sec-prediction-markets"><span class="header-section-number">3.2.7</span> Integration with Prediction Markets and Forecasting Platforms</a>
+  <ul class="collapse">
+  <li><a href="#sec-live-data" id="toc-sec-live-data" class="nav-link" data-scroll-target="#sec-live-data"><span class="header-section-number">3.2.7.1</span> Live Data Sources</a></li>
+  <li><a href="#sec-data-processing" id="toc-sec-data-processing" class="nav-link" data-scroll-target="#sec-data-processing"><span class="header-section-number">3.2.7.2</span> Data Processing Pipeline</a></li>
+  </ul></li>
   </ul></li>
   </ul></li>
   </ul>
@@ -282,7 +373,7 @@ ul.task-list li input[type="checkbox"] {
 </code></pre>
 <!-- 1. successively (chunk my chunk) introduce concepts/ideas ---
 and 2. ground each with existing literature -->
-<section id="sec-context-background" class="level1" data-number="3">
+<section id="sec-context" class="level1" data-number="3">
 <h1 data-number="3"><span class="header-section-number">3</span> Context &amp; Background</h1>
 <!-- [ ] Expand this section to ~29% of total text (approximately 8700 words) -->
 <!-- ---
@@ -294,6 +385,10 @@ numbering:
 --- -->
 <section id="sec-theoretical-foundations" class="level2" data-number="3.1">
 <h2 data-number="3.1" class="anchored" data-anchor-id="sec-theoretical-foundations"><span class="header-section-number">3.1</span> Theoretical Foundations</h2>
+<!-- demonstrates understanding of all relevant core concepts -->
+<!-- explains why the question/thesis/problem is relevant in student's own words (supported by quotations) -->
+<!-- situates it within the debate/course material -->
+<!-- reconstructs selected arguments and identifies relevant assumptions -->
 <section id="sec-carlsmith-model" class="level3" data-number="3.1.1">
 <h3 data-number="3.1.1" class="anchored" data-anchor-id="sec-carlsmith-model"><span class="header-section-number">3.1.1</span> AI Existential Risk: The Carlsmith Model</h3>
 <!-- [ ] Examine Joe Carlsmith's probabilistic model of power-seeking AI causing existential catastrophe -->
@@ -301,15 +396,34 @@ numbering:
 <blockquote class="blockquote">
 <p>Carlsmith’s “Is power-seeking AI an existential risk?” (2021) represents one of the most structured approaches to assessing the probability of existential catastrophe from advanced AI. The analysis decomposes the overall risk into six key premises, each with an explicit probability estimate.</p>
 </blockquote>
-<p>`The six key premises are:</p>
+<blockquote class="blockquote">
+<p><span class="citation" data-cites="carlsmith2021">(<a href="../ref/references.html#ref-carlsmith2021" role="doc-biblioref"><strong>carlsmith2021?</strong></a>)</span> provides the canonical structured approach to AI existential risk assessment</p>
+</blockquote>
+<p><strong>Six-Premise Decomposition:</strong></p>
+<p><code>Carlsmith decomposes existential risk into a probabilistic chain with explicit estimates:</code></p>
 <ol type="1">
-<li>Development of transformative AI systems this century (80%)</li>
-<li>AI systems pursuing objectives in the world (95%)</li>
-<li>Systems with power-seeking instrumental incentives (40%)</li>
-<li>Systems with sufficient capability to pose existential threats (65%)</li>
-<li>AI systems not aligned with human values (50%)</li>
-<li>Misaligned, power-seeking systems causing existential catastrophe (65%)`</li>
+<li><strong>Premise 1</strong>: Transformative AI development this century (P ≈ 0.80)</li>
+<li><strong>Premise 2</strong>: AI systems pursuing objectives in the world (P ≈ 0.95)</li>
+<li><strong>Premise 3</strong>: Systems with power-seeking instrumental incentives (P ≈ 0.40)</li>
+<li><strong>Premise 4</strong>: Sufficient capability for existential threat (P ≈ 0.65)</li>
+<li><strong>Premise 5</strong>: Misaligned systems despite safety efforts (P ≈ 0.50)</li>
+<li><strong>Premise 6</strong>: Catastrophic outcomes from misaligned power-seeking (P ≈ 0.65)</li>
 </ol>
+<p><strong>Composite Risk Calculation</strong>: P(doom) ≈ 0.05 (5%) ~5% probability of existential catastrophe</p>
+<blockquote class="blockquote">
+<p>This structured approach exemplifies the type of reasoning that AMTAIR aims to formalize and automate, providing both transparency in assumptions and modularity for critique and refinement.</p>
+</blockquote>
+<p><code>Carlsmith's model exemplifies the type of structured reasoning that AMTAIR aims to formalize and automate</code></p>
+<section id="sec-carlsmith-ideal" class="level4" data-number="3.1.1.1">
+<h4 data-number="3.1.1.1" class="anchored" data-anchor-id="sec-carlsmith-ideal"><span class="header-section-number">3.1.1.1</span> Why Carlsmith as Ideal Formalization Target</h4>
+<pre><code>- Explicitly probabilistic reasoning with quantified estimates
+- Clear conditional dependencies between premises  
+- Transparent decomposition of complex causal pathways
+- Well-documented argumentation available for extraction validation
+- Policy-relevant implications requiring formal evaluation</code></pre>
+<p><strong>Formalization Potential:</strong></p>
+<p><code>Carlsmith's model represents "low-hanging fruit" for automated formalization because it already exhibits explicit probabilistic reasoning with clear conditional dependencies. Success with this structured argument validates the approach for less explicit arguments throughout AI safety literature.</code></p>
+</section>
 </section>
 <section id="sec-epistemic-challenge" class="level3" data-number="3.1.2">
 <h3 data-number="3.1.2" class="anchored" data-anchor-id="sec-epistemic-challenge"><span class="header-section-number">3.1.2</span> The Epistemic Challenge of Policy Evaluation</h3>
@@ -325,6 +439,51 @@ numbering:
 <li>Expert elicitation alone fails to formalize interdependencies between variables</li>
 <li>Qualitative approaches obscure crucial assumptions that drive conclusions`</li>
 </ul>
+<p><strong>Unprecedented Epistemic Environment:</strong></p>
+<blockquote class="blockquote">
+<p>AI governance policy evaluation faces challenges that render traditional policy analysis methods insufficient: complex causal chains, deep uncertainty about unprecedented capabilities, divergent stakeholder worldviews, and limited opportunities for empirical validation.</p>
+</blockquote>
+<pre><code>Specific challenges include:
+
+• **Deep Uncertainty**: Many decisions involve unprecedented scenarios without historical frequency data
+• **Complex Causality**: Policy effects propagate through multi-level dependencies (technical → institutional → strategic)
+• **Multidisciplinary Integration**: Combining technical facts, ethical principles, and strategic considerations
+• **Value-Laden Assessment**: Risk evaluation inherently involves normative judgments about acceptable outcomes</code></pre>
+<section id="sec-unique-difficulties" class="level4" data-number="3.1.2.1">
+<h4 data-number="3.1.2.1" class="anchored" data-anchor-id="sec-unique-difficulties"><span class="header-section-number">3.1.2.1</span> Unique Difficulties in AI Governance</h4>
+<p><strong>Complex Causal Chains</strong>: Multi-level dependencies between technical capabilities, institutional responses, and strategic outcomes</p>
+<p><strong>Deep Uncertainty</strong>: Unprecedented AI capabilities make historical analogies insufficient</p>
+<blockquote class="blockquote">
+<p><span class="citation" data-cites="lempert2003">(<a href="../ref/references.html#ref-lempert2003" role="doc-biblioref"><strong>lempert2003?</strong></a>)</span> on robust decision-making under deep uncertainty</p>
+</blockquote>
+<p><strong>Divergent Worldviews</strong>: Fundamental disagreements about:</p>
+<ul>
+<li>Timeline expectations for transformative AI</li>
+<li>Difficulty of alignment problems</li>
+<li>Effectiveness of governance interventions</li>
+<li>International coordination possibilities</li>
+</ul>
+</section>
+<section id="sec-traditional-limitations" class="level4" data-number="3.1.2.2">
+<h4 data-number="3.1.2.2" class="anchored" data-anchor-id="sec-traditional-limitations"><span class="header-section-number">3.1.2.2</span> Limitations of Traditional Policy Analysis</h4>
+<!-- Critical assessment of existing approaches -->
+<ul>
+<li><strong>Cost-Benefit Analysis</strong>: Struggles with existential outcomes and infinite expected values</li>
+<li><strong>Scenario Planning</strong>: Lacks probabilistic reasoning and uncertainty quantification</li>
+<li><strong>Expert Elicitation</strong>: Fails to formalize complex interdependencies between variables</li>
+<li><strong>Qualitative Frameworks</strong>: Obscure crucial assumptions and parameter sensitivities</li>
+</ul>
+<p><strong>Limitations of Traditional Approaches:</strong></p>
+<ul>
+<li><strong>Cost-Benefit Analysis</strong>: Struggles with existential outcomes and infinite expected values</li>
+<li><strong>Scenario Planning</strong>: Often lacks probabilistic reasoning necessary for rigorous uncertainty quantification</li>
+<li><strong>Expert Elicitation</strong>: Fails to formalize complex interdependencies between variables and assumptions</li>
+<li><strong>Qualitative Frameworks</strong>: Obscure crucial assumptions and parameter sensitivities driving conclusions</li>
+</ul>
+<blockquote class="blockquote">
+<p><span class="citation" data-cites="lempert2003">(<a href="../ref/references.html#ref-lempert2003" role="doc-biblioref"><strong>lempert2003?</strong></a>)</span> on robust decision-making under deep uncertainty provides methodological foundations, but application to AI governance requires novel integration of argument mapping with probabilistic modeling.</p>
+</blockquote>
+</section>
 </section>
 <section id="sec-argument-mapping" class="level3" data-number="3.1.3">
 <h3 data-number="3.1.3" class="anchored" data-anchor-id="sec-argument-mapping"><span class="header-section-number">3.1.3</span> Argument Mapping and Formal Representations</h3>
@@ -352,7 +511,7 @@ numbering:
 <li>Capability for interventional reasoning through do-calculus</li>
 <li>Balance between mathematical rigor and intuitive visual representation`</li>
 </ul>
-<div id="fig-bayesian-network" class="quarto-float quarto-figure quarto-figure-center anchored" alt="A directed acyclic graph showing a simple Bayesian network with nodes and edges" width="70%" data-fig-align="center">
+<div id="fig-bayesian-network" class="quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center" alt="A directed acyclic graph showing a simple Bayesian network with nodes and edges" width="70%">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-bayesian-network-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <a href="https://claude.ai/chat/ab8988f3-18b7-45a5-8a50-b25aa4b34cbf"><img src="../images/pipeline.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:70.0%" alt="A directed acyclic graph showing a simple Bayesian network with nodes and edges"></a>
@@ -362,13 +521,130 @@ Figure&nbsp;3.1: Example Bayesian Network
 </figcaption>
 </figure>
 </div>
+<section id="sec-mathematical-foundations" class="level4" data-number="3.1.4.1">
+<h4 data-number="3.1.4.1" class="anchored" data-anchor-id="sec-mathematical-foundations"><span class="header-section-number">3.1.4.1</span> Mathematical Foundations</h4>
+<p><code>Bayesian networks provide a formal mathematical framework for representing causal relationships and reasoning under uncertainty through Directed Acyclic Graphs (DAGs) combining qualitative structure with quantitative parameters.</code></p>
+<p><strong>Directed Acyclic Graphs (DAGs)</strong>:</p>
+<p><strong>Core Components:</strong></p>
+<ul>
+<li><strong>Nodes</strong>: Variables with discrete states representing propositions or factors</li>
+<li><strong>Edges</strong>: Directed relationships representing conditional dependencies</li>
+<li><strong>Acyclicity</strong>: Ensuring coherent probabilistic interpretation without circular dependencies</li>
+</ul>
+<p>BNs:<!-- [ ] Explain BNs vs DAGs --></p>
+<ul>
+<li><strong>Conditional Probability Tables</strong>: Quantifying P(Node|Parents) for all parent state combinations</li>
+</ul>
+<p><strong>Probability Factorization</strong>: <span class="math inline">\(P(X_1, X_2, ..., X_n) = \prod_{i=1}^{n} P(X_i | Parents(X_i))\)</span></p>
 </section>
-<section id="sec-mtair-framework" class="level3" data-number="3.1.5">
-<h3 data-number="3.1.5" class="anchored" data-anchor-id="sec-mtair-framework"><span class="header-section-number">3.1.5</span> The MTAIR Framework: Achievements and Limitations</h3>
+<section id="sec-rain-sprinkler-example" class="level4" data-number="3.1.4.2">
+<h4 data-number="3.1.4.2" class="anchored" data-anchor-id="sec-rain-sprinkler-example"><span class="header-section-number">3.1.4.2</span> The Rain-Sprinkler-Grass Example</h4>
+<!-- Introduce canonical example used throughout thesis -->
+<p><strong>The Rain-Sprinkler-Grass Canonical Example:</strong></p>
+<p><code>This simple example demonstrates all key concepts while remaining intuitive</code></p>
+<p><strong>Network Structure</strong>:</p>
+<ul>
+<li><strong>Rain</strong> (root cause): P(rain) = 0.2</li>
+<li><strong>Sprinkler</strong> (intermediate): P(sprinkler|rain) varies by rain state</li>
+<li><strong>Grass_Wet</strong> (effect): P(wet|rain, sprinkler) depends on both causes</li>
+</ul>
+<p><strong>Inference Capabilities</strong>:</p>
+<ul>
+<li><p>Marginal probabilities: P(grass_wet) = ?</p></li>
+<li><p>Conditional queries: P(rain|grass_wet) = ?</p></li>
+<li><p>Counterfactual analysis: P(grass_wet|do(sprinkler=false)) = ?</p></li>
+<li><p>Marginal probabilities: P(grass_wet) computed from joint distribution</p></li>
+<li><p>Conditional queries: P(rain|grass_wet) for diagnostic reasoning</p></li>
+<li><p>Counterfactual analysis: P(grass_wet|do(sprinkler=false)) for intervention effects</p></li>
+</ul>
+<pre><code>python
+# Basic network representation
+nodes = ['Rain', 'Sprinkler', 'Grass_Wet']
+edges = [('Rain', 'Sprinkler'), ('Rain', 'Grass_Wet'), ('Sprinkler', 'Grass_Wet')]
+
+# Conditional probability specification
+P_wet_given_causes = {
+    (True, True): 0.99,    # Rain=T, Sprinkler=T
+    (True, False): 0.80,   # Rain=T, Sprinkler=F  
+    (False, True): 0.90,   # Rain=F, Sprinkler=T
+    (False, False): 0.01   # Rain=F, Sprinkler=F
+}</code></pre>
+</section>
+<section id="sec-modeling-advantages" class="level4" data-number="3.1.4.3">
+<h4 data-number="3.1.4.3" class="anchored" data-anchor-id="sec-modeling-advantages"><span class="header-section-number">3.1.4.3</span> Advantages for AI Risk Modeling</h4>
+<ul>
+<li><strong>Explicit Uncertainty</strong>: All beliefs represented with probability distributions rather than point estimates</li>
+<li><strong>Causal Reasoning</strong>: Native support for intervention analysis and counterfactual reasoning through do-calculus</li>
+<li><strong>Evidence Integration</strong>: Bayesian updating enables principled incorporation of new information</li>
+<li><strong>Modular Structure</strong>: Complex arguments decomposed into manageable, verifiable components</li>
+<li><strong>Visual Communication</strong>: Graphical representation facilitates understanding across expertise levels</li>
+</ul>
+</section>
+</section>
+<section id="sec-argument-mapping" class="level3" data-number="3.1.5">
+<h3 data-number="3.1.5" class="anchored" data-anchor-id="sec-argument-mapping"><span class="header-section-number">3.1.5</span> Argument Mapping and Formal Representations</h3>
+<section id="sec-natural-to-formal" class="level4" data-number="3.1.5.1">
+<h4 data-number="3.1.5.1" class="anchored" data-anchor-id="sec-natural-to-formal"><span class="header-section-number">3.1.5.1</span> From Natural Language to Formal Models</h4>
+<p><strong>The Representation Challenge</strong>: How to preserve narrative richness while enabling mathematical analysis</p>
+<p><code>The core methodological challenge involves preserving narrative richness of natural language arguments while enabling mathematical analysis—bridging interpretive reasoning favored in philosophy with quantitative prediction favored in technical fields.</code></p>
+<p><strong>ArgDown Syntax</strong>:</p>
+<pre><code>[Conclusion]: Description of the conclusion.
+ + [Premise1]: Supporting evidence or reasoning.
+   + [Sub-premise]: More detailed supporting factor.
+ + [Premise2]: Additional independent support.</code></pre>
+<p><code>ArgDown uses hierarchical indentation to capture support/attack relationships between statements, making argument structure explicit while remaining human-readable.</code></p>
+</section>
+<section id="sec-bayesdown-innovation" class="level4" data-number="3.1.5.2">
+<h4 data-number="3.1.5.2" class="anchored" data-anchor-id="sec-bayesdown-innovation"><span class="header-section-number">3.1.5.2</span> BayesDown: The Critical Innovation</h4>
+<!-- [ ] Introduce AMTAIR's key technical contribution -->
+<p><code>BayesDown extends ArgDown with probabilistic metadata, creating a hybrid format that bridges natural language and mathematical modeling:</code></p>
+<pre><code>json
+{
+  "instantiations": ["conclusion_TRUE", "conclusion_FALSE"],
+  "priors": {"p(conclusion_TRUE)": "0.7", "p(conclusion_FALSE)": "0.3"},
+  "posteriors": {
+    "p(conclusion_TRUE|premise1_TRUE,premise2_TRUE)": "0.9",
+    "p(conclusion_TRUE|premise1_TRUE,premise2_FALSE)": "0.6",
+    "p(conclusion_TRUE|premise1_FALSE,premise2_TRUE)": "0.4",
+    "p(conclusion_TRUE|premise1_FALSE,premise2_FALSE)": "0.1"
+  }
+}</code></pre>
+<p><strong>Design Principles</strong>:</p>
+<ul>
+<li><strong>Human Readable</strong>: Preserves natural language explanations</li>
+<li><strong>Machine Processable</strong>: Structured for automated analysis</li>
+<li><strong>Probabilistically Complete</strong>: Contains all information for Bayesian network construction</li>
+<li><strong>Extensible</strong>: Supports additional metadata as needed</li>
+</ul>
+</section>
+</section>
+<section id="sec-mtair-framework" class="level3" data-number="3.1.6">
+<h3 data-number="3.1.6" class="anchored" data-anchor-id="sec-mtair-framework"><span class="header-section-number">3.1.6</span> The MTAIR Framework: Achievements and Limitations</h3>
 <!-- [ ] Review the MTAIR project's approach to modeling AI risks using Analytica, highlighting both its innovations and limitations, particularly the manual labor intensity that limits scalability -->
+<blockquote class="blockquote">
+<p><span class="citation" data-cites="bucknall2022">Bucknall and Dori-Hacohen (<a href="../ref/references.html#ref-bucknall2022" role="doc-biblioref">2022</a>)</span> on the original Modeling Transformative AI Risks project demonstrates both the value and limitations of manual formal modeling approaches.</p>
+</blockquote>
 <blockquote class="blockquote">
 <p>The Modeling Transformative AI Risks (MTAIR) project demonstrated the value of formal probabilistic modeling for AI safety, but also revealed significant limitations in the manual approach. While MTAIR successfully translated complex arguments into Bayesian networks and enabled sensitivity analysis, the intensive human labor required for model creation limited both scalability and timeliness.</p>
 </blockquote>
+<section id="sec-mtair-innovations" class="level4" data-number="3.1.6.1">
+<h4 data-number="3.1.6.1" class="anchored" data-anchor-id="sec-mtair-innovations"><span class="header-section-number">3.1.6.1</span> MTAIR’s Innovations</h4>
+<blockquote class="blockquote">
+<p><span class="citation" data-cites="bucknall2022">Bucknall and Dori-Hacohen (<a href="../ref/references.html#ref-bucknall2022" role="doc-biblioref">2022</a>)</span> on the original Modeling Transformative AI Risks project</p>
+</blockquote>
+<ul>
+<li><strong>Structured Uncertainty Representation</strong>: Explicit probability distributions over key variables</li>
+<li><strong>Expert Judgment Integration</strong>: Systematic methods for aggregating diverse opinions</li>
+<li><strong>Sensitivity Analysis</strong>: Identification of critical uncertainties driving outcomes</li>
+<li><strong>Policy Application</strong>: Connection between technical models and governance implications</li>
+</ul>
+<p><strong>MTAIR’s Key Innovations:</strong></p>
+<ul>
+<li><strong>Structured Uncertainty Representation</strong>: Explicit probability distributions over key variables rather than point estimates</li>
+<li><strong>Expert Judgment Integration</strong>: Systematic methods for aggregating diverse expert opinions and beliefs</li>
+<li><strong>Sensitivity Analysis</strong>: Identification of critical uncertainties that most significantly drive overall conclusions</li>
+<li><strong>Policy Application</strong>: Direct connection between technical risk models and governance implications</li>
+</ul>
 <p>`MTAIR’s key innovations included:</p>
 <ul>
 <li>Explicit representation of uncertainty through probability distributions</li>
@@ -376,6 +652,22 @@ Figure&nbsp;3.1: Example Bayesian Network
 <li>Integration of diverse expert judgments</li>
 <li>Sensitivity analysis to identify critical parameters</li>
 </ul>
+</section>
+<section id="sec-mtair-limitations" class="level4" data-number="3.1.6.2">
+<h4 data-number="3.1.6.2" class="anchored" data-anchor-id="sec-mtair-limitations"><span class="header-section-number">3.1.6.2</span> Fundamental Limitations Motivating AMTAIR</h4>
+<p><strong>Scalability Bottleneck</strong>: Manual model construction requires weeks of expert effort per model</p>
+<p><strong>Static Models</strong>: No mechanisms for updating as new research emerges</p>
+<p><strong>Limited Accessibility</strong>: Technical complexity restricts usage to specialists</p>
+<p><strong>Single Worldview Focus</strong>: Difficulty representing multiple perspectives simultaneously</p>
+<p><code>These limitations create the opportunity for automated approaches that can scale formal modeling to match the pace of AI governance discourse</code></p>
+<p><strong>Fundamental Limitations Motivating AMTAIR:</strong></p>
+<pre><code>Critical constraints of manual approaches:
+
+• **Scalability Bottleneck**: Manual model construction requires weeks of expert effort per argument
+• **Static Nature**: No mechanisms for updating models as new research and evidence emerges  
+• **Limited Accessibility**: Technical complexity restricts usage to specialists with formal modeling expertise
+• **Single Worldview Focus**: Difficulty representing multiple conflicting perspectives simultaneously</code></pre>
+<p><code>These limitations create a clear opportunity for automated approaches that can scale formal modeling to match the pace and diversity of AI governance discourse.</code></p>
 <p>Its limitations motivated the current automated approach:</p>
 <ul>
 <li>Manual labor intensity limiting scalability</li>
@@ -384,9 +676,15 @@ Figure&nbsp;3.1: Example Bayesian Network
 <li>Challenges in representing multiple worldviews simultaneously`</li>
 </ul>
 </section>
-<section id="sec-narrow-path" class="level3" data-number="3.1.6">
-<h3 data-number="3.1.6" class="anchored" data-anchor-id="sec-narrow-path"><span class="header-section-number">3.1.6</span> “A Narrow Path”: Conditional Policy Proposals in Practice</h3>
+</section>
+<section id="sec-narrow-path" class="level3" data-number="3.1.7">
+<h3 data-number="3.1.7" class="anchored" data-anchor-id="sec-narrow-path"><span class="header-section-number">3.1.7</span> “A Narrow Path”: Conditional Policy Proposals in Practice</h3>
 <!-- [ ] Examine "A Narrow Path" as a case study of conditional policy proposals, highlighting how formal modeling could clarify the conditions under which specific policy interventions would be effective -->
+<!-- [ ] Examine conditional policy proposals highlighting formal modeling potential -->
+<blockquote class="blockquote">
+<p>“A Narrow Path” represents influential example of conditional policy proposals in AI governance—identifying interventions that could succeed under specific conditions rather than universal prescriptions.</p>
+</blockquote>
+<p><code>However, these conditions remain implicitly defined and qualitatively described, limiting rigorous evaluation and comparison across alternative approaches.</code></p>
 <blockquote class="blockquote">
 <p>“A Narrow Path” represents an influential example of conditional policy proposals in AI governance—identifying interventions that could succeed under specific conditions rather than absolute prescriptions. However, these conditions remain implicitly defined and qualitatively described, limiting rigorous evaluation.</p>
 </blockquote>
@@ -397,6 +695,14 @@ Figure&nbsp;3.1: Example Bayesian Network
 <li>Identifying which uncertainties most significantly affect outcomes</li>
 <li>Enabling systematic comparison of alternative approaches</li>
 <li>Supporting robust policy development across possible futures`</li>
+</ul>
+<p><strong>Formal Modeling Enhancement Potential:</strong></p>
+<ul>
+<li>Making conditions explicit and quantifiable rather than implicit assumptions</li>
+<li>Clarifying specific circumstances when interventions would be effective versus ineffective</li>
+<li>Identifying which uncertainties most significantly affect intervention outcomes</li>
+<li>Enabling systematic comparison of alternative policy approaches under uncertainty</li>
+<li>Supporting robust policy development that performs well across multiple possible futures</li>
 </ul>
 <!-- ---
 title: "Methodology"
@@ -423,6 +729,39 @@ numbering:
 <li>Validation testing: Assessing extraction quality and system performance</li>
 <li>Application evaluation: Applying the framework to concrete AI governance questions`</li>
 </ol>
+<section id="sec-hybrid-approach" class="level4" data-number="3.2.1.1">
+<h4 data-number="3.2.1.1" class="anchored" data-anchor-id="sec-hybrid-approach"><span class="header-section-number">3.2.1.1</span> Hybrid Theoretical-Empirical Approach</h4>
+<!-- [ ] Present hybrid theoretical-empirical approach with iterative development -->
+<p><strong>Four Integrated Components</strong>:</p>
+<ol type="1">
+<li><strong>Theoretical Development</strong>: Formal framework for automated worldview extraction</li>
+<li><strong>Technical Implementation</strong>: Working prototype demonstrating feasibility</li>
+<li><strong>Empirical Validation</strong>: Quality assessment against expert benchmarks</li>
+<li><strong>Policy Application</strong>: Case studies with real governance questions</li>
+</ol>
+<p><strong>Four Primary Components:</strong></p>
+<ol type="1">
+<li><strong>Theoretical Development</strong>: Formal framework for automated worldview extraction and representation</li>
+<li><strong>Technical Implementation</strong>: Working prototype demonstrating feasibility and validation</li>
+<li><strong>Empirical Validation</strong>: Quality assessment against expert benchmarks and known ground truth</li>
+<li><strong>Policy Application</strong>: Case studies demonstrating practical utility for real governance questions</li>
+</ol>
+<p><strong>Iterative Development Process:</strong></p>
+<pre><code>Phase 1: Conceptual Framework Development
+↓
+Phase 2: Prototype Implementation with Simple Validation Examples  
+↓
+Phase 3: Complex Real-World Case Application and Evaluation
+↓
+Phase 4: Policy Impact Assessment and Governance Integration</code></pre>
+</section>
+<section id="sec-iterative-process" class="level4" data-number="3.2.1.2">
+<h4 data-number="3.2.1.2" class="anchored" data-anchor-id="sec-iterative-process"><span class="header-section-number">3.2.1.2</span> Iterative Development Process</h4>
+<pre><code>Phase 1: Conceptual Framework Development
+Phase 2: Prototype Implementation with Simple Examples  
+Phase 3: Validation with Complex Real-World Cases
+Phase 4: Policy Application and Evaluation</code></pre>
+</section>
 </section>
 <section id="sec-formalizing-world-models" class="level3" data-number="3.2.2">
 <h3 data-number="3.2.2" class="anchored" data-anchor-id="sec-formalizing-world-models"><span class="header-section-number">3.2.2</span> Formalizing World Models from AI Safety Literature</h3>
@@ -447,8 +786,92 @@ numbering:
 <li>Mechanisms for handling ambiguity and uncertainty`</li>
 </ul>
 </section>
-<section id="sec-directed-acyclic-graphs" class="level3" data-number="3.2.3">
-<h3 data-number="3.2.3" class="anchored" data-anchor-id="sec-directed-acyclic-graphs"><span class="header-section-number">3.2.3</span> Directed Acyclic Graphs: Structure and Semantics</h3>
+<section id="sec-natural-to-computational" class="level3" data-number="3.2.3">
+<h3 data-number="3.2.3" class="anchored" data-anchor-id="sec-natural-to-computational"><span class="header-section-number">3.2.3</span> From Natural Language to Computational Models</h3>
+<!-- [ ] Detail the two-stage extraction process that is core to AMTAIR -->
+<p><strong>The Two-Stage Extraction Architecture:</strong></p>
+<p><code>AMTAIR employs a novel two-stage process that separates structural argument extraction from probability quantification, enabling modular improvement and human oversight at critical decision points.</code></p>
+<section id="sec-two-stage-extraction" class="level4" data-number="3.2.3.1">
+<h4 data-number="3.2.3.1" class="anchored" data-anchor-id="sec-two-stage-extraction"><span class="header-section-number">3.2.3.1</span> The Two-Stage Extraction Process</h4>
+<p><strong>Stage 1: Structural Extraction (ArgDown)</strong></p>
+<ul>
+<li>Identify key variables and causal claims</li>
+<li>Extract hierarchical argument structure</li>
+<li>Map logical relationships between elements</li>
+<li>Generate intermediate representation preserving narrative</li>
+</ul>
+<p><strong>Stage 1: Structural Extraction (ArgDown Generation)</strong></p>
+<!-- [ ] Describe argument structure identification process -->
+<ul>
+<li><strong>Variable and Claim Identification</strong>: Extract key propositions and entities from natural language text</li>
+<li><strong>Causal Relationship Mapping</strong>: Identify support/attack relationships and conditional dependencies</li>
+<li><strong>Hierarchical Structure Construction</strong>: Generate properly nested argument representations preserving logical flow</li>
+<li><strong>Intermediate Representation</strong>: Create ArgDown format suitable for human review and machine processing</li>
+</ul>
+<pre><code>python
+def extract_argument_structure(text):
+    """Extract hierarchical argument structure from natural language"""
+    # LLM-based extraction with specialized prompts
+    prompt = ArgumentExtractionPrompt(
+        text=text,
+        output_format="ArgDown",
+        focus_areas=["causal_claims", "probability_statements", "conditional_reasoning"]
+    )
+    
+    structure = llm.complete(prompt)
+    return validate_argdown_syntax(structure)</code></pre>
+<p><strong>Stage 2: Probability Integration (BayesDown)</strong></p>
+<ul>
+<li>Extract explicit probability statements</li>
+<li>Generate questions for implicit judgments</li>
+<li>Quantify uncertainty and conditional dependencies</li>
+<li>Create complete probabilistic specification</li>
+</ul>
+<p><strong>Stage 2: Probability Integration (BayesDown Enhancement)</strong></p>
+<!-- [ ] Explain quantification and validation processes -->
+<ul>
+<li><strong>Explicit Probability Extraction</strong>: Identify and parse numerical probability statements in source text</li>
+<li><strong>Question Generation</strong>: Create systematic elicitation questions for implicit probability judgments</li>
+<li><strong>Expert Input Integration</strong>: Incorporate domain expertise for ambiguous or missing quantifications</li>
+<li><strong>Consistency Validation</strong>: Ensure probability assignments satisfy basic coherence requirements</li>
+</ul>
+<pre><code>python
+def integrate_probabilities(argdown_structure, probability_sources):
+    """Convert ArgDown to BayesDown with probabilistic information"""
+    questions = generate_probability_questions(argdown_structure)
+    probabilities = extract_probabilities(probability_sources, questions)
+    
+    bayesdown = enhance_with_probabilities(argdown_structure, probabilities)
+    return validate_probability_coherence(bayesdown)</code></pre>
+</section>
+<section id="sec-llm-integration" class="level4" data-number="3.2.3.2">
+<h4 data-number="3.2.3.2" class="anchored" data-anchor-id="sec-llm-integration"><span class="header-section-number">3.2.3.2</span> LLM Integration Strategy</h4>
+<!-- Explain how frontier AI enables automated extraction -->
+<p><strong>Prompt Engineering Approach</strong>:</p>
+<ul>
+<li>Specialized prompts for argument structure identification</li>
+<li>Two-stage prompting to separate structure from quantification</li>
+<li>Validation mechanisms to ensure extraction quality</li>
+<li>Iterative refinement based on expert feedback</li>
+</ul>
+<p><strong>Current Capabilities and Limitations</strong>:</p>
+<blockquote class="blockquote">
+<p>Frontier LLMs show promising extraction quality but require careful validation</p>
+</blockquote>
+<p><strong>LLM Integration Strategy:</strong></p>
+<blockquote class="blockquote">
+<p>Frontier language models enable automated extraction but require careful prompt engineering and validation mechanisms to ensure extraction quality and consistency.</p>
+</blockquote>
+<ul>
+<li><strong>Specialized Prompting</strong>: Domain-specific templates for argument structure identification</li>
+<li><strong>Two-Stage Separation</strong>: Structural and probabilistic extraction handled independently for quality control</li>
+<li><strong>Validation Mechanisms</strong>: Automated and human review processes for extraction accuracy</li>
+<li><strong>Iterative Refinement</strong>: Feedback loops enabling continuous improvement based on expert assessment</li>
+</ul>
+</section>
+</section>
+<section id="sec-dag-structure" class="level3" data-number="3.2.4">
+<h3 data-number="3.2.4" class="anchored" data-anchor-id="sec-dag-structure"><span class="header-section-number">3.2.4</span> Directed Acyclic Graphs: Structure and Semantics</h3>
 <!-- [ ] Explain the mathematical properties of DAGs and their semantic interpretation in the context of AI risk modeling -->
 <!-- [ ] Cover both structural and parametric aspects of the models -->
 <blockquote class="blockquote">
@@ -461,6 +884,41 @@ numbering:
 <li>D-separation criteria determining conditional independence</li>
 <li>Markov blanket defining minimal contextual information</li>
 </ul>
+<section id="sec-formal-properties" class="level4" data-number="3.2.4.1">
+<h4 data-number="3.2.4.1" class="anchored" data-anchor-id="sec-formal-properties"><span class="header-section-number">3.2.4.1</span> Formal Properties</h4>
+<p><strong>Acyclicity Requirement</strong>: Ensures coherent probabilistic interpretation</p>
+<p><strong>D-Separation</strong>: Conditional independence relationships between variables</p>
+<p><strong>Markov Condition</strong>: Each variable independent of non-descendants given parents</p>
+<!-- [ ] Explain mathematical properties and semantic interpretation -->
+<p><strong>Formal Properties Essential for AI Risk Modeling:</strong></p>
+<ul>
+<li><strong>Acyclicity Requirement</strong>: Ensures coherent probabilistic interpretation without logical contradictions</li>
+<li><strong>D-Separation</strong>: Defines conditional independence relationships between variables based on graph structure</li>
+<li><strong>Markov Condition</strong>: Each variable conditionally independent of non-descendants given parents</li>
+<li><strong>Path Analysis</strong>: Causal pathways and information flow through the network structure</li>
+</ul>
+<p><strong>Causal Interpretation in AI Governance Context:</strong></p>
+<blockquote class="blockquote">
+<p><span class="citation" data-cites="pearl2009">(<a href="../ref/references.html#ref-pearl2009" role="doc-biblioref"><strong>pearl2009?</strong></a>)</span> on causal inference and intervention analysis provides mathematical foundations for policy evaluation through do-calculus.</p>
+</blockquote>
+<ul>
+<li><strong>Edges as Causal Relations</strong>: Directed arrows represent direct causal influence between factors</li>
+<li><strong>Intervention Analysis</strong>: Do-calculus enables rigorous evaluation of policy intervention effects</li>
+<li><strong>Counterfactual Reasoning</strong>: “What if” scenarios essential for governance planning under uncertainty</li>
+<li><strong>Evidence Integration</strong>: Bayesian updating for incorporating new information and expert judgment</li>
+</ul>
+</section>
+<section id="sec-causal-interpretation" class="level4" data-number="3.2.4.2">
+<h4 data-number="3.2.4.2" class="anchored" data-anchor-id="sec-causal-interpretation"><span class="header-section-number">3.2.4.2</span> Causal Interpretation</h4>
+<!-- Connection to Pearl's causal framework -->
+<blockquote class="blockquote">
+<p><span class="citation" data-cites="pearl2009">(<a href="../ref/references.html#ref-pearl2009" role="doc-biblioref"><strong>pearl2009?</strong></a>)</span> on causal inference and intervention analysis</p>
+</blockquote>
+<ul>
+<li><strong>Edges as Causal Relations</strong>: Directed arrows represent direct causal influence</li>
+<li><strong>Intervention Analysis</strong>: Do-calculus for policy evaluation</li>
+<li><strong>Counterfactual Reasoning</strong>: “What if” scenarios for governance planning</li>
+</ul>
 <p>Semantic interpretation in AI risk contexts:</p>
 <ul>
 <li>Nodes represent key variables in risk pathways</li>
@@ -469,10 +927,20 @@ numbering:
 <li>Probability flows represent risk propagation through systems`</li>
 </ul>
 </section>
-<section id="sec-quantification-approaches" class="level3" data-number="3.2.4">
-<h3 data-number="3.2.4" class="anchored" data-anchor-id="sec-quantification-approaches"><span class="header-section-number">3.2.4</span> Quantification Approaches for Probabilistic Judgments</h3>
+</section>
+<section id="sec-quantification" class="level3" data-number="3.2.5">
+<h3 data-number="3.2.5" class="anchored" data-anchor-id="sec-quantification"><span class="header-section-number">3.2.5</span> Quantification of Probabilistic Judgments</h3>
 <!-- [ ] Examine methods for converting qualitative judgments into quantitative probabilities, including expert elicitation, calibration techniques, and sensitivity analysis -->
 <!-- [ ] Discuss challenges of aggregating diverse probabilistic judgments -->
+<!-- [ ] Examine methods for converting qualitative to quantitative assessments -->
+<p><strong>Linguistic Probability Mapping:</strong></p>
+<p><code>Transforming qualitative uncertainty expressions into quantitative probabilities requires systematic interpretation frameworks that account for individual and cultural variation.</code></p>
+<pre><code>Standard linguistic mappings (with significant individual variation):
+• "Very likely" → 0.8-0.9
+• "Probable" → 0.6-0.8  
+• "Uncertain" → 0.4-0.6
+• "Unlikely" → 0.2-0.4
+• "Highly improbable" → 0.05-0.15</code></pre>
 <blockquote class="blockquote">
 <p>Transforming qualitative judgments in AI safety literature into quantitative probabilities requires a systematic approach to interpretation, extraction, and validation. This process combines direct extraction of explicit numerical statements with inference of implicit probability judgments from qualitative language.</p>
 </blockquote>
@@ -490,9 +958,45 @@ numbering:
 <li>Limited empirical basis for calibration</li>
 <li>Value-laden aspects of risk assessment`</li>
 </ul>
+<section id="sec-qualitative-to-quantitative" class="level4" data-number="3.2.5.1">
+<h4 data-number="3.2.5.1" class="anchored" data-anchor-id="sec-qualitative-to-quantitative"><span class="header-section-number">3.2.5.1</span> From Qualitative to Quantitative</h4>
+<p><strong>Linguistic Probability Expressions</strong>:</p>
+<ul>
+<li>“Very likely” → 0.8-0.9</li>
+<li>“Uncertain” → 0.4-0.6</li>
+<li>“Highly improbable” → 0.05-0.15</li>
+</ul>
+<p><strong>Calibration Challenges</strong>:</p>
+<ul>
+<li>Individual variation in linguistic interpretation</li>
+<li>Domain-specific probability anchoring</li>
+<li>Cultural and contextual influences on uncertainty expression</li>
+</ul>
+<p><strong>Calibration and Validation Challenges:</strong></p>
+<ul>
+<li>Individual variation in linguistic interpretation and probability anchoring</li>
+<li>Domain-specific probability anchoring and reference class selection</li>
+<li>Cultural and contextual influences on uncertainty expression and tolerance</li>
+<li>Limited empirical basis for calibration in unprecedented scenarios like transformative AI</li>
+</ul>
 </section>
-<section id="sec-inference-techniques" class="level3" data-number="3.2.5">
-<h3 data-number="3.2.5" class="anchored" data-anchor-id="sec-inference-techniques"><span class="header-section-number">3.2.5</span> Inference Techniques for Complex Networks</h3>
+<section id="sec-expert-elicitation" class="level4" data-number="3.2.5.2">
+<h4 data-number="3.2.5.2" class="anchored" data-anchor-id="sec-expert-elicitation"><span class="header-section-number">3.2.5.2</span> Expert Elicitation Methods</h4>
+<pre><code>Direct Probability Assessment: "What is P(outcome)?"
+Comparative Assessment: "Is A more likely than B?"  
+Frequency Format: "In 100 similar cases, how many would result in outcome?"
+Betting Odds: "What odds would you accept for this bet?"</code></pre>
+<p><strong>Expert Elicitation Methodologies:</strong></p>
+<ul>
+<li><strong>Direct Probability Assessment</strong>: “What is P(outcome)?” with calibration training</li>
+<li><strong>Comparative Assessment</strong>: “Is A more likely than B?” for relative judgment validation</li>
+<li><strong>Frequency Format</strong>: “In 100 similar cases, how many would result in outcome?” for clearer mental models</li>
+<li><strong>Betting Odds</strong>: “What odds would you accept for this bet?” for revealed preference elicitation</li>
+</ul>
+</section>
+</section>
+<section id="sec-inference-techniques" class="level3" data-number="3.2.6">
+<h3 data-number="3.2.6" class="anchored" data-anchor-id="sec-inference-techniques"><span class="header-section-number">3.2.6</span> Inference Techniques for Complex Networks</h3>
 <!-- [ ] Review Monte Carlo sampling and other inference techniques for complex Bayesian networks, explaining their application to policy evaluation -->
 <!-- [ ] Discuss computational complexity considerations and approximation methods -->
 <blockquote class="blockquote">
@@ -513,8 +1017,8 @@ numbering:
 <li>Uncertainty representation in outputs`</li>
 </ul>
 </section>
-<section id="sec-prediction-markets" class="level3" data-number="3.2.6">
-<h3 data-number="3.2.6" class="anchored" data-anchor-id="sec-prediction-markets"><span class="header-section-number">3.2.6</span> Integration with Prediction Markets and Forecasting Platforms</h3>
+<section id="sec-prediction-markets" class="level3" data-number="3.2.7">
+<h3 data-number="3.2.7" class="anchored" data-anchor-id="sec-prediction-markets"><span class="header-section-number">3.2.7</span> Integration with Prediction Markets and Forecasting Platforms</h3>
 <!-- [ ] Detail methods for connecting the formal models with live data sources from prediction markets and forecasting platforms -->
 <!-- [ ] Explain data standardization, weighting mechanisms, and update procedures -->
 <blockquote class="blockquote">
@@ -535,7 +1039,52 @@ numbering:
 <li>Temporal alignment of forecasts</li>
 <li>Confidence-weighted aggregation methods`</li>
 </ul>
-<div id="fig-automation_pipeline" class="quarto-float quarto-figure quarto-figure-center anchored" alt="FLOWCHART: Five-step automation pipeline workflow for AMTAIR project.           DATA: The pipeline transforms PDFs through ArgDown, BayesDown, CSV, and HTML into Bayesian network visualizations.           PURPOSE: Illustrates the core technical process that enables automated extraction of probabilistic models from AI safety literature.           DETAILS: Five numbered green steps show: (1) LLM-based extraction from PDFs to ArgDown, (2) ArgDown to BayesDown completion with probabilities, (3) Extracting world-models as CSV data, (4) Software tools for data inference, and (5) Visualization of the resulting Bayesian network.           Each step includes example outputs, with the final visualization showing a Rain-Sprinkler-Grass Wet Bayesian network with probability tables.           SOURCE: Created by the author to explain the AMTAIR methodology           " width="100%" data-fig-align="center" data-fig-scap="Five-step AMTAIR automation pipeline from PDFs to Bayesian networks">
+<!-- [ ] Detail methods for connecting models with live data sources -->
+<p><strong>Live Data Sources for Dynamic Model Updating:</strong></p>
+<ul>
+<li><strong>Metaculus</strong>: Long-term AI predictions and technological forecasting</li>
+<li><strong>Good Judgment Open</strong>: Geopolitical events and policy outcomes</li>
+<li><strong>Manifold Markets</strong>: Diverse question types with rapid market response</li>
+<li><strong>Internal Expert Forecasting</strong>: Organization-specific predictions and assessments</li>
+</ul>
+<p><strong>Data Processing and Integration Pipeline:</strong></p>
+<pre><code>python
+def integrate_forecast_data(model_variables, forecast_platforms):
+    """Connect Bayesian network variables to live forecasting data"""
+    mappings = create_semantic_mappings(model_variables, forecast_platforms)
+    
+    for variable, forecasts in mappings.items():
+        weighted_forecast = aggregate_forecasts(
+            forecasts, 
+            weights=calculate_track_record_weights(forecasts)
+        )
+        model.update_prior(variable, weighted_forecast)
+    
+    return model.recompute_posteriors()</code></pre>
+<p><strong>Technical Implementation Challenges:</strong></p>
+<ul>
+<li><strong>Question Mapping</strong>: Connecting forecast questions to specific model variables with semantic accuracy</li>
+<li><strong>Temporal Alignment</strong>: Handling different forecast horizons and update frequencies across platforms</li>
+<li><strong>Conflict Resolution</strong>: Principled aggregation when sources provide contradictory information</li>
+<li><strong>Track Record Weighting</strong>: Incorporating forecaster calibration and expertise into aggregation weights</li>
+</ul>
+<section id="sec-live-data" class="level4" data-number="3.2.7.1">
+<h4 data-number="3.2.7.1" class="anchored" data-anchor-id="sec-live-data"><span class="header-section-number">3.2.7.1</span> Live Data Sources</h4>
+<p><strong>Forecasting Platforms</strong>:</p>
+<ul>
+<li>Metaculus for long-term AI predictions</li>
+<li>Good Judgment Open for geopolitical events</li>
+<li>Manifold Markets for diverse question types</li>
+<li>Internal expert forecasting within organizations</li>
+</ul>
+</section>
+<section id="sec-data-processing" class="level4" data-number="3.2.7.2">
+<h4 data-number="3.2.7.2" class="anchored" data-anchor-id="sec-data-processing"><span class="header-section-number">3.2.7.2</span> Data Processing Pipeline</h4>
+<p><strong>Question Mapping</strong>: Connecting forecast questions to model variables</p>
+<p><strong>Temporal Alignment</strong>: Handling different forecast horizons and update frequencies</p>
+<p><strong>Aggregation Methods</strong>: Weighting sources by track record and relevance</p>
+<!-- [ ] Add specific examples of forecast integration -->
+<div id="fig-automation_pipeline" class="quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center" alt="FLOWCHART: Five-step automation pipeline workflow for AMTAIR project.           DATA: The pipeline transforms PDFs through ArgDown, BayesDown, CSV, and HTML into Bayesian network visualizations.           PURPOSE: Illustrates the core technical process that enables automated extraction of probabilistic models from AI safety literature.           DETAILS: Five numbered green steps show: (1) LLM-based extraction from PDFs to ArgDown, (2) ArgDown to BayesDown completion with probabilities, (3) Extracting world-models as CSV data, (4) Software tools for data inference, and (5) Visualization of the resulting Bayesian network.           Each step includes example outputs, with the final visualization showing a Rain-Sprinkler-Grass Wet Bayesian network with probability tables.           SOURCE: Created by the author to explain the AMTAIR methodology           " data-fig-scap="Five-step AMTAIR automation pipeline from PDFs to Bayesian networks" width="100%">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-automation_pipeline-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <a href="https://github.com/VJMeyer/submission"><img src="../images/pipeline.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:100.0%" data-fig-scap="Five-step AMTAIR automation pipeline from PDFs to Bayesian networks" alt="FLOWCHART: Five-step automation pipeline workflow for AMTAIR project.           DATA: The pipeline transforms PDFs through ArgDown, BayesDown, CSV, and HTML into Bayesian network visualizations.           PURPOSE: Illustrates the core technical process that enables automated extraction of probabilistic models from AI safety literature.           DETAILS: Five numbered green steps show: (1) LLM-based extraction from PDFs to ArgDown, (2) ArgDown to BayesDown completion with probabilities, (3) Extracting world-models as CSV data, (4) Software tools for data inference, and (5) Visualization of the resulting Bayesian network.           Each step includes example outputs, with the final visualization showing a Rain-Sprinkler-Grass Wet Bayesian network with probability tables.           SOURCE: Created by the author to explain the AMTAIR methodology           "></a>
@@ -548,6 +1097,12 @@ Figure&nbsp;3.2: AMTAIR Automation Pipeline from CITATION
 <p>Testing crossreferencing grapics <a href="../ref/references.html#fig-automation_pipeline" class="quarto-xref">Figure&nbsp;<span>6.1</span></a>.</p>
 
 
+<div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" role="list" style="display: none">
+<div id="ref-bucknall2022" class="csl-entry" role="listitem">
+Bucknall, Benjamin S., and Shiri Dori-Hacohen. 2022. <span>“Current and <span>Near-Term AI</span> as a <span>Potential Existential Risk Factor</span>.”</span> In <em>Proceedings of the 2022 <span>AAAI</span>/<span>ACM Conference</span> on <span>AI</span>, <span>Ethics</span>, and <span>Society</span></em>, 119–29. Oxford United Kingdom: ACM. <a href="https://doi.org/10.1145/3514094.3534146">https://doi.org/10.1145/3514094.3534146</a>.
+</div>
+</div>
+</section>
 </section>
 </section>
 </section>

@@ -33,6 +33,14 @@ numbering:
 <!-- [ ] Expand this section to ~29% of total text (approximately 8700 words) -->
 
 
+<!-- provides critical or constructive evaluation of positions introduced --> 
+<!-- develops strong (plausible) argument in support of author's own position/thesis --> 
+<!-- argument draws on relevant course material --> 
+<!-- demonstrates understanding of course materials and key concepts --> 
+<!-- presents original or insightful contribution to the debate -->
+
+
+
 Text to render
 
 

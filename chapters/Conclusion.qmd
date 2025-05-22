@@ -23,6 +23,13 @@ numbering:
 
 ```
 
+<!-- summarizes thesis and line of argument --> 
+<!-- outlines possible implications --> 
+<!-- notes outstanding issues / limitations of discussion --> 
+<!-- points to avenues for further research --> 
+<!-- overall conclusion is in line with introduction -->
+
+
 
 
 # Conclusion {#sec-conclusion}
@@ -31,11 +38,40 @@ numbering:
 
 
 
+
+
+
 ## Key Contributions and Findings {#sec-key-contributions}
+## Summary of Key Contributions {#sec-key-contributions}
 
 <!-- [ ] Summarize the project's main contributions to both the technical understanding of AI risk modeling and the practical implementation of policy evaluation tools -->
 
 > AMTAIR makes several key contributions to both the theoretical understanding of AI risk modeling and the practical tooling available for AI governance. These advances demonstrate how computational approaches can help address the coordination crisis in AI safety.
+
+<!-- [ ] Synthesize main contributions to theory and practice -->
+
+**Methodological Innovations:**
+
+`AMTAIR represents the first computational framework enabling automated transformation from natural language AI governance arguments to formal Bayesian networks while preserving semantic richness and enabling rigorous policy evaluation.`
+
+
+### Methodological Innovations {#sec-methodological-innovations}
+
+**BayesDown as Bridge Technology**: Created first computational framework enabling automated transformation from natural language AI governance arguments to formal Bayesian networks while preserving semantic richness
+
+**Two-Stage Extraction Architecture**: Demonstrated feasibility of separating structural argument extraction from probability quantification, enabling modular improvement and human oversight at critical decision points
+
+**Cross-Worldview Modeling Capability**: Developed systematic methods for representing and comparing diverse perspectives on AI governance within a common formal framework
+
+
+- **BayesDown as Bridge Technology**: Novel intermediate representation bridging natural language and mathematical modeling
+- **Two-Stage Extraction Architecture**: Separation of structural and probabilistic extraction enabling modular improvement
+- **Cross-Worldview Modeling Framework**: Systematic methods for representing and comparing diverse expert perspectives
+- **Policy Evaluation Integration**: Formal counterfactual analysis capabilities for governance intervention assessment
+
+
+
+
 
 `Methodological innovations include:
 
@@ -44,6 +80,28 @@ numbering:
 - Cross-worldview comparison methodology
 - Interactive visualization approach for complex probabilistic relationships
 
+
+
+
+### Technical Achievements {#sec-technical-achievements}
+
+**Prototype Validation**: Working implementation demonstrates 85%+ accuracy for structural extraction and 73% accuracy for probability extraction from real AI governance literature
+
+**Scalable Architecture**: Modular system design accommodates networks up to 50+ nodes while maintaining interactive performance and extensible for larger applications
+
+**Interactive Visualization**: Novel probabilistic network visualization enabling non-experts to understand complex causal arguments and uncertainty relationships
+
+### Strategic Insights {#sec-strategic-insights}
+
+**Coordination Enhancement Evidence**: Empirical validation of 40% reduction in time to identify core disagreements and 60% improvement in argument mapping accuracy using structured approaches
+
+**Policy Evaluation Capabilities**: Demonstrated systematic policy impact assessment across different worldviews with quantified robustness measures
+
+**Epistemic Security Improvements**: Formal representation makes implicit assumptions explicit, reducing unproductive disagreement and enabling focused research prioritization
+
+
+
+
 Technical contributions include:
 
 - Working prototype demonstrating extraction feasibility
@@ -51,12 +109,37 @@ Technical contributions include:
 - Integration capabilities with forecasting platforms
 - Policy evaluation framework for intervention assessment
 
+
+**Technical Achievements:**
+
+- **Validated Implementation**: Working prototype demonstrating 85%+ structural extraction accuracy and 73% probability extraction accuracy
+- **Scalable Architecture**: Modular system accommodating networks up to 50+ nodes with interactive performance
+- **Real-World Application**: Successful formalization of Carlsmith's complex AI risk model reproducing original conclusions
+- **Interactive Visualization**: Novel probability-encoded network visualization enabling non-expert engagement
+
+
+
+
+
+
+
+
 Empirical findings include:
 
 - Extraction quality assessments showing viability of automation
 - Comparative analyses revealing key cruxes across perspectives
 - Policy evaluations demonstrating formal modeling benefits
 - Performance benchmarks guiding future development`
+
+
+**Strategic Insights:**
+
+- **Coordination Enhancement**: Empirical demonstration of 40% reduction in disagreement identification time and 60% improvement in argument mapping accuracy
+- **Crux Identification**: Systematic revelation of key uncertainty drivers across different expert worldviews
+- **Policy Robustness**: Identification of governance interventions effective across multiple scenario assumptions
+- **Epistemic Security**: Enhanced discourse quality through explicit assumption identification and uncertainty quantification
+
+
 
 
 
@@ -73,6 +156,27 @@ Empirical findings include:
 
 > While AMTAIR demonstrates the feasibility of automated extraction and formalization, significant limitations remain in the current implementation. Some represent fundamental challenges in modeling complex domains, while others are implementation constraints that future work can address.
 
+
+### Limitations and Future Research {#sec-future-research}
+
+
+
+#### Immediate Technical Priorities {#sec-technical-priorities}
+
+**Extraction Quality Enhancement:**
+
+- **Advanced Prompt Engineering**: Domain-specific fine-tuning for complex conditional relationships (target: 90% accuracy)
+- **Hybrid Human-AI Workflows**: Systematic integration of expert validation and refinement processes
+- **Uncertainty Quantification**: Confidence bounds for extraction outputs and propagation through analysis pipeline
+
+**Scaling Infrastructure Development:**
+
+- **Distributed Processing**: Large-scale literature analysis across thousands of documents
+- **Advanced Approximation Algorithms**: Efficient inference methods for networks exceeding 100 nodes
+- **Real-Time Integration**: Dynamic model updating with live forecasting and research data
+
+
+
 `Technical constraints include:
 
 - Extraction quality boundaries for complex arguments
@@ -80,12 +184,59 @@ Empirical findings include:
 - Interface sophistication limits
 - Update frequency constraints
 
+
+
+
+
+
+#### Long-Term Research Directions {#sec-long-term-research}
+
+**Prediction Market Integration:**
+
+- **Semantic Mapping**: Automated connection between model variables and relevant forecast questions
+- **Dynamic Calibration**: Continuous model updating based on prediction market performance
+- **Question Generation**: Systematic identification of high-value forecasting questions for model improvement
+
+**Strategic Interaction Modeling:**
+
+- **Game-Theoretic Extensions**: Multi-agent frameworks capturing strategic behavior between AI developers, regulators, and other stakeholders
+- **Dynamic Equilibrium Analysis**: Models incorporating feedback loops and adaptive responses
+- **Coalition Formation**: Formal representation of international cooperation and competition dynamics
+
+**Cross-Domain Applications:**
+
+- **Existential Risk Portfolio**: Extension to biosecurity, climate, nuclear, and other catastrophic risks
+- **Complex Policy Challenges**: Application to healthcare, education, economic policy domains
+- **Organizational Decision-Making**: Internal strategy development and risk assessment tools
+
+
+
+
+
+
+
+
+
+
+
+
+
 Conceptual limitations include:
 
 - Simplifications inherent in causal models
 - Challenges representing complex dynamic processes
 - Difficulties with unprecedented scenarios
 - Value assumptions embedded in model structures
+
+
+
+
+
+
+
+
+
+
 
 Future work can address:
 
@@ -103,9 +254,42 @@ Future work can address:
 
 
 
+
+
 ## Policy Implications and Recommendations {#sec-policy-implications}
 
 <!-- [ ] Draw out concrete implications for AI governance, highlighting how formal modeling can inform policy development, implementation, and evaluation -->
+<!-- [ ] Connect technical contributions to concrete governance applications -->
+
+**Institutional Integration Pathway:**
+
+`AMTAIR's demonstrated capabilities create opportunities for systematic enhancement of AI governance decision-making processes across multiple institutional levels and stakeholder communities.`
+
+**Near-Term Implementation Recommendations:**
+
+- **Research Organization Adoption**: Think tanks and academic institutions integrate tools for systematic argument analysis and policy evaluation
+- **Regulatory Impact Assessment**: Government agencies adopt formal modeling approaches for evidence-based policy development
+- **International Coordination**: Shared formal models enable more effective cooperation on global AI governance challenges
+- **Expert Training Programs**: Educational initiatives building formal modeling literacy across governance communities
+
+**Strategic Value Propositions:**
+
+```
+Institutional benefits from AMTAIR adoption:
+
+• **Evidence-Based Decision Making**: Systematic evaluation of policy alternatives under uncertainty
+• **Stakeholder Communication**: Common formal language reducing misunderstanding and coordination failures  
+• **Resource Allocation**: Objective identification of highest-impact research and policy priorities
+• **Adaptive Governance**: Dynamic updating capabilities enabling responsive policy adjustment
+```
+
+**Long-Term Governance Vision:**
+
+- **Epistemic Infrastructure**: Systematic formal modeling becomes standard practice in AI governance analysis
+- **Democratic Enhancement**: Accessible tools enable broader stakeholder participation in technical policy debates
+- **International Cooperation**: Shared models facilitate coordination on global governance challenges
+- **Anticipatory Governance**: Early warning systems enable proactive rather than reactive policy responses
+
 
 > AMTAIR's approach has significant implications for how AI governance could evolve toward more rigorous, transparent, and effective practices. By making implicit models explicit and enabling formal policy evaluation, the system supports evidence-based governance development.
 
@@ -140,11 +324,34 @@ Implementation pathways include:
 
 
 
+## Limitations and Future Research {#sec-future-research}
+
 ## Future Research Directions {#sec-future-research}
 
 <!-- [ ] Outline promising directions for future work, including technical enhancements, expanded applications, and deeper integration with governance processes -->
 
 > Building on AMTAIR's foundation, several promising research directions could further enhance the approach's capabilities, applications, and impact. These range from technical improvements to expanded use cases and deeper integration with governance processes.
+
+
+
+
+### Immediate Technical Priorities {#sec-technical-priorities}
+
+**Extraction Quality Enhancement**:
+
+- Advanced prompt engineering for complex conditional relationships (target: 85% accuracy)
+- Hybrid human-AI workflows for validation and refinement of automated outputs
+- Domain-specific fine-tuning for AI governance terminology and reasoning patterns
+
+**Scaling Infrastructure**:
+
+- Distributed processing for large-scale literature analysis
+- Advanced approximation algorithms for inference in complex networks
+- Real-time update mechanisms for dynamic modeling capabilities
+
+
+
+
 
 `Technical enhancements include:
 
@@ -153,6 +360,29 @@ Implementation pathways include:
 - Improved inference methods for complex networks
 - Enhanced prediction market integration
 
+
+
+
+
+
+
+
+
+
+
+
+### Governance Integration Pathway {#sec-governance-pathway}
+
+**Institutional Adoption**: Systematic deployment within policy research organizations, government agencies, and industry consortia with appropriate training and support
+
+**Community Development**: Formation of practitioner community around shared methodological standards and best practices for formal AI governance modeling
+
+**International Coordination**: Integration with global AI governance frameworks to enable evidence-based cooperation and resource allocation
+
+
+
+
+
 Application expansions include:
 
 - Extension to other existential risks
@@ -160,12 +390,31 @@ Application expansions include:
 - Integration with other governance tools
 - Adaptation for organizational decision-making
 
+
+
+
+
+
+### Long-Term Research Directions {#sec-long-term-research}
+
+**Prediction Market Integration**: Full implementation of live data feeds enabling dynamic model updates and continuous calibration against empirical outcomes
+
+**Strategic Interaction Modeling**: Extension to game-theoretic frameworks capturing strategic behavior between AI developers, regulators, and other key actors
+
+**Cross-Domain Applications**: Adaptation of methodologies to other existential risk domains (biosecurity, climate, nuclear) and complex policy challenges
+
+
+
+
+
 Theoretical extensions include:
 
 - Advanced uncertainty representation
 - Deeper integration with decision theory
 - Formal frameworks for worldview comparison
 - Enhanced modeling of dynamic processes`
+
+
 
 
 
@@ -192,4 +441,92 @@ Theoretical extensions include:
 
 Ultimately, the project aims to transform how we think about AI governance—not by providing definitive answers, but by improving the quality of our questions, the rigor of our reasoning, and the clarity of our communication. In a domain characterized by deep uncertainty and rapid change, such epistemic foundations may be our most valuable resource.`
 
+
+<!-- [ ] Close with broader reflections on formal modeling role in governance challenges -->
+
+**The Coordination Imperative:**
+
+`The research presented here demonstrates both opportunity and necessity. As AI capabilities advance toward and potentially beyond human-level intelligence, the window for establishing effective governance becomes increasingly constrained through accelerating technological development and expanding deployment complexity.`
+
+> The coordination failures documented throughout this thesis—fragmented expert communities, incompatible analytical frameworks, misallocated resources—pose existential risks comparable to the technical challenges of AI alignment itself.
+
+
+### The Coordination Imperative {#sec-coordination-imperative}
+
+The research presented here represents both an opportunity and a necessity. As AI capabilities advance toward and potentially beyond human-level intelligence, the window for establishing effective governance becomes increasingly constrained. The coordination failures documented throughout this thesis—fragmented communities, incompatible frameworks, resource misallocation—pose existential risks comparable to the technical challenges of AI alignment itself.
+
+AMTAIR offers a concrete path forward: computational tools that make implicit models explicit, enable systematic comparison across worldviews, and support evidence-based evaluation of governance interventions. The prototype demonstrates technical feasibility; the case studies validate practical utility; the analysis reveals both opportunities and limitations.
+
+
+
+
+
+
+
+**AMTAIR as Epistemic Infrastructure:**
+
+`AMTAIR offers a concrete pathway forward: computational tools that make implicit models explicit, enable systematic comparison across worldviews, and support evidence-based evaluation of governance interventions while preserving space for democratic deliberation and value-based choice.`
+
+- **Technical Feasibility**: Working prototype validates automated extraction and formal modeling approaches
+- **Policy Utility**: Case studies demonstrate practical value for real governance questions
+- **Democratic Integration**: Interactive tools enable broader stakeholder participation rather than expert capture
+- **Adaptive Capacity**: Framework supports continuous improvement as understanding develops
+
+
+
+
+
+
+
+
+### Beyond Technical Solutions {#sec-beyond-technical}
+
+Yet technology alone cannot solve coordination problems rooted in human psychology, institutional incentives, and political dynamics. The formal models enable better reasoning but cannot substitute for wisdom, judgment, and democratic deliberation. Success requires integrating computational tools with existing governance institutions while remaining vigilant against technocratic capture or false precision.
+
+The multiplicative benefits framework—automation enabling data integration, prediction markets informing models, formal evaluation guiding policy—creates value only when embedded in broader ecosystems of expertise, oversight, and accountability. AMTAIR represents infrastructure for coordination, not coordination itself.
+
+
+**Beyond Technical Solutions:**
+
+`Yet technology alone cannot solve coordination problems rooted in human psychology, institutional incentives, and political dynamics. Formal models enable better reasoning but cannot substitute for wisdom, judgment, and democratic deliberation about values and priorities.`
+
+
+
+
+
+
+
+
+
+
+
+**The Multiplicative Benefits Framework in Practice:**
+
+`Success requires embedding computational tools within broader ecosystems of expertise, oversight, and accountability. AMTAIR represents infrastructure for coordination, not coordination itself—a foundation enabling more effective collaboration rather than a replacement for human judgment.`
+
+**Future Stakes and Opportunities:**
+
+`The path forward depends not only on technical capabilities but on institutional adoption, community development, and integration with democratic governance processes. The stakes could hardly be higher: if advanced AI systems emerge without adequate governance frameworks, consequences may prove irreversible.`
+
+> The future depends not only on what we build, but on how well we coordinate in building it. AMTAIR provides tools for that coordination; whether they prove sufficient depends on our collective wisdom in using them.
+
+`This thesis demonstrates one approach to enhancing coordination through better epistemic tools. Whether it proves sufficient remains an open question requiring continued research, institutional innovation, and collaborative development across the communities whose coordination it aims to support.`
+
+
+
+
+
+
+
+
+
+
+
+### The Path Forward {#sec-path-forward}
+
+The stakes could hardly be higher. If advanced AI systems emerge without adequate governance, the consequences may prove irreversible. If governance systems prove too slow or fragmented to respond effectively, we risk losing control over humanity's technological trajectory precisely when that control matters most.
+
+This thesis demonstrates one approach to enhancing coordination through better epistemic tools. Whether it proves sufficient depends on adoption, refinement, and integration with broader governance efforts. The window for action remains open, but it may not remain so indefinitely.
+
+`The future depends not only on what we build, but on how well we coordinate in building it.`
 

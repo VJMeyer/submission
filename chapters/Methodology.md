@@ -35,6 +35,46 @@ numbering:
 
 
 
+#### Hybrid Theoretical-Empirical Approach {#sec-hybrid-approach}
+<!-- [ ] Present hybrid theoretical-empirical approach with iterative development -->
+
+**Four Integrated Components**:
+
+1. **Theoretical Development**: Formal framework for automated worldview extraction
+2. **Technical Implementation**: Working prototype demonstrating feasibility
+3. **Empirical Validation**: Quality assessment against expert benchmarks
+4. **Policy Application**: Case studies with real governance questions
+
+**Four Primary Components:**
+
+1. **Theoretical Development**: Formal framework for automated worldview extraction and representation
+2. **Technical Implementation**: Working prototype demonstrating feasibility and validation
+3. **Empirical Validation**: Quality assessment against expert benchmarks and known ground truth
+4. **Policy Application**: Case studies demonstrating practical utility for real governance questions
+
+**Iterative Development Process:**
+
+```
+Phase 1: Conceptual Framework Development
+↓
+Phase 2: Prototype Implementation with Simple Validation Examples  
+↓
+Phase 3: Complex Real-World Case Application and Evaluation
+↓
+Phase 4: Policy Impact Assessment and Governance Integration
+```
+
+
+#### Iterative Development Process {#sec-iterative-process}
+
+```
+Phase 1: Conceptual Framework Development
+Phase 2: Prototype Implementation with Simple Examples  
+Phase 3: Validation with Complex Real-World Cases
+Phase 4: Policy Application and Evaluation
+```
+
+
 
 
 
@@ -68,6 +108,113 @@ Large language models facilitate this process through:
 - Mechanisms for handling ambiguity and uncertainty`
 
 
+### From Natural Language to Computational Models {#sec-natural-to-computational}
+
+
+<!-- [ ] Detail the two-stage extraction process that is core to AMTAIR -->
+
+**The Two-Stage Extraction Architecture:**
+
+`AMTAIR employs a novel two-stage process that separates structural argument extraction from probability quantification, enabling modular improvement and human oversight at critical decision points.`
+
+
+
+
+#### The Two-Stage Extraction Process {#sec-two-stage-extraction}
+
+**Stage 1: Structural Extraction (ArgDown)**
+
+- Identify key variables and causal claims
+- Extract hierarchical argument structure
+- Map logical relationships between elements
+- Generate intermediate representation preserving narrative
+
+**Stage 1: Structural Extraction (ArgDown Generation)**
+
+<!-- [ ] Describe argument structure identification process -->
+
+- **Variable and Claim Identification**: Extract key propositions and entities from natural language text
+- **Causal Relationship Mapping**: Identify support/attack relationships and conditional dependencies
+- **Hierarchical Structure Construction**: Generate properly nested argument representations preserving logical flow
+- **Intermediate Representation**: Create ArgDown format suitable for human review and machine processing
+
+```
+python
+def extract_argument_structure(text):
+    """Extract hierarchical argument structure from natural language"""
+    # LLM-based extraction with specialized prompts
+    prompt = ArgumentExtractionPrompt(
+        text=text,
+        output_format="ArgDown",
+        focus_areas=["causal_claims", "probability_statements", "conditional_reasoning"]
+    )
+    
+    structure = llm.complete(prompt)
+    return validate_argdown_syntax(structure)
+```
+
+
+
+
+
+
+
+**Stage 2: Probability Integration (BayesDown)**
+
+- Extract explicit probability statements
+- Generate questions for implicit judgments
+- Quantify uncertainty and conditional dependencies
+- Create complete probabilistic specification
+
+**Stage 2: Probability Integration (BayesDown Enhancement)**
+
+<!-- [ ] Explain quantification and validation processes -->
+
+- **Explicit Probability Extraction**: Identify and parse numerical probability statements in source text
+- **Question Generation**: Create systematic elicitation questions for implicit probability judgments
+- **Expert Input Integration**: Incorporate domain expertise for ambiguous or missing quantifications
+- **Consistency Validation**: Ensure probability assignments satisfy basic coherence requirements
+
+```
+python
+def integrate_probabilities(argdown_structure, probability_sources):
+    """Convert ArgDown to BayesDown with probabilistic information"""
+    questions = generate_probability_questions(argdown_structure)
+    probabilities = extract_probabilities(probability_sources, questions)
+    
+    bayesdown = enhance_with_probabilities(argdown_structure, probabilities)
+    return validate_probability_coherence(bayesdown)
+```
+
+
+
+
+
+#### LLM Integration Strategy {#sec-llm-integration}
+
+<!-- Explain how frontier AI enables automated extraction -->
+
+**Prompt Engineering Approach**:
+
+- Specialized prompts for argument structure identification
+- Two-stage prompting to separate structure from quantification
+- Validation mechanisms to ensure extraction quality
+- Iterative refinement based on expert feedback
+
+**Current Capabilities and Limitations**:
+
+> Frontier LLMs show promising extraction quality but require careful validation
+
+
+
+**LLM Integration Strategy:**
+
+> Frontier language models enable automated extraction but require careful prompt engineering and validation mechanisms to ensure extraction quality and consistency.
+
+- **Specialized Prompting**: Domain-specific templates for argument structure identification
+- **Two-Stage Separation**: Structural and probabilistic extraction handled independently for quality control
+- **Validation Mechanisms**: Automated and human review processes for extraction accuracy
+- **Iterative Refinement**: Feedback loops enabling continuous improvement based on expert assessment
 
 
 
@@ -80,7 +227,7 @@ Large language models facilitate this process through:
 
 
 
-### Directed Acyclic Graphs: Structure and Semantics {#sec-directed-acyclic-graphs}
+### Directed Acyclic Graphs: Structure and Semantics {#sec-dag-structure}
 
 <!-- [ ] Explain the mathematical properties of DAGs and their semantic interpretation in the context of AI risk modeling --> 
 <!-- [ ] Cover both structural and parametric aspects of the models -->
@@ -93,6 +240,54 @@ Large language models facilitate this process through:
 - Path properties defining information flow
 - D-separation criteria determining conditional independence
 - Markov blanket defining minimal contextual information
+
+
+
+#### Formal Properties {#sec-formal-properties}
+
+**Acyclicity Requirement**: Ensures coherent probabilistic interpretation
+
+**D-Separation**: Conditional independence relationships between variables
+
+**Markov Condition**: Each variable independent of non-descendants given parents
+
+
+
+
+<!-- [ ] Explain mathematical properties and semantic interpretation -->
+
+**Formal Properties Essential for AI Risk Modeling:**
+
+- **Acyclicity Requirement**: Ensures coherent probabilistic interpretation without logical contradictions
+- **D-Separation**: Defines conditional independence relationships between variables based on graph structure
+- **Markov Condition**: Each variable conditionally independent of non-descendants given parents
+- **Path Analysis**: Causal pathways and information flow through the network structure
+
+**Causal Interpretation in AI Governance Context:**
+
+> @pearl2009 on causal inference and intervention analysis provides mathematical foundations for policy evaluation through do-calculus.
+
+- **Edges as Causal Relations**: Directed arrows represent direct causal influence between factors
+- **Intervention Analysis**: Do-calculus enables rigorous evaluation of policy intervention effects
+- **Counterfactual Reasoning**: "What if" scenarios essential for governance planning under uncertainty
+- **Evidence Integration**: Bayesian updating for incorporating new information and expert judgment
+
+
+
+
+#### Causal Interpretation {#sec-causal-interpretation}
+
+<!-- Connection to Pearl's causal framework -->
+
+> @pearl2009 on causal inference and intervention analysis
+
+- **Edges as Causal Relations**: Directed arrows represent direct causal influence
+- **Intervention Analysis**: Do-calculus for policy evaluation
+- **Counterfactual Reasoning**: "What if" scenarios for governance planning
+
+
+
+
 
 Semantic interpretation in AI risk contexts:
 
@@ -112,10 +307,28 @@ Semantic interpretation in AI risk contexts:
 
 
 
-### Quantification Approaches for Probabilistic Judgments {#sec-quantification-approaches}
+### Quantification of Probabilistic Judgments {#sec-quantification}
 
 <!-- [ ] Examine methods for converting qualitative judgments into quantitative probabilities, including expert elicitation, calibration techniques, and sensitivity analysis --> 
 <!-- [ ] Discuss challenges of aggregating diverse probabilistic judgments -->
+
+
+<!-- [ ] Examine methods for converting qualitative to quantitative assessments -->
+
+**Linguistic Probability Mapping:**
+
+`Transforming qualitative uncertainty expressions into quantitative probabilities requires systematic interpretation frameworks that account for individual and cultural variation.`
+
+```
+Standard linguistic mappings (with significant individual variation):
+• "Very likely" → 0.8-0.9
+• "Probable" → 0.6-0.8  
+• "Uncertain" → 0.4-0.6
+• "Unlikely" → 0.2-0.4
+• "Highly improbable" → 0.05-0.15
+```
+
+
 
 > Transforming qualitative judgments in AI safety literature into quantitative probabilities requires a systematic approach to interpretation, extraction, and validation. This process combines direct extraction of explicit numerical statements with inference of implicit probability judgments from qualitative language.
 
@@ -136,6 +349,51 @@ Special challenges in AI risk quantification:
 
 
 
+
+#### From Qualitative to Quantitative {#sec-qualitative-to-quantitative}
+
+**Linguistic Probability Expressions**:
+
+- "Very likely" → 0.8-0.9
+- "Uncertain" → 0.4-0.6
+- "Highly improbable" → 0.05-0.15
+
+**Calibration Challenges**:
+
+- Individual variation in linguistic interpretation
+- Domain-specific probability anchoring
+- Cultural and contextual influences on uncertainty expression
+
+**Calibration and Validation Challenges:**
+
+- Individual variation in linguistic interpretation and probability anchoring
+- Domain-specific probability anchoring and reference class selection
+- Cultural and contextual influences on uncertainty expression and tolerance
+- Limited empirical basis for calibration in unprecedented scenarios like transformative AI
+
+
+
+
+
+
+
+
+#### Expert Elicitation Methods {#sec-expert-elicitation}
+
+```
+Direct Probability Assessment: "What is P(outcome)?"
+Comparative Assessment: "Is A more likely than B?"  
+Frequency Format: "In 100 similar cases, how many would result in outcome?"
+Betting Odds: "What odds would you accept for this bet?"
+```
+
+
+**Expert Elicitation Methodologies:**
+
+- **Direct Probability Assessment**: "What is P(outcome)?" with calibration training
+- **Comparative Assessment**: "Is A more likely than B?" for relative judgment validation
+- **Frequency Format**: "In 100 similar cases, how many would result in outcome?" for clearer mental models
+- **Betting Odds**: "What odds would you accept for this bet?" for revealed preference elicitation
 
 
 
@@ -207,3 +465,72 @@ Technical implementation involves:
 - Conflict resolution for contradictory sources
 - Temporal alignment of forecasts
 - Confidence-weighted aggregation methods`
+
+<!-- [ ] Detail methods for connecting models with live data sources -->
+
+**Live Data Sources for Dynamic Model Updating:**
+
+- **Metaculus**: Long-term AI predictions and technological forecasting
+- **Good Judgment Open**: Geopolitical events and policy outcomes
+- **Manifold Markets**: Diverse question types with rapid market response
+- **Internal Expert Forecasting**: Organization-specific predictions and assessments
+
+**Data Processing and Integration Pipeline:**
+
+```
+python
+def integrate_forecast_data(model_variables, forecast_platforms):
+    """Connect Bayesian network variables to live forecasting data"""
+    mappings = create_semantic_mappings(model_variables, forecast_platforms)
+    
+    for variable, forecasts in mappings.items():
+        weighted_forecast = aggregate_forecasts(
+            forecasts, 
+            weights=calculate_track_record_weights(forecasts)
+        )
+        model.update_prior(variable, weighted_forecast)
+    
+    return model.recompute_posteriors()
+```
+**Technical Implementation Challenges:**
+
+- **Question Mapping**: Connecting forecast questions to specific model variables with semantic accuracy
+- **Temporal Alignment**: Handling different forecast horizons and update frequencies across platforms
+- **Conflict Resolution**: Principled aggregation when sources provide contradictory information
+- **Track Record Weighting**: Incorporating forecaster calibration and expertise into aggregation weights
+
+
+
+
+
+
+#### Live Data Sources {#sec-live-data}
+
+**Forecasting Platforms**:
+
+- Metaculus for long-term AI predictions
+- Good Judgment Open for geopolitical events
+- Manifold Markets for diverse question types
+- Internal expert forecasting within organizations
+
+
+
+
+
+
+
+
+
+
+#### Data Processing Pipeline {#sec-data-processing}
+
+**Question Mapping**: Connecting forecast questions to model variables
+
+**Temporal Alignment**: Handling different forecast horizons and update frequencies
+
+**Aggregation Methods**: Weighting sources by track record and relevance
+
+<!-- [ ] Add specific examples of forecast integration -->
+
+
+
