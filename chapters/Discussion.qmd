@@ -18,77 +18,200 @@ numbering:
 ```
 
 
-# Discussion		—	Exchange, Controversy & Influence
-
-## Challenges & Problems	—	Red Teaming Problems, Failures & Downsides
-
-	Potential Failures:
-
-* Data Issues: Inaccurate or biased inputs.  
-* Model Limitations: Oversimplifications.  
-* Tech Risks: AI misinterpretations.
-
-	Red Teaming:
-
-* Stress-testing models to find weaknesses.
-
-	Impact on Theory of Change:
-
-* Identifying points of failure strengthens the approach.
-
-## Implications & Impact	—	Uptake, Feedback Loops, Uptake & Success – Green Teaming –
-
-	Potential Outcomes:
-
-* First-Order: Reduced AI risks through better policies.  
-* Second-Order: Enhanced collaboration.  
-* Third-Order: Framework applied to other global risks.
-
-	Feedback Loops:
-
-* Continuous model improvement.  
-* Adaptive policy-making.
-
-	Green Teaming:
-
-* Strategies to maximize positive impacts.
-
-## Known Unknowns & Unknown Unknowns	—	Input Data Example:	Modeling Author Worldviews from Bibliographies Instead of Individual Papers
-
-	Potential Outcomes:
-
-* First-Order: Reduced AI risks through better policies.  
-* Second-Order: Enhanced collaboration.  
-* Third-Order: Framework applied to other global risks.
-
-	Feedback Loops:
-
-* Continuous model improvement.  
-* Adaptive policy-making.
-
-	Green Teaming:
-
-* Strategies to maximize positive impacts.
 
 
-## Discussion: Implications and Limitations
 
-#### Red-Teaming Results: Identifying Failure Modes
 
-<!-- Present results from systematic attempts to find weaknesses in the approach, including data biases, model limitations, and inference failures. Discuss implications for the reliability of the system's outputs. -->
 
-#### Enhancing Epistemic Security in AI Governance
 
-<!-- Analyze how formal modeling can improve the quality of discourse in AI governance by making assumptions explicit, clarifying disagreements, and highlighting critical uncertainties. -->
 
-#### Scaling Challenges and Opportunities
+# Discussion —	Exchange, Controversy & Influence {#sec-discussion}	
 
-<!-- Discuss both technical and organizational challenges to scaling the approach, including computational requirements, data quality issues, and coordination mechanisms. Identify opportunities for further development. -->
 
-#### Integration with Existing Governance Frameworks
 
-<!-- Examine how the modeling approach could complement existing AI governance initiatives, including technical standards, regulatory frameworks, and international coordination mechanisms. -->
+<!-- [ ] Expand this section to ~14% of total text (approximately 4200 words) -->
 
-#### Known Unknowns and Deep Uncertainties
 
-<!-- Acknowledge fundamental limitations of the approach, particularly regarding novel or unprecedented developments in AI that might fall outside the model's structure. Discuss strategies for maintaining model relevance despite deep uncertainty. -->
+
+
+
+
+
+
+
+
+
+
+## Red-Teaming Results: Identifying Failure Modes {#sec-red-teaming}
+
+<!-- [ ] Present results from systematic attempts to find weaknesses in the approach, including data biases, model limitations, and inference failures --> 
+<!-- [ ] Discuss implications for the reliability of the system's outputs -->
+
+> Systematic red-teaming identified potential failure modes across the AMTAIR pipeline, from extraction biases to visualization misinterpretations. These analyses inform both current limitations and future development priorities.
+
+`Key failure categories included:
+
+- Extraction failures misrepresenting complex arguments
+- Model inadequacies from missing causal factors
+- Inference challenges with rare event probabilities
+- Practical deployment risks including misinterpretation
+
+For each failure mode, mitigations were developed:
+
+- Improved extraction prompts for challenging cases
+- Hybrid human-AI workflow for critical arguments
+- Explicit uncertainty representation in outputs
+- User interface improvements for clearer interpretation`
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+## Enhancing Epistemic Security in AI Governance {#sec-epistemic-security}
+
+<!-- [ ] Analyze how formal modeling can improve the quality of discourse in AI governance by making assumptions explicit, clarifying disagreements, and highlighting critical uncertainties -->
+
+> AMTAIR's formalization approach enhances epistemic security in AI governance by making implicit models explicit, revealing assumptions, and enabling more productive discourse across different perspectives. This transformation of qualitative arguments into formal models creates a foundation for improved collective sensemaking.
+
+`Direct benefits include:
+
+- Explicit representation of uncertainty through probability distributions
+- Clear identification of genuine vs. terminological disagreements
+- Precise tracking of belief updating as new evidence emerges
+- Objective identification of critical uncertainties
+
+Community-level effects include:
+
+- Shared vocabulary for discussing probabilities
+- Improved focus on cruxes rather than peripheral disagreements
+- Enhanced ability to integrate diverse perspectives
+- More effective prioritization of research questions`
+
+
+
+
+
+
+
+
+
+
+
+
+
+## Scaling Challenges and Opportunities {#sec-scaling-challenges}
+
+<!-- [ ] Discuss both technical and organizational challenges to scaling the approach, including computational requirements, data quality issues, and coordination mechanisms --> 
+<!-- [ ] Identify opportunities for further development -->
+
+> Scaling AMTAIR to handle more content, greater complexity, and broader application domains presents both challenges and opportunities. Technical limitations interact with organizational and adoption considerations to shape the pathway to wider impact.
+
+`Technical scaling challenges include:
+
+- Computational complexity for very large networks
+- Data quality variation across source materials
+- Interface usability for complex models
+- Integration complexity with multiple platforms
+
+Organizational considerations include:
+
+- Coordination mechanisms for distributed development
+- Quality assurance processes
+- Knowledge management requirements
+- Stakeholder engagement strategies
+
+Promising opportunities include:
+
+- Improved extraction techniques using next-generation LLMs
+- More sophisticated visualization approaches
+- Enhanced inference algorithms
+- Deeper integration with governance processes`
+
+
+
+
+
+
+
+
+
+
+
+
+## Integration with Existing Governance Frameworks {#sec-integration}
+
+<!-- [ ] Examine how the modeling approach could complement existing AI governance initiatives, including technical standards, regulatory frameworks, and international coordination mechanisms -->
+
+> Rather than replacing existing governance approaches, AMTAIR complements and enhances them by providing formal analytical capabilities that can strengthen decision-making. Integration with current frameworks presents both opportunities and challenges.
+
+`Integration opportunities include:
+
+- Enhancing impact assessment methodologies
+- Supporting standards development with formal evaluation
+- Informing regulatory design with counterfactual analysis
+- Facilitating international coordination through shared models
+
+Practical applications include:
+
+- Structured reasoning about governance proposals
+- Comparison of regulatory approaches
+- Analysis of standard effectiveness
+- Identification of governance gaps
+
+Implementation pathways include:
+
+- Tool adoption by key organizations
+- Integration with existing workflows
+- Training programs for governance analysts
+- Progressive enhancement of current processes`
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+## Known Unknowns and Deep Uncertainties {#sec-deep-uncertainties}
+
+<!-- [ ] Acknowledge fundamental limitations of the approach, particularly regarding novel or unprecedented developments in AI that might fall outside the model's structure --> 
+<!-- [ ] Discuss strategies for maintaining model relevance despite deep uncertainty -->
+
+> While AMTAIR enhances our ability to reason under uncertainty, fundamental limitations remain—particularly concerning truly novel or unprecedented developments in AI that might fall outside existing conceptual frameworks. Acknowledgment of these limitations is essential for responsible use.
+
+`Fundamental limitations include:
+
+- Novel capabilities outside historical patterns
+- Unprecedented social and economic impacts
+- Emergent behaviors in complex systems
+- Fundamental unpredictability of technological development
+
+Adaptation strategies include:
+
+- Flexible model architectures accommodating new variables
+- Regular updates from expert input
+- Explicit confidence level indication
+- Alternative model formulations
+
+Decision principles for deep uncertainty include:
+
+- Robust strategies across model variants
+- Adaptive approaches with learning mechanisms
+- Preservation of option value
+- Explicit value of information calculations`

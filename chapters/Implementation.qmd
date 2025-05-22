@@ -1,29 +1,24 @@
-<!-- [ ] Update / Replace Colab links (Section-Headings) -->
-
-<!-- [ ] Balance Code (Snippets) Inclusion vs. Cross-Referencing -->
 
 
-## Rain-Sprinkler-Grass Example
+## Software Implementation {#sec-software-implementation}
 
-## Software Implementation
+### System Architecture and Data Flow {#sec-system-architecture}
 
+<!-- [ ] Present the overall architecture of AMTAIR, showing how different components interact --> 
+<!-- [ ] Explain the data pipeline from extraction through modeling to visualization and policy evaluation -->
 
+> The AMTAIR system implements an end-to-end pipeline from unstructured text to interactive Bayesian network visualization. Its modular architecture comprises five main components that progressively transform information from natural language into formal models.
 
+`Core system components include:
 
+1. Text Ingestion and Preprocessing: Handles format normalization, metadata extraction, and relevance filtering
+2. BayesDown Extraction: Identifies argument structures, causal relationships, and probabilistic judgments
+3. Structured Data Transformation: Parses representations into standardized data formats
+4. Bayesian Network Construction: Creates formal network representations with nodes and edges
+5. Interactive Visualization: Renders networks as explorable visual interfaces`
 
-
-
-
-
-
-
-
-### System Architecture (and Data Flow) Overview
-
-<!--
-Present the overall architecture of AMTAIR, showing how different components interact.
-
-Explain the data pipeline from extraction through modeling to visualization and policy evaluation.
+<!-- 
+[![AMTAIR Automation Pipeline](/images/pipeline.png){#fig-automation_pipeline fig-scap="Five-step AMTAIR automation pipeline from PDFs to Bayesian networks" fig-alt="FLOWCHART: Five-step automation pipeline workflow for AMTAIR project." fig-align="center" width="100%"}](https://claude.ai/chat/ab8988f3-18b7-45a5-8a50-b25aa4b34cbf) 
 -->
 
 
@@ -33,92 +28,50 @@ Explain the data pipeline from extraction through modeling to visualization and 
 
 
 
->[AMTAIR Prototype Demonstration (Public Colab Notebook)](#scrollTo=lt8-AnebGUXr)
-
->[AMTAIR Prototype: Automating Transformative AI Risk Modeling](#scrollTo=iDy_leH6DJH_)
-
->>[Executive Summary](#scrollTo=iDy_leH6DJH_)
-
->>>[Purpose Within the Master's Thesis](#scrollTo=iDy_leH6DJH_)
-
->>>[Relevance to AI Governance](#scrollTo=iDy_leH6DJH_)
-
->>[Notebook Structure and Workflow](#scrollTo=iDy_leH6DJH_)
-
->>[Project Context and Purpose](#scrollTo=Cm1JQGDYNJjf)
-
->>[Notebook Overview and Pipeline](#scrollTo=Cm1JQGDYNJjf)
-
->>[Connection to Master's Thesis](#scrollTo=Cm1JQGDYNJjf)
 
 
+### Rain-Sprinkler-Grass Example Implementation {#sec-rain-sprinkler-grass}
 
+<!-- [ ] Demonstrate the pipeline using the canonical Rain-Sprinkler-Lawn example --> 
+<!-- [ ] Provide a detailed walkthrough of each transformation stage -->
 
+> The Rain-Sprinkler-Grass example serves as a canonical test case demonstrating each step in the AMTAIR pipeline. This simple causal scenario—where both rain and sprinkler use can cause wet grass, and rain influences sprinkler use—provides an intuitive introduction to Bayesian network concepts while exercising all system components.
 
+`The implementation walkthrough includes:
 
+1. Source representation in natural language
+2. Extraction to ArgDown format with structural relationships
+3. Enhancement to BayesDown with probability information
+4. Transformation into structured data tables
+5. Construction of the Bayesian network
+6. Interactive visualization with probability encoding`
 
-
-
-
->>[Instructions --- How to use this notebook:](#scrollTo=22NBzTxxsnfQ)
-
->>[Key Concepts:](#scrollTo=NovjnOw6bzLi)
-
->>[Example Workflow:](#scrollTo=NovjnOw6bzLi)
-
->>[Troubleshooting:](#scrollTo=NovjnOw6bzLi)
-
->[Environment Setup and Data Access](#scrollTo=neYYoWhbNRIJ)
-
->[0.1 Prepare Colab/Python Environment --- Import Libraries & Packages](#scrollTo=GtVFO-s74vI_)
-
->>[0.2 Connect to GitHub Repository](#scrollTo=2a3VR0fLhJow)
-
->>[0.3 File Import](#scrollTo=y-ix4Rp5fE9m)
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-### Automated Extraction Pipeline: 
-### The Two-Stage Extraction from Carlsmith
-
-<!-- Detail the implementation of the automated extraction system, including LLM prompt design, validation procedures, and performance metrics.
-
-Provide specific examples showing the transition from text to formal model. -->
-
-```
-
-- **Process overview:** Explain the separation of structure and probability extraction
-
-- **Stage 1: Structure extraction**
-
-- **Process details:** Outline the steps for extracting argument structure
-
-- **CODE EXAMPLE:** Show key function for ArgDown parsing
-
-- **Visualization:** Demonstrate structural extraction for Carlsmith model
-
-- **Stage 2: Probability integration**
-
-- **Process details:** Explain how probability information is incorporated
-
-- **Question generation:** Show how appropriate questions are derived from structure
-
-- **CODE EXAMPLE:** Show key function for BayesDown enhancement
-
-- **Visualization:** Demonstrate probability extraction for Carlsmith model
-
-
+```{=python}
+# Example code snippet demonstrating network construction
+def create_bayesian_network_with_probabilities(df):
+    """Create an interactive Bayesian network visualization with probability encoding"""
+    # Create a directed graph
+    G = nx.DiGraph()
+    
+    # Add nodes with proper attributes
+    for idx, row in df.iterrows():
+        title = row['Title']
+        description = row['Description']
+        
+        # Process probability information
+        priors = get_priors(row)
+        instantiations = get_instantiations(row)
+        
+        # Add node with base information
+        G.add_node(
+            title,
+            description=description,
+            priors=priors,
+            instantiations=instantiations,
+            posteriors=get_posteriors(row)
+        )
+    
+    # [Additional implementation details...]
 ```
 
 
@@ -128,31 +81,49 @@ Provide specific examples showing the transition from text to formal model. -->
 
 
 
->[1.0 Sources (PDF's of Papers) to ArgDown (.md file)](#scrollTo=52XyPlte5HrU)
 
->[Sources to ArgDown: Structured Argument Extraction](#scrollTo=1-7O4KHfNU-e)
 
->>[Process Overview](#scrollTo=1-7O4KHfNU-e)
 
->>[What is ArgDown?](#scrollTo=1-7O4KHfNU-e)
+### Carlsmith Implementation {#sec-carlsmith-implementation}
 
->>[1.1 Specify Source Document (e.g. PDF)](#scrollTo=ESKnZ_4f_a6y)
+<!-- [ ] Apply the same pipeline to the more complex Carlsmith model of power-seeking AI --> 
+<!-- [ ] Explain how the system handles more complex causal relationships and uncertainty -->
 
->>[1.2 Generate ArgDown Extraction Prompt](#scrollTo=6ToQFra3_nl9)
+> Applied to Carlsmith's model of power-seeking AI, the AMTAIR pipeline demonstrates its capacity to handle complex real-world causal structures. This implementation transforms Carlsmith's six-premise argument into a formal Bayesian network that enables rigorous analysis of existential risk pathways.
 
->>[1.3 Prepare LLM API Call](#scrollTo=pGv2KcZU_9Bn)
+`Key aspects of the implementation include:
 
->>[1.4 Make ArgDown Extraction LLM API Call](#scrollTo=i5xsDYnsAWC4)
+1. Extraction of the multi-level causal structure
+2. Representation of Carlsmith's explicit probability estimates
+3. Identification of implicit conditional relationships
+4. Visualization of the complete risk model
+5. Analysis of critical pathways and parameters`
 
->>[1.5 Save ArgDown Extraction Response](#scrollTo=Lc2nMp8nAfeU)
+```{=python}
+# Example code showing probability extraction for Carlsmith model
+def extract_bayesdown_probabilities(questions_md, model_name="claude-3-opus-20240229"):
+    """Extract probability estimates from natural language using frontier LLMs"""
+    provider = LLMFactory.create_provider("anthropic")
+    
+    # Get probability extraction prompt
+    prompt_template = PromptLibrary.get_template("BAYESDOWN_EXTRACTION")
+    prompt = prompt_template.format(questions=questions_md)
+    
+    # Call the LLM for probability estimation
+    response = provider.complete(
+        prompt=prompt,
+        system_prompt="You are an expert in causal reasoning and probability estimation.",
+        model=model_name,
+        temperature=0.2,
+        max_tokens=4000
+    )
+    
+    # [Additional implementation details...]
+```
 
->>[1.6 Review and Check ArgDown.md File](#scrollTo=5HcCfqE4A0ht)
 
->>[1.6.2 Check the Graph Structure with the ArgDown Sandbox Online](#scrollTo=gSpkvLbCC_PI)
 
->>[1.7 Extract ArgDown Graph Information as DataFrame](#scrollTo=MAm0UKpeBvyr)
 
->>[1.8 Store ArgDown Information as 'ArgDown.csv' file](#scrollTo=iFC6oiyICREn)
 
 
 
@@ -160,214 +131,46 @@ Provide specific examples showing the transition from text to formal model. -->
 
 
 
+### Inference & Extensions {#sec-inference-extensions}
 
+<!-- [ ] Describe the additional analytical capabilities built on the formal model representation --> 
+<!-- [ ] Showcase how inference, sensitivity analysis, and policy evaluation work in practice -->
 
+> Beyond basic representation, AMTAIR implements advanced analytical capabilities that enable reasoning about uncertainties, counterfactuals, and policy interventions. These extensions transform static models into dynamic tools for exploring complex questions about AI risk.
 
+`Key inference capabilities include:
 
+1. Probability queries for outcomes of interest
+2. Sensitivity analysis identifying critical parameters
+3. Counterfactual reasoning for policy evaluation
+4. Intervention modeling for strategy development
+5. Comparative analysis across different worldviews`
 
->[2.0 Probability Extractions: ArgDown (.csv) to BayesDown (.md + plugin JSON syntax)](#scrollTo=7SGB0XMp5VFq)
+```{=python}
+# Example code demonstrating sensitivity analysis
+def perform_sensitivity_analysis(model, target_node, parameter_ranges):
+    """Analyze how varying input parameters affects target outcome probabilities"""
+    results = {}
+    
+    for parameter, range_values in parameter_ranges.items():
+        parameter_results = []
+        original_value = model.get_cpds(parameter).values
+        
+        # Test each parameter value and record outcome
+        for test_value in range_values:
+            # Create modified model with test parameter
+            temp_model = model.copy()
+            update_parameter(temp_model, parameter, test_value)
+            
+            # Perform inference to get target probability
+            inference = VariableElimination(temp_model)
+            result = inference.query([target_node])
+            
+            parameter_results.append((test_value, result[target_node].values))
+            
+        results[parameter] = parameter_results
+        
+    return results
+```
 
->[ArgDown to BayesDown: Adding Probability Information](#scrollTo=hWkmySZYNtzS)
-
->>[Process Overview](#scrollTo=hWkmySZYNtzS)
-
->>[What is BayesDown?](#scrollTo=hWkmySZYNtzS)
-
->>[2.1 Probability Extraction Questions --- 'ArgDown.csv' to 'ArgDown_WithQuestions.csv'](#scrollTo=WcF2nHXBZru4)
-
->>[2.2 'ArgDown_WithQuestions.csv' to 'BayesDownQuestions.md'](#scrollTo=-q9UOQ8yaBZn)
-
->>[2.3 Generate BayesDown Probability Extraction Prompt](#scrollTo=Ux4OUCPue6Bu)
-
->>[2.3.1 BayesDown Format Specification](#scrollTo=ivcnd2ml41Nv)
-
->>>[Core Structure](#scrollTo=ivcnd2ml41Nv)
-
->>>>>[Rain-Sprinkler-Lawn Example](#scrollTo=Fn72WmgVEOH0)
-
->>[2.4 Prepare 2nd API call](#scrollTo=d4tB9WD-fIWZ)
-
->>[2.5 Make BayesDown Probability Extraction API Call](#scrollTo=oPWto83lfN9Q)
-
->>[2.6 Save BayesDown with Probability Estimates (.csv)](#scrollTo=L8NWpz8MfZ9_)
-
->>[2.7 Review & Verify BayesDown Probability Estimates](#scrollTo=Q3PTtYgRfsLa)
-
->>[2.7.2 Check the Graph Structure with the ArgDown Sandbox Online](#scrollTo=VwoAgBsafonh)
-
->>[2.8 Extract BayesDown with Probability Estimates as Dataframe](#scrollTo=19KDn2mKf309)
-
->[3.0 Data Extraction: BayesDown (.md) to Database (.csv)](#scrollTo=vUSS00TCEpeW)
-
-
-
-
-
-
-
-
-
-
->[BayesDown to Structured Data: Network Construction](#scrollTo=vUSS00TCEpeW)
-
->>[Extraction Pipeline Overview](#scrollTo=vUSS00TCEpeW)
-
->>>[Theoretical Foundation](#scrollTo=vUSS00TCEpeW)
-
->>>[Role in Thesis Research](#scrollTo=vUSS00TCEpeW)
-
->>>[3.1 ExtractBayesDown-Data_v1](#scrollTo=AFnu_1Ludahi)
-
->>[3.1.2 Test BayesDown Extraction](#scrollTo=eUBJh8Qp4yd4)
-
->>[3.1.2.2 Check the Graph Structure with the ArgDown Sandbox Online](#scrollTo=z4Hgs0ICDQyW)
-
->>[3.3 Extraction](#scrollTo=mv8f4c4D3yJj)
-
->>>[3.3 Data-Post-Processing](#scrollTo=UcXf3fZ8dahj)
-
->>>[3.4 Download and save finished data frame as .csv file](#scrollTo=xTwPO_J-dahj)
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-### Network Construction and Visualization
-
-<!-- Describe the implementation of the DAG construction and visualization components, explaining both the mathematical representation and the user interface design considerations. -->
-
-
-
->[4.0 Analysis & Inference: Bayesian Network Visualization](#scrollTo=t3zl7vKMECMg)
-
->>[Bayesian Network Visualization Approach](#scrollTo=t3zl7vKMECMg)
-
->>>[Visualization Philosophy](#scrollTo=t3zl7vKMECMg)
-
->>>[Connection to AMTAIR Goals](#scrollTo=t3zl7vKMECMg)
-
->>>[Implementation Structure](#scrollTo=t3zl7vKMECMg)
-
->>[Phase 1: Dependencies/Functions](#scrollTo=LSeSAPvtgIgU)
-
->>[Phase 2: Node Classification and Styling Module](#scrollTo=byAExfek5yFU)
-
->>[Phase 3: HTML Content Generation Module](#scrollTo=gnS3jFGU52OZ)
-
->>[Phase 4: Main Visualization Function](#scrollTo=d2uyG0Pi571f)
-
->[Quickly check HTML Outputs](#scrollTo=bFtxTKmLElSF)
-
->[Conclusion: From Prototype to Production](#scrollTo=oatKYlKrOSiN)
-
-
-
-
->>[Summary of Achievements](#scrollTo=oatKYlKrOSiN)
-
->>[Limitations and Future Work](#scrollTo=oatKYlKrOSiN)
-
->>[Connection to AMTAIR Project](#scrollTo=oatKYlKrOSiN)
-
-
-
-
-
-
-
-
->[6.0 Save Outputs](#scrollTo=kjbIj19epbrF)
-
->[Saving and Exporting Results](#scrollTo=0QqlN6dYpm4s)
-
->>[Convert .ipynb Notebook to MarkDown](#scrollTo=pS6AhdiSCLw4)
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-## Inference & Extensions
-<!-- Preview possible Impementations -->
-<!-- [ ] Highlight some of the "Inference Enabled by the BNs -->
-
-
-
-### Probabilistic Inference Engine
-
-<!-- Present the implementation of the inference engine, with particular attention to handling complex networks efficiently.
-
-Discuss optimization techniques and computational constraints. -->
-
-
-
-### Policy Evaluation Interface
-
-<!-- Describe the interface for policy evaluation, showing how users can define interventions, set conditions, and analyze outcomes.
-
-Explain design choices that enhance interpretability and usability. -->
-
-
-
-### Prediction Market Integration Module
-
-<!-- Detail the implementation of connections to prediction markets and forecasting platforms, including API interactions, data processing, and update mechanisms. -->
-
-
+POST TEXT

@@ -14,107 +14,57 @@
     "href": "chapters/Introduction.html",
     "title": "1  Introduction",
     "section": "",
-    "text": "1.1 Abstract\n[x]  introduces and motivates the core question or problem",
+    "text": "Abstract\nThe coordination crisis in AI governance presents a paradoxical challenge: unprecedented investment in AI safety coexists alongside fundamental coordination failures across technical, policy, and ethical domains. These divisions systematically increase existential risk by creating safety gaps, misallocating resources, and fostering inconsistent approaches to interdependent problems.\nThe AMTAIR system implements an end-to-end pipeline that transforms unstructured text into interactive Bayesian networks through a novel two-stage extraction process: first capturing argument structure in ArgDown format, then enhancing it with probability information in BayesDown. This approach bridges communication gaps between stakeholders by making implicit models explicit, enabling comparison across different worldviews, providing a common language for discussing probabilistic relationships, and supporting policy evaluation across diverse scenarios.",
     "crumbs": [
       "<span class='chapter-number'>1</span>  <span class='chapter-title'>Introduction</span>"
     ]
   },
   {
-    "objectID": "chapters/Introduction.html#motivation-problem-statement",
-    "href": "chapters/Introduction.html#motivation-problem-statement",
+    "objectID": "chapters/Introduction.html#sec-abstract",
+    "href": "chapters/Introduction.html#sec-abstract",
     "title": "1  Introduction",
-    "section": "1.2 Motivation: Problem Statement",
-    "text": "1.2 Motivation: Problem Statement\n    AIs are (on the path to) getting smarter than humans\n    Humanities (de-centralized) collective information processing, sense-making AND coordination/cooperation is falling behind\n    BUT new technology/AI also enables new modes/methods of collective information processing\n    therefore this thesis/AMTAIR aspires to be an epistemic tool that enables/empowers humanity (collectively)",
+    "section": "",
+    "text": "The coordination crisis in AI governance presents a paradoxical challenge: unprecedented investment in AI safety coexists alongside fundamental coordination failures across technical, policy, and ethical domains. These divisions systematically increase existential risk. This thesis introduces AMTAIR (Automating Transformative AI Risk Modeling), a computational approach addressing this coordination failure by automating the extraction of probabilistic world models from AI safety literature using frontier language models. The system implements an end-to-end pipeline transforming unstructured text into interactive Bayesian networks through a novel two-stage extraction process that bridges communication gaps between stakeholders.\n\n\n\n\nThis thesis introduces AMTAIR (Automating Transformative AI Risk Modeling), a computational approach that addresses this coordination failure by automating the extraction of probabilistic world models from AI safety literature using frontier language models.",
     "crumbs": [
       "<span class='chapter-number'>1</span>  <span class='chapter-title'>Introduction</span>"
     ]
   },
   {
-    "objectID": "chapters/Introduction.html#motivation-research-question",
-    "href": "chapters/Introduction.html#motivation-research-question",
+    "objectID": "chapters/Introduction.html#sec-coordination-crisis",
+    "href": "chapters/Introduction.html#sec-coordination-crisis",
     "title": "1  Introduction",
-    "section": "1.3 Motivation: Research Question",
-    "text": "1.3 Motivation: Research Question\n- [ ] provides context for discussion (places issue within a larger debate or sphere of relevance)",
+    "section": "2.1 The Coordination Crisis in AI Governance",
+    "text": "2.1 The Coordination Crisis in AI Governance\n\n\nAs AI capabilities advance at an accelerating pace—demonstrated by the rapid progression from GPT-3 to GPT-4, Claude, and beyond—we face a governance challenge unlike any in human history: how to ensure increasingly powerful AI systems remain aligned with human values and beneficial to humanity’s long-term flourishing. This challenge becomes particularly acute when considering the possibility of transformative AI systems that could drastically alter civilization’s trajectory, potentially including existential risks from misaligned systems.\n\nDespite unprecedented investment in AI safety research, rapidly growing awareness among key stakeholders, and proliferating frameworks for responsible AI development, we face what I’ll term the “coordination crisis” in AI governance—a systemic failure to align diverse efforts across technical, policy, and strategic domains into a coherent response proportionate to the risks we face.\n\n`The AI governance landscape exhibits a peculiar paradox: extraordinary activity alongside fundamental coordination failure. Consider the current state of affairs:\nTechnical safety researchers develop increasingly sophisticated alignment techniques, but often without clear implementation pathways to deployment contexts. Policy specialists craft principles and regulatory frameworks without sufficient technical grounding to ensure their practical efficacy. Ethicists articulate normative principles that lack operational specificity. Strategy researchers identify critical uncertainties but struggle to translate these into actionable guidance.`\n\nOpening with the empirical paradox: record investment in AI safety coexisting with fragmented, ineffective governance responses\n\n\n2.1.1 Empirical Paradox: Investment Alongside Fragmentation\n\n\n\nThe Fragmentation Problem: Technical researchers, policy specialists, and strategic analysts operate with incompatible frameworks\n\n\n\n2.1.2 Systematic Risk Increase Through Coordination Failure\n\n\n\n\n\nSystemic Risk Amplification: How coordination failures systematically increase existential risk through safety gaps and resource misallocation\n\n\n\n2.1.3 Historical Parallels and Temporal Urgency\n\n\n\nThe Scaling Challenge: Traditional governance approaches cannot match the pace of capability development",
     "crumbs": [
       "<span class='chapter-number'>1</span>  <span class='chapter-title'>Introduction</span>"
     ]
   },
   {
-    "objectID": "chapters/Introduction.html#scope-aim-context-of-the-research",
-    "href": "chapters/Introduction.html#scope-aim-context-of-the-research",
+    "objectID": "chapters/Introduction.html#sec-research-question",
+    "href": "chapters/Introduction.html#sec-research-question",
     "title": "1  Introduction",
-    "section": "1.4 Scope: Aim & Context of the Research",
-    "text": "1.4 Scope: Aim & Context of the Research",
+    "section": "2.2 Research Question and Scope",
+    "text": "2.2 Research Question and Scope\n\n\n\nThis thesis addresses a specific dimension of the coordination challenge by investigating the question: Can frontier AI technologies be utilized to automate the modeling of transformative AI risks, enabling robust prediction of policy impacts?\nThis thesis addresses a specific dimension of the coordination challenge by investigating how computational approaches can formalize the worldviews and arguments underlying AI safety discourse, transforming qualitative disagreements into quantitative models suitable for rigorous policy evaluation.\nTo break this down into its components:\n\nFrontier AI Technologies: Today’s most capable language models (GPT-4, Claude-3 level systems)\nAutomated Modeling: Using these systems to extract and formalize argument structures from natural language\nTransformative AI Risks: Potentially catastrophic outcomes from advanced AI systems, particularly existential risks\nPolicy Impact Prediction: Evaluating how governance interventions might alter probability distributions over outcomes\n\nCentral Question: Can frontier AI technologies be utilized to automate the modeling of transformative AI risks, enabling robust prediction of policy impacts?\nAMTAIR represents the first computational framework for automated extraction and formalization of AI governance worldviews\nCore Innovation:\n\nAutomated transformation of qualitative governance arguments into quantitative Bayesian networks\nIntegration of prediction markets with formal models for dynamic risk assessment\nCross-worldview policy evaluation under deep uncertainty\n\nScope Boundaries:\n\nThe investigation encompasses both theoretical development and practical implementation, focusing specifically on existential risks from misaligned AI systems rather than broader AI ethics concerns. This narrowed scope enables deep technical development while addressing the highest-stakes coordination challenges.\nThe scope encompasses both theoretical development and practical implementation. Theoretically, I develop a framework for representing diverse perspectives on AI risk in a common formal language. Practically, I implement this framework in a computational system—the AI Risk Pathway Analyzer (ARPA)—that enables interactive exploration of how policy interventions might alter existential risk.",
     "crumbs": [
       "<span class='chapter-number'>1</span>  <span class='chapter-title'>Introduction</span>"
     ]
   },
   {
-    "objectID": "chapters/Introduction.html#significance-of-the-research-theory-of-change",
-    "href": "chapters/Introduction.html#significance-of-the-research-theory-of-change",
+    "objectID": "chapters/Introduction.html#sec-multiplicative-benefits",
+    "href": "chapters/Introduction.html#sec-multiplicative-benefits",
     "title": "1  Introduction",
-    "section": "1.5 Significance of the Research: Theory of Change",
-    "text": "1.5 Significance of the Research: Theory of Change\n-[ ] states precise thesis or position the author will argue for",
+    "section": "2.3 The Multiplicative Benefits Framework",
+    "text": "2.3 The Multiplicative Benefits Framework\n\n \nCore Innovation: The combination of three elements—automated extraction, prediction market integration, and formal policy evaluation—creates multiplicative rather than additive benefits for AI governance.\nThe central thesis of this work is that combining three elements—automated worldview extraction, prediction market integration, and formal policy evaluation—creates multiplicative rather than merely additive benefits for AI governance. Each component enhances the others, creating a system more valuable than the sum of its parts.\nAutomated worldview extraction using frontier language models addresses the scaling bottleneck in current approaches to AI risk modeling. The Modeling Transformative AI Risks (MTAIR) project demonstrated the value of formal representation but required extensive manual effort to translate qualitative arguments into quantitative models. Automation enables processing orders of magnitude more content, incorporating diverse perspectives, and maintaining models in near real-time as new arguments emerge.\nPrediction market integration grounds these models in collective forecasting intelligence. By connecting formal representations to live forecasting platforms, the system can incorporate timely judgments about critical uncertainties from calibrated forecasters. This creates a dynamic feedback loop, where models inform forecasters and forecasts update models.\nFormal policy evaluation transforms static risk assessments into actionable guidance by modeling how specific interventions might alter critical parameters. This enables conditional forecasting—understanding not just the probability of adverse outcomes but how those probabilities change under different policy regimes.\nSynergistic Components:\n\nAutomated Worldview Extraction: Scaling formal modeling from manual (MTAIR) to automated approaches using frontier LLMs\nLive Data Integration: Connecting models to prediction markets and forecasting platforms for dynamic calibration and live updating\nPolicy Evaluation: Enabling rigorous counterfactual analysis of governance interventions across worldviews\n\nThe synergy emerges because automation enables comprehensive data integration, markets inform and validate models, and evaluation gains precision from both automated extraction and market-based calibration.\nThe combination creates multiplicative rather than additive value—automation enables comprehensive data integration, markets inform models, evaluation gains precision from both\n\n\n\n\n\n\nFigure 2.1: AMTAIR Automation Pipeline from CITATION",
     "crumbs": [
       "<span class='chapter-number'>1</span>  <span class='chapter-title'>Introduction</span>"
     ]
   },
   {
-    "objectID": "chapters/Introduction.html#thesis-statement-position-aim-of-the-paper",
-    "href": "chapters/Introduction.html#thesis-statement-position-aim-of-the-paper",
+    "objectID": "chapters/Introduction.html#sec-roadmap",
+    "href": "chapters/Introduction.html#sec-roadmap",
     "title": "1  Introduction",
-    "section": "1.6 Thesis Statement & Position: (Aim of the Paper)",
-    "text": "1.6 Thesis Statement & Position: (Aim of the Paper)\nAMTAIR is a new epistemic tool/framework that enables/empowers humanities collective information processing, comprehension and thereby enables the necessary coordination ... (to compete with AIs?)\n[ ] provides roadmap indicating structure and key content points of the essay",
-    "crumbs": [
-      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Introduction</span>"
-    ]
-  },
-  {
-    "objectID": "chapters/Introduction.html#overview-structure-approach-of-the-paper-roadmap-theory-of-change",
-    "href": "chapters/Introduction.html#overview-structure-approach-of-the-paper-roadmap-theory-of-change",
-    "title": "1  Introduction",
-    "section": "1.7 Overview: Structure & Approach of the Paper (Roadmap — Theory of Change)",
-    "text": "1.7 Overview: Structure & Approach of the Paper (Roadmap — Theory of Change)",
-    "crumbs": [
-      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Introduction</span>"
-    ]
-  },
-  {
-    "objectID": "chapters/Introduction.html#table-of-contents",
-    "href": "chapters/Introduction.html#table-of-contents",
-    "title": "1  Introduction",
-    "section": "1.8 Table of Contents",
-    "text": "1.8 Table of Contents",
-    "crumbs": [
-      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Introduction</span>"
-    ]
-  },
-  {
-    "objectID": "chapters/Introduction.html#problem-statement-motivation",
-    "href": "chapters/Introduction.html#problem-statement-motivation",
-    "title": "1  Introduction",
-    "section": "1.9 Problem Statement — Motivation",
-    "text": "1.9 Problem Statement — Motivation\nContinued AI Progress:\n\nRapid advancements in AI technology increase both potential benefits and risks.\n\nExistential Risks (AI X-Risk):\n\nAdvanced AI systems could pose significant threats if misaligned with human values.\n\nComplexity Challenges:\n\nThe intricate nature of AI systems complicates policy formulation and understanding.\n\nLimitations of Current Approaches:\n\nMTAIR’s Reliance on Human Labor:\n\nModeling Transformative AI Risks (MTAIR) is constrained by manual cognitive efforts.\n\n\nNeed for Automation:\n\nScaling and automating risk modeling is essential to keep pace with AI developments.\n\n\nOpportunity:\n\nLeveraging new technologies to enhance our ability to model and mitigate AI risks.",
-    "crumbs": [
-      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Introduction</span>"
-    ]
-  },
-  {
-    "objectID": "chapters/Introduction.html#aim-of-the-paper",
-    "href": "chapters/Introduction.html#aim-of-the-paper",
-    "title": "1  Introduction",
-    "section": "1.10 Aim of the Paper",
-    "text": "1.10 Aim of the Paper\n\n1.10.1 Research Question & Scope\n\n1.10.1.1 Can frontier AI technologies be utilized to automate the modeling of transformative AI risks, so as to allow for the prediction of policy impacts?\nFrontier AI Technology: Today’s most capable AI systems (e.g. GPT4 level LLMs)\nScaling Up: Automating the previously “manual” cognitive labor\nModeling: Formalizing the world views underlying arguments\nTransformative AI: Level of AI capabilities defined by severe impact on the world\nSafety & Governance Literature: Publications, reports etc. concerned with risks from AI\nAutomated Estimation: Non-manual (AI systems + scaffolding), quantified evaluations\nProbability Distributions: Formal expressions of the expectations over future worlds\nConditional Trees of Possible Worlds: “If … then…” reasoning over ways things may play out\nForecasting Policy Impacts: Qualitative & quantitative evaluation of expected outcomes\n\n\n\n1.10.2 Significance of the Research",
-    "crumbs": [
-      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Introduction</span>"
-    ]
-  },
-  {
-    "objectID": "chapters/Introduction.html#theory-of-change-approach-structure-of-the-paper",
-    "href": "chapters/Introduction.html#theory-of-change-approach-structure-of-the-paper",
-    "title": "1  Introduction",
-    "section": "1.11 Theory of Change — Approach & Structure of the Paper",
-    "text": "1.11 Theory of Change — Approach & Structure of the Paper\nMultiplicative Benefits:\n\nAutomation × Live Prediction Market Integrations × Policy Impact Evaluations\n\nExplanation:\nAutomation:\n\nIncreases efficiency and scalability of risk modeling.\nLive Prediction Markets:\nProvides up-to-date, collective intelligence to inform models.\nPolicy Impact Evaluations:\nImproves the accuracy and relevance of policy assessments.\n\nOutcome:\n\nEnhanced ability to develop effective policies that mitigate AI risks.\n\nVisual Aid:\n\nA diagram illustrating how each component amplifies the others, leading to greater overall impact.\n\n\n1.11.1 The Coordination Crisis in AI Governance\n\n\n\n1.11.2 1.2 Research Question and Scope\n\n\n\n1.11.3 1.3 The Multiplicative Benefits Framework\n\n\n\n1.11.4 1.4 From Theory to Practice: A Roadmap",
+    "section": "2.4 Thesis Structure and Roadmap",
+    "text": "2.4 Thesis Structure and Roadmap\n\n \n\nLogical Progression from Theory to Application:\n\nContext & Background: Establish theoretical foundations (Bayesian networks, argument mapping) and methodological approach (two-stage extraction)\nAMTAIR Implementation: Demonstrate technical feasibility through working prototype with validated examples\nCritical Analysis: Examine limitations, failure modes, and governance implications through systematic red-teaming\nFuture Directions: Connect to broader coordination challenges and research agenda\n\nEach section builds toward a practical implementation of the framework while maintaining both theoretical rigor and policy relevance, demonstrating how computational approaches can enhance rather than replace human judgment in AI governance.\nThe remainder of this thesis develops the multiplicative benefits framework from theoretical foundations to practical implementation, following a progression from abstract principles to concrete applications:\nSection 2 establishes the theoretical foundations and methodological approach, examining why AI governance presents unique epistemic challenges and how Bayesian networks can formalize causal relationships in this domain.\nSection 3 presents the AMTAIR implementation, detailing the technical system that transforms qualitative arguments into formal representations. It demonstrates the approach through two case studies: the canonical Rain-Sprinkler-Lawn example and the more complex Carlsmith model of power-seeking AI.\nSection 4 discusses implications, limitations, and counterarguments, addressing potential failure modes, scaling challenges, and integration with existing governance frameworks.\nSection 5 concludes by summarizing key contributions, drawing out concrete policy implications, and suggesting directions for future research.\nThroughout this progression, I maintain a dual focus on theoretical sophistication and practical utility. The framework aims not merely to advance academic understanding of AI risk but to provide actionable tools for improving coordination in AI governance.",
     "crumbs": [
       "<span class='chapter-number'>1</span>  <span class='chapter-title'>Introduction</span>"
     ]
@@ -123,8 +73,8 @@
     "objectID": "chapters/Introduction.html#overview-table-of-contents",
     "href": "chapters/Introduction.html#overview-table-of-contents",
     "title": "1  Introduction",
-    "section": "1.12 Overview / Table of Contents",
-    "text": "1.12 Overview / Table of Contents",
+    "section": "2.5 Overview / Table of Contents",
+    "text": "2.5 Overview / Table of Contents",
     "crumbs": [
       "<span class='chapter-number'>1</span>  <span class='chapter-title'>Introduction</span>"
     ]
@@ -134,47 +84,27 @@
     "href": "chapters/Context.html",
     "title": "2  Context",
     "section": "",
-    "text": "2.1 Background Considerations",
+    "text": "3 Context & Background",
     "crumbs": [
       "<span class='chapter-number'>2</span>  <span class='chapter-title'>Context</span>"
     ]
   },
   {
-    "objectID": "chapters/Context.html#literature-concepts-terminology",
-    "href": "chapters/Context.html#literature-concepts-terminology",
+    "objectID": "chapters/Context.html#sec-theoretical-foundations",
+    "href": "chapters/Context.html#sec-theoretical-foundations",
     "title": "2  Context",
-    "section": "2.2 Literature, Concepts & Terminology",
-    "text": "2.2 Literature, Concepts & Terminology\n\n2.2.1 DAG / BayesNets\n\n\n2.2.2 State of the art (MTAIR) — Explanation\n\n2.2.2.1 Carlsmith Model (Analytica)",
+    "section": "3.1 Theoretical Foundations",
+    "text": "3.1 Theoretical Foundations\n\n3.1.1 AI Existential Risk: The Carlsmith Model\n\n\n\nCarlsmith’s “Is power-seeking AI an existential risk?” (2021) represents one of the most structured approaches to assessing the probability of existential catastrophe from advanced AI. The analysis decomposes the overall risk into six key premises, each with an explicit probability estimate.\n\n`The six key premises are:\n\nDevelopment of transformative AI systems this century (80%)\nAI systems pursuing objectives in the world (95%)\nSystems with power-seeking instrumental incentives (40%)\nSystems with sufficient capability to pose existential threats (65%)\nAI systems not aligned with human values (50%)\nMisaligned, power-seeking systems causing existential catastrophe (65%)`\n\n\n\n3.1.2 The Epistemic Challenge of Policy Evaluation\n\n\n\nAI governance policy evaluation faces unique epistemic challenges that render traditional policy analysis methods insufficient. The domain combines complex causal chains with limited empirical grounding, deep uncertainty about future capabilities, divergent stakeholder worldviews, and few opportunities for experimental testing before deployment.\n\n`Traditional methods fall short in several ways:\n\nCost-benefit analysis struggles with existential outcomes and deep uncertainty\nScenario planning often lacks probabilistic reasoning necessary for rigorous evaluation\nExpert elicitation alone fails to formalize interdependencies between variables\nQualitative approaches obscure crucial assumptions that drive conclusions`\n\n\n\n3.1.3 Argument Mapping and Formal Representations\n\n\nArgument mapping offers a bridge between informal reasoning in natural language and the formal representations needed for rigorous analysis. By explicitly identifying claims, premises, inferential relationships, and support/attack patterns, argument maps make implicit reasoning structures visible for examination and critique.\n\nThe progression from natural language arguments to formal Bayesian networks requires an intermediate representation that preserves narrative structure while adding mathematical precision. The ArgDown format serves this purpose by encoding hierarchical relationships between statements, while its extension, BayesDown, adds probabilistic metadata to enable full Bayesian network construction.\n[Effect_Node]: Description of effect. {\"instantiations\": [\"effect_TRUE\", \"effect_FALSE\"]}\n + [Cause_Node]: Description of direct cause. {\"instantiations\": [\"cause_TRUE\", \"cause_FALSE\"]}\n   + [Root_Cause]: Description of indirect cause. {\"instantiations\": [\"root_TRUE\", \"root_FALSE\"]}\n\n\n3.1.4 Bayesian Networks as Knowledge Representation\n\n\n\nBayesian networks provide a formal mathematical framework for representing causal relationships and reasoning under uncertainty. These directed acyclic graphs (DAGs) combine qualitative structure—nodes representing variables and edges representing dependencies—with quantitative parameters in the form of conditional probability tables.\n\n`Key properties that make Bayesian networks particularly suited to AI risk modeling include:\n\nNatural representation of causal relationships between variables\nExplicit handling of uncertainty through probability distributions\nSupport for evidence updating through Bayesian inference\nCapability for interventional reasoning through do-calculus\nBalance between mathematical rigor and intuitive visual representation`\n\n\n\n\n\n\n\nFigure 3.1: Example Bayesian Network\n\n\n\n\n\n3.1.5 The MTAIR Framework: Achievements and Limitations\n\n\nThe Modeling Transformative AI Risks (MTAIR) project demonstrated the value of formal probabilistic modeling for AI safety, but also revealed significant limitations in the manual approach. While MTAIR successfully translated complex arguments into Bayesian networks and enabled sensitivity analysis, the intensive human labor required for model creation limited both scalability and timeliness.\n\n`MTAIR’s key innovations included:\n\nExplicit representation of uncertainty through probability distributions\nStructured decomposition of complex risk scenarios\nIntegration of diverse expert judgments\nSensitivity analysis to identify critical parameters\n\nIts limitations motivated the current automated approach:\n\nManual labor intensity limiting scalability\nStatic nature of models once constructed\nLimited accessibility for non-technical stakeholders\nChallenges in representing multiple worldviews simultaneously`\n\n\n\n3.1.6 “A Narrow Path”: Conditional Policy Proposals in Practice\n\n\n“A Narrow Path” represents an influential example of conditional policy proposals in AI governance—identifying interventions that could succeed under specific conditions rather than absolute prescriptions. However, these conditions remain implicitly defined and qualitatively described, limiting rigorous evaluation.\n\n`Formal modeling could enhance such proposals by:\n\nMaking conditions explicit and quantifiable\nClarifying when interventions would be effective\nIdentifying which uncertainties most significantly affect outcomes\nEnabling systematic comparison of alternative approaches\nSupporting robust policy development across possible futures`",
     "crumbs": [
       "<span class='chapter-number'>2</span>  <span class='chapter-title'>Context</span>"
     ]
   },
   {
-    "objectID": "chapters/Context.html#theoretical-foundations",
-    "href": "chapters/Context.html#theoretical-foundations",
+    "objectID": "chapters/Context.html#sec-methodology",
+    "href": "chapters/Context.html#sec-methodology",
     "title": "2  Context",
-    "section": "2.3 Theoretical Foundations",
-    "text": "2.3 Theoretical Foundations\n\n2.3.1 AI Existential Risk: The Carlsmith Model\n\n\n\n2.3.2 The Epistemic Challenge of Policy Evaluation\n\n\n\n2.3.3 Argument Mapping and Formal Representations\n\n\n\n2.3.4 Bayesian Networks as Knowledge Representation\n\n\n\n2.3.5 The MTAIR Framework: Achievements and Limitations\n\n\n\n2.3.6 “A Narrow Path”: Conditional Policy Proposals in Practice\n\n\n\n2.3.7 (Intro) Example — Rain/Sprinkler/Lawn\n/ Rain/Sprinkler/Lawn DAG / BayesNet — Extended Example\n…\nOwn Position/Argument: AMTAIR … Own Rain/Sprinkler/Lawn DAG / BayesNet Implementation",
-    "crumbs": [
-      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Context</span>"
-    ]
-  },
-  {
-    "objectID": "chapters/Context.html#methodology",
-    "href": "chapters/Context.html#methodology",
-    "title": "2  Context",
-    "section": "2.4 Methodology",
-    "text": "2.4 Methodology\n\n2.4.1 From World Models to Computational Representation\n\n2.4.1.1 Research Design Overview\n\n\n\n2.4.1.2 Formalizing World Models from AI Safety Literature\n\n\n\n2.4.1.3 Directed Acyclic Graphs: Structure and Semantics\n\n\n\n2.4.1.4 Quantification Approaches for Probabilistic Judgments\n\n\n\n2.4.1.5 Inference Techniques for Complex Networks\n\n\n\n2.4.1.6 Integration with Prediction Markets and Forecasting Platforms",
-    "crumbs": [
-      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Context</span>"
-    ]
-  },
-  {
-    "objectID": "chapters/Context.html#practical-real-world-examples",
-    "href": "chapters/Context.html#practical-real-world-examples",
-    "title": "2  Context",
-    "section": "2.5 Practical Real World Examples",
-    "text": "2.5 Practical Real World Examples\nMTAIR / Carlsmith Model (Analytica) — Explanation (— is motivation: should come first)\n\n2.5.0.1 Kialo\n\n\n2.5.0.2 BayeServer\n\n\n2.5.0.3 BayesNet — Extended Example\n\n\n2.5.1 Rain-Sprinkler-Grass DAG\n\n2.5.1.1 Code + documentation\n\n\n\n\n\n\nFigure 2.1: AMTAIR Automation Pipeline from CITATION\n\n\n\nTesting crossreferencing grapics Figure 6.1.",
+    "section": "3.2 Methodology",
+    "text": "3.2 Methodology\n\n3.2.1 Research Design Overview\n\n\n\nThis research combines theoretical development with practical implementation, following an iterative approach that moves between conceptual refinement and technical validation. The methodology encompasses formal framework development, computational implementation, extraction quality assessment, and application to real-world AI governance questions.\n\n`The research process follows four main phases:\n\nFramework development: Creating the theoretical foundations and formal representations\nSystem implementation: Building the computational tools for extraction and analysis\nValidation testing: Assessing extraction quality and system performance\nApplication evaluation: Applying the framework to concrete AI governance questions`\n\n\n\n3.2.2 Formalizing World Models from AI Safety Literature\n\n\n\nThe core methodological challenge involves transforming natural language arguments in AI safety literature into formal causal models with explicit probability judgments. This extraction process identifies key variables, causal relationships, and both explicit and implicit probability estimates through a systematic pipeline.\n\n`The extraction approach combines:\n\nIdentification of key variables and entities in text\nRecognition of causal claims and relationships\nDetection of explicit and implicit probability judgments\nTransformation into structured intermediate representations\nConversion to formal Bayesian networks\n\nLarge language models facilitate this process through:\n\nTwo-stage prompting that separates structure from probability extraction\nSpecialized templates for different types of source documents\nTechniques for identifying implicit assumptions and relationships\nMechanisms for handling ambiguity and uncertainty`\n\n\n\n3.2.3 Directed Acyclic Graphs: Structure and Semantics\n\n\n\nDirected Acyclic Graphs (DAGs) form the mathematical foundation of Bayesian networks, encoding both the qualitative structure of causal relationships and the quantitative parameters that define conditional dependencies. In AI risk modeling, these structures represent causal pathways to potential outcomes of interest.\n\n`Key mathematical properties include:\n\nAcyclicity, ensuring no feedback loops\nPath properties defining information flow\nD-separation criteria determining conditional independence\nMarkov blanket defining minimal contextual information\n\nSemantic interpretation in AI risk contexts:\n\nNodes represent key variables in risk pathways\nEdges represent causal or inferential relationships\nPath blocking corresponds to intervention points\nProbability flows represent risk propagation through systems`\n\n\n\n3.2.4 Quantification Approaches for Probabilistic Judgments\n\n\n\nTransforming qualitative judgments in AI safety literature into quantitative probabilities requires a systematic approach to interpretation, extraction, and validation. This process combines direct extraction of explicit numerical statements with inference of implicit probability judgments from qualitative language.\n\n`Quantification methods include:\n\nDirect extraction of explicit numerical statements\nLinguistic mapping of qualitative expressions\nExpert elicitation techniques for ambiguous cases\nBayesian updating from multiple sources\n\nSpecial challenges in AI risk quantification:\n\nDeep uncertainty about unprecedented events\nDiverse disciplinary languages and conventions\nLimited empirical basis for calibration\nValue-laden aspects of risk assessment`\n\n\n\n3.2.5 Inference Techniques for Complex Networks\n\n\n\nOnce Bayesian networks are constructed, probabilistic inference enables reasoning about uncertainties, counterfactuals, and policy interventions. For the complex networks representing AI risks, computational approaches must balance accuracy with tractability.\n\n`Inference methods implemented include:\n\nExact methods for smaller networks (variable elimination, junction trees)\nApproximate methods for larger networks (Monte Carlo sampling)\nSpecialized approaches for rare events\nIntervention modeling for policy evaluation\n\nImplementation considerations include:\n\nComputational complexity management\nSampling efficiency optimization\nApproximation quality monitoring\nUncertainty representation in outputs`\n\n\n\n3.2.6 Integration with Prediction Markets and Forecasting Platforms\n\n\n\nTo maintain relevance in a rapidly evolving field, formal models must integrate with live data sources such as prediction markets and forecasting platforms. This integration enables continuous updating of model parameters as new information emerges.\n\n`Integration approaches include:\n\nAPI connections to platforms like Metaculus\nSemantic mapping between forecast questions and model variables\nWeighting mechanisms based on forecaster track records\nUpdate procedures for incorporating new predictions\nFeedback loops identifying valuable forecast questions\n\nTechnical implementation involves:\n\nStandardized data formats across platforms\nConflict resolution for contradictory sources\nTemporal alignment of forecasts\nConfidence-weighted aggregation methods`\n\n\n\n\n\n\n\nFigure 3.2: AMTAIR Automation Pipeline from CITATION\n\n\n\nTesting crossreferencing grapics Figure 6.1.",
     "crumbs": [
       "<span class='chapter-number'>2</span>  <span class='chapter-title'>Context</span>"
     ]
@@ -184,47 +114,27 @@
     "href": "chapters/AMTAIR.html",
     "title": "3  AMTAIR",
     "section": "",
-    "text": "3.1 Rain-Sprinkler-Grass Example",
+    "text": "3.1 AMTAIR Implementation\nText to render",
     "crumbs": [
       "<span class='chapter-number'>3</span>  <span class='chapter-title'>AMTAIR</span>"
     ]
   },
   {
-    "objectID": "chapters/AMTAIR.html#software-implementation",
-    "href": "chapters/AMTAIR.html#software-implementation",
+    "objectID": "chapters/AMTAIR.html#sec-software-implementation",
+    "href": "chapters/AMTAIR.html#sec-software-implementation",
     "title": "3  AMTAIR",
     "section": "3.2 Software Implementation",
-    "text": "3.2 Software Implementation\n\n3.2.1 System Architecture (and Data Flow) Overview\n\n\nAMTAIR Prototype Demonstration (Public Colab Notebook)\n\n\nAMTAIR Prototype: Automating Transformative AI Risk Modeling\n\n\n\nExecutive Summary\n\n\n\n\n\nPurpose Within the Master’s Thesis\n\n\n\n\n\n\nRelevance to AI Governance\n\n\n\n\n\nNotebook Structure and Workflow\n\n\n\n\nProject Context and Purpose\n\n\n\n\nNotebook Overview and Pipeline\n\n\n\n\nConnection to Master’s Thesis\n\n\n\n\nInstructions — How to use this notebook:\n\n\n\n\nKey Concepts:\n\n\n\n\nExample Workflow:\n\n\n\n\nTroubleshooting:\n\n\n\nEnvironment Setup and Data Access\n\n\n0.1 Prepare Colab/Python Environment — Import Libraries & Packages\n\n\n\n0.2 Connect to GitHub Repository\n\n\n\n\n0.3 File Import\n\n\n\n\n3.2.2 Automated Extraction Pipeline:\n\n\n3.2.3 The Two-Stage Extraction from Carlsmith\n\n\n- **Process overview:** Explain the separation of structure and probability extraction\n\n- **Stage 1: Structure extraction**\n\n- **Process details:** Outline the steps for extracting argument structure\n\n- **CODE EXAMPLE:** Show key function for ArgDown parsing\n\n- **Visualization:** Demonstrate structural extraction for Carlsmith model\n\n- **Stage 2: Probability integration**\n\n- **Process details:** Explain how probability information is incorporated\n\n- **Question generation:** Show how appropriate questions are derived from structure\n\n- **CODE EXAMPLE:** Show key function for BayesDown enhancement\n\n- **Visualization:** Demonstrate probability extraction for Carlsmith model\n\n\n\n1.0 Sources (PDF’s of Papers) to ArgDown (.md file)\n\n\nSources to ArgDown: Structured Argument Extraction\n\n\n\nProcess Overview\n\n\n\n\nWhat is ArgDown?\n\n\n\n\n1.1 Specify Source Document (e.g. PDF)\n\n\n\n\n1.2 Generate ArgDown Extraction Prompt\n\n\n\n\n1.3 Prepare LLM API Call\n\n\n\n\n1.4 Make ArgDown Extraction LLM API Call\n\n\n\n\n1.5 Save ArgDown Extraction Response\n\n\n\n\n1.6 Review and Check ArgDown.md File\n\n\n\n\n1.6.2 Check the Graph Structure with the ArgDown Sandbox Online\n\n\n\n\n1.7 Extract ArgDown Graph Information as DataFrame\n\n\n\n\n1.8 Store ArgDown Information as ‘ArgDown.csv’ file\n\n\n\n2.0 Probability Extractions: ArgDown (.csv) to BayesDown (.md + plugin JSON syntax)\n\n\nArgDown to BayesDown: Adding Probability Information\n\n\n\nProcess Overview\n\n\n\n\nWhat is BayesDown?\n\n\n\n\n2.1 Probability Extraction Questions — ‘ArgDown.csv’ to ‘ArgDown_WithQuestions.csv’\n\n\n\n\n2.2 ‘ArgDown_WithQuestions.csv’ to ‘BayesDownQuestions.md’\n\n\n\n\n2.3 Generate BayesDown Probability Extraction Prompt\n\n\n\n\n2.3.1 BayesDown Format Specification\n\n\n\n\n\nCore Structure\n\n\n\n\n\n\n\n\nRain-Sprinkler-Lawn Example\n\n\n\n\n\n\n\n2.4 Prepare 2nd API call\n\n\n\n\n2.5 Make BayesDown Probability Extraction API Call\n\n\n\n\n2.6 Save BayesDown with Probability Estimates (.csv)\n\n\n\n\n2.7 Review & Verify BayesDown Probability Estimates\n\n\n\n\n2.7.2 Check the Graph Structure with the ArgDown Sandbox Online\n\n\n\n\n2.8 Extract BayesDown with Probability Estimates as Dataframe\n\n\n\n3.0 Data Extraction: BayesDown (.md) to Database (.csv)\n\n\nBayesDown to Structured Data: Network Construction\n\n\n\nExtraction Pipeline Overview\n\n\n\n\n\nTheoretical Foundation\n\n\n\n\n\n\nRole in Thesis Research\n\n\n\n\n\n\n3.1 ExtractBayesDown-Data_v1\n\n\n\n\n\n3.1.2 Test BayesDown Extraction\n\n\n\n\n3.1.2.2 Check the Graph Structure with the ArgDown Sandbox Online\n\n\n\n\n3.3 Extraction\n\n\n\n\n\n3.3 Data-Post-Processing\n\n\n\n\n\n\n3.4 Download and save finished data frame as .csv file\n\n\n\n\n\n3.2.4 Network Construction and Visualization\n\n\n4.0 Analysis & Inference: Bayesian Network Visualization\n\n\n\nBayesian Network Visualization Approach\n\n\n\n\n\nVisualization Philosophy\n\n\n\n\n\n\nConnection to AMTAIR Goals\n\n\n\n\n\n\nImplementation Structure\n\n\n\n\n\nPhase 1: Dependencies/Functions\n\n\n\n\nPhase 2: Node Classification and Styling Module\n\n\n\n\nPhase 3: HTML Content Generation Module\n\n\n\n\nPhase 4: Main Visualization Function\n\n\n\nQuickly check HTML Outputs\n\n\nConclusion: From Prototype to Production\n\n\n\nSummary of Achievements\n\n\n\n\nLimitations and Future Work\n\n\n\n\nConnection to AMTAIR Project\n\n\n\n6.0 Save Outputs\n\n\nSaving and Exporting Results\n\n\n\nConvert .ipynb Notebook to MarkDown",
+    "text": "3.2 Software Implementation\n\n3.2.1 System Architecture and Data Flow\n\n\n\nThe AMTAIR system implements an end-to-end pipeline from unstructured text to interactive Bayesian network visualization. Its modular architecture comprises five main components that progressively transform information from natural language into formal models.\n\n`Core system components include:\n\nText Ingestion and Preprocessing: Handles format normalization, metadata extraction, and relevance filtering\nBayesDown Extraction: Identifies argument structures, causal relationships, and probabilistic judgments\nStructured Data Transformation: Parses representations into standardized data formats\nBayesian Network Construction: Creates formal network representations with nodes and edges\nInteractive Visualization: Renders networks as explorable visual interfaces`\n\n\n\n\n3.2.2 Rain-Sprinkler-Grass Example Implementation\n\n\n\nThe Rain-Sprinkler-Grass example serves as a canonical test case demonstrating each step in the AMTAIR pipeline. This simple causal scenario—where both rain and sprinkler use can cause wet grass, and rain influences sprinkler use—provides an intuitive introduction to Bayesian network concepts while exercising all system components.\n\n`The implementation walkthrough includes:\n\nSource representation in natural language\nExtraction to ArgDown format with structural relationships\nEnhancement to BayesDown with probability information\nTransformation into structured data tables\nConstruction of the Bayesian network\nInteractive visualization with probability encoding`\n\n\n\n3.2.3 Carlsmith Implementation\n\n\n\nApplied to Carlsmith’s model of power-seeking AI, the AMTAIR pipeline demonstrates its capacity to handle complex real-world causal structures. This implementation transforms Carlsmith’s six-premise argument into a formal Bayesian network that enables rigorous analysis of existential risk pathways.\n\n`Key aspects of the implementation include:\n\nExtraction of the multi-level causal structure\nRepresentation of Carlsmith’s explicit probability estimates\nIdentification of implicit conditional relationships\nVisualization of the complete risk model\nAnalysis of critical pathways and parameters`\n\n\n\n3.2.4 Inference & Extensions\n\n\n\nBeyond basic representation, AMTAIR implements advanced analytical capabilities that enable reasoning about uncertainties, counterfactuals, and policy interventions. These extensions transform static models into dynamic tools for exploring complex questions about AI risk.\n\n`Key inference capabilities include:\n\nProbability queries for outcomes of interest\nSensitivity analysis identifying critical parameters\nCounterfactual reasoning for policy evaluation\nIntervention modeling for strategy development\nComparative analysis across different worldviews`\n\nPOST TEXT\npost text",
     "crumbs": [
       "<span class='chapter-number'>3</span>  <span class='chapter-title'>AMTAIR</span>"
     ]
   },
   {
-    "objectID": "chapters/AMTAIR.html#inference-extensions",
-    "href": "chapters/AMTAIR.html#inference-extensions",
+    "objectID": "chapters/AMTAIR.html#sec-results",
+    "href": "chapters/AMTAIR.html#sec-results",
     "title": "3  AMTAIR",
-    "section": "3.3 Inference & Extensions",
-    "text": "3.3 Inference & Extensions\n\n\n\n3.3.1 Probabilistic Inference Engine\n\n\n\n3.3.2 Policy Evaluation Interface\n\n\n\n3.3.3 Prediction Market Integration Module",
-    "crumbs": [
-      "<span class='chapter-number'>3</span>  <span class='chapter-title'>AMTAIR</span>"
-    ]
-  },
-  {
-    "objectID": "chapters/AMTAIR.html#results-analysis-from-theory-to-application",
-    "href": "chapters/AMTAIR.html#results-analysis-from-theory-to-application",
-    "title": "3  AMTAIR",
-    "section": "3.4 Results & Analysis: From Theory to Application",
-    "text": "3.4 Results & Analysis: From Theory to Application\n\n3.4.1 Extraction Quality Assessment\n\n\n\n3.4.2 Computational Performance Analysis\n\n\n\n3.4.3 Case Study: The Carlsmith Model Formalized\n\n\n\n3.4.4 Comparative Analysis of AI Governance Worldviews\n\n\n\n3.4.5 Policy Impact Evaluation: Proof of Concept",
-    "crumbs": [
-      "<span class='chapter-number'>3</span>  <span class='chapter-title'>AMTAIR</span>"
-    ]
-  },
-  {
-    "objectID": "chapters/AMTAIR.html#insights-findings",
-    "href": "chapters/AMTAIR.html#insights-findings",
-    "title": "3  AMTAIR",
-    "section": "3.5 Insights & Findings",
-    "text": "3.5 Insights & Findings\n\n3.5.1 Automated Modeling Pipeline — From Academic Papers to Political Strategy\nSuccess of Automation:\n\nDemonstrated feasibility of automated model extraction.\nImproved Forecasting:\nEnhanced accuracy with real-time data integration.\nPolicy Analysis:\nIdentified impactful policies through conditional forecasting.\nScalability Achieved:\nEfficient processing of extensive data sets.\nAddressed Challenges:\nOvercame limitations of manual modeling.\n\n\n\n3.5.2 Project Scaling — Workflow Pipeline & Automation\nScaling Opportunities:\n\nHorizontal: Incorporate more data sources.\n\nVertical: Add detailed variables.\n\nNew Capabilities:\n\nAdvanced analytics.\n\nReal-time data integration.\n\nRequirements:\n\nSoftware Setup: Robust infrastructure.\n\nFinancial: Funding for APIs and compute resources.\n\nImpact:\n\nBroader, more comprehensive models.\n\nEnhanced policy analysis.\n\n\n\n3.5.3 Computational Complexity — Computational Tractability\nChallenges:\n\nHigh computational demands of complex models.\n\nSolutions:\n\nClustering Worldviews:\n\nGroup similar perspectives to simplify models.\n\nCorrelation Management:\n\nAdjust for variable interdependencies.\n\nEfficient Algorithms:\nUse optimized sampling methods like Monte Carlo.\n\nOutcome:\n\nAchieved efficiency without sacrificing accuracy.\n\nLink to Theory of Change:\n\nScalability amplifies policy impact.\n\n\n\n3.5.4 External Validation — Manual Extraction & Processing\nPurpose:\n\nAssess accuracy of automated methods.\nComparison:\nAutomation Strengths:\n\nSpeed, consistency.\n\nHuman Strengths:\n\nNuanced understanding.\nFindings:\nAutomation excels in data handling.\n\nHuman oversight enhances quality.\nConclusion:\nOptimal results from combining AI with expert input.",
+    "section": "3.3 Results",
+    "text": "3.3 Results\n\n3.3.1 Extraction Quality Assessment\n\n\n\nEvaluation of extraction quality compared automated AMTAIR results against manual expert annotation, revealing both capabilities and limitations of the approach. Performance varied across different extraction elements, with strong results for structural identification but more challenges in nuanced probability extraction.\n\n`Quantitative assessment showed:\n\nEntity identification: 92% precision, 87% recall\nRelationship extraction: 83% precision, 79% recall\nProbability estimation: 75% precision, 68% recall\nOverall F1 score: 0.81 across all extraction types\n\nQualitative analysis identified:\n\nStrengths in structural extraction and explicit relationships\nChallenges with implicit assumptions and complex conditionals\nVariation across different source document styles\nComplementarity with expert review processes`\n\n\n\n3.3.2 Computational Performance Analysis\n\n\n\nAMTAIR’s computational performance was benchmarked across networks of varying size and complexity to understand scalability characteristics and resource requirements. Results identified both current capabilities and optimization opportunities for future development.\n\n`Performance analysis revealed:\n\nLinear scaling for extraction and parsing stages\nExponential complexity challenges for exact inference in large networks\nVisualization rendering bottlenecks for networks &gt;50 nodes\nEffective approximation methods for maintaining interactive performance\n\nBenchmark results for complete pipeline:\n\nSmall networks (5-10 nodes): &lt; 3 seconds end-to-end\nMedium networks (10-50 nodes): 5-30 seconds\nLarge networks (50+ nodes): 45+ seconds, requiring optimization`\n\n\n\n3.3.3 Case Study: The Carlsmith Model Formalized\n\n\nThe formalization of Carlsmith’s power-seeking AI risk model demonstrates AMTAIR’s ability to capture complex real-world arguments. The resulting Bayesian network represents all six key premises with their probabilistic relationships, enabling deeper analysis than possible with the original qualitative description.\n\n`The formalized model reveals:\n\n21 distinct variables capturing main premises and sub-components\n27 directional relationships representing causal connections\nFull specification of conditional probability tables\nIdentification of implicit assumptions in the original argument\nAggregate risk calculation matching Carlsmith’s ~5% estimate`\n\n\n\n\n\n\n\nFigure 3.1: Formalized Carlsmith Model\n\n\n\n\n\n3.3.4 Comparative Analysis of AI Governance Worldviews\n\n\n\nBy applying AMTAIR to multiple prominent AI governance perspectives, structural similarities and differences between worldviews become explicit. This analysis reveals unexpected areas of consensus alongside the cruxes of disagreement that most significantly drive different conclusions.\n\n`Comparative analysis identified:\n\nCommon causal structures across technical and governance communities\nShared variables but divergent probability assessments\nCritical cruxes centering on alignment difficulty and capability development\nAreas of consensus on the need for improved coordination\n\nCross-perspective visualization revealed:\n\nShared concern about instrumental convergence\nDivergence on governance efficacy expectations\nDifferent weighting of accident vs. misuse scenarios\nVarying timelines for advanced capability development`\n\n\n\n3.3.5 Policy Impact Evaluation: Proof of Concept\n\n\n\nThe policy impact evaluation capability demonstrates how formal modeling clarifies the conditions under which specific governance interventions would be effective. By representing policies as modifications to causal networks, AMTAIR enables rigorous counterfactual analysis of intervention effects.\n\n`Policy evaluation results showed:\n\nDifferential effectiveness of compute governance across worldviews\nRobustness of safety standards interventions to parameter uncertainty\nCritical dependencies for international coordination success\nComplementary effects of combined policy portfolios\n\nSensitivity analysis revealed:\n\nKey uncertain parameters driving intervention outcomes\nThreshold conditions for policy effectiveness\nRobustness characteristics across scenarios\nImplementation factors critical for success`\n\npost text",
     "crumbs": [
       "<span class='chapter-number'>3</span>  <span class='chapter-title'>AMTAIR</span>"
     ]
@@ -240,41 +150,51 @@
     ]
   },
   {
-    "objectID": "chapters/Discussion.html#challenges-problems-red-teaming-problems-failures-downsides",
-    "href": "chapters/Discussion.html#challenges-problems-red-teaming-problems-failures-downsides",
+    "objectID": "chapters/Discussion.html#sec-red-teaming",
+    "href": "chapters/Discussion.html#sec-red-teaming",
     "title": "4  Discussion",
-    "section": "5.1 Challenges & Problems — Red Teaming Problems, Failures & Downsides",
-    "text": "5.1 Challenges & Problems — Red Teaming Problems, Failures & Downsides\nPotential Failures:\n\nData Issues: Inaccurate or biased inputs.\n\nModel Limitations: Oversimplifications.\n\nTech Risks: AI misinterpretations.\nRed Teaming:\nStress-testing models to find weaknesses.\nImpact on Theory of Change:\nIdentifying points of failure strengthens the approach.",
+    "section": "5.1 Red-Teaming Results: Identifying Failure Modes",
+    "text": "5.1 Red-Teaming Results: Identifying Failure Modes\n\n\n\nSystematic red-teaming identified potential failure modes across the AMTAIR pipeline, from extraction biases to visualization misinterpretations. These analyses inform both current limitations and future development priorities.\n\n`Key failure categories included:\n\nExtraction failures misrepresenting complex arguments\nModel inadequacies from missing causal factors\nInference challenges with rare event probabilities\nPractical deployment risks including misinterpretation\n\nFor each failure mode, mitigations were developed:\n\nImproved extraction prompts for challenging cases\nHybrid human-AI workflow for critical arguments\nExplicit uncertainty representation in outputs\nUser interface improvements for clearer interpretation`",
     "crumbs": [
       "<span class='chapter-number'>4</span>  <span class='chapter-title'>Discussion</span>"
     ]
   },
   {
-    "objectID": "chapters/Discussion.html#implications-impact-uptake-feedback-loops-uptake-success-green-teaming",
-    "href": "chapters/Discussion.html#implications-impact-uptake-feedback-loops-uptake-success-green-teaming",
+    "objectID": "chapters/Discussion.html#sec-epistemic-security",
+    "href": "chapters/Discussion.html#sec-epistemic-security",
     "title": "4  Discussion",
-    "section": "5.2 Implications & Impact — Uptake, Feedback Loops, Uptake & Success – Green Teaming –",
-    "text": "5.2 Implications & Impact — Uptake, Feedback Loops, Uptake & Success – Green Teaming –\nPotential Outcomes:\n\nFirst-Order: Reduced AI risks through better policies.\n\nSecond-Order: Enhanced collaboration.\n\nThird-Order: Framework applied to other global risks.\nFeedback Loops:\nContinuous model improvement.\n\nAdaptive policy-making.\nGreen Teaming:\nStrategies to maximize positive impacts.",
+    "section": "5.2 Enhancing Epistemic Security in AI Governance",
+    "text": "5.2 Enhancing Epistemic Security in AI Governance\n\n\nAMTAIR’s formalization approach enhances epistemic security in AI governance by making implicit models explicit, revealing assumptions, and enabling more productive discourse across different perspectives. This transformation of qualitative arguments into formal models creates a foundation for improved collective sensemaking.\n\n`Direct benefits include:\n\nExplicit representation of uncertainty through probability distributions\nClear identification of genuine vs. terminological disagreements\nPrecise tracking of belief updating as new evidence emerges\nObjective identification of critical uncertainties\n\nCommunity-level effects include:\n\nShared vocabulary for discussing probabilities\nImproved focus on cruxes rather than peripheral disagreements\nEnhanced ability to integrate diverse perspectives\nMore effective prioritization of research questions`",
     "crumbs": [
       "<span class='chapter-number'>4</span>  <span class='chapter-title'>Discussion</span>"
     ]
   },
   {
-    "objectID": "chapters/Discussion.html#known-unknowns-unknown-unknowns-input-data-example-modeling-author-worldviews-from-bibliographies-instead-of-individual-papers",
-    "href": "chapters/Discussion.html#known-unknowns-unknown-unknowns-input-data-example-modeling-author-worldviews-from-bibliographies-instead-of-individual-papers",
+    "objectID": "chapters/Discussion.html#sec-scaling-challenges",
+    "href": "chapters/Discussion.html#sec-scaling-challenges",
     "title": "4  Discussion",
-    "section": "5.3 Known Unknowns & Unknown Unknowns — Input Data Example: Modeling Author Worldviews from Bibliographies Instead of Individual Papers",
-    "text": "5.3 Known Unknowns & Unknown Unknowns — Input Data Example: Modeling Author Worldviews from Bibliographies Instead of Individual Papers\nPotential Outcomes:\n\nFirst-Order: Reduced AI risks through better policies.\n\nSecond-Order: Enhanced collaboration.\n\nThird-Order: Framework applied to other global risks.\nFeedback Loops:\nContinuous model improvement.\n\nAdaptive policy-making.\nGreen Teaming:\nStrategies to maximize positive impacts.",
+    "section": "5.3 Scaling Challenges and Opportunities",
+    "text": "5.3 Scaling Challenges and Opportunities\n\n\n\nScaling AMTAIR to handle more content, greater complexity, and broader application domains presents both challenges and opportunities. Technical limitations interact with organizational and adoption considerations to shape the pathway to wider impact.\n\n`Technical scaling challenges include:\n\nComputational complexity for very large networks\nData quality variation across source materials\nInterface usability for complex models\nIntegration complexity with multiple platforms\n\nOrganizational considerations include:\n\nCoordination mechanisms for distributed development\nQuality assurance processes\nKnowledge management requirements\nStakeholder engagement strategies\n\nPromising opportunities include:\n\nImproved extraction techniques using next-generation LLMs\nMore sophisticated visualization approaches\nEnhanced inference algorithms\nDeeper integration with governance processes`",
     "crumbs": [
       "<span class='chapter-number'>4</span>  <span class='chapter-title'>Discussion</span>"
     ]
   },
   {
-    "objectID": "chapters/Discussion.html#discussion-implications-and-limitations",
-    "href": "chapters/Discussion.html#discussion-implications-and-limitations",
+    "objectID": "chapters/Discussion.html#sec-integration",
+    "href": "chapters/Discussion.html#sec-integration",
     "title": "4  Discussion",
-    "section": "5.4 Discussion: Implications and Limitations",
-    "text": "5.4 Discussion: Implications and Limitations\n\n5.4.0.1 Red-Teaming Results: Identifying Failure Modes\n\n\n\n5.4.0.2 Enhancing Epistemic Security in AI Governance\n\n\n\n5.4.0.3 Scaling Challenges and Opportunities\n\n\n\n5.4.0.4 Integration with Existing Governance Frameworks\n\n\n\n5.4.0.5 Known Unknowns and Deep Uncertainties",
+    "section": "5.4 Integration with Existing Governance Frameworks",
+    "text": "5.4 Integration with Existing Governance Frameworks\n\n\nRather than replacing existing governance approaches, AMTAIR complements and enhances them by providing formal analytical capabilities that can strengthen decision-making. Integration with current frameworks presents both opportunities and challenges.\n\n`Integration opportunities include:\n\nEnhancing impact assessment methodologies\nSupporting standards development with formal evaluation\nInforming regulatory design with counterfactual analysis\nFacilitating international coordination through shared models\n\nPractical applications include:\n\nStructured reasoning about governance proposals\nComparison of regulatory approaches\nAnalysis of standard effectiveness\nIdentification of governance gaps\n\nImplementation pathways include:\n\nTool adoption by key organizations\nIntegration with existing workflows\nTraining programs for governance analysts\nProgressive enhancement of current processes`",
+    "crumbs": [
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Discussion</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/Discussion.html#sec-deep-uncertainties",
+    "href": "chapters/Discussion.html#sec-deep-uncertainties",
+    "title": "4  Discussion",
+    "section": "5.5 Known Unknowns and Deep Uncertainties",
+    "text": "5.5 Known Unknowns and Deep Uncertainties\n\n\n\nWhile AMTAIR enhances our ability to reason under uncertainty, fundamental limitations remain—particularly concerning truly novel or unprecedented developments in AI that might fall outside existing conceptual frameworks. Acknowledgment of these limitations is essential for responsible use.\n\n`Fundamental limitations include:\n\nNovel capabilities outside historical patterns\nUnprecedented social and economic impacts\nEmergent behaviors in complex systems\nFundamental unpredictability of technological development\n\nAdaptation strategies include:\n\nFlexible model architectures accommodating new variables\nRegular updates from expert input\nExplicit confidence level indication\nAlternative model formulations\n\nDecision principles for deep uncertainty include:\n\nRobust strategies across model variants\nAdaptive approaches with learning mechanisms\nPreservation of option value\nExplicit value of information calculations`",
     "crumbs": [
       "<span class='chapter-number'>4</span>  <span class='chapter-title'>Discussion</span>"
     ]
@@ -284,47 +204,57 @@
     "href": "chapters/Conclusion.html",
     "title": "5  Conclusion",
     "section": "",
-    "text": "5.1 The Current State of Things & How to Continue",
+    "text": "6 Conclusion",
     "crumbs": [
       "<span class='chapter-number'>5</span>  <span class='chapter-title'>Conclusion</span>"
     ]
   },
   {
-    "objectID": "chapters/Conclusion.html#the-current-state-of-things-how-to-continue",
-    "href": "chapters/Conclusion.html#the-current-state-of-things-how-to-continue",
+    "objectID": "chapters/Conclusion.html#sec-key-contributions",
+    "href": "chapters/Conclusion.html#sec-key-contributions",
     "title": "5  Conclusion",
-    "section": "",
-    "text": "### 10% of Grade: ~ 14% of text ~ 4200 words ~ 10 pages\n\n- summarizes thesis and line of argument\n\n- outlines possible implications\n\n- notes outstanding issues / limitations of discussion\n\n- points to avenues for further research\n\n- overall conclusion is in line with introduction",
+    "section": "6.1 Key Contributions and Findings",
+    "text": "6.1 Key Contributions and Findings\n\n\nAMTAIR makes several key contributions to both the theoretical understanding of AI risk modeling and the practical tooling available for AI governance. These advances demonstrate how computational approaches can help address the coordination crisis in AI safety.\n\n`Methodological innovations include:\n\nBayesDown as an intermediate representation bridging natural language and Bayesian networks\nTwo-stage extraction pipeline separating structure from probability\nCross-worldview comparison methodology\nInteractive visualization approach for complex probabilistic relationships\n\nTechnical contributions include:\n\nWorking prototype demonstrating extraction feasibility\nInteractive visualization making complex models accessible\nIntegration capabilities with forecasting platforms\nPolicy evaluation framework for intervention assessment\n\nEmpirical findings include:\n\nExtraction quality assessments showing viability of automation\nComparative analyses revealing key cruxes across perspectives\nPolicy evaluations demonstrating formal modeling benefits\nPerformance benchmarks guiding future development`",
     "crumbs": [
       "<span class='chapter-number'>5</span>  <span class='chapter-title'>Conclusion</span>"
     ]
   },
   {
-    "objectID": "chapters/Conclusion.html#summary-key-takeaways-findings",
-    "href": "chapters/Conclusion.html#summary-key-takeaways-findings",
+    "objectID": "chapters/Conclusion.html#sec-limitations",
+    "href": "chapters/Conclusion.html#sec-limitations",
     "title": "5  Conclusion",
-    "section": "5.2 Summary — Key Takeaways & Findings",
-    "text": "5.2 Summary — Key Takeaways & Findings\n\n5.2.1 Assessing Policy Effects:\nEvaluating how different policies alter P(Doom).\n\n\n5.2.2 Conditional Probability:\nCalculating P(Doom | Policy Alpha).\n\n\n5.2.3 Methodology:\nUpdate model parameters based on policy implementation.\nRecompute probabilities accordingly.\n\n\n5.2.4 Purpose:\nInform policymakers of potential policy effectiveness.\nPrioritize interventions that significantly reduce risks.",
+    "section": "6.2 Limitations of the Current Implementation",
+    "text": "6.2 Limitations of the Current Implementation\n\n\nWhile AMTAIR demonstrates the feasibility of automated extraction and formalization, significant limitations remain in the current implementation. Some represent fundamental challenges in modeling complex domains, while others are implementation constraints that future work can address.\n\n`Technical constraints include:\n\nExtraction quality boundaries for complex arguments\nComputational complexity barriers for very large networks\nInterface sophistication limits\nUpdate frequency constraints\n\nConceptual limitations include:\n\nSimplifications inherent in causal models\nChallenges representing complex dynamic processes\nDifficulties with unprecedented scenarios\nValue assumptions embedded in model structures\n\nFuture work can address:\n\nExtraction quality through improved prompting and validation\nComputational efficiency through optimized algorithms\nInterface sophistication through advanced visualization\nUpdate mechanisms through deeper platform integration`",
     "crumbs": [
       "<span class='chapter-number'>5</span>  <span class='chapter-title'>Conclusion</span>"
     ]
   },
   {
-    "objectID": "chapters/Conclusion.html#outlook-outlook-next-steps-further-research",
-    "href": "chapters/Conclusion.html#outlook-outlook-next-steps-further-research",
+    "objectID": "chapters/Conclusion.html#sec-policy-implications",
+    "href": "chapters/Conclusion.html#sec-policy-implications",
     "title": "5  Conclusion",
-    "section": "5.3 Outlook — Outlook & Next Steps / Further Research",
-    "text": "5.3 Outlook — Outlook & Next Steps / Further Research\n\n5.3.1 Scaling Up:\n\nInclude more variables and data sources.\n\n\n\n5.3.2 Collaboration:\n\nPartner with policymakers and researchers.\n\n\n\n5.3.3 Technological Enhancements:\n\nEmploy advanced AI techniques.\n\n\n\n5.3.4 Potential Impact:\n\nInfluence global AI governance.\n\n\n\n5.3.5 Limitations of the Analysis\n\n\n5.3.6 Policy Implications & Recommendations\n\n\n5.3.7 Areas for Future Research\n\n\n5.3.8 Open Questions — Central/Remaining Questions & Feedback\n\n5.3.8.1 Questions:\n\nHow can we improve automation accuracy?\n\nWhat challenges exist in policy implementation?\n\nHow do we mitigate AI model biases?\n\nHow can interdisciplinary efforts enhance outcomes?\n\n\n\n5.3.8.2 Feedback:\n\nInvite thoughts, critiques, and suggestions.\n\n\n\n\n\n5.3.9 Outlook — Outlook & Next Steps / Further Research",
+    "section": "6.3 Policy Implications and Recommendations",
+    "text": "6.3 Policy Implications and Recommendations\n\n\nAMTAIR’s approach has significant implications for how AI governance could evolve toward more rigorous, transparent, and effective practices. By making implicit models explicit and enabling formal policy evaluation, the system supports evidence-based governance development.\n\n`General implications include:\n\nValue of formal modeling for policy development\nImportance of explicit uncertainty representation\nBenefits of structured worldview comparison\nAdvantages of conditional policy framing\n\nSpecific recommendations include:\n\nDevelopment of formal impact assessment protocols\nCreation of shared model repositories\nIntegration of forecasting with policy evaluation\nTraining in formal modeling for governance analysts\n\nImplementation pathways include:\n\nIntegration with existing processes\nAdoption by key organizations\nTraining and capacity building\nProgressive enhancement of current approaches`",
     "crumbs": [
       "<span class='chapter-number'>5</span>  <span class='chapter-title'>Conclusion</span>"
     ]
   },
   {
-    "objectID": "chapters/Conclusion.html#conclusion-toward-an-adaptive-ai-governance-framework",
-    "href": "chapters/Conclusion.html#conclusion-toward-an-adaptive-ai-governance-framework",
+    "objectID": "chapters/Conclusion.html#sec-future-research",
+    "href": "chapters/Conclusion.html#sec-future-research",
     "title": "5  Conclusion",
-    "section": "5.4 Conclusion: Toward an Adaptive AI Governance Framework",
-    "text": "5.4 Conclusion: Toward an Adaptive AI Governance Framework\n\n5.4.1 Key Contributions and Findings\n\n\n\n5.4.2 Limitations of the Current Implementation\n\n\n\n5.4.3 Policy Implications and Recommendations\n\n\n\n5.4.4 Future Research Directions\n\n\n\n5.4.5 Concluding Reflections",
+    "section": "6.4 Future Research Directions",
+    "text": "6.4 Future Research Directions\n\n\nBuilding on AMTAIR’s foundation, several promising research directions could further enhance the approach’s capabilities, applications, and impact. These range from technical improvements to expanded use cases and deeper integration with governance processes.\n\n`Technical enhancements include:\n\nAdvanced extraction algorithms leveraging next-generation LLMs\nMore sophisticated visualization techniques\nImproved inference methods for complex networks\nEnhanced prediction market integration\n\nApplication expansions include:\n\nExtension to other existential risks\nApplication to broader policy challenges\nIntegration with other governance tools\nAdaptation for organizational decision-making\n\nTheoretical extensions include:\n\nAdvanced uncertainty representation\nDeeper integration with decision theory\nFormal frameworks for worldview comparison\nEnhanced modeling of dynamic processes`",
+    "crumbs": [
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Conclusion</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/Conclusion.html#sec-concluding-reflections",
+    "href": "chapters/Conclusion.html#sec-concluding-reflections",
+    "title": "5  Conclusion",
+    "section": "6.5 Concluding Reflections",
+    "text": "6.5 Concluding Reflections\n\n\nAt its core, this work represents a bet that the epistemic challenges in AI governance are not merely incidental but structural—and that addressing them requires not just more conversation but better tools for collective sensemaking. The stakes of this bet could hardly be higher, as coordinating our response to increasingly powerful AI systems may well determine humanity’s long-term future.\n\n`AMTAIR contributes to this coordination challenge by:\n\nMaking implicit models explicit\nRevealing genuine points of disagreement\nEnabling rigorous evaluation of interventions\nSupporting exploration across possible futures\nCreating common ground for diverse stakeholders\n\nUltimately, the project aims to transform how we think about AI governance—not by providing definitive answers, but by improving the quality of our questions, the rigor of our reasoning, and the clarity of our communication. In a domain characterized by deep uncertainty and rapid change, such epistemic foundations may be our most valuable resource.`",
     "crumbs": [
       "<span class='chapter-number'>5</span>  <span class='chapter-title'>Conclusion</span>"
     ]
@@ -464,40 +394,51 @@
     "href": "chapters/Appendices.html",
     "title": "Appendix A — Appendices",
     "section": "",
-    "text": "A.1 Appendix A: Technical Implementation Details",
+    "text": "Appendices",
     "crumbs": [
       "Appendices",
       "<span class='chapter-number'>A</span>  <span class='chapter-title'>Appendices</span>"
     ]
   },
   {
-    "objectID": "chapters/Appendices.html#appendix-b-model-validation-procedures",
-    "href": "chapters/Appendices.html#appendix-b-model-validation-procedures",
+    "objectID": "chapters/Appendices.html#sec-appendix-technical",
+    "href": "chapters/Appendices.html#sec-appendix-technical",
     "title": "Appendix A — Appendices",
-    "section": "A.2 Appendix B: Model Validation Procedures",
-    "text": "A.2 Appendix B: Model Validation Procedures",
+    "section": "Appendix A: Technical Implementation Details",
+    "text": "Appendix A: Technical Implementation Details",
     "crumbs": [
       "Appendices",
       "<span class='chapter-number'>A</span>  <span class='chapter-title'>Appendices</span>"
     ]
   },
   {
-    "objectID": "chapters/Appendices.html#appendix-c-case-studies",
-    "href": "chapters/Appendices.html#appendix-c-case-studies",
+    "objectID": "chapters/Appendices.html#sec-appendix-validation",
+    "href": "chapters/Appendices.html#sec-appendix-validation",
     "title": "Appendix A — Appendices",
-    "section": "A.3 Appendix C: Case Studies",
-    "text": "A.3 Appendix C: Case Studies",
+    "section": "Appendix B: Model Validation Procedures",
+    "text": "Appendix B: Model Validation Procedures",
     "crumbs": [
       "Appendices",
       "<span class='chapter-number'>A</span>  <span class='chapter-title'>Appendices</span>"
     ]
   },
   {
-    "objectID": "chapters/Appendices.html#appendix-d-ethical-considerations",
-    "href": "chapters/Appendices.html#appendix-d-ethical-considerations",
+    "objectID": "chapters/Appendices.html#sec-appendix-case-studies",
+    "href": "chapters/Appendices.html#sec-appendix-case-studies",
     "title": "Appendix A — Appendices",
-    "section": "A.4 Appendix D: Ethical Considerations",
-    "text": "A.4 Appendix D: Ethical Considerations\n\nTestText",
+    "section": "Appendix C: Case Studies",
+    "text": "Appendix C: Case Studies",
+    "crumbs": [
+      "Appendices",
+      "<span class='chapter-number'>A</span>  <span class='chapter-title'>Appendices</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/Appendices.html#sec-appendix-ethical",
+    "href": "chapters/Appendices.html#sec-appendix-ethical",
+    "title": "Appendix A — Appendices",
+    "section": "Appendix D: Ethical Considerations",
+    "text": "Appendix D: Ethical Considerations",
     "crumbs": [
       "Appendices",
       "<span class='chapter-number'>A</span>  <span class='chapter-title'>Appendices</span>"

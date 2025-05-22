@@ -6,7 +6,7 @@ numbering:
   level: 1         # Chapter level
 ---
 
-## The Current State of Things & How to Continue
+<!-- ## The Current State of Things & How to Continue -->
 
 ```
 ### 10% of Grade: ~ 14% of text ~ 4200 words ~ 10 pages
@@ -23,87 +23,173 @@ numbering:
 
 ```
 
-## Summary	— Key Takeaways & Findings
 
-### Assessing Policy Effects:
 
-Evaluating how different policies alter P(Doom).
+# Conclusion {#sec-conclusion}
 
-### Conditional Probability:
+<!-- [ ] Expand this section to ~14% of total text (approximately 4200 words) -->
 
-Calculating P(Doom | Policy Alpha).
 
-### Methodology:
 
-Update model parameters based on policy implementation.
+## Key Contributions and Findings {#sec-key-contributions}
 
-Recompute probabilities accordingly.
+<!-- [ ] Summarize the project's main contributions to both the technical understanding of AI risk modeling and the practical implementation of policy evaluation tools -->
 
-### Purpose:
+> AMTAIR makes several key contributions to both the theoretical understanding of AI risk modeling and the practical tooling available for AI governance. These advances demonstrate how computational approaches can help address the coordination crisis in AI safety.
 
-Inform policymakers of potential policy effectiveness.
+`Methodological innovations include:
 
-Prioritize interventions that significantly reduce risks.
+- BayesDown as an intermediate representation bridging natural language and Bayesian networks
+- Two-stage extraction pipeline separating structure from probability
+- Cross-worldview comparison methodology
+- Interactive visualization approach for complex probabilistic relationships
 
-## Outlook	—	Outlook & Next Steps / Further Research
+Technical contributions include:
 
-### Scaling Up:
+- Working prototype demonstrating extraction feasibility
+- Interactive visualization making complex models accessible
+- Integration capabilities with forecasting platforms
+- Policy evaluation framework for intervention assessment
 
-* Include more variables and data sources.
+Empirical findings include:
 
-### Collaboration:
+- Extraction quality assessments showing viability of automation
+- Comparative analyses revealing key cruxes across perspectives
+- Policy evaluations demonstrating formal modeling benefits
+- Performance benchmarks guiding future development`
 
-* Partner with policymakers and researchers.
 
-### Technological Enhancements:
 
-* Employ advanced AI techniques.
 
-### Potential Impact:
 
-* Influence global AI governance.
 
-### Limitations of the Analysis
 
-### Policy Implications & Recommendations
 
-### Areas for Future Research
 
-### Open Questions		—	Central/Remaining Questions & Feedback
 
-#### Questions:
+## Limitations of the Current Implementation {#sec-limitations}
 
-* How can we improve automation accuracy?  
-* What challenges exist in policy implementation?  
-* How do we mitigate AI model biases?  
-* How can interdisciplinary efforts enhance outcomes?
+<!-- [ ] Acknowledge specific limitations of the current system, distinguishing between fundamental constraints and opportunities for improvement in future work -->
 
-#### Feedback:
+> While AMTAIR demonstrates the feasibility of automated extraction and formalization, significant limitations remain in the current implementation. Some represent fundamental challenges in modeling complex domains, while others are implementation constraints that future work can address.
 
-* Invite thoughts, critiques, and suggestions.
-  
-<!-- ## List of Figures {.lof} -->
+`Technical constraints include:
 
-### Outlook — Outlook & Next Steps / Further Research
+- Extraction quality boundaries for complex arguments
+- Computational complexity barriers for very large networks
+- Interface sophistication limits
+- Update frequency constraints
 
-## Conclusion: Toward an Adaptive AI Governance Framework
+Conceptual limitations include:
 
-### Key Contributions and Findings
+- Simplifications inherent in causal models
+- Challenges representing complex dynamic processes
+- Difficulties with unprecedented scenarios
+- Value assumptions embedded in model structures
 
-<!-- Summarize the project's main contributions to both the technical understanding of AI risk modeling and the practical implementation of policy evaluation tools. -->
+Future work can address:
 
-### Limitations of the Current Implementation
+- Extraction quality through improved prompting and validation
+- Computational efficiency through optimized algorithms
+- Interface sophistication through advanced visualization
+- Update mechanisms through deeper platform integration`
 
-<!-- Acknowledge specific limitations of the current system, distinguishing between fundamental constraints and opportunities for improvement in future work. -->
 
-### Policy Implications and Recommendations
 
-<!-- Draw out concrete implications for AI governance, highlighting how formal modeling can inform policy development, implementation, and evaluation. -->
 
-### Future Research Directions
 
-<!-- Outline promising directions for future work, including technical enhancements, expanded applications, and deeper integration with governance processes. -->
 
-### Concluding Reflections
 
-<!-- Close with broader reflections on the role of formal modeling in addressing complex governance challenges, particularly under conditions of deep uncertainty and rapid technological change. -->
+
+
+
+## Policy Implications and Recommendations {#sec-policy-implications}
+
+<!-- [ ] Draw out concrete implications for AI governance, highlighting how formal modeling can inform policy development, implementation, and evaluation -->
+
+> AMTAIR's approach has significant implications for how AI governance could evolve toward more rigorous, transparent, and effective practices. By making implicit models explicit and enabling formal policy evaluation, the system supports evidence-based governance development.
+
+`General implications include:
+
+- Value of formal modeling for policy development
+- Importance of explicit uncertainty representation
+- Benefits of structured worldview comparison
+- Advantages of conditional policy framing
+
+Specific recommendations include:
+
+- Development of formal impact assessment protocols
+- Creation of shared model repositories
+- Integration of forecasting with policy evaluation
+- Training in formal modeling for governance analysts
+
+Implementation pathways include:
+
+- Integration with existing processes
+- Adoption by key organizations
+- Training and capacity building
+- Progressive enhancement of current approaches`
+
+
+
+
+
+
+
+
+
+
+
+## Future Research Directions {#sec-future-research}
+
+<!-- [ ] Outline promising directions for future work, including technical enhancements, expanded applications, and deeper integration with governance processes -->
+
+> Building on AMTAIR's foundation, several promising research directions could further enhance the approach's capabilities, applications, and impact. These range from technical improvements to expanded use cases and deeper integration with governance processes.
+
+`Technical enhancements include:
+
+- Advanced extraction algorithms leveraging next-generation LLMs
+- More sophisticated visualization techniques
+- Improved inference methods for complex networks
+- Enhanced prediction market integration
+
+Application expansions include:
+
+- Extension to other existential risks
+- Application to broader policy challenges
+- Integration with other governance tools
+- Adaptation for organizational decision-making
+
+Theoretical extensions include:
+
+- Advanced uncertainty representation
+- Deeper integration with decision theory
+- Formal frameworks for worldview comparison
+- Enhanced modeling of dynamic processes`
+
+
+
+
+
+
+
+
+
+
+## Concluding Reflections {#sec-concluding-reflections}
+
+<!-- [ ] Close with broader reflections on the role of formal modeling in addressing complex governance challenges, particularly under conditions of deep uncertainty and rapid technological change -->
+
+> At its core, this work represents a bet that the epistemic challenges in AI governance are not merely incidental but structural—and that addressing them requires not just more conversation but better tools for collective sensemaking. The stakes of this bet could hardly be higher, as coordinating our response to increasingly powerful AI systems may well determine humanity's long-term future.
+
+`AMTAIR contributes to this coordination challenge by:
+
+- Making implicit models explicit
+- Revealing genuine points of disagreement
+- Enabling rigorous evaluation of interventions
+- Supporting exploration across possible futures
+- Creating common ground for diverse stakeholders
+
+Ultimately, the project aims to transform how we think about AI governance—not by providing definitive answers, but by improving the quality of our questions, the rigor of our reasoning, and the clarity of our communication. In a domain characterized by deep uncertainty and rapid change, such epistemic foundations may be our most valuable resource.`
+
+

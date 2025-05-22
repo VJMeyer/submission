@@ -24,8 +24,13 @@ numbering:
 ```
 
 
-1. successively (chunk my chunk) introduce concepts/ideas ---
-and 2. ground each with existing literature
+<!-- 1. successively (chunk my chunk) introduce concepts/ideas ---
+and 2. ground each with existing literature -->
+
+
+# Context & Background {#sec-context-background}
+
+<!-- [ ] Expand this section to ~29% of total text (approximately 8700 words) -->
 
 {{< include Background.md >}} 
 

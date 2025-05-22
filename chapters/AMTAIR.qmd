@@ -28,9 +28,12 @@ numbering:
 
 
 
+## AMTAIR Implementation {#sec-amtair-implementation}
+
+<!-- [ ] Expand this section to ~29% of total text (approximately 8700 words) -->
 
 
-
+Text to render
 
 
 
@@ -46,7 +49,7 @@ numbering:
 <!-- ## Own Implementation: Good example from a published paper -->
 
 {{< include Implementation.qmd >}}
-
+post text
 {{< include Results.md >}}
-
+post text
 <!-- No Headings after .md inclusion (creates a fatal bug with the ToC) -->

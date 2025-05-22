@@ -1,3 +1,86 @@
+% % GEMINI SUGGESTED CHANGE
+
+% % Required packages (consolidated and redundancies removed)
+% \usepackage{graphicx}
+% \usepackage{geometry} % geometry options are usually set by Quarto YAML, but can be adjusted here if needed
+% \usepackage{fancyhdr}
+% \usepackage{fancyhdr} % For custom headers/footers
+% \usepackage{titling}
+% \usepackage{array}
+% \usepackage{booktabs}
+% \usepackage{setspace}
+% -\usepackage[protrusion=true,expansion=true]{microtype} % Better typography
+
+% % Better integration with Quarto cross-references
+% % Hyperlinking and Cross-referencing
+% \usepackage{hyperref} % Should be loaded relatively late. Options are usually set by Pandoc/Quarto.
+% \usepackage{cleveref}
+% \crefformat{figure}{Figure~#2#1#3}
+% \crefformat{table}{Table~#2#1#3}
+
+% % Better support for hyperlinks
+% \usepackage{hyperref}
+
+% % Definition for the Shaded environment
+% % This is needed because Pandoc/Quarto might generate \begin{Shaded}
+% \usepackage{tcolorbox}
+% \tcbuselibrary{skins, breakable} % Load necessary tcolorbox libraries
+% \newtcolorbox{Shaded}{
+%   breakable                % Allows the box to break across pages
+% }
+% % Customize appearance as needed. e.g., remove colframe if you only want background shading.
+% % % Better support for section references
+% % \usepackage{nameref}
+% % % Ensure IDs with hyphens work properly
+% % \usepackage{etoolbox}
+% % \makeatletter
+% % \patchcmd{\@sect}
+% %   {\addcontentsline{toc}{#1}{\ifnum #2&gt;\c@secnumdepth \else
+% %      \protect\numberline{\csname the#1\endcsname}\fi
+% %      #8}}
+% %   {\ifx\@nodistcall\relax\addcontentsline{toc}{#1}{\ifnum #2&gt;\c@secnumdepth \else
+% %      \protect\numberline{\csname the#1\endcsname}\fi
+% %      #8}\fi}
+% %   {}{}
+% % \makeatother
+
+% % Callout alternative using mdframed
+% % If Quarto's default callouts (which often use tcolorbox via filters) are sufficient,
+%   {\end{mdframed}}
+
+% % Spacing
+% \onehalfspacing
+% \onehalfspacing % From setspace package (defined above)
+
+% % Header and footer styling
+% \pagestyle{fancy}
+% \fancyhf{} % Clear all header and footer fields
+% \fancyhf{} % Clear all header and footer fields (defined above)
+% \fancyhead[LE,RO]{\slshape\nouppercase{\rightmark}} % Chapter title on even pages (left), Section title on odd pages (right)
+% \fancyhead[LO,RE]{\slshape\nouppercase{\leftmark}}  % Section title on odd pages (left), Chapter title on even pages (right)
+% \fancyfoot[C]{\thepage} % Page number in the center of the footer
+
+% % Custom commands for the affidavit
+% % These are often better set as Quarto variables (e.g., `title`, `author`, `date` in YAML)
+% % if your template (`latex/template.tex`) is set up to use them.
+% % \newcommand{\titel}{Automating the Modelling of Transformative Artificial Intelligence Risks}
+% % \newcommand{\autor}{Valentin Jakob Meyer}
+% % \newcommand{\myformat}{\today}
+% % \newcommand{\thesistitle}{Automating the Modelling of Transformative Artificial Intelligence Risks}
+% % \thesisauthor{Valentin Jakob Meyer}
+
+% % --- End of preamble.tex ---
+
+
+
+
+
+
+
+
+
+
+
 % Required packages
 \usepackage{graphicx}
 \usepackage{geometry}
@@ -17,6 +100,7 @@
 
 % Better support for hyperlinks
 \usepackage{hyperref}
+
 
 % % Better support for section references
 % \usepackage{nameref}
@@ -62,7 +146,7 @@
 
 % Header and footer styling
 \pagestyle{fancy}
-\fancyhf{}
+% \fancyhf{}
 \fancyhead[LE,RO]{\slshape\nouppercase{\rightmark}}
 \fancyhead[LO,RE]{\slshape\nouppercase{\leftmark}}
 \fancyfoot[C]{\thepage}
