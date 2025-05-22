@@ -1,26 +1,23 @@
-% AMTAIR Thesis Template - Quarto Compatible
-% Options for packages loaded elsewhere
+% AMTAIR Thesis Template - Minimal Quarto Integration
 % Options for packages loaded elsewhere
 \PassOptionsToPackage{unicode}{hyperref}
 \PassOptionsToPackage{hyphens}{url}
-
-% Document class with proper options
 \documentclass[
   letterpaper,
 ]{book}
-% Color support (must be early)
+% Early packages that must be loaded first
 \usepackage{xcolor}
 
-% Geometry and basic packages
+% Geometry configuration
 \usepackage[a4paper,margin=2.5cm]{geometry}
 
 % Math support
 \usepackage{amsmath,amssymb}
 
-% Section numbering
+% Section numbering control
 \setcounter{secnumdepth}{5}
 
-% Font configuration
+% Font configuration (Quarto-managed)
 \usepackage{iftex}
 \ifPDFTeX
   \usepackage[T1]{fontenc}
@@ -42,7 +39,7 @@
   \UseMicrotypeSet[protrusion]{basicmath} % disable protrusion for tt fonts
 }{}
 
-% Common packages and settings
+% Common packages (Quarto-managed)
 \makeatletter
 \@ifundefined{KOMAClassName}{% if non-KOMA class
   \IfFileExists{parskip.sty}{%
@@ -160,64 +157,56 @@
 \addbibresource{ref/MAref.bib}
 
 
-% Enhanced preamble for AMTAIR thesis
-% Must be compatible with Quarto's processing
+% AMTAIR Thesis Preamble - Microtype-safe version
+% This file is included via header-includes, so be careful about package conflicts
 
-% Typography and formatting
-\usepackage[protrusion=true,expansion=true]{microtype}
+% Typography - conditional microtype loading
+\@ifpackageloaded{microtype}{
+  % microtype already loaded by Quarto, just configure it
+  \microtypesetup{protrusion=true,expansion=true}
+}{
+  % microtype not loaded, load it with options
+  \usepackage[protrusion=true,expansion=true]{microtype}
+}
+
+% Spacing
 \usepackage{setspace}
 \onehalfspacing
 
-% Enhanced cross-referencing
-\usepackage{cleveref}
-\crefformat{section}{Section~#2#1#3}
-\crefformat{figure}{Figure~#2#1#3}
-\crefformat{table}{Table~#2#1#3}
-\crefformat{equation}{Equation~#2#1#3}
+% Enhanced cross-referencing (only if not already loaded)
+\@ifpackageloaded{cleveref}{}{
+  \usepackage{cleveref}
+  \crefformat{section}{Section~#2#1#3}
+  \crefformat{figure}{Figure~#2#1#3}
+  \crefformat{table}{Table~#2#1#3}
+  \crefformat{equation}{Equation~#2#1#3}
+}
 
-% Code and verbatim support
-\usepackage{fancyvrb}
-\usepackage{framed}
-\definecolor{shadecolor}{RGB}{248,248,248}
-
-% Define Shaded environment for code blocks
-\newenvironment{Shaded}{\begin{snugshade}}{\end{snugshade}}
-\newenvironment{snugshade}{\begin{shaded}}{\end{shaded}}
-
-% Callout box support using tcolorbox
+% Callout support with tcolorbox
 \usepackage{tcolorbox}
 \tcbuselibrary{skins,breakable}
 
-% Define callout styles
-\newtcolorbox{callout-note}{
-  enhanced,
-  breakable,
-  colback=blue!5!white,
-  colframe=blue!75!black,
-  title=Note,
-  fonttitle=\bfseries,
+% Define callout environments for Quarto compatibility
+\newtcolorbox{callout-note-env}{
+  enhanced,breakable,
+  colback=blue!5!white,colframe=blue!75!black,
+  title=Note,fonttitle=\bfseries,
   attach boxed title to top left={yshift=-2mm},
   boxed title style={colback=blue!75!black}
 }
 
-\newtcolorbox{callout-tip}{
-  enhanced,
-  breakable,
-  colback=green!5!white,
-  colframe=green!75!black,
-  title=Tip,
-  fonttitle=\bfseries,
+\newtcolorbox{callout-tip-env}{
+  enhanced,breakable,
+  colback=green!5!white,colframe=green!75!black,
+  title=Tip,fonttitle=\bfseries,
   attach boxed title to top left={yshift=-2mm},
   boxed title style={colback=green!75!black}
 }
 
-\newtcolorbox{callout-warning}{
-  enhanced,
-  breakable,
-  colback=orange!5!white,
-  colframe=orange!75!black,
-  title=Warning,
-  fonttitle=\bfseries,
+\newtcolorbox{callout-warning-env}{
+  enhanced,breakable,
+  colback=orange!5!white,colframe=orange!75!black,
+  title=Warning,fonttitle=\bfseries,
   attach boxed title to top left={yshift=-2mm},
   boxed title style={colback=orange!75!black}
 }
@@ -230,17 +219,17 @@
 \fancyhead[LO,RE]{\slshape\nouppercase{\leftmark}}
 \fancyfoot[C]{\thepage}
 
-% Figure and table positioning
+% Enhanced figure placement
 \usepackage{float}
 \floatplacement{figure}{H}
 \floatplacement{table}{H}
 
-% Enhanced list handling
+% List formatting
 \usepackage{enumitem}
 \setlist[itemize]{topsep=0pt,partopsep=0pt,parsep=0pt,itemsep=2pt}
 \setlist[enumerate]{topsep=0pt,partopsep=0pt,parsep=0pt,itemsep=2pt}
 
-% Math theorem environments
+% Math environments
 \usepackage{amsthm}
 \theoremstyle{definition}
 \newtheorem{definition}{Definition}[section]
@@ -249,23 +238,12 @@
 \newtheorem{theorem}{Theorem}[section]
 \newtheorem{proposition}{Proposition}[section]
 
-% URL formatting
-\usepackage{url}
+% URL styling
 \urlstyle{same}
 
-% Custom commands for affidavit compatibility
+% Custom commands for thesis metadata
 \newcommand{\thesistitle}{Automating the Modelling of Transformative Artificial Intelligence Risks}
 \newcommand{\thesisauthor}{Valentin Jakob Meyer}
-% Quarto compatibility fixes
-\providecommand{\tightlist}{\setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
-\providecommand{\Shaded}{\begin{snugshade}}
-\providecommand{\endShaded}{\end{snugshade}}
-
-% Code highlighting support
-\usepackage{fancyvrb}
-\usepackage{framed}
-\definecolor{shadecolor}{RGB}{248,248,248}
-\newenvironment{snugshade}{\begin{shaded}}{\end{shaded}}
 \makeatletter
 \@ifpackageloaded{bookmark}{}{\usepackage{bookmark}}
 \makeatother
@@ -311,7 +289,7 @@
 \@ifpackageloaded{subcaption}{}{\usepackage{subcaption}}
 \makeatother
 
-% Graphics and tables
+% Graphics and tables (Quarto-managed)
 \usepackage{graphicx}
 \makeatletter
 \newsavebox\pandoc@box
@@ -338,69 +316,57 @@
 \IfFileExists{footnotehyper.sty}{\usepackage{footnotehyper}}{\usepackage{footnote}}
 \makesavenoteenv{longtable}
 
-% Hyperref and cross-referencing (load late)
-\usepackage{hyperref}
-\usepackage{cleveref}
+% Custom header includes BEFORE other packages
+% AMTAIR Thesis Preamble - Microtype-safe version
+% This file is included via header-includes, so be careful about package conflicts
 
-% Custom preamble includes
-% Enhanced preamble for AMTAIR thesis
-% Must be compatible with Quarto's processing
+% Typography - conditional microtype loading
+\@ifpackageloaded{microtype}{
+  % microtype already loaded by Quarto, just configure it
+  \microtypesetup{protrusion=true,expansion=true}
+}{
+  % microtype not loaded, load it with options
+  \usepackage[protrusion=true,expansion=true]{microtype}
+}
 
-% Typography and formatting
-\usepackage[protrusion=true,expansion=true]{microtype}
+% Spacing
 \usepackage{setspace}
 \onehalfspacing
 
-% Enhanced cross-referencing
-\usepackage{cleveref}
-\crefformat{section}{Section~#2#1#3}
-\crefformat{figure}{Figure~#2#1#3}
-\crefformat{table}{Table~#2#1#3}
-\crefformat{equation}{Equation~#2#1#3}
+% Enhanced cross-referencing (only if not already loaded)
+\@ifpackageloaded{cleveref}{}{
+  \usepackage{cleveref}
+  \crefformat{section}{Section~#2#1#3}
+  \crefformat{figure}{Figure~#2#1#3}
+  \crefformat{table}{Table~#2#1#3}
+  \crefformat{equation}{Equation~#2#1#3}
+}
 
-% Code and verbatim support
-\usepackage{fancyvrb}
-\usepackage{framed}
-\definecolor{shadecolor}{RGB}{248,248,248}
-
-% Define Shaded environment for code blocks
-\newenvironment{Shaded}{\begin{snugshade}}{\end{snugshade}}
-\newenvironment{snugshade}{\begin{shaded}}{\end{shaded}}
-
-% Callout box support using tcolorbox
+% Callout support with tcolorbox
 \usepackage{tcolorbox}
 \tcbuselibrary{skins,breakable}
 
-% Define callout styles
-\newtcolorbox{callout-note}{
-  enhanced,
-  breakable,
-  colback=blue!5!white,
-  colframe=blue!75!black,
-  title=Note,
-  fonttitle=\bfseries,
+% Define callout environments for Quarto compatibility
+\newtcolorbox{callout-note-env}{
+  enhanced,breakable,
+  colback=blue!5!white,colframe=blue!75!black,
+  title=Note,fonttitle=\bfseries,
   attach boxed title to top left={yshift=-2mm},
   boxed title style={colback=blue!75!black}
 }
 
-\newtcolorbox{callout-tip}{
-  enhanced,
-  breakable,
-  colback=green!5!white,
-  colframe=green!75!black,
-  title=Tip,
-  fonttitle=\bfseries,
+\newtcolorbox{callout-tip-env}{
+  enhanced,breakable,
+  colback=green!5!white,colframe=green!75!black,
+  title=Tip,fonttitle=\bfseries,
   attach boxed title to top left={yshift=-2mm},
   boxed title style={colback=green!75!black}
 }
 
-\newtcolorbox{callout-warning}{
-  enhanced,
-  breakable,
-  colback=orange!5!white,
-  colframe=orange!75!black,
-  title=Warning,
-  fonttitle=\bfseries,
+\newtcolorbox{callout-warning-env}{
+  enhanced,breakable,
+  colback=orange!5!white,colframe=orange!75!black,
+  title=Warning,fonttitle=\bfseries,
   attach boxed title to top left={yshift=-2mm},
   boxed title style={colback=orange!75!black}
 }
@@ -413,17 +379,17 @@
 \fancyhead[LO,RE]{\slshape\nouppercase{\leftmark}}
 \fancyfoot[C]{\thepage}
 
-% Figure and table positioning
+% Enhanced figure placement
 \usepackage{float}
 \floatplacement{figure}{H}
 \floatplacement{table}{H}
 
-% Enhanced list handling
+% List formatting
 \usepackage{enumitem}
 \setlist[itemize]{topsep=0pt,partopsep=0pt,parsep=0pt,itemsep=2pt}
 \setlist[enumerate]{topsep=0pt,partopsep=0pt,parsep=0pt,itemsep=2pt}
 
-% Math theorem environments
+% Math environments
 \usepackage{amsthm}
 \theoremstyle{definition}
 \newtheorem{definition}{Definition}[section]
@@ -432,23 +398,12 @@
 \newtheorem{theorem}{Theorem}[section]
 \newtheorem{proposition}{Proposition}[section]
 
-% URL formatting
-\usepackage{url}
+% URL styling
 \urlstyle{same}
 
-% Custom commands for affidavit compatibility
+% Custom commands for thesis metadata
 \newcommand{\thesistitle}{Automating the Modelling of Transformative Artificial Intelligence Risks}
 \newcommand{\thesisauthor}{Valentin Jakob Meyer}
-% Quarto compatibility fixes
-\providecommand{\tightlist}{\setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
-\providecommand{\Shaded}{\begin{snugshade}}
-\providecommand{\endShaded}{\end{snugshade}}
-
-% Code highlighting support
-\usepackage{fancyvrb}
-\usepackage{framed}
-\definecolor{shadecolor}{RGB}{248,248,248}
-\newenvironment{snugshade}{\begin{shaded}}{\end{shaded}}
 \makeatletter
 \@ifpackageloaded{bookmark}{}{\usepackage{bookmark}}
 \makeatother
@@ -494,21 +449,18 @@
 \@ifpackageloaded{subcaption}{}{\usepackage{subcaption}}
 \makeatother
 
-% Additional preamble content
-
-
-% Hyperref setup
+% Hyperref configuration (Quarto-managed, load late)
 \hypersetup{
   pdftitle={Automating the Modelling of Transformative Artificial Intelligence Risks},
   pdfauthor={Valentin Jakob Meyer},
   hidelinks,
   pdfcreator={LaTeX via pandoc}}
 
-% Bibliography configuration if using biblatex
+% Bibliography setup
 \usepackage[]{biblatex}
 \addbibresource{ref/MAref.bib}
 
-% Title and author information
+% Title information
 \title{Automating the Modelling of Transformative Artificial
 Intelligence Risks}
 \subtitle{An Epistemic Framework for Leveraging Frontier AI Systems to
@@ -517,17 +469,12 @@ Path towards Existential Safety}
 \author{Valentin Jakob Meyer}
 \date{2025-05-26}
 
-% Custom commands for metadata
-\newcommand{\thesubtitle}{An Epistemic Framework for Leveraging Frontier
-AI Systems to Upscale Conditional Policy Assessments in Bayesian
-Networks on a Narrow Path towards Existential Safety}
-
-% Tight list command for Quarto compatibility
+% Quarto compatibility
 \providecommand{\tightlist}{\setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
 
 \begin{document}
 
-% Custom title page if specified
+% Custom title page
 \begin{titlepage}
 \thispagestyle{empty}% Remove page number from title page
 
@@ -622,12 +569,13 @@ to Upscale Conditional Policy Assessments in Bayesian Networks on a Narrow Path 
 \listoffigures
 \listoftables
 
-% Line stretch
+% Line spacing
 
-% Front matter vs main matter
+
+% Front/main matter handling
 \mainmatter
 
-% Main document body
+% Document body
 \bookmarksetup{startatroot}
 
 \chapter*{Preface}\label{preface}
@@ -1346,9 +1294,6 @@ Modeling}\label{sec-modeling-advantages}
   \textbf{Visual Communication}: Graphical representation facilitates
   understanding across expertise levels
 \end{itemize}
-
-\subsection{Argument Mapping and Formal
-Representations}\label{sec-argument-mapping}
 
 \subsubsection{From Natural Language to Formal
 Models}\label{sec-natural-to-formal}
@@ -3155,9 +3100,6 @@ Benchmark results for complete pipeline:
   Large networks (50+ nodes): 45+ seconds, requiring optimization`
 \end{itemize}
 
-\subsubsection{Computational Performance
-Analysis}\label{sec-computational-performance}
-
 \textbf{Scaling Performance Characteristics:}
 
 \begin{verbatim}
@@ -3274,7 +3216,7 @@ possible with the original qualitative description.
 \end{figure}%
 
 \subsubsection{Case Study: Formalized Carlsmith
-Model}\label{sec-carlsmith-case-study}
+Model}\label{sec-carlsmith-case-study-2}
 
 \textbf{Comprehensive Model Validation:}
 
@@ -3598,7 +3540,7 @@ post text
 \chapter{Discussion --- Exchange, Controversy \&
 Influence}\label{sec-discussion}
 
-\section{Limitations and Failure Modes}\label{sec-limitations}
+\section{Limitations and Failure Modes}\label{sec-limitationsA}
 
 \subsection{Limitations and
 Counterarguments}\label{sec-limitations-counterarguments}
@@ -3606,7 +3548,7 @@ Counterarguments}\label{sec-limitations-counterarguments}
 \subsection{Technical Limitations}\label{sec-technical-limitations}
 
 \subsubsection{Technical Limitations and
-Responses}\label{sec-technical-limitations}
+Responses}\label{sec-technical-limitations2}
 
 \textbf{Objection 1: Extraction Quality Boundaries}
 
@@ -4163,7 +4105,7 @@ Promising opportunities include:
 \end{itemize}
 
 \subsection{Conceptual and Methodological
-Concerns}\label{sec-conceptual-concerns}
+Concerns}\label{sec-conceptual-concerns2}
 
 \subsubsection{The Formalization
 Challenge}\label{sec-formalization-challenge}
@@ -4694,7 +4636,7 @@ modeling
 
 \section{Key Contributions and Findings}\label{sec-key-contributions}
 
-\section{Summary of Key Contributions}\label{sec-key-contributions}
+\section{Summary of Key Contributions}\label{sec-key-contributions2}
 
 \begin{quote}
 AMTAIR makes several key contributions to both the theoretical
@@ -4851,7 +4793,7 @@ Empirical findings include:
 \end{itemize}
 
 \section{Limitations of the Current
-Implementation}\label{sec-limitations}
+Implementation}\label{sec-limitations1}
 
 \begin{quote}
 While AMTAIR demonstrates the feasibility of automated extraction and
@@ -4861,7 +4803,7 @@ complex domains, while others are implementation constraints that future
 work can address.
 \end{quote}
 
-\subsection{Limitations and Future Research}\label{sec-future-research}
+\subsection{Limitations and Future Research}\label{sec-future-research2}
 
 \subsubsection{Immediate Technical
 Priorities}\label{sec-technical-priorities}
@@ -4911,7 +4853,7 @@ Priorities}\label{sec-technical-priorities}
 \end{itemize}
 
 \subsubsection{Long-Term Research
-Directions}\label{sec-long-term-research}
+Directions}\label{sec-long-term-research2}
 
 \textbf{Prediction Market Integration:}
 
@@ -5091,9 +5033,9 @@ Implementation pathways include:
   Progressive enhancement of current approaches`
 \end{itemize}
 
-\section{Limitations and Future Research}\label{sec-future-research}
+\section{Limitations and Future Research}\label{sec-future-research3}
 
-\section{Future Research Directions}\label{sec-future-research}
+\section{Future Research Directions}\label{future-research-directions}
 
 \begin{quote}
 Building on AMTAIR's foundation, several promising research directions
@@ -5103,7 +5045,7 @@ and deeper integration with governance processes.
 \end{quote}
 
 \subsection{Immediate Technical
-Priorities}\label{sec-technical-priorities}
+Priorities}\label{sec-technical-priorities2}
 
 \textbf{Extraction Quality Enhancement}:
 
@@ -5729,13 +5671,13 @@ Governance}
 
 \markright{Appendix D: Ethical Considerations and Governance}
 
-% Bibliography
+% Back matter and bibliography
 \backmatter
 
 
 \printbibliography[title=Bibliography]
 
-% Include after content
+% Final includes
 
 \clearpage
 \thispagestyle{empty} % Removes page numbering for current page

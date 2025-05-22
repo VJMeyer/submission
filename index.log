@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999997 (TeX Live 2025) (preloaded format=xelatex 2025.3.8)  22 MAY 2025 16:44
+This is XeTeX, Version 3.141592653-2.6-0.999997 (TeX Live 2025) (preloaded format=xelatex 2025.3.8)  22 MAY 2025 17:05
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -594,28 +594,20 @@ Package biblatex Info: ... and expl3
 (/usr/local/texlive/2025/texmf-dist/tex/latex/biblatex/blx-case-expl3.sty
 Package: blx-case-expl3 2024/03/21 v3.20 expl3 case changing code for biblatex
 ))
-
-! LaTeX Error: Option clash for package microtype.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.168 \usepackage
-                 {setspace}
-The package microtype has already been loaded with options:
-  []
-There has now been an attempt to load it with options
-  [protrusion=true,expansion=true]
-Adding the global options:
-  ,protrusion=true,expansion=true
-to your \documentclass declaration may fix this.
-Try typing  <return>  to proceed.
+! You can't use `\spacefactor' in vertical mode.
+\@->\spacefactor 
+                 \@m {}
+l.164 \@
+        ifpackageloaded{microtype}{
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn't ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
 
  
 Here is how much of TeX's memory you used:
- 18466 strings out of 473832
- 363533 string characters out of 5729482
+ 18465 strings out of 473832
+ 363390 string characters out of 5729482
  1050040 words of memory out of 5000000
  41399 multiletter control sequences out of 15000+600000
  558853 words of font info for 38 fonts, out of 8000000 for 9000

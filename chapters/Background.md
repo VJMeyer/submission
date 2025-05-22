@@ -272,7 +272,7 @@ P_wet_given_causes = {
 
 
 
-### Argument Mapping and Formal Representations {#sec-argument-mapping}
+<!-- ### Argument Mapping and Formal Representations {#sec-argument-mapping} -->
 
 #### From Natural Language to Formal Models {#sec-natural-to-formal}
 

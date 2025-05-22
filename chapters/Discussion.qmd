@@ -43,7 +43,7 @@ numbering:
 
 
 
-## Limitations and Failure Modes {#sec-limitations}
+## Limitations and Failure Modes {#sec-limitationsA}
 
 
 
@@ -57,7 +57,7 @@ numbering:
 ### Technical Limitations {#sec-technical-limitations}
 
 
-#### Technical Limitations and Responses {#sec-technical-limitations}
+#### Technical Limitations and Responses {#sec-technical-limitations2}
 
 **Objection 1: Extraction Quality Boundaries**
 
@@ -496,7 +496,7 @@ Promising opportunities include:
 
 
 
-### Conceptual and Methodological Concerns {#sec-conceptual-concerns}
+### Conceptual and Methodological Concerns {#sec-conceptual-concerns2}
 
 
 

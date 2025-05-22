@@ -117,7 +117,7 @@ Benchmark results for complete pipeline:
 
 
 
-#### Computational Performance Analysis {#sec-computational-performance}
+<!-- #### Computational Performance Analysis {#sec-computational-performance} -->
 
 <!-- [ ] Analyze efficiency and scalability characteristics -->
 
@@ -194,7 +194,7 @@ Network Size Performance Benchmarks:
 
 
 
-#### Case Study: Formalized Carlsmith Model {#sec-carlsmith-case-study}
+#### Case Study: Formalized Carlsmith Model {#sec-carlsmith-case-study-2}
 
 <!-- [ ] Demonstrate system capabilities through complete real-world formalization -->
 

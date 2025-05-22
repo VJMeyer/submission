@@ -1,14 +1,11 @@
-% AMTAIR Thesis Template - Quarto Compatible
-% Options for packages loaded elsewhere
+% AMTAIR Thesis Template - Minimal Quarto Integration
 $passoptions.latex()$
-
-% Document class with proper options
 $doc-class.tex()$
 
-% Color support (must be early)
+% Early packages that must be loaded first
 \usepackage{xcolor}
 
-% Geometry and basic packages
+% Geometry configuration
 $if(geometry)$
 \usepackage[$for(geometry)$$geometry$$sep$,$endfor$]{geometry}
 $else$
@@ -18,40 +15,33 @@ $endif$
 % Math support
 \usepackage{amsmath,amssymb}
 
-% Section numbering
+% Section numbering control
 $if(numbersections)$
 \setcounter{secnumdepth}{$if(secnumdepth)$$secnumdepth$$else$5$endif$}
 $else$
 \setcounter{secnumdepth}{-\maxdimen}
 $endif$
 
-% Font configuration
+% Font configuration (Quarto-managed)
 $fonts.latex()$
 $font-settings.latex()$
 
-% Common packages and settings
+% Common packages (Quarto-managed)
 $common.latex()$
 
-% Graphics and tables
+% Graphics and tables (Quarto-managed)
 $graphics.tex()$
 $tables.tex()$
 
-% Hyperref and cross-referencing (load late)
-\usepackage{hyperref}
-\usepackage{cleveref}
-
-% Custom preamble includes
+% Custom header includes BEFORE other packages
 $for(header-includes)$
 $header-includes$
 $endfor$
 
-% Additional preamble content
-$preamble-includes$
-
-% Hyperref setup
+% Hyperref configuration (Quarto-managed, load late)
 $hypersetup.latex()$
 
-% Bibliography configuration if using biblatex
+% Bibliography setup
 $if(biblatex)$
 \usepackage[$if(biblio-style)$style=$biblio-style$,$endif$$for(biblatexoptions)$$biblatexoptions$$sep$,$endfor$]{biblatex}
 $for(bibliography)$
@@ -59,43 +49,18 @@ $for(bibliography)$
 $endfor$
 $endif$
 
-% Title and author information
-$if(title)$
-\title{$title$}
-$endif$
-$if(subtitle)$
-\subtitle{$subtitle$}
-$endif$
-$if(author)$
-\author{$for(author)$$author$$sep$ \and $endfor$}
-$endif$
-$if(date)$
-\date{$date$}
-$endif$
+% Title information
+$if(title)$\title{$title$}$endif$
+$if(subtitle)$\subtitle{$subtitle$}$endif$
+$if(author)$\author{$for(author)$$author$$sep$ \and $endfor$}$endif$
+$if(date)$\date{$date$}$endif$
 
-% Custom commands for metadata
-$if(subtitle)$
-\newcommand{\thesubtitle}{$subtitle$}
-$endif$
-$if(metadata-submission.field-of-study)$
-\newcommand{\fieldofstudy}{$metadata-submission.field-of-study$}
-$endif$
-$if(metadata-submission.matriculation-number)$
-\newcommand{\matriculationnumber}{$metadata-submission.matriculation-number$}
-$endif$
-$if(metadata-submission.submission-date)$
-\newcommand{\submissiondate}{$metadata-submission.submission-date$}
-$endif$
-$if(metadata-submission.word-count)$
-\newcommand{\wordcount}{$metadata-submission.word-count$}
-$endif$
-
-% Tight list command for Quarto compatibility
+% Quarto compatibility
 \providecommand{\tightlist}{\setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
 
 \begin{document}
 
-% Custom title page if specified
+% Custom title page
 $for(include-before)$
 $include-before$
 $endfor$
@@ -103,32 +68,22 @@ $endfor$
 % Table of contents
 $toc.tex()$
 
-% Line stretch
-$if(linestretch)$
-\setstretch{$linestretch$}
-$endif$
+% Line spacing
+$if(linestretch)$\setstretch{$linestretch$}$endif$
 
-% Front matter vs main matter
-$if(has-frontmatter)$
-\mainmatter
-$endif$
+% Front/main matter handling
+$if(has-frontmatter)$\mainmatter$endif$
 
-% Main document body
+% Document body
 $body$
 
-% Bibliography
-$if(has-frontmatter)$
-\backmatter
-$endif$
+% Back matter and bibliography
+$if(has-frontmatter)$\backmatter$endif$
 
 $if(natbib)$
 $if(bibliography)$
 $if(biblio-title)$
-$if(book-class)$
-\renewcommand\bibname{$biblio-title$}
-$else$
-\renewcommand\refname{$biblio-title$}
-$endif$
+$if(book-class)$\renewcommand\bibname{$biblio-title$}$else$\renewcommand\refname{$biblio-title$}$endif$
 $endif$
 \bibliography{$for(bibliography)$$bibliography$$sep$,$endfor$}
 $endif$
@@ -138,7 +93,7 @@ $if(biblatex)$
 \printbibliography$if(biblio-title)$[title=$biblio-title$]$endif$
 $endif$
 
-% Include after content
+% Final includes
 $for(include-after)$
 $include-after$
 $endfor$

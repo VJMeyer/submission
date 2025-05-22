@@ -47,20 +47,7 @@ format:
   pdf:
     documentclass: book
     template: latex/template.tex
-    include-in-header: 
-      - latex/preamble.tex
-      - text: |
-          % Quarto compatibility fixes
-          \providecommand{\tightlist}{\setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
-          \providecommand{\Shaded}{\begin{snugshade}}
-          \providecommand{\endShaded}{\end{snugshade}}
-          
-          % Code highlighting support
-          \usepackage{fancyvrb}
-          \usepackage{framed}
-          \definecolor{shadecolor}{RGB}{248,248,248}
-          \newenvironment{snugshade}{\begin{shaded}}{\end{shaded}}
-    
+    include-in-header: latex/preamble.tex
     pdf-engine: xelatex
     keep-tex: true
     toc: true
@@ -76,10 +63,10 @@ format:
     output-file: thesis-book.pdf
     cite-method: biblatex
     biblio-title: Bibliography
+    # Critical: microtype options must be global
+    documentclass-options: ["11pt", "a4paper", "oneside"]
 
 bibliography: ref/MAref.bib
-
-
 
 
 

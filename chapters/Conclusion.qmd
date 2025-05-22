@@ -42,7 +42,7 @@ numbering:
 
 
 ## Key Contributions and Findings {#sec-key-contributions}
-## Summary of Key Contributions {#sec-key-contributions}
+## Summary of Key Contributions {#sec-key-contributions2}
 
 <!-- [ ] Summarize the project's main contributions to both the technical understanding of AI risk modeling and the practical implementation of policy evaluation tools -->
 
@@ -150,14 +150,14 @@ Empirical findings include:
 
 
 
-## Limitations of the Current Implementation {#sec-limitations}
+## Limitations of the Current Implementation {#sec-limitations1}
 
 <!-- [ ] Acknowledge specific limitations of the current system, distinguishing between fundamental constraints and opportunities for improvement in future work -->
 
 > While AMTAIR demonstrates the feasibility of automated extraction and formalization, significant limitations remain in the current implementation. Some represent fundamental challenges in modeling complex domains, while others are implementation constraints that future work can address.
 
 
-### Limitations and Future Research {#sec-future-research}
+### Limitations and Future Research {#sec-future-research2}
 
 
 
@@ -189,7 +189,7 @@ Empirical findings include:
 
 
 
-#### Long-Term Research Directions {#sec-long-term-research}
+#### Long-Term Research Directions {#sec-long-term-research2}
 
 **Prediction Market Integration:**
 
@@ -324,9 +324,9 @@ Implementation pathways include:
 
 
 
-## Limitations and Future Research {#sec-future-research}
+## Limitations and Future Research {#sec-future-research3}
 
-## Future Research Directions {#sec-future-research}
+## Future Research Directions
 
 <!-- [ ] Outline promising directions for future work, including technical enhancements, expanded applications, and deeper integration with governance processes -->
 
@@ -335,7 +335,7 @@ Implementation pathways include:
 
 
 
-### Immediate Technical Priorities {#sec-technical-priorities}
+### Immediate Technical Priorities {#sec-technical-priorities2}
 
 **Extraction Quality Enhancement**:
 
