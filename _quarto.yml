@@ -1,150 +1,229 @@
-
-
-
-
-
-
-# # SWITCH BETWEEN BOOK AND MAUSCRIPT QUARTO BY (UN-)COMMENTING THE RESPECTIVE SECTION IN THIS _quarto.yml file
-
-
-
-
-
-
 project:
   type: book
   output-dir: _outputs/book
 
-# Add this section to use our custom filter
-# filters:
-#   - _extensions/crossref-bridge.lua
-
-
 execute:
   freeze: auto
-
-# crossref:
-#   sec-prefix: "Section"
-#   fig-prefix: "Figure"
-#   tbl-prefix: "Table"
-#   ref-hyperlink: true
+  echo: true
+  warning: false
+  error: false
 
 book:
   title: "Automating the Modelling of Transformative Artificial Intelligence Risks"
+  subtitle: "An Epistemic Framework for Leveraging Frontier AI Systems to Upscale Conditional Policy Assessments in Bayesian Networks on a Narrow Path towards Existential Safety"
   author: "Valentin Jakob Meyer"
-#  lof: true
-#  title-block-banner: true
-#  title-block-banner: latex/uni-bayreuth-logo.png
   date: "2025-05-26"
   search: true
   repo-url: https://github.com/VJMeyer/submission
   repo-actions: [edit]
-  downloads: [pdf, epub] #tex?
+  downloads: [pdf, epub]
   sharing: [twitter, facebook]
   cover-image: images/cover.png
-  #output-file: "complete-book"
   chapters:
     - index.qmd
     - chapters/Introduction.qmd
     - chapters/Context.qmd
     - chapters/AMTAIR.qmd
-    # - chapters/Implementation.qmd
     - chapters/Discussion.qmd
     - chapters/Conclusion.qmd
     - chapters/Frontmatter.qmd
     - ref/references.qmd
-  #  - lof.qmd
-  #  - AMTAIR_Prototype/data/example_rain-sprinkler-lawn/AMTAIR_Prototype_example_rain-sprinkler-lawn.ipynb
-  #  - AMTAIR_Prototype/data/example_carlsmith/AMTAIR_Prototype_example_carlsmith.ipynb
   appendices:
     - chapters/Appendices.qmd
-    - chapters/appendixA.qmd
-  navbar:
-    pinned: true
-  page-footer: 
-    left: "Copyright 2025, Valentin Meyer" 
-    right: 
-      - icon: github
-        href: https://github.com/
-      - icon: twitter 
-        href: https://twitter.com/
 
 format:
   html:
-    include-in-header:
-      text: |
-        <script src="https://hypothes.is/embed.js" async></script>
     theme: cosmo
     code-fold: true
     toc: true
     toc-depth: 5
-    toc-title: "ToC"
-    lof: true
-    page-navigation: true
-    site-path: /
-    self-contained: false
     number-sections: true
-  #  crossref:
-  #    sec-prefix: "Section"
-  #  cite-method: citeproc
+    crossref:
+      sec-prefix: "Section"
+      fig-prefix: "Figure"
+      tbl-prefix: "Table"
+    callout-appearance: simple
+    
   pdf:
     documentclass: book
-    geometry: margin=1in
     template: latex/template.tex
-    include-in-header: latex/preamble.tex
+    include-in-header: 
+      - latex/preamble.tex
+      - text: |
+          % Quarto compatibility fixes
+          \providecommand{\tightlist}{\setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+          \providecommand{\Shaded}{\begin{snugshade}}
+          \providecommand{\endShaded}{\end{snugshade}}
+          
+          % Code highlighting support
+          \usepackage{fancyvrb}
+          \usepackage{framed}
+          \definecolor{shadecolor}{RGB}{248,248,248}
+          \newenvironment{snugshade}{\begin{shaded}}{\end{shaded}}
+    
+    pdf-engine: xelatex
     keep-tex: true
     toc: true
     lof: true
-    pdf-engine: xelatex
+    lot: true
+    number-sections: true
+    crossref:
+      sec-prefix: "Section"
+      fig-prefix: "Figure"
+      tbl-prefix: "Table"
+    include-before-body: latex/title-page.tex
     include-after-body: latex/affidavit.tex
     output-file: thesis-book.pdf
     cite-method: biblatex
     biblio-title: Bibliography
-  #  crossref:
-  #    sec-prefix: "Section"
-  #   documentclass: book
-  #   crossref:
-  #     sec-prefix: "Section"
-  #   include-in-header: 
-  #     text: |
-  #       \usepackage{cleveref}
-  #       \crefformat{section}{#2Section~#1#3}
-  #       \usepackage{etoolbox}
-  #       \makeatletter
-  #       \patchcmd{\@sect}
-  #         {\addcontentsline{toc}{#1}{\ifnum #2>\c@secnumdepth \else
-  #            \protect\numberline{\csname the#1\endcsname}\fi
-  #            #8}}
-  #         {\ifx\@nodistcall\relax\addcontentsline{toc}{#1}{\ifnum #2>\c@secnumdepth \else
-  #            \protect\numberline{\csname the#1\endcsname}\fi
-  #            #8}\fi}
-  #         {}{}
-  #       \makeatother
-  #   geometry: margin=1in
-  #   template: latex/template.tex
-  # #  include-in-header: latex/preamble.tex
-  #   keep-tex: true
-  #   toc: true
-  #   lof: true
-  #   pdf-engine: xelatex
-  #   include-after-body: latex/affidavit.tex
-  #   output-file: thesis-book.pdf
-  #   cite-method: biblatex
-  # #  biblio-title: Bibliography    	
-  latex:
-    documentclass: book
-    include-in-header: latex/preamble.tex
-    include-after-body: latex/affidavit.tex
-    output-file: thesis-book.tex
-    keep-tex: true
-
-  docx: default
-
-  #jats: default
-
-  #odt: default
 
 bibliography: ref/MAref.bib
+
+
+
+
+
+# # # SWITCH BETWEEN BOOK AND MAUSCRIPT QUARTO BY (UN-)COMMENTING THE RESPECTIVE SECTION IN THIS _quarto.yml file
+
+
+
+
+
+
+# project:
+#   type: book
+#   output-dir: _outputs/book
+
+# # Add this section to use our custom filter
+# # filters:
+# #   - _extensions/crossref-bridge.lua
+
+
+# execute:
+#   freeze: auto
+
+# # crossref:
+# #   sec-prefix: "Section"
+# #   fig-prefix: "Figure"
+# #   tbl-prefix: "Table"
+# #   ref-hyperlink: true
+
+# book:
+#   title: "Automating the Modelling of Transformative Artificial Intelligence Risks"
+#   author: "Valentin Jakob Meyer"
+# #  lof: true
+# #  title-block-banner: true
+# #  title-block-banner: latex/uni-bayreuth-logo.png
+#   date: "2025-05-26"
+#   search: true
+#   repo-url: https://github.com/VJMeyer/submission
+#   repo-actions: [edit]
+#   downloads: [pdf, epub] #tex?
+#   sharing: [twitter, facebook]
+#   cover-image: images/cover.png
+#   #output-file: "complete-book"
+#   chapters:
+#     - index.qmd
+#     - chapters/Introduction.qmd
+#     - chapters/Context.qmd
+#     - chapters/AMTAIR.qmd
+#     # - chapters/Implementation.qmd
+#     - chapters/Discussion.qmd
+#     - chapters/Conclusion.qmd
+#     - chapters/Frontmatter.qmd
+#     - ref/references.qmd
+#   #  - lof.qmd
+#   #  - AMTAIR_Prototype/data/example_rain-sprinkler-lawn/AMTAIR_Prototype_example_rain-sprinkler-lawn.ipynb
+#   #  - AMTAIR_Prototype/data/example_carlsmith/AMTAIR_Prototype_example_carlsmith.ipynb
+#   appendices:
+#     - chapters/Appendices.qmd
+#     - chapters/appendixA.qmd
+#   navbar:
+#     pinned: true
+#   page-footer: 
+#     left: "Copyright 2025, Valentin Meyer" 
+#     right: 
+#       - icon: github
+#         href: https://github.com/
+#       - icon: twitter 
+#         href: https://twitter.com/
+
+# format:
+#   html:
+#     include-in-header:
+#       text: |
+#         <script src="https://hypothes.is/embed.js" async></script>
+#     theme: cosmo
+#     code-fold: true
+#     toc: true
+#     toc-depth: 5
+#     toc-title: "ToC"
+#     lof: true
+#     page-navigation: true
+#     site-path: /
+#     self-contained: false
+#     number-sections: true
+#   #  crossref:
+#   #    sec-prefix: "Section"
+#   #  cite-method: citeproc
+#   pdf:
+#     documentclass: book
+#     geometry: margin=1in
+#     template: latex/template.tex
+#     include-in-header: latex/preamble.tex
+#     keep-tex: true
+#     toc: true
+#     lof: true
+#     pdf-engine: xelatex
+#     include-after-body: latex/affidavit.tex
+#     output-file: thesis-book.pdf
+#     cite-method: biblatex
+#     biblio-title: Bibliography
+#   #  crossref:
+#   #    sec-prefix: "Section"
+#   #   documentclass: book
+#   #   crossref:
+#   #     sec-prefix: "Section"
+#   #   include-in-header: 
+#   #     text: |
+#   #       \usepackage{cleveref}
+#   #       \crefformat{section}{#2Section~#1#3}
+#   #       \usepackage{etoolbox}
+#   #       \makeatletter
+#   #       \patchcmd{\@sect}
+#   #         {\addcontentsline{toc}{#1}{\ifnum #2>\c@secnumdepth \else
+#   #            \protect\numberline{\csname the#1\endcsname}\fi
+#   #            #8}}
+#   #         {\ifx\@nodistcall\relax\addcontentsline{toc}{#1}{\ifnum #2>\c@secnumdepth \else
+#   #            \protect\numberline{\csname the#1\endcsname}\fi
+#   #            #8}\fi}
+#   #         {}{}
+#   #       \makeatother
+#   #   geometry: margin=1in
+#   #   template: latex/template.tex
+#   # #  include-in-header: latex/preamble.tex
+#   #   keep-tex: true
+#   #   toc: true
+#   #   lof: true
+#   #   pdf-engine: xelatex
+#   #   include-after-body: latex/affidavit.tex
+#   #   output-file: thesis-book.pdf
+#   #   cite-method: biblatex
+#   # #  biblio-title: Bibliography    	
+#   latex:
+#     documentclass: book
+#     include-in-header: latex/preamble.tex
+#     include-after-body: latex/affidavit.tex
+#     output-file: thesis-book.tex
+#     keep-tex: true
+
+#   docx: default
+
+#   #jats: default
+
+#   #odt: default
+
+# bibliography: ref/MAref.bib
 
 
 

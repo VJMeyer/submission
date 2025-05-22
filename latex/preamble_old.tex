@@ -1,0 +1,260 @@
+% % GEMINI SUGGESTED CHANGE
+
+% % Required packages (consolidated and redundancies removed)
+% \usepackage{graphicx}
+% \usepackage{geometry} % geometry options are usually set by Quarto YAML, but can be adjusted here if needed
+% \usepackage{fancyhdr}
+% \usepackage{fancyhdr} % For custom headers/footers
+% \usepackage{titling}
+% \usepackage{array}
+% \usepackage{booktabs}
+% \usepackage{setspace}
+% -\usepackage[protrusion=true,expansion=true]{microtype} % Better typography
+
+% % Better integration with Quarto cross-references
+% % Hyperlinking and Cross-referencing
+% \usepackage{hyperref} % Should be loaded relatively late. Options are usually set by Pandoc/Quarto.
+% \usepackage{cleveref}
+% \crefformat{figure}{Figure~#2#1#3}
+% \crefformat{table}{Table~#2#1#3}
+
+% % Better support for hyperlinks
+% \usepackage{hyperref}
+
+% % Definition for the Shaded environment
+% % This is needed because Pandoc/Quarto might generate \begin{Shaded}
+% \usepackage{tcolorbox}
+% \tcbuselibrary{skins, breakable} % Load necessary tcolorbox libraries
+% \newtcolorbox{Shaded}{
+%   breakable                % Allows the box to break across pages
+% }
+% % Customize appearance as needed. e.g., remove colframe if you only want background shading.
+% % % Better support for section references
+% % \usepackage{nameref}
+% % % Ensure IDs with hyphens work properly
+% % \usepackage{etoolbox}
+% % \makeatletter
+% % \patchcmd{\@sect}
+% %   {\addcontentsline{toc}{#1}{\ifnum #2&gt;\c@secnumdepth \else
+% %      \protect\numberline{\csname the#1\endcsname}\fi
+% %      #8}}
+% %   {\ifx\@nodistcall\relax\addcontentsline{toc}{#1}{\ifnum #2&gt;\c@secnumdepth \else
+% %      \protect\numberline{\csname the#1\endcsname}\fi
+% %      #8}\fi}
+% %   {}{}
+% % \makeatother
+
+% % Callout alternative using mdframed
+% % If Quarto's default callouts (which often use tcolorbox via filters) are sufficient,
+%   {\end{mdframed}}
+
+% % Spacing
+% \onehalfspacing
+% \onehalfspacing % From setspace package (defined above)
+
+% % Header and footer styling
+% \pagestyle{fancy}
+% \fancyhf{} % Clear all header and footer fields
+% \fancyhf{} % Clear all header and footer fields (defined above)
+% \fancyhead[LE,RO]{\slshape\nouppercase{\rightmark}} % Chapter title on even pages (left), Section title on odd pages (right)
+% \fancyhead[LO,RE]{\slshape\nouppercase{\leftmark}}  % Section title on odd pages (left), Chapter title on even pages (right)
+% \fancyfoot[C]{\thepage} % Page number in the center of the footer
+
+% % Custom commands for the affidavit
+% % These are often better set as Quarto variables (e.g., `title`, `author`, `date` in YAML)
+% % if your template (`latex/template.tex`) is set up to use them.
+% % \newcommand{\titel}{Automating the Modelling of Transformative Artificial Intelligence Risks}
+% % \newcommand{\autor}{Valentin Jakob Meyer}
+% % \newcommand{\myformat}{\today}
+% % \newcommand{\thesistitle}{Automating the Modelling of Transformative Artificial Intelligence Risks}
+% % \thesisauthor{Valentin Jakob Meyer}
+
+% % --- End of preamble.tex ---
+
+
+
+
+
+
+
+
+
+
+
+% Required packages
+\usepackage{graphicx}
+\usepackage{geometry}
+\usepackage{fancyhdr}
+\usepackage{titling}
+\usepackage{array}
+\usepackage{booktabs}
+\usepackage{xcolor}
+\usepackage{setspace}
+\usepackage{microtype}
+% Better integration with Quarto cross-references
+\usepackage{hyperref}
+\usepackage{cleveref}
+\crefformat{section}{Section~#2#1#3}
+\crefformat{figure}{Figure~#2#1#3}
+\crefformat{table}{Table~#2#1#3}
+
+% Better support for hyperlinks
+\usepackage{hyperref}
+
+
+% % Better support for section references
+% \usepackage{nameref}
+
+% % Support for @ in cross-references
+% \makeatletter
+% \newcommand{\quartoref}[1]{%
+%   \@ifundefined{r@#1}{%
+%     \textbf{??}%
+%   }{%
+%     \ref{#1}%
+%   }%
+% }
+% \makeatother
+
+% % Ensure IDs with hyphens work properly
+% \newcommand{\hypenref}[1]{\ref{#1}}
+% % Callout support
+% \usepackage{tcolorbox}
+% \tcbuselibrary{skins,breakable}
+
+% Better typography
+\usepackage[protrusion=true,expansion=true]{microtype}
+
+% Callout alternative using mdframed
+\usepackage{mdframed}
+\usepackage{xcolor}
+
+\newenvironment{calloutNote}
+  {\begin{mdframed}[backgroundcolor=blue!5,linecolor=blue!75!black,leftmargin=2mm,rightmargin=2mm]}
+  {\end{mdframed}}
+
+\newenvironment{calloutTip}
+  {\begin{mdframed}[backgroundcolor=green!5,linecolor=green!75!black,leftmargin=2mm,rightmargin=2mm]}
+  {\end{mdframed}}
+
+\newenvironment{calloutWarning}
+  {\begin{mdframed}[backgroundcolor=orange!5,linecolor=orange!75!black,leftmargin=2mm,rightmargin=2mm]}
+  {\end{mdframed}}
+
+% Spacing
+\onehalfspacing
+
+% Header and footer styling
+\pagestyle{fancy}
+% \fancyhf{}
+\fancyhead[LE,RO]{\slshape\nouppercase{\rightmark}}
+\fancyhead[LO,RE]{\slshape\nouppercase{\leftmark}}
+\fancyfoot[C]{\thepage}
+
+% % Cross-reference configuration
+% \crefformat{section}{Section~#2#1#3}
+% \crefformat{figure}{Figure~#2#1#3}
+% \crefformat{table}{Table~#2#1#3}
+
+% Custom commands for the affidavit
+\newcommand{\titel}{Automating the Modelling of Transformative Artificial Intelligence Risks}
+\newcommand{\autor}{Valentin Jakob Meyer}
+\newcommand{\myformat}{\today}
+
+% Custom commands for the affidavit
+\newcommand{\thesistitle}{Automating the Modelling of Transformative Artificial Intelligence Risks}
+\newcommand{\thesisauthor}{Valentin Jakob Meyer}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+% % Required packages
+% \usepackage{graphicx}
+% \usepackage{geometry}
+% \usepackage{fancyhdr}
+% \usepackage{titling}
+% \usepackage{array}
+% \usepackage{booktabs}
+% \usepackage{xcolor}
+% \usepackage{hyperref}
+% \usepackage{setspace}
+% \usepackage{microtype}
+% \usepackage{tcolorbox}
+% \tcbuselibrary{skins,breakable}
+% \usepackage{etoolbox}
+% \usepackage{cleveref}
+
+% % Better typography
+% \usepackage[protrusion=true,expansion=true]{microtype}
+
+% % Spacing
+% \onehalfspacing
+
+% % Header and footer styling
+% \pagestyle{fancy}
+% \fancyhf{}
+% \fancyhead[LE,RO]{\slshape\nouppercase{\rightmark}}
+% \fancyhead[LO,RE]{\slshape\nouppercase{\leftmark}}
+% \fancyfoot[C]{\thepage}
+
+% % Custom commands for the affidavit
+% \newcommand{\titel}{Automating the Modelling of Transformative Artificial Intelligence Risks}
+% \newcommand{\autor}{Valentin Jakob Meyer}
+% \newcommand{\myformat}{\today}  % Or define this to format the date as you prefer
+
+% % Custom commands for the affidavit
+% \newcommand{\thesistitle}{Automating the Modelling of Transformative Artificial Intelligence Risks}
+% \newcommand{\thesisauthor}{Valentin Jakob Meyer}
+
+
+% % Callout box styles
+% \newtcolorbox{calloutNote}[1][]{
+%   enhanced,
+%   colback=blue!5!white,
+%   colframe=blue!75!black,
+%   title=Note,
+%   fonttitle=\bfseries,
+%   #1
+% }
+
+% \newtcolorbox{calloutTip}[1][]{
+%   enhanced,
+%   colback=green!5!white,
+%   colframe=green!75!black,
+%   title=Tip,
+%   fonttitle=\bfseries,
+%   #1
+% }
+
+% \newtcolorbox{calloutWarning}[1][]{
+%   enhanced,
+%   colback=orange!5!white,
+%   colframe=orange!75!black,
+%   title=Warning,
+%   fonttitle=\bfseries,
+%   #1
+% }

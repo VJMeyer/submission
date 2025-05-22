@@ -1,168 +1,146 @@
-% Main template for University of Bayreuth thesis
-%\documentclass[12pt,a4paper]{report}
-\documentclass[$if(documentclassops)$$documentclassops$$endif$]{$documentclass$}
+% AMTAIR Thesis Template - Quarto Compatible
+% Options for packages loaded elsewhere
+$passoptions.latex()$
 
-% Import custom packages and settings
+% Document class with proper options
+$doc-class.tex()$
+
+% Color support (must be early)
+\usepackage{xcolor}
+
+% Geometry and basic packages
+$if(geometry)$
+\usepackage[$for(geometry)$$geometry$$sep$,$endfor$]{geometry}
+$else$
+\usepackage[a4paper,margin=2.5cm]{geometry}
+$endif$
+
+% Math support
+\usepackage{amsmath,amssymb}
+
+% Section numbering
+$if(numbersections)$
+\setcounter{secnumdepth}{$if(secnumdepth)$$secnumdepth$$else$5$endif$}
+$else$
+\setcounter{secnumdepth}{-\maxdimen}
+$endif$
+
+% Font configuration
+$fonts.latex()$
+$font-settings.latex()$
+
+% Common packages and settings
+$common.latex()$
+
+% Graphics and tables
+$graphics.tex()$
+$tables.tex()$
+
+% Hyperref and cross-referencing (load late)
+\usepackage{hyperref}
+\usepackage{cleveref}
+
+% Custom preamble includes
+$for(header-includes)$
+$header-includes$
+$endfor$
+
+% Additional preamble content
 $preamble-includes$
 
-% Set page geometry
-\usepackage[a4paper,margin=2.5cm]{geometry}
-\usepackage{graphicx}
-\usepackage{booktabs}
-\usepackage{bookmark}
-\usepackage{hyperref}
-\usepackage[backend=biber]{biblatex}
-\addbibresource{ref/MAref.bib}
+% Hyperref setup
+$hypersetup.latex()$
 
+% Bibliography configuration if using biblatex
+$if(biblatex)$
+\usepackage[$if(biblio-style)$style=$biblio-style$,$endif$$for(biblatexoptions)$$biblatexoptions$$sep$,$endfor$]{biblatex}
+$for(bibliography)$
+\addbibresource{$bibliography$}
+$endfor$
+$endif$
 
+% Title and author information
+$if(title)$
+\title{$title$}
+$endif$
+$if(subtitle)$
+\subtitle{$subtitle$}
+$endif$
+$if(author)$
+\author{$for(author)$$author$$sep$ \and $endfor$}
+$endif$
+$if(date)$
+\date{$date$}
+$endif$
 
-% Define custom commands for metadata
-\newcommand{\subtitle}{$subtitle$}
-\newcommand{\supervisorname}{$if(supervisor)$$supervisor$$else$Supervisor Name$endif$}
+% Custom commands for metadata
+$if(subtitle)$
+\newcommand{\thesubtitle}{$subtitle$}
+$endif$
+$if(metadata-submission.field-of-study)$
 \newcommand{\fieldofstudy}{$metadata-submission.field-of-study$}
+$endif$
+$if(metadata-submission.matriculation-number)$
 \newcommand{\matriculationnumber}{$metadata-submission.matriculation-number$}
+$endif$
+$if(metadata-submission.submission-date)$
 \newcommand{\submissiondate}{$metadata-submission.submission-date$}
+$endif$
+$if(metadata-submission.word-count)$
 \newcommand{\wordcount}{$metadata-submission.word-count$}
-\providecommand{\tightlist}{%
-  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+$endif$
 
-% Standard document begins
+% Tight list command for Quarto compatibility
+\providecommand{\tightlist}{\setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+
 \begin{document}
 
-% Create custom title page
-\input{latex/title-page.tex}
+% Custom title page if specified
+$for(include-before)$
+$include-before$
+$endfor$
 
 % Table of contents
-$if(toc)$
-\tableofcontents
+$toc.tex()$
+
+% Line stretch
+$if(linestretch)$
+\setstretch{$linestretch$}
 $endif$
 
+% Front matter vs main matter
+$if(has-frontmatter)$
+\mainmatter
+$endif$
 
-
-% Main content
+% Main document body
 $body$
 
-
-% Add LOT if requested
-$if(lot)$
-\listoftables
+% Bibliography
+$if(has-frontmatter)$
+\backmatter
 $endif$
 
-% List of figures - explicitly added
-$if(lof)$
-\listoffigures
+$if(natbib)$
+$if(bibliography)$
+$if(biblio-title)$
+$if(book-class)$
+\renewcommand\bibname{$biblio-title$}
+$else$
+\renewcommand\refname{$biblio-title$}
+$endif$
+$endif$
+\bibliography{$for(bibliography)$$bibliography$$sep$,$endfor$}
+$endif$
 $endif$
 
-% % Bibliography
-% \bibliography{bibliography}
-% \bibliographystyle{apalike}
+$if(biblatex)$
+\printbibliography$if(biblio-title)$[title=$biblio-title$]$endif$
+$endif$
 
-
-% Add affidavit at the end but still within document environment
-\input{latex/affidavit.tex}
+% Include after content
+$for(include-after)$
+$include-after$
+$endfor$
 
 \end{document}
-
-
-
-
-
-
-% Prior versions of template below
-
-
-
-
-
-
-
-
-
-
-
-
-% % Main template for University of Bayreuth thesis
-% \documentclass[12pt,a4paper]{report}      %   vs book
-
-% % Import custom packages and settings
-% $preamble-includes$
-
-% % Set page geometry
-% \usepackage[a4paper,margin=2.5cm]{geometry}
-% \usepackage{graphicx}
-% \usepackage{booktabs}
-% \usepackage{bookmark}
-% \usepackage{hyperref}
-% %\usepackage(tocbibind)
-
-% % Define custom commands for metadata
-% \newcommand{\subtitle}{$subtitle$}
-% \newcommand{\supervisorname}{$if(supervisor)$$supervisor$$else$Supervisor Name$endif$}
-% \newcommand{\fieldofstudy}{$metadata-submission.field-of-study$}
-% \newcommand{\matriculationnumber}{$metadata-submission.matriculation-number$}
-% \newcommand{\submissiondate}{$metadata-submission.submission-date$}
-% \newcommand{\wordcount}{$metadata-submission.word-count$}
-% \providecommand{\tightlist}{%
-%   \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
-
-% % Standard document begins
-% \begin{document}
-
-% % Create custom title page
-% \input{latex/title-page.tex}
-
-% % \pagenumbering{arabic} % Switch to Arabic page numbering
-% % \setcounter{page}{1} % Reset page numbers to 1
-
-% % Rest of document
-% % \listoffigures
-% % \input{\listoffigures}
-
-% $body$
-
-% % Add affidavit at the end but still within document environment
-% % \pagenumbering{Roman} % Switch to Roman page numbering
-% \input{latex/affidavit.tex}
-
-% \end{document}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-% % After loading packages but before \begin{document}
-% \AtBeginDocument{
-%   % Set up page styles
-%   \fancypagestyle{frontmatter}{
-%     \fancyhf{}
-%     \fancyfoot[C]{\thepage}
-%     \renewcommand{\footrulewidth}{0pt}
-%   }
-
-%   \fancypagestyle{mainmatter}{
-%     \fancyhf{}
-%     \fancyhead[LE,RO]{\slshape\nouppercase{\rightmark}}
-%     \fancyhead[LO,RE]{\slshape\nouppercase{\leftmark}}
-%     \fancyfoot[C]{\thepage}
-%   }
-% }
-
-% % Inside the document, after title page
-% \frontmatter
-% \pagestyle{frontmatter}
-
-% % Added automatically before Introduction
-% % \mainmatter
-% % \pagestyle{mainmatter}
