@@ -435,8 +435,8 @@
     "objectID": "chapters/Appendices.html#sec-appendix-validation",
     "href": "chapters/Appendices.html#sec-appendix-validation",
     "title": "Appendix A — Appendices",
-    "section": "Appendix B: Model Validation Procedures",
-    "text": "Appendix B: Model Validation Procedures",
+    "section": "Appendix B: Model Validation Datasets, Procedures and Benchmarks",
+    "text": "Appendix B: Model Validation Datasets, Procedures and Benchmarks",
     "crumbs": [
       "Appendices",
       "<span class='chapter-number'>A</span>  <span class='chapter-title'>Appendices</span>"
@@ -457,19 +457,8 @@
     "objectID": "chapters/Appendices.html#sec-appendix-ethical",
     "href": "chapters/Appendices.html#sec-appendix-ethical",
     "title": "Appendix A — Appendices",
-    "section": "Appendix D: Ethical Considerations",
-    "text": "Appendix D: Ethical Considerations",
-    "crumbs": [
-      "Appendices",
-      "<span class='chapter-number'>A</span>  <span class='chapter-title'>Appendices</span>"
-    ]
-  },
-  {
-    "objectID": "chapters/Appendices.html#sec-appendices",
-    "href": "chapters/Appendices.html#sec-appendices",
-    "title": "Appendix A — Appendices",
-    "section": "Appendices",
-    "text": "Appendices\n\nAppendix A: Technical Implementation Details\n\n\n\nAppendix B: Validation Datasets and Benchmarks\n\n\n\nAppendix C: Extended Case Studies\n\n\n\nAppendix D: Ethical Considerations and Governance",
+    "section": "Appendix D: Ethical Considerations and Governance",
+    "text": "Appendix D: Ethical Considerations and Governance",
     "crumbs": [
       "Appendices",
       "<span class='chapter-number'>A</span>  <span class='chapter-title'>Appendices</span>"

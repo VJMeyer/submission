@@ -7,62 +7,45 @@ number: false      # Exclude from section numbering
 ## Appendix A: Technical Implementation Details {#sec-appendix-technical .unnumbered}
 
 <!-- [ ] Provide detailed documentation of software implementation, including data structures, algorithms, and optimization techniques -->
+<!-- [ ] Complete technical documentation --> 
+<!-- [ ] API specifications and code samples --> 
+<!-- [ ] Performance benchmarks and optimization details -->
+<!-- [ ] Complete technical documentation with API specifications and code samples -->
 
-## Appendix B: Model Validation Procedures {#sec-appendix-validation .unnumbered}
-
+## Appendix B: Model Validation Datasets, Procedures and Benchmarks {#sec-appendix-validation .unnumbered}
+<!-- Validation Datasets and Benchmarks -->
 <!-- [ ] Comprehensively describe validation protocols, including expert review processes, formal verification methods, and empirical testing -->
+<!-- [ ] Expert annotation protocols --> 
+<!-- [ ] Benchmark dataset construction methodology --> 
+<!-- [ ] Inter-annotator agreement analysis -->
+<!-- [ ] Expert annotation protocols and benchmark dataset construction methodology -->
+
+
 
 ## Appendix C: Case Studies {#sec-appendix-case-studies .unnumbered}
 
 <!-- [ ] Include additional case studies demonstrating application of the system to specific AI governance questions -->
 
-## Appendix D: Ethical Considerations {#sec-appendix-ethical .unnumbered}
+<!-- [ ] Additional worldview comparisons --> 
+<!-- [ ] Detailed policy evaluation results --> 
+<!-- [ ] Sensitivity analysis documentation -->
+
+
+
+
+## Appendix D: Ethical Considerations and Governance {#sec-appendix-ethical .unnumbered}
 
 <!-- [ ] Analyze ethical dimensions of formal risk modeling, including potential misuses, responsibility considerations, and normative implications -->
 
 
-
-
-
-
-## Appendices {#sec-appendices .unnumbered}
-
-### Appendix A: Technical Implementation Details {#sec-appendix-technical .unnumbered}
-
-<!-- [ ] Complete technical documentation --> <!-- [ ] API specifications and code samples --> <!-- [ ] Performance benchmarks and optimization details -->
-
-### Appendix B: Validation Datasets and Benchmarks {#sec-appendix-validation .unnumbered}
-
-<!-- [ ] Expert annotation protocols --> <!-- [ ] Benchmark dataset construction methodology --> <!-- [ ] Inter-annotator agreement analysis -->
-
-### Appendix C: Extended Case Studies {#sec-appendix-cases .unnumbered}
-
-<!-- [ ] Additional worldview comparisons --> <!-- [ ] Detailed policy evaluation results --> <!-- [ ] Sensitivity analysis documentation -->
-
-### Appendix D: Ethical Considerations and Governance {#sec-appendix-ethics .unnumbered}
-
-<!-- [ ] Potential misuse analysis and mitigation strategies --> <!-- [ ] Democratic participation and inclusivity considerations --> <!-- [ ] Responsibility frameworks for model-informed decisions -->
-
-
-
-
-## Appendices {#sec-appendices .unnumbered}
-
-### Appendix A: Technical Implementation Details {#sec-appendix-technical .unnumbered}
-
-<!-- [ ] Complete technical documentation with API specifications and code samples -->
-
-### Appendix B: Validation Datasets and Benchmarks {#sec-appendix-validation .unnumbered}
-
-<!-- [ ] Expert annotation protocols and benchmark dataset construction methodology -->
-
-### Appendix C: Extended Case Studies {#sec-appendix-cases .unnumbered}
-
+<!-- [ ] Potential misuse analysis and mitigation strategies --> 
+<!-- [ ] Democratic participation and inclusivity considerations --> 
+<!-- [ ] Responsibility frameworks for model-informed decisions -->
+<!-- [ ] Potential misuse analysis, democratic participation considerations, and responsibility frameworks -->
 <!-- [ ] Additional worldview comparisons and detailed policy evaluation results -->
 
-### Appendix D: Ethical Considerations and Governance {#sec-appendix-ethics .unnumbered}
 
-<!-- [ ] Potential misuse analysis, democratic participation considerations, and responsibility frameworks -->
+
 
 
 
