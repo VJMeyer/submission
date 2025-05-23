@@ -78,7 +78,7 @@ div.csl-indent {
 }</style>
 
 
-<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg==" crossorigin="anonymous"></script><script src="../site_libs/quarto-nav/quarto-nav.js"></script>
 <script src="../site_libs/quarto-nav/headroom.min.js"></script>
 <script src="../site_libs/clipboard/clipboard.min.js"></script>
 <script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
@@ -127,6 +127,9 @@ div.csl-indent {
 <script src="../site_libs/quarto-diagram/mermaid.min.js"></script>
 <script src="../site_libs/quarto-diagram/mermaid-init.js"></script>
 <link href="../site_libs/quarto-diagram/mermaid.css" rel="stylesheet">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.6/require.min.js" integrity="sha512-c3Nl8+7g4LMSTdrm621y7kf9v3SDPnhxLNhcjFJbKECVnmZHTdo+IRO05sNLTH/D3vA6u1X32ehoLC7WFVdheg==" crossorigin="anonymous"></script>
+
+<script type="application/javascript">define('jquery', [],function() {return window.jQuery;})</script>
 
 
 </head>
@@ -265,6 +268,12 @@ div.csl-indent {
  <span class="menu-text"><span class="chapter-number">A</span>&nbsp; <span class="chapter-title">Appendices</span></span></a>
   </div>
 </li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../AMTAIR_Prototype/data/example_carlsmith/AMTAIR_Prototype_example_carlsmith.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">B</span>&nbsp; <span class="chapter-title"></span></span></a><a href="https://colab.research.google.com/github/SingularitySmith/AMTAIR_Prototype/blob/main/version_history/AMTAIR_Prototype_0_1.3.ipynb#scrollTo=lt8-AnebGUXr">AMTAIR Prototype Demonstration (Public Colab Notebook)</a>
+  </div>
+</li>
       </ul>
   </li>
     </ul>
@@ -279,7 +288,11 @@ div.csl-indent {
   <ul>
   <li><a href="#for-callouts" id="toc-for-callouts" class="nav-link active" data-scroll-target="#for-callouts"><span class="header-section-number">6.1</span> For Callouts</a></li>
   <li><a href="#sec-crossref" id="toc-sec-crossref" class="nav-link" data-scroll-target="#sec-crossref"><span class="header-section-number">6.2</span> Section Cross-References</a></li>
-  <li><a href="#reference-code-from-.ipynb-files" id="toc-reference-code-from-.ipynb-files" class="nav-link" data-scroll-target="#reference-code-from-.ipynb-files"><span class="header-section-number">6.3</span> Reference Code from .ipynb files</a></li>
+  <li><a href="#reference-code-from-.ipynb-files" id="toc-reference-code-from-.ipynb-files" class="nav-link" data-scroll-target="#reference-code-from-.ipynb-files"><span class="header-section-number">6.3</span> Reference Code from .ipynb files</a>
+  <ul>
+  <li><a href="#code-chunks-from-.ipynb-notebooks-can-be-embedded-in-the-.qmd-text-with" id="toc-code-chunks-from-.ipynb-notebooks-can-be-embedded-in-the-.qmd-text-with" class="nav-link" data-scroll-target="#code-chunks-from-.ipynb-notebooks-can-be-embedded-in-the-.qmd-text-with"><span class="header-section-number">6.3.0.1</span> Code chunks from .ipynb notebooks can be embedded in the .qmd text with:</a></li>
+  <li><a href="#which-produces" id="toc-which-produces" class="nav-link" data-scroll-target="#which-produces"><span class="header-section-number">6.3.0.2</span> which produces:</a></li>
+  </ul></li>
   <li><a href="#sec-heading" id="toc-sec-heading" class="nav-link" data-scroll-target="#sec-heading"><span class="header-section-number">6.4</span> Headings &amp; Potential Headings</a></li>
   <li><a href="#bibliography-references" id="toc-bibliography-references" class="nav-link" data-scroll-target="#bibliography-references">Bibliography (References)</a></li>
   </ul>
@@ -307,7 +320,7 @@ div.csl-indent {
 </header>
 
 
-<div id="8107a92d" class="cell" data-execution_count="1">
+<div id="bd754a82" class="cell" data-execution_count="1">
 <details class="code-fold">
 <summary>Code</summary>
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
@@ -349,15 +362,55 @@ Important Note2
 </section>
 <section id="reference-code-from-.ipynb-files" class="level2" data-number="6.3">
 <h2 data-number="6.3" class="anchored" data-anchor-id="reference-code-from-.ipynb-files"><span class="header-section-number">6.3</span> Reference Code from .ipynb files</h2>
-<div class="sourceCode" id="cb5"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>{{&lt; embed penguins.ipynb#fig-bill-scatter &gt;}}</span>
-<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>or</span>
-<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>{{&lt; embed /AMTAIR_Prototype/data/example_carlsmith/AMTAIR_Prototype_example_carlsmith.ipynb#@title 0.1 --- Install &amp; Import Libraries &amp; Packages (One-Time Setup) --- &gt;}}</span>
-<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a>Caveat: Html comments do not work on Notebook inclusion</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<section id="code-chunks-from-.ipynb-notebooks-can-be-embedded-in-the-.qmd-text-with" class="level4" data-number="6.3.0.1">
+<h4 data-number="6.3.0.1" class="anchored" data-anchor-id="code-chunks-from-.ipynb-notebooks-can-be-embedded-in-the-.qmd-text-with"><span class="header-section-number">6.3.0.1</span> Code chunks from .ipynb notebooks can be embedded in the .qmd text with:</h4>
+<div class="sourceCode" id="cb5"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>{{&lt; embed /AMTAIR_Prototype/data/example_carlsmith/AMTAIR_Prototype_example_carlsmith.ipynb#my_code_cell_test &gt;}}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section id="which-produces" class="level4" data-number="6.3.0.2">
+<h4 data-number="6.3.0.2" class="anchored" data-anchor-id="which-produces"><span class="header-section-number">6.3.0.2</span> which produces:</h4>
+<div class="quarto-embed-nb-cell" data-notebook="/Users/vjm/Library/Mobile Documents/iCloud~md~obsidian/Documents/Vaulty/2_DoingGood/Studies/P&amp;E/Specializations/Test_Sync_MAThesis/submission/AMTAIR_Prototype/data/example_carlsmith/AMTAIR_Prototype_example_carlsmith.ipynb" data-notebook-title="[AMTAIR Prototype Demonstration (Public Colab Notebook)](https://colab.research.google.com/github/SingularitySmith/AMTAIR_Prototype/blob/main/version_history/AMTAIR_Prototype_0_1.3.ipynb#scrollTo=lt8-AnebGUXr)" data-notebook-cellid="cell-my_code_cell_test">
+<div id="my_code_cell_test" class="cell" data-quarto-private-1="{&quot;key&quot;:&quot;colab&quot;,&quot;value&quot;:{&quot;base_uri&quot;:&quot;https://localhost:8080/&quot;}}" data-outputid="2050a62a-f0f1-4450-9fbb-8a75f1cb9422">
+<div class="cell-output cell-output-stdout">
+<pre><code>Connecting to repository: https://raw.githubusercontent.com/SingularitySmith/AMTAIR_Prototype/main/data/example_carlsmith/
+Attempting to load: https://raw.githubusercontent.com/SingularitySmith/AMTAIR_Prototype/main/data/example_carlsmith/ArgDown.md
+✅ Successfully connected to repository and loaded test files.
+[Existential_Catastrophe]: The destruction of humanity's long-term potential due to AI systems we've lost control over. {"instantiations": ["existential_catastrophe_TRUE", "existential_catastrophe_FALSE"]}
+- [Human_Disempowerment]: Permanent and collective disempowerment of humanity relative to AI systems. {"instantiations": ["human_disempowerment_TRUE", "human_disempowerment_FALSE"]}
+    - [Scale_Of_Power_Seeking]: Power-seeking by AI systems scaling to the point of permanently disempowering all of humanity. {"instantiations": ["scale_of_power_seeking_TRUE", "scale_of_power_seeking_FALSE"]}
+        - [Misaligned_Power_Seeking]: Deployed AI systems seeking power in unintended and high-impact ways due to problems with their objectives. {"instantiations": ["misaligned_power_seeking_TRUE", "misaligned_power_seeking_FALSE"]}
+            - [APS_Systems]: AI systems with advanced capabilities, agentic planning, and strategic awareness. {"instantiations": ["aps_systems_TRUE", "aps_systems_FALSE"]}
+                - [Advanced_AI_Capability]: AI systems that outperform humans on tasks that grant significant power in the world. {"instantiations": ["advanced_ai_capability_TRUE", "advanced_ai_capability_FALSE"]}
+                - [Agentic_Planning]: AI systems making and executing plans based on world models to achieve objectives. {"instantiations": ["agentic_planning_TRUE", "agentic_planning_FALSE"]}
+                - [Strategic_Awareness]: AI systems with models accurately representing power dynamics with humans. {"instantiations": ["strategic_awareness_TRUE", "strategic_awareness_FALSE"]}
+            - [Difficulty_Of_Alignment]: It is harder to build aligned systems than misaligned systems that are attractive to deploy. {"instantiations": ["difficulty_of_alignment_TRUE", "difficulty_of_alignment_FALSE"]}
+                - [Instrumental_Convergence]: AI systems with misaligned objectives tend to seek power as an instrumental goal. {"instantiations": ["instrumental_convergence_TRUE", "instrumental_convergence_FALSE"]}
+                - [Problems_With_Proxies]: Optimizing for proxy objectives breaks correlations with intended goals. {"instantiations": ["problems_with_proxies_TRUE", "problems_with_proxies_FALSE"]}
+                - [Problems_With_Search]: Search processes can yield systems pursuing different objectives than intended. {"instantiations": ["problems_with_search_TRUE", "problems_with_search_FALSE"]}
+            - [Deployment_Decisions]: Decisions to deploy potentially misaligned AI systems. {"instantiations": ["deployment_decisions_DEPLOY", "deployment_decisions_WITHHOLD"]}
+                - [Incentives_To_Build_APS]: Strong incentives to build and deploy APS systems. {"instantiations": ["incentives_to_build_aps_STRONG", "incentives_to_build_aps_WEAK"]}
+                    - [Usefulness_Of_APS]: APS systems are very useful for many valuable tasks. {"instantiations": ["usefulness_of_aps_HIGH", "usefulness_of_aps_LOW"]}
+                    - [Competitive_Dynamics]: Competitive pressures between AI developers. {"instantiations": ["competitive_dynamics_STRONG", "competitive_dynamics_WEAK"]}
+                - [Deception_By_AI]: AI systems deceiving humans about their true objectives. {"instantiations": ["deception_by_ai_TRUE", "deception_by_ai_FALSE"]}
+        - [Corrective_Feedback]: Human society implementing corrections after observing problems. {"instantiations": ["corrective_feedback_EFFECTIVE", "corrective_feedback_INEFFECTIVE"]}
+            - [Warning_Shots]: Observable failures in weaker systems before catastrophic risks. {"instantiations": ["warning_shots_OBSERVED", "warning_shots_UNOBSERVED"]}
+            - [Rapid_Capability_Escalation]: AI capabilities escalating very rapidly, allowing little time for correction. {"instantiations": ["rapid_capability_escalation_TRUE", "rapid_capability_escalation_FALSE"]}
+[Barriers_To_Understanding]: Difficulty in understanding the internal workings of advanced AI systems. {"instantiations": ["barriers_to_understanding_HIGH", "barriers_to_understanding_LOW"]}
+- [Misaligned_Power_Seeking]: Deployed AI systems seeking power in unintended and high-impact ways due to problems with their objectives. {"instantiations": ["misaligned_power_seeking_TRUE", "misaligned_power_seeking_FALSE"]}
+[Adversarial_Dynamics]: Potentially adversarial relationships between humans and power-seeking AI. {"instantiations": ["adversarial_dynamics_TRUE", "adversarial_dynamics_FALSE"]}
+- [Misaligned_Power_Seeking]: Deployed AI systems seeking power in unintended and high-impact ways due to problems with their objectives. {"instantiations": ["misaligned_power_seeking_TRUE", "misaligned_power_seeking_FALSE"]}
+[Stakes_Of_Error]: The escalating impact of mistakes with power-seeking AI systems. {"instantiations": ["stakes_of_error_HIGH", "stakes_of_error_LOW"]}
+- [Misaligned_Power_Seeking]: Deployed AI systems seeking power in unintended and high-impact ways due to problems with their objectives. {"instantiations": ["misaligned_power_seeking_TRUE", "misaligned_power_seeking_FALSE"]}
+</code></pre>
+</div>
+</div>
+</div>
+<p>Full Notebooks are embedded in the Appendix through the _quarto.yml file with:</p>
+<div class="sourceCode" id="cb7"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>{{&lt; embed /AMTAIR_Prototype/data/example_carlsmith/AMTAIR_Prototype_example_carlsmith.ipynb#my_code_cell_test &gt;}}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
 </section>
 <section id="sec-figures1" class="level2 unnumbered unlisted">
 <h2 class="unnumbered unlisted anchored" data-anchor-id="sec-figures1">Figures</h2>
-<div id="fig-automation_pipeline" class="quarto-float quarto-figure quarto-figure-center anchored" width="100%" alt="FLOWCHART: Five-step automation pipeline workflow for AMTAIR project.           DATA: The pipeline transforms PDFs through ArgDown, BayesDown, CSV, and HTML into Bayesian network visualizations.           PURPOSE: Illustrates the core technical process that enables automated extraction of probabilistic models from AI safety literature.           DETAILS: Five numbered green steps show: (1) LLM-based extraction from PDFs to ArgDown, (2) ArgDown to BayesDown completion with probabilities, (3) Extracting world-models as CSV data, (4) Software tools for data inference, and (5) Visualization of the resulting Bayesian network.           Each step includes example outputs, with the final visualization showing a Rain-Sprinkler-Grass Wet Bayesian network with probability tables.           SOURCE: Created by the author to explain the AMTAIR methodology           " data-fig-scap="Five-step AMTAIR automation pipeline from PDFs to Bayesian networks" data-fig-align="center">
+<div id="fig-automation_pipeline" class="quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center" data-fig-scap="Five-step AMTAIR automation pipeline from PDFs to Bayesian networks" width="100%" alt="FLOWCHART: Five-step automation pipeline workflow for AMTAIR project.           DATA: The pipeline transforms PDFs through ArgDown, BayesDown, CSV, and HTML into Bayesian network visualizations.           PURPOSE: Illustrates the core technical process that enables automated extraction of probabilistic models from AI safety literature.           DETAILS: Five numbered green steps show: (1) LLM-based extraction from PDFs to ArgDown, (2) ArgDown to BayesDown completion with probabilities, (3) Extracting world-models as CSV data, (4) Software tools for data inference, and (5) Visualization of the resulting Bayesian network.           Each step includes example outputs, with the final visualization showing a Rain-Sprinkler-Grass Wet Bayesian network with probability tables.           SOURCE: Created by the author to explain the AMTAIR methodology           ">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-automation_pipeline-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <a href="https://github.com/VJMeyer/submission"><img src="../images/pipeline.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:100.0%" data-fig-scap="Five-step AMTAIR automation pipeline from PDFs to Bayesian networks" alt="FLOWCHART: Five-step automation pipeline workflow for AMTAIR project.           DATA: The pipeline transforms PDFs through ArgDown, BayesDown, CSV, and HTML into Bayesian network visualizations.           PURPOSE: Illustrates the core technical process that enables automated extraction of probabilistic models from AI safety literature.           DETAILS: Five numbered green steps show: (1) LLM-based extraction from PDFs to ArgDown, (2) ArgDown to BayesDown completion with probabilities, (3) Extracting world-models as CSV data, (4) Software tools for data inference, and (5) Visualization of the resulting Bayesian network.           Each step includes example outputs, with the final visualization showing a Rain-Sprinkler-Grass Wet Bayesian network with probability tables.           SOURCE: Created by the author to explain the AMTAIR methodology           "></a>
@@ -368,7 +421,7 @@ Figure&nbsp;6.1: AMTAIR Automation Pipeline from <span class="citation" data-cit
 </figure>
 </div>
 <p>Testing crossreferencing grapics <a href="#fig-automation_pipeline" class="quarto-xref">Figure&nbsp;<span>6.1</span></a>.</p>
-<div id="fig-testgraphic2" class="quarto-float quarto-figure quarto-figure-left anchored" data-fig-scap="Short 2 caption" alt="2nd Alt Text / Description." data-fig-align="left">
+<div id="fig-testgraphic2" class="quarto-float quarto-figure quarto-figure-left anchored" data-fig-align="left" alt="2nd Alt Text / Description." data-fig-scap="Short 2 caption">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-testgraphic2-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <img src="../images/cover.png" class="img-fluid quarto-figure quarto-figure-left figure-img" style="width:30.0%" data-fig-scap="Short 2 caption" alt="2nd Alt Text / Description.">
@@ -413,11 +466,11 @@ Figure&nbsp;6.2: Caption/Title 2
 <div class="cell" data-layout-align="default">
 <details class="code-fold">
 <summary>Code</summary>
-<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode default code-with-copy"><code class="sourceCode default"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>flowchart LR</span>
-<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a>  A[Hard edge] --&gt; B(Round edge)</span>
-<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a>  B --&gt; C{Decision}</span>
-<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a>  C --&gt; D[Result one]</span>
-<span id="cb7-5"><a href="#cb7-5" aria-hidden="true" tabindex="-1"></a>  C --&gt; E[Result two]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode default code-with-copy"><code class="sourceCode default"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a>flowchart LR</span>
+<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a>  A[Hard edge] --&gt; B(Round edge)</span>
+<span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a>  B --&gt; C{Decision}</span>
+<span id="cb9-4"><a href="#cb9-4" aria-hidden="true" tabindex="-1"></a>  C --&gt; D[Result one]</span>
+<span id="cb9-5"><a href="#cb9-5" aria-hidden="true" tabindex="-1"></a>  C --&gt; E[Result two]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 <div class="cell-output-display">
 <div>

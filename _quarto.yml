@@ -30,6 +30,7 @@ book:
     - ref/references.qmd
   appendices:
     - chapters/Appendices.qmd
+    - AMTAIR_Prototype/data/example_carlsmith/AMTAIR_Prototype_example_carlsmith.ipynb
 
 
 format:

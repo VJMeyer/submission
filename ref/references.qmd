@@ -42,19 +42,20 @@ It does not work for sections with ".unnumbered and/or .unlisted":
 
 ## Reference Code from .ipynb files
 
+#### Code chunks from .ipynb notebooks can be embedded in the .qmd text with:
+
 ```markdown
-{{< embed penguins.ipynb#fig-bill-scatter >}}
-or
-{{< embed AMTAIR_Prototype/data/example_carlsmith/AMTAIR_Prototype_example_carlsmith.ipynb#my_code_cell_test >}}
-
-AMTAIR_Prototype/data/example_carlsmith/AMTAIR_Prototype_example_carlsmith.ipynb#my_code_cell_test
-
-Caveat: Html comments do not work on Notebook inclusion
+{{< embed /AMTAIR_Prototype/data/example_carlsmith/AMTAIR_Prototype_example_carlsmith.ipynb#my_code_cell_test >}}
 ```
+#### which produces:
 
+{{< embed /AMTAIR_Prototype/data/example_carlsmith/AMTAIR_Prototype_example_carlsmith.ipynb#my_code_cell_test >}}
 
-{{< embed AMTAIR_Prototype/data/example_carlsmith/AMTAIR_Prototype_example_carlsmith.ipynb#my_code_cell_test >}}
+Full Notebooks are embedded in the Appendix through the _quarto.yml file with:
 
+```markdown
+{{< embed /AMTAIR_Prototype/data/example_carlsmith/AMTAIR_Prototype_example_carlsmith.ipynb#my_code_cell_test >}}
+```
 
 
 
