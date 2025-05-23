@@ -31,6 +31,7 @@ book:
   appendices:
     - chapters/Appendices.qmd
 
+
 format:
   html:
     theme: cosmo
@@ -46,7 +47,6 @@ format:
     
   pdf:
     documentclass: book
-    template: latex/template.tex
     include-in-header: latex/preamble.tex
     pdf-engine: xelatex
     keep-tex: true
@@ -63,10 +63,15 @@ format:
     output-file: thesis-book.pdf
     cite-method: biblatex
     biblio-title: Bibliography
-    # Critical: microtype options must be global
-    documentclass-options: ["11pt", "a4paper", "oneside"]
+    geometry:
+      - margin=2.5cm
+      - paper=a4paper
+    fontsize: 11pt
 
 bibliography: ref/MAref.bib
+
+
+
 
 
 

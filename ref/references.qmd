@@ -1,6 +1,64 @@
 # Quarto Syntax
 
-## Figures {#sec-figues .unnumbered .unlisted}
+```{python}
+#| echo: true
+#| eval: true
+
+import pandas as pd
+print("AMTAIR is working!")
+```
+
+
+## For Callouts
+
+Quarto's native callouts work without additional packages:
+
+::: {.callout-note}
+## Important Note2
+This renders perfectly in both HTML and PDF.2
+:::
+
+Also for markdown:
+
+```markdown
+::: {.render_as_markdown_example}
+## Markdown Heading
+This renders perfectly in both HTML and PDF but as markdown "plain text"
+:::
+```
+
+## Section Cross-References {#sec-crossref}
+
+Refer to sections like: @sec-adaptive-governance and @sec-crossref
+
+
+```markdown
+Caveat: refering to sections with @sec-HEADINGS works only for sections with:
+## Heading {#sec-HEADINGS}
+It does not work for sections with ".unnumbered and/or .unlisted":
+## Heading {#sec-HEADINGS .unnumbered .unlisted}
+```
+
+
+## Reference Code from .ipynb files
+
+```markdown
+{{< embed penguins.ipynb#fig-bill-scatter >}}
+or
+{{< embed AMTAIR_Prototype/data/example_carlsmith/AMTAIR_Prototype_example_carlsmith.ipynb#my_code_cell_test >}}
+
+AMTAIR_Prototype/data/example_carlsmith/AMTAIR_Prototype_example_carlsmith.ipynb#my_code_cell_test
+
+Caveat: Html comments do not work on Notebook inclusion
+```
+
+
+{{< embed AMTAIR_Prototype/data/example_carlsmith/AMTAIR_Prototype_example_carlsmith.ipynb#my_code_cell_test >}}
+
+
+
+
+## Figures {#sec-figures1 .unnumbered .unlisted}
 
 
 [![AMTAIR Automation Pipeline from @bucknall2022](/images/pipeline.png){
