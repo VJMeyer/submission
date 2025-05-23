@@ -228,10 +228,10 @@
 \makeatother
 \makeatletter
 \definecolor{QuartoInternalColor3}{rgb}{0.00,0.45,0.15}
-\definecolor{QuartoInternalColor2}{rgb}{0,0,0}
-\definecolor{QuartoInternalColor4}{rgb}{0.15,0.56,0.56}
-\definecolor{QuartoInternalColor5}{rgb}{0.00,0.40,0.79}
 \definecolor{QuartoInternalColor6}{rgb}{0.00,0.64,0.31}
+\definecolor{QuartoInternalColor5}{rgb}{0.00,0.40,0.79}
+\definecolor{QuartoInternalColor4}{rgb}{0.15,0.56,0.56}
+\definecolor{QuartoInternalColor2}{rgb}{0,0,0}
 \definecolor{QuartoInternalColor1}{rgb}{0.70,0.17,0.19}
 \makeatother
 \usepackage{bookmark}
@@ -5322,7 +5322,7 @@ AMTAIR is working!
 
 Quarto's native callouts work without additional packages:
 
-\begin{tcolorbox}[enhanced jigsaw, colframe=quarto-callout-note-color-frame, leftrule=.75mm, arc=.35mm, toprule=.15mm, opacityback=0, colbacktitle=quarto-callout-note-color!10!white, breakable, coltitle=black, colback=white, bottomtitle=1mm, toptitle=1mm, left=2mm, titlerule=0mm, title=\textcolor{quarto-callout-note-color}{\faInfo}\hspace{0.5em}{Important Note2}, rightrule=.15mm, bottomrule=.15mm, opacitybacktitle=0.6]
+\begin{tcolorbox}[enhanced jigsaw, toptitle=1mm, bottomrule=.15mm, colframe=quarto-callout-note-color-frame, opacitybacktitle=0.6, titlerule=0mm, colback=white, rightrule=.15mm, leftrule=.75mm, toprule=.15mm, coltitle=black, bottomtitle=1mm, opacityback=0, breakable, arc=.35mm, colbacktitle=quarto-callout-note-color!10!white, title=\textcolor{quarto-callout-note-color}{\faInfo}\hspace{0.5em}{Important Note2}, left=2mm]
 
 This renders perfectly in both HTML and PDF.2
 
@@ -5353,8 +5353,8 @@ Section~\ref{sec-crossref}
 \end{Highlighting}
 \end{Shaded}
 
-\section{Reference Code from .ipynb
-files}\label{reference-code-from-.ipynb-files}
+\section{Reference or Embed Code from .ipynb
+files}\label{reference-or-embed-code-from-.ipynb-files}
 
 \subsubsection{Code chunks from .ipynb notebooks can be embedded in the
 .qmd text
@@ -5402,14 +5402,132 @@ Attempting to load: https://raw.githubusercontent.com/SingularitySmith/AMTAIR_Pr
 - [Misaligned_Power_Seeking]: Deployed AI systems seeking power in unintended and high-impact ways due to problems with their objectives. {"instantiations": ["misaligned_power_seeking_TRUE", "misaligned_power_seeking_FALSE"]}
 \end{verbatim}
 
-Full Notebooks are embedded in the Appendix through the \_quarto.yml
-file with:
+\subsubsection{including `echo=true' renders the code of the
+cell:}\label{including-echotrue-renders-the-code-of-the-cell}
 
 \begin{Shaded}
 \begin{Highlighting}[]
-\NormalTok{\{\{\textless{} embed /AMTAIR\_Prototype/data/example\_carlsmith/AMTAIR\_Prototype\_example\_carlsmith.ipynb\#my\_code\_cell\_test \textgreater{}\}\}}
+\NormalTok{\{\{\textless{} embed /AMTAIR\_Prototype/data/example\_carlsmith/AMTAIR\_Prototype\_example\_carlsmith.ipynb\#my\_code\_cell\_test echo=true \textgreater{}\}\}}
 \end{Highlighting}
 \end{Shaded}
+
+\phantomsection\label{my_code_cell_test}
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{\# @title 0.2 {-}{-}{-} Connect to GitHub Repository {-}{-}{-} Load Files}
+
+\CommentTok{"""}
+\CommentTok{BLOCK PURPOSE: Establishes connection to the AMTAIR GitHub repository and provides}
+\CommentTok{functions to load example data files for processing.}
+
+\CommentTok{This block creates a reusable function for accessing files from the project\textquotesingle{}s}
+\CommentTok{GitHub repository, enabling access to example files like the rain{-}sprinkler{-}lawn}
+\CommentTok{Bayesian network that serves as our canonical test case.}
+
+\CommentTok{DEPENDENCIES: requests library, io library}
+\CommentTok{OUTPUTS: load\_file\_from\_repo function and test file loads}
+\CommentTok{"""}
+
+\ImportTok{from}\NormalTok{ requests.exceptions }\ImportTok{import}\NormalTok{ HTTPError}
+
+\CommentTok{\# Specify the base repository URL for the AMTAIR project}
+\NormalTok{repo\_url }\OperatorTok{=} \StringTok{"https://raw.githubusercontent.com/SingularitySmith/AMTAIR\_Prototype/main/data/example\_carlsmith/"}
+\BuiltInTok{print}\NormalTok{(}\SpecialStringTok{f"Connecting to repository: }\SpecialCharTok{\{}\NormalTok{repo\_url}\SpecialCharTok{\}}\SpecialStringTok{"}\NormalTok{)}
+
+\KeywordTok{def}\NormalTok{ load\_file\_from\_repo(relative\_path):}
+    \CommentTok{"""}
+\CommentTok{    Loads a file from the specified GitHub repository using a relative path.}
+
+\CommentTok{    Args:}
+\CommentTok{        relative\_path (str): Path to the file relative to the repo\_url}
+
+\CommentTok{    Returns:}
+\CommentTok{        For CSV/JSON: pandas DataFrame}
+\CommentTok{        For MD: string containing file contents}
+
+\CommentTok{    Raises:}
+\CommentTok{        HTTPError: If file not found or other HTTP error occurs}
+\CommentTok{        ValueError: If unsupported file type is requested}
+\CommentTok{    """}
+\NormalTok{    file\_url }\OperatorTok{=}\NormalTok{ repo\_url }\OperatorTok{+}\NormalTok{ relative\_path}
+    \BuiltInTok{print}\NormalTok{(}\SpecialStringTok{f"Attempting to load: }\SpecialCharTok{\{}\NormalTok{file\_url}\SpecialCharTok{\}}\SpecialStringTok{"}\NormalTok{)}
+
+    \CommentTok{\# Fetch the file content from GitHub}
+\NormalTok{    response }\OperatorTok{=}\NormalTok{ requests.get(file\_url)}
+
+    \CommentTok{\# Check for bad status codes with enhanced error messages}
+    \ControlFlowTok{if}\NormalTok{ response.status\_code }\OperatorTok{==} \DecValTok{404}\NormalTok{:}
+        \ControlFlowTok{raise}\NormalTok{ HTTPError(}\SpecialStringTok{f"File not found at URL: }\SpecialCharTok{\{}\NormalTok{file\_url}\SpecialCharTok{\}}\SpecialStringTok{. Check the file path/name and ensure the file is publicly accessible."}\NormalTok{, response}\OperatorTok{=}\NormalTok{response)}
+    \ControlFlowTok{else}\NormalTok{:}
+\NormalTok{        response.raise\_for\_status()  }\CommentTok{\# Raise for other error codes}
+
+    \CommentTok{\# Convert response to file{-}like object}
+\NormalTok{    file\_object }\OperatorTok{=}\NormalTok{ io.StringIO(response.text)}
+
+    \CommentTok{\# Process different file types appropriately}
+    \ControlFlowTok{if}\NormalTok{ relative\_path.endswith(}\StringTok{".csv"}\NormalTok{):}
+        \ControlFlowTok{return}\NormalTok{ pd.read\_csv(file\_object)  }\CommentTok{\# Return DataFrame for CSV}
+    \ControlFlowTok{elif}\NormalTok{ relative\_path.endswith(}\StringTok{".json"}\NormalTok{):}
+        \ControlFlowTok{return}\NormalTok{ pd.read\_json(file\_object)  }\CommentTok{\# Return DataFrame for JSON}
+    \ControlFlowTok{elif}\NormalTok{ relative\_path.endswith(}\StringTok{".md"}\NormalTok{):}
+        \ControlFlowTok{return}\NormalTok{ file\_object.read()  }\CommentTok{\# Return raw content for MD files}
+    \ControlFlowTok{else}\NormalTok{:}
+        \ControlFlowTok{raise} \PreprocessorTok{ValueError}\NormalTok{(}\SpecialStringTok{f"Unsupported file type: }\SpecialCharTok{\{}\NormalTok{relative\_path}\SpecialCharTok{.}\NormalTok{split(}\StringTok{\textquotesingle{}.\textquotesingle{}}\NormalTok{)[}\OperatorTok{{-}}\DecValTok{1}\NormalTok{]}\SpecialCharTok{\}}\SpecialStringTok{. Add support in the GitHub Connection section of this notebook."}\NormalTok{)}
+
+\CommentTok{\# Load example files to test connection}
+\ControlFlowTok{try}\NormalTok{:}
+    \CommentTok{\# Load the extracted data CSV file}
+\CommentTok{\#    df = load\_file\_from\_repo("extracted\_data.csv")}
+
+    \CommentTok{\# Load the ArgDown test text}
+\NormalTok{    md\_content }\OperatorTok{=}\NormalTok{ load\_file\_from\_repo(}\StringTok{"ArgDown.md"}\NormalTok{)}
+
+    \BuiltInTok{print}\NormalTok{(}\StringTok{"✅ Successfully connected to repository and loaded test files."}\NormalTok{)}
+\ControlFlowTok{except} \PreprocessorTok{Exception} \ImportTok{as}\NormalTok{ e:}
+    \BuiltInTok{print}\NormalTok{(}\SpecialStringTok{f"❌ Error loading files: }\SpecialCharTok{\{}\BuiltInTok{str}\NormalTok{(e)}\SpecialCharTok{\}}\SpecialStringTok{"}\NormalTok{)}
+    \BuiltInTok{print}\NormalTok{(}\StringTok{"Please check your internet connection and the repository URL."}\NormalTok{)}
+
+\CommentTok{\# Display preview of loaded content (commented out to avoid cluttering output)}
+\BuiltInTok{print}\NormalTok{(md\_content)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+Connecting to repository: https://raw.githubusercontent.com/SingularitySmith/AMTAIR_Prototype/main/data/example_carlsmith/
+Attempting to load: https://raw.githubusercontent.com/SingularitySmith/AMTAIR_Prototype/main/data/example_carlsmith/ArgDown.md
+✅ Successfully connected to repository and loaded test files.
+[Existential_Catastrophe]: The destruction of humanity's long-term potential due to AI systems we've lost control over. {"instantiations": ["existential_catastrophe_TRUE", "existential_catastrophe_FALSE"]}
+- [Human_Disempowerment]: Permanent and collective disempowerment of humanity relative to AI systems. {"instantiations": ["human_disempowerment_TRUE", "human_disempowerment_FALSE"]}
+    - [Scale_Of_Power_Seeking]: Power-seeking by AI systems scaling to the point of permanently disempowering all of humanity. {"instantiations": ["scale_of_power_seeking_TRUE", "scale_of_power_seeking_FALSE"]}
+        - [Misaligned_Power_Seeking]: Deployed AI systems seeking power in unintended and high-impact ways due to problems with their objectives. {"instantiations": ["misaligned_power_seeking_TRUE", "misaligned_power_seeking_FALSE"]}
+            - [APS_Systems]: AI systems with advanced capabilities, agentic planning, and strategic awareness. {"instantiations": ["aps_systems_TRUE", "aps_systems_FALSE"]}
+                - [Advanced_AI_Capability]: AI systems that outperform humans on tasks that grant significant power in the world. {"instantiations": ["advanced_ai_capability_TRUE", "advanced_ai_capability_FALSE"]}
+                - [Agentic_Planning]: AI systems making and executing plans based on world models to achieve objectives. {"instantiations": ["agentic_planning_TRUE", "agentic_planning_FALSE"]}
+                - [Strategic_Awareness]: AI systems with models accurately representing power dynamics with humans. {"instantiations": ["strategic_awareness_TRUE", "strategic_awareness_FALSE"]}
+            - [Difficulty_Of_Alignment]: It is harder to build aligned systems than misaligned systems that are attractive to deploy. {"instantiations": ["difficulty_of_alignment_TRUE", "difficulty_of_alignment_FALSE"]}
+                - [Instrumental_Convergence]: AI systems with misaligned objectives tend to seek power as an instrumental goal. {"instantiations": ["instrumental_convergence_TRUE", "instrumental_convergence_FALSE"]}
+                - [Problems_With_Proxies]: Optimizing for proxy objectives breaks correlations with intended goals. {"instantiations": ["problems_with_proxies_TRUE", "problems_with_proxies_FALSE"]}
+                - [Problems_With_Search]: Search processes can yield systems pursuing different objectives than intended. {"instantiations": ["problems_with_search_TRUE", "problems_with_search_FALSE"]}
+            - [Deployment_Decisions]: Decisions to deploy potentially misaligned AI systems. {"instantiations": ["deployment_decisions_DEPLOY", "deployment_decisions_WITHHOLD"]}
+                - [Incentives_To_Build_APS]: Strong incentives to build and deploy APS systems. {"instantiations": ["incentives_to_build_aps_STRONG", "incentives_to_build_aps_WEAK"]}
+                    - [Usefulness_Of_APS]: APS systems are very useful for many valuable tasks. {"instantiations": ["usefulness_of_aps_HIGH", "usefulness_of_aps_LOW"]}
+                    - [Competitive_Dynamics]: Competitive pressures between AI developers. {"instantiations": ["competitive_dynamics_STRONG", "competitive_dynamics_WEAK"]}
+                - [Deception_By_AI]: AI systems deceiving humans about their true objectives. {"instantiations": ["deception_by_ai_TRUE", "deception_by_ai_FALSE"]}
+        - [Corrective_Feedback]: Human society implementing corrections after observing problems. {"instantiations": ["corrective_feedback_EFFECTIVE", "corrective_feedback_INEFFECTIVE"]}
+            - [Warning_Shots]: Observable failures in weaker systems before catastrophic risks. {"instantiations": ["warning_shots_OBSERVED", "warning_shots_UNOBSERVED"]}
+            - [Rapid_Capability_Escalation]: AI capabilities escalating very rapidly, allowing little time for correction. {"instantiations": ["rapid_capability_escalation_TRUE", "rapid_capability_escalation_FALSE"]}
+[Barriers_To_Understanding]: Difficulty in understanding the internal workings of advanced AI systems. {"instantiations": ["barriers_to_understanding_HIGH", "barriers_to_understanding_LOW"]}
+- [Misaligned_Power_Seeking]: Deployed AI systems seeking power in unintended and high-impact ways due to problems with their objectives. {"instantiations": ["misaligned_power_seeking_TRUE", "misaligned_power_seeking_FALSE"]}
+[Adversarial_Dynamics]: Potentially adversarial relationships between humans and power-seeking AI. {"instantiations": ["adversarial_dynamics_TRUE", "adversarial_dynamics_FALSE"]}
+- [Misaligned_Power_Seeking]: Deployed AI systems seeking power in unintended and high-impact ways due to problems with their objectives. {"instantiations": ["misaligned_power_seeking_TRUE", "misaligned_power_seeking_FALSE"]}
+[Stakes_Of_Error]: The escalating impact of mistakes with power-seeking AI systems. {"instantiations": ["stakes_of_error_HIGH", "stakes_of_error_LOW"]}
+- [Misaligned_Power_Seeking]: Deployed AI systems seeking power in unintended and high-impact ways due to problems with their objectives. {"instantiations": ["misaligned_power_seeking_TRUE", "misaligned_power_seeking_FALSE"]}
+\end{verbatim}
+
+Link:
+
+Full Notebooks are embedded in the Appendix through the \_quarto.yml
+file with:
 
 \section*{Figures}\label{sec-figures1}
 

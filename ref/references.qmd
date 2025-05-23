@@ -40,7 +40,7 @@ It does not work for sections with ".unnumbered and/or .unlisted":
 ```
 
 
-## Reference Code from .ipynb files
+## Reference or Embed Code from .ipynb files
 
 #### Code chunks from .ipynb notebooks can be embedded in the .qmd text with:
 
@@ -51,11 +51,20 @@ It does not work for sections with ".unnumbered and/or .unlisted":
 
 {{< embed /AMTAIR_Prototype/data/example_carlsmith/AMTAIR_Prototype_example_carlsmith.ipynb#my_code_cell_test >}}
 
-Full Notebooks are embedded in the Appendix through the _quarto.yml file with:
+#### including 'echo=true' renders the code of the cell:
 
 ```markdown
-{{< embed /AMTAIR_Prototype/data/example_carlsmith/AMTAIR_Prototype_example_carlsmith.ipynb#my_code_cell_test >}}
+{{< embed /AMTAIR_Prototype/data/example_carlsmith/AMTAIR_Prototype_example_carlsmith.ipynb#my_code_cell_test echo=true >}}
 ```
+
+{{< embed /AMTAIR_Prototype/data/example_carlsmith/AMTAIR_Prototype_example_carlsmith.ipynb#my_code_cell_test echo=true >}}
+
+Link:
+
+
+Full Notebooks are embedded in the Appendix through the _quarto.yml file with:
+
+
 
 
 
