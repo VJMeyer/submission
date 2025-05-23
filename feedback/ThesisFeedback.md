@@ -33,3 +33,9 @@ Führe das am besten noch aus.
 
   
 Es ist wirklich gut, es ist nicht entscheidend welche Variante du jetzt übernimmst!
+
+## Dad_Friday
+
+Am Ende von Kapitel 4 sind noch viele "Bulletpoints", die werden noch ausformuliert, oder?  
+  
+Ich glaube in Kapitel 5 sind auch noch welche (bin mir nicht sicher).
