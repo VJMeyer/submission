@@ -3,6 +3,229 @@ number-sections: true
 ---
 
 
+
+# Quarto Syntax {#sec-syntax}
+
+```{python}
+#| echo: true
+#| eval: true
+#| label: fig-extraction-pipeline
+#| fig-cap: "AMTAIR extraction pipeline visualization"
+#| fig-link: "https://colab.research.google.com/drive/your-notebook-id"
+#| fig-alt: "Detailed description for accessibility"
+
+import pandas as pd
+print("AMTAIR is working!")
+```
+
+
+## For Callouts
+
+Quarto's native callouts work without additional packages:
+
+::: {.callout-note}
+## Important Note2
+This renders perfectly in both HTML and PDF.2
+:::
+
+Also for markdown:
+
+```markdown
+::: {.render_as_markdown_example}
+## Markdown Heading
+This renders perfectly in both HTML and PDF but as markdown "plain text"
+:::
+```
+
+## Section Cross-References {#sec-crossref}
+
+Refer to sections like: @sec-adaptive-governance and @sec-crossref
+
+
+```markdown
+Caveat: refering to sections with @sec-HEADINGS works only for sections with:
+## Heading {#sec-HEADINGS}
+It does not work for sections with ".unnumbered and/or .unlisted":
+## Heading {#sec-HEADINGS .unnumbered .unlisted}
+```
+
+
+## Reference or Embed Code from .ipynb files
+
+#### Code chunks from .ipynb notebooks can be embedded in the .qmd text with:
+
+```markdown
+{{< embed /AMTAIR_Prototype/data/example_carlsmith/AMTAIR_Prototype_example_carlsmith.ipynb#my_code_cell_test >}}
+```
+#### which produces the output of executing the code cell:
+
+{{< embed /AMTAIR_Prototype/data/example_carlsmith/AMTAIR_Prototype_example_carlsmith.ipynb#my_code_cell_test >}}
+
+#### including 'echo=true' renders the code of the cell:
+
+```markdown
+{{< embed /AMTAIR_Prototype/data/example_carlsmith/AMTAIR_Prototype_example_carlsmith.ipynb#my_code_cell_test echo=true >}}
+```
+
+{{< embed /AMTAIR_Prototype/data/example_carlsmith/AMTAIR_Prototype_example_carlsmith.ipynb#my_code_cell_test echo=true >}}
+
+Link:
+
+
+Full Notebooks are embedded in the Appendix through the _quarto.yml file with:
+
+
+
+
+
+## Figures {#sec-figures1 .unnumbered .unlisted}
+
+
+[![AMTAIR Automation Pipeline from @bucknall2022](/images/pipeline.png){
+  #fig-automation_pipeline
+  fig-scap="Five-step AMTAIR automation pipeline from PDFs to Bayesian networks" 
+  fig-alt="FLOWCHART: Five-step automation pipeline workflow for AMTAIR project.
+          DATA: The pipeline transforms PDFs through ArgDown, BayesDown, CSV, and HTML into Bayesian network visualizations.
+          PURPOSE: Illustrates the core technical process that enables automated extraction of probabilistic models from AI safety literature.
+          DETAILS: Five numbered green steps show: (1) LLM-based extraction from PDFs to ArgDown, (2) ArgDown to BayesDown completion with probabilities, (3) Extracting world-models as CSV data, (4) Software tools for data inference, and (5) Visualization of the resulting Bayesian network.
+          Each step includes example outputs, with the final visualization showing a Rain-Sprinkler-Grass Wet Bayesian network with probability tables.
+          SOURCE: Created by the author to explain the AMTAIR methodology
+          "
+  fig-align="center" 
+  width="100%"
+  }](https://github.com/VJMeyer/submission)
+
+
+Testing crossreferencing grapics @fig-automation_pipeline.
+
+![Caption/Title 2](/images/cover.png){#fig-testgraphic2 fig-scap="Short 2 caption" fig-alt="2nd Alt Text / Description." fig-align="left" width="30%"}
+
+Testing crossreferencing grapics @fig-testgraphic2.
+
+
+## Citations {#sec-citations .unnumbered .unlisted}
+
+
+
+@soares2014 <!-- preferred because it works with both html, latex and pdf -->
+
+[@soares2014] and [@knuth1984]
+
+
+Blah Blah [see @knuth1984, pp. 33-35; also @growiec2024, chap. 1]
+
+Blah Blah [@knuth1984, pp. 33-35, 38-39 and passim]
+
+Blah Blah [@growiec2024; @knuth1984].
+
+Growiec says blah [-@growiec2024]
+
+### Narrative citations (author as subject)
+@soares2014 argues that AI alignment requires...
+
+### Parenthetical citations (supporting reference)
+Recent work supports this view [@soares2014; @knuth1984].
+
+### Author-only citation (when discussing the person)
+As [-@soares2014] demonstrates in their analysis...
+
+### Year-only citation (when author already mentioned)
+Soares [-@soares2014] later revised this position.
+
+### Page-specific references
+The key insight appears in [@soares2014, pp. 45-67].
+
+### Multiple works, different pages
+This view is supported [@soares2014, p. 23; @knuth1984, pp. 156-159].
+
+
+
+## Headings & Potential Headings {#sec-heading}
+
+
+<!-- Comments for comments -->
+
+<!-- [ ] ToDos for things to do / tasks / reminders (allows "jump to with Taks Tree extension") -->
+
+
+
+`verbatim code formatting for notes and ideas to be included (here)`
+
+```
+Also code blocks for more extensive notes and ideas to be included and checklists
+- test 1. 
+- test 2. 
+- test 3.
+2. second
+3. third
+
+```
+
+> Blockquote formatting for "Suggested Citations (e.g. carlsmith 2024 on ...)" and/or claims which require a citation (e.g. claim x should be backed-up by a ciation from the literature)
+
+
+
+
+Here is an inline note.^[Inlines notes are easier to write, since you don't have to pick an identifier and move down to type the note.]
+
+
+Here is a footnote reference,[^1] 
+
+[^1]: Here is the footnote.
+
+
+
+
+```{=latex}
+\renewcommand*{\labelitemi}{\textgreater}
+```
+
+
+Here's some raw inline HTML: `<a>html</a>`{=html}
+
+
+```markdown
+page 1
+
+{{< pagebreak >}}
+
+page 2
+```
+
+page 1
+
+{{< pagebreak >}}
+
+page 2
+
+
+```{mermaid}
+flowchart LR
+  A[Hard edge] --> B(Round edge)
+  B --> C{Decision}
+  C --> D[Result one]
+  C --> E[Result two]
+```
+
+Testing crossreferencing grapics @fig-automation_pipeline.
+See [Chapter @sec-syntax] for more details on visualizing model diagnostics.
+
+## Formatting
+
+[This text is highlighted]{.mark}
+
+[This text is underlined]{.underline}
+
+[This text is smallcaps]{.smallcaps}
+
+
+::: {.landscape}
+
+This will appear in landscape.
+
+:::
+
+
 ## Frontmatter {.unnumbered}
 
 ### **Acknowledgments**
@@ -87,7 +310,15 @@ MAD		Mutually Assured Destruction
   - go through text, make sure all terms are defined, explained (and added to the list of Abbr.) when first mentioned  
 * readership is intelligent and interested but has no prior knowledge
 
-## 
+
+
+This chapter presents the complete computational implementation of the AMTAIR system, demonstrating the end-to-end pipeline from document processing through interactive visualization.
+
+
+
+
+
+
 
 ## (Format:) \~ Anything that makes it easier to understand
 

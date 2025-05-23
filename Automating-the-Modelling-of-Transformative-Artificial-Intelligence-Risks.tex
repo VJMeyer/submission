@@ -154,20 +154,86 @@
 \addbibresource{ref/MAref.bib}
 
 
-% AMTAIR Thesis Preamble - Absolute minimum
-% Trust Quarto for everything except institutional requirements
+% AMTAIR Thesis Preamble - Zero package conflicts
+% Only formatting commands, no package loading
 
-% Academic line spacing
+% Line spacing for academic work
 \usepackage{setspace}
 \onehalfspacing
 
-% Academic headers and footers only
+% Custom chapter formatting (remove "Chapter N" prefix) but unfortunately leaves blank space
+\usepackage{titlesec}
+\titleformat{\chapter}[display]
+  {\normalfont\huge\bfseries}  % format
+  {}                           % label (empty = no "Chapter N")
+  {0pt}                        % sep
+  {\Huge}                      % before-code
+
+
+
+% Page formatting and headers
 \usepackage{fancyhdr}
 \pagestyle{fancy}
 \fancyhf{}
 \fancyhead[LE,RO]{\slshape\nouppercase{\rightmark}}
 \fancyhead[LO,RE]{\slshape\nouppercase{\leftmark}}
 \fancyfoot[C]{\thepage}
+
+% % Fix page breaks after title page
+% \newcommand{\cleartitlepage}{
+%   \clearpage
+%   \thispagestyle{empty}
+%   \mbox{}
+%   \clearpage
+% }
+
+
+
+\renewcommand{\maketitle}{}
+
+%  Citation customization
+% \usepackage[style=authoryear,backend=biber,natbib=true]{biblatex}
+
+% % Custom citation commands for different contexts
+% \newcommand{\citeauthor}[1]{\textcite{#1}}           % Author (year)
+% \newcommand{\citeyear}[1]{(\citeyear*{#1})}         % (year)
+% \newcommand{\citealt}[1]{\citeauthor{#1} \citeyear{#1}}  % Author year
+% \newcommand{\citep}[1]{(\cite{#1})}                 # (Author, year)
+
+% Page reference styling
+% \DeclareFieldFormat{postnote}{#1}                    # No "p." prefix
+% \DeclareFieldFormat{multipostnote}{#1}               # No "pp." prefix
+
+
+% % Page numbering control
+% \usepackage{afterpage}
+
+% % Command to start front matter (roman numerals)
+% \newcommand{\frontmatter}{
+%   \cleardoublepage
+%   \pagenumbering{roman}
+%   \setcounter{page}{1}
+% }
+
+% % Command to start main matter (arabic numerals)
+% \newcommand{\mainmatter}{
+%   \cleardoublepage
+%   \pagenumbering{arabic}
+%   \setcounter{page}{1}
+% }
+
+% % Command to start back matter (continue arabic)
+% \newcommand{\backmatter}{
+%   \cleardoublepage
+%   % Keep arabic numbering but could change style if needed
+% }
+
+% % Suppress page numbers on title page
+% \newcommand{\titlepage}{
+%   \thispagestyle{empty}
+% }
+
+
 
 % Commands for custom title page
 % \newcommand{\thesistitle}{Automating the Modelling of Transformative Artificial Intelligence Risks}
@@ -236,12 +302,12 @@
 \@ifpackageloaded{subcaption}{}{\usepackage{subcaption}}
 \makeatother
 \makeatletter
-\definecolor{QuartoInternalColor6}{rgb}{0.00,0.64,0.31}
+\definecolor{QuartoInternalColor2}{rgb}{0,0,0}
+\definecolor{QuartoInternalColor3}{rgb}{0.00,0.45,0.15}
+\definecolor{QuartoInternalColor5}{rgb}{0.00,0.40,0.79}
 \definecolor{QuartoInternalColor1}{rgb}{0.70,0.17,0.19}
 \definecolor{QuartoInternalColor4}{rgb}{0.15,0.56,0.56}
-\definecolor{QuartoInternalColor2}{rgb}{0,0,0}
-\definecolor{QuartoInternalColor5}{rgb}{0.00,0.40,0.79}
-\definecolor{QuartoInternalColor3}{rgb}{0.00,0.45,0.15}
+\definecolor{QuartoInternalColor6}{rgb}{0.00,0.64,0.31}
 \makeatother
 \usepackage{bookmark}
 \IfFileExists{xurl.sty}{\usepackage{xurl}}{} % add URL line breaks if available
@@ -355,7 +421,10 @@ to Upscale Conditional Policy Assessments in Bayesian Networks on a Narrow Path 
 \end{center}
 \end{titlepage}
 
-\renewcommand*\contentsname{Table of contents}
+% Critical: Clean page break to TOC
+\cleardoublepage
+
+\renewcommand*\contentsname{Table of Contents}
 {
 \setcounter{tocdepth}{2}
 \tableofcontents
@@ -389,6 +458,621 @@ To learn more about Quarto books visit
 \addcontentsline{toc}{chapter}{Outline(s): Table of Contents}
 
 \markboth{Outline(s): Table of Contents}{Outline(s): Table of Contents}
+
+\bookmarksetup{startatroot}
+
+\chapter{Quarto Syntax}\label{sec-syntax}
+
+\begin{figure}
+
+\centering{
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\ImportTok{import}\NormalTok{ pandas }\ImportTok{as}\NormalTok{ pd}
+\BuiltInTok{print}\NormalTok{(}\StringTok{"AMTAIR is working!"}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+AMTAIR is working!
+\end{verbatim}
+
+}
+
+\caption{\label{fig-extraction-pipeline}}
+
+\end{figure}%
+
+\section{For Callouts}\label{for-callouts}
+
+Quarto's native callouts work without additional packages:
+
+\begin{tcolorbox}[enhanced jigsaw, left=2mm, titlerule=0mm, opacityback=0, toptitle=1mm, colback=white, rightrule=.15mm, leftrule=.75mm, coltitle=black, colframe=quarto-callout-note-color-frame, title=\textcolor{quarto-callout-note-color}{\faInfo}\hspace{0.5em}{Important Note2}, bottomtitle=1mm, arc=.35mm, colbacktitle=quarto-callout-note-color!10!white, bottomrule=.15mm, breakable, toprule=.15mm, opacitybacktitle=0.6]
+
+This renders perfectly in both HTML and PDF.2
+
+\end{tcolorbox}
+
+Also for markdown:
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{::: \{.render\_as\_markdown\_example\}}
+\FunctionTok{\#\# Markdown Heading}
+\NormalTok{This renders perfectly in both HTML and PDF but as markdown "plain text"}
+\NormalTok{:::}
+\end{Highlighting}
+\end{Shaded}
+
+\section{Section Cross-References}\label{sec-crossref}
+
+Refer to sections like: Section~\ref{sec-adaptive-governance} and
+Section~\ref{sec-crossref}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\AnnotationTok{Caveat:}\CommentTok{ refering to sections with @sec{-}HEADINGS works only for sections with:}
+\FunctionTok{\#\# Heading \{\#sec{-}HEADINGS\}}
+\NormalTok{It does not work for sections with ".unnumbered and/or .unlisted":}
+\FunctionTok{\#\# Heading \{\#sec{-}HEADINGS .unnumbered .unlisted\}}
+\end{Highlighting}
+\end{Shaded}
+
+\section{Reference or Embed Code from .ipynb
+files}\label{reference-or-embed-code-from-.ipynb-files}
+
+\subsubsection{Code chunks from .ipynb notebooks can be embedded in the
+.qmd text
+with:}\label{code-chunks-from-.ipynb-notebooks-can-be-embedded-in-the-.qmd-text-with}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{\{\{\textless{} embed /AMTAIR\_Prototype/data/example\_carlsmith/AMTAIR\_Prototype\_example\_carlsmith.ipynb\#my\_code\_cell\_test \textgreater{}\}\}}
+\end{Highlighting}
+\end{Shaded}
+
+\subsubsection{which produces the output of executing the code
+cell:}\label{which-produces-the-output-of-executing-the-code-cell}
+
+\phantomsection\label{my_code_cell_test}
+\begin{verbatim}
+Connecting to repository: https://raw.githubusercontent.com/SingularitySmith/AMTAIR_Prototype/main/data/example_carlsmith/
+Attempting to load: https://raw.githubusercontent.com/SingularitySmith/AMTAIR_Prototype/main/data/example_carlsmith/ArgDown.md
+✅ Successfully connected to repository and loaded test files.
+[Existential_Catastrophe]: The destruction of humanity's long-term potential due to AI systems we've lost control over. {"instantiations": ["existential_catastrophe_TRUE", "existential_catastrophe_FALSE"]}
+- [Human_Disempowerment]: Permanent and collective disempowerment of humanity relative to AI systems. {"instantiations": ["human_disempowerment_TRUE", "human_disempowerment_FALSE"]}
+    - [Scale_Of_Power_Seeking]: Power-seeking by AI systems scaling to the point of permanently disempowering all of humanity. {"instantiations": ["scale_of_power_seeking_TRUE", "scale_of_power_seeking_FALSE"]}
+        - [Misaligned_Power_Seeking]: Deployed AI systems seeking power in unintended and high-impact ways due to problems with their objectives. {"instantiations": ["misaligned_power_seeking_TRUE", "misaligned_power_seeking_FALSE"]}
+            - [APS_Systems]: AI systems with advanced capabilities, agentic planning, and strategic awareness. {"instantiations": ["aps_systems_TRUE", "aps_systems_FALSE"]}
+                - [Advanced_AI_Capability]: AI systems that outperform humans on tasks that grant significant power in the world. {"instantiations": ["advanced_ai_capability_TRUE", "advanced_ai_capability_FALSE"]}
+                - [Agentic_Planning]: AI systems making and executing plans based on world models to achieve objectives. {"instantiations": ["agentic_planning_TRUE", "agentic_planning_FALSE"]}
+                - [Strategic_Awareness]: AI systems with models accurately representing power dynamics with humans. {"instantiations": ["strategic_awareness_TRUE", "strategic_awareness_FALSE"]}
+            - [Difficulty_Of_Alignment]: It is harder to build aligned systems than misaligned systems that are attractive to deploy. {"instantiations": ["difficulty_of_alignment_TRUE", "difficulty_of_alignment_FALSE"]}
+                - [Instrumental_Convergence]: AI systems with misaligned objectives tend to seek power as an instrumental goal. {"instantiations": ["instrumental_convergence_TRUE", "instrumental_convergence_FALSE"]}
+                - [Problems_With_Proxies]: Optimizing for proxy objectives breaks correlations with intended goals. {"instantiations": ["problems_with_proxies_TRUE", "problems_with_proxies_FALSE"]}
+                - [Problems_With_Search]: Search processes can yield systems pursuing different objectives than intended. {"instantiations": ["problems_with_search_TRUE", "problems_with_search_FALSE"]}
+            - [Deployment_Decisions]: Decisions to deploy potentially misaligned AI systems. {"instantiations": ["deployment_decisions_DEPLOY", "deployment_decisions_WITHHOLD"]}
+                - [Incentives_To_Build_APS]: Strong incentives to build and deploy APS systems. {"instantiations": ["incentives_to_build_aps_STRONG", "incentives_to_build_aps_WEAK"]}
+                    - [Usefulness_Of_APS]: APS systems are very useful for many valuable tasks. {"instantiations": ["usefulness_of_aps_HIGH", "usefulness_of_aps_LOW"]}
+                    - [Competitive_Dynamics]: Competitive pressures between AI developers. {"instantiations": ["competitive_dynamics_STRONG", "competitive_dynamics_WEAK"]}
+                - [Deception_By_AI]: AI systems deceiving humans about their true objectives. {"instantiations": ["deception_by_ai_TRUE", "deception_by_ai_FALSE"]}
+        - [Corrective_Feedback]: Human society implementing corrections after observing problems. {"instantiations": ["corrective_feedback_EFFECTIVE", "corrective_feedback_INEFFECTIVE"]}
+            - [Warning_Shots]: Observable failures in weaker systems before catastrophic risks. {"instantiations": ["warning_shots_OBSERVED", "warning_shots_UNOBSERVED"]}
+            - [Rapid_Capability_Escalation]: AI capabilities escalating very rapidly, allowing little time for correction. {"instantiations": ["rapid_capability_escalation_TRUE", "rapid_capability_escalation_FALSE"]}
+[Barriers_To_Understanding]: Difficulty in understanding the internal workings of advanced AI systems. {"instantiations": ["barriers_to_understanding_HIGH", "barriers_to_understanding_LOW"]}
+- [Misaligned_Power_Seeking]: Deployed AI systems seeking power in unintended and high-impact ways due to problems with their objectives. {"instantiations": ["misaligned_power_seeking_TRUE", "misaligned_power_seeking_FALSE"]}
+[Adversarial_Dynamics]: Potentially adversarial relationships between humans and power-seeking AI. {"instantiations": ["adversarial_dynamics_TRUE", "adversarial_dynamics_FALSE"]}
+- [Misaligned_Power_Seeking]: Deployed AI systems seeking power in unintended and high-impact ways due to problems with their objectives. {"instantiations": ["misaligned_power_seeking_TRUE", "misaligned_power_seeking_FALSE"]}
+[Stakes_Of_Error]: The escalating impact of mistakes with power-seeking AI systems. {"instantiations": ["stakes_of_error_HIGH", "stakes_of_error_LOW"]}
+- [Misaligned_Power_Seeking]: Deployed AI systems seeking power in unintended and high-impact ways due to problems with their objectives. {"instantiations": ["misaligned_power_seeking_TRUE", "misaligned_power_seeking_FALSE"]}
+\end{verbatim}
+
+\subsubsection{including `echo=true' renders the code of the
+cell:}\label{including-echotrue-renders-the-code-of-the-cell}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{\{\{\textless{} embed /AMTAIR\_Prototype/data/example\_carlsmith/AMTAIR\_Prototype\_example\_carlsmith.ipynb\#my\_code\_cell\_test echo=true \textgreater{}\}\}}
+\end{Highlighting}
+\end{Shaded}
+
+\phantomsection\label{my_code_cell_test}
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{\# @title 0.2 {-}{-}{-} Connect to GitHub Repository {-}{-}{-} Load Files}
+
+\CommentTok{"""}
+\CommentTok{BLOCK PURPOSE: Establishes connection to the AMTAIR GitHub repository and provides}
+\CommentTok{functions to load example data files for processing.}
+
+\CommentTok{This block creates a reusable function for accessing files from the project\textquotesingle{}s}
+\CommentTok{GitHub repository, enabling access to example files like the rain{-}sprinkler{-}lawn}
+\CommentTok{Bayesian network that serves as our canonical test case.}
+
+\CommentTok{DEPENDENCIES: requests library, io library}
+\CommentTok{OUTPUTS: load\_file\_from\_repo function and test file loads}
+\CommentTok{"""}
+
+\ImportTok{from}\NormalTok{ requests.exceptions }\ImportTok{import}\NormalTok{ HTTPError}
+
+\CommentTok{\# Specify the base repository URL for the AMTAIR project}
+\NormalTok{repo\_url }\OperatorTok{=} \StringTok{"https://raw.githubusercontent.com/SingularitySmith/AMTAIR\_Prototype/main/data/example\_carlsmith/"}
+\BuiltInTok{print}\NormalTok{(}\SpecialStringTok{f"Connecting to repository: }\SpecialCharTok{\{}\NormalTok{repo\_url}\SpecialCharTok{\}}\SpecialStringTok{"}\NormalTok{)}
+
+\KeywordTok{def}\NormalTok{ load\_file\_from\_repo(relative\_path):}
+    \CommentTok{"""}
+\CommentTok{    Loads a file from the specified GitHub repository using a relative path.}
+
+\CommentTok{    Args:}
+\CommentTok{        relative\_path (str): Path to the file relative to the repo\_url}
+
+\CommentTok{    Returns:}
+\CommentTok{        For CSV/JSON: pandas DataFrame}
+\CommentTok{        For MD: string containing file contents}
+
+\CommentTok{    Raises:}
+\CommentTok{        HTTPError: If file not found or other HTTP error occurs}
+\CommentTok{        ValueError: If unsupported file type is requested}
+\CommentTok{    """}
+\NormalTok{    file\_url }\OperatorTok{=}\NormalTok{ repo\_url }\OperatorTok{+}\NormalTok{ relative\_path}
+    \BuiltInTok{print}\NormalTok{(}\SpecialStringTok{f"Attempting to load: }\SpecialCharTok{\{}\NormalTok{file\_url}\SpecialCharTok{\}}\SpecialStringTok{"}\NormalTok{)}
+
+    \CommentTok{\# Fetch the file content from GitHub}
+\NormalTok{    response }\OperatorTok{=}\NormalTok{ requests.get(file\_url)}
+
+    \CommentTok{\# Check for bad status codes with enhanced error messages}
+    \ControlFlowTok{if}\NormalTok{ response.status\_code }\OperatorTok{==} \DecValTok{404}\NormalTok{:}
+        \ControlFlowTok{raise}\NormalTok{ HTTPError(}\SpecialStringTok{f"File not found at URL: }\SpecialCharTok{\{}\NormalTok{file\_url}\SpecialCharTok{\}}\SpecialStringTok{. Check the file path/name and ensure the file is publicly accessible."}\NormalTok{, response}\OperatorTok{=}\NormalTok{response)}
+    \ControlFlowTok{else}\NormalTok{:}
+\NormalTok{        response.raise\_for\_status()  }\CommentTok{\# Raise for other error codes}
+
+    \CommentTok{\# Convert response to file{-}like object}
+\NormalTok{    file\_object }\OperatorTok{=}\NormalTok{ io.StringIO(response.text)}
+
+    \CommentTok{\# Process different file types appropriately}
+    \ControlFlowTok{if}\NormalTok{ relative\_path.endswith(}\StringTok{".csv"}\NormalTok{):}
+        \ControlFlowTok{return}\NormalTok{ pd.read\_csv(file\_object)  }\CommentTok{\# Return DataFrame for CSV}
+    \ControlFlowTok{elif}\NormalTok{ relative\_path.endswith(}\StringTok{".json"}\NormalTok{):}
+        \ControlFlowTok{return}\NormalTok{ pd.read\_json(file\_object)  }\CommentTok{\# Return DataFrame for JSON}
+    \ControlFlowTok{elif}\NormalTok{ relative\_path.endswith(}\StringTok{".md"}\NormalTok{):}
+        \ControlFlowTok{return}\NormalTok{ file\_object.read()  }\CommentTok{\# Return raw content for MD files}
+    \ControlFlowTok{else}\NormalTok{:}
+        \ControlFlowTok{raise} \PreprocessorTok{ValueError}\NormalTok{(}\SpecialStringTok{f"Unsupported file type: }\SpecialCharTok{\{}\NormalTok{relative\_path}\SpecialCharTok{.}\NormalTok{split(}\StringTok{\textquotesingle{}.\textquotesingle{}}\NormalTok{)[}\OperatorTok{{-}}\DecValTok{1}\NormalTok{]}\SpecialCharTok{\}}\SpecialStringTok{. Add support in the GitHub Connection section of this notebook."}\NormalTok{)}
+
+\CommentTok{\# Load example files to test connection}
+\ControlFlowTok{try}\NormalTok{:}
+    \CommentTok{\# Load the extracted data CSV file}
+\CommentTok{\#    df = load\_file\_from\_repo("extracted\_data.csv")}
+
+    \CommentTok{\# Load the ArgDown test text}
+\NormalTok{    md\_content }\OperatorTok{=}\NormalTok{ load\_file\_from\_repo(}\StringTok{"ArgDown.md"}\NormalTok{)}
+
+    \BuiltInTok{print}\NormalTok{(}\StringTok{"✅ Successfully connected to repository and loaded test files."}\NormalTok{)}
+\ControlFlowTok{except} \PreprocessorTok{Exception} \ImportTok{as}\NormalTok{ e:}
+    \BuiltInTok{print}\NormalTok{(}\SpecialStringTok{f"❌ Error loading files: }\SpecialCharTok{\{}\BuiltInTok{str}\NormalTok{(e)}\SpecialCharTok{\}}\SpecialStringTok{"}\NormalTok{)}
+    \BuiltInTok{print}\NormalTok{(}\StringTok{"Please check your internet connection and the repository URL."}\NormalTok{)}
+
+\CommentTok{\# Display preview of loaded content (commented out to avoid cluttering output)}
+\BuiltInTok{print}\NormalTok{(md\_content)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+Connecting to repository: https://raw.githubusercontent.com/SingularitySmith/AMTAIR_Prototype/main/data/example_carlsmith/
+Attempting to load: https://raw.githubusercontent.com/SingularitySmith/AMTAIR_Prototype/main/data/example_carlsmith/ArgDown.md
+✅ Successfully connected to repository and loaded test files.
+[Existential_Catastrophe]: The destruction of humanity's long-term potential due to AI systems we've lost control over. {"instantiations": ["existential_catastrophe_TRUE", "existential_catastrophe_FALSE"]}
+- [Human_Disempowerment]: Permanent and collective disempowerment of humanity relative to AI systems. {"instantiations": ["human_disempowerment_TRUE", "human_disempowerment_FALSE"]}
+    - [Scale_Of_Power_Seeking]: Power-seeking by AI systems scaling to the point of permanently disempowering all of humanity. {"instantiations": ["scale_of_power_seeking_TRUE", "scale_of_power_seeking_FALSE"]}
+        - [Misaligned_Power_Seeking]: Deployed AI systems seeking power in unintended and high-impact ways due to problems with their objectives. {"instantiations": ["misaligned_power_seeking_TRUE", "misaligned_power_seeking_FALSE"]}
+            - [APS_Systems]: AI systems with advanced capabilities, agentic planning, and strategic awareness. {"instantiations": ["aps_systems_TRUE", "aps_systems_FALSE"]}
+                - [Advanced_AI_Capability]: AI systems that outperform humans on tasks that grant significant power in the world. {"instantiations": ["advanced_ai_capability_TRUE", "advanced_ai_capability_FALSE"]}
+                - [Agentic_Planning]: AI systems making and executing plans based on world models to achieve objectives. {"instantiations": ["agentic_planning_TRUE", "agentic_planning_FALSE"]}
+                - [Strategic_Awareness]: AI systems with models accurately representing power dynamics with humans. {"instantiations": ["strategic_awareness_TRUE", "strategic_awareness_FALSE"]}
+            - [Difficulty_Of_Alignment]: It is harder to build aligned systems than misaligned systems that are attractive to deploy. {"instantiations": ["difficulty_of_alignment_TRUE", "difficulty_of_alignment_FALSE"]}
+                - [Instrumental_Convergence]: AI systems with misaligned objectives tend to seek power as an instrumental goal. {"instantiations": ["instrumental_convergence_TRUE", "instrumental_convergence_FALSE"]}
+                - [Problems_With_Proxies]: Optimizing for proxy objectives breaks correlations with intended goals. {"instantiations": ["problems_with_proxies_TRUE", "problems_with_proxies_FALSE"]}
+                - [Problems_With_Search]: Search processes can yield systems pursuing different objectives than intended. {"instantiations": ["problems_with_search_TRUE", "problems_with_search_FALSE"]}
+            - [Deployment_Decisions]: Decisions to deploy potentially misaligned AI systems. {"instantiations": ["deployment_decisions_DEPLOY", "deployment_decisions_WITHHOLD"]}
+                - [Incentives_To_Build_APS]: Strong incentives to build and deploy APS systems. {"instantiations": ["incentives_to_build_aps_STRONG", "incentives_to_build_aps_WEAK"]}
+                    - [Usefulness_Of_APS]: APS systems are very useful for many valuable tasks. {"instantiations": ["usefulness_of_aps_HIGH", "usefulness_of_aps_LOW"]}
+                    - [Competitive_Dynamics]: Competitive pressures between AI developers. {"instantiations": ["competitive_dynamics_STRONG", "competitive_dynamics_WEAK"]}
+                - [Deception_By_AI]: AI systems deceiving humans about their true objectives. {"instantiations": ["deception_by_ai_TRUE", "deception_by_ai_FALSE"]}
+        - [Corrective_Feedback]: Human society implementing corrections after observing problems. {"instantiations": ["corrective_feedback_EFFECTIVE", "corrective_feedback_INEFFECTIVE"]}
+            - [Warning_Shots]: Observable failures in weaker systems before catastrophic risks. {"instantiations": ["warning_shots_OBSERVED", "warning_shots_UNOBSERVED"]}
+            - [Rapid_Capability_Escalation]: AI capabilities escalating very rapidly, allowing little time for correction. {"instantiations": ["rapid_capability_escalation_TRUE", "rapid_capability_escalation_FALSE"]}
+[Barriers_To_Understanding]: Difficulty in understanding the internal workings of advanced AI systems. {"instantiations": ["barriers_to_understanding_HIGH", "barriers_to_understanding_LOW"]}
+- [Misaligned_Power_Seeking]: Deployed AI systems seeking power in unintended and high-impact ways due to problems with their objectives. {"instantiations": ["misaligned_power_seeking_TRUE", "misaligned_power_seeking_FALSE"]}
+[Adversarial_Dynamics]: Potentially adversarial relationships between humans and power-seeking AI. {"instantiations": ["adversarial_dynamics_TRUE", "adversarial_dynamics_FALSE"]}
+- [Misaligned_Power_Seeking]: Deployed AI systems seeking power in unintended and high-impact ways due to problems with their objectives. {"instantiations": ["misaligned_power_seeking_TRUE", "misaligned_power_seeking_FALSE"]}
+[Stakes_Of_Error]: The escalating impact of mistakes with power-seeking AI systems. {"instantiations": ["stakes_of_error_HIGH", "stakes_of_error_LOW"]}
+- [Misaligned_Power_Seeking]: Deployed AI systems seeking power in unintended and high-impact ways due to problems with their objectives. {"instantiations": ["misaligned_power_seeking_TRUE", "misaligned_power_seeking_FALSE"]}
+\end{verbatim}
+
+Link:
+
+Full Notebooks are embedded in the Appendix through the \_quarto.yml
+file with:
+
+\section*{Figures}\label{sec-figures1}
+
+\markright{Figures}
+
+\begin{figure}
+
+\centering{
+
+\href{https://github.com/VJMeyer/submission}{\includegraphics[width=1\linewidth,height=\textheight,keepaspectratio]{images/pipeline.png}}
+
+}
+
+\caption[Five-step AMTAIR automation pipeline from PDFs to Bayesian
+networks]{\label{fig-automation_pipeline}AMTAIR Automation Pipeline from
+\textcite{bucknall2022}}
+
+\end{figure}%
+
+Testing crossreferencing grapics Figure~\ref{fig-automation_pipeline}.
+
+\begin{figure}
+
+\includegraphics[width=0.3\linewidth,height=\textheight,keepaspectratio]{images/cover.png}
+
+\caption[Short 2 caption]{\label{fig-testgraphic2}Caption/Title 2}
+
+\end{figure}%
+
+Testing crossreferencing grapics Figure~\ref{fig-testgraphic2}.
+
+\section*{Citations}\label{sec-citations}
+
+\markright{Citations}
+
+\textcite{soares2014}
+
+\autocite{soares2014} and \autocite{knuth1984}
+
+Blah Blah \autocites[see][33-35]{knuth1984}[also][chap.~1]{growiec2024}
+
+Blah Blah \autocite[33-35, 38-39 and passim]{knuth1984}
+
+Blah Blah \autocite{growiec2024,knuth1984}.
+
+Growiec says blah \autocite*{growiec2024}
+
+\subsection{Narrative citations (author as
+subject)}\label{narrative-citations-author-as-subject}
+
+\textcite{soares2014} argues that AI alignment requires\ldots{}
+
+\subsection{Parenthetical citations (supporting
+reference)}\label{parenthetical-citations-supporting-reference}
+
+Recent work supports this view \autocite{soares2014,knuth1984}.
+
+\subsection{Author-only citation (when discussing the
+person)}\label{author-only-citation-when-discussing-the-person}
+
+As \autocite*{soares2014} demonstrates in their analysis\ldots{}
+
+\subsection{Year-only citation (when author already
+mentioned)}\label{year-only-citation-when-author-already-mentioned}
+
+Soares \autocite*{soares2014} later revised this position.
+
+\subsection{Page-specific references}\label{page-specific-references}
+
+The key insight appears in \autocite[45-67]{soares2014}.
+
+\subsection{Multiple works, different
+pages}\label{multiple-works-different-pages}
+
+This view is supported \autocites[23]{soares2014}[156-159]{knuth1984}.
+
+\section{Headings \& Potential Headings}\label{sec-heading}
+
+\texttt{verbatim\ code\ formatting\ for\ notes\ and\ ideas\ to\ be\ included\ (here)}
+
+\begin{verbatim}
+Also code blocks for more extensive notes and ideas to be included and checklists
+- test 1. 
+- test 2. 
+- test 3.
+2. second
+3. third
+\end{verbatim}
+
+\begin{quote}
+Blockquote formatting for ``Suggested Citations (e.g.~carlsmith 2024 on
+\ldots)'' and/or claims which require a citation (e.g.~claim x should be
+backed-up by a ciation from the literature)
+\end{quote}
+
+Here is an inline note.\footnote{Inlines notes are easier to write,
+  since you don't have to pick an identifier and move down to type the
+  note.}
+
+Here is a footnote reference,\footnote{Here is the footnote.}
+
+\renewcommand*{\labelitemi}{\textgreater}
+
+Here's some raw inline HTML:
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{page 1}
+
+
+
+\NormalTok{page 2}
+\end{Highlighting}
+\end{Shaded}
+
+page 1
+
+\newpage{}
+
+page 2
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{flowchart LR}
+\NormalTok{  A[Hard edge] {-}{-}\textgreater{} B(Round edge)}
+\NormalTok{  B {-}{-}\textgreater{} C\{Decision\}}
+\NormalTok{  C {-}{-}\textgreater{} D[Result one]}
+\NormalTok{  C {-}{-}\textgreater{} E[Result two]}
+\end{Highlighting}
+\end{Shaded}
+
+\includegraphics[width=6.88in,height=1.81in]{chapters/Frontmatter_files/figure-latex/mermaid-figure-1.png}
+
+Testing crossreferencing grapics Figure~\ref{fig-automation_pipeline}.
+See Chapter~\ref{sec-syntax} for more details on visualizing model
+diagnostics.
+
+\section{Formatting}\label{formatting}
+
+\hl{This text is highlighted}
+
+\ul{This text is underlined}
+
+\textsc{This text is smallcaps}
+
+\begin{landscape}
+
+This will appear in landscape.
+
+\end{landscape}
+
+\section*{Frontmatter}\label{frontmatter}
+\addcontentsline{toc}{section}{Frontmatter}
+
+\markright{Frontmatter}
+
+\subsection{\texorpdfstring{\textbf{Acknowledgments}}{Acknowledgments}}\label{acknowledgments}
+
+\begin{itemize}
+\tightlist
+\item
+  Academic supervisor (Prof.~Timo Speith) and institution (University of
+  Bayreuth)\\
+\item
+  Research collaborators, especially those connected to the original
+  MTAIR project\\
+\item
+  Technical advisors who provided feedback on implementation aspects\\
+\item
+  Funding sources and those who provided computational resources or API
+  access\\
+\item
+  Personal supporters who enabled the research through encouragement and
+  feedback
+\end{itemize}
+
+\bookmarksetup{startatroot}
+
+\chapter*{Prefatory Apparatus: Illustrations and Terminology --- Quick
+References}\label{prefatory-apparatus-illustrations-and-terminology-quick-references}
+\addcontentsline{toc}{chapter}{Prefatory Apparatus: Illustrations and
+Terminology --- Quick References}
+
+\markboth{Prefatory Apparatus: Illustrations and Terminology --- Quick
+References}{Prefatory Apparatus: Illustrations and Terminology --- Quick
+References}
+
+\section*{List of Tables}\label{list-of-tables}
+\addcontentsline{toc}{section}{List of Tables}
+
+\markright{List of Tables}
+
+Table 1: Table name
+
+Table 2: Table name
+
+Table 3: Table name
+
+\begin{itemize}
+\tightlist
+\item
+  Figure 1.1: The coordination crisis in AI governance - visualization
+  of fragmentation\\
+\item
+  Figure 2.1: The Carlsmith model - DAG representation\\
+\item
+  Figure 3.1: Research design overview - workflow diagram\\
+\item
+  Figure 3.2: From natural language to BayesDown - transformation
+  process\\
+\item
+  Figure 4.1: ARPA system architecture - component diagram\\
+\item
+  Figure 4.2: Visualization of Rain-Sprinkler-Grass\_Wet Bayesian
+  network - screenshot\\
+\item
+  Figure 5.1: Extraction quality metrics - comparative chart\\
+\item
+  Figure 5.2: Comparative analysis of AI governance worldviews - network
+  visualization\\
+\item
+  Table 2.1: Comparison of approaches to AI risk modeling\\
+\item
+  Table 3.1: Probabilistic translation guide for qualitative
+  expressions\\
+\item
+  Table 4.1: System component responsibilities and interactions\\
+\item
+  Table 5.1: Policy impact evaluation results - summary metrics
+\end{itemize}
+
+\section*{List of Graphics \& Figures}\label{list-of-graphics-figures}
+\addcontentsline{toc}{section}{List of Graphics \& Figures}
+
+\markright{List of Graphics \& Figures}
+
+\section*{List of Abbreviations}\label{list-of-abbreviations}
+\addcontentsline{toc}{section}{List of Abbreviations}
+
+\markright{List of Abbreviations}
+
+esp.~especially
+
+f., ff.~following
+
+incl.~including
+
+p., pp.~page(s)
+
+MAD Mutually Assured Destruction
+
+\begin{itemize}
+\tightlist
+\item
+  AI - Artificial Intelligence\\
+\item
+  AGI - Artificial General Intelligence\\
+\item
+  ARPA - AI Risk Pathway Analyzer\\
+\item
+  DAG - Directed Acyclic Graph\\
+\item
+  LLM - Large Language Model\\
+\item
+  MTAIR - Modeling Transformative AI Risks\\
+\item
+  P(Doom) - Probability of existential catastrophe from misaligned AI\\
+\item
+  CPT - Conditional Probability Table
+\end{itemize}
+
+\section*{Glossary}\label{glossary}
+
+\markright{Glossary}
+
+\begin{itemize}
+\tightlist
+\item
+  \textbf{Argument mapping}: A method for visually representing the
+  structure of arguments\\
+\item
+  \textbf{BayesDown}: An extension of ArgDown that incorporates
+  probabilistic information\\
+\item
+  \textbf{Bayesian network}: A probabilistic graphical model
+  representing variables and their dependencies\\
+\item
+  \textbf{Conditional probability}: The probability of an event given
+  that another event has occurred\\
+\item
+  \textbf{Directed Acyclic Graph (DAG)}: A graph with directed edges and
+  no cycles\\
+\item
+  \textbf{Existential risk}: Risk of permanent curtailment of humanity's
+  potential\\
+\item
+  \textbf{Power-seeking AI}: AI systems with instrumental incentives to
+  acquire resources and power\\
+\item
+  \textbf{Prediction market}: A market where participants trade
+  contracts that resolve based on future events\\
+\item
+  \textbf{d-separation}: A criterion for identifying conditional
+  independence relationships in Bayesian networks\\
+\item
+  \textbf{Monte Carlo sampling}: A computational technique using random
+  sampling to obtain numerical results
+\end{itemize}
+
+\section{\texorpdfstring{Checklists }{Checklists }}\label{checklists}
+
+\section{``Usual paper requirements''}\label{usual-paper-requirements}
+
+\begin{itemize}
+\tightlist
+\item
+  introduce all terminology
+
+  \begin{itemize}
+  \tightlist
+  \item
+    go through text, make sure all terms are defined, explained (and
+    added to the list of Abbr.) when first mentioned\\
+  \end{itemize}
+\item
+  readership is intelligent and interested but has no prior knowledge
+\end{itemize}
+
+This chapter presents the complete computational implementation of the
+AMTAIR system, demonstrating the end-to-end pipeline from document
+processing through interactive visualization.
+
+\section{(Format:) \textasciitilde{} Anything that makes it easier to
+understand}\label{format-anything-that-makes-it-easier-to-understand}
+
+\begin{itemize}
+\tightlist
+\item
+  short sentences\\
+\item
+  paragraphs (one idea per paragraph)\\
+\item
+  simplicity\\
+\item
+  !limit use of passive voice!\\
+\item
+  use active voice, even prefer I over we!\\
+\item
+  minimise use of ``zombi nouns'' (don't turn verbs/adjectives to
+  nouns!)\\
+\item
+  ``find words that can be cut''
+\end{itemize}
+
+-- the paper can \textbf{focus} on \textbf{one aspect of the
+presentation}
+
+-- ``open door policy'' for (content) questions
+
+\textasciitilde{} demonstrate ability for novel research
+
+-- ``solve research question with the tools accessible to you''
+
+-- ``show something that has not been shown before / should be
+publishable in principle''
+
+-- new idea (or criticism) ``in this field''
+
+-- Outline idea THEN reading with a purpose (answering concrete
+questions)
+
+-- ``Only'' confirm that nobody has published the exact same idea on the
+same topic
+
+-- pretty much determined by presentation \& proposal but narrow down
+further (\& choose supervisor?)
+
+\subsection*{Quarto Features Incompatible with LaTeX
+(Below)}\label{quarto-features-incompatible-with-latex-below}
 
 \bookmarksetup{startatroot}
 
@@ -5070,597 +5754,6 @@ indefinitely.
 
 \bookmarksetup{startatroot}
 
-\chapter*{Frontmatter}\label{frontmatter}
-\addcontentsline{toc}{chapter}{Frontmatter}
-
-\markboth{Frontmatter}{Frontmatter}
-
-\subsection*{\texorpdfstring{\textbf{Acknowledgments}}{Acknowledgments}}\label{acknowledgments}
-\addcontentsline{toc}{subsection}{\textbf{Acknowledgments}}
-
-\begin{itemize}
-\tightlist
-\item
-  Academic supervisor (Prof.~Timo Speith) and institution (University of
-  Bayreuth)\\
-\item
-  Research collaborators, especially those connected to the original
-  MTAIR project\\
-\item
-  Technical advisors who provided feedback on implementation aspects\\
-\item
-  Funding sources and those who provided computational resources or API
-  access\\
-\item
-  Personal supporters who enabled the research through encouragement and
-  feedback
-\end{itemize}
-
-\bookmarksetup{startatroot}
-
-\chapter*{Prefatory Apparatus: Illustrations and Terminology --- Quick
-References}\label{prefatory-apparatus-illustrations-and-terminology-quick-references}
-\addcontentsline{toc}{chapter}{Prefatory Apparatus: Illustrations and
-Terminology --- Quick References}
-
-\markboth{Prefatory Apparatus: Illustrations and Terminology --- Quick
-References}{Prefatory Apparatus: Illustrations and Terminology --- Quick
-References}
-
-\section*{List of Tables}\label{list-of-tables}
-\addcontentsline{toc}{section}{List of Tables}
-
-\markright{List of Tables}
-
-Table 1: Table name
-
-Table 2: Table name
-
-Table 3: Table name
-
-\begin{itemize}
-\tightlist
-\item
-  Figure 1.1: The coordination crisis in AI governance - visualization
-  of fragmentation\\
-\item
-  Figure 2.1: The Carlsmith model - DAG representation\\
-\item
-  Figure 3.1: Research design overview - workflow diagram\\
-\item
-  Figure 3.2: From natural language to BayesDown - transformation
-  process\\
-\item
-  Figure 4.1: ARPA system architecture - component diagram\\
-\item
-  Figure 4.2: Visualization of Rain-Sprinkler-Grass\_Wet Bayesian
-  network - screenshot\\
-\item
-  Figure 5.1: Extraction quality metrics - comparative chart\\
-\item
-  Figure 5.2: Comparative analysis of AI governance worldviews - network
-  visualization\\
-\item
-  Table 2.1: Comparison of approaches to AI risk modeling\\
-\item
-  Table 3.1: Probabilistic translation guide for qualitative
-  expressions\\
-\item
-  Table 4.1: System component responsibilities and interactions\\
-\item
-  Table 5.1: Policy impact evaluation results - summary metrics
-\end{itemize}
-
-\section*{List of Graphics \& Figures}\label{list-of-graphics-figures}
-\addcontentsline{toc}{section}{List of Graphics \& Figures}
-
-\markright{List of Graphics \& Figures}
-
-\section*{List of Abbreviations}\label{list-of-abbreviations}
-\addcontentsline{toc}{section}{List of Abbreviations}
-
-\markright{List of Abbreviations}
-
-esp.~especially
-
-f., ff.~following
-
-incl.~including
-
-p., pp.~page(s)
-
-MAD Mutually Assured Destruction
-
-\begin{itemize}
-\tightlist
-\item
-  AI - Artificial Intelligence\\
-\item
-  AGI - Artificial General Intelligence\\
-\item
-  ARPA - AI Risk Pathway Analyzer\\
-\item
-  DAG - Directed Acyclic Graph\\
-\item
-  LLM - Large Language Model\\
-\item
-  MTAIR - Modeling Transformative AI Risks\\
-\item
-  P(Doom) - Probability of existential catastrophe from misaligned AI\\
-\item
-  CPT - Conditional Probability Table
-\end{itemize}
-
-\section*{Glossary}\label{glossary}
-
-\markright{Glossary}
-
-\begin{itemize}
-\tightlist
-\item
-  \textbf{Argument mapping}: A method for visually representing the
-  structure of arguments\\
-\item
-  \textbf{BayesDown}: An extension of ArgDown that incorporates
-  probabilistic information\\
-\item
-  \textbf{Bayesian network}: A probabilistic graphical model
-  representing variables and their dependencies\\
-\item
-  \textbf{Conditional probability}: The probability of an event given
-  that another event has occurred\\
-\item
-  \textbf{Directed Acyclic Graph (DAG)}: A graph with directed edges and
-  no cycles\\
-\item
-  \textbf{Existential risk}: Risk of permanent curtailment of humanity's
-  potential\\
-\item
-  \textbf{Power-seeking AI}: AI systems with instrumental incentives to
-  acquire resources and power\\
-\item
-  \textbf{Prediction market}: A market where participants trade
-  contracts that resolve based on future events\\
-\item
-  \textbf{d-separation}: A criterion for identifying conditional
-  independence relationships in Bayesian networks\\
-\item
-  \textbf{Monte Carlo sampling}: A computational technique using random
-  sampling to obtain numerical results
-\end{itemize}
-
-\section*{\texorpdfstring{Checklists }{Checklists }}\label{checklists}
-\addcontentsline{toc}{section}{Checklists }
-
-\markright{Checklists }
-
-\section*{``Usual paper requirements''}\label{usual-paper-requirements}
-\addcontentsline{toc}{section}{``Usual paper requirements''}
-
-\markright{``Usual paper requirements''}
-
-\begin{itemize}
-\tightlist
-\item
-  introduce all terminology
-
-  \begin{itemize}
-  \tightlist
-  \item
-    go through text, make sure all terms are defined, explained (and
-    added to the list of Abbr.) when first mentioned\\
-  \end{itemize}
-\item
-  readership is intelligent and interested but has no prior knowledge
-\end{itemize}
-
-\section*{}\label{section}
-\addcontentsline{toc}{section}{}
-
-\markright{}
-
-\section*{(Format:) \textasciitilde{} Anything that makes it easier to
-understand}\label{format-anything-that-makes-it-easier-to-understand}
-\addcontentsline{toc}{section}{(Format:) \textasciitilde{} Anything that
-makes it easier to understand}
-
-\markright{(Format:) \textasciitilde{} Anything that makes it easier to
-understand}
-
-\begin{itemize}
-\tightlist
-\item
-  short sentences\\
-\item
-  paragraphs (one idea per paragraph)\\
-\item
-  simplicity\\
-\item
-  !limit use of passive voice!\\
-\item
-  use active voice, even prefer I over we!\\
-\item
-  minimise use of ``zombi nouns'' (don't turn verbs/adjectives to
-  nouns!)\\
-\item
-  ``find words that can be cut''
-\end{itemize}
-
--- the paper can \textbf{focus} on \textbf{one aspect of the
-presentation}
-
--- ``open door policy'' for (content) questions
-
-\textasciitilde{} demonstrate ability for novel research
-
--- ``solve research question with the tools accessible to you''
-
--- ``show something that has not been shown before / should be
-publishable in principle''
-
--- new idea (or criticism) ``in this field''
-
--- Outline idea THEN reading with a purpose (answering concrete
-questions)
-
--- ``Only'' confirm that nobody has published the exact same idea on the
-same topic
-
--- pretty much determined by presentation \& proposal but narrow down
-further (\& choose supervisor?)
-
-\subsection*{Quarto Features Incompatible with LaTeX
-(Below)}\label{quarto-features-incompatible-with-latex-below}
-
-\bookmarksetup{startatroot}
-
-\chapter{Quarto Syntax}\label{sec-syntax}
-
-\begin{Shaded}
-\begin{Highlighting}[]
-\ImportTok{import}\NormalTok{ pandas }\ImportTok{as}\NormalTok{ pd}
-\BuiltInTok{print}\NormalTok{(}\StringTok{"AMTAIR is working!"}\NormalTok{)}
-\end{Highlighting}
-\end{Shaded}
-
-\begin{verbatim}
-AMTAIR is working!
-\end{verbatim}
-
-\section{For Callouts}\label{for-callouts}
-
-Quarto's native callouts work without additional packages:
-
-\begin{tcolorbox}[enhanced jigsaw, toprule=.15mm, title=\textcolor{quarto-callout-note-color}{\faInfo}\hspace{0.5em}{Important Note2}, coltitle=black, opacityback=0, bottomtitle=1mm, colback=white, leftrule=.75mm, bottomrule=.15mm, colframe=quarto-callout-note-color-frame, left=2mm, toptitle=1mm, breakable, arc=.35mm, colbacktitle=quarto-callout-note-color!10!white, titlerule=0mm, rightrule=.15mm, opacitybacktitle=0.6]
-
-This renders perfectly in both HTML and PDF.2
-
-\end{tcolorbox}
-
-Also for markdown:
-
-\begin{Shaded}
-\begin{Highlighting}[]
-\NormalTok{::: \{.render\_as\_markdown\_example\}}
-\FunctionTok{\#\# Markdown Heading}
-\NormalTok{This renders perfectly in both HTML and PDF but as markdown "plain text"}
-\NormalTok{:::}
-\end{Highlighting}
-\end{Shaded}
-
-\section{Section Cross-References}\label{sec-crossref}
-
-Refer to sections like: Section~\ref{sec-adaptive-governance} and
-Section~\ref{sec-crossref}
-
-\begin{Shaded}
-\begin{Highlighting}[]
-\AnnotationTok{Caveat:}\CommentTok{ refering to sections with @sec{-}HEADINGS works only for sections with:}
-\FunctionTok{\#\# Heading \{\#sec{-}HEADINGS\}}
-\NormalTok{It does not work for sections with ".unnumbered and/or .unlisted":}
-\FunctionTok{\#\# Heading \{\#sec{-}HEADINGS .unnumbered .unlisted\}}
-\end{Highlighting}
-\end{Shaded}
-
-\section{Reference or Embed Code from .ipynb
-files}\label{reference-or-embed-code-from-.ipynb-files}
-
-\subsubsection{Code chunks from .ipynb notebooks can be embedded in the
-.qmd text
-with:}\label{code-chunks-from-.ipynb-notebooks-can-be-embedded-in-the-.qmd-text-with}
-
-\begin{Shaded}
-\begin{Highlighting}[]
-\NormalTok{\{\{\textless{} embed /AMTAIR\_Prototype/data/example\_carlsmith/AMTAIR\_Prototype\_example\_carlsmith.ipynb\#my\_code\_cell\_test \textgreater{}\}\}}
-\end{Highlighting}
-\end{Shaded}
-
-\subsubsection{which produces the output of executing the code
-cell:}\label{which-produces-the-output-of-executing-the-code-cell}
-
-\phantomsection\label{my_code_cell_test}
-\begin{verbatim}
-Connecting to repository: https://raw.githubusercontent.com/SingularitySmith/AMTAIR_Prototype/main/data/example_carlsmith/
-Attempting to load: https://raw.githubusercontent.com/SingularitySmith/AMTAIR_Prototype/main/data/example_carlsmith/ArgDown.md
-✅ Successfully connected to repository and loaded test files.
-[Existential_Catastrophe]: The destruction of humanity's long-term potential due to AI systems we've lost control over. {"instantiations": ["existential_catastrophe_TRUE", "existential_catastrophe_FALSE"]}
-- [Human_Disempowerment]: Permanent and collective disempowerment of humanity relative to AI systems. {"instantiations": ["human_disempowerment_TRUE", "human_disempowerment_FALSE"]}
-    - [Scale_Of_Power_Seeking]: Power-seeking by AI systems scaling to the point of permanently disempowering all of humanity. {"instantiations": ["scale_of_power_seeking_TRUE", "scale_of_power_seeking_FALSE"]}
-        - [Misaligned_Power_Seeking]: Deployed AI systems seeking power in unintended and high-impact ways due to problems with their objectives. {"instantiations": ["misaligned_power_seeking_TRUE", "misaligned_power_seeking_FALSE"]}
-            - [APS_Systems]: AI systems with advanced capabilities, agentic planning, and strategic awareness. {"instantiations": ["aps_systems_TRUE", "aps_systems_FALSE"]}
-                - [Advanced_AI_Capability]: AI systems that outperform humans on tasks that grant significant power in the world. {"instantiations": ["advanced_ai_capability_TRUE", "advanced_ai_capability_FALSE"]}
-                - [Agentic_Planning]: AI systems making and executing plans based on world models to achieve objectives. {"instantiations": ["agentic_planning_TRUE", "agentic_planning_FALSE"]}
-                - [Strategic_Awareness]: AI systems with models accurately representing power dynamics with humans. {"instantiations": ["strategic_awareness_TRUE", "strategic_awareness_FALSE"]}
-            - [Difficulty_Of_Alignment]: It is harder to build aligned systems than misaligned systems that are attractive to deploy. {"instantiations": ["difficulty_of_alignment_TRUE", "difficulty_of_alignment_FALSE"]}
-                - [Instrumental_Convergence]: AI systems with misaligned objectives tend to seek power as an instrumental goal. {"instantiations": ["instrumental_convergence_TRUE", "instrumental_convergence_FALSE"]}
-                - [Problems_With_Proxies]: Optimizing for proxy objectives breaks correlations with intended goals. {"instantiations": ["problems_with_proxies_TRUE", "problems_with_proxies_FALSE"]}
-                - [Problems_With_Search]: Search processes can yield systems pursuing different objectives than intended. {"instantiations": ["problems_with_search_TRUE", "problems_with_search_FALSE"]}
-            - [Deployment_Decisions]: Decisions to deploy potentially misaligned AI systems. {"instantiations": ["deployment_decisions_DEPLOY", "deployment_decisions_WITHHOLD"]}
-                - [Incentives_To_Build_APS]: Strong incentives to build and deploy APS systems. {"instantiations": ["incentives_to_build_aps_STRONG", "incentives_to_build_aps_WEAK"]}
-                    - [Usefulness_Of_APS]: APS systems are very useful for many valuable tasks. {"instantiations": ["usefulness_of_aps_HIGH", "usefulness_of_aps_LOW"]}
-                    - [Competitive_Dynamics]: Competitive pressures between AI developers. {"instantiations": ["competitive_dynamics_STRONG", "competitive_dynamics_WEAK"]}
-                - [Deception_By_AI]: AI systems deceiving humans about their true objectives. {"instantiations": ["deception_by_ai_TRUE", "deception_by_ai_FALSE"]}
-        - [Corrective_Feedback]: Human society implementing corrections after observing problems. {"instantiations": ["corrective_feedback_EFFECTIVE", "corrective_feedback_INEFFECTIVE"]}
-            - [Warning_Shots]: Observable failures in weaker systems before catastrophic risks. {"instantiations": ["warning_shots_OBSERVED", "warning_shots_UNOBSERVED"]}
-            - [Rapid_Capability_Escalation]: AI capabilities escalating very rapidly, allowing little time for correction. {"instantiations": ["rapid_capability_escalation_TRUE", "rapid_capability_escalation_FALSE"]}
-[Barriers_To_Understanding]: Difficulty in understanding the internal workings of advanced AI systems. {"instantiations": ["barriers_to_understanding_HIGH", "barriers_to_understanding_LOW"]}
-- [Misaligned_Power_Seeking]: Deployed AI systems seeking power in unintended and high-impact ways due to problems with their objectives. {"instantiations": ["misaligned_power_seeking_TRUE", "misaligned_power_seeking_FALSE"]}
-[Adversarial_Dynamics]: Potentially adversarial relationships between humans and power-seeking AI. {"instantiations": ["adversarial_dynamics_TRUE", "adversarial_dynamics_FALSE"]}
-- [Misaligned_Power_Seeking]: Deployed AI systems seeking power in unintended and high-impact ways due to problems with their objectives. {"instantiations": ["misaligned_power_seeking_TRUE", "misaligned_power_seeking_FALSE"]}
-[Stakes_Of_Error]: The escalating impact of mistakes with power-seeking AI systems. {"instantiations": ["stakes_of_error_HIGH", "stakes_of_error_LOW"]}
-- [Misaligned_Power_Seeking]: Deployed AI systems seeking power in unintended and high-impact ways due to problems with their objectives. {"instantiations": ["misaligned_power_seeking_TRUE", "misaligned_power_seeking_FALSE"]}
-\end{verbatim}
-
-\subsubsection{including `echo=true' renders the code of the
-cell:}\label{including-echotrue-renders-the-code-of-the-cell}
-
-\begin{Shaded}
-\begin{Highlighting}[]
-\NormalTok{\{\{\textless{} embed /AMTAIR\_Prototype/data/example\_carlsmith/AMTAIR\_Prototype\_example\_carlsmith.ipynb\#my\_code\_cell\_test echo=true \textgreater{}\}\}}
-\end{Highlighting}
-\end{Shaded}
-
-\phantomsection\label{my_code_cell_test}
-\begin{Shaded}
-\begin{Highlighting}[]
-\CommentTok{\# @title 0.2 {-}{-}{-} Connect to GitHub Repository {-}{-}{-} Load Files}
-
-\CommentTok{"""}
-\CommentTok{BLOCK PURPOSE: Establishes connection to the AMTAIR GitHub repository and provides}
-\CommentTok{functions to load example data files for processing.}
-
-\CommentTok{This block creates a reusable function for accessing files from the project\textquotesingle{}s}
-\CommentTok{GitHub repository, enabling access to example files like the rain{-}sprinkler{-}lawn}
-\CommentTok{Bayesian network that serves as our canonical test case.}
-
-\CommentTok{DEPENDENCIES: requests library, io library}
-\CommentTok{OUTPUTS: load\_file\_from\_repo function and test file loads}
-\CommentTok{"""}
-
-\ImportTok{from}\NormalTok{ requests.exceptions }\ImportTok{import}\NormalTok{ HTTPError}
-
-\CommentTok{\# Specify the base repository URL for the AMTAIR project}
-\NormalTok{repo\_url }\OperatorTok{=} \StringTok{"https://raw.githubusercontent.com/SingularitySmith/AMTAIR\_Prototype/main/data/example\_carlsmith/"}
-\BuiltInTok{print}\NormalTok{(}\SpecialStringTok{f"Connecting to repository: }\SpecialCharTok{\{}\NormalTok{repo\_url}\SpecialCharTok{\}}\SpecialStringTok{"}\NormalTok{)}
-
-\KeywordTok{def}\NormalTok{ load\_file\_from\_repo(relative\_path):}
-    \CommentTok{"""}
-\CommentTok{    Loads a file from the specified GitHub repository using a relative path.}
-
-\CommentTok{    Args:}
-\CommentTok{        relative\_path (str): Path to the file relative to the repo\_url}
-
-\CommentTok{    Returns:}
-\CommentTok{        For CSV/JSON: pandas DataFrame}
-\CommentTok{        For MD: string containing file contents}
-
-\CommentTok{    Raises:}
-\CommentTok{        HTTPError: If file not found or other HTTP error occurs}
-\CommentTok{        ValueError: If unsupported file type is requested}
-\CommentTok{    """}
-\NormalTok{    file\_url }\OperatorTok{=}\NormalTok{ repo\_url }\OperatorTok{+}\NormalTok{ relative\_path}
-    \BuiltInTok{print}\NormalTok{(}\SpecialStringTok{f"Attempting to load: }\SpecialCharTok{\{}\NormalTok{file\_url}\SpecialCharTok{\}}\SpecialStringTok{"}\NormalTok{)}
-
-    \CommentTok{\# Fetch the file content from GitHub}
-\NormalTok{    response }\OperatorTok{=}\NormalTok{ requests.get(file\_url)}
-
-    \CommentTok{\# Check for bad status codes with enhanced error messages}
-    \ControlFlowTok{if}\NormalTok{ response.status\_code }\OperatorTok{==} \DecValTok{404}\NormalTok{:}
-        \ControlFlowTok{raise}\NormalTok{ HTTPError(}\SpecialStringTok{f"File not found at URL: }\SpecialCharTok{\{}\NormalTok{file\_url}\SpecialCharTok{\}}\SpecialStringTok{. Check the file path/name and ensure the file is publicly accessible."}\NormalTok{, response}\OperatorTok{=}\NormalTok{response)}
-    \ControlFlowTok{else}\NormalTok{:}
-\NormalTok{        response.raise\_for\_status()  }\CommentTok{\# Raise for other error codes}
-
-    \CommentTok{\# Convert response to file{-}like object}
-\NormalTok{    file\_object }\OperatorTok{=}\NormalTok{ io.StringIO(response.text)}
-
-    \CommentTok{\# Process different file types appropriately}
-    \ControlFlowTok{if}\NormalTok{ relative\_path.endswith(}\StringTok{".csv"}\NormalTok{):}
-        \ControlFlowTok{return}\NormalTok{ pd.read\_csv(file\_object)  }\CommentTok{\# Return DataFrame for CSV}
-    \ControlFlowTok{elif}\NormalTok{ relative\_path.endswith(}\StringTok{".json"}\NormalTok{):}
-        \ControlFlowTok{return}\NormalTok{ pd.read\_json(file\_object)  }\CommentTok{\# Return DataFrame for JSON}
-    \ControlFlowTok{elif}\NormalTok{ relative\_path.endswith(}\StringTok{".md"}\NormalTok{):}
-        \ControlFlowTok{return}\NormalTok{ file\_object.read()  }\CommentTok{\# Return raw content for MD files}
-    \ControlFlowTok{else}\NormalTok{:}
-        \ControlFlowTok{raise} \PreprocessorTok{ValueError}\NormalTok{(}\SpecialStringTok{f"Unsupported file type: }\SpecialCharTok{\{}\NormalTok{relative\_path}\SpecialCharTok{.}\NormalTok{split(}\StringTok{\textquotesingle{}.\textquotesingle{}}\NormalTok{)[}\OperatorTok{{-}}\DecValTok{1}\NormalTok{]}\SpecialCharTok{\}}\SpecialStringTok{. Add support in the GitHub Connection section of this notebook."}\NormalTok{)}
-
-\CommentTok{\# Load example files to test connection}
-\ControlFlowTok{try}\NormalTok{:}
-    \CommentTok{\# Load the extracted data CSV file}
-\CommentTok{\#    df = load\_file\_from\_repo("extracted\_data.csv")}
-
-    \CommentTok{\# Load the ArgDown test text}
-\NormalTok{    md\_content }\OperatorTok{=}\NormalTok{ load\_file\_from\_repo(}\StringTok{"ArgDown.md"}\NormalTok{)}
-
-    \BuiltInTok{print}\NormalTok{(}\StringTok{"✅ Successfully connected to repository and loaded test files."}\NormalTok{)}
-\ControlFlowTok{except} \PreprocessorTok{Exception} \ImportTok{as}\NormalTok{ e:}
-    \BuiltInTok{print}\NormalTok{(}\SpecialStringTok{f"❌ Error loading files: }\SpecialCharTok{\{}\BuiltInTok{str}\NormalTok{(e)}\SpecialCharTok{\}}\SpecialStringTok{"}\NormalTok{)}
-    \BuiltInTok{print}\NormalTok{(}\StringTok{"Please check your internet connection and the repository URL."}\NormalTok{)}
-
-\CommentTok{\# Display preview of loaded content (commented out to avoid cluttering output)}
-\BuiltInTok{print}\NormalTok{(md\_content)}
-\end{Highlighting}
-\end{Shaded}
-
-\begin{verbatim}
-Connecting to repository: https://raw.githubusercontent.com/SingularitySmith/AMTAIR_Prototype/main/data/example_carlsmith/
-Attempting to load: https://raw.githubusercontent.com/SingularitySmith/AMTAIR_Prototype/main/data/example_carlsmith/ArgDown.md
-✅ Successfully connected to repository and loaded test files.
-[Existential_Catastrophe]: The destruction of humanity's long-term potential due to AI systems we've lost control over. {"instantiations": ["existential_catastrophe_TRUE", "existential_catastrophe_FALSE"]}
-- [Human_Disempowerment]: Permanent and collective disempowerment of humanity relative to AI systems. {"instantiations": ["human_disempowerment_TRUE", "human_disempowerment_FALSE"]}
-    - [Scale_Of_Power_Seeking]: Power-seeking by AI systems scaling to the point of permanently disempowering all of humanity. {"instantiations": ["scale_of_power_seeking_TRUE", "scale_of_power_seeking_FALSE"]}
-        - [Misaligned_Power_Seeking]: Deployed AI systems seeking power in unintended and high-impact ways due to problems with their objectives. {"instantiations": ["misaligned_power_seeking_TRUE", "misaligned_power_seeking_FALSE"]}
-            - [APS_Systems]: AI systems with advanced capabilities, agentic planning, and strategic awareness. {"instantiations": ["aps_systems_TRUE", "aps_systems_FALSE"]}
-                - [Advanced_AI_Capability]: AI systems that outperform humans on tasks that grant significant power in the world. {"instantiations": ["advanced_ai_capability_TRUE", "advanced_ai_capability_FALSE"]}
-                - [Agentic_Planning]: AI systems making and executing plans based on world models to achieve objectives. {"instantiations": ["agentic_planning_TRUE", "agentic_planning_FALSE"]}
-                - [Strategic_Awareness]: AI systems with models accurately representing power dynamics with humans. {"instantiations": ["strategic_awareness_TRUE", "strategic_awareness_FALSE"]}
-            - [Difficulty_Of_Alignment]: It is harder to build aligned systems than misaligned systems that are attractive to deploy. {"instantiations": ["difficulty_of_alignment_TRUE", "difficulty_of_alignment_FALSE"]}
-                - [Instrumental_Convergence]: AI systems with misaligned objectives tend to seek power as an instrumental goal. {"instantiations": ["instrumental_convergence_TRUE", "instrumental_convergence_FALSE"]}
-                - [Problems_With_Proxies]: Optimizing for proxy objectives breaks correlations with intended goals. {"instantiations": ["problems_with_proxies_TRUE", "problems_with_proxies_FALSE"]}
-                - [Problems_With_Search]: Search processes can yield systems pursuing different objectives than intended. {"instantiations": ["problems_with_search_TRUE", "problems_with_search_FALSE"]}
-            - [Deployment_Decisions]: Decisions to deploy potentially misaligned AI systems. {"instantiations": ["deployment_decisions_DEPLOY", "deployment_decisions_WITHHOLD"]}
-                - [Incentives_To_Build_APS]: Strong incentives to build and deploy APS systems. {"instantiations": ["incentives_to_build_aps_STRONG", "incentives_to_build_aps_WEAK"]}
-                    - [Usefulness_Of_APS]: APS systems are very useful for many valuable tasks. {"instantiations": ["usefulness_of_aps_HIGH", "usefulness_of_aps_LOW"]}
-                    - [Competitive_Dynamics]: Competitive pressures between AI developers. {"instantiations": ["competitive_dynamics_STRONG", "competitive_dynamics_WEAK"]}
-                - [Deception_By_AI]: AI systems deceiving humans about their true objectives. {"instantiations": ["deception_by_ai_TRUE", "deception_by_ai_FALSE"]}
-        - [Corrective_Feedback]: Human society implementing corrections after observing problems. {"instantiations": ["corrective_feedback_EFFECTIVE", "corrective_feedback_INEFFECTIVE"]}
-            - [Warning_Shots]: Observable failures in weaker systems before catastrophic risks. {"instantiations": ["warning_shots_OBSERVED", "warning_shots_UNOBSERVED"]}
-            - [Rapid_Capability_Escalation]: AI capabilities escalating very rapidly, allowing little time for correction. {"instantiations": ["rapid_capability_escalation_TRUE", "rapid_capability_escalation_FALSE"]}
-[Barriers_To_Understanding]: Difficulty in understanding the internal workings of advanced AI systems. {"instantiations": ["barriers_to_understanding_HIGH", "barriers_to_understanding_LOW"]}
-- [Misaligned_Power_Seeking]: Deployed AI systems seeking power in unintended and high-impact ways due to problems with their objectives. {"instantiations": ["misaligned_power_seeking_TRUE", "misaligned_power_seeking_FALSE"]}
-[Adversarial_Dynamics]: Potentially adversarial relationships between humans and power-seeking AI. {"instantiations": ["adversarial_dynamics_TRUE", "adversarial_dynamics_FALSE"]}
-- [Misaligned_Power_Seeking]: Deployed AI systems seeking power in unintended and high-impact ways due to problems with their objectives. {"instantiations": ["misaligned_power_seeking_TRUE", "misaligned_power_seeking_FALSE"]}
-[Stakes_Of_Error]: The escalating impact of mistakes with power-seeking AI systems. {"instantiations": ["stakes_of_error_HIGH", "stakes_of_error_LOW"]}
-- [Misaligned_Power_Seeking]: Deployed AI systems seeking power in unintended and high-impact ways due to problems with their objectives. {"instantiations": ["misaligned_power_seeking_TRUE", "misaligned_power_seeking_FALSE"]}
-\end{verbatim}
-
-Link:
-
-Full Notebooks are embedded in the Appendix through the \_quarto.yml
-file with:
-
-\section*{Figures}\label{sec-figures1}
-
-\markright{Figures}
-
-\begin{figure}
-
-\centering{
-
-\href{https://github.com/VJMeyer/submission}{\includegraphics[width=1\linewidth,height=\textheight,keepaspectratio]{images/pipeline.png}}
-
-}
-
-\caption[Five-step AMTAIR automation pipeline from PDFs to Bayesian
-networks]{\label{fig-automation_pipeline}AMTAIR Automation Pipeline from
-\textcite{bucknall2022}}
-
-\end{figure}%
-
-Testing crossreferencing grapics Figure~\ref{fig-automation_pipeline}.
-
-\begin{figure}
-
-\includegraphics[width=0.3\linewidth,height=\textheight,keepaspectratio]{images/cover.png}
-
-\caption[Short 2 caption]{\label{fig-testgraphic2}Caption/Title 2}
-
-\end{figure}%
-
-Testing crossreferencing grapics Figure~\ref{fig-testgraphic2}.
-
-\section*{Citations}\label{sec-citations}
-
-\markright{Citations}
-
-\textcite{soares2014}
-
-\autocite{soares2014} and \autocite{knuth1984}
-
-Blah Blah \autocites[see][33-35]{knuth1984}[also][chap.~1]{growiec2024}
-
-Blah Blah \autocite[33-35, 38-39 and passim]{knuth1984}
-
-Blah Blah \autocite{growiec2024,knuth1984}.
-
-Growiec says blah \autocite*{growiec2024}
-
-\section{Headings \& Potential Headings}\label{sec-heading}
-
-\texttt{verbatim\ code\ formatting\ for\ notes\ and\ ideas\ to\ be\ included\ (here)}
-
-\begin{verbatim}
-Also code blocks for more extensive notes and ideas to be included and checklists
-- test 1. 
-- test 2. 
-- test 3.
-2. second
-3. third
-\end{verbatim}
-
-\begin{quote}
-Blockquote formatting for ``Suggested Citations (e.g.~carlsmith 2024 on
-\ldots)'' and/or claims which require a citation (e.g.~claim x should be
-backed-up by a ciation from the literature)
-\end{quote}
-
-Here is an inline note.\footnote{Inlines notes are easier to write,
-  since you don't have to pick an identifier and move down to type the
-  note.}
-
-Here is a footnote reference,\footnote{Here is the footnote.}
-
-\renewcommand*{\labelitemi}{\textgreater}
-
-Here's some raw inline HTML:
-
-\begin{Shaded}
-\begin{Highlighting}[]
-\NormalTok{page 1}
-
-
-
-\NormalTok{page 2}
-\end{Highlighting}
-\end{Shaded}
-
-page 1
-
-\newpage{}
-
-page 2
-
-\begin{Shaded}
-\begin{Highlighting}[]
-\NormalTok{flowchart LR}
-\NormalTok{  A[Hard edge] {-}{-}\textgreater{} B(Round edge)}
-\NormalTok{  B {-}{-}\textgreater{} C\{Decision\}}
-\NormalTok{  C {-}{-}\textgreater{} D[Result one]}
-\NormalTok{  C {-}{-}\textgreater{} E[Result two]}
-\end{Highlighting}
-\end{Shaded}
-
-\includegraphics[width=6.88in,height=1.81in]{ref/references_files/figure-latex/mermaid-figure-1.png}
-
-Testing crossreferencing grapics Figure~\ref{fig-automation_pipeline}.
-See Chapter~\ref{sec-syntax} for more details on visualizing model
-diagnostics.
-
-\section{Formatting}\label{formatting}
-
-\hl{This text is highlighted}
-
-\ul{This text is underlined}
-
-\textsc{This text is smallcaps}
-
-\begin{landscape}
-
-This will appear in landscape.
-
-\end{landscape}
-
-\bookmarksetup{startatroot}
-
 \chapter*{Bibliography (References)}\label{bibliography-references}
 \addcontentsline{toc}{chapter}{Bibliography (References)}
 
@@ -5707,7 +5800,7 @@ Governance}
 
 \markright{Appendix D: Ethical Considerations and Governance}
 
-\chapter{```}\label{section-1}
+\chapter{```}\label{section}
 
 \section{title: AMTAIR Prototype Demonstration (Public Colab
 Notebook)}\label{title-amtair-prototype-demonstration-public-colab-notebook}

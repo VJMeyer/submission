@@ -56,8 +56,6 @@ number: false      # Exclude from section numbering
 
 
 
-
-
 <!-- ## Affidavit -->
 
 

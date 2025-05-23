@@ -1,17 +1,83 @@
-% AMTAIR Thesis Preamble - Absolute minimum
-% Trust Quarto for everything except institutional requirements
+% AMTAIR Thesis Preamble - Zero package conflicts
+% Only formatting commands, no package loading
 
-% Academic line spacing
+% Line spacing for academic work
 \usepackage{setspace}
 \onehalfspacing
 
-% Academic headers and footers only
+% Custom chapter formatting (remove "Chapter N" prefix) but unfortunately leaves blank space
+\usepackage{titlesec}
+\titleformat{\chapter}[display]
+  {\normalfont\huge\bfseries}  % format
+  {}                           % label (empty = no "Chapter N")
+  {0pt}                        % sep
+  {\Huge}                      % before-code
+
+
+
+% Page formatting and headers
 \usepackage{fancyhdr}
 \pagestyle{fancy}
 \fancyhf{}
 \fancyhead[LE,RO]{\slshape\nouppercase{\rightmark}}
 \fancyhead[LO,RE]{\slshape\nouppercase{\leftmark}}
 \fancyfoot[C]{\thepage}
+
+% % Fix page breaks after title page
+% \newcommand{\cleartitlepage}{
+%   \clearpage
+%   \thispagestyle{empty}
+%   \mbox{}
+%   \clearpage
+% }
+
+
+
+\renewcommand{\maketitle}{}
+
+%  Citation customization
+% \usepackage[style=authoryear,backend=biber,natbib=true]{biblatex}
+
+% % Custom citation commands for different contexts
+% \newcommand{\citeauthor}[1]{\textcite{#1}}           % Author (year)
+% \newcommand{\citeyear}[1]{(\citeyear*{#1})}         % (year)
+% \newcommand{\citealt}[1]{\citeauthor{#1} \citeyear{#1}}  % Author year
+% \newcommand{\citep}[1]{(\cite{#1})}                 # (Author, year)
+
+% Page reference styling
+% \DeclareFieldFormat{postnote}{#1}                    # No "p." prefix
+% \DeclareFieldFormat{multipostnote}{#1}               # No "pp." prefix
+
+
+% % Page numbering control
+% \usepackage{afterpage}
+
+% % Command to start front matter (roman numerals)
+% \newcommand{\frontmatter}{
+%   \cleardoublepage
+%   \pagenumbering{roman}
+%   \setcounter{page}{1}
+% }
+
+% % Command to start main matter (arabic numerals)
+% \newcommand{\mainmatter}{
+%   \cleardoublepage
+%   \pagenumbering{arabic}
+%   \setcounter{page}{1}
+% }
+
+% % Command to start back matter (continue arabic)
+% \newcommand{\backmatter}{
+%   \cleardoublepage
+%   % Keep arabic numbering but could change style if needed
+% }
+
+% % Suppress page numbers on title page
+% \newcommand{\titlepage}{
+%   \thispagestyle{empty}
+% }
+
+
 
 % Commands for custom title page
 % \newcommand{\thesistitle}{Automating the Modelling of Transformative Artificial Intelligence Risks}

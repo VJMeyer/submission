@@ -21,12 +21,12 @@ book:
   cover-image: images/cover.png
   chapters:
     - index.qmd
+    - chapters/Frontmatter.qmd
     - chapters/Introduction.qmd
     - chapters/Context.qmd
     - chapters/AMTAIR.qmd
     - chapters/Discussion.qmd
     - chapters/Conclusion.qmd
-    - chapters/Frontmatter.qmd
     - ref/references.qmd
   appendices:
     - chapters/Appendices.qmd
@@ -44,6 +44,13 @@ format:
     toc: true
     toc-depth: 5
     number-sections: true
+    code-links:
+      - text: Colab Notebook (Manual Link in .yml)
+        icon: file-code
+        href: https://colab.research.google.com/github/VJMeyer/submission/blob/main/AMTAIR_Prototype/data/example_carlsmith/AMTAIR_Prototype_example_carlsmith.ipynb
+      - text: GitHub Repository
+        icon: github
+        href: https://github.com/VJMeyer/submission
     crossref:
       sec-prefix: "Section"
       fig-prefix: "Figure"
@@ -56,6 +63,7 @@ format:
     pdf-engine: xelatex
     keep-tex: true
     toc: true
+    toc-title: Table of Contents
     lof: true
     lot: true
     number-sections: true
@@ -72,6 +80,10 @@ format:
       - margin=2.5cm
       - paper=a4paper
     fontsize: 11pt
+    # Chapter formatting
+    top-level-division: chapter
+    # Custom variables for chapter titles
+    block-headings: true
 
 bibliography: ref/MAref.bib
 
