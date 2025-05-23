@@ -3,6 +3,9 @@
 ```{python}
 #| echo: true
 #| eval: true
+#| fig-cap: "Locations of earthquakes on La Palma since 2017."
+#| fig-alt: "A scatterplot of earthquake locations plotting latitude 
+#|   against longitude."
 
 import pandas as pd
 print("AMTAIR is working!")

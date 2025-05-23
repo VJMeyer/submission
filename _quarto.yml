@@ -32,6 +32,10 @@ book:
     - chapters/Appendices.qmd
     - AMTAIR_Prototype/data/example_carlsmith/AMTAIR_Prototype_example_carlsmith.ipynb
 
+# notebook-view:
+#   - notebook: AMTAIR_Prototype/data/example_carlsmith/AMTAIR_Prototype_example_carlsmith.ipynb
+#     title: "Plots and Computations"
+#     url: https://colab.research.google.com/drive/12GsIPQ644SI4vkEEHiZn-Qqfbr-bD1__
 
 format:
   html:
