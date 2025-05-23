@@ -227,12 +227,12 @@
 \@ifpackageloaded{subcaption}{}{\usepackage{subcaption}}
 \makeatother
 \makeatletter
-\definecolor{QuartoInternalColor2}{rgb}{0,0,0}
-\definecolor{QuartoInternalColor1}{rgb}{0.70,0.17,0.19}
-\definecolor{QuartoInternalColor6}{rgb}{0.00,0.64,0.31}
-\definecolor{QuartoInternalColor5}{rgb}{0.00,0.40,0.79}
-\definecolor{QuartoInternalColor4}{rgb}{0.15,0.56,0.56}
 \definecolor{QuartoInternalColor3}{rgb}{0.00,0.45,0.15}
+\definecolor{QuartoInternalColor2}{rgb}{0,0,0}
+\definecolor{QuartoInternalColor4}{rgb}{0.15,0.56,0.56}
+\definecolor{QuartoInternalColor5}{rgb}{0.00,0.40,0.79}
+\definecolor{QuartoInternalColor6}{rgb}{0.00,0.64,0.31}
+\definecolor{QuartoInternalColor1}{rgb}{0.70,0.17,0.19}
 \makeatother
 \usepackage{bookmark}
 \IfFileExists{xurl.sty}{\usepackage{xurl}}{} % add URL line breaks if available
@@ -5322,7 +5322,7 @@ AMTAIR is working!
 
 Quarto's native callouts work without additional packages:
 
-\begin{tcolorbox}[enhanced jigsaw, toprule=.15mm, opacitybacktitle=0.6, colframe=quarto-callout-note-color-frame, rightrule=.15mm, leftrule=.75mm, toptitle=1mm, bottomtitle=1mm, colbacktitle=quarto-callout-note-color!10!white, titlerule=0mm, coltitle=black, title=\textcolor{quarto-callout-note-color}{\faInfo}\hspace{0.5em}{Important Note2}, opacityback=0, arc=.35mm, left=2mm, bottomrule=.15mm, breakable, colback=white]
+\begin{tcolorbox}[enhanced jigsaw, colframe=quarto-callout-note-color-frame, leftrule=.75mm, arc=.35mm, toprule=.15mm, opacityback=0, colbacktitle=quarto-callout-note-color!10!white, breakable, coltitle=black, colback=white, bottomtitle=1mm, toptitle=1mm, left=2mm, titlerule=0mm, title=\textcolor{quarto-callout-note-color}{\faInfo}\hspace{0.5em}{Important Note2}, rightrule=.15mm, bottomrule=.15mm, opacitybacktitle=0.6]
 
 This renders perfectly in both HTML and PDF.2
 
