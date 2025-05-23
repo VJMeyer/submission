@@ -21,15 +21,16 @@ book:
   cover-image: images/cover.png
   chapters:
     - index.qmd
-    - chapters/Frontmatter.qmd
-    - chapters/Introduction.qmd
-    - chapters/Context.qmd
-    - chapters/AMTAIR.qmd
-    - chapters/Discussion.qmd
-    - chapters/Conclusion.qmd
-    - ref/references.qmd
-  appendices:
-    - chapters/Appendices.qmd
+    - chapters/Outlines/Outline_12.qmd
+  #   - chapters/Frontmatter.qmd
+  #   - chapters/Introduction.qmd
+  #   - chapters/Context.qmd
+  #   - chapters/AMTAIR.qmd
+  #   - chapters/Discussion.qmd
+  #   - chapters/Conclusion.qmd
+  #   - ref/references.qmd
+  # appendices:
+  #   - chapters/Appendices.qmd
     - AMTAIR_Prototype/data/example_carlsmith/AMTAIR_Prototype_example_carlsmith.ipynb
 
 # notebook-view:
