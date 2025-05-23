@@ -32,9 +32,9 @@ and 2. ground each with existing literature -->
 
 <!-- [ ] Expand this section to ~29% of total text (approximately 8700 words) -->
 
-{{< include Background.md >}} 
+{{< include 2.1.Background.md >}} 
 
-{{< include Methodology.md >}}
+{{< include 2.2.Methodology.md >}}
 
 
 [![AMTAIR Automation Pipeline from CITATION](/images/pipeline.png){

@@ -19,6 +19,16 @@ book:
   downloads: [pdf, epub]
   sharing: [twitter, facebook]
   cover-image: images/cover.png
+  # page-footer: "Copyright 2021, Norah Jones"
+  # page-footer: 
+  #   left: "Copyright 2025, Valentin Meyer --- <!-- [ ] Consider adding a footer-->" 
+  #   border: false
+  #   background: light
+  #   right: 
+  #     - icon: github
+  #       href: https://github.com/
+  #     - icon: twitter 
+  #       href: https://twitter.com/ 
   chapters:
     - index.qmd
     # - chapters/Outlines/Outline_12.qmd

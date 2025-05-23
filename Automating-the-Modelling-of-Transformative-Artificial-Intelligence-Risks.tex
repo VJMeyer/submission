@@ -64,6 +64,7 @@
   \newcommand{\xxxSubParagraphNoStar}[1]{\oldsubparagraph{#1}\mbox{}}
 \fi
 \makeatother
+\usepackage{fancyvrb}
 
 \usepackage{color}
 \usepackage{fancyvrb}
@@ -302,16 +303,17 @@
 \@ifpackageloaded{subcaption}{}{\usepackage{subcaption}}
 \makeatother
 \makeatletter
-\definecolor{QuartoInternalColor1}{rgb}{0.70,0.17,0.19}
-\definecolor{QuartoInternalColor3}{rgb}{0.00,0.45,0.15}
-\definecolor{QuartoInternalColor2}{rgb}{0,0,0}
-\definecolor{QuartoInternalColor6}{rgb}{0.00,0.64,0.31}
 \definecolor{QuartoInternalColor4}{rgb}{0.15,0.56,0.56}
+\definecolor{QuartoInternalColor6}{rgb}{0.00,0.64,0.31}
 \definecolor{QuartoInternalColor5}{rgb}{0.00,0.40,0.79}
+\definecolor{QuartoInternalColor3}{rgb}{0.00,0.45,0.15}
+\definecolor{QuartoInternalColor1}{rgb}{0.70,0.17,0.19}
+\definecolor{QuartoInternalColor2}{rgb}{0,0,0}
 \makeatother
 \usepackage{bookmark}
 \IfFileExists{xurl.sty}{\usepackage{xurl}}{} % add URL line breaks if available
 \urlstyle{same}
+\VerbatimFootnotes % allow verbatim text in footnotes
 \hypersetup{
   pdftitle={Automating the Modelling of Transformative Artificial Intelligence Risks},
   pdfauthor={Valentin Jakob Meyer},
@@ -440,28 +442,12 @@ to Upscale Conditional Policy Assessments in Bayesian Networks on a Narrow Path 
 
 \markboth{Preface}{Preface}
 
-This is a Quarto book.
-
-To learn more about Quarto books visit
-\url{https://quarto.org/docs/books}.
-
 \bookmarksetup{startatroot}
 
-\chapter*{Abstract}\label{sec-Abstract}
-\addcontentsline{toc}{chapter}{Abstract}
+\chapter*{Quarto Syntax}\label{sec-syntax}
+\addcontentsline{toc}{chapter}{Quarto Syntax}
 
-\markboth{Abstract}{Abstract}
-
-\bookmarksetup{startatroot}
-
-\chapter*{Outline(s): Table of Contents}\label{sec-ToC}
-\addcontentsline{toc}{chapter}{Outline(s): Table of Contents}
-
-\markboth{Outline(s): Table of Contents}{Outline(s): Table of Contents}
-
-\bookmarksetup{startatroot}
-
-\chapter{Quarto Syntax}\label{sec-syntax}
+\markboth{Quarto Syntax}{Quarto Syntax}
 
 \begin{figure}
 
@@ -484,11 +470,22 @@ AMTAIR is working!
 
 \end{figure}%
 
-\section{For Callouts}\label{for-callouts}
+\section*{For Callouts}\label{for-callouts}
+\addcontentsline{toc}{section}{For Callouts}
+
+\markright{For Callouts}
 
 Quarto's native callouts work without additional packages:
 
-\begin{tcolorbox}[enhanced jigsaw, opacitybacktitle=0.6, breakable, bottomrule=.15mm, arc=.35mm, toprule=.15mm, colback=white, colbacktitle=quarto-callout-note-color!10!white, coltitle=black, opacityback=0, titlerule=0mm, colframe=quarto-callout-note-color-frame, leftrule=.75mm, bottomtitle=1mm, left=2mm, toptitle=1mm, title=\textcolor{quarto-callout-note-color}{\faInfo}\hspace{0.5em}{Important Note2}, rightrule=.15mm]
+Remember to connect this back to the research question
+
+\begin{tcolorbox}[enhanced jigsaw, left=2mm, opacitybacktitle=0.6, breakable, leftrule=.75mm, titlerule=0mm, opacityback=0, title=\textcolor{quarto-callout-note-color}{\faInfo}\hspace{0.5em}{Optional Title}, bottomrule=.15mm, toprule=.15mm, toptitle=1mm, bottomtitle=1mm, colback=white, coltitle=black, colbacktitle=quarto-callout-note-color!10!white, rightrule=.15mm, colframe=quarto-callout-note-color-frame, arc=.35mm]
+
+Content here
+
+\end{tcolorbox}
+
+\begin{tcolorbox}[enhanced jigsaw, left=2mm, opacitybacktitle=0.6, breakable, leftrule=.75mm, titlerule=0mm, opacityback=0, title=\textcolor{quarto-callout-note-color}{\faInfo}\hspace{0.5em}{Important Note2}, bottomrule=.15mm, toprule=.15mm, toptitle=1mm, bottomtitle=1mm, colback=white, coltitle=black, colbacktitle=quarto-callout-note-color!10!white, rightrule=.15mm, colframe=quarto-callout-note-color-frame, arc=.35mm]
 
 This renders perfectly in both HTML and PDF.2
 
@@ -505,10 +502,13 @@ Also for markdown:
 \end{Highlighting}
 \end{Shaded}
 
-\section{Section Cross-References}\label{sec-crossref}
+\section*{Section Cross-References}\label{sec-crossref}
+\addcontentsline{toc}{section}{Section Cross-References}
+
+\markright{Section Cross-References}
 
 Refer to sections like: Section~\ref{sec-adaptive-governance} and
-Section~\ref{sec-crossref}
+\textbf{?@sec-crossref}
 
 \begin{Shaded}
 \begin{Highlighting}[]
@@ -519,12 +519,18 @@ Section~\ref{sec-crossref}
 \end{Highlighting}
 \end{Shaded}
 
-\section{Reference or Embed Code from .ipynb
+\section*{Reference or Embed Code from .ipynb
 files}\label{reference-or-embed-code-from-.ipynb-files}
+\addcontentsline{toc}{section}{Reference or Embed Code from .ipynb
+files}
 
-\subsubsection{Code chunks from .ipynb notebooks can be embedded in the
+\markright{Reference or Embed Code from .ipynb files}
+
+\subsubsection*{Code chunks from .ipynb notebooks can be embedded in the
 .qmd text
 with:}\label{code-chunks-from-.ipynb-notebooks-can-be-embedded-in-the-.qmd-text-with}
+\addcontentsline{toc}{subsubsection}{Code chunks from .ipynb notebooks
+can be embedded in the .qmd text with:}
 
 \begin{Shaded}
 \begin{Highlighting}[]
@@ -532,8 +538,10 @@ with:}\label{code-chunks-from-.ipynb-notebooks-can-be-embedded-in-the-.qmd-text-
 \end{Highlighting}
 \end{Shaded}
 
-\subsubsection{which produces the output of executing the code
+\subsubsection*{which produces the output of executing the code
 cell:}\label{which-produces-the-output-of-executing-the-code-cell}
+\addcontentsline{toc}{subsubsection}{which produces the output of
+executing the code cell:}
 
 \phantomsection\label{my_code_cell_test}
 \begin{verbatim}
@@ -568,8 +576,10 @@ Attempting to load: https://raw.githubusercontent.com/SingularitySmith/AMTAIR_Pr
 - [Misaligned_Power_Seeking]: Deployed AI systems seeking power in unintended and high-impact ways due to problems with their objectives. {"instantiations": ["misaligned_power_seeking_TRUE", "misaligned_power_seeking_FALSE"]}
 \end{verbatim}
 
-\subsubsection{including `echo=true' renders the code of the
+\subsubsection*{including `echo=true' renders the code of the
 cell:}\label{including-echotrue-renders-the-code-of-the-cell}
+\addcontentsline{toc}{subsubsection}{including `echo=true' renders the
+code of the cell:}
 
 \begin{Shaded}
 \begin{Highlighting}[]
@@ -741,36 +751,49 @@ Blah Blah \autocite{growiec2024,knuth1984}.
 
 Growiec says blah \autocite*{growiec2024}
 
-\subsection{Narrative citations (author as
+\subsection*{Narrative citations (author as
 subject)}\label{narrative-citations-author-as-subject}
+\addcontentsline{toc}{subsection}{Narrative citations (author as
+subject)}
 
 \textcite{soares2014} argues that AI alignment requires\ldots{}
 
-\subsection{Parenthetical citations (supporting
+\subsection*{Parenthetical citations (supporting
 reference)}\label{parenthetical-citations-supporting-reference}
+\addcontentsline{toc}{subsection}{Parenthetical citations (supporting
+reference)}
 
 Recent work supports this view \autocite{soares2014,knuth1984}.
 
-\subsection{Author-only citation (when discussing the
+\subsection*{Author-only citation (when discussing the
 person)}\label{author-only-citation-when-discussing-the-person}
+\addcontentsline{toc}{subsection}{Author-only citation (when discussing
+the person)}
 
 As \autocite*{soares2014} demonstrates in their analysis\ldots{}
 
-\subsection{Year-only citation (when author already
+\subsection*{Year-only citation (when author already
 mentioned)}\label{year-only-citation-when-author-already-mentioned}
+\addcontentsline{toc}{subsection}{Year-only citation (when author
+already mentioned)}
 
 Soares \autocite*{soares2014} later revised this position.
 
-\subsection{Page-specific references}\label{page-specific-references}
+\subsection*{Page-specific references}\label{page-specific-references}
+\addcontentsline{toc}{subsection}{Page-specific references}
 
 The key insight appears in \autocite[45-67]{soares2014}.
 
-\subsection{Multiple works, different
+\subsection*{Multiple works, different
 pages}\label{multiple-works-different-pages}
+\addcontentsline{toc}{subsection}{Multiple works, different pages}
 
 This view is supported \autocites[23]{soares2014}[156-159]{knuth1984}.
 
-\section{Headings \& Potential Headings}\label{sec-heading}
+\section*{Headings \& Potential Headings}\label{sec-heading}
+\addcontentsline{toc}{section}{Headings \& Potential Headings}
+
+\markright{Headings \& Potential Headings}
 
 \texttt{verbatim\ code\ formatting\ for\ notes\ and\ ideas\ to\ be\ included\ (here)}
 
@@ -795,6 +818,11 @@ Here is an inline note.\footnote{Inlines notes are easier to write,
 
 Here is a footnote reference,\footnote{Here is the footnote.}
 
+\[
+ \def\RR{{\bf R}}
+ \def\bold#1{{\bf #1}}
+\]
+
 \renewcommand*{\labelitemi}{\textgreater}
 
 Here's some raw inline HTML:
@@ -813,7 +841,19 @@ page 1
 
 \newpage{}
 
-page 2
+page 2\footnote{Here's one with multiple blocks.
+
+  Subsequent paragraphs are indented to show that they belong to the
+  previous footnote.
+
+\begin{Verbatim}
+{ some.code }
+\end{Verbatim}
+
+  The whole paragraph can be indented, or just the first line. In this
+  way, multi-paragraph footnotes work like multi-paragraph list items.}
+
+This paragraph won't be part of the note, because it isn't indented.
 
 \begin{Shaded}
 \begin{Highlighting}[]
@@ -825,13 +865,16 @@ page 2
 \end{Highlighting}
 \end{Shaded}
 
-\includegraphics[width=6.88in,height=1.81in]{chapters/0.Frontmatter_files/figure-latex/mermaid-figure-1.png}
+\includegraphics[width=6.88in,height=1.81in]{index_files/figure-latex/mermaid-figure-1.png}
 
 Testing crossreferencing grapics Figure~\ref{fig-automation_pipeline}.
-See Chapter~\ref{sec-syntax} for more details on visualizing model
+See \textbf{?@sec-syntax} for more details on visualizing model
 diagnostics.
 
-\section{Formatting}\label{formatting}
+\section*{Formatting}\label{formatting}
+\addcontentsline{toc}{section}{Formatting}
+
+\markright{Formatting}
 
 \hl{This text is highlighted}
 
@@ -845,10 +888,402 @@ This will appear in landscape.
 
 \end{landscape}
 
-\section*{Frontmatter}\label{frontmatter}
-\addcontentsline{toc}{section}{Frontmatter}
+\bookmarksetup{startatroot}
 
-\markright{Frontmatter}
+\chapter*{Abstract}\label{sec-abstract}
+\addcontentsline{toc}{chapter}{Abstract}
+
+\markboth{Abstract}{Abstract}
+
+\begin{quote}
+The coordination crisis in AI governance presents a paradoxical
+challenge: unprecedented investment in AI safety coexists alongside
+fundamental coordination failures across technical, policy, and ethical
+domains. These divisions systematically increase existential risk. This
+thesis introduces AMTAIR (Automating Transformative AI Risk Modeling), a
+computational approach addressing this coordination failure by
+automating the extraction of probabilistic world models from AI safety
+literature using frontier language models. The system implements an
+end-to-end pipeline transforming unstructured text into interactive
+Bayesian networks through a novel two-stage extraction process that
+bridges communication gaps between stakeholders.
+\end{quote}
+
+\texttt{The\ coordination\ crisis\ in\ AI\ governance\ presents\ a\ paradoxical\ challenge:\ unprecedented\ investment\ in\ AI\ safety\ coexists\ alongside\ fundamental\ coordination\ failures\ across\ technical,\ policy,\ and\ ethical\ domains.\ These\ divisions\ systematically\ increase\ existential\ risk\ by\ creating\ safety\ gaps,\ misallocating\ resources,\ and\ fostering\ inconsistent\ approaches\ to\ interdependent\ problems.}
+
+\begin{quote}
+This thesis introduces AMTAIR (Automating Transformative AI Risk
+Modeling), a computational approach that addresses this coordination
+failure by automating the extraction of probabilistic world models from
+AI safety literature using frontier language models.
+\end{quote}
+
+\texttt{The\ AMTAIR\ system\ implements\ an\ end-to-end\ pipeline\ that\ transforms\ unstructured\ text\ into\ interactive\ Bayesian\ networks\ through\ a\ novel\ two-stage\ extraction\ process:\ first\ capturing\ argument\ structure\ in\ ArgDown\ format,\ then\ enhancing\ it\ with\ probability\ information\ in\ BayesDown.\ This\ approach\ bridges\ communication\ gaps\ between\ stakeholders\ by\ making\ implicit\ models\ explicit,\ enabling\ comparison\ across\ different\ worldviews,\ providing\ a\ common\ language\ for\ discussing\ probabilistic\ relationships,\ and\ supporting\ policy\ evaluation\ across\ diverse\ scenarios.}
+
+\subsection*{Quarto Features Previously Incompatible with LaTeX
+(Below)}\label{quarto-features-previously-incompatible-with-latex-below}
+
+\bookmarksetup{startatroot}
+
+\chapter{Remaining Edits}\label{remaining-edits}
+
+\section{Next Steps (High-Priority
+Recommendations)}\label{next-steps-high-priority-recommendations}
+
+\subsection{1. Add Visual Elements
+Immediately}\label{add-visual-elements-immediately}
+
+Create and embed 5-7 key diagrams: AMTAIR pipeline, coordination crisis
+visualization, ArgDown→BayesDown transformation, example Bayesian
+network, and convergence analysis heatmap. These will dramatically
+improve comprehension and professional presentation.
+
+\subsection{2. Develop Concrete Policy Analysis
+Section}\label{develop-concrete-policy-analysis-section}
+
+Add a dedicated subsection analyzing how AMTAIR would evaluate specific
+policies like SB 1047 or Narrow Path proposals. Walk through the
+complete analysis pipeline with real examples to demonstrate practical
+value.
+
+\subsection{3. Expand Empirical Base}\label{expand-empirical-base}
+
+Extract and analyze 2-3 additional AI safety arguments beyond Carlsmith
+(suggest Christiano's ``What Failure Looks Like'' and Critch's
+``ARCHES''). This broader empirical foundation will strengthen validity
+claims.
+
+\subsection{4. Clarify Implementation
+Status}\label{clarify-implementation-status}
+
+Add a clear table distinguishing: (a) fully implemented features, (b)
+partially implemented with limitations, (c) designed but not built, (d)
+future research. This prevents readers from misunderstanding current
+capabilities.
+
+\subsection{5. Verify or Qualify Quantitative
+Claims}\label{verify-or-qualify-quantitative-claims}
+
+Either provide supporting evidence for specific percentages (validation
+accuracy, bias effects, pilot study results) or reframe as
+estimates/illustrations. Consider adding confidence intervals or
+qualifying language to maintain scientific integrity while acknowledging
+prototype status.
+
+These changes would elevate an already strong thesis to exceptional,
+addressing the remaining gaps while maintaining the excellent narrative
+flow and intellectual contribution achieved in this revision.
+
+\section{General Edits}\label{general-edits}
+
+\begin{longtable}[]{@{}
+  >{\raggedright\arraybackslash}p{(\linewidth - 12\tabcolsep) * \real{0.0784}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 12\tabcolsep) * \real{0.1089}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 12\tabcolsep) * \real{0.0501}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 12\tabcolsep) * \real{0.2614}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 12\tabcolsep) * \real{0.1852}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 12\tabcolsep) * \real{0.1394}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 12\tabcolsep) * \real{0.1656}}@{}}
+\toprule\noalign{}
+\begin{minipage}[b]{\linewidth}\raggedright
+Section
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+Suggested Change
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+Implemented - Status
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+Analysis
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+Evaluation
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+Improvement Suggestions
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+Potential Hallucinations
+\end{minipage} \\
+\midrule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+\textbf{General Formatting} &
+\begin{minipage}[t]{\linewidth}\raggedright
+Use American spelling consistently
+\end{minipage} & Yes & Document uses ``modeling'' not ``modelling'',
+``analyze'' not ``analyse'', ``formalization'' not ``formalisation''
+throughout & Excellent consistency - creates professional impression for
+international audience & None needed & None detected \\
+\textbf{General Style} & Fewer lists, more prose & Yes & Lists converted
+to flowing paragraphs with transitional phrases. Bullet points reserved
+for true enumerations & Significantly improves academic tone and
+readability & Could further reduce lists in technical sections & None \\
+\textbf{Abstract} & Clearer thesis statement & Yes & ``This thesis
+introduces AMTAIR\ldots computational approach that addresses
+coordination failure by automating extraction'' & Clear and specific,
+balances technical precision with strategic vision & Could be slightly
+more concise & None \\
+\textbf{Introduction} & Opening scenario with policymaker & Yes & Vivid
+scenario of senior policy advisor reviewing conflicting AI safety
+reports & Highly effective - immediately grounds abstract concepts in
+concrete dilemma & Could add specific policy examples (e.g., compute
+thresholds) & None \\
+\textbf{Introduction} & Coordination crisis framing & Yes & Extensive
+discussion of fragmentation, safety gaps, resource misallocation,
+negative-sum dynamics & Compelling diagnosis that motivates the solution
+& Could quantify coordination failures with specific examples & None \\
+\textbf{Introduction} & Multiplicative benefits framework & Yes & Full
+section explaining how extraction + markets + evaluation create
+synergistic value & Novel contribution clearly articulated & Could use
+visual diagram to illustrate synergies & None \\
+\textbf{Context} & Carlsmith model as exemplar & Yes & Detailed
+six-premise decomposition with probabilities and explanation of
+formalizability & Excellent concrete grounding for abstract concepts &
+Could add comparison table with other models & None \\
+\textbf{Context} & Epistemic challenges section & Yes & Comprehensive
+discussion of deep uncertainty, multi-level causation, irreversibility &
+Thoughtful analysis of unique AI governance challenges & Could add more
+policy-specific examples & None \\
+\textbf{Context} & Bayesian networks explanation & Yes & Mathematical
+foundations, rain-sprinkler example, advantages for risk modeling & Good
+balance of technical depth and accessibility & Visual representation of
+rain-sprinkler network would help & None \\
+\textbf{Context} & MTAIR framework analysis & Yes & Achievements,
+limitations, and automation opportunity clearly presented & Fair
+assessment that positions AMTAIR as evolution not revolution & Could
+include specific timing/cost comparisons & None \\
+\textbf{AMTAIR} & Two-stage extraction process & Yes & ArgDown →
+BayesDown separation with clear rationale and benefits & Core technical
+innovation well explained & Could add flowchart of extraction pipeline &
+None \\
+\textbf{AMTAIR} & Less code, more description & Yes & Minimal code
+snippets, focus on conceptual explanation and architecture & Much more
+accessible to non-technical readers & Good balance achieved & None \\
+\textbf{AMTAIR} & Case studies (simple to complex) & Yes &
+Rain-sprinkler-grass followed by Carlsmith model & Excellent pedagogical
+progression & Could add intermediate complexity example & None \\
+\textbf{AMTAIR} & Validation methodology & Yes & Ground truth
+construction, metrics, results summary, error analysis & Rigorous
+scientific approach builds credibility & Could expand on inter-rater
+reliability process & Claimed ``85\%+ accuracy'' needs careful
+verification \\
+\textbf{AMTAIR} & Policy evaluation capabilities & Yes & Intervention
+representation, deployment governance example, robustness analysis &
+Practical value clearly demonstrated & Could add more policy examples &
+None \\
+\textbf{Discussion} & Objection-response format & Yes & Five major
+objections with detailed responses & Intellectually honest engagement
+with limitations & Could add objection about scalability to global
+governance & None \\
+\textbf{Discussion} & Red-teaming results & Yes & Adversarial testing
+with specific failure modes and robustness findings & Transparent about
+system limitations & Could quantify performance degradation curves &
+``34\% anchoring bias effect'' seems precise for a prototype \\
+\textbf{Discussion} & Epistemic security benefits & Yes & Model
+inspectability, convergence patterns, collective reasoning improvements
+& Compelling case for practical benefits & Could add metrics from pilot
+studies & ``40\% reduction in disagreement identification time'' needs
+citation \\
+\textbf{Conclusion} & Summary of contributions & Yes & Theoretical,
+methodological, technical, and empirical contributions clearly listed &
+Comprehensive without overstating claims & Well balanced & None \\
+\textbf{Conclusion} & Stakeholder recommendations & Yes & Specific
+actionable steps for researchers, policymakers, technologists, funders &
+Highly practical and actionable & Could prioritize recommendations &
+None \\
+\textbf{Conclusion} & Future research agenda & Yes & Technical
+priorities, methodological development, application expansion &
+Comprehensive research program outlined & Could add timeline estimates &
+None \\
+\textbf{References} & American citation style & Yes & Consistent
+(Author, Year) format throughout & Professional formatting & None needed
+& None \\
+\textbf{Manual extraction examples} & 2-3 ``inside view'' models &
+Partial & Carlsmith extensively analyzed, but only one model deeply
+examined & Good depth on one model, missing breadth & Add 2 more models
+(e.g., Christiano, Critch) & None \\
+\textbf{Policy candidates} & Narrow Path, SB 1047 & Partial & Deployment
+governance discussed but specific policies not analyzed & Generic policy
+analysis provided & Add concrete analysis of named policies & None \\
+\textbf{Correlation handling} & Workarounds for correlations & Yes &
+Explicit correlation nodes, copulas, sensitivity bounds discussed &
+Honest about limitations with practical solutions & Could add worked
+example & None \\
+\textbf{Prediction market integration} & Live data integration & Partial
+& Architecture designed for integration but not implemented & Honest
+about implementation status & Be clearer this is future work throughout
+& Some sections imply fuller integration than exists \\
+\textbf{Expert feedback system} & Variable validation by experts &
+Partial & Validation methodology includes experts but ongoing feedback
+system not detailed & Good for initial validation & Develop continuous
+expert input mechanism & None \\
+\textbf{Probability distributions} & Full distribution support & Partial
+& Conceptually addressed but implementation seems limited to point
+estimates & Theory explained well & Clarify implementation status &
+``Beta distributions for probabilities'' may overstate current
+capabilities \\
+\textbf{Graphics and visualizations} & Strategic graphics throughout &
+Partial & Visualization design discussed but few actual graphics in
+document & Text descriptions good but visuals needed & Create and embed
+key diagrams & None \\
+\textbf{Section transitions} & Smooth transitions between chapters & Yes
+& Each chapter ends with preview of next, maintaining narrative flow &
+Excellent narrative coherence & None needed & None \\
+\end{longtable}
+
+\section{General Style}\label{general-style}
+
+\section{General Formatting}\label{general-formatting}
+
+\section{Commentary / Feedback}\label{commentary-feedback}
+
+\subsection{Key Areas of Success}\label{key-areas-of-success}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\item
+  \textbf{Narrative Structure}: The thesis now reads as a cohesive
+  argument rather than disconnected sections. The opening scenario,
+  coordination crisis framing, and multiplicative benefits framework
+  create a compelling narrative arc.
+\item
+  \textbf{Academic Rigor with Accessibility}: Technical concepts are
+  explained clearly without sacrificing depth. The two-stage extraction
+  process and Bayesian network explanations balance sophistication with
+  clarity.
+\item
+  \textbf{Intellectual Honesty}: The discussion chapter's
+  objection-response format and red-teaming results demonstrate
+  admirable transparency about limitations.
+\item
+  \textbf{Practical Relevance}: Stakeholder recommendations and policy
+  evaluation examples ground the work in real-world applications.
+\end{enumerate}
+
+\subsection{Areas Needing Work}\label{areas-needing-work}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\item
+  \textbf{Visual Communication}: While visualization is discussed
+  extensively, the document lacks actual diagrams and figures that would
+  enhance understanding.
+\item
+  \textbf{Policy Specifics}: Named policies (Narrow Path, SB 1047) are
+  mentioned but not analyzed in detail, missing an opportunity for
+  concrete demonstration.
+\item
+  \textbf{Multiple Model Extraction}: Only Carlsmith is deeply analyzed;
+  adding 2-3 more models would strengthen empirical claims.
+\item
+  \textbf{Implementation Clarity}: Some features (prediction markets,
+  probability distributions) are discussed ambiguously regarding current
+  vs.~future capabilities.
+\end{enumerate}
+
+\subsection{Critical Potential
+Hallucinations}\label{critical-potential-hallucinations}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\item
+  \textbf{Validation Metrics}: Claims of ``85\%+ accuracy for structural
+  extraction'' and ``73\% for probability capture'' appear precise for
+  what seems to be a prototype system. These need careful verification
+  or qualification.
+\item
+  \textbf{Pilot Study Results}: ``40\% reduction in time to identify
+  disagreements'' and ``60\% improvement in agreement about
+  disagreement'' lack citations and seem surprisingly specific.
+\item
+  \textbf{Red-teaming Quantification}: ``34\% anchoring bias effect''
+  and other precise percentages from adversarial testing need support or
+  qualification as estimates.
+\item
+  \textbf{Prediction Market Integration}: Some passages imply deeper
+  integration than the ``future work'' status indicated elsewhere.
+\end{enumerate}
+
+\section{\texorpdfstring{Checklists }{Checklists }}\label{checklists}
+
+\section{``Usual paper requirements''}\label{usual-paper-requirements}
+
+\begin{itemize}
+\tightlist
+\item
+  introduce all terminology
+
+  \begin{itemize}
+  \tightlist
+  \item
+    go through text, make sure all terms are defined, explained (and
+    added to the list of Abbr.) when first mentioned\\
+  \end{itemize}
+\item
+  readership is intelligent and interested but has no prior knowledge
+\end{itemize}
+
+This chapter presents the complete computational implementation of the
+AMTAIR system, demonstrating the end-to-end pipeline from document
+processing through interactive visualization.
+
+\section{(Format:) \textasciitilde{} Anything that makes it easier to
+understand}\label{format-anything-that-makes-it-easier-to-understand}
+
+\begin{itemize}
+\tightlist
+\item
+  short sentences\\
+\item
+  paragraphs (one idea per paragraph)\\
+\item
+  simplicity\\
+\item
+  !limit use of passive voice!\\
+\item
+  use active voice, even prefer I over we!\\
+\item
+  minimise use of ``zombi nouns'' (don't turn verbs/adjectives to
+  nouns!)\\
+\item
+  ``find words that can be cut''
+\end{itemize}
+
+-- the paper can \textbf{focus} on \textbf{one aspect of the
+presentation}
+
+-- ``open door policy'' for (content) questions
+
+\textasciitilde{} demonstrate ability for novel research
+
+-- ``solve research question with the tools accessible to you''
+
+-- ``show something that has not been shown before / should be
+publishable in principle''
+
+-- new idea (or criticism) ``in this field''
+
+-- Outline idea THEN reading with a purpose (answering concrete
+questions)
+
+-- ``Only'' confirm that nobody has published the exact same idea on the
+same topic
+
+-- pretty much determined by presentation \& proposal but narrow down
+further (\& choose supervisor?)
+
+\bookmarksetup{startatroot}
+
+\chapter*{Prefatory Apparatus:
+Frontmatter}\label{prefatory-apparatus-frontmatter}
+\addcontentsline{toc}{chapter}{Prefatory Apparatus: Frontmatter}
+
+\markboth{Prefatory Apparatus: Frontmatter}{Prefatory Apparatus:
+Frontmatter}
+
+\section*{Illustrations and Terminology --- Quick
+References}\label{illustrations-and-terminology-quick-references}
+\addcontentsline{toc}{section}{Illustrations and Terminology --- Quick
+References}
+
+\markright{Illustrations and Terminology --- Quick References}
 
 \subsection{\texorpdfstring{\textbf{Acknowledgments}}{Acknowledgments}}\label{acknowledgments}
 
@@ -869,17 +1304,6 @@ This will appear in landscape.
   Personal supporters who enabled the research through encouragement and
   feedback
 \end{itemize}
-
-\bookmarksetup{startatroot}
-
-\chapter*{Prefatory Apparatus: Illustrations and Terminology --- Quick
-References}\label{prefatory-apparatus-illustrations-and-terminology-quick-references}
-\addcontentsline{toc}{chapter}{Prefatory Apparatus: Illustrations and
-Terminology --- Quick References}
-
-\markboth{Prefatory Apparatus: Illustrations and Terminology --- Quick
-References}{Prefatory Apparatus: Illustrations and Terminology --- Quick
-References}
 
 \section*{List of Tables}\label{list-of-tables}
 \addcontentsline{toc}{section}{List of Tables}
@@ -1003,80 +1427,9 @@ MAD Mutually Assured Destruction
   sampling to obtain numerical results
 \end{itemize}
 
-\section{\texorpdfstring{Checklists }{Checklists }}\label{checklists}
-
-\section{``Usual paper requirements''}\label{usual-paper-requirements}
-
-\begin{itemize}
-\tightlist
-\item
-  introduce all terminology
-
-  \begin{itemize}
-  \tightlist
-  \item
-    go through text, make sure all terms are defined, explained (and
-    added to the list of Abbr.) when first mentioned\\
-  \end{itemize}
-\item
-  readership is intelligent and interested but has no prior knowledge
-\end{itemize}
-
-This chapter presents the complete computational implementation of the
-AMTAIR system, demonstrating the end-to-end pipeline from document
-processing through interactive visualization.
-
-\section{(Format:) \textasciitilde{} Anything that makes it easier to
-understand}\label{format-anything-that-makes-it-easier-to-understand}
-
-\begin{itemize}
-\tightlist
-\item
-  short sentences\\
-\item
-  paragraphs (one idea per paragraph)\\
-\item
-  simplicity\\
-\item
-  !limit use of passive voice!\\
-\item
-  use active voice, even prefer I over we!\\
-\item
-  minimise use of ``zombi nouns'' (don't turn verbs/adjectives to
-  nouns!)\\
-\item
-  ``find words that can be cut''
-\end{itemize}
-
--- the paper can \textbf{focus} on \textbf{one aspect of the
-presentation}
-
--- ``open door policy'' for (content) questions
-
-\textasciitilde{} demonstrate ability for novel research
-
--- ``solve research question with the tools accessible to you''
-
--- ``show something that has not been shown before / should be
-publishable in principle''
-
--- new idea (or criticism) ``in this field''
-
--- Outline idea THEN reading with a purpose (answering concrete
-questions)
-
--- ``Only'' confirm that nobody has published the exact same idea on the
-same topic
-
--- pretty much determined by presentation \& proposal but narrow down
-further (\& choose supervisor?)
-
-\subsection*{Quarto Features Incompatible with LaTeX
-(Below)}\label{quarto-features-incompatible-with-latex-below}
-
 \bookmarksetup{startatroot}
 
-\chapter{Introduction}\label{introduction}
+\chapter{Introduction}\label{sec-introduction}
 
 \begin{quote}
 Subtitle: An Epistemic Framework for Leveraging Frontier AI Systems to
@@ -1095,40 +1448,6 @@ Path towards Existential Safety
 
 -   provides roadmap indicating structure and key content points of the essay
 \end{verbatim}
-
-\section*{Abstract}\label{sec-abstract}
-\addcontentsline{toc}{section}{Abstract}
-
-\markright{Abstract}
-
-\begin{quote}
-The coordination crisis in AI governance presents a paradoxical
-challenge: unprecedented investment in AI safety coexists alongside
-fundamental coordination failures across technical, policy, and ethical
-domains. These divisions systematically increase existential risk. This
-thesis introduces AMTAIR (Automating Transformative AI Risk Modeling), a
-computational approach addressing this coordination failure by
-automating the extraction of probabilistic world models from AI safety
-literature using frontier language models. The system implements an
-end-to-end pipeline transforming unstructured text into interactive
-Bayesian networks through a novel two-stage extraction process that
-bridges communication gaps between stakeholders.
-\end{quote}
-
-\texttt{The\ coordination\ crisis\ in\ AI\ governance\ presents\ a\ paradoxical\ challenge:\ unprecedented\ investment\ in\ AI\ safety\ coexists\ alongside\ fundamental\ coordination\ failures\ across\ technical,\ policy,\ and\ ethical\ domains.\ These\ divisions\ systematically\ increase\ existential\ risk\ by\ creating\ safety\ gaps,\ misallocating\ resources,\ and\ fostering\ inconsistent\ approaches\ to\ interdependent\ problems.}
-
-\begin{quote}
-This thesis introduces AMTAIR (Automating Transformative AI Risk
-Modeling), a computational approach that addresses this coordination
-failure by automating the extraction of probabilistic world models from
-AI safety literature using frontier language models.
-\end{quote}
-
-\texttt{The\ AMTAIR\ system\ implements\ an\ end-to-end\ pipeline\ that\ transforms\ unstructured\ text\ into\ interactive\ Bayesian\ networks\ through\ a\ novel\ two-stage\ extraction\ process:\ first\ capturing\ argument\ structure\ in\ ArgDown\ format,\ then\ enhancing\ it\ with\ probability\ information\ in\ BayesDown.\ This\ approach\ bridges\ communication\ gaps\ between\ stakeholders\ by\ making\ implicit\ models\ explicit,\ enabling\ comparison\ across\ different\ worldviews,\ providing\ a\ common\ language\ for\ discussing\ probabilistic\ relationships,\ and\ supporting\ policy\ evaluation\ across\ diverse\ scenarios.}
-
-\bookmarksetup{startatroot}
-
-\chapter{Introduction}\label{sec-introduction}
 
 \texttt{{[}x{]}\ \ introduces\ and\ motivates\ the\ core\ question\ or\ problem}
 
@@ -5754,10 +6073,78 @@ indefinitely.
 
 \bookmarksetup{startatroot}
 
-\chapter*{Bibliography (References)}\label{bibliography-references}
-\addcontentsline{toc}{chapter}{Bibliography (References)}
+\chapter{References (.md)}\label{references-.md}
 
-\markboth{Bibliography (References)}{Bibliography (References)}
+\section{BibTeX of Main Citations
+Included}\label{bibtex-of-main-citations-included}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+
+\FunctionTok{\#\# Update in ref/MAref.bib}
+
+\NormalTok{@article\{bostrom2012,}
+\NormalTok{  title = \{The \{\{Superintelligent Will\}\}: \{\{Motivation\}\} and \{\{Instrumental Rationality\}\} in \{\{Advanced Artificial Agents\}\}\},}
+\NormalTok{  author = \{Bostrom, Nick\},}
+\NormalTok{  date = \{2012\},}
+\NormalTok{  journaltitle = \{Minds and Machines\},}
+\NormalTok{  volume = \{22\},}
+\NormalTok{  number = \{2\},}
+\NormalTok{  pages = \{71{-}{-}85\},}
+\NormalTok{  publisher = \{Kluwer Academic Publishers Norwell, MA, USA\},}
+\NormalTok{  doi = \{10.1007/s11023{-}012{-}9281{-}3\},}
+\NormalTok{  url = \{https://philpapers.org/rec/BOSTSW\}}
+\NormalTok{\}}
+
+\NormalTok{@book\{bostrom2014,}
+\NormalTok{  title = \{Superintelligence: \{\{Paths\}\}, Strategies, Dangers\},}
+\NormalTok{  author = \{Bostrom, Nick\},}
+\NormalTok{  date = \{2014\},}
+\NormalTok{  publisher = \{Oxford University Press\},}
+\NormalTok{  location = \{Oxford\},}
+\NormalTok{  url = \{https://scholar.dominican.edu/cynthia{-}stokes{-}brown{-}books{-}big{-}history/47\},}
+\NormalTok{  abstract = \{The human brain has some capabilities that the brains of other animals lack. It is to these distinctive capabilities that our species owes its dominant position. Other animals have stronger muscles or sharper claws, but we have cleverer brains. If machine brains one day come to surpass human brains in general intelligence, then this new superintelligence could become very powerful. As the fate of the gorillas now depends more on us humans than on the gorillas themselves, so the fate of our species then would come to depend on the actions of the machine superintelligence. But we have one advantage: we get to make the first move. Will it be possible to construct a seed AI or otherwise to engineer initial conditions so as to make an intelligence explosion survivable? How could one achieve a controlled detonation? To get closer to an answer to this question, we must make our way through a fascinating landscape of topics and considerations. Read the book and learn about oracles, genies, singletons; about boxing methods, tripwires, and mind crime; about humanity\textquotesingle{}s cosmic endowment and differential technological development; indirect normativity, instrumental convergence, whole brain emulation and technology couplings; Malthusian economics and dystopian evolution; artificial intelligence, and biological cognitive enhancement, and collective intelligence.\},}
+\NormalTok{  isbn = \{978{-}0{-}19{-}967811{-}2\}}
+\NormalTok{\}}
+
+\NormalTok{@article\{bostrom2016,}
+\NormalTok{  title = \{The \{\{Unilateralist\}\}’s \{\{Curse\}\} and the \{\{Case\}\} for a \{\{Principle\}\} of \{\{Conformity\}\}\},}
+\NormalTok{  author = \{Bostrom, Nick and Douglas, Thomas and Sandberg, Anders\},}
+\NormalTok{  date = \{2016\},}
+\NormalTok{  journaltitle = \{Social Epistemology\},}
+\NormalTok{  volume = \{30\},}
+\NormalTok{  number = \{4\},}
+\NormalTok{  pages = \{350{-}{-}371\},}
+\NormalTok{  publisher = \{Routledge, part of the Taylor }\SpecialCharTok{\textbackslash{}\&}\NormalTok{ Francis Group\},}
+\NormalTok{  doi = \{10.1080/02691728.2015.1108373\},}
+\NormalTok{  url = \{https://www.tandfonline.com/doi/full/10.1080/02691728.2015.1108373\}}
+\NormalTok{\}}
+
+\NormalTok{@article\{bostrom2019,}
+\NormalTok{  title = \{The Vulnerable World Hypothesis\},}
+\NormalTok{  author = \{Bostrom, Nick\},}
+\NormalTok{  date = \{2019\},}
+\NormalTok{  journaltitle = \{Global Policy\},}
+\NormalTok{  volume = \{10\},}
+\NormalTok{  number = \{4\},}
+\NormalTok{  pages = \{455{-}{-}476\},}
+\NormalTok{  publisher = \{Wiley Online Library\},}
+\NormalTok{  doi = \{10.1111/1758{-}5899.12718\}}
+\NormalTok{\}}
+
+
+
+
+
+\end{Highlighting}
+\end{Shaded}
+
+\bookmarksetup{startatroot}
+
+\chapter*{Bibliography}\label{bibliography}
+\addcontentsline{toc}{chapter}{Bibliography}
+
+\markboth{Bibliography}{Bibliography}
 
 \printbibliography[heading=none]
 
