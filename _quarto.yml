@@ -22,15 +22,15 @@ book:
   chapters:
     - index.qmd
     # - chapters/Outlines/Outline_12.qmd
-    - chapters/Frontmatter.qmd
-    - chapters/Introduction.qmd
-    - chapters/Context.qmd
-    - chapters/AMTAIR.qmd
-    - chapters/Discussion.qmd
-    - chapters/Conclusion.qmd
+    - chapters/0.Frontmatter.qmd
+    - chapters/1.Introduction.qmd
+    - chapters/2.Context.qmd
+    - chapters/3.AMTAIR.qmd
+    - chapters/4.Discussion.qmd
+    - chapters/5.Conclusion.qmd
     - ref/references.qmd
   appendices:
-    - chapters/Appendices.qmd
+    - chapters/I.Appendices.qmd
     - AMTAIR_Prototype/data/example_carlsmith/AMTAIR_Prototype_example_carlsmith.ipynb
 
 # notebook-view:
