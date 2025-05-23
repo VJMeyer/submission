@@ -227,12 +227,12 @@
 \@ifpackageloaded{subcaption}{}{\usepackage{subcaption}}
 \makeatother
 \makeatletter
-\definecolor{QuartoInternalColor6}{rgb}{0.00,0.64,0.31}
 \definecolor{QuartoInternalColor2}{rgb}{0,0,0}
 \definecolor{QuartoInternalColor4}{rgb}{0.15,0.56,0.56}
+\definecolor{QuartoInternalColor5}{rgb}{0.00,0.40,0.79}
 \definecolor{QuartoInternalColor1}{rgb}{0.70,0.17,0.19}
 \definecolor{QuartoInternalColor3}{rgb}{0.00,0.45,0.15}
-\definecolor{QuartoInternalColor5}{rgb}{0.00,0.40,0.79}
+\definecolor{QuartoInternalColor6}{rgb}{0.00,0.64,0.31}
 \makeatother
 \usepackage{bookmark}
 \IfFileExists{xurl.sty}{\usepackage{xurl}}{} % add URL line breaks if available
@@ -5322,7 +5322,7 @@ AMTAIR is working!
 
 Quarto's native callouts work without additional packages:
 
-\begin{tcolorbox}[enhanced jigsaw, coltitle=black, bottomtitle=1mm, breakable, toprule=.15mm, colframe=quarto-callout-note-color-frame, opacitybacktitle=0.6, bottomrule=.15mm, left=2mm, colbacktitle=quarto-callout-note-color!10!white, toptitle=1mm, arc=.35mm, title=\textcolor{quarto-callout-note-color}{\faInfo}\hspace{0.5em}{Important Note2}, rightrule=.15mm, titlerule=0mm, leftrule=.75mm, opacityback=0, colback=white]
+\begin{tcolorbox}[enhanced jigsaw, left=2mm, title=\textcolor{quarto-callout-note-color}{\faInfo}\hspace{0.5em}{Important Note2}, opacitybacktitle=0.6, opacityback=0, colbacktitle=quarto-callout-note-color!10!white, toptitle=1mm, leftrule=.75mm, colframe=quarto-callout-note-color-frame, rightrule=.15mm, colback=white, arc=.35mm, toprule=.15mm, breakable, coltitle=black, bottomtitle=1mm, bottomrule=.15mm, titlerule=0mm]
 
 This renders perfectly in both HTML and PDF.2
 
@@ -5366,7 +5366,8 @@ with:}\label{code-chunks-from-.ipynb-notebooks-can-be-embedded-in-the-.qmd-text-
 \end{Highlighting}
 \end{Shaded}
 
-\subsubsection{which produces:}\label{which-produces}
+\subsubsection{which produces the output of executing the code
+cell:}\label{which-produces-the-output-of-executing-the-code-cell}
 
 \phantomsection\label{my_code_cell_test}
 \begin{verbatim}

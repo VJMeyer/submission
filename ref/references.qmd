@@ -47,7 +47,7 @@ It does not work for sections with ".unnumbered and/or .unlisted":
 ```markdown
 {{< embed /AMTAIR_Prototype/data/example_carlsmith/AMTAIR_Prototype_example_carlsmith.ipynb#my_code_cell_test >}}
 ```
-#### which produces:
+#### which produces the output of executing the code cell:
 
 {{< embed /AMTAIR_Prototype/data/example_carlsmith/AMTAIR_Prototype_example_carlsmith.ipynb#my_code_cell_test >}}
 
