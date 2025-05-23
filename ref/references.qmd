@@ -1,4 +1,8 @@
-# Quarto Syntax
+
+
+
+
+# Quarto Syntax {#sec-syntax}
 
 ```{python}
 #| echo: true
@@ -161,6 +165,14 @@ Here is a footnote reference,[^1]
 Here's some raw inline HTML: `<a>html</a>`{=html}
 
 
+```markdown
+page 1
+
+{{< pagebreak >}}
+
+page 2
+```
+
 page 1
 
 {{< pagebreak >}}
@@ -177,8 +189,22 @@ flowchart LR
 ```
 
 Testing crossreferencing grapics @fig-automation_pipeline.
+See [Chapter @sec-syntax] for more details on visualizing model diagnostics.
+
+## Formatting
+
+[This text is highlighted]{.mark}
+
+[This text is underlined]{.underline}
+
+[This text is smallcaps]{.smallcaps}
 
 
+::: {.landscape}
+
+This will appear in landscape.
+
+:::
 
 
 

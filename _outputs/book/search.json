@@ -444,7 +444,17 @@
     "href": "ref/references.html#sec-heading",
     "title": "6  Quarto Syntax",
     "section": "6.4 Headings & Potential Headings",
-    "text": "6.4 Headings & Potential Headings\n\n\nverbatim code formatting for notes and ideas to be included (here)\nAlso code blocks for more extensive notes and ideas to be included and checklists\n- test 1. \n- test 2. \n- test 3.\n2. second\n3. third\n\n\nBlockquote formatting for “Suggested Citations (e.g. carlsmith 2024 on …)” and/or claims which require a citation (e.g. claim x should be backed-up by a ciation from the literature)\n\nHere is an inline note.1\nHere is a footnote reference,2\nHere’s some raw inline HTML: html\npage 1\n\npage 2\n\n\nCode\nflowchart LR\n  A[Hard edge] --&gt; B(Round edge)\n  B --&gt; C{Decision}\n  C --&gt; D[Result one]\n  C --&gt; E[Result two]\n\n\n\n\n\nflowchart LR\n  A[Hard edge] --&gt; B(Round edge)\n  B --&gt; C{Decision}\n  C --&gt; D[Result one]\n  C --&gt; E[Result two]\n\n\n\n\n\n\nTesting crossreferencing grapics Figure 6.1.",
+    "text": "6.4 Headings & Potential Headings\n\n\nverbatim code formatting for notes and ideas to be included (here)\nAlso code blocks for more extensive notes and ideas to be included and checklists\n- test 1. \n- test 2. \n- test 3.\n2. second\n3. third\n\n\nBlockquote formatting for “Suggested Citations (e.g. carlsmith 2024 on …)” and/or claims which require a citation (e.g. claim x should be backed-up by a ciation from the literature)\n\nHere is an inline note.1\nHere is a footnote reference,2\nHere’s some raw inline HTML: html\npage 1\n\n\n\npage 2\npage 1\n\npage 2\n\n\nCode\nflowchart LR\n  A[Hard edge] --&gt; B(Round edge)\n  B --&gt; C{Decision}\n  C --&gt; D[Result one]\n  C --&gt; E[Result two]\n\n\n\n\n\nflowchart LR\n  A[Hard edge] --&gt; B(Round edge)\n  B --&gt; C{Decision}\n  C --&gt; D[Result one]\n  C --&gt; E[Result two]\n\n\n\n\n\n\nTesting crossreferencing grapics Figure 6.1. See Chapter 6 for more details on visualizing model diagnostics.",
+    "crumbs": [
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Quarto Syntax</span>"
+    ]
+  },
+  {
+    "objectID": "ref/references.html#formatting",
+    "href": "ref/references.html#formatting",
+    "title": "6  Quarto Syntax",
+    "section": "6.5 Formatting",
+    "text": "6.5 Formatting\nThis text is highlighted\nThis text is underlined\nThis text is smallcaps\n\nThis will appear in landscape.",
     "crumbs": [
       "<span class='chapter-number'>6</span>  <span class='chapter-title'>Quarto Syntax</span>"
     ]

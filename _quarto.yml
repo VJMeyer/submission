@@ -51,7 +51,7 @@ format:
     callout-appearance: simple
     
   pdf:
-    documentclass: book
+    documentclass: book    # vs scrbook
     include-in-header: latex/preamble.tex
     pdf-engine: xelatex
     keep-tex: true
