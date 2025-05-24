@@ -255,13 +255,13 @@ window.Quarto = {
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./chapters/2.Context.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Context</span></span></a>
+  <a href="./chapters/2.0.Context.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Context &amp; Background</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./chapters/3.AMTAIR.html" class="sidebar-item-text sidebar-link">
+  <a href="./chapters/3.0.AMTAIR.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">AMTAIR</span></span></a>
   </div>
 </li>
@@ -319,16 +319,46 @@ window.Quarto = {
   <li><a href="#preface" id="toc-preface" class="nav-link active" data-scroll-target="#preface">Preface</a></li>
   <li><a href="#sec-syntax" id="toc-sec-syntax" class="nav-link" data-scroll-target="#sec-syntax">Quarto Syntax</a>
   <ul>
-  <li><a href="#for-callouts" id="toc-for-callouts" class="nav-link" data-scroll-target="#for-callouts">For Callouts</a></li>
-  <li><a href="#sec-crossref" id="toc-sec-crossref" class="nav-link" data-scroll-target="#sec-crossref">Section Cross-References</a></li>
+  <li><a href="#main-formatting" id="toc-main-formatting" class="nav-link" data-scroll-target="#main-formatting">Main Formatting</a>
+  <ul>
+  <li><a href="#html-comments" id="toc-html-comments" class="nav-link" data-scroll-target="#html-comments">Html Comments</a></li>
+  <li><a href="#tasks-with-todo-tree" id="toc-tasks-with-todo-tree" class="nav-link" data-scroll-target="#tasks-with-todo-tree">Tasks with ToDo Tree</a></li>
+  <li><a href="#verbatim-code-formatting" id="toc-verbatim-code-formatting" class="nav-link" data-scroll-target="#verbatim-code-formatting">Verbatim Code Formatting</a></li>
+  <li><a href="#code-block-formatting" id="toc-code-block-formatting" class="nav-link" data-scroll-target="#code-block-formatting">Code Block formatting</a></li>
+  <li><a href="#blockquote-formatting" id="toc-blockquote-formatting" class="nav-link" data-scroll-target="#blockquote-formatting">Blockquote Formatting</a></li>
+  <li><a href="#tables" id="toc-tables" class="nav-link" data-scroll-target="#tables">Tables</a></li>
+  </ul></li>
+  <li><a href="#sec-heading" id="toc-sec-heading" class="nav-link" data-scroll-target="#sec-heading">Headings &amp; Potential Headings in Standard Markdown formatting (‘##’)</a>
+  <ul>
+  <li><a href="#heading-3" id="toc-heading-3" class="nav-link" data-scroll-target="#heading-3">Heading 3</a>
+  <ul class="collapse">
+  <li><a href="#heading-4" id="toc-heading-4" class="nav-link" data-scroll-target="#heading-4">Heading 4</a></li>
+  </ul></li>
+  </ul></li>
+  <li><a href="#text-formatting-options" id="toc-text-formatting-options" class="nav-link" data-scroll-target="#text-formatting-options">Text Formatting Options</a></li>
+  <li><a href="#lists" id="toc-lists" class="nav-link" data-scroll-target="#lists">Lists</a></li>
+  <li><a href="#math" id="toc-math" class="nav-link" data-scroll-target="#math">Math</a></li>
+  <li><a href="#footnotes" id="toc-footnotes" class="nav-link" data-scroll-target="#footnotes">Footnotes</a></li>
+  <li><a href="#sec-callouts" id="toc-sec-callouts" class="nav-link" data-scroll-target="#sec-callouts">Callouts</a></li>
+  <li><a href="#links" id="toc-links" class="nav-link" data-scroll-target="#links">Links</a></li>
+  <li><a href="#page-breaks" id="toc-page-breaks" class="nav-link" data-scroll-target="#page-breaks">Page Breaks</a></li>
+  <li><a href="#sec-code" id="toc-sec-code" class="nav-link" data-scroll-target="#sec-code">Including Code</a>
+  <ul>
+  <li><a href="#in-line-latex" id="toc-in-line-latex" class="nav-link" data-scroll-target="#in-line-latex">In-Line LaTeX</a></li>
+  <li><a href="#in-line-html" id="toc-in-line-html" class="nav-link" data-scroll-target="#in-line-html">In-Line HTML</a></li>
+  </ul></li>
   <li><a href="#reference-or-embed-code-from-.ipynb-files" id="toc-reference-or-embed-code-from-.ipynb-files" class="nav-link" data-scroll-target="#reference-or-embed-code-from-.ipynb-files">Reference or Embed Code from .ipynb files</a>
   <ul>
   <li><a href="#code-chunks-from-.ipynb-notebooks-can-be-embedded-in-the-.qmd-text-with" id="toc-code-chunks-from-.ipynb-notebooks-can-be-embedded-in-the-.qmd-text-with" class="nav-link" data-scroll-target="#code-chunks-from-.ipynb-notebooks-can-be-embedded-in-the-.qmd-text-with">Code chunks from .ipynb notebooks can be embedded in the .qmd text with:</a></li>
   <li><a href="#which-produces-the-output-of-executing-the-code-cell" id="toc-which-produces-the-output-of-executing-the-code-cell" class="nav-link" data-scroll-target="#which-produces-the-output-of-executing-the-code-cell">which produces the output of executing the code cell:</a></li>
   <li><a href="#including-echotrue-renders-the-code-of-the-cell" id="toc-including-echotrue-renders-the-code-of-the-cell" class="nav-link" data-scroll-target="#including-echotrue-renders-the-code-of-the-cell">including ‘echo=true’ renders the code of the cell:</a></li>
   </ul></li>
-  <li><a href="#sec-heading" id="toc-sec-heading" class="nav-link" data-scroll-target="#sec-heading">Headings &amp; Potential Headings</a></li>
-  <li><a href="#formatting" id="toc-formatting" class="nav-link" data-scroll-target="#formatting">Formatting</a></li>
+  <li><a href="#diagrams" id="toc-diagrams" class="nav-link" data-scroll-target="#diagrams">Diagrams</a></li>
+  <li><a href="#sec-crossref" id="toc-sec-crossref" class="nav-link" data-scroll-target="#sec-crossref">Section Cross-References</a>
+  <ul>
+  <li><a href="#section-numbers" id="toc-section-numbers" class="nav-link" data-scroll-target="#section-numbers">Section Numbers</a></li>
+  </ul></li>
+  <li><a href="#pages-in-landscape" id="toc-pages-in-landscape" class="nav-link" data-scroll-target="#pages-in-landscape">Pages in Landscape</a></li>
   </ul></li>
   <li><a href="#sec-abstract" id="toc-sec-abstract" class="nav-link" data-scroll-target="#sec-abstract">Abstract</a></li>
   </ul>
@@ -375,28 +405,180 @@ window.Quarto = {
 </section>
 <section id="sec-syntax" class="level1">
 <h1>Quarto Syntax</h1>
-<details class="code-fold">
-<summary>Code</summary>
-<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"AMTAIR is working!"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</details>
-<div id="fig-extraction-pipeline" class="cell quarto-float quarto-figure quarto-figure-center anchored" data-execution_count="1">
-<figure class="quarto-float quarto-float-fig figure">
-<div aria-describedby="fig-extraction-pipeline-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<div class="cell-output cell-output-stdout">
-<pre><code>AMTAIR is working!</code></pre>
-</div>
-</div>
-<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig quarto-uncaptioned" id="fig-extraction-pipeline-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;1.1
+<section id="main-formatting" class="level2">
+<h2 class="anchored" data-anchor-id="main-formatting">Main Formatting</h2>
+<section id="html-comments" class="level3">
+<h3 class="anchored" data-anchor-id="html-comments">Html Comments</h3>
+<!-- Comments for comments -->
+</section>
+<section id="tasks-with-todo-tree" class="level3">
+<h3 class="anchored" data-anchor-id="tasks-with-todo-tree">Tasks with ToDo Tree</h3>
+<p><code>&lt;!-- [ ] ToDos for things to do / tasks / reminders (allows "jump to with Taks Tree extension") --&gt;</code></p>
+<!-- [ ] ToDos for things to do / tasks / reminders (allows "jump to with Taks Tree extension") -->
+</section>
+<section id="verbatim-code-formatting" class="level3">
+<h3 class="anchored" data-anchor-id="verbatim-code-formatting">Verbatim Code Formatting</h3>
+<p><code>verbatim code formatting for notes and ideas to be included (here)</code></p>
+</section>
+<section id="code-block-formatting" class="level3">
+<h3 class="anchored" data-anchor-id="code-block-formatting">Code Block formatting</h3>
+<pre><code>Also code blocks for more extensive notes and ideas to be included and checklists
+- test 1. 
+- test 2. 
+- test 3.
+2. second
+3. third</code></pre>
+<pre><code>code</code></pre>
+<p>Add a language to syntax highlight code blocks:</p>
+<div class="sourceCode" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="dv">1</span> <span class="op">+</span> <span class="dv">1</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section id="blockquote-formatting" class="level3">
+<h3 class="anchored" data-anchor-id="blockquote-formatting">Blockquote Formatting</h3>
+<blockquote class="blockquote">
+<p>Blockquote formatting for “Suggested Citations (e.g.&nbsp;carlsmith 2024 on …)” and/or claims which require a citation (e.g.&nbsp;claim x should be backed-up by a ciation from the literature)</p>
+</blockquote>
+</section>
+<section id="tables" class="level3">
+<h3 class="anchored" data-anchor-id="tables">Tables</h3>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th style="text-align: right;">Right</th>
+<th style="text-align: left;">Left</th>
+<th>Default</th>
+<th style="text-align: center;">Center</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: right;">12</td>
+<td style="text-align: left;">12</td>
+<td>12</td>
+<td style="text-align: center;">12</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">123</td>
+<td style="text-align: left;">123</td>
+<td>123</td>
+<td style="text-align: center;">123</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">1</td>
+<td style="text-align: left;">1</td>
+<td>1</td>
+<td style="text-align: center;">1</td>
+</tr>
+</tbody>
+</table>
+<div id="tbl-letters" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-tbl figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-letters-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Table&nbsp;1.1: My Caption
 </figcaption>
+<div aria-describedby="tbl-letters-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Col1</th>
+<th>Col2</th>
+<th>Col3</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>A</td>
+<td>B</td>
+<td>C</td>
+</tr>
+<tr class="even">
+<td>E</td>
+<td>F</td>
+<td>G</td>
+</tr>
+<tr class="odd">
+<td>A</td>
+<td>G</td>
+<td>G</td>
+</tr>
+</tbody>
+</table>
+</div>
 </figure>
 </div>
-<section id="for-callouts" class="level2">
-<h2 class="anchored" data-anchor-id="for-callouts">For Callouts</h2>
+<p>See <a href="#tbl-letters" class="quarto-xref">Table&nbsp;<span>1.1</span></a>.</p>
+</section>
+</section>
+<section id="sec-heading" class="level2">
+<h2 class="anchored" data-anchor-id="sec-heading">Headings &amp; Potential Headings in Standard Markdown formatting (‘##’)</h2>
+<section id="heading-3" class="level3">
+<h3 class="anchored" data-anchor-id="heading-3">Heading 3</h3>
+<section id="heading-4" class="level4">
+<h4 class="anchored" data-anchor-id="heading-4">Heading 4</h4>
+<!-- ##### Heading 5 -->
+<!-- ###### Heading 6 -->
+</section>
+</section>
+</section>
+<section id="text-formatting-options" class="level2">
+<h2 class="anchored" data-anchor-id="text-formatting-options">Text Formatting Options</h2>
+<p><em>italics</em>, <strong>bold</strong>, <strong><em>bold italics</em></strong></p>
+<p>superscript<sup>2</sup> / subscript<sub>2</sub></p>
+<p><del>strikethrough</del></p>
+<p><mark>This text is highlighted</mark></p>
+<p><u>This text is underlined</u></p>
+<p><span class="smallcaps">This text is smallcaps</span></p>
+</section>
+<section id="lists" class="level2">
+<h2 class="anchored" data-anchor-id="lists">Lists</h2>
+<ul>
+<li><p>unordered list</p>
+<ul>
+<li>sub-item 1</li>
+<li>sub-item 2
+<ul>
+<li>sub-sub-item 1</li>
+</ul></li>
+</ul></li>
+<li><p>item 2</p>
+<p>Continued (indent 4 spaces)</p></li>
+</ul>
+<ol type="1">
+<li>ordered list</li>
+<li>item 2
+<ol type="i">
+<li>sub-item 1
+<ol type="A">
+<li>sub-sub-item 1</li>
+</ol></li>
+</ol></li>
+</ol>
+</section>
+<section id="math" class="level2">
+<h2 class="anchored" data-anchor-id="math">Math</h2>
+<p>inline math: <span class="math inline">\(E = mc^{2}\)</span></p>
+<p>display math:</p>
+<p><span class="math display">\[E = mc^{2}\]</span></p>
+<p>If you want to define custom TeX macros, include them within $$ delimiters enclosed in a .hidden block. For example:</p>
+<div class="hidden">
+<p><span class="math display">\[
+\def\RR{{\bf R}}
+\def\bold#1{{\bf #1}}
+\]</span></p>
+</div>
+<p>For HTML math processed using MathJax (the default) you can use the \def, \newcommand, \renewcommand, \newenvironment, \renewenvironment, and \let commands to create your own macros and environments.</p>
+</section>
+<section id="footnotes" class="level2">
+<h2 class="anchored" data-anchor-id="footnotes">Footnotes</h2>
+<p>Here is an inline note.<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a></p>
+<p>Here is a footnote reference,<a href="#fn2" class="footnote-ref" id="fnref2" role="doc-noteref"><sup>2</sup></a></p>
+<p>Another Text with a footnote<a href="#fn3" class="footnote-ref" id="fnref3" role="doc-noteref"><sup>3</sup></a> but this time a “longnote”.</p>
+<p>This paragraph won’t be part of the note, because it isn’t indented.</p>
+</section>
+<section id="sec-callouts" class="level2">
+<h2 class="anchored" data-anchor-id="sec-callouts">Callouts</h2>
 <p>Quarto’s native callouts work without additional packages:</p>
 <div class="note">
-<p>Remember to connect this back to the research question</p>
+<p>This is written in a ‘note’ environment – but it does not seem to produce any special rendering.</p>
 </div>
 <div class="callout callout-style-simple callout-note callout-titled">
 <div class="callout-header d-flex align-content-center">
@@ -421,28 +603,109 @@ Important Note2
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>This renders perfectly in both HTML and PDF.2</p>
+<p>This renders perfectly in both HTML and PDF.</p>
 </div>
 </div>
 <p>Also for markdown:</p>
-<div class="sourceCode" id="cb3"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>::: {.render_as_markdown_example}</span>
-<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="fu">## Markdown Heading</span></span>
-<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>This renders perfectly in both HTML and PDF but as markdown "plain text"</span>
-<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>:::</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb5"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>::: {.render_as_markdown_example}</span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a><span class="fu">## Markdown Heading</span></span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>This renders perfectly in both HTML and PDF but as markdown "plain text"</span>
+<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a>:::</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </section>
-<section id="sec-crossref" class="level2">
-<h2 class="anchored" data-anchor-id="sec-crossref">Section Cross-References</h2>
-<p>Refer to sections like: <a href="chapters/4.Discussion.html#sec-adaptive-governance" class="quarto-xref"><span>Toward Adaptive Governance</span></a> and <a href="#sec-crossref" class="quarto-xref"><span>Section Cross-References</span></a> <!-- Using @-sec-REFERENCE_HEADING requires that the .qmd file contains a yml section which details the "numbering" --></p>
-<div class="sourceCode" id="cb4"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="an">Caveat:</span><span class="co"> refering to sections with @sec-HEADINGS works only for sections with:</span></span>
-<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a><span class="fu">## Heading {#sec-HEADINGS}</span></span>
-<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>It does not work for sections with ".unnumbered and/or .unlisted":</span>
-<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a><span class="fu">## Heading {#sec-HEADINGS .unnumbered .unlisted}</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<section id="links" class="level2">
+<h2 class="anchored" data-anchor-id="links">Links</h2>
+<p><code>&lt;https://quarto.org/docs/authoring/markdown-basics.html&gt;</code> produces: <a href="https://quarto.org/docs/authoring/markdown-basics.html" class="uri">https://quarto.org/docs/authoring/markdown-basics.html</a></p>
+<p><code>[Quarto Book Cross-References](https://quarto.org/docs/books/book-crossrefs.html)</code> produces: <a href="https://quarto.org/docs/books/book-crossrefs.html">Quarto Book Cross-References</a></p>
+</section>
+<section id="sec-figures1" class="level2 unnumbered unlisted">
+<h2 class="unnumbered unlisted anchored" data-anchor-id="sec-figures1">Images &amp; Figures</h2>
+<pre><code>[![AMTAIR Automation Pipeline from @bucknall2022](/images/pipeline.png){
+  #fig-automation_pipeline
+  fig-scap="Five-step AMTAIR automation pipeline from PDFs to Bayesian networks" 
+  fig-alt="FLOWCHART: Five-step automation pipeline workflow for AMTAIR project.
+          DATA: The pipeline transforms PDFs through ArgDown, BayesDown, CSV, and HTML into Bayesian network visualizations.
+          PURPOSE: Illustrates the core technical process that enables automated extraction of probabilistic models from AI safety literature.
+          DETAILS: Five numbered green steps show: (1) LLM-based extraction from PDFs to ArgDown, (2) ArgDown to BayesDown completion with probabilities, (3) Extracting world-models as CSV data, (4) Software tools for data inference, and (5) Visualization of the resulting Bayesian network.
+          Each step includes example outputs, with the final visualization showing a Rain-Sprinkler-Grass Wet Bayesian network with probability tables.
+          SOURCE: Created by the author to explain the AMTAIR methodology
+          "
+  fig-align="center" 
+  width="100%"
+  }](https://github.com/VJMeyer/submission)
+
+
+Testing crossreferencing grapics @fig-automation_pipeline.
+
+![Caption/Title 2](/images/cover.png){#fig-testgraphic2 fig-scap="Short 2 caption" fig-alt="2nd Alt Text / Description." fig-align="left" width="30%"}
+
+Testing crossreferencing grapics @fig-testgraphic2.</code></pre>
+<div id="fig-automation_pipeline" class="quarto-float quarto-figure quarto-figure-center anchored" alt="FLOWCHART: Five-step automation pipeline workflow for AMTAIR project.           DATA: The pipeline transforms PDFs through ArgDown, BayesDown, CSV, and HTML into Bayesian network visualizations.           PURPOSE: Illustrates the core technical process that enables automated extraction of probabilistic models from AI safety literature.           DETAILS: Five numbered green steps show: (1) LLM-based extraction from PDFs to ArgDown, (2) ArgDown to BayesDown completion with probabilities, (3) Extracting world-models as CSV data, (4) Software tools for data inference, and (5) Visualization of the resulting Bayesian network.           Each step includes example outputs, with the final visualization showing a Rain-Sprinkler-Grass Wet Bayesian network with probability tables.           SOURCE: Created by the author to explain the AMTAIR methodology           " width="100%" data-fig-align="center" data-fig-scap="Five-step AMTAIR automation pipeline from PDFs to Bayesian networks">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-automation_pipeline-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<a href="https://github.com/VJMeyer/submission"><img src="./images/pipeline.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:100.0%" data-fig-scap="Five-step AMTAIR automation pipeline from PDFs to Bayesian networks" alt="FLOWCHART: Five-step automation pipeline workflow for AMTAIR project.           DATA: The pipeline transforms PDFs through ArgDown, BayesDown, CSV, and HTML into Bayesian network visualizations.           PURPOSE: Illustrates the core technical process that enables automated extraction of probabilistic models from AI safety literature.           DETAILS: Five numbered green steps show: (1) LLM-based extraction from PDFs to ArgDown, (2) ArgDown to BayesDown completion with probabilities, (3) Extracting world-models as CSV data, (4) Software tools for data inference, and (5) Visualization of the resulting Bayesian network.           Each step includes example outputs, with the final visualization showing a Rain-Sprinkler-Grass Wet Bayesian network with probability tables.           SOURCE: Created by the author to explain the AMTAIR methodology           "></a>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-automation_pipeline-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;1.1: AMTAIR Automation Pipeline from
+</figcaption>
+</figure>
+</div>
+<p>Testing crossreferencing grapics <a href="chapters/2.0.Context.html#fig-automation_pipeline" class="quarto-xref">Figure&nbsp;<span>3.2</span></a>. Note that the indentations of graphic inclusions get messed up by viewing them in “view mode” in VS code.</p>
+<div id="fig-testgraphic2" class="quarto-float quarto-figure quarto-figure-left anchored" alt="2nd Alt Text / Description." data-fig-align="left" data-fig-scap="Short 2 caption">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-testgraphic2-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="./images/cover.png" class="img-fluid quarto-figure quarto-figure-left figure-img" style="width:30.0%" data-fig-scap="Short 2 caption" alt="2nd Alt Text / Description.">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-testgraphic2-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;1.2: Caption/Title 2
+</figcaption>
+</figure>
+</div>
+<p>Testing crossreferencing grapics <a href="#fig-testgraphic2" class="quarto-xref">Figure&nbsp;<span>1.2</span></a>.</p>
+</section>
+<section id="page-breaks" class="level2">
+<h2 class="anchored" data-anchor-id="page-breaks">Page Breaks</h2>
+<div class="sourceCode" id="cb7"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>page 1</span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-5"><a href="#cb7-5" aria-hidden="true" tabindex="-1"></a>page 2</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>page 1</p>
+<div style="page-break-after: always;"></div>
+<p>page 2</p>
+</section>
+<section id="sec-code" class="level2">
+<h2 class="anchored" data-anchor-id="sec-code">Including Code</h2>
+<details class="code-fold">
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
+<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"AMTAIR is working!"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div id="fig-extraction-pipeline" class="cell quarto-float quarto-figure quarto-figure-center anchored" data-execution_count="1">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-extraction-pipeline-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<div class="cell-output cell-output-stdout">
+<pre><code>AMTAIR is working!</code></pre>
+</div>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig quarto-uncaptioned" id="fig-extraction-pipeline-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;1.3
+</figcaption>
+</figure>
+</div>
+<section id="in-line-latex" class="level3">
+<h3 class="anchored" data-anchor-id="in-line-latex">In-Line LaTeX</h3>
+
+</section>
+<section id="in-line-html" class="level3">
+<h3 class="anchored" data-anchor-id="in-line-html">In-Line HTML</h3>
+<p>Here’s some raw inline HTML: <a>html</a></p>
+</section>
 </section>
 <section id="reference-or-embed-code-from-.ipynb-files" class="level2">
 <h2 class="anchored" data-anchor-id="reference-or-embed-code-from-.ipynb-files">Reference or Embed Code from .ipynb files</h2>
 <section id="code-chunks-from-.ipynb-notebooks-can-be-embedded-in-the-.qmd-text-with" class="level4">
 <h4 class="anchored" data-anchor-id="code-chunks-from-.ipynb-notebooks-can-be-embedded-in-the-.qmd-text-with">Code chunks from .ipynb notebooks can be embedded in the .qmd text with:</h4>
-<div class="sourceCode" id="cb5"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>{{&lt; embed /AMTAIR_Prototype/data/example_carlsmith/AMTAIR_Prototype_example_carlsmith.ipynb#my_code_cell_test &gt;}}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb10"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a>{{&lt; embed /AMTAIR_Prototype/data/example_carlsmith/AMTAIR_Prototype_example_carlsmith.ipynb#my_code_cell_test &gt;}}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </section>
 <section id="which-produces-the-output-of-executing-the-code-cell" class="level4">
 <h4 class="anchored" data-anchor-id="which-produces-the-output-of-executing-the-code-cell">which produces the output of executing the code cell:</h4>
@@ -485,86 +748,86 @@ Attempting to load: https://raw.githubusercontent.com/SingularitySmith/AMTAIR_Pr
 </section>
 <section id="including-echotrue-renders-the-code-of-the-cell" class="level4">
 <h4 class="anchored" data-anchor-id="including-echotrue-renders-the-code-of-the-cell">including ‘echo=true’ renders the code of the cell:</h4>
-<div class="sourceCode" id="cb7"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>{{&lt; embed /AMTAIR_Prototype/data/example_carlsmith/AMTAIR_Prototype_example_carlsmith.ipynb#my_code_cell_test echo=true &gt;}}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb12"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a>{{&lt; embed /AMTAIR_Prototype/data/example_carlsmith/AMTAIR_Prototype_example_carlsmith.ipynb#my_code_cell_test echo=true &gt;}}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="quarto-embed-nb-cell" data-notebook="/Users/vjm/Library/Mobile Documents/iCloud~md~obsidian/Documents/Vaulty/2_DoingGood/Studies/P&amp;E/Specializations/Test_Sync_MAThesis/submission/AMTAIR_Prototype/data/example_carlsmith/AMTAIR_Prototype_example_carlsmith.ipynb" data-notebook-title="``` {.python .cell-code}" data-notebook-cellid="cell-my_code_cell_test">
 <div id="my_code_cell_test" class="cell" data-quarto-private-1="{&quot;key&quot;:&quot;colab&quot;,&quot;value&quot;:{&quot;base_uri&quot;:&quot;https://localhost:8080/&quot;}}" data-outputid="2050a62a-f0f1-4450-9fbb-8a75f1cb9422">
 <details class="code-fold">
 <summary>Code</summary>
-<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="co"># @title 0.2 --- Connect to GitHub Repository --- Load Files</span></span>
-<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a><span class="co">"""</span></span>
-<span id="cb8-4"><a href="#cb8-4" aria-hidden="true" tabindex="-1"></a><span class="co">BLOCK PURPOSE: Establishes connection to the AMTAIR GitHub repository and provides</span></span>
-<span id="cb8-5"><a href="#cb8-5" aria-hidden="true" tabindex="-1"></a><span class="co">functions to load example data files for processing.</span></span>
-<span id="cb8-6"><a href="#cb8-6" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-7"><a href="#cb8-7" aria-hidden="true" tabindex="-1"></a><span class="co">This block creates a reusable function for accessing files from the project's</span></span>
-<span id="cb8-8"><a href="#cb8-8" aria-hidden="true" tabindex="-1"></a><span class="co">GitHub repository, enabling access to example files like the rain-sprinkler-lawn</span></span>
-<span id="cb8-9"><a href="#cb8-9" aria-hidden="true" tabindex="-1"></a><span class="co">Bayesian network that serves as our canonical test case.</span></span>
-<span id="cb8-10"><a href="#cb8-10" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-11"><a href="#cb8-11" aria-hidden="true" tabindex="-1"></a><span class="co">DEPENDENCIES: requests library, io library</span></span>
-<span id="cb8-12"><a href="#cb8-12" aria-hidden="true" tabindex="-1"></a><span class="co">OUTPUTS: load_file_from_repo function and test file loads</span></span>
-<span id="cb8-13"><a href="#cb8-13" aria-hidden="true" tabindex="-1"></a><span class="co">"""</span></span>
-<span id="cb8-14"><a href="#cb8-14" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-15"><a href="#cb8-15" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> requests.exceptions <span class="im">import</span> HTTPError</span>
-<span id="cb8-16"><a href="#cb8-16" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-17"><a href="#cb8-17" aria-hidden="true" tabindex="-1"></a><span class="co"># Specify the base repository URL for the AMTAIR project</span></span>
-<span id="cb8-18"><a href="#cb8-18" aria-hidden="true" tabindex="-1"></a>repo_url <span class="op">=</span> <span class="st">"https://raw.githubusercontent.com/SingularitySmith/AMTAIR_Prototype/main/data/example_carlsmith/"</span></span>
-<span id="cb8-19"><a href="#cb8-19" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"Connecting to repository: </span><span class="sc">{</span>repo_url<span class="sc">}</span><span class="ss">"</span>)</span>
-<span id="cb8-20"><a href="#cb8-20" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-21"><a href="#cb8-21" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> load_file_from_repo(relative_path):</span>
-<span id="cb8-22"><a href="#cb8-22" aria-hidden="true" tabindex="-1"></a>    <span class="co">"""</span></span>
-<span id="cb8-23"><a href="#cb8-23" aria-hidden="true" tabindex="-1"></a><span class="co">    Loads a file from the specified GitHub repository using a relative path.</span></span>
-<span id="cb8-24"><a href="#cb8-24" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-25"><a href="#cb8-25" aria-hidden="true" tabindex="-1"></a><span class="co">    Args:</span></span>
-<span id="cb8-26"><a href="#cb8-26" aria-hidden="true" tabindex="-1"></a><span class="co">        relative_path (str): Path to the file relative to the repo_url</span></span>
-<span id="cb8-27"><a href="#cb8-27" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-28"><a href="#cb8-28" aria-hidden="true" tabindex="-1"></a><span class="co">    Returns:</span></span>
-<span id="cb8-29"><a href="#cb8-29" aria-hidden="true" tabindex="-1"></a><span class="co">        For CSV/JSON: pandas DataFrame</span></span>
-<span id="cb8-30"><a href="#cb8-30" aria-hidden="true" tabindex="-1"></a><span class="co">        For MD: string containing file contents</span></span>
-<span id="cb8-31"><a href="#cb8-31" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-32"><a href="#cb8-32" aria-hidden="true" tabindex="-1"></a><span class="co">    Raises:</span></span>
-<span id="cb8-33"><a href="#cb8-33" aria-hidden="true" tabindex="-1"></a><span class="co">        HTTPError: If file not found or other HTTP error occurs</span></span>
-<span id="cb8-34"><a href="#cb8-34" aria-hidden="true" tabindex="-1"></a><span class="co">        ValueError: If unsupported file type is requested</span></span>
-<span id="cb8-35"><a href="#cb8-35" aria-hidden="true" tabindex="-1"></a><span class="co">    """</span></span>
-<span id="cb8-36"><a href="#cb8-36" aria-hidden="true" tabindex="-1"></a>    file_url <span class="op">=</span> repo_url <span class="op">+</span> relative_path</span>
-<span id="cb8-37"><a href="#cb8-37" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="ss">f"Attempting to load: </span><span class="sc">{</span>file_url<span class="sc">}</span><span class="ss">"</span>)</span>
-<span id="cb8-38"><a href="#cb8-38" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-39"><a href="#cb8-39" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Fetch the file content from GitHub</span></span>
-<span id="cb8-40"><a href="#cb8-40" aria-hidden="true" tabindex="-1"></a>    response <span class="op">=</span> requests.get(file_url)</span>
-<span id="cb8-41"><a href="#cb8-41" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-42"><a href="#cb8-42" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Check for bad status codes with enhanced error messages</span></span>
-<span id="cb8-43"><a href="#cb8-43" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> response.status_code <span class="op">==</span> <span class="dv">404</span>:</span>
-<span id="cb8-44"><a href="#cb8-44" aria-hidden="true" tabindex="-1"></a>        <span class="cf">raise</span> HTTPError(<span class="ss">f"File not found at URL: </span><span class="sc">{</span>file_url<span class="sc">}</span><span class="ss">. Check the file path/name and ensure the file is publicly accessible."</span>, response<span class="op">=</span>response)</span>
-<span id="cb8-45"><a href="#cb8-45" aria-hidden="true" tabindex="-1"></a>    <span class="cf">else</span>:</span>
-<span id="cb8-46"><a href="#cb8-46" aria-hidden="true" tabindex="-1"></a>        response.raise_for_status()  <span class="co"># Raise for other error codes</span></span>
-<span id="cb8-47"><a href="#cb8-47" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-48"><a href="#cb8-48" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Convert response to file-like object</span></span>
-<span id="cb8-49"><a href="#cb8-49" aria-hidden="true" tabindex="-1"></a>    file_object <span class="op">=</span> io.StringIO(response.text)</span>
-<span id="cb8-50"><a href="#cb8-50" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-51"><a href="#cb8-51" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Process different file types appropriately</span></span>
-<span id="cb8-52"><a href="#cb8-52" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> relative_path.endswith(<span class="st">".csv"</span>):</span>
-<span id="cb8-53"><a href="#cb8-53" aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span> pd.read_csv(file_object)  <span class="co"># Return DataFrame for CSV</span></span>
-<span id="cb8-54"><a href="#cb8-54" aria-hidden="true" tabindex="-1"></a>    <span class="cf">elif</span> relative_path.endswith(<span class="st">".json"</span>):</span>
-<span id="cb8-55"><a href="#cb8-55" aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span> pd.read_json(file_object)  <span class="co"># Return DataFrame for JSON</span></span>
-<span id="cb8-56"><a href="#cb8-56" aria-hidden="true" tabindex="-1"></a>    <span class="cf">elif</span> relative_path.endswith(<span class="st">".md"</span>):</span>
-<span id="cb8-57"><a href="#cb8-57" aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span> file_object.read()  <span class="co"># Return raw content for MD files</span></span>
-<span id="cb8-58"><a href="#cb8-58" aria-hidden="true" tabindex="-1"></a>    <span class="cf">else</span>:</span>
-<span id="cb8-59"><a href="#cb8-59" aria-hidden="true" tabindex="-1"></a>        <span class="cf">raise</span> <span class="pp">ValueError</span>(<span class="ss">f"Unsupported file type: </span><span class="sc">{</span>relative_path<span class="sc">.</span>split(<span class="st">'.'</span>)[<span class="op">-</span><span class="dv">1</span>]<span class="sc">}</span><span class="ss">. Add support in the GitHub Connection section of this notebook."</span>)</span>
-<span id="cb8-60"><a href="#cb8-60" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-61"><a href="#cb8-61" aria-hidden="true" tabindex="-1"></a><span class="co"># Load example files to test connection</span></span>
-<span id="cb8-62"><a href="#cb8-62" aria-hidden="true" tabindex="-1"></a><span class="cf">try</span>:</span>
-<span id="cb8-63"><a href="#cb8-63" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Load the extracted data CSV file</span></span>
-<span id="cb8-64"><a href="#cb8-64" aria-hidden="true" tabindex="-1"></a><span class="co">#    df = load_file_from_repo("extracted_data.csv")</span></span>
-<span id="cb8-65"><a href="#cb8-65" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-66"><a href="#cb8-66" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Load the ArgDown test text</span></span>
-<span id="cb8-67"><a href="#cb8-67" aria-hidden="true" tabindex="-1"></a>    md_content <span class="op">=</span> load_file_from_repo(<span class="st">"ArgDown.md"</span>)</span>
-<span id="cb8-68"><a href="#cb8-68" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-69"><a href="#cb8-69" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="st">"✅ Successfully connected to repository and loaded test files."</span>)</span>
-<span id="cb8-70"><a href="#cb8-70" aria-hidden="true" tabindex="-1"></a><span class="cf">except</span> <span class="pp">Exception</span> <span class="im">as</span> e:</span>
-<span id="cb8-71"><a href="#cb8-71" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="ss">f"❌ Error loading files: </span><span class="sc">{</span><span class="bu">str</span>(e)<span class="sc">}</span><span class="ss">"</span>)</span>
-<span id="cb8-72"><a href="#cb8-72" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="st">"Please check your internet connection and the repository URL."</span>)</span>
-<span id="cb8-73"><a href="#cb8-73" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-74"><a href="#cb8-74" aria-hidden="true" tabindex="-1"></a><span class="co"># Display preview of loaded content (commented out to avoid cluttering output)</span></span>
-<span id="cb8-75"><a href="#cb8-75" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(md_content)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb13"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="co"># @title 0.2 --- Connect to GitHub Repository --- Load Files</span></span>
+<span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-3"><a href="#cb13-3" aria-hidden="true" tabindex="-1"></a><span class="co">"""</span></span>
+<span id="cb13-4"><a href="#cb13-4" aria-hidden="true" tabindex="-1"></a><span class="co">BLOCK PURPOSE: Establishes connection to the AMTAIR GitHub repository and provides</span></span>
+<span id="cb13-5"><a href="#cb13-5" aria-hidden="true" tabindex="-1"></a><span class="co">functions to load example data files for processing.</span></span>
+<span id="cb13-6"><a href="#cb13-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-7"><a href="#cb13-7" aria-hidden="true" tabindex="-1"></a><span class="co">This block creates a reusable function for accessing files from the project's</span></span>
+<span id="cb13-8"><a href="#cb13-8" aria-hidden="true" tabindex="-1"></a><span class="co">GitHub repository, enabling access to example files like the rain-sprinkler-lawn</span></span>
+<span id="cb13-9"><a href="#cb13-9" aria-hidden="true" tabindex="-1"></a><span class="co">Bayesian network that serves as our canonical test case.</span></span>
+<span id="cb13-10"><a href="#cb13-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-11"><a href="#cb13-11" aria-hidden="true" tabindex="-1"></a><span class="co">DEPENDENCIES: requests library, io library</span></span>
+<span id="cb13-12"><a href="#cb13-12" aria-hidden="true" tabindex="-1"></a><span class="co">OUTPUTS: load_file_from_repo function and test file loads</span></span>
+<span id="cb13-13"><a href="#cb13-13" aria-hidden="true" tabindex="-1"></a><span class="co">"""</span></span>
+<span id="cb13-14"><a href="#cb13-14" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-15"><a href="#cb13-15" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> requests.exceptions <span class="im">import</span> HTTPError</span>
+<span id="cb13-16"><a href="#cb13-16" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-17"><a href="#cb13-17" aria-hidden="true" tabindex="-1"></a><span class="co"># Specify the base repository URL for the AMTAIR project</span></span>
+<span id="cb13-18"><a href="#cb13-18" aria-hidden="true" tabindex="-1"></a>repo_url <span class="op">=</span> <span class="st">"https://raw.githubusercontent.com/SingularitySmith/AMTAIR_Prototype/main/data/example_carlsmith/"</span></span>
+<span id="cb13-19"><a href="#cb13-19" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"Connecting to repository: </span><span class="sc">{</span>repo_url<span class="sc">}</span><span class="ss">"</span>)</span>
+<span id="cb13-20"><a href="#cb13-20" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-21"><a href="#cb13-21" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> load_file_from_repo(relative_path):</span>
+<span id="cb13-22"><a href="#cb13-22" aria-hidden="true" tabindex="-1"></a>    <span class="co">"""</span></span>
+<span id="cb13-23"><a href="#cb13-23" aria-hidden="true" tabindex="-1"></a><span class="co">    Loads a file from the specified GitHub repository using a relative path.</span></span>
+<span id="cb13-24"><a href="#cb13-24" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-25"><a href="#cb13-25" aria-hidden="true" tabindex="-1"></a><span class="co">    Args:</span></span>
+<span id="cb13-26"><a href="#cb13-26" aria-hidden="true" tabindex="-1"></a><span class="co">        relative_path (str): Path to the file relative to the repo_url</span></span>
+<span id="cb13-27"><a href="#cb13-27" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-28"><a href="#cb13-28" aria-hidden="true" tabindex="-1"></a><span class="co">    Returns:</span></span>
+<span id="cb13-29"><a href="#cb13-29" aria-hidden="true" tabindex="-1"></a><span class="co">        For CSV/JSON: pandas DataFrame</span></span>
+<span id="cb13-30"><a href="#cb13-30" aria-hidden="true" tabindex="-1"></a><span class="co">        For MD: string containing file contents</span></span>
+<span id="cb13-31"><a href="#cb13-31" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-32"><a href="#cb13-32" aria-hidden="true" tabindex="-1"></a><span class="co">    Raises:</span></span>
+<span id="cb13-33"><a href="#cb13-33" aria-hidden="true" tabindex="-1"></a><span class="co">        HTTPError: If file not found or other HTTP error occurs</span></span>
+<span id="cb13-34"><a href="#cb13-34" aria-hidden="true" tabindex="-1"></a><span class="co">        ValueError: If unsupported file type is requested</span></span>
+<span id="cb13-35"><a href="#cb13-35" aria-hidden="true" tabindex="-1"></a><span class="co">    """</span></span>
+<span id="cb13-36"><a href="#cb13-36" aria-hidden="true" tabindex="-1"></a>    file_url <span class="op">=</span> repo_url <span class="op">+</span> relative_path</span>
+<span id="cb13-37"><a href="#cb13-37" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="ss">f"Attempting to load: </span><span class="sc">{</span>file_url<span class="sc">}</span><span class="ss">"</span>)</span>
+<span id="cb13-38"><a href="#cb13-38" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-39"><a href="#cb13-39" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Fetch the file content from GitHub</span></span>
+<span id="cb13-40"><a href="#cb13-40" aria-hidden="true" tabindex="-1"></a>    response <span class="op">=</span> requests.get(file_url)</span>
+<span id="cb13-41"><a href="#cb13-41" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-42"><a href="#cb13-42" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Check for bad status codes with enhanced error messages</span></span>
+<span id="cb13-43"><a href="#cb13-43" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> response.status_code <span class="op">==</span> <span class="dv">404</span>:</span>
+<span id="cb13-44"><a href="#cb13-44" aria-hidden="true" tabindex="-1"></a>        <span class="cf">raise</span> HTTPError(<span class="ss">f"File not found at URL: </span><span class="sc">{</span>file_url<span class="sc">}</span><span class="ss">. Check the file path/name and ensure the file is publicly accessible."</span>, response<span class="op">=</span>response)</span>
+<span id="cb13-45"><a href="#cb13-45" aria-hidden="true" tabindex="-1"></a>    <span class="cf">else</span>:</span>
+<span id="cb13-46"><a href="#cb13-46" aria-hidden="true" tabindex="-1"></a>        response.raise_for_status()  <span class="co"># Raise for other error codes</span></span>
+<span id="cb13-47"><a href="#cb13-47" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-48"><a href="#cb13-48" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Convert response to file-like object</span></span>
+<span id="cb13-49"><a href="#cb13-49" aria-hidden="true" tabindex="-1"></a>    file_object <span class="op">=</span> io.StringIO(response.text)</span>
+<span id="cb13-50"><a href="#cb13-50" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-51"><a href="#cb13-51" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Process different file types appropriately</span></span>
+<span id="cb13-52"><a href="#cb13-52" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> relative_path.endswith(<span class="st">".csv"</span>):</span>
+<span id="cb13-53"><a href="#cb13-53" aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span> pd.read_csv(file_object)  <span class="co"># Return DataFrame for CSV</span></span>
+<span id="cb13-54"><a href="#cb13-54" aria-hidden="true" tabindex="-1"></a>    <span class="cf">elif</span> relative_path.endswith(<span class="st">".json"</span>):</span>
+<span id="cb13-55"><a href="#cb13-55" aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span> pd.read_json(file_object)  <span class="co"># Return DataFrame for JSON</span></span>
+<span id="cb13-56"><a href="#cb13-56" aria-hidden="true" tabindex="-1"></a>    <span class="cf">elif</span> relative_path.endswith(<span class="st">".md"</span>):</span>
+<span id="cb13-57"><a href="#cb13-57" aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span> file_object.read()  <span class="co"># Return raw content for MD files</span></span>
+<span id="cb13-58"><a href="#cb13-58" aria-hidden="true" tabindex="-1"></a>    <span class="cf">else</span>:</span>
+<span id="cb13-59"><a href="#cb13-59" aria-hidden="true" tabindex="-1"></a>        <span class="cf">raise</span> <span class="pp">ValueError</span>(<span class="ss">f"Unsupported file type: </span><span class="sc">{</span>relative_path<span class="sc">.</span>split(<span class="st">'.'</span>)[<span class="op">-</span><span class="dv">1</span>]<span class="sc">}</span><span class="ss">. Add support in the GitHub Connection section of this notebook."</span>)</span>
+<span id="cb13-60"><a href="#cb13-60" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-61"><a href="#cb13-61" aria-hidden="true" tabindex="-1"></a><span class="co"># Load example files to test connection</span></span>
+<span id="cb13-62"><a href="#cb13-62" aria-hidden="true" tabindex="-1"></a><span class="cf">try</span>:</span>
+<span id="cb13-63"><a href="#cb13-63" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Load the extracted data CSV file</span></span>
+<span id="cb13-64"><a href="#cb13-64" aria-hidden="true" tabindex="-1"></a><span class="co">#    df = load_file_from_repo("extracted_data.csv")</span></span>
+<span id="cb13-65"><a href="#cb13-65" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-66"><a href="#cb13-66" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Load the ArgDown test text</span></span>
+<span id="cb13-67"><a href="#cb13-67" aria-hidden="true" tabindex="-1"></a>    md_content <span class="op">=</span> load_file_from_repo(<span class="st">"ArgDown.md"</span>)</span>
+<span id="cb13-68"><a href="#cb13-68" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-69"><a href="#cb13-69" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="st">"✅ Successfully connected to repository and loaded test files."</span>)</span>
+<span id="cb13-70"><a href="#cb13-70" aria-hidden="true" tabindex="-1"></a><span class="cf">except</span> <span class="pp">Exception</span> <span class="im">as</span> e:</span>
+<span id="cb13-71"><a href="#cb13-71" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="ss">f"❌ Error loading files: </span><span class="sc">{</span><span class="bu">str</span>(e)<span class="sc">}</span><span class="ss">"</span>)</span>
+<span id="cb13-72"><a href="#cb13-72" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="st">"Please check your internet connection and the repository URL."</span>)</span>
+<span id="cb13-73"><a href="#cb13-73" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-74"><a href="#cb13-74" aria-hidden="true" tabindex="-1"></a><span class="co"># Display preview of loaded content (commented out to avoid cluttering output)</span></span>
+<span id="cb13-75"><a href="#cb13-75" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(md_content)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 <div class="cell-output cell-output-stdout">
 <pre><code>Connecting to repository: https://raw.githubusercontent.com/SingularitySmith/AMTAIR_Prototype/main/data/example_carlsmith/
@@ -604,30 +867,34 @@ Attempting to load: https://raw.githubusercontent.com/SingularitySmith/AMTAIR_Pr
 <p>Full Notebooks are embedded in the Appendix through the _quarto.yml file with:</p>
 </section>
 </section>
-<section id="sec-figures1" class="level2 unnumbered unlisted">
-<h2 class="unnumbered unlisted anchored" data-anchor-id="sec-figures1">Figures</h2>
-<div id="fig-automation_pipeline" class="quarto-float quarto-figure quarto-figure-center anchored" alt="FLOWCHART: Five-step automation pipeline workflow for AMTAIR project.           DATA: The pipeline transforms PDFs through ArgDown, BayesDown, CSV, and HTML into Bayesian network visualizations.           PURPOSE: Illustrates the core technical process that enables automated extraction of probabilistic models from AI safety literature.           DETAILS: Five numbered green steps show: (1) LLM-based extraction from PDFs to ArgDown, (2) ArgDown to BayesDown completion with probabilities, (3) Extracting world-models as CSV data, (4) Software tools for data inference, and (5) Visualization of the resulting Bayesian network.           Each step includes example outputs, with the final visualization showing a Rain-Sprinkler-Grass Wet Bayesian network with probability tables.           SOURCE: Created by the author to explain the AMTAIR methodology           " data-fig-align="center" data-fig-scap="Five-step AMTAIR automation pipeline from PDFs to Bayesian networks" width="100%">
-<figure class="quarto-float quarto-float-fig figure">
-<div aria-describedby="fig-automation_pipeline-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<a href="https://github.com/VJMeyer/submission"><img src="./images/pipeline.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:100.0%" data-fig-scap="Five-step AMTAIR automation pipeline from PDFs to Bayesian networks" alt="FLOWCHART: Five-step automation pipeline workflow for AMTAIR project.           DATA: The pipeline transforms PDFs through ArgDown, BayesDown, CSV, and HTML into Bayesian network visualizations.           PURPOSE: Illustrates the core technical process that enables automated extraction of probabilistic models from AI safety literature.           DETAILS: Five numbered green steps show: (1) LLM-based extraction from PDFs to ArgDown, (2) ArgDown to BayesDown completion with probabilities, (3) Extracting world-models as CSV data, (4) Software tools for data inference, and (5) Visualization of the resulting Bayesian network.           Each step includes example outputs, with the final visualization showing a Rain-Sprinkler-Grass Wet Bayesian network with probability tables.           SOURCE: Created by the author to explain the AMTAIR methodology           "></a>
+<section id="diagrams" class="level2">
+<h2 class="anchored" data-anchor-id="diagrams">Diagrams</h2>
+<p>Quarto has native support for embedding Mermaid and Graphviz diagrams. This enables you to create flowcharts, sequence diagrams, state diagrams, Gantt charts, and more using a plain text syntax inspired by markdown.</p>
+<p>For example, here we embed a flowchart created using Mermaid:</p>
+<div class="cell" data-layout-align="default">
+<details class="code-fold">
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb15"><pre class="sourceCode default code-with-copy"><code class="sourceCode default"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a>flowchart LR</span>
+<span id="cb15-2"><a href="#cb15-2" aria-hidden="true" tabindex="-1"></a>  A[Hard edge] --&gt; B(Round edge)</span>
+<span id="cb15-3"><a href="#cb15-3" aria-hidden="true" tabindex="-1"></a>  B --&gt; C{Decision}</span>
+<span id="cb15-4"><a href="#cb15-4" aria-hidden="true" tabindex="-1"></a>  C --&gt; D[Result one]</span>
+<span id="cb15-5"><a href="#cb15-5" aria-hidden="true" tabindex="-1"></a>  C --&gt; E[Result two]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output-display">
+<div>
+<p></p><figure class="figure"><p></p>
+<div>
+<pre class="mermaid mermaid-js">flowchart LR
+  A[Hard edge] --&gt; B(Round edge)
+  B --&gt; C{Decision}
+  C --&gt; D[Result one]
+  C --&gt; E[Result two]
+</pre>
 </div>
-<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-automation_pipeline-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;1.2: AMTAIR Automation Pipeline from <span class="citation" data-cites="bucknall2022">Bucknall and Dori-Hacohen (<a href="ref/references.html#ref-bucknall2022" role="doc-biblioref">2022</a>)</span>
-</figcaption>
-</figure>
+<p></p></figure><p></p>
 </div>
-<p>Testing crossreferencing grapics <a href="chapters/2.Context.html#fig-automation_pipeline" class="quarto-xref">Figure&nbsp;<span>4.2</span></a>.</p>
-<div id="fig-testgraphic2" class="quarto-float quarto-figure quarto-figure-left anchored" data-fig-scap="Short 2 caption" data-fig-align="left" alt="2nd Alt Text / Description.">
-<figure class="quarto-float quarto-float-fig figure">
-<div aria-describedby="fig-testgraphic2-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<img src="./images/cover.png" class="img-fluid quarto-figure quarto-figure-left figure-img" style="width:30.0%" data-fig-scap="Short 2 caption" alt="2nd Alt Text / Description.">
 </div>
-<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-testgraphic2-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;1.3: Caption/Title 2
-</figcaption>
-</figure>
 </div>
-<p>Testing crossreferencing grapics <a href="#fig-testgraphic2" class="quarto-xref">Figure&nbsp;<span>1.3</span></a>.</p>
 </section>
 <section id="sec-citations" class="level2 unnumbered unlisted">
 <h2 class="unnumbered unlisted anchored" data-anchor-id="sec-citations">Citations</h2>
@@ -662,72 +929,29 @@ Figure&nbsp;1.3: Caption/Title 2
 <p>This view is supported <span class="citation" data-cites="soares2014 knuth1984">(<a href="ref/references.html#ref-soares2014" role="doc-biblioref">Soares and Fallenstein 2014, 23</a>; <a href="ref/references.html#ref-knuth1984" role="doc-biblioref">Knuth 1984, 156–59</a>)</span>.</p>
 </section>
 </section>
-<section id="sec-heading" class="level2">
-<h2 class="anchored" data-anchor-id="sec-heading">Headings &amp; Potential Headings</h2>
-<!-- Comments for comments -->
-<!-- [ ] ToDos for things to do / tasks / reminders (allows "jump to with Taks Tree extension") -->
-<p><code>verbatim code formatting for notes and ideas to be included (here)</code></p>
-<pre><code>Also code blocks for more extensive notes and ideas to be included and checklists
-- test 1. 
-- test 2. 
-- test 3.
-2. second
-3. third
-</code></pre>
-<blockquote class="blockquote">
-<p>Blockquote formatting for “Suggested Citations (e.g.&nbsp;carlsmith 2024 on …)” and/or claims which require a citation (e.g.&nbsp;claim x should be backed-up by a ciation from the literature)</p>
-</blockquote>
-<p>Here is an inline note.<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a></p>
-<p>Here is a footnote reference,<a href="#fn2" class="footnote-ref" id="fnref2" role="doc-noteref"><sup>2</sup></a></p>
-<div class="hidden">
-<p><span class="math display">\[
-\def\RR{{\bf R}}
-\def\bold#1{{\bf #1}}
-\]</span></p>
-</div>
-<p>Here’s some raw inline HTML: <a>html</a></p>
-<div class="sourceCode" id="cb11"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a>page 1</span>
-<span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb11-4"><a href="#cb11-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb11-5"><a href="#cb11-5" aria-hidden="true" tabindex="-1"></a>page 2</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<p>page 1</p>
-<div style="page-break-after: always;"></div>
-<p>page 2<a href="#fn3" class="footnote-ref" id="fnref3" role="doc-noteref"><sup>3</sup></a></p>
-<p>This paragraph won’t be part of the note, because it isn’t indented.</p>
-<div class="cell" data-layout-align="default">
-<details class="code-fold">
-<summary>Code</summary>
-<div class="sourceCode cell-code" id="cb13"><pre class="sourceCode default code-with-copy"><code class="sourceCode default"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a>flowchart LR</span>
-<span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a>  A[Hard edge] --&gt; B(Round edge)</span>
-<span id="cb13-3"><a href="#cb13-3" aria-hidden="true" tabindex="-1"></a>  B --&gt; C{Decision}</span>
-<span id="cb13-4"><a href="#cb13-4" aria-hidden="true" tabindex="-1"></a>  C --&gt; D[Result one]</span>
-<span id="cb13-5"><a href="#cb13-5" aria-hidden="true" tabindex="-1"></a>  C --&gt; E[Result two]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</details>
-<div class="cell-output-display">
-<div>
-<p></p><figure class="figure"><p></p>
-<div>
-<pre class="mermaid mermaid-js">flowchart LR
-  A[Hard edge] --&gt; B(Round edge)
-  B --&gt; C{Decision}
-  C --&gt; D[Result one]
-  C --&gt; E[Result two]
-</pre>
-</div>
-<p></p></figure><p></p>
-</div>
-</div>
-</div>
-<p>Testing crossreferencing grapics <a href="chapters/2.Context.html#fig-automation_pipeline" class="quarto-xref">Figure&nbsp;<span>4.2</span></a>. See <a href="#sec-syntax" class="quarto-xref">Chapter&nbsp;<span>Quarto Syntax</span></a> for more details on visualizing model diagnostics.</p>
+<section id="sec-crossref" class="level2">
+<h2 class="anchored" data-anchor-id="sec-crossref">Section Cross-References</h2>
+<p>Refer to sections like: <a href="chapters/4.Discussion.html#sec-adaptive-governance" class="quarto-xref"><span>Toward Adaptive Governance</span></a> and <a href="#sec-crossref" class="quarto-xref"><span>Section Cross-References</span></a> <!-- Using @-sec-REFERENCE_HEADING requires that the .qmd file contains a yml section which details the "numbering" --></p>
+<div class="sourceCode" id="cb16"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a><span class="an">Caveat:</span><span class="co"> refering to sections with @sec-HEADINGS works only for sections with:</span></span>
+<span id="cb16-2"><a href="#cb16-2" aria-hidden="true" tabindex="-1"></a><span class="fu">## Heading {#sec-HEADINGS}</span></span>
+<span id="cb16-3"><a href="#cb16-3" aria-hidden="true" tabindex="-1"></a>It does not work for sections with ".unnumbered and/or .unlisted":</span>
+<span id="cb16-4"><a href="#cb16-4" aria-hidden="true" tabindex="-1"></a><span class="fu">## Heading {#sec-HEADINGS .unnumbered .unlisted}</span></span>
+<span id="cb16-5"><a href="#cb16-5" aria-hidden="true" tabindex="-1"></a>Furthermore the .qmd and/or .md yml settings (~ numbering have to be just right)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<section id="section-numbers" class="level3">
+<h3 class="anchored" data-anchor-id="section-numbers">Section Numbers</h3>
+<p>By default, all headings in your document create a numbered section. You customize numbering depth using the number-depth option. For example, to only number sections immediately below the chapter level, use this:</p>
+<p><code>number-depth: 2</code></p>
+<p>Note that toc-depth is independent of number-depth (i.e.&nbsp;you can have unnumbered entries in the TOC if they are masked out from numbering by number-depth).</p>
+<p>Testing crossreferencing grapics <a href="chapters/2.0.Context.html#fig-automation_pipeline" class="quarto-xref">Figure&nbsp;<span>3.2</span></a>. See <a href="#sec-syntax" class="quarto-xref">Chapter&nbsp;<span>Quarto Syntax</span></a> for more details on visualizing model diagnostics.</p>
+<p>Testing crossreferencing headings <a href="chapters/2.0.Context.html#sec-carlsmith-model" class="quarto-xref"><span>AI Existential Risk: The Carlsmith Model</span></a></p>
+<p><code>Testing crossreferencing headings @sec-rain-sprinkler-grass</code> which does not work yet. <!-- [ ] Fix cross-chapter heading referencing --></p>
+<p>Chapter Cross-Reference <a href="#sec-crossref" class="quarto-xref"><span>Section Cross-References</span></a></p>
 </section>
-<section id="formatting" class="level2">
-<h2 class="anchored" data-anchor-id="formatting">Formatting</h2>
-<p><mark>This text is highlighted</mark></p>
-<p><u>This text is underlined</u></p>
-<p><span class="smallcaps">This text is smallcaps</span></p>
+</section>
+<section id="pages-in-landscape" class="level2">
+<h2 class="anchored" data-anchor-id="pages-in-landscape">Pages in Landscape</h2>
 <div class="landscape">
-<p>This will appear in landscape.</p>
+<p>This will appear in landscape but only in PDF format. Testing crossreferencing headings <a href="chapters/2.0.Context.html#sec-carlsmith-model" class="quarto-xref"><span>AI Existential Risk: The Carlsmith Model</span></a></p>
 </div>
 </section>
 </section>
@@ -764,12 +988,21 @@ Remember to connect this back to the research question
 ## Optional Title
 Content here
 ::: -->
+<!-- (@)  A list whose numbering
+
+continues after
+
+(@)  an interruption -->
+<!-- ::: {}
+1. A list
+:::
+
+::: {}
+1. Followed by another list
+:::  -->
 
 
 <div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" role="list" style="display: none">
-<div id="ref-bucknall2022" class="csl-entry" role="listitem">
-Bucknall, Benjamin S., and Shiri Dori-Hacohen. 2022. <span>“Current and <span>Near-Term AI</span> as a <span>Potential Existential Risk Factor</span>.”</span> In <em>Proceedings of the 2022 <span>AAAI</span>/<span>ACM Conference</span> on <span>AI</span>, <span>Ethics</span>, and <span>Society</span></em>, 119–29. Oxford United Kingdom: ACM. <a href="https://doi.org/10.1145/3514094.3534146">https://doi.org/10.1145/3514094.3534146</a>.
-</div>
 <div id="ref-growiec2024" class="csl-entry" role="listitem">
 Growiec, Jakub. 2024. <span>“Existential Risk from Transformative <span>AI</span>: An Economic Perspective.”</span> <em>Technological and Economic Development of Economy</em>, 1–27.
 </div>

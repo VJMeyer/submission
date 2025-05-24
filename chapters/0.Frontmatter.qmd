@@ -127,6 +127,9 @@ These changes would elevate an already strong thesis to exceptional, addressing 
 
 <!-- [ ] Consider adding an index: https://quarto.org/docs/books/book-structure.html#creating-an-index -->
 
+<!-- [ ] Fix the Overlapping between Section Heading and Sub-Heading -->
+
+<!-- [ ] Fix Formatting of Headings in Affidavit -->
 
 
 

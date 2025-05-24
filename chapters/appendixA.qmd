@@ -8,3 +8,374 @@ number: false      # Exclude from section numbering
 
 
 testtext
+
+
+# Quarto Syntax {#sec-syntax}
+
+## Main Formatting
+
+### Html Comments
+
+<!-- Comments for comments -->
+
+### Tasks with ToDo Tree
+
+`<!-- [ ] ToDos for things to do / tasks / reminders (allows "jump to with Taks Tree extension") -->`
+
+<!-- [ ] ToDos for things to do / tasks / reminders (allows "jump to with Taks Tree extension") -->
+
+### Verbatim Code Formatting
+
+`verbatim code formatting for notes and ideas to be included (here)`
+
+### Code Block formatting
+
+```         
+Also code blocks for more extensive notes and ideas to be included and checklists
+- test 1. 
+- test 2. 
+- test 3.
+2. second
+3. third
+```
+
+```
+code
+```
+
+Add a language to syntax highlight code blocks:
+
+
+```python
+1 + 1
+```
+
+### Blockquote Formatting
+
+> Blockquote formatting for "Suggested Citations (e.g. carlsmith 2024 on ...)" and/or claims which require a citation (e.g. claim x should be backed-up by a ciation from the literature)
+
+### Tables
+
+| Right | Left | Default | Center |
+|------:|:-----|---------|:------:|
+|   12  |  12  |    12   |    12  |
+|  123  |  123 |   123   |   123  |
+|    1  |    1 |     1   |     1  |
+
+| Col1 | Col2 | Col3 |
+|------|------|------|
+| A    | B    | C    |
+| E    | F    | G    |
+| A    | G    | G    |
+
+: My Caption {#tbl-letters}
+
+See @tbl-letters.
+
+
+
+## Headings & Potential Headings in Standard Markdown formatting ('\##') {#sec-heading}
+
+### Heading 3
+
+#### Heading 4
+
+##### Heading 5
+
+###### Heading 6
+
+
+## Text Formatting Options
+
+*italics*, **bold**, ***bold italics***
+
+superscript^2^ / subscript~2~
+
+~~strikethrough~~
+
+[This text is highlighted]{.mark}
+
+[This text is underlined]{.underline}
+
+[This text is smallcaps]{.smallcaps}
+
+## Lists
+
+-   unordered list
+
+    -   sub-item 1
+    -   sub-item 2
+        -   sub-sub-item 1
+
+-   item 2
+
+    Continued (indent 4 spaces)
+
+1.  ordered list
+2.  item 2
+    i)  sub-item 1
+        A.  sub-sub-item 1
+
+## Math
+
+inline math: $E = mc^{2}$
+
+display math:
+
+$$E = mc^{2}$$
+
+If you want to define custom TeX macros, include them within \$\$ delimiters enclosed in a .hidden block. For example:
+
+::: hidden
+$$
+ \def\RR{{\bf R}}
+ \def\bold#1{{\bf #1}}
+$$
+:::
+
+For HTML math processed using MathJax (the default) you can use the \\def, \\newcommand, \\renewcommand, \\newenvironment, \\renewenvironment, and \\let commands to create your own macros and environments.
+
+## Footnotes
+
+Here is an inline note.[^1]
+
+[^1]: Inlines notes are easier to write, since you don't have to pick an identifier and move down to type the note.
+
+Here is a footnote reference,[^2]
+
+[^2]: Here is the footnote.
+
+Another Text with a footnote[^3] but this time a "longnote".
+
+[^3]: Here's one with multiple blocks.
+
+    Subsequent paragraphs are indented to show that they belong to the previous footnote.
+
+    ```         
+    { some.code }
+    ```
+
+    The whole paragraph can be indented, or just the first line. In this way, multi-paragraph footnotes work like multi-paragraph list items.
+
+This paragraph won't be part of the note, because it isn't indented.
+
+## Callouts {#sec-callouts}
+
+Quarto's native callouts work without additional packages:
+
+::: note
+This is written in a 'note' environment -- but it does not seem to produce any special rendering.
+:::
+
+::: callout-note
+### Optional Title
+
+Content here
+:::
+
+::: callout-note
+### Important Note2
+
+This renders perfectly in both HTML and PDF.
+:::
+
+Also for markdown:
+
+``` markdown
+::: {.render_as_markdown_example}
+## Markdown Heading
+This renders perfectly in both HTML and PDF but as markdown "plain text"
+:::
+```
+
+## Links
+
+`<https://quarto.org/docs/authoring/markdown-basics.html>` produces: <https://quarto.org/docs/authoring/markdown-basics.html>
+
+`[Quarto Book Cross-References](https://quarto.org/docs/books/book-crossrefs.html)` produces: [Quarto Book Cross-References](https://quarto.org/docs/books/book-crossrefs.html)
+
+## Images & Figures {#sec-figures1 .unnumbered .unlisted}
+
+```         
+[![AMTAIR Automation Pipeline from @bucknall2022](/images/pipeline.png){
+  #fig-automation_pipeline
+  fig-scap="Five-step AMTAIR automation pipeline from PDFs to Bayesian networks" 
+  fig-alt="FLOWCHART: Five-step automation pipeline workflow for AMTAIR project.
+          DATA: The pipeline transforms PDFs through ArgDown, BayesDown, CSV, and HTML into Bayesian network visualizations.
+          PURPOSE: Illustrates the core technical process that enables automated extraction of probabilistic models from AI safety literature.
+          DETAILS: Five numbered green steps show: (1) LLM-based extraction from PDFs to ArgDown, (2) ArgDown to BayesDown completion with probabilities, (3) Extracting world-models as CSV data, (4) Software tools for data inference, and (5) Visualization of the resulting Bayesian network.
+          Each step includes example outputs, with the final visualization showing a Rain-Sprinkler-Grass Wet Bayesian network with probability tables.
+          SOURCE: Created by the author to explain the AMTAIR methodology
+          "
+  fig-align="center" 
+  width="100%"
+  }](https://github.com/VJMeyer/submission)
+
+
+Testing crossreferencing grapics @fig-automation_pipeline.
+
+![Caption/Title 2](/images/cover.png){#fig-testgraphic2 fig-scap="Short 2 caption" fig-alt="2nd Alt Text / Description." fig-align="left" width="30%"}
+
+Testing crossreferencing grapics @fig-testgraphic2.
+```
+
+[![AMTAIR Automation Pipeline from](/images/pipeline.png){#fig-automation_pipeline fig-scap="Five-step AMTAIR automation pipeline from PDFs to Bayesian networks" fig-alt="FLOWCHART: Five-step automation pipeline workflow for AMTAIR project.           DATA: The pipeline transforms PDFs through ArgDown, BayesDown, CSV, and HTML into Bayesian network visualizations.           PURPOSE: Illustrates the core technical process that enables automated extraction of probabilistic models from AI safety literature.           DETAILS: Five numbered green steps show: (1) LLM-based extraction from PDFs to ArgDown, (2) ArgDown to BayesDown completion with probabilities, (3) Extracting world-models as CSV data, (4) Software tools for data inference, and (5) Visualization of the resulting Bayesian network.           Each step includes example outputs, with the final visualization showing a Rain-Sprinkler-Grass Wet Bayesian network with probability tables.           SOURCE: Created by the author to explain the AMTAIR methodology           " fig-align="center" width="100%"}](https://github.com/VJMeyer/submission)
+
+Testing crossreferencing grapics @fig-automation_pipeline. Note that the indentations of graphic inclusions get messed up by viewing them in "view mode" in VS code.
+
+![Caption/Title 2](/images/cover.png){#fig-testgraphic2 fig-scap="Short 2 caption" fig-alt="2nd Alt Text / Description." fig-align="left" width="30%"}
+
+Testing crossreferencing grapics @fig-testgraphic2.
+
+## Page Breaks
+
+``` markdown
+page 1
+
+{{< pagebreak >}}
+
+page 2
+```
+
+page 1
+
+{{< pagebreak >}}
+
+page 2
+
+## Including Code {#sec-code}
+
+```{python}
+#| echo: true
+#| eval: true
+#| label: fig-extraction-pipeline
+#| fig-cap: "AMTAIR extraction pipeline visualization"
+#| fig-link: "https://colab.research.google.com/drive/your-notebook-id"
+#| fig-alt: "Detailed description for accessibility"
+
+import pandas as pd
+print("AMTAIR is working!")
+```
+
+### In-Line LaTeX
+
+```{=latex}
+\renewcommand*{\labelitemi}{\textgreater}
+```
+
+### In-Line HTML
+
+Here's some raw inline HTML: <a>html</a>
+
+## Reference or Embed Code from .ipynb files
+
+#### Code chunks from .ipynb notebooks can be embedded in the .qmd text with:
+
+``` markdown
+{{< embed /AMTAIR_Prototype/data/example_carlsmith/AMTAIR_Prototype_example_carlsmith.ipynb#my_code_cell_test >}}
+```
+
+#### which produces the output of executing the code cell:
+
+{{< embed /AMTAIR_Prototype/data/example_carlsmith/AMTAIR_Prototype_example_carlsmith.ipynb#my_code_cell_test >}}
+
+#### including 'echo=true' renders the code of the cell:
+
+``` markdown
+{{< embed /AMTAIR_Prototype/data/example_carlsmith/AMTAIR_Prototype_example_carlsmith.ipynb#my_code_cell_test echo=true >}}
+```
+
+{{< embed /AMTAIR_Prototype/data/example_carlsmith/AMTAIR_Prototype_example_carlsmith.ipynb#my_code_cell_test echo=true >}}
+
+Link:
+
+Full Notebooks are embedded in the Appendix through the \_quarto.yml file with:
+
+## Diagrams
+
+Quarto has native support for embedding Mermaid and Graphviz diagrams. This enables you to create flowcharts, sequence diagrams, state diagrams, Gantt charts, and more using a plain text syntax inspired by markdown.
+
+For example, here we embed a flowchart created using Mermaid:
+
+```{mermaid}
+flowchart LR
+  A[Hard edge] --> B(Round edge)
+  B --> C{Decision}
+  C --> D[Result one]
+  C --> E[Result two]
+```
+
+## Citations {#sec-citations .unnumbered .unlisted}
+
+@soares2014 <!-- preferred because it works with both html, latex and pdf -->
+
+[@soares2014] and [@knuth1984]
+
+Blah Blah [see @knuth1984, pp. 33-35; also @growiec2024, chap. 1]
+
+Blah Blah [@knuth1984, pp. 33-35, 38-39 and passim]
+
+Blah Blah [@growiec2024; @knuth1984].
+
+Growiec says blah [-@growiec2024]
+
+### Narrative citations (author as subject)
+
+@soares2014 argues that AI alignment requires...
+
+### Parenthetical citations (supporting reference)
+
+Recent work supports this view [@soares2014; @knuth1984].
+
+### Author-only citation (when discussing the person)
+
+As [-@soares2014] demonstrates in their analysis...
+
+### Year-only citation (when author already mentioned)
+
+Soares [-@soares2014] later revised this position.
+
+### Page-specific references
+
+The key insight appears in [@soares2014, pp. 45-67].
+
+### Multiple works, different pages
+
+This view is supported [@soares2014, p. 23; @knuth1984, pp. 156-159].
+
+## Section Cross-References {#sec-crossref}
+
+Refer to sections like: @sec-adaptive-governance and @sec-crossref <!-- Using @-sec-REFERENCE_HEADING requires that the .qmd file contains a yml section which details the "numbering" -->
+
+``` markdown
+Caveat: refering to sections with @sec-HEADINGS works only for sections with:
+## Heading {#sec-HEADINGS}
+It does not work for sections with ".unnumbered and/or .unlisted":
+## Heading {#sec-HEADINGS .unnumbered .unlisted}
+Furthermore the .qmd and/or .md yml settings (~ numbering have to be just right)
+```
+
+### Section Numbers
+
+By default, all headings in your document create a numbered section. You customize numbering depth using the number-depth option. For example, to only number sections immediately below the chapter level, use this:
+
+`number-depth: 2`
+
+Note that toc-depth is independent of number-depth (i.e. you can have unnumbered entries in the TOC if they are masked out from numbering by number-depth).
+
+Testing crossreferencing grapics @fig-automation_pipeline. See [Chapter @sec-syntax] for more details on visualizing model diagnostics.
+
+Testing crossreferencing headings @sec-carlsmith-model
+
+`Testing crossreferencing headings @sec-rain-sprinkler-grass` which does not work yet. <!-- [ ] Fix cross-chapter heading referencing -->
+
+Chapter Cross-Reference @sec-crossref
+
+## Pages in Landscape
+
+::: landscape
+This will appear in landscape but only in PDF format. Testing crossreferencing headings @sec-carlsmith-model
+:::
+
+
+<!-- {{< video https://www.youtube.com/embed/wo9vZccmqwc >}} -->

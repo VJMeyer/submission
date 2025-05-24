@@ -6,9 +6,7 @@ numbering:
   level: 1         # Chapter level
 ---
 
-
-
-```
+```         
 ### 20% of Grade: ~ 29% of text ~ 8700 words ~ 20 pages
 
 - provides critical or constructive evaluation of positions introduced
@@ -22,42 +20,24 @@ numbering:
 - claim/argument is original or insightful, possibly even presents an original contribution to the debate 
 ```
 
-
-
-
-
-
-
 ## AMTAIR Implementation {#sec-amtair-implementation}
 
 <!-- [ ] Expand this section to ~29% of total text (approximately 8700 words) -->
 
+<!-- provides critical or constructive evaluation of positions introduced -->
 
-<!-- provides critical or constructive evaluation of positions introduced --> 
-<!-- develops strong (plausible) argument in support of author's own position/thesis --> 
-<!-- argument draws on relevant course material --> 
-<!-- demonstrates understanding of course materials and key concepts --> 
+<!-- develops strong (plausible) argument in support of author's own position/thesis -->
+
+<!-- argument draws on relevant course material -->
+
+<!-- demonstrates understanding of course materials and key concepts -->
+
 <!-- presents original or insightful contribution to the debate -->
 
-
-
 Text to render
-
-
-
-
-
-
-
-
-
 
 <!-- ## Own Carlsmith Model Implementation — Explanation -->
 
 <!-- ## Own Implementation: Good example from a published paper -->
 
-{{< include 3.1.Implementation.qmd >}}
-post text
-{{< include 3.2.Results.md >}}
-post text
-<!-- No Headings after .md inclusion (creates a fatal bug with the ToC) -->
+{{< include 3.1.Implementation.qmd >}} post text {{< include 3.2.Results.md >}} post text <!-- No Headings after .md inclusion (creates a fatal bug with the ToC) -->
