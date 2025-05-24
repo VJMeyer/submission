@@ -61,6 +61,7 @@
 
 
 ```{python}
+#| label: my_code_cell_test
 #| echo: true
 #| eval: true
 #| label: fig-extraction-pipeline
