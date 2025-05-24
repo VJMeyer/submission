@@ -8,6 +8,13 @@ numbering:
 
 # Preface {.unnumbered}
 
+<!-- [ ] Add personal motivation and journey to AI governance research --> 
+<!-- [ ] Include acknowledgments of MTAIR team and advisors --> 
+<!-- [ ] Add guide for different reader types (technical, policy, general) -->
+
+<!-- [ ] Verify American spelling throughout document using US English spell checker --> 
+<!-- [ ] Create style guide document listing preferred American English spellings for technical terms -->
+
 # Quarto Syntax {#sec-syntax}
 
 ## Main Formatting
