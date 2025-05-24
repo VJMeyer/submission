@@ -4,7 +4,7 @@
 
 <!-- [ ] add labels for each code cell: #| label: my_code_cell_test -->
  
-<!-- [ ] Test if alt text, caption etc. need to be added to code cells as well -->
+<!-- [x] Test if alt text, caption etc. need to be added to code cells as well-- not easy, probably ignore -->
 
 <!-- [ ] Create section with overview of code-labels -->
 
