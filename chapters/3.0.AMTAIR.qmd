@@ -42,6 +42,12 @@ Text to render
 
 <!-- ## Own Implementation: Good example from a published paper -->
 
-{{< include 3.1.Implementation.qmd >}} post text {{< include 3.2.Results.md >}} post text
+{{< include 3.1.Implementation.md >}} 
+
+### post text 
+
+{{< include 3.2.Results.md >}} 
+
+### post text
 
 <!-- No Headings after .md inclusion (creates a fatal bug with the ToC) -->
