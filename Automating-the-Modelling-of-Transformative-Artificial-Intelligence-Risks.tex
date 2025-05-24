@@ -303,12 +303,12 @@
 \@ifpackageloaded{subcaption}{}{\usepackage{subcaption}}
 \makeatother
 \makeatletter
-\definecolor{QuartoInternalColor6}{rgb}{0.00,0.64,0.31}
-\definecolor{QuartoInternalColor5}{rgb}{0.00,0.40,0.79}
-\definecolor{QuartoInternalColor2}{rgb}{0,0,0}
-\definecolor{QuartoInternalColor3}{rgb}{0.00,0.45,0.15}
-\definecolor{QuartoInternalColor1}{rgb}{0.70,0.17,0.19}
 \definecolor{QuartoInternalColor4}{rgb}{0.15,0.56,0.56}
+\definecolor{QuartoInternalColor3}{rgb}{0.00,0.45,0.15}
+\definecolor{QuartoInternalColor5}{rgb}{0.00,0.40,0.79}
+\definecolor{QuartoInternalColor1}{rgb}{0.70,0.17,0.19}
+\definecolor{QuartoInternalColor6}{rgb}{0.00,0.64,0.31}
+\definecolor{QuartoInternalColor2}{rgb}{0,0,0}
 \makeatother
 \usepackage{bookmark}
 \IfFileExists{xurl.sty}{\usepackage{xurl}}{} % add URL line breaks if available
@@ -895,13 +895,13 @@ Quarto's native callouts work without additional packages:
 This is written in a `note' environment -- but it does not seem to
 produce any special rendering.
 
-\begin{tcolorbox}[enhanced jigsaw, leftrule=.75mm, coltitle=black, opacitybacktitle=0.6, bottomrule=.15mm, breakable, bottomtitle=1mm, colframe=quarto-callout-note-color-frame, left=2mm, colbacktitle=quarto-callout-note-color!10!white, colback=white, toprule=.15mm, opacityback=0, rightrule=.15mm, toptitle=1mm, titlerule=0mm, title=\textcolor{quarto-callout-note-color}{\faInfo}\hspace{0.5em}{Optional Title}, arc=.35mm]
+\begin{tcolorbox}[enhanced jigsaw, rightrule=.15mm, bottomrule=.15mm, opacitybacktitle=0.6, titlerule=0mm, breakable, left=2mm, opacityback=0, leftrule=.75mm, colbacktitle=quarto-callout-note-color!10!white, arc=.35mm, title=\textcolor{quarto-callout-note-color}{\faInfo}\hspace{0.5em}{Optional Title}, bottomtitle=1mm, colframe=quarto-callout-note-color-frame, colback=white, toptitle=1mm, toprule=.15mm, coltitle=black]
 
 Content here
 
 \end{tcolorbox}
 
-\begin{tcolorbox}[enhanced jigsaw, leftrule=.75mm, coltitle=black, opacitybacktitle=0.6, bottomrule=.15mm, breakable, bottomtitle=1mm, colframe=quarto-callout-note-color-frame, left=2mm, colbacktitle=quarto-callout-note-color!10!white, colback=white, toprule=.15mm, opacityback=0, rightrule=.15mm, toptitle=1mm, titlerule=0mm, title=\textcolor{quarto-callout-note-color}{\faInfo}\hspace{0.5em}{Important Note2}, arc=.35mm]
+\begin{tcolorbox}[enhanced jigsaw, rightrule=.15mm, bottomrule=.15mm, opacitybacktitle=0.6, titlerule=0mm, breakable, left=2mm, opacityback=0, leftrule=.75mm, colbacktitle=quarto-callout-note-color!10!white, arc=.35mm, title=\textcolor{quarto-callout-note-color}{\faInfo}\hspace{0.5em}{Important Note2}, bottomtitle=1mm, colframe=quarto-callout-note-color-frame, colback=white, toptitle=1mm, toprule=.15mm, coltitle=black]
 
 This renders perfectly in both HTML and PDF.
 
@@ -1058,7 +1058,7 @@ can be embedded in the .qmd text with:}
 
 \begin{Shaded}
 \begin{Highlighting}[]
-\NormalTok{\{\{\textless{} embed /AMTAIR\_Prototype/data/example\_carlsmith/AMTAIR\_Prototype\_example\_carlsmith.ipynb\#my\_code\_cell\_test \textgreater{}\}\}}
+\NormalTok{\{\{\textless{} embed /AMTAIR\_Prototype/data/example\_carlsmith/AMTAIR\_Prototype\_example\_carlsmith.ipynb\#connect\_to\_github\_repository \textgreater{}\}\}}
 \end{Highlighting}
 \end{Shaded}
 
@@ -1067,7 +1067,87 @@ cell:}\label{which-produces-the-output-of-executing-the-code-cell}
 \addcontentsline{toc}{subsubsection}{which produces the output of
 executing the code cell:}
 
-\phantomsection\label{my_code_cell_test}
+\phantomsection\label{connect_to_github_repository}
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{\# @title 0.2 {-}{-}{-} Connect to GitHub Repository {-}{-}{-} Load Files}
+
+\CommentTok{"""}
+\CommentTok{BLOCK PURPOSE: Establishes connection to the AMTAIR GitHub repository and provides}
+\CommentTok{functions to load example data files for processing.}
+
+\CommentTok{This block creates a reusable function for accessing files from the project\textquotesingle{}s}
+\CommentTok{GitHub repository, enabling access to example files like the rain{-}sprinkler{-}lawn}
+\CommentTok{Bayesian network that serves as our canonical test case.}
+
+\CommentTok{DEPENDENCIES: requests library, io library}
+\CommentTok{OUTPUTS: load\_file\_from\_repo function and test file loads}
+\CommentTok{"""}
+
+\ImportTok{from}\NormalTok{ requests.exceptions }\ImportTok{import}\NormalTok{ HTTPError}
+
+\CommentTok{\# Specify the base repository URL for the AMTAIR project}
+\NormalTok{repo\_url }\OperatorTok{=} \StringTok{"https://raw.githubusercontent.com/SingularitySmith/AMTAIR\_Prototype/main/data/example\_carlsmith/"}
+\BuiltInTok{print}\NormalTok{(}\SpecialStringTok{f"Connecting to repository: }\SpecialCharTok{\{}\NormalTok{repo\_url}\SpecialCharTok{\}}\SpecialStringTok{"}\NormalTok{)}
+
+\KeywordTok{def}\NormalTok{ load\_file\_from\_repo(relative\_path):}
+    \CommentTok{"""}
+\CommentTok{    Loads a file from the specified GitHub repository using a relative path.}
+
+\CommentTok{    Args:}
+\CommentTok{        relative\_path (str): Path to the file relative to the repo\_url}
+
+\CommentTok{    Returns:}
+\CommentTok{        For CSV/JSON: pandas DataFrame}
+\CommentTok{        For MD: string containing file contents}
+
+\CommentTok{    Raises:}
+\CommentTok{        HTTPError: If file not found or other HTTP error occurs}
+\CommentTok{        ValueError: If unsupported file type is requested}
+\CommentTok{    """}
+\NormalTok{    file\_url }\OperatorTok{=}\NormalTok{ repo\_url }\OperatorTok{+}\NormalTok{ relative\_path}
+    \BuiltInTok{print}\NormalTok{(}\SpecialStringTok{f"Attempting to load: }\SpecialCharTok{\{}\NormalTok{file\_url}\SpecialCharTok{\}}\SpecialStringTok{"}\NormalTok{)}
+
+    \CommentTok{\# Fetch the file content from GitHub}
+\NormalTok{    response }\OperatorTok{=}\NormalTok{ requests.get(file\_url)}
+
+    \CommentTok{\# Check for bad status codes with enhanced error messages}
+    \ControlFlowTok{if}\NormalTok{ response.status\_code }\OperatorTok{==} \DecValTok{404}\NormalTok{:}
+        \ControlFlowTok{raise}\NormalTok{ HTTPError(}\SpecialStringTok{f"File not found at URL: }\SpecialCharTok{\{}\NormalTok{file\_url}\SpecialCharTok{\}}\SpecialStringTok{. Check the file path/name and ensure the file is publicly accessible."}\NormalTok{, response}\OperatorTok{=}\NormalTok{response)}
+    \ControlFlowTok{else}\NormalTok{:}
+\NormalTok{        response.raise\_for\_status()  }\CommentTok{\# Raise for other error codes}
+
+    \CommentTok{\# Convert response to file{-}like object}
+\NormalTok{    file\_object }\OperatorTok{=}\NormalTok{ io.StringIO(response.text)}
+
+    \CommentTok{\# Process different file types appropriately}
+    \ControlFlowTok{if}\NormalTok{ relative\_path.endswith(}\StringTok{".csv"}\NormalTok{):}
+        \ControlFlowTok{return}\NormalTok{ pd.read\_csv(file\_object)  }\CommentTok{\# Return DataFrame for CSV}
+    \ControlFlowTok{elif}\NormalTok{ relative\_path.endswith(}\StringTok{".json"}\NormalTok{):}
+        \ControlFlowTok{return}\NormalTok{ pd.read\_json(file\_object)  }\CommentTok{\# Return DataFrame for JSON}
+    \ControlFlowTok{elif}\NormalTok{ relative\_path.endswith(}\StringTok{".md"}\NormalTok{):}
+        \ControlFlowTok{return}\NormalTok{ file\_object.read()  }\CommentTok{\# Return raw content for MD files}
+    \ControlFlowTok{else}\NormalTok{:}
+        \ControlFlowTok{raise} \PreprocessorTok{ValueError}\NormalTok{(}\SpecialStringTok{f"Unsupported file type: }\SpecialCharTok{\{}\NormalTok{relative\_path}\SpecialCharTok{.}\NormalTok{split(}\StringTok{\textquotesingle{}.\textquotesingle{}}\NormalTok{)[}\OperatorTok{{-}}\DecValTok{1}\NormalTok{]}\SpecialCharTok{\}}\SpecialStringTok{. Add support in the GitHub Connection section of this notebook."}\NormalTok{)}
+
+\CommentTok{\# Load example files to test connection}
+\ControlFlowTok{try}\NormalTok{:}
+    \CommentTok{\# Load the extracted data CSV file}
+\CommentTok{\#    df = load\_file\_from\_repo("extracted\_data.csv")}
+
+    \CommentTok{\# Load the ArgDown test text}
+\NormalTok{    md\_content }\OperatorTok{=}\NormalTok{ load\_file\_from\_repo(}\StringTok{"ArgDown.md"}\NormalTok{)}
+
+    \BuiltInTok{print}\NormalTok{(}\StringTok{"✅ Successfully connected to repository and loaded test files."}\NormalTok{)}
+\ControlFlowTok{except} \PreprocessorTok{Exception} \ImportTok{as}\NormalTok{ e:}
+    \BuiltInTok{print}\NormalTok{(}\SpecialStringTok{f"❌ Error loading files: }\SpecialCharTok{\{}\BuiltInTok{str}\NormalTok{(e)}\SpecialCharTok{\}}\SpecialStringTok{"}\NormalTok{)}
+    \BuiltInTok{print}\NormalTok{(}\StringTok{"Please check your internet connection and the repository URL."}\NormalTok{)}
+
+\CommentTok{\# Display preview of loaded content (commented out to avoid cluttering output)}
+\BuiltInTok{print}\NormalTok{(md\_content)}
+\end{Highlighting}
+\end{Shaded}
+
 \begin{verbatim}
 Connecting to repository: https://raw.githubusercontent.com/SingularitySmith/AMTAIR_Prototype/main/data/example_carlsmith/
 Attempting to load: https://raw.githubusercontent.com/SingularitySmith/AMTAIR_Prototype/main/data/example_carlsmith/ArgDown.md
@@ -1107,11 +1187,11 @@ code of the cell:}
 
 \begin{Shaded}
 \begin{Highlighting}[]
-\NormalTok{\{\{\textless{} embed /AMTAIR\_Prototype/data/example\_carlsmith/AMTAIR\_Prototype\_example\_carlsmith.ipynb\#my\_code\_cell\_test echo=true \textgreater{}\}\}}
+\NormalTok{\{\{\textless{} embed /AMTAIR\_Prototype/data/example\_carlsmith/AMTAIR\_Prototype\_example\_carlsmith.ipynb\#connect\_to\_github\_repository echo=true \textgreater{}\}\}}
 \end{Highlighting}
 \end{Shaded}
 
-\phantomsection\label{my_code_cell_test}
+\phantomsection\label{connect_to_github_repository}
 \begin{Shaded}
 \begin{Highlighting}[]
 \CommentTok{\# @title 0.2 {-}{-}{-} Connect to GitHub Repository {-}{-}{-} Load Files}
@@ -1997,8 +2077,8 @@ Upscale Conditional Policy Assessments in Bayesian Networks on a Narrow
 Path towards Existential Safety
 \end{quote}
 
-\begin{tcolorbox}[enhanced jigsaw, leftrule=.75mm, coltitle=black, opacitybacktitle=0.6, bottomrule=.15mm, breakable, bottomtitle=1mm, colframe=quarto-callout-note-color-frame, left=2mm, colbacktitle=quarto-callout-note-color!10!white, colback=white, toprule=.15mm, opacityback=0, rightrule=.15mm, toptitle=1mm, titlerule=0mm, title=\textcolor{quarto-callout-note-color}{\faInfo}\hspace{0.5em}{10\% of Grade: \textasciitilde{} 14\% of text \textasciitilde{} 4200
-words \textasciitilde{} 10 pages}, arc=.35mm]
+\begin{tcolorbox}[enhanced jigsaw, rightrule=.15mm, bottomrule=.15mm, opacitybacktitle=0.6, titlerule=0mm, breakable, left=2mm, opacityback=0, leftrule=.75mm, colbacktitle=quarto-callout-note-color!10!white, arc=.35mm, title=\textcolor{quarto-callout-note-color}{\faInfo}\hspace{0.5em}{10\% of Grade: \textasciitilde{} 14\% of text \textasciitilde{} 4200
+words \textasciitilde{} 10 pages}, bottomtitle=1mm, colframe=quarto-callout-note-color-frame, colback=white, toptitle=1mm, toprule=.15mm, coltitle=black]
 
 \begin{itemize}
 \item
@@ -2274,8 +2354,8 @@ tools for improving coordination in AI governance.
 
 \chapter{Context \& Background}\label{sec-context}
 
-\begin{tcolorbox}[enhanced jigsaw, leftrule=.75mm, coltitle=black, opacitybacktitle=0.6, bottomrule=.15mm, breakable, bottomtitle=1mm, colframe=quarto-callout-note-color-frame, left=2mm, colbacktitle=quarto-callout-note-color!10!white, colback=white, toprule=.15mm, opacityback=0, rightrule=.15mm, toptitle=1mm, titlerule=0mm, title=\textcolor{quarto-callout-note-color}{\faInfo}\hspace{0.5em}{20\% of Grade: \textasciitilde{} 29\% of text \textasciitilde{} 8700
-words \textasciitilde{} 20 pages}, arc=.35mm]
+\begin{tcolorbox}[enhanced jigsaw, rightrule=.15mm, bottomrule=.15mm, opacitybacktitle=0.6, titlerule=0mm, breakable, left=2mm, opacityback=0, leftrule=.75mm, colbacktitle=quarto-callout-note-color!10!white, arc=.35mm, title=\textcolor{quarto-callout-note-color}{\faInfo}\hspace{0.5em}{20\% of Grade: \textasciitilde{} 29\% of text \textasciitilde{} 8700
+words \textasciitilde{} 20 pages}, bottomtitle=1mm, colframe=quarto-callout-note-color-frame, colback=white, toptitle=1mm, toprule=.15mm, coltitle=black]
 
 \begin{itemize}
 \item
@@ -3578,8 +3658,8 @@ Testing crossreferencing grapics Figure~\ref{fig-automation_pipeline}.
 
 \chapter{AMTAIR}\label{amtair}
 
-\begin{tcolorbox}[enhanced jigsaw, leftrule=.75mm, coltitle=black, opacitybacktitle=0.6, bottomrule=.15mm, breakable, bottomtitle=1mm, colframe=quarto-callout-note-color-frame, left=2mm, colbacktitle=quarto-callout-note-color!10!white, colback=white, toprule=.15mm, opacityback=0, rightrule=.15mm, toptitle=1mm, titlerule=0mm, title=\textcolor{quarto-callout-note-color}{\faInfo}\hspace{0.5em}{20\% of Grade: \textasciitilde{} 29\% of text \textasciitilde{} 8700
-words \textasciitilde{} 20 pages}, arc=.35mm]
+\begin{tcolorbox}[enhanced jigsaw, rightrule=.15mm, bottomrule=.15mm, opacitybacktitle=0.6, titlerule=0mm, breakable, left=2mm, opacityback=0, leftrule=.75mm, colbacktitle=quarto-callout-note-color!10!white, arc=.35mm, title=\textcolor{quarto-callout-note-color}{\faInfo}\hspace{0.5em}{20\% of Grade: \textasciitilde{} 29\% of text \textasciitilde{} 8700
+words \textasciitilde{} 20 pages}, bottomtitle=1mm, colframe=quarto-callout-note-color-frame, colback=white, toptitle=1mm, toprule=.15mm, coltitle=black]
 
 \begin{itemize}
 \item
@@ -4892,8 +4972,8 @@ Sensitivity analysis revealed:
 
 \chapter{Discussion}\label{discussion}
 
-\begin{tcolorbox}[enhanced jigsaw, leftrule=.75mm, coltitle=black, opacitybacktitle=0.6, bottomrule=.15mm, breakable, bottomtitle=1mm, colframe=quarto-callout-note-color-frame, left=2mm, colbacktitle=quarto-callout-note-color!10!white, colback=white, toprule=.15mm, opacityback=0, rightrule=.15mm, toptitle=1mm, titlerule=0mm, title=\textcolor{quarto-callout-note-color}{\faInfo}\hspace{0.5em}{10\% of Grade: \textasciitilde{} 14\% of text \textasciitilde{} 4200
-words \textasciitilde{} 10 pages}, arc=.35mm]
+\begin{tcolorbox}[enhanced jigsaw, rightrule=.15mm, bottomrule=.15mm, opacitybacktitle=0.6, titlerule=0mm, breakable, left=2mm, opacityback=0, leftrule=.75mm, colbacktitle=quarto-callout-note-color!10!white, arc=.35mm, title=\textcolor{quarto-callout-note-color}{\faInfo}\hspace{0.5em}{10\% of Grade: \textasciitilde{} 14\% of text \textasciitilde{} 4200
+words \textasciitilde{} 10 pages}, bottomtitle=1mm, colframe=quarto-callout-note-color-frame, colback=white, toptitle=1mm, toprule=.15mm, coltitle=black]
 
 \begin{itemize}
 \item
@@ -5987,8 +6067,8 @@ modeling
 
 \chapter{Conclusion}\label{conclusion}
 
-\begin{tcolorbox}[enhanced jigsaw, leftrule=.75mm, coltitle=black, opacitybacktitle=0.6, bottomrule=.15mm, breakable, bottomtitle=1mm, colframe=quarto-callout-note-color-frame, left=2mm, colbacktitle=quarto-callout-note-color!10!white, colback=white, toprule=.15mm, opacityback=0, rightrule=.15mm, toptitle=1mm, titlerule=0mm, title=\textcolor{quarto-callout-note-color}{\faInfo}\hspace{0.5em}{10\% of Grade: \textasciitilde{} 14\% of text \textasciitilde{} 4200
-words \textasciitilde{} 10 pages}, arc=.35mm]
+\begin{tcolorbox}[enhanced jigsaw, rightrule=.15mm, bottomrule=.15mm, opacitybacktitle=0.6, titlerule=0mm, breakable, left=2mm, opacityback=0, leftrule=.75mm, colbacktitle=quarto-callout-note-color!10!white, arc=.35mm, title=\textcolor{quarto-callout-note-color}{\faInfo}\hspace{0.5em}{10\% of Grade: \textasciitilde{} 14\% of text \textasciitilde{} 4200
+words \textasciitilde{} 10 pages}, bottomtitle=1mm, colframe=quarto-callout-note-color-frame, colback=white, toptitle=1mm, toprule=.15mm, coltitle=black]
 
 \begin{itemize}
 \item
@@ -6771,377 +6851,813 @@ Governance}
 
 \markright{Appendix D: Ethical Considerations and Governance}
 
-\chapter{```}\label{section}
-
-\section{title: AMTAIR Prototype Demonstration (Public Colab
-Notebook)}\label{title-amtair-prototype-demonstration-public-colab-notebook}
-
-\begin{verbatim}
-:::
-
-
-# [AMTAIR Prototype Demonstration (Public Colab Notebook)](https://colab.research.google.com/github/SingularitySmith/AMTAIR_Prototype/blob/main/version_history/AMTAIR_Prototype_0_1.3.ipynb#scrollTo=lt8-AnebGUXr)
-
-# AMTAIR Prototype: Automating Transformative AI Risk Modeling
-
-## Executive Summary
-
-This notebook implements a prototype of the AMTAIR (Automating Transformative AI Risk Modeling) project, which addresses the critical coordination failure in AI governance by developing computational tools that automate the extraction of probabilistic world models from AI safety literature.
-
-The prototype demonstrates the transformation pipeline from structured argument representations (ArgDown) to probabilistic Bayesian networks (BayesDown), enabling the visualization and analysis of causal relationships and probability distributions that underlie AI risk assessments and policy evaluations.
-
-### Purpose Within the Master's Thesis
-
-This notebook serves as the technical implementation component of the Master's thesis "Automating Transformative AI Risk Modeling: A Computational Approach to Policy Impact Evaluation." It demonstrates the feasibility of automating the extraction and formalization of world models, focusing on the core extraction pipeline and visualization capabilities that form the foundation for more sophisticated analysis.
-
-### Relevance to AI Governance
-
-The coordination crisis in AI governance stems from different stakeholders working with incompatible assumptions, terminologies, and priorities. By making implicit models explicit through automated extraction and formalization, this work helps bridge communication gaps between technical researchers, policy specialists, and other stakeholders, contributing to more effective coordination in addressing existential risks from advanced AI.
-
-## Notebook Structure and Workflow
-
-This notebook implements a multi-stage pipeline for transforming argument structures into interactive Bayesian network visualizations:
-
-1. **Environment Setup** (Sections 0.1-0.3): Establishes the technical environment with necessary libraries and data connections
-
-2. **Argument Extraction** (Sections 1.0-1.8): Processes source documents into structured ArgDown representations
-
-3. **Probability Integration** (Sections 2.0-2.8): Enhances ArgDown with probability information to create BayesDown
-
-4. **Data Transformation** (Section 3.0): Converts BayesDown into structured DataFrame format
-
-5. **Visualization and Analysis** (Section 4.0): Creates interactive Bayesian network visualizations
-
-6. **Archiving and Export** (Sections 5.0-6.0): Provides utilities for saving and sharing results
-
-Throughout this notebook, we use the classic rain-sprinkler-lawn example as a canonical test case, demonstrating how a simple causal scenario (rain and sprinkler use affecting wet grass) can be represented, processed, and visualized using our automated pipeline.
-
-## Project Context and Purpose
-
-This notebook implements a prototype of the Automating Transformative AI Risk Modeling (AMTAIR) project, which addresses a critical coordination failure in AI governance by developing computational tools to automate the extraction of probabilistic world models from AI safety literature.
-
-The coordination crisis in AI governance stems from different stakeholders (technical researchers, policy specialists, ethicists) operating with different terminologies, priorities, and implicit theories of change. This fragmentation systematically increases existential risk through safety gaps, resource misallocation, and capability-governance mismatches.
-
-The AMTAIR project aims to bridge these divides by:
-1. Making implicit models explicit through automated extraction and formalization
-2. Enabling comparison across different worldviews
-3. Providing a common language for discussing probabilistic relationships
-4. Supporting policy evaluation across diverse scenarios
-
-## Notebook Overview and Pipeline
-
-This notebook demonstrates the core extraction pipeline from structured argument representations (ArgDown) to probabilistic Bayesian networks (BayesDown), using the classic rain-sprinkler-lawn example as a canonical test case.
-
-The pipeline consists of five main stages:
-1. **Environment Setup**: Libraries, GitHub repository access, and data loading
-2. **Argument Extraction**: Processing source documents into structured ArgDown format
-3. **Probability Integration**: Enhancing ArgDown with probabilistic information to create BayesDown
-4. **Data Transformation**: Converting BayesDown into structured DataFrame format
-5. **Visualization & Analysis**: Creating interactive Bayesian network visualizations
-
-## Connection to Master's Thesis
-
-This notebook serves as the technical implementation component of the Master's thesis "Automating Transformative AI Risk Modeling: A Computational Approach to Policy Impact Evaluation" (see PY_Thesis_OutlineNDraft), demonstrating the feasibility of automating the process of extracting and formalizing world models from AI safety literature.
-
-The thesis positions this work as a solution to the coordination crisis in AI governance, where the AMTAIR tools provide a crucial bridge between different stakeholder communities by creating formal representations that can be analyzed, compared, and used for policy evaluation.
-
-For broader context on the project's motivation and placement within AI governance efforts, see PY_Post0.0 ("The Missing Piece: Why We Need a Grand Strategy for AI") and PY_AMTAIRDescription, which explain how this technical work contributes to the development of a comprehensive AI safety grand strategy.
-
-## Instructions --- How to use this notebook:
-
-
-1. **Import Libraries & Install Packages**: Run Section 0.1 to set up the necessary dependencies for data processing and visualization.
-
-2. **Connect to GitHub Repository & Load Data files**: Run Section 0.2 to establish connections to the data repository and load example datasets. This step retrieves sample ArgDown files and extracted data for demonstration.
-
-3. **Process Source Documents to ArgDown**: Sections 1.0-1.8 demonstrate the extraction of argument structures from source documents (such as PDFs) into ArgDown format, a markdown-like notation for structured arguments.
-
-4. **Convert ArgDown to BayesDown**: Sections 2.0-2.3 handle the transformation of ArgDown files into BayesDown format, which incorporates probabilistic information into the argument structure.
-
-5. **Extract Data into Structured Format**: Section 3.0 processes BayesDown format into structured database entries (CSV) that can be used for analysis.
-
-6. **Create and Analyze Bayesian Networks**: Section 4.0 demonstrates how to build Bayesian networks from the extracted data and provides tools for analyzing risk pathways.
-
-7. **Save and Export Results**: Sections 5.0-6.0 provide methods for archiving results and exporting visualizations.
-
-
->[AMTAIR Prototype Demonstration (Public Colab Notebook)](#scrollTo=lt8-AnebGUXr)
-
->[AMTAIR Prototype: Automating Transformative AI Risk Modeling](#scrollTo=iDy_leH6DJH_)
-
->>[Executive Summary](#scrollTo=iDy_leH6DJH_)
-
->>>[Purpose Within the Master's Thesis](#scrollTo=iDy_leH6DJH_)
-
->>>[Relevance to AI Governance](#scrollTo=iDy_leH6DJH_)
-
->>[Notebook Structure and Workflow](#scrollTo=iDy_leH6DJH_)
-
->>[Project Context and Purpose](#scrollTo=Cm1JQGDYNJjf)
-
->>[Notebook Overview and Pipeline](#scrollTo=Cm1JQGDYNJjf)
-
->>[Connection to Master's Thesis](#scrollTo=Cm1JQGDYNJjf)
-
->>[Instructions --- How to use this notebook:](#scrollTo=22NBzTxxsnfQ)
-
->>[Key Concepts:](#scrollTo=NovjnOw6bzLi)
-
->>[Example Workflow:](#scrollTo=NovjnOw6bzLi)
-
->>[Troubleshooting:](#scrollTo=NovjnOw6bzLi)
-
->[Environment Setup and Data Access](#scrollTo=neYYoWhbNRIJ)
-
->[0.1 Prepare Colab/Python Environment --- Import Libraries & Packages](#scrollTo=GtVFO-s74vI_)
-
->>[0.2 Connect to GitHub Repository](#scrollTo=2a3VR0fLhJow)
-
->>[0.3 File Import](#scrollTo=y-ix4Rp5fE9m)
-
->[1.0 Sources (PDF's of Papers) to ArgDown (.md file)](#scrollTo=52XyPlte5HrU)
-
->[Sources to ArgDown: Structured Argument Extraction](#scrollTo=1-7O4KHfNU-e)
-
->>[Process Overview](#scrollTo=1-7O4KHfNU-e)
-
->>[What is ArgDown?](#scrollTo=1-7O4KHfNU-e)
-
->>[1.1 Specify Source Document (e.g. PDF)](#scrollTo=ESKnZ_4f_a6y)
-
->>[1.2 Generate ArgDown Extraction Prompt](#scrollTo=6ToQFra3_nl9)
-
->>[1.3 Prepare LLM API Call](#scrollTo=pGv2KcZU_9Bn)
-
->>[1.4 Make ArgDown Extraction LLM API Call](#scrollTo=i5xsDYnsAWC4)
-
->>[1.5 Save ArgDown Extraction Response](#scrollTo=Lc2nMp8nAfeU)
-
->>[1.6 Review and Check ArgDown.md File](#scrollTo=5HcCfqE4A0ht)
-
->>[1.6.2 Check the Graph Structure with the ArgDown Sandbox Online](#scrollTo=gSpkvLbCC_PI)
-
->>[1.7 Extract ArgDown Graph Information as DataFrame](#scrollTo=MAm0UKpeBvyr)
-
->>[1.8 Store ArgDown Information as 'ArgDown.csv' file](#scrollTo=iFC6oiyICREn)
-
->[2.0 Probability Extractions: ArgDown (.csv) to BayesDown (.md + plugin JSON syntax)](#scrollTo=7SGB0XMp5VFq)
-
->[ArgDown to BayesDown: Adding Probability Information](#scrollTo=hWkmySZYNtzS)
-
->>[Process Overview](#scrollTo=hWkmySZYNtzS)
-
->>[What is BayesDown?](#scrollTo=hWkmySZYNtzS)
-
->>[2.1 Probability Extraction Questions --- 'ArgDown.csv' to 'ArgDown_WithQuestions.csv'](#scrollTo=WcF2nHXBZru4)
-
->>[2.2 'ArgDown_WithQuestions.csv' to 'BayesDownQuestions.md'](#scrollTo=-q9UOQ8yaBZn)
-
->>[2.3 Generate BayesDown Probability Extraction Prompt](#scrollTo=Ux4OUCPue6Bu)
-
->>[2.3.1 BayesDown Format Specification](#scrollTo=ivcnd2ml41Nv)
-
->>>[Core Structure](#scrollTo=ivcnd2ml41Nv)
-
->>>>>[Rain-Sprinkler-Lawn Example](#scrollTo=Fn72WmgVEOH0)
-
->>[2.4 Prepare 2nd API call](#scrollTo=d4tB9WD-fIWZ)
-
->>[2.5 Make BayesDown Probability Extraction API Call](#scrollTo=oPWto83lfN9Q)
-
->>[2.6 Save BayesDown with Probability Estimates (.csv)](#scrollTo=L8NWpz8MfZ9_)
-
->>[2.7 Review & Verify BayesDown Probability Estimates](#scrollTo=Q3PTtYgRfsLa)
-
->>[2.7.2 Check the Graph Structure with the ArgDown Sandbox Online](#scrollTo=VwoAgBsafonh)
-
->>[2.8 Extract BayesDown with Probability Estimates as Dataframe](#scrollTo=19KDn2mKf309)
-
->[3.0 Data Extraction: BayesDown (.md) to Database (.csv)](#scrollTo=vUSS00TCEpeW)
-
->[BayesDown to Structured Data: Network Construction](#scrollTo=vUSS00TCEpeW)
-
->>[Extraction Pipeline Overview](#scrollTo=vUSS00TCEpeW)
-
->>>[Theoretical Foundation](#scrollTo=vUSS00TCEpeW)
-
->>>[Role in Thesis Research](#scrollTo=vUSS00TCEpeW)
-
->>>[3.1 ExtractBayesDown-Data_v1](#scrollTo=AFnu_1Ludahi)
-
->>[3.1.2 Test BayesDown Extraction](#scrollTo=eUBJh8Qp4yd4)
-
->>[3.1.2.2 Check the Graph Structure with the ArgDown Sandbox Online](#scrollTo=z4Hgs0ICDQyW)
-
->>[3.3 Extraction](#scrollTo=mv8f4c4D3yJj)
-
->>>[3.3 Data-Post-Processing](#scrollTo=UcXf3fZ8dahj)
-
->>>[3.4 Download and save finished data frame as .csv file](#scrollTo=xTwPO_J-dahj)
-
->[4.0 Analysis & Inference: Bayesian Network Visualization](#scrollTo=t3zl7vKMECMg)
-
->>[Bayesian Network Visualization Approach](#scrollTo=t3zl7vKMECMg)
-
->>>[Visualization Philosophy](#scrollTo=t3zl7vKMECMg)
-
->>>[Connection to AMTAIR Goals](#scrollTo=t3zl7vKMECMg)
-
->>>[Implementation Structure](#scrollTo=t3zl7vKMECMg)
-
->>[Phase 1: Dependencies/Functions](#scrollTo=LSeSAPvtgIgU)
-
->>[Phase 2: Node Classification and Styling Module](#scrollTo=byAExfek5yFU)
-
->>[Phase 3: HTML Content Generation Module](#scrollTo=gnS3jFGU52OZ)
-
->>[Phase 4: Main Visualization Function](#scrollTo=d2uyG0Pi571f)
-
->[Quickly check HTML Outputs](#scrollTo=bFtxTKmLElSF)
-
->[Conclusion: From Prototype to Production](#scrollTo=oatKYlKrOSiN)
-
->>[Summary of Achievements](#scrollTo=oatKYlKrOSiN)
-
->>[Limitations and Future Work](#scrollTo=oatKYlKrOSiN)
-
->>[Connection to AMTAIR Project](#scrollTo=oatKYlKrOSiN)
-
->[6.0 Save Outputs](#scrollTo=kjbIj19epbrF)
-
->[Saving and Exporting Results](#scrollTo=0QqlN6dYpm4s)
-
->>[Convert .ipynb Notebook to MarkDown](#scrollTo=pS6AhdiSCLw4)
-
-
-
-## Key Concepts:
-
-- **ArgDown**: A structured format for representing arguments, with hierarchical relationships between statements.
-- **BayesDown**: An extension of ArgDown that incorporates probabilistic information, allowing for Bayesian network construction.
-- **Extraction Pipeline**: The process of converting unstructured text to structured argument representations.
-- **Bayesian Networks**: Probabilistic graphical models that represent variables and their conditional dependencies.
-
-## Example Workflow:
-
-1. Load a sample ArgDown file from the repository
-2. Extract the hierarchical structure and relationships
-3. Add probabilistic information to create a BayesDown representation
-4. Generate a Bayesian network visualization
-5. Analyze conditional probabilities and risk pathways
-
-## Troubleshooting:
-
-- If connectivity issues occur, ensure you have access to the GitHub repository
-- For visualization errors, check that all required libraries are properly installed
-- When processing custom files, ensure they follow the expected format conventions
-
-# 0. Environment Setup and Data Access
-
-This section establishes the technical foundation for the AMTAIR prototype by:
-1. Installing and importing necessary libraries
-2. Setting up access to the GitHub repository
-3. Loading example data files
-
-The environment setup is designed to be run once per session, with flags to prevent redundant installations and imports. This section forms the basis for the subsequent extraction and analysis steps in the pipeline.
-
-The key goal is to create a reproducible environment where the Bayesian network extraction and visualization can be performed consistently, with appropriate error handling and resource management.
-
-# 0.1 Prepare Colab/Python Environment --- Import Libraries & Packages
-
-::: {.cell quarto-private-1='{"key":"colab","value":{"base_uri":"https://localhost:8080/"}}' outputId='b474c7e1-0e7e-47f3-a546-9321cff91a6e'}
-``` {.python .cell-code}
-# @title 0.1 --- Install & Import Libraries & Packages (One-Time Setup) ---
-
-"""
-BLOCK PURPOSE: Establishes the core technical environment for the AMTAIR prototype.
-Sets up all required libraries for Bayesian network processing, visualization, and data manipulation.
-Uses a flag-based approach to ensure setup only runs once per session, enhancing efficiency.
-
-The setup follows a three-stage process:
-1. Install required packages not available in Colab by default
-2. Import all necessary libraries with error handling
-3. Set a global flag to prevent redundant execution
-
-DEPENDENCIES: Requires internet connection for package installation
-OUTPUTS: Global variable _setup_imports_done and loaded Python libraries
-"""
-
-#  Check if setup has already been completed in this session using environment flag
-try:
-    # If this variable exists, setup was already done successfully
-    _setup_imports_done
-    print("✅ Libraries already installed and imported in this session. Skipping setup.")
-
-except NameError:
-    print("⏳ Performing one-time library installation and imports...")
-
-    # --- STAGE 1: Install required packages ---
-    # Install visualization and network analysis libraries
-    !pip install -q pyvis  # Network visualization library
-    !apt-get install pandoc -y  # Document conversion utility
-
-    # Install Google API and data processing packages
-    !pip install -q --upgrade gspread pandas google-auth google-colab  # Data manipulation and Google integration
-
-    # Install Bayesian network and probabilistic modeling tools
-    !pip install -q pgmpy  # Probabilistic graphical models library
-
-    # Install notebook conversion tools
-    !pip install -q nbconvert  # Often pre-installed, but ensures availability
-
-    print("   --> Installations complete.")
-
-    # --- STAGE 2: Import libraries with error handling ---
-    try:
-        # Network and HTTP libraries
-        import requests      # For making HTTP requests to APIs and GitHub
-        import io            # For handling in-memory file-like objects
-
-        # Data processing libraries
-        import pandas as pd  # For structured data manipulation
-        import numpy as np   # For numerical operations
-        import json          # For JSON parsing and serialization
-        import re            # For regular expression pattern matching
-
-        # Visualization libraries
-        import matplotlib.pyplot as plt  # For creating plots and charts
-        from IPython.display import HTML, display, Markdown  # For rich output in notebook
-
-        # --- Specialized libraries requiring installation ---
-        # Network analysis library
-        import networkx as nx  # For graph representation and analysis
-
-        # Probabilistic modeling libraries
-        from pgmpy.models import BayesianNetwork  # For Bayesian network structure
-        from pgmpy.factors.discrete import TabularCPD  # For conditional probability tables
-        from pgmpy.inference import VariableElimination  # For probabilistic inference
-
-        # Interactive network visualization
-        from pyvis.network import Network  # For interactive network visualization
-
-        # Output version information for key libraries
-        print(f"      pandas version: {pd.__version__}")
-        print(f"      networkx version: {nx.__version__}")
-        # Add others if specific versions are critical
-
-        print("   --> Imports complete.")
-
-        # --- STAGE 3: Set flag to indicate successful setup ---
-        _setup_imports_done = True
-        print("✅ One-time setup finished successfully.")
-
-    except ImportError as e:
-        # Handle specific import failures
-        print(f"❌ ERROR during import: {e}")
-        print("   --> Setup did not complete successfully. Please check installations.")
-    except Exception as e:
-        # Handle unexpected errors
-        print(f"❌ UNEXPECTED ERROR during setup: {e}")
-        print("   --> Setup did not complete successfully.")
-
-# Environment is now ready for AMTAIR processing
-\end{verbatim}
+\chapter{\texorpdfstring{\href{https://colab.research.google.com/github/SingularitySmith/AMTAIR_Prototype/blob/main/version_history/AMTAIR_Prototype_0_1.3.ipynb\#scrollTo=lt8-AnebGUXr}{AMTAIR
+Prototype Demonstration (Public Colab
+Notebook)}}{AMTAIR Prototype Demonstration (Public Colab Notebook)}}\label{amtair-prototype-demonstration-public-colab-notebook}
+
+\chapter{AMTAIR Prototype: Automating Transformative AI Risk
+Modeling}\label{amtair-prototype-automating-transformative-ai-risk-modeling}
+
+\section{Executive Summary}\label{executive-summary}
+
+This notebook implements a prototype of the AMTAIR (Automating
+Transformative AI Risk Modeling) project, which addresses the critical
+coordination failure in AI governance by developing computational tools
+that automate the extraction of probabilistic world models from AI
+safety literature.
+
+The prototype demonstrates the transformation pipeline from structured
+argument representations (ArgDown) to probabilistic Bayesian networks
+(BayesDown), enabling the visualization and analysis of causal
+relationships and probability distributions that underlie AI risk
+assessments and policy evaluations.
+
+\subsection{Purpose Within the Master's
+Thesis}\label{purpose-within-the-masters-thesis}
+
+This notebook serves as the technical implementation component of the
+Master's thesis ``Automating Transformative AI Risk Modeling: A
+Computational Approach to Policy Impact Evaluation.'' It demonstrates
+the feasibility of automating the extraction and formalization of world
+models, focusing on the core extraction pipeline and visualization
+capabilities that form the foundation for more sophisticated analysis.
+
+\subsection{Relevance to AI
+Governance}\label{relevance-to-ai-governance}
+
+The coordination crisis in AI governance stems from different
+stakeholders working with incompatible assumptions, terminologies, and
+priorities. By making implicit models explicit through automated
+extraction and formalization, this work helps bridge communication gaps
+between technical researchers, policy specialists, and other
+stakeholders, contributing to more effective coordination in addressing
+existential risks from advanced AI.
+
+\section{Notebook Structure and
+Workflow}\label{notebook-structure-and-workflow}
+
+This notebook implements a multi-stage pipeline for transforming
+argument structures into interactive Bayesian network visualizations:
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\item
+  \textbf{Environment Setup} (Sections 0.1-0.3): Establishes the
+  technical environment with necessary libraries and data connections
+\item
+  \textbf{Argument Extraction} (Sections 1.0-1.8): Processes source
+  documents into structured ArgDown representations
+\item
+  \textbf{Probability Integration} (Sections 2.0-2.8): Enhances ArgDown
+  with probability information to create BayesDown
+\item
+  \textbf{Data Transformation} (Section 3.0): Converts BayesDown into
+  structured DataFrame format
+\item
+  \textbf{Visualization and Analysis} (Section 4.0): Creates interactive
+  Bayesian network visualizations
+\item
+  \textbf{Archiving and Export} (Sections 5.0-6.0): Provides utilities
+  for saving and sharing results
+\end{enumerate}
+
+Throughout this notebook, we use the classic rain-sprinkler-lawn example
+as a canonical test case, demonstrating how a simple causal scenario
+(rain and sprinkler use affecting wet grass) can be represented,
+processed, and visualized using our automated pipeline.
+
+\section{Project Context and Purpose}\label{project-context-and-purpose}
+
+This notebook implements a prototype of the Automating Transformative AI
+Risk Modeling (AMTAIR) project, which addresses a critical coordination
+failure in AI governance by developing computational tools to automate
+the extraction of probabilistic world models from AI safety literature.
+
+The coordination crisis in AI governance stems from different
+stakeholders (technical researchers, policy specialists, ethicists)
+operating with different terminologies, priorities, and implicit
+theories of change. This fragmentation systematically increases
+existential risk through safety gaps, resource misallocation, and
+capability-governance mismatches.
+
+The AMTAIR project aims to bridge these divides by: 1. Making implicit
+models explicit through automated extraction and formalization 2.
+Enabling comparison across different worldviews 3. Providing a common
+language for discussing probabilistic relationships 4. Supporting policy
+evaluation across diverse scenarios
+
+\section{Notebook Overview and
+Pipeline}\label{notebook-overview-and-pipeline}
+
+This notebook demonstrates the core extraction pipeline from structured
+argument representations (ArgDown) to probabilistic Bayesian networks
+(BayesDown), using the classic rain-sprinkler-lawn example as a
+canonical test case.
+
+The pipeline consists of five main stages: 1. \textbf{Environment
+Setup}: Libraries, GitHub repository access, and data loading 2.
+\textbf{Argument Extraction}: Processing source documents into
+structured ArgDown format 3. \textbf{Probability Integration}: Enhancing
+ArgDown with probabilistic information to create BayesDown 4.
+\textbf{Data Transformation}: Converting BayesDown into structured
+DataFrame format 5. \textbf{Visualization \& Analysis}: Creating
+interactive Bayesian network visualizations
+
+\section{Connection to Master's
+Thesis}\label{connection-to-masters-thesis}
+
+This notebook serves as the technical implementation component of the
+Master's thesis ``Automating Transformative AI Risk Modeling: A
+Computational Approach to Policy Impact Evaluation'' (see
+PY\_Thesis\_OutlineNDraft), demonstrating the feasibility of automating
+the process of extracting and formalizing world models from AI safety
+literature.
+
+The thesis positions this work as a solution to the coordination crisis
+in AI governance, where the AMTAIR tools provide a crucial bridge
+between different stakeholder communities by creating formal
+representations that can be analyzed, compared, and used for policy
+evaluation.
+
+For broader context on the project's motivation and placement within AI
+governance efforts, see PY\_Post0.0 (``The Missing Piece: Why We Need a
+Grand Strategy for AI'') and PY\_AMTAIRDescription, which explain how
+this technical work contributes to the development of a comprehensive AI
+safety grand strategy.
+
+\section{Instructions --- How to use this
+notebook:}\label{instructions-how-to-use-this-notebook}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\item
+  \textbf{Import Libraries \& Install Packages}: Run Section 0.1 to set
+  up the necessary dependencies for data processing and visualization.
+\item
+  \textbf{Connect to GitHub Repository \& Load Data files}: Run Section
+  0.2 to establish connections to the data repository and load example
+  datasets. This step retrieves sample ArgDown files and extracted data
+  for demonstration.
+\item
+  \textbf{Process Source Documents to ArgDown}: Sections 1.0-1.8
+  demonstrate the extraction of argument structures from source
+  documents (such as PDFs) into ArgDown format, a markdown-like notation
+  for structured arguments.
+\item
+  \textbf{Convert ArgDown to BayesDown}: Sections 2.0-2.3 handle the
+  transformation of ArgDown files into BayesDown format, which
+  incorporates probabilistic information into the argument structure.
+\item
+  \textbf{Extract Data into Structured Format}: Section 3.0 processes
+  BayesDown format into structured database entries (CSV) that can be
+  used for analysis.
+\item
+  \textbf{Create and Analyze Bayesian Networks}: Section 4.0
+  demonstrates how to build Bayesian networks from the extracted data
+  and provides tools for analyzing risk pathways.
+\item
+  \textbf{Save and Export Results}: Sections 5.0-6.0 provide methods for
+  archiving results and exporting visualizations.
+\end{enumerate}
+
+\begin{quote}
+\hyperref[scrollTo=lt8-AnebGUXr]{AMTAIR Prototype Demonstration (Public
+Colab Notebook)}
+\end{quote}
+
+\begin{quote}
+\hyperref[scrollTo=iDy_leH6DJH_]{AMTAIR Prototype: Automating
+Transformative AI Risk Modeling}
+\end{quote}
+
+\begin{quote}
+\begin{quote}
+\hyperref[scrollTo=iDy_leH6DJH_]{Executive Summary}
+\end{quote}
+\end{quote}
+
+\begin{quote}
+\begin{quote}
+\begin{quote}
+\hyperref[scrollTo=iDy_leH6DJH_]{Purpose Within the Master's Thesis}
+\end{quote}
+\end{quote}
+\end{quote}
+
+\begin{quote}
+\begin{quote}
+\begin{quote}
+\hyperref[scrollTo=iDy_leH6DJH_]{Relevance to AI Governance}
+\end{quote}
+\end{quote}
+\end{quote}
+
+\begin{quote}
+\begin{quote}
+\hyperref[scrollTo=iDy_leH6DJH_]{Notebook Structure and Workflow}
+\end{quote}
+\end{quote}
+
+\begin{quote}
+\begin{quote}
+\hyperref[scrollTo=Cm1JQGDYNJjf]{Project Context and Purpose}
+\end{quote}
+\end{quote}
+
+\begin{quote}
+\begin{quote}
+\hyperref[scrollTo=Cm1JQGDYNJjf]{Notebook Overview and Pipeline}
+\end{quote}
+\end{quote}
+
+\begin{quote}
+\begin{quote}
+\hyperref[scrollTo=Cm1JQGDYNJjf]{Connection to Master's Thesis}
+\end{quote}
+\end{quote}
+
+\begin{quote}
+\begin{quote}
+\hyperref[scrollTo=22NBzTxxsnfQ]{Instructions --- How to use this
+notebook:}
+\end{quote}
+\end{quote}
+
+\begin{quote}
+\begin{quote}
+\hyperref[scrollTo=NovjnOw6bzLi]{Key Concepts:}
+\end{quote}
+\end{quote}
+
+\begin{quote}
+\begin{quote}
+\hyperref[scrollTo=NovjnOw6bzLi]{Example Workflow:}
+\end{quote}
+\end{quote}
+
+\begin{quote}
+\begin{quote}
+\hyperref[scrollTo=NovjnOw6bzLi]{Troubleshooting:}
+\end{quote}
+\end{quote}
+
+\begin{quote}
+\hyperref[scrollTo=neYYoWhbNRIJ]{Environment Setup and Data Access}
+\end{quote}
+
+\begin{quote}
+\hyperref[scrollTo=GtVFO-s74vI_]{0.1 Prepare Colab/Python Environment
+--- Import Libraries \& Packages}
+\end{quote}
+
+\begin{quote}
+\begin{quote}
+\hyperref[scrollTo=2a3VR0fLhJow]{0.2 Connect to GitHub Repository}
+\end{quote}
+\end{quote}
+
+\begin{quote}
+\begin{quote}
+\hyperref[scrollTo=y-ix4Rp5fE9m]{0.3 File Import}
+\end{quote}
+\end{quote}
+
+\begin{quote}
+\hyperref[scrollTo=52XyPlte5HrU]{1.0 Sources (PDF's of Papers) to
+ArgDown (.md file)}
+\end{quote}
+
+\begin{quote}
+\hyperref[scrollTo=1-7O4KHfNU-e]{Sources to ArgDown: Structured Argument
+Extraction}
+\end{quote}
+
+\begin{quote}
+\begin{quote}
+\hyperref[scrollTo=1-7O4KHfNU-e]{Process Overview}
+\end{quote}
+\end{quote}
+
+\begin{quote}
+\begin{quote}
+\hyperref[scrollTo=1-7O4KHfNU-e]{What is ArgDown?}
+\end{quote}
+\end{quote}
+
+\begin{quote}
+\begin{quote}
+\hyperref[scrollTo=ESKnZ_4f_a6y]{1.1 Specify Source Document (e.g.~PDF)}
+\end{quote}
+\end{quote}
+
+\begin{quote}
+\begin{quote}
+\hyperref[scrollTo=6ToQFra3_nl9]{1.2 Generate ArgDown Extraction Prompt}
+\end{quote}
+\end{quote}
+
+\begin{quote}
+\begin{quote}
+\hyperref[scrollTo=pGv2KcZU_9Bn]{1.3 Prepare LLM API Call}
+\end{quote}
+\end{quote}
+
+\begin{quote}
+\begin{quote}
+\hyperref[scrollTo=i5xsDYnsAWC4]{1.4 Make ArgDown Extraction LLM API
+Call}
+\end{quote}
+\end{quote}
+
+\begin{quote}
+\begin{quote}
+\hyperref[scrollTo=Lc2nMp8nAfeU]{1.5 Save ArgDown Extraction Response}
+\end{quote}
+\end{quote}
+
+\begin{quote}
+\begin{quote}
+\hyperref[scrollTo=5HcCfqE4A0ht]{1.6 Review and Check ArgDown.md File}
+\end{quote}
+\end{quote}
+
+\begin{quote}
+\begin{quote}
+\hyperref[scrollTo=gSpkvLbCC_PI]{1.6.2 Check the Graph Structure with
+the ArgDown Sandbox Online}
+\end{quote}
+\end{quote}
+
+\begin{quote}
+\begin{quote}
+\hyperref[scrollTo=MAm0UKpeBvyr]{1.7 Extract ArgDown Graph Information
+as DataFrame}
+\end{quote}
+\end{quote}
+
+\begin{quote}
+\begin{quote}
+\hyperref[scrollTo=iFC6oiyICREn]{1.8 Store ArgDown Information as
+`ArgDown.csv' file}
+\end{quote}
+\end{quote}
+
+\begin{quote}
+\hyperref[scrollTo=7SGB0XMp5VFq]{2.0 Probability Extractions: ArgDown
+(.csv) to BayesDown (.md + plugin JSON syntax)}
+\end{quote}
+
+\begin{quote}
+\hyperref[scrollTo=hWkmySZYNtzS]{ArgDown to BayesDown: Adding
+Probability Information}
+\end{quote}
+
+\begin{quote}
+\begin{quote}
+\hyperref[scrollTo=hWkmySZYNtzS]{Process Overview}
+\end{quote}
+\end{quote}
+
+\begin{quote}
+\begin{quote}
+\hyperref[scrollTo=hWkmySZYNtzS]{What is BayesDown?}
+\end{quote}
+\end{quote}
+
+\begin{quote}
+\begin{quote}
+\hyperref[scrollTo=WcF2nHXBZru4]{2.1 Probability Extraction Questions
+--- `ArgDown.csv' to `ArgDown\_WithQuestions.csv'}
+\end{quote}
+\end{quote}
+
+\begin{quote}
+\begin{quote}
+\hyperref[scrollTo=-q9UOQ8yaBZn]{2.2 `ArgDown\_WithQuestions.csv' to
+`BayesDownQuestions.md'}
+\end{quote}
+\end{quote}
+
+\begin{quote}
+\begin{quote}
+\hyperref[scrollTo=Ux4OUCPue6Bu]{2.3 Generate BayesDown Probability
+Extraction Prompt}
+\end{quote}
+\end{quote}
+
+\begin{quote}
+\begin{quote}
+\hyperref[scrollTo=ivcnd2ml41Nv]{2.3.1 BayesDown Format Specification}
+\end{quote}
+\end{quote}
+
+\begin{quote}
+\begin{quote}
+\begin{quote}
+\hyperref[scrollTo=ivcnd2ml41Nv]{Core Structure}
+\end{quote}
+\end{quote}
+\end{quote}
+
+\begin{quote}
+\begin{quote}
+\begin{quote}
+\begin{quote}
+\begin{quote}
+\hyperref[scrollTo=Fn72WmgVEOH0]{Rain-Sprinkler-Lawn Example}
+\end{quote}
+\end{quote}
+\end{quote}
+\end{quote}
+\end{quote}
+
+\begin{quote}
+\begin{quote}
+\hyperref[scrollTo=d4tB9WD-fIWZ]{2.4 Prepare 2nd API call}
+\end{quote}
+\end{quote}
+
+\begin{quote}
+\begin{quote}
+\hyperref[scrollTo=oPWto83lfN9Q]{2.5 Make BayesDown Probability
+Extraction API Call}
+\end{quote}
+\end{quote}
+
+\begin{quote}
+\begin{quote}
+\hyperref[scrollTo=L8NWpz8MfZ9_]{2.6 Save BayesDown with Probability
+Estimates (.csv)}
+\end{quote}
+\end{quote}
+
+\begin{quote}
+\begin{quote}
+\hyperref[scrollTo=Q3PTtYgRfsLa]{2.7 Review \& Verify BayesDown
+Probability Estimates}
+\end{quote}
+\end{quote}
+
+\begin{quote}
+\begin{quote}
+\hyperref[scrollTo=VwoAgBsafonh]{2.7.2 Check the Graph Structure with
+the ArgDown Sandbox Online}
+\end{quote}
+\end{quote}
+
+\begin{quote}
+\begin{quote}
+\hyperref[scrollTo=19KDn2mKf309]{2.8 Extract BayesDown with Probability
+Estimates as Dataframe}
+\end{quote}
+\end{quote}
+
+\begin{quote}
+\hyperref[scrollTo=vUSS00TCEpeW]{3.0 Data Extraction: BayesDown (.md) to
+Database (.csv)}
+\end{quote}
+
+\begin{quote}
+\hyperref[scrollTo=vUSS00TCEpeW]{BayesDown to Structured Data: Network
+Construction}
+\end{quote}
+
+\begin{quote}
+\begin{quote}
+\hyperref[scrollTo=vUSS00TCEpeW]{Extraction Pipeline Overview}
+\end{quote}
+\end{quote}
+
+\begin{quote}
+\begin{quote}
+\begin{quote}
+\hyperref[scrollTo=vUSS00TCEpeW]{Theoretical Foundation}
+\end{quote}
+\end{quote}
+\end{quote}
+
+\begin{quote}
+\begin{quote}
+\begin{quote}
+\hyperref[scrollTo=vUSS00TCEpeW]{Role in Thesis Research}
+\end{quote}
+\end{quote}
+\end{quote}
+
+\begin{quote}
+\begin{quote}
+\begin{quote}
+\hyperref[scrollTo=AFnu_1Ludahi]{3.1 ExtractBayesDown-Data\_v1}
+\end{quote}
+\end{quote}
+\end{quote}
+
+\begin{quote}
+\begin{quote}
+\hyperref[scrollTo=eUBJh8Qp4yd4]{3.1.2 Test BayesDown Extraction}
+\end{quote}
+\end{quote}
+
+\begin{quote}
+\begin{quote}
+\hyperref[scrollTo=z4Hgs0ICDQyW]{3.1.2.2 Check the Graph Structure with
+the ArgDown Sandbox Online}
+\end{quote}
+\end{quote}
+
+\begin{quote}
+\begin{quote}
+\hyperref[scrollTo=mv8f4c4D3yJj]{3.3 Extraction}
+\end{quote}
+\end{quote}
+
+\begin{quote}
+\begin{quote}
+\begin{quote}
+\hyperref[scrollTo=UcXf3fZ8dahj]{3.3 Data-Post-Processing}
+\end{quote}
+\end{quote}
+\end{quote}
+
+\begin{quote}
+\begin{quote}
+\begin{quote}
+\hyperref[scrollTo=xTwPO_J-dahj]{3.4 Download and save finished data
+frame as .csv file}
+\end{quote}
+\end{quote}
+\end{quote}
+
+\begin{quote}
+\hyperref[scrollTo=t3zl7vKMECMg]{4.0 Analysis \& Inference: Bayesian
+Network Visualization}
+\end{quote}
+
+\begin{quote}
+\begin{quote}
+\hyperref[scrollTo=t3zl7vKMECMg]{Bayesian Network Visualization
+Approach}
+\end{quote}
+\end{quote}
+
+\begin{quote}
+\begin{quote}
+\begin{quote}
+\hyperref[scrollTo=t3zl7vKMECMg]{Visualization Philosophy}
+\end{quote}
+\end{quote}
+\end{quote}
+
+\begin{quote}
+\begin{quote}
+\begin{quote}
+\hyperref[scrollTo=t3zl7vKMECMg]{Connection to AMTAIR Goals}
+\end{quote}
+\end{quote}
+\end{quote}
+
+\begin{quote}
+\begin{quote}
+\begin{quote}
+\hyperref[scrollTo=t3zl7vKMECMg]{Implementation Structure}
+\end{quote}
+\end{quote}
+\end{quote}
+
+\begin{quote}
+\begin{quote}
+\hyperref[scrollTo=LSeSAPvtgIgU]{Phase 1: Dependencies/Functions}
+\end{quote}
+\end{quote}
+
+\begin{quote}
+\begin{quote}
+\hyperref[scrollTo=byAExfek5yFU]{Phase 2: Node Classification and
+Styling Module}
+\end{quote}
+\end{quote}
+
+\begin{quote}
+\begin{quote}
+\hyperref[scrollTo=gnS3jFGU52OZ]{Phase 3: HTML Content Generation
+Module}
+\end{quote}
+\end{quote}
+
+\begin{quote}
+\begin{quote}
+\hyperref[scrollTo=d2uyG0Pi571f]{Phase 4: Main Visualization Function}
+\end{quote}
+\end{quote}
+
+\begin{quote}
+\hyperref[scrollTo=bFtxTKmLElSF]{Quickly check HTML Outputs}
+\end{quote}
+
+\begin{quote}
+\hyperref[scrollTo=oatKYlKrOSiN]{Conclusion: From Prototype to
+Production}
+\end{quote}
+
+\begin{quote}
+\begin{quote}
+\hyperref[scrollTo=oatKYlKrOSiN]{Summary of Achievements}
+\end{quote}
+\end{quote}
+
+\begin{quote}
+\begin{quote}
+\hyperref[scrollTo=oatKYlKrOSiN]{Limitations and Future Work}
+\end{quote}
+\end{quote}
+
+\begin{quote}
+\begin{quote}
+\hyperref[scrollTo=oatKYlKrOSiN]{Connection to AMTAIR Project}
+\end{quote}
+\end{quote}
+
+\begin{quote}
+\hyperref[scrollTo=kjbIj19epbrF]{6.0 Save Outputs}
+\end{quote}
+
+\begin{quote}
+\hyperref[scrollTo=0QqlN6dYpm4s]{Saving and Exporting Results}
+\end{quote}
+
+\begin{quote}
+\begin{quote}
+\hyperref[scrollTo=pS6AhdiSCLw4]{Convert .ipynb Notebook to MarkDown}
+\end{quote}
+\end{quote}
+
+\section{Key Concepts:}\label{key-concepts}
+
+\begin{itemize}
+\tightlist
+\item
+  \textbf{ArgDown}: A structured format for representing arguments, with
+  hierarchical relationships between statements.
+\item
+  \textbf{BayesDown}: An extension of ArgDown that incorporates
+  probabilistic information, allowing for Bayesian network construction.
+\item
+  \textbf{Extraction Pipeline}: The process of converting unstructured
+  text to structured argument representations.
+\item
+  \textbf{Bayesian Networks}: Probabilistic graphical models that
+  represent variables and their conditional dependencies.
+\end{itemize}
+
+\section{Example Workflow:}\label{example-workflow}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  Load a sample ArgDown file from the repository
+\item
+  Extract the hierarchical structure and relationships
+\item
+  Add probabilistic information to create a BayesDown representation
+\item
+  Generate a Bayesian network visualization
+\item
+  Analyze conditional probabilities and risk pathways
+\end{enumerate}
+
+\section{Troubleshooting:}\label{troubleshooting}
+
+\begin{itemize}
+\tightlist
+\item
+  If connectivity issues occur, ensure you have access to the GitHub
+  repository
+\item
+  For visualization errors, check that all required libraries are
+  properly installed
+\item
+  When processing custom files, ensure they follow the expected format
+  conventions
+\end{itemize}
+
+\chapter{0. Environment Setup and Data
+Access}\label{environment-setup-and-data-access}
+
+This section establishes the technical foundation for the AMTAIR
+prototype by: 1. Installing and importing necessary libraries 2. Setting
+up access to the GitHub repository 3. Loading example data files
+
+The environment setup is designed to be run once per session, with flags
+to prevent redundant installations and imports. This section forms the
+basis for the subsequent extraction and analysis steps in the pipeline.
+
+The key goal is to create a reproducible environment where the Bayesian
+network extraction and visualization can be performed consistently, with
+appropriate error handling and resource management.
+
+\chapter{0.1 Prepare Colab/Python Environment --- Import Libraries \&
+Packages}\label{prepare-colabpython-environment-import-libraries-packages}
+
+\phantomsection\label{install_import_libraries}
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{\# @title 0.1 {-}{-}{-} Install \& Import Libraries \& Packages (One{-}Time Setup) {-}{-}{-}}
+
+\CommentTok{"""}
+\CommentTok{BLOCK PURPOSE:}
+\CommentTok{Establishes the core technical environment for the AMTAIR prototype.}
+\CommentTok{Sets up all required libraries for Bayesian network processing, visualization,}
+\CommentTok{and data manipulation.}
+\CommentTok{Uses a flag{-}based approach to ensure setup only runs once per session,}
+\CommentTok{enhancing efficiency.}
+
+\CommentTok{The setup follows a three{-}stage process:}
+\CommentTok{1. Install required packages not available in Colab by default}
+\CommentTok{2. Import all necessary libraries with error handling}
+\CommentTok{3. Set a global flag to prevent redundant execution}
+
+\CommentTok{DEPENDENCIES: Requires internet connection for package installation}
+\CommentTok{OUTPUTS: Global variable \_setup\_imports\_done and loaded Python libraries}
+\CommentTok{"""}
+
+\CommentTok{\# Check if setup has already been completed in this session using environment flag}
+\ControlFlowTok{try}\NormalTok{:}
+    \CommentTok{\# If this variable exists, setup was already done successfully}
+\NormalTok{    \_setup\_imports\_done}
+    \BuiltInTok{print}\NormalTok{(}\StringTok{"✅ Libraries already installed and imported in this session. Skipping setup."}\NormalTok{)}
+
+\ControlFlowTok{except} \PreprocessorTok{NameError}\NormalTok{:}
+    \BuiltInTok{print}\NormalTok{(}\StringTok{"⏳ Performing one{-}time library installation and imports..."}\NormalTok{)}
+
+    \CommentTok{\# {-}{-}{-} STAGE 1: Install required packages {-}{-}{-}}
+    \CommentTok{\# Install visualization and network analysis libraries}
+    \OperatorTok{!}\NormalTok{pip install }\OperatorTok{{-}}\NormalTok{q pyvis  }\CommentTok{\# Network visualization library}
+    \OperatorTok{!}\NormalTok{apt}\OperatorTok{{-}}\NormalTok{get install pandoc }\OperatorTok{{-}}\NormalTok{y  }\CommentTok{\# Document conversion utility}
+
+    \CommentTok{\# Install Google API and data processing packages}
+    \CommentTok{\# Data manipulation and Google integration}
+    \OperatorTok{!}\NormalTok{pip install }\OperatorTok{{-}}\NormalTok{q }\OperatorTok{{-}{-}}\NormalTok{upgrade gspread pandas google}\OperatorTok{{-}}\NormalTok{auth google}\OperatorTok{{-}}\NormalTok{colab}
+
+    \CommentTok{\# Install Bayesian network and probabilistic modeling tools}
+    \OperatorTok{!}\NormalTok{pip install }\OperatorTok{{-}}\NormalTok{q pgmpy  }\CommentTok{\# Probabilistic graphical models library}
+
+    \CommentTok{\# Install notebook conversion tools}
+    \OperatorTok{!}\NormalTok{pip install }\OperatorTok{{-}}\NormalTok{q nbconvert  }\CommentTok{\# Often pre{-}installed, but ensures availability}
+
+    \BuiltInTok{print}\NormalTok{(}\StringTok{"   {-}{-}\textgreater{} Installations complete."}\NormalTok{)}
+
+    \CommentTok{\# {-}{-}{-} STAGE 2: Import libraries with error handling {-}{-}{-}}
+    \ControlFlowTok{try}\NormalTok{:}
+        \CommentTok{\# Network and HTTP libraries}
+        \ImportTok{import}\NormalTok{ requests      }\CommentTok{\# For making HTTP requests to APIs and GitHub}
+        \ImportTok{import}\NormalTok{ io            }\CommentTok{\# For handling in{-}memory file{-}like objects}
+
+        \CommentTok{\# Data processing libraries}
+        \ImportTok{import}\NormalTok{ pandas }\ImportTok{as}\NormalTok{ pd  }\CommentTok{\# For structured data manipulation}
+        \ImportTok{import}\NormalTok{ numpy }\ImportTok{as}\NormalTok{ np   }\CommentTok{\# For numerical operations}
+        \ImportTok{import}\NormalTok{ json          }\CommentTok{\# For JSON parsing and serialization}
+        \ImportTok{import}\NormalTok{ re            }\CommentTok{\# For regular expression pattern matching}
+
+        \CommentTok{\# Visualization libraries}
+        \ImportTok{import}\NormalTok{ matplotlib.pyplot }\ImportTok{as}\NormalTok{ plt  }\CommentTok{\# For creating plots and charts}
+        \ImportTok{from}\NormalTok{ IPython.display }\ImportTok{import}\NormalTok{ HTML, display, Markdown  }\CommentTok{\# For rich output in notebook}
+
+        \CommentTok{\# {-}{-}{-} Specialized libraries requiring installation {-}{-}{-}}
+        \CommentTok{\# Network analysis library}
+        \ImportTok{import}\NormalTok{ networkx }\ImportTok{as}\NormalTok{ nx  }\CommentTok{\# For graph representation and analysis}
+
+        \CommentTok{\# Probabilistic modeling libraries}
+        \ImportTok{from}\NormalTok{ pgmpy.models }\ImportTok{import}\NormalTok{ BayesianNetwork  }\CommentTok{\# For Bayesian network structure}
+        \ImportTok{from}\NormalTok{ pgmpy.factors.discrete }\ImportTok{import}\NormalTok{ TabularCPD  }\CommentTok{\# For conditional probability tables}
+        \ImportTok{from}\NormalTok{ pgmpy.inference }\ImportTok{import}\NormalTok{ VariableElimination  }\CommentTok{\# For probabilistic inference}
+
+        \CommentTok{\# Interactive network visualization}
+        \ImportTok{from}\NormalTok{ pyvis.network }\ImportTok{import}\NormalTok{ Network  }\CommentTok{\# For interactive network visualization}
+
+        \CommentTok{\# Output version information for key libraries}
+        \BuiltInTok{print}\NormalTok{(}\SpecialStringTok{f"      pandas version: }\SpecialCharTok{\{}\NormalTok{pd}\SpecialCharTok{.}\NormalTok{\_\_version\_\_}\SpecialCharTok{\}}\SpecialStringTok{"}\NormalTok{)}
+        \BuiltInTok{print}\NormalTok{(}\SpecialStringTok{f"      networkx version: }\SpecialCharTok{\{}\NormalTok{nx}\SpecialCharTok{.}\NormalTok{\_\_version\_\_}\SpecialCharTok{\}}\SpecialStringTok{"}\NormalTok{)}
+        \CommentTok{\# Add others if specific versions are critical}
+
+        \BuiltInTok{print}\NormalTok{(}\StringTok{"   {-}{-}\textgreater{} Imports complete."}\NormalTok{)}
+
+        \CommentTok{\# {-}{-}{-} STAGE 3: Set flag to indicate successful setup {-}{-}{-}}
+\NormalTok{        \_setup\_imports\_done }\OperatorTok{=} \VariableTok{True}
+        \BuiltInTok{print}\NormalTok{(}\StringTok{"✅ One{-}time setup finished successfully."}\NormalTok{)}
+
+    \ControlFlowTok{except} \PreprocessorTok{ImportError} \ImportTok{as}\NormalTok{ e:}
+        \CommentTok{\# Handle specific import failures}
+        \BuiltInTok{print}\NormalTok{(}\SpecialStringTok{f"❌ ERROR during import: }\SpecialCharTok{\{}\NormalTok{e}\SpecialCharTok{\}}\SpecialStringTok{"}\NormalTok{)}
+        \BuiltInTok{print}\NormalTok{(}\StringTok{"   {-}{-}\textgreater{} Setup did not complete successfully. Please check installations."}\NormalTok{)}
+    \ControlFlowTok{except} \PreprocessorTok{Exception} \ImportTok{as}\NormalTok{ e:}
+        \CommentTok{\# Handle unexpected errors}
+        \BuiltInTok{print}\NormalTok{(}\SpecialStringTok{f"❌ UNEXPECTED ERROR during setup: }\SpecialCharTok{\{}\NormalTok{e}\SpecialCharTok{\}}\SpecialStringTok{"}\NormalTok{)}
+        \BuiltInTok{print}\NormalTok{(}\StringTok{"   {-}{-}\textgreater{} Setup did not complete successfully."}\NormalTok{)}
+
+\CommentTok{\# Environment is now ready for AMTAIR processing}
+\end{Highlighting}
+\end{Shaded}
 
 \begin{verbatim}
 ✅ Libraries already installed and imported in this session. Skipping setup.
@@ -7157,7 +7673,7 @@ https://raw.githubusercontent.com/SingularitySmith/AMTAIR\_Prototype/main/
 Note: When encountering errors, accessing the data, try using ``RAW''
 Urls.
 
-\phantomsection\label{my_code_cell_test}
+\phantomsection\label{connect_to_github_repository}
 \begin{Shaded}
 \begin{Highlighting}[]
 \CommentTok{\# @title 0.2 {-}{-}{-} Connect to GitHub Repository {-}{-}{-} Load Files}
@@ -7344,7 +7860,7 @@ upload to / store it in the correct location.
 \end{Shaded}
 
 \begin{verbatim}
-<IPython.lib.display.IFrame at 0x7d3db6f27310>
+<IPython.lib.display.IFrame at 0x7b9cc9929f50>
 \end{verbatim}
 
 \section{1.2 Generate ArgDown Extraction
@@ -8180,25 +8696,25 @@ Error during extraction: PyPDF2 is required for PDF processing. Install it with:
 \textcolor{black}{ImportError: PyPDF2 is required for PDF processing. Install it with: pip install PyPDF2}
 \textcolor{black}{}\textcolor{QuartoInternalColor1}{---------------------------------------------------------------------------}\textcolor{QuartoInternalColor2}{}
 \textcolor{QuartoInternalColor2}{}\textcolor{QuartoInternalColor1}{ModuleNotFoundError}\textcolor{QuartoInternalColor2}{                       Traceback (most recent call last)}
-\textcolor{QuartoInternalColor2}{}\textcolor{QuartoInternalColor3}{<ipython-input-17-fd592eb962ab>}\textcolor{QuartoInternalColor2}{ in }\textcolor{QuartoInternalColor4}{process\_source\_document}\textcolor{QuartoInternalColor5}{(file\_path, provider\_name)}\textcolor{QuartoInternalColor2}{}
+\textcolor{QuartoInternalColor2}{}\textcolor{QuartoInternalColor3}{<ipython-input-19-fd592eb962ab>}\textcolor{QuartoInternalColor2}{ in }\textcolor{QuartoInternalColor4}{process\_source\_document}\textcolor{QuartoInternalColor5}{(file\_path, provider\_name)}\textcolor{QuartoInternalColor2}{}
 \textcolor{QuartoInternalColor2}{}\textcolor{QuartoInternalColor6}{    166}\textcolor{QuartoInternalColor2}{         }\textcolor{QuartoInternalColor3}{try}\textcolor{QuartoInternalColor2}{}\textcolor{QuartoInternalColor5}{:}\textcolor{QuartoInternalColor2}{}\textcolor{QuartoInternalColor5}{}\textcolor{QuartoInternalColor2}{}\textcolor{QuartoInternalColor5}{}\textcolor{QuartoInternalColor2}{}\textcolor{QuartoInternalColor2}{}
 \textcolor{QuartoInternalColor2}{}\textcolor{QuartoInternalColor3}{--> 167}\textcolor{QuartoInternalColor1}{             }\textcolor{QuartoInternalColor3}{import}\textcolor{QuartoInternalColor2}{ }\textcolor{QuartoInternalColor2}{PyPDF2}\textcolor{QuartoInternalColor2}{}\textcolor{QuartoInternalColor5}{}\textcolor{QuartoInternalColor2}{}\textcolor{QuartoInternalColor5}{}\textcolor{QuartoInternalColor2}{}\textcolor{QuartoInternalColor2}{}
 \textcolor{QuartoInternalColor2}{}\textcolor{QuartoInternalColor2}{}\textcolor{QuartoInternalColor6}{    168}\textcolor{QuartoInternalColor2}{             }\textcolor{QuartoInternalColor3}{with}\textcolor{QuartoInternalColor2}{ }\textcolor{QuartoInternalColor2}{open}\textcolor{QuartoInternalColor2}{}\textcolor{QuartoInternalColor5}{(}\textcolor{QuartoInternalColor2}{}\textcolor{QuartoInternalColor2}{file\_path}\textcolor{QuartoInternalColor2}{}\textcolor{QuartoInternalColor5}{,}\textcolor{QuartoInternalColor2}{ }\textcolor{QuartoInternalColor5}{'rb'}\textcolor{QuartoInternalColor2}{}\textcolor{QuartoInternalColor5}{)}\textcolor{QuartoInternalColor2}{ }\textcolor{QuartoInternalColor3}{as}\textcolor{QuartoInternalColor2}{ }\textcolor{QuartoInternalColor2}{file}\textcolor{QuartoInternalColor2}{}\textcolor{QuartoInternalColor5}{:}\textcolor{QuartoInternalColor2}{}\textcolor{QuartoInternalColor5}{}\textcolor{QuartoInternalColor2}{}\textcolor{QuartoInternalColor5}{}\textcolor{QuartoInternalColor2}{}\textcolor{QuartoInternalColor2}{}
 \textcolor{QuartoInternalColor2}{}\textcolor{QuartoInternalColor1}{ModuleNotFoundError}\textcolor{QuartoInternalColor2}{: No module named 'PyPDF2'}
 \textcolor{QuartoInternalColor2}{During handling of the above exception, another exception occurred:}
 \textcolor{QuartoInternalColor2}{}\textcolor{QuartoInternalColor1}{ImportError}\textcolor{QuartoInternalColor2}{                               Traceback (most recent call last)}
-\textcolor{QuartoInternalColor2}{}\textcolor{QuartoInternalColor3}{<ipython-input-19-27555067c1d2>}\textcolor{QuartoInternalColor2}{ in }\textcolor{QuartoInternalColor4}{<cell line: 0>}\textcolor{QuartoInternalColor5}{()}\textcolor{QuartoInternalColor2}{}
+\textcolor{QuartoInternalColor2}{}\textcolor{QuartoInternalColor3}{<ipython-input-21-27555067c1d2>}\textcolor{QuartoInternalColor2}{ in }\textcolor{QuartoInternalColor4}{<cell line: 0>}\textcolor{QuartoInternalColor5}{()}\textcolor{QuartoInternalColor2}{}
 \textcolor{QuartoInternalColor2}{}\textcolor{QuartoInternalColor6}{     59}\textcolor{QuartoInternalColor2}{ }\textcolor{QuartoInternalColor5}{}\textcolor{QuartoInternalColor2}{}\textcolor{QuartoInternalColor2}{}
 \textcolor{QuartoInternalColor2}{}\textcolor{QuartoInternalColor6}{     60}\textcolor{QuartoInternalColor2}{ }\textcolor{QuartoInternalColor1}{# Usage example:}\textcolor{QuartoInternalColor2}{}\textcolor{QuartoInternalColor5}{}\textcolor{QuartoInternalColor2}{}\textcolor{QuartoInternalColor5}{}\textcolor{QuartoInternalColor2}{}\textcolor{QuartoInternalColor2}{}
 \textcolor{QuartoInternalColor2}{}\textcolor{QuartoInternalColor3}{---> 61}\textcolor{QuartoInternalColor1}{ }\textcolor{QuartoInternalColor2}{extraction\_results}\textcolor{QuartoInternalColor2}{ }\textcolor{QuartoInternalColor5}{=}\textcolor{QuartoInternalColor2}{ }\textcolor{QuartoInternalColor2}{execute\_extraction}\textcolor{QuartoInternalColor2}{}\textcolor{QuartoInternalColor5}{(}\textcolor{QuartoInternalColor2}{}\textcolor{QuartoInternalColor2}{extraction\_config}\textcolor{QuartoInternalColor2}{}\textcolor{QuartoInternalColor5}{)}\textcolor{QuartoInternalColor2}{}\textcolor{QuartoInternalColor5}{}\textcolor{QuartoInternalColor2}{}\textcolor{QuartoInternalColor5}{}\textcolor{QuartoInternalColor2}{}\textcolor{QuartoInternalColor2}{}
 \textcolor{QuartoInternalColor2}{}\textcolor{QuartoInternalColor2}{}
-\textcolor{QuartoInternalColor2}{}\textcolor{QuartoInternalColor3}{<ipython-input-19-27555067c1d2>}\textcolor{QuartoInternalColor2}{ in }\textcolor{QuartoInternalColor4}{execute\_extraction}\textcolor{QuartoInternalColor5}{(extraction\_config)}\textcolor{QuartoInternalColor2}{}
+\textcolor{QuartoInternalColor2}{}\textcolor{QuartoInternalColor3}{<ipython-input-21-27555067c1d2>}\textcolor{QuartoInternalColor2}{ in }\textcolor{QuartoInternalColor4}{execute\_extraction}\textcolor{QuartoInternalColor5}{(extraction\_config)}\textcolor{QuartoInternalColor2}{}
 \textcolor{QuartoInternalColor2}{}\textcolor{QuartoInternalColor6}{     35}\textcolor{QuartoInternalColor2}{     }\textcolor{QuartoInternalColor3}{try}\textcolor{QuartoInternalColor2}{}\textcolor{QuartoInternalColor5}{:}\textcolor{QuartoInternalColor2}{}\textcolor{QuartoInternalColor5}{}\textcolor{QuartoInternalColor2}{}\textcolor{QuartoInternalColor5}{}\textcolor{QuartoInternalColor2}{}\textcolor{QuartoInternalColor2}{}
 \textcolor{QuartoInternalColor2}{}\textcolor{QuartoInternalColor6}{     36}\textcolor{QuartoInternalColor2}{         }\textcolor{QuartoInternalColor1}{# Process the document}\textcolor{QuartoInternalColor2}{}\textcolor{QuartoInternalColor5}{}\textcolor{QuartoInternalColor2}{}\textcolor{QuartoInternalColor5}{}\textcolor{QuartoInternalColor2}{}\textcolor{QuartoInternalColor2}{}
 \textcolor{QuartoInternalColor2}{}\textcolor{QuartoInternalColor3}{---> 37}\textcolor{QuartoInternalColor1}{         results = process\_source\_document(}
 \textcolor{QuartoInternalColor1}{}\textcolor{QuartoInternalColor2}{}\textcolor{QuartoInternalColor6}{     38}\textcolor{QuartoInternalColor2}{             }\textcolor{QuartoInternalColor2}{extraction\_config}\textcolor{QuartoInternalColor2}{}\textcolor{QuartoInternalColor5}{[}\textcolor{QuartoInternalColor2}{}\textcolor{QuartoInternalColor5}{"source\_path"}\textcolor{QuartoInternalColor2}{}\textcolor{QuartoInternalColor5}{]}\textcolor{QuartoInternalColor2}{}\textcolor{QuartoInternalColor5}{,}\textcolor{QuartoInternalColor2}{}\textcolor{QuartoInternalColor5}{}\textcolor{QuartoInternalColor2}{}\textcolor{QuartoInternalColor5}{}\textcolor{QuartoInternalColor2}{}\textcolor{QuartoInternalColor2}{}
 \textcolor{QuartoInternalColor2}{}\textcolor{QuartoInternalColor6}{     39}\textcolor{QuartoInternalColor2}{             }\textcolor{QuartoInternalColor2}{provider\_name}\textcolor{QuartoInternalColor2}{}\textcolor{QuartoInternalColor5}{=}\textcolor{QuartoInternalColor2}{}\textcolor{QuartoInternalColor2}{extraction\_config}\textcolor{QuartoInternalColor2}{}\textcolor{QuartoInternalColor5}{[}\textcolor{QuartoInternalColor2}{}\textcolor{QuartoInternalColor5}{"provider"}\textcolor{QuartoInternalColor2}{}\textcolor{QuartoInternalColor5}{]}\textcolor{QuartoInternalColor2}{}\textcolor{QuartoInternalColor5}{}\textcolor{QuartoInternalColor2}{}\textcolor{QuartoInternalColor5}{}\textcolor{QuartoInternalColor2}{}\textcolor{QuartoInternalColor2}{}
-\textcolor{QuartoInternalColor2}{}\textcolor{QuartoInternalColor3}{<ipython-input-17-fd592eb962ab>}\textcolor{QuartoInternalColor2}{ in }\textcolor{QuartoInternalColor4}{process\_source\_document}\textcolor{QuartoInternalColor5}{(file\_path, provider\_name)}\textcolor{QuartoInternalColor2}{}
+\textcolor{QuartoInternalColor2}{}\textcolor{QuartoInternalColor3}{<ipython-input-19-fd592eb962ab>}\textcolor{QuartoInternalColor2}{ in }\textcolor{QuartoInternalColor4}{process\_source\_document}\textcolor{QuartoInternalColor5}{(file\_path, provider\_name)}\textcolor{QuartoInternalColor2}{}
 \textcolor{QuartoInternalColor2}{}\textcolor{QuartoInternalColor6}{    172}\textcolor{QuartoInternalColor2}{                     }\textcolor{QuartoInternalColor2}{text}\textcolor{QuartoInternalColor2}{ }\textcolor{QuartoInternalColor5}{+=}\textcolor{QuartoInternalColor2}{ }\textcolor{QuartoInternalColor2}{page}\textcolor{QuartoInternalColor2}{}\textcolor{QuartoInternalColor5}{.}\textcolor{QuartoInternalColor2}{}\textcolor{QuartoInternalColor2}{extract\_text}\textcolor{QuartoInternalColor2}{}\textcolor{QuartoInternalColor5}{(}\textcolor{QuartoInternalColor2}{}\textcolor{QuartoInternalColor5}{)}\textcolor{QuartoInternalColor2}{ }\textcolor{QuartoInternalColor5}{+}\textcolor{QuartoInternalColor2}{ }\textcolor{QuartoInternalColor5}{"\textbackslash{}n"}\textcolor{QuartoInternalColor2}{}\textcolor{QuartoInternalColor5}{}\textcolor{QuartoInternalColor2}{}\textcolor{QuartoInternalColor5}{}\textcolor{QuartoInternalColor2}{}\textcolor{QuartoInternalColor2}{}
 \textcolor{QuartoInternalColor2}{}\textcolor{QuartoInternalColor6}{    173}\textcolor{QuartoInternalColor2}{         }\textcolor{QuartoInternalColor3}{except}\textcolor{QuartoInternalColor2}{ }\textcolor{QuartoInternalColor2}{ImportError}\textcolor{QuartoInternalColor2}{}\textcolor{QuartoInternalColor5}{:}\textcolor{QuartoInternalColor2}{}\textcolor{QuartoInternalColor5}{}\textcolor{QuartoInternalColor2}{}\textcolor{QuartoInternalColor5}{}\textcolor{QuartoInternalColor2}{}\textcolor{QuartoInternalColor2}{}
 \textcolor{QuartoInternalColor2}{}\textcolor{QuartoInternalColor3}{--> 174}\textcolor{QuartoInternalColor1}{             }\textcolor{QuartoInternalColor3}{raise}\textcolor{QuartoInternalColor2}{ }\textcolor{QuartoInternalColor2}{ImportError}\textcolor{QuartoInternalColor2}{}\textcolor{QuartoInternalColor5}{(}\textcolor{QuartoInternalColor2}{}\textcolor{QuartoInternalColor5}{"PyPDF2 is required for PDF processing. Install it with: pip install PyPDF2"}\textcolor{QuartoInternalColor2}{}\textcolor{QuartoInternalColor5}{)}\textcolor{QuartoInternalColor2}{}\textcolor{QuartoInternalColor5}{}\textcolor{QuartoInternalColor2}{}\textcolor{QuartoInternalColor5}{}\textcolor{QuartoInternalColor2}{}\textcolor{QuartoInternalColor2}{}
@@ -8297,7 +8813,7 @@ Response}\label{save-argdown-extraction-response}
 \textcolor{black}{NameError: name 'extraction\_results' is not defined}
 \textcolor{black}{}\textcolor{QuartoInternalColor1}{---------------------------------------------------------------------------}\textcolor{QuartoInternalColor2}{}
 \textcolor{QuartoInternalColor2}{}\textcolor{QuartoInternalColor1}{NameError}\textcolor{QuartoInternalColor2}{                                 Traceback (most recent call last)}
-\textcolor{QuartoInternalColor2}{}\textcolor{QuartoInternalColor3}{<ipython-input-20-84ee4ea64739>}\textcolor{QuartoInternalColor2}{ in }\textcolor{QuartoInternalColor4}{<cell line: 0>}\textcolor{QuartoInternalColor5}{()}\textcolor{QuartoInternalColor2}{}
+\textcolor{QuartoInternalColor2}{}\textcolor{QuartoInternalColor3}{<ipython-input-12-84ee4ea64739>}\textcolor{QuartoInternalColor2}{ in }\textcolor{QuartoInternalColor4}{<cell line: 0>}\textcolor{QuartoInternalColor5}{()}\textcolor{QuartoInternalColor2}{}
 \textcolor{QuartoInternalColor2}{}\textcolor{QuartoInternalColor6}{     55}\textcolor{QuartoInternalColor2}{ }\textcolor{QuartoInternalColor5}{}\textcolor{QuartoInternalColor2}{}\textcolor{QuartoInternalColor2}{}
 \textcolor{QuartoInternalColor2}{}\textcolor{QuartoInternalColor6}{     56}\textcolor{QuartoInternalColor2}{ }\textcolor{QuartoInternalColor1}{# Usage example:}\textcolor{QuartoInternalColor2}{}\textcolor{QuartoInternalColor5}{}\textcolor{QuartoInternalColor2}{}\textcolor{QuartoInternalColor5}{}\textcolor{QuartoInternalColor2}{}\textcolor{QuartoInternalColor2}{}
 \textcolor{QuartoInternalColor2}{}\textcolor{QuartoInternalColor3}{---> 57}\textcolor{QuartoInternalColor1}{ }\textcolor{QuartoInternalColor2}{output\_path}\textcolor{QuartoInternalColor2}{ }\textcolor{QuartoInternalColor5}{=}\textcolor{QuartoInternalColor2}{ }\textcolor{QuartoInternalColor2}{save\_extraction\_results}\textcolor{QuartoInternalColor2}{}\textcolor{QuartoInternalColor5}{(}\textcolor{QuartoInternalColor2}{}\textcolor{QuartoInternalColor2}{extraction\_results}\textcolor{QuartoInternalColor2}{}\textcolor{QuartoInternalColor5}{)}\textcolor{QuartoInternalColor2}{}\textcolor{QuartoInternalColor5}{}\textcolor{QuartoInternalColor2}{}\textcolor{QuartoInternalColor5}{}\textcolor{QuartoInternalColor2}{}\textcolor{QuartoInternalColor2}{}
@@ -8423,7 +8939,7 @@ below to quickly verify that the network renders correctly.
 \end{Shaded}
 
 \begin{verbatim}
-<IPython.lib.display.IFrame at 0x7d3db5e18a10>
+<IPython.lib.display.IFrame at 0x7b9ccf0ea210>
 \end{verbatim}
 
 \section{1.7 Extract ArgDown Graph Information as
@@ -10750,7 +11266,7 @@ A BayesDown representation consists of:
 \ErrorTok{\#\#\#} \ErrorTok{3.1} \ErrorTok{ExtractBayesDown{-}Data\_v1}
 \ErrorTok{Build} \ErrorTok{data} \ErrorTok{frame} \ErrorTok{with} \ErrorTok{extractable} \ErrorTok{information} \ErrorTok{from} \ErrorTok{BayesDown}
 
-\ErrorTok{:::} \FunctionTok{\{}\ErrorTok{.cell} \ErrorTok{quarto{-}private{-}1=\textquotesingle{}\{}\DataTypeTok{"key"}\FunctionTok{:}\StringTok{"colab"}\FunctionTok{,}\DataTypeTok{"value"}\FunctionTok{:\{}\DataTypeTok{"base\_uri"}\FunctionTok{:}\StringTok{"https://localhost:8080/"}\FunctionTok{,}\DataTypeTok{"height"}\FunctionTok{:}\DecValTok{122}\FunctionTok{\}\}}\ErrorTok{\textquotesingle{}} \ErrorTok{outputId=\textquotesingle{}e0bc7224{-}c20b{-}4662{-}ba80{-}898e88b06523\textquotesingle{}\}}
+\ErrorTok{:::} \FunctionTok{\{}\ErrorTok{.cell} \ErrorTok{quarto{-}private{-}1=\textquotesingle{}\{}\DataTypeTok{"key"}\FunctionTok{:}\StringTok{"colab"}\FunctionTok{,}\DataTypeTok{"value"}\FunctionTok{:\{}\DataTypeTok{"base\_uri"}\FunctionTok{:}\StringTok{"https://localhost:8080/"}\FunctionTok{,}\DataTypeTok{"height"}\FunctionTok{:}\DecValTok{157}\FunctionTok{\}\}}\ErrorTok{\textquotesingle{}} \ErrorTok{outputId=\textquotesingle{}238cd031{-}1b16{-}47fe{-}aa6e{-}c7384b8b1a11\textquotesingle{}} \ErrorTok{execution\_count=41\}}
 \ErrorTok{\textasciigrave{}\textasciigrave{}\textasciigrave{}} \FunctionTok{\{}\ErrorTok{.python} \ErrorTok{.cell{-}code}\FunctionTok{\}}
 \ErrorTok{\#} \ErrorTok{read} \ErrorTok{sprinkler} \ErrorTok{example} \ErrorTok{{-}{-}} \ErrorTok{Occam} \ErrorTok{Colab} \ErrorTok{Online}
 \ErrorTok{file\_path\_ex\_rain} \ErrorTok{=} \ErrorTok{"https://raw.githubusercontent.com/SingularitySmith/AMTAIR\_Prototype/main/data/example\_carlsmith/BayesDown.md"}
@@ -13136,19 +13652,19 @@ Enjoy it!
 \end{Shaded}
 
 \begin{verbatim}
---2025-04-26 22:34:17--  https://raw.githubusercontent.com/SingularitySmith/AMTAIR_Prototype/main/data/example_rain-sprinkler-lawn/AMTAIR_Prototype_example_rain-sprinkler-lawn.ipynb
-Resolving raw.githubusercontent.com (raw.githubusercontent.com)... 185.199.110.133, 185.199.111.133, 185.199.108.133, ...
-Connecting to raw.githubusercontent.com (raw.githubusercontent.com)|185.199.110.133|:443... connected.
+--2025-05-24 20:09:38--  https://raw.githubusercontent.com/SingularitySmith/AMTAIR_Prototype/main/data/example_carlsmith/AMTAIR_Prototype_example_carlsmith.ipynb
+Resolving raw.githubusercontent.com (raw.githubusercontent.com)... 185.199.108.133, 185.199.109.133, 185.199.110.133, ...
+Connecting to raw.githubusercontent.com (raw.githubusercontent.com)|185.199.108.133|:443... connected.
 HTTP request sent, awaiting response... 200 OK
-Length: 1120047 (1.1M) [text/plain]
-Saving to: ‘AMTAIR_Prototype_example_rain-sprinkler-lawn.ipynb’
+Length: 1689816 (1.6M) [text/plain]
+Saving to: ‘AMTAIR_Prototype_example_carlsmith.ipynb’
 
-          AMTAIR_Pr   0%[                    ]       0  --.-KB/s               AMTAIR_Prototype_ex 100%[===================>]   1.07M  --.-KB/s    in 0.07s   
+AMTAIR_Prototype_ex 100%[===================>]   1.61M  6.36MB/s    in 0.3s    
 
-2025-04-26 22:34:17 (16.4 MB/s) - ‘AMTAIR_Prototype_example_rain-sprinkler-lawn.ipynb’ saved [1120047/1120047]
+2025-05-24 20:09:38 (6.36 MB/s) - ‘AMTAIR_Prototype_example_carlsmith.ipynb’ saved [1689816/1689816]
 
-✅ Successfully loaded notebook: AMTAIR_Prototype_example_rain-sprinkler-lawn.ipynb
-✅ Successfully saved HTML version to: AMTAIR_Prototype_example_rain-sprinkler-lawnIPYNB.html
+✅ Successfully loaded notebook: AMTAIR_Prototype_example_carlsmith.ipynb
+✅ Successfully saved HTML version to: AMTAIR_Prototype_example_carlsmithIPYNB.html
 \end{verbatim}
 
 \section{Convert .ipynb Notebook to
@@ -13190,16 +13706,16 @@ MarkDown}\label{convert-.ipynb-notebook-to-markdown}
 \end{Shaded}
 
 \begin{verbatim}
---2025-04-26 22:33:43--  https://raw.githubusercontent.com/SingularitySmith/AMTAIR_Prototype/main/data/example_rain-sprinkler-lawn/AMTAIR_Prototype_example_rain-sprinkler-lawn.ipynb
-Resolving raw.githubusercontent.com (raw.githubusercontent.com)... 185.199.111.133, 185.199.109.133, 185.199.110.133, ...
-Connecting to raw.githubusercontent.com (raw.githubusercontent.com)|185.199.111.133|:443... connected.
+--2025-05-24 20:09:47--  https://raw.githubusercontent.com/SingularitySmith/AMTAIR_Prototype/main/data/example_carlsmith/AMTAIR_Prototype_example_carlsmith.ipynb
+Resolving raw.githubusercontent.com (raw.githubusercontent.com)... 185.199.108.133, 185.199.109.133, 185.199.110.133, ...
+Connecting to raw.githubusercontent.com (raw.githubusercontent.com)|185.199.108.133|:443... connected.
 HTTP request sent, awaiting response... 200 OK
-Length: 1120047 (1.1M) [text/plain]
-Saving to: ‘AMTAIR_Prototype_example_rain-sprinkler-lawn.ipynb’
+Length: 1689816 (1.6M) [text/plain]
+Saving to: ‘AMTAIR_Prototype_example_carlsmith.ipynb’
 
-          AMTAIR_Pr   0%[                    ]       0  --.-KB/s               AMTAIR_Prototype_ex 100%[===================>]   1.07M  --.-KB/s    in 0.06s   
+AMTAIR_Prototype_ex 100%[===================>]   1.61M  5.38MB/s    in 0.3s    
 
-2025-04-26 22:33:43 (18.1 MB/s) - ‘AMTAIR_Prototype_example_rain-sprinkler-lawn.ipynb’ saved [1120047/1120047]
+2025-05-24 20:09:48 (5.38 MB/s) - ‘AMTAIR_Prototype_example_carlsmith.ipynb’ saved [1689816/1689816]
 \end{verbatim}
 
 \begin{Shaded}
@@ -13262,19 +13778,19 @@ Saving to: ‘AMTAIR_Prototype_example_rain-sprinkler-lawn.ipynb’
 \end{Shaded}
 
 \begin{verbatim}
---2025-04-26 22:31:45--  https://raw.githubusercontent.com/SingularitySmith/AMTAIR_Prototype/main/data/example_rain-sprinkler-lawn/AMTAIR_Prototype_example_rain-sprinkler-lawn.ipynb
+--2025-05-24 20:09:53--  https://raw.githubusercontent.com/SingularitySmith/AMTAIR_Prototype/main/data/example_carlsmith/AMTAIR_Prototype_example_carlsmith.ipynb
 Resolving raw.githubusercontent.com (raw.githubusercontent.com)... 185.199.108.133, 185.199.109.133, 185.199.110.133, ...
 Connecting to raw.githubusercontent.com (raw.githubusercontent.com)|185.199.108.133|:443... connected.
 HTTP request sent, awaiting response... 200 OK
-Length: 1120047 (1.1M) [text/plain]
-Saving to: ‘AMTAIR_Prototype_example_rain-sprinkler-lawn.ipynb’
+Length: 1689816 (1.6M) [text/plain]
+Saving to: ‘AMTAIR_Prototype_example_carlsmith.ipynb’
 
-          AMTAIR_Pr   0%[                    ]       0  --.-KB/s               AMTAIR_Prototype_ex 100%[===================>]   1.07M  --.-KB/s    in 0.06s   
+AMTAIR_Prototype_ex 100%[===================>]   1.61M  5.78MB/s    in 0.3s    
 
-2025-04-26 22:31:45 (18.0 MB/s) - ‘AMTAIR_Prototype_example_rain-sprinkler-lawn.ipynb’ saved [1120047/1120047]
+2025-05-24 20:09:53 (5.78 MB/s) - ‘AMTAIR_Prototype_example_carlsmith.ipynb’ saved [1689816/1689816]
 
-✅ Successfully loaded notebook: AMTAIR_Prototype_example_rain-sprinkler-lawn.ipynb
-✅ Successfully saved Markdown version to: AMTAIR_Prototype_example_rain-sprinkler-lawnIPYNB.md
+✅ Successfully loaded notebook: AMTAIR_Prototype_example_carlsmith.ipynb
+✅ Successfully saved Markdown version to: AMTAIR_Prototype_example_carlsmithIPYNB.md
 \end{verbatim}
 
 \begin{Shaded}
@@ -13449,11 +13965,11 @@ Get:50 http://archive.ubuntu.com/ubuntu jammy/universe amd64 texlive-latex-extra
 Get:51 http://archive.ubuntu.com/ubuntu jammy/universe amd64 texlive-plain-generic all 2021.20220204-1 [27.5 MB]
 Get:52 http://archive.ubuntu.com/ubuntu jammy/universe amd64 tipa all 2:1.3-21 [2,967 kB]
 Get:53 http://archive.ubuntu.com/ubuntu jammy/universe amd64 texlive-xetex all 2021.20220204-1 [12.4 MB]
-Fetched 182 MB in 3s (69.8 MB/s)
+Fetched 182 MB in 12s (15.2 MB/s)
 Extracting templates from packages: 100%
 Preconfiguring packages ...
 Selecting previously unselected package fonts-droid-fallback.
-(Reading database ... 126558 files and directories currently installed.)
+(Reading database ... 126327 files and directories currently installed.)
 Preparing to unpack .../00-fonts-droid-fallback_1%3a6.0.1r16-1.1build1_all.deb ...
 Unpacking fonts-droid-fallback (1:6.0.1r16-1.1build1) ...
 Selecting previously unselected package fonts-lato.
@@ -13684,31 +14200,31 @@ Processing triggers for man-db (2.10.2-1) ...
 Processing triggers for mailcap (3.70+nmu1ubuntu1) ...
 Processing triggers for fontconfig (2.13.1-4.2ubuntu5) ...
 Processing triggers for libc-bin (2.35-0ubuntu3.8) ...
-/sbin/ldconfig.real: /usr/local/lib/libhwloc.so.15 is not a symbolic link
-
-/sbin/ldconfig.real: /usr/local/lib/libtbbbind.so.3 is not a symbolic link
-
-/sbin/ldconfig.real: /usr/local/lib/libur_loader.so.0 is not a symbolic link
-
-/sbin/ldconfig.real: /usr/local/lib/libtbbbind_2_5.so.3 is not a symbolic link
-
-/sbin/ldconfig.real: /usr/local/lib/libtbbmalloc.so.2 is not a symbolic link
-
-/sbin/ldconfig.real: /usr/local/lib/libtbb.so.12 is not a symbolic link
-
-/sbin/ldconfig.real: /usr/local/lib/libtbbmalloc_proxy.so.2 is not a symbolic link
-
-/sbin/ldconfig.real: /usr/local/lib/libtcm.so.1 is not a symbolic link
-
-/sbin/ldconfig.real: /usr/local/lib/libur_adapter_level_zero.so.0 is not a symbolic link
-
-/sbin/ldconfig.real: /usr/local/lib/libur_adapter_opencl.so.0 is not a symbolic link
+/sbin/ldconfig.real: /usr/local/lib/libumf.so.0 is not a symbolic link
 
 /sbin/ldconfig.real: /usr/local/lib/libtcm_debug.so.1 is not a symbolic link
 
-/sbin/ldconfig.real: /usr/local/lib/libumf.so.0 is not a symbolic link
+/sbin/ldconfig.real: /usr/local/lib/libtbbbind.so.3 is not a symbolic link
+
+/sbin/ldconfig.real: /usr/local/lib/libhwloc.so.15 is not a symbolic link
+
+/sbin/ldconfig.real: /usr/local/lib/libtbbbind_2_5.so.3 is not a symbolic link
+
+/sbin/ldconfig.real: /usr/local/lib/libtbb.so.12 is not a symbolic link
+
+/sbin/ldconfig.real: /usr/local/lib/libur_adapter_level_zero.so.0 is not a symbolic link
+
+/sbin/ldconfig.real: /usr/local/lib/libtbbmalloc.so.2 is not a symbolic link
 
 /sbin/ldconfig.real: /usr/local/lib/libtbbbind_2_0.so.3 is not a symbolic link
+
+/sbin/ldconfig.real: /usr/local/lib/libtcm.so.1 is not a symbolic link
+
+/sbin/ldconfig.real: /usr/local/lib/libur_adapter_opencl.so.0 is not a symbolic link
+
+/sbin/ldconfig.real: /usr/local/lib/libtbbmalloc_proxy.so.2 is not a symbolic link
+
+/sbin/ldconfig.real: /usr/local/lib/libur_loader.so.0 is not a symbolic link
 
 Processing triggers for tex-common (6.17) ...
 Running updmap-sys. This may take some time... done.
@@ -13716,16 +14232,16 @@ Running mktexlsr /var/lib/texmf ... done.
 Building format(s) --all.
     This may take some time... done.
 TeX packages installed successfully.
---2025-04-26 22:32:56--  https://raw.githubusercontent.com/SingularitySmith/AMTAIR_Prototype/main/data/example_rain-sprinkler-lawn/AMTAIR_Prototype_example_rain-sprinkler-lawn.ipynb
-Resolving raw.githubusercontent.com (raw.githubusercontent.com)... 185.199.110.133, 185.199.111.133, 185.199.108.133, ...
-Connecting to raw.githubusercontent.com (raw.githubusercontent.com)|185.199.110.133|:443... connected.
+--2025-05-24 20:12:59--  https://raw.githubusercontent.com/SingularitySmith/AMTAIR_Prototype/main/data/example_carlsmith/AMTAIR_Prototype_example_carlsmith.ipynb
+Resolving raw.githubusercontent.com (raw.githubusercontent.com)... 185.199.108.133, 185.199.109.133, 185.199.110.133, ...
+Connecting to raw.githubusercontent.com (raw.githubusercontent.com)|185.199.108.133|:443... connected.
 HTTP request sent, awaiting response... 200 OK
-Length: 1120047 (1.1M) [text/plain]
-Saving to: ‘AMTAIR_Prototype_example_rain-sprinkler-lawn.ipynb’
+Length: 1689816 (1.6M) [text/plain]
+Saving to: ‘AMTAIR_Prototype_example_carlsmith.ipynb’
 
-AMTAIR_Prototype_ex 100%[===================>]   1.07M  --.-KB/s    in 0.06s   
+AMTAIR_Prototype_ex 100%[===================>]   1.61M  5.31MB/s    in 0.3s    
 
-2025-04-26 22:32:56 (17.0 MB/s) - ‘AMTAIR_Prototype_example_rain-sprinkler-lawn.ipynb’ saved [1120047/1120047]
+2025-05-24 20:12:59 (5.31 MB/s) - ‘AMTAIR_Prototype_example_carlsmith.ipynb’ saved [1689816/1689816]
 \end{verbatim}
 
 
