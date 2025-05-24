@@ -303,12 +303,12 @@
 \@ifpackageloaded{subcaption}{}{\usepackage{subcaption}}
 \makeatother
 \makeatletter
-\definecolor{QuartoInternalColor4}{rgb}{0.15,0.56,0.56}
-\definecolor{QuartoInternalColor3}{rgb}{0.00,0.45,0.15}
-\definecolor{QuartoInternalColor5}{rgb}{0.00,0.40,0.79}
-\definecolor{QuartoInternalColor1}{rgb}{0.70,0.17,0.19}
 \definecolor{QuartoInternalColor6}{rgb}{0.00,0.64,0.31}
+\definecolor{QuartoInternalColor3}{rgb}{0.00,0.45,0.15}
+\definecolor{QuartoInternalColor4}{rgb}{0.15,0.56,0.56}
+\definecolor{QuartoInternalColor5}{rgb}{0.00,0.40,0.79}
 \definecolor{QuartoInternalColor2}{rgb}{0,0,0}
+\definecolor{QuartoInternalColor1}{rgb}{0.70,0.17,0.19}
 \makeatother
 \usepackage{bookmark}
 \IfFileExists{xurl.sty}{\usepackage{xurl}}{} % add URL line breaks if available
@@ -895,13 +895,13 @@ Quarto's native callouts work without additional packages:
 This is written in a `note' environment -- but it does not seem to
 produce any special rendering.
 
-\begin{tcolorbox}[enhanced jigsaw, rightrule=.15mm, bottomrule=.15mm, opacitybacktitle=0.6, titlerule=0mm, breakable, left=2mm, opacityback=0, leftrule=.75mm, colbacktitle=quarto-callout-note-color!10!white, arc=.35mm, title=\textcolor{quarto-callout-note-color}{\faInfo}\hspace{0.5em}{Optional Title}, bottomtitle=1mm, colframe=quarto-callout-note-color-frame, colback=white, toptitle=1mm, toprule=.15mm, coltitle=black]
+\begin{tcolorbox}[enhanced jigsaw, left=2mm, toptitle=1mm, colframe=quarto-callout-note-color-frame, leftrule=.75mm, breakable, colbacktitle=quarto-callout-note-color!10!white, rightrule=.15mm, bottomtitle=1mm, titlerule=0mm, title=\textcolor{quarto-callout-note-color}{\faInfo}\hspace{0.5em}{Optional Title}, arc=.35mm, opacitybacktitle=0.6, opacityback=0, colback=white, toprule=.15mm, bottomrule=.15mm, coltitle=black]
 
 Content here
 
 \end{tcolorbox}
 
-\begin{tcolorbox}[enhanced jigsaw, rightrule=.15mm, bottomrule=.15mm, opacitybacktitle=0.6, titlerule=0mm, breakable, left=2mm, opacityback=0, leftrule=.75mm, colbacktitle=quarto-callout-note-color!10!white, arc=.35mm, title=\textcolor{quarto-callout-note-color}{\faInfo}\hspace{0.5em}{Important Note2}, bottomtitle=1mm, colframe=quarto-callout-note-color-frame, colback=white, toptitle=1mm, toprule=.15mm, coltitle=black]
+\begin{tcolorbox}[enhanced jigsaw, left=2mm, toptitle=1mm, colframe=quarto-callout-note-color-frame, leftrule=.75mm, breakable, colbacktitle=quarto-callout-note-color!10!white, rightrule=.15mm, bottomtitle=1mm, titlerule=0mm, title=\textcolor{quarto-callout-note-color}{\faInfo}\hspace{0.5em}{Important Note2}, arc=.35mm, opacitybacktitle=0.6, opacityback=0, colback=white, toprule=.15mm, bottomrule=.15mm, coltitle=black]
 
 This renders perfectly in both HTML and PDF.
 
@@ -1070,7 +1070,7 @@ executing the code cell:}
 \phantomsection\label{connect_to_github_repository}
 \begin{Shaded}
 \begin{Highlighting}[]
-\CommentTok{\# @title 0.2 {-}{-}{-} Connect to GitHub Repository {-}{-}{-} Load Files}
+\CommentTok{\# @title 0.2 {-}{-}{-} Connect to GitHub Repository {-}{-}{-} Load Files [connect\_to\_github\_repository]}
 
 \CommentTok{"""}
 \CommentTok{BLOCK PURPOSE: Establishes connection to the AMTAIR GitHub repository and provides}
@@ -1194,7 +1194,7 @@ code of the cell:}
 \phantomsection\label{connect_to_github_repository}
 \begin{Shaded}
 \begin{Highlighting}[]
-\CommentTok{\# @title 0.2 {-}{-}{-} Connect to GitHub Repository {-}{-}{-} Load Files}
+\CommentTok{\# @title 0.2 {-}{-}{-} Connect to GitHub Repository {-}{-}{-} Load Files [connect\_to\_github\_repository]}
 
 \CommentTok{"""}
 \CommentTok{BLOCK PURPOSE: Establishes connection to the AMTAIR GitHub repository and provides}
@@ -1308,6 +1308,30 @@ Link:
 
 Full Notebooks are embedded in the Appendix through the \_quarto.yml
 file with:
+
+\section*{Embed .html result/rendering from .ipynb
+Notebook}\label{embed-.html-resultrendering-from-.ipynb-notebook}
+\addcontentsline{toc}{section}{Embed .html result/rendering from .ipynb
+Notebook}
+
+\markright{Embed .html result/rendering from .ipynb Notebook}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{\{\{\textless{} embed /AMTAIR\_Prototype/data/example\_carlsmith/AMTAIR\_Prototype\_example\_carlsmith.ipynb\#html\_graph\_visualization echo=true \textgreater{}\}\}}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{\# @title 5.1 {-}{-}{-} Save Visualization and Notebook Outputs as .HTML{-}{-}{-} [html\_graph\_visualization]}
+
+\NormalTok{create\_bayesian\_network\_with\_probabilities(result\_df)}
+\end{Highlighting}
+\end{Shaded}
+
+\phantomsection\label{html_graph_visualization}
+Save Visualization and Notebook Outputs as .HTML
 
 \section*{Diagrams}\label{diagrams}
 \addcontentsline{toc}{section}{Diagrams}
@@ -2077,8 +2101,8 @@ Upscale Conditional Policy Assessments in Bayesian Networks on a Narrow
 Path towards Existential Safety
 \end{quote}
 
-\begin{tcolorbox}[enhanced jigsaw, rightrule=.15mm, bottomrule=.15mm, opacitybacktitle=0.6, titlerule=0mm, breakable, left=2mm, opacityback=0, leftrule=.75mm, colbacktitle=quarto-callout-note-color!10!white, arc=.35mm, title=\textcolor{quarto-callout-note-color}{\faInfo}\hspace{0.5em}{10\% of Grade: \textasciitilde{} 14\% of text \textasciitilde{} 4200
-words \textasciitilde{} 10 pages}, bottomtitle=1mm, colframe=quarto-callout-note-color-frame, colback=white, toptitle=1mm, toprule=.15mm, coltitle=black]
+\begin{tcolorbox}[enhanced jigsaw, left=2mm, toptitle=1mm, colframe=quarto-callout-note-color-frame, leftrule=.75mm, breakable, colbacktitle=quarto-callout-note-color!10!white, rightrule=.15mm, bottomtitle=1mm, titlerule=0mm, title=\textcolor{quarto-callout-note-color}{\faInfo}\hspace{0.5em}{10\% of Grade: \textasciitilde{} 14\% of text \textasciitilde{} 4200
+words \textasciitilde{} 10 pages}, arc=.35mm, opacitybacktitle=0.6, opacityback=0, colback=white, toprule=.15mm, bottomrule=.15mm, coltitle=black]
 
 \begin{itemize}
 \item
@@ -2354,8 +2378,8 @@ tools for improving coordination in AI governance.
 
 \chapter{Context \& Background}\label{sec-context}
 
-\begin{tcolorbox}[enhanced jigsaw, rightrule=.15mm, bottomrule=.15mm, opacitybacktitle=0.6, titlerule=0mm, breakable, left=2mm, opacityback=0, leftrule=.75mm, colbacktitle=quarto-callout-note-color!10!white, arc=.35mm, title=\textcolor{quarto-callout-note-color}{\faInfo}\hspace{0.5em}{20\% of Grade: \textasciitilde{} 29\% of text \textasciitilde{} 8700
-words \textasciitilde{} 20 pages}, bottomtitle=1mm, colframe=quarto-callout-note-color-frame, colback=white, toptitle=1mm, toprule=.15mm, coltitle=black]
+\begin{tcolorbox}[enhanced jigsaw, left=2mm, toptitle=1mm, colframe=quarto-callout-note-color-frame, leftrule=.75mm, breakable, colbacktitle=quarto-callout-note-color!10!white, rightrule=.15mm, bottomtitle=1mm, titlerule=0mm, title=\textcolor{quarto-callout-note-color}{\faInfo}\hspace{0.5em}{20\% of Grade: \textasciitilde{} 29\% of text \textasciitilde{} 8700
+words \textasciitilde{} 20 pages}, arc=.35mm, opacitybacktitle=0.6, opacityback=0, colback=white, toprule=.15mm, bottomrule=.15mm, coltitle=black]
 
 \begin{itemize}
 \item
@@ -3658,8 +3682,8 @@ Testing crossreferencing grapics Figure~\ref{fig-automation_pipeline}.
 
 \chapter{AMTAIR}\label{amtair}
 
-\begin{tcolorbox}[enhanced jigsaw, rightrule=.15mm, bottomrule=.15mm, opacitybacktitle=0.6, titlerule=0mm, breakable, left=2mm, opacityback=0, leftrule=.75mm, colbacktitle=quarto-callout-note-color!10!white, arc=.35mm, title=\textcolor{quarto-callout-note-color}{\faInfo}\hspace{0.5em}{20\% of Grade: \textasciitilde{} 29\% of text \textasciitilde{} 8700
-words \textasciitilde{} 20 pages}, bottomtitle=1mm, colframe=quarto-callout-note-color-frame, colback=white, toptitle=1mm, toprule=.15mm, coltitle=black]
+\begin{tcolorbox}[enhanced jigsaw, left=2mm, toptitle=1mm, colframe=quarto-callout-note-color-frame, leftrule=.75mm, breakable, colbacktitle=quarto-callout-note-color!10!white, rightrule=.15mm, bottomtitle=1mm, titlerule=0mm, title=\textcolor{quarto-callout-note-color}{\faInfo}\hspace{0.5em}{20\% of Grade: \textasciitilde{} 29\% of text \textasciitilde{} 8700
+words \textasciitilde{} 20 pages}, arc=.35mm, opacitybacktitle=0.6, opacityback=0, colback=white, toprule=.15mm, bottomrule=.15mm, coltitle=black]
 
 \begin{itemize}
 \item
@@ -4972,8 +4996,8 @@ Sensitivity analysis revealed:
 
 \chapter{Discussion}\label{discussion}
 
-\begin{tcolorbox}[enhanced jigsaw, rightrule=.15mm, bottomrule=.15mm, opacitybacktitle=0.6, titlerule=0mm, breakable, left=2mm, opacityback=0, leftrule=.75mm, colbacktitle=quarto-callout-note-color!10!white, arc=.35mm, title=\textcolor{quarto-callout-note-color}{\faInfo}\hspace{0.5em}{10\% of Grade: \textasciitilde{} 14\% of text \textasciitilde{} 4200
-words \textasciitilde{} 10 pages}, bottomtitle=1mm, colframe=quarto-callout-note-color-frame, colback=white, toptitle=1mm, toprule=.15mm, coltitle=black]
+\begin{tcolorbox}[enhanced jigsaw, left=2mm, toptitle=1mm, colframe=quarto-callout-note-color-frame, leftrule=.75mm, breakable, colbacktitle=quarto-callout-note-color!10!white, rightrule=.15mm, bottomtitle=1mm, titlerule=0mm, title=\textcolor{quarto-callout-note-color}{\faInfo}\hspace{0.5em}{10\% of Grade: \textasciitilde{} 14\% of text \textasciitilde{} 4200
+words \textasciitilde{} 10 pages}, arc=.35mm, opacitybacktitle=0.6, opacityback=0, colback=white, toprule=.15mm, bottomrule=.15mm, coltitle=black]
 
 \begin{itemize}
 \item
@@ -6067,8 +6091,8 @@ modeling
 
 \chapter{Conclusion}\label{conclusion}
 
-\begin{tcolorbox}[enhanced jigsaw, rightrule=.15mm, bottomrule=.15mm, opacitybacktitle=0.6, titlerule=0mm, breakable, left=2mm, opacityback=0, leftrule=.75mm, colbacktitle=quarto-callout-note-color!10!white, arc=.35mm, title=\textcolor{quarto-callout-note-color}{\faInfo}\hspace{0.5em}{10\% of Grade: \textasciitilde{} 14\% of text \textasciitilde{} 4200
-words \textasciitilde{} 10 pages}, bottomtitle=1mm, colframe=quarto-callout-note-color-frame, colback=white, toptitle=1mm, toprule=.15mm, coltitle=black]
+\begin{tcolorbox}[enhanced jigsaw, left=2mm, toptitle=1mm, colframe=quarto-callout-note-color-frame, leftrule=.75mm, breakable, colbacktitle=quarto-callout-note-color!10!white, rightrule=.15mm, bottomtitle=1mm, titlerule=0mm, title=\textcolor{quarto-callout-note-color}{\faInfo}\hspace{0.5em}{10\% of Grade: \textasciitilde{} 14\% of text \textasciitilde{} 4200
+words \textasciitilde{} 10 pages}, arc=.35mm, opacitybacktitle=0.6, opacityback=0, colback=white, toprule=.15mm, bottomrule=.15mm, coltitle=black]
 
 \begin{itemize}
 \item
@@ -7562,7 +7586,7 @@ Packages}\label{prepare-colabpython-environment-import-libraries-packages}
 \phantomsection\label{install_import_libraries}
 \begin{Shaded}
 \begin{Highlighting}[]
-\CommentTok{\# @title 0.1 {-}{-}{-} Install \& Import Libraries \& Packages (One{-}Time Setup) {-}{-}{-}}
+\CommentTok{\# @title 0.1 {-}{-}{-} Install \& Import Libraries \& Packages (One{-}Time Setup) {-}{-}{-} [install\_import\_libraries]}
 
 \CommentTok{"""}
 \CommentTok{BLOCK PURPOSE:}
@@ -7676,7 +7700,7 @@ Urls.
 \phantomsection\label{connect_to_github_repository}
 \begin{Shaded}
 \begin{Highlighting}[]
-\CommentTok{\# @title 0.2 {-}{-}{-} Connect to GitHub Repository {-}{-}{-} Load Files}
+\CommentTok{\# @title 0.2 {-}{-}{-} Connect to GitHub Repository {-}{-}{-} Load Files [connect\_to\_github\_repository]}
 
 \CommentTok{"""}
 \CommentTok{BLOCK PURPOSE: Establishes connection to the AMTAIR GitHub repository and provides}
@@ -7851,7 +7875,7 @@ upload to / store it in the correct location.
 
 \begin{Shaded}
 \begin{Highlighting}[]
-\CommentTok{\# @title 1.1.a) {-}{-}{-} MTAIR Online Model (Analytica) {-}{-}{-}}
+\CommentTok{\# @title 1.1.a) {-}{-}{-} MTAIR Online Model (Analytica) {-}{-}{-} [online\_model]}
 
 \ImportTok{from}\NormalTok{ IPython.display }\ImportTok{import}\NormalTok{ IFrame}
 
@@ -7859,18 +7883,22 @@ upload to / store it in the correct location.
 \end{Highlighting}
 \end{Shaded}
 
+\phantomsection\label{online_model}
 \begin{verbatim}
 <IPython.lib.display.IFrame at 0x7b9cc9929f50>
 \end{verbatim}
+
+MTAIR Online Model (Analytica)
 
 \section{1.2 Generate ArgDown Extraction
 Prompt}\label{generate-argdown-extraction-prompt}
 
 Generate Extraction Prompt
 
+\phantomsection\label{prompt_template_function}
 \begin{Shaded}
 \begin{Highlighting}[]
-\CommentTok{\# @title 1.2.0 {-}{-}{-} Prompt Template Function Definitions {-}{-}{-}}
+\CommentTok{\# @title 1.2.0 {-}{-}{-} Prompt Template Function Definitions {-}{-}{-} [prompt\_template\_function]}
 
 \CommentTok{"""}
 \CommentTok{BLOCK PURPOSE: Defines a flexible template system for LLM prompts used in the extraction pipeline.}
@@ -8105,9 +8133,10 @@ Generate Extraction Prompt
 Combine Systemprompt + API Specifications + ArgDown Instructions +
 Prompt + Source PDF for API Call
 
+\phantomsection\label{provider_agnostic-interface}
 \begin{Shaded}
 \begin{Highlighting}[]
-\CommentTok{\# @title 1.3.0 {-}{-}{-} Provider{-}Agnostic LLM API Interface {-}{-}{-}}
+\CommentTok{\# @title 1.3.0 {-}{-}{-} Provider{-}Agnostic LLM API Interface {-}{-}{-} [provider\_agnostic{-}interface]}
 
 \CommentTok{"""}
 \CommentTok{BLOCK PURPOSE: Provides a unified interface for interacting with different LLM providers.}
@@ -8319,9 +8348,10 @@ Prompt + Source PDF for API Call
 \end{Highlighting}
 \end{Shaded}
 
+\phantomsection\label{api_call_function_definitions}
 \begin{Shaded}
 \begin{Highlighting}[]
-\CommentTok{\# @title 1.3.0 {-}{-}{-} API Call Function Definitions {-}{-}{-}}
+\CommentTok{\# @title 1.3.0 {-}{-}{-} API Call Function Definitions {-}{-}{-} [api\_call\_function\_definitions]}
 
 \CommentTok{"""}
 \CommentTok{BLOCK PURPOSE: Provides core functions for extracting ArgDown representations from text using LLMs.}
@@ -8547,9 +8577,10 @@ Prompt + Source PDF for API Call
 \end{Highlighting}
 \end{Shaded}
 
+\phantomsection\label{prepare_api_call}
 \begin{Shaded}
 \begin{Highlighting}[]
-\CommentTok{\# @title 1.3 {-}{-}{-} Prepare LLM API Call {-}{-}{-}}
+\CommentTok{\# @title 1.3 {-}{-}{-} Prepare LLM API Call {-}{-}{-} [prepare\_api\_call]}
 
 \CommentTok{"""}
 \CommentTok{BLOCK PURPOSE: Prepares parameters for LLM API calls used in ArgDown extraction.}
@@ -8621,9 +8652,10 @@ Selected model: gpt-4-turbo
 \section{1.4 Make ArgDown Extraction LLM API
 Call}\label{make-argdown-extraction-llm-api-call}
 
+\phantomsection\label{extraction_api_call}
 \begin{Shaded}
 \begin{Highlighting}[]
-\CommentTok{\# @title 1.4 {-}{-}{-} Make ArgDown Extraction LLM API Call {-}{-}{-}}
+\CommentTok{\# @title 1.4 {-}{-}{-} Make ArgDown Extraction LLM API Call {-}{-}{-} [extraction\_api\_call]}
 
 \CommentTok{"""}
 \CommentTok{BLOCK PURPOSE: Executes the ArgDown extraction process using the LLM API.}
@@ -8740,9 +8772,10 @@ Response}\label{save-argdown-extraction-response}
   Save ArgDown.md file for further Proecessing
 \end{enumerate}
 
+\phantomsection\label{save_extraction_response}
 \begin{Shaded}
 \begin{Highlighting}[]
-\CommentTok{\# @title 1.5 {-}{-}{-} Save ArgDown Extraction Response {-}{-}{-}}
+\CommentTok{\# @title 1.5 {-}{-}{-} Save ArgDown Extraction Response {-}{-}{-} [save\_extraction\_response]}
 
 \CommentTok{"""}
 \CommentTok{BLOCK PURPOSE: Saves the extracted ArgDown content to files for further processing.}
@@ -8813,7 +8846,7 @@ Response}\label{save-argdown-extraction-response}
 \textcolor{black}{NameError: name 'extraction\_results' is not defined}
 \textcolor{black}{}\textcolor{QuartoInternalColor1}{---------------------------------------------------------------------------}\textcolor{QuartoInternalColor2}{}
 \textcolor{QuartoInternalColor2}{}\textcolor{QuartoInternalColor1}{NameError}\textcolor{QuartoInternalColor2}{                                 Traceback (most recent call last)}
-\textcolor{QuartoInternalColor2}{}\textcolor{QuartoInternalColor3}{<ipython-input-12-84ee4ea64739>}\textcolor{QuartoInternalColor2}{ in }\textcolor{QuartoInternalColor4}{<cell line: 0>}\textcolor{QuartoInternalColor5}{()}\textcolor{QuartoInternalColor2}{}
+\textcolor{QuartoInternalColor2}{}\textcolor{QuartoInternalColor3}{<ipython-input-57-84ee4ea64739>}\textcolor{QuartoInternalColor2}{ in }\textcolor{QuartoInternalColor4}{<cell line: 0>}\textcolor{QuartoInternalColor5}{()}\textcolor{QuartoInternalColor2}{}
 \textcolor{QuartoInternalColor2}{}\textcolor{QuartoInternalColor6}{     55}\textcolor{QuartoInternalColor2}{ }\textcolor{QuartoInternalColor5}{}\textcolor{QuartoInternalColor2}{}\textcolor{QuartoInternalColor2}{}
 \textcolor{QuartoInternalColor2}{}\textcolor{QuartoInternalColor6}{     56}\textcolor{QuartoInternalColor2}{ }\textcolor{QuartoInternalColor1}{# Usage example:}\textcolor{QuartoInternalColor2}{}\textcolor{QuartoInternalColor5}{}\textcolor{QuartoInternalColor2}{}\textcolor{QuartoInternalColor5}{}\textcolor{QuartoInternalColor2}{}\textcolor{QuartoInternalColor2}{}
 \textcolor{QuartoInternalColor2}{}\textcolor{QuartoInternalColor3}{---> 57}\textcolor{QuartoInternalColor1}{ }\textcolor{QuartoInternalColor2}{output\_path}\textcolor{QuartoInternalColor2}{ }\textcolor{QuartoInternalColor5}{=}\textcolor{QuartoInternalColor2}{ }\textcolor{QuartoInternalColor2}{save\_extraction\_results}\textcolor{QuartoInternalColor2}{}\textcolor{QuartoInternalColor5}{(}\textcolor{QuartoInternalColor2}{}\textcolor{QuartoInternalColor2}{extraction\_results}\textcolor{QuartoInternalColor2}{}\textcolor{QuartoInternalColor5}{)}\textcolor{QuartoInternalColor2}{}\textcolor{QuartoInternalColor5}{}\textcolor{QuartoInternalColor2}{}\textcolor{QuartoInternalColor5}{}\textcolor{QuartoInternalColor2}{}\textcolor{QuartoInternalColor2}{}
@@ -8822,7 +8855,7 @@ Response}\label{save-argdown-extraction-response}
 \textcolor{QuartoInternalColor2}{}\textcolor{QuartoInternalColor1}{NameError}\textcolor{QuartoInternalColor2}{: name 'extraction\_results' is not defined}
 \end{Highlighting}
 
-\section{1.6 Review and Check ArgDown.md
+\chapter{1.6 Review and Check ArgDown.md
 File}\label{review-and-check-argdown.md-file}
 
 \begin{Shaded}
@@ -8930,7 +8963,7 @@ below to quickly verify that the network renders correctly.
 
 \begin{Shaded}
 \begin{Highlighting}[]
-\CommentTok{\# @title 1.6.2 {-}{-}{-} ArgDown Online Sandbox {-}{-}{-}}
+\CommentTok{\# @title 1.6.2 {-}{-}{-} ArgDown Online Sandbox {-}{-}{-} [argdown\_online\_sandbox]}
 
 \ImportTok{from}\NormalTok{ IPython.display }\ImportTok{import}\NormalTok{ IFrame}
 
@@ -8938,9 +8971,12 @@ below to quickly verify that the network renders correctly.
 \end{Highlighting}
 \end{Shaded}
 
+\phantomsection\label{argdown_online_sandbox}
 \begin{verbatim}
 <IPython.lib.display.IFrame at 0x7b9ccf0ea210>
 \end{verbatim}
+
+ArgDown Online Sandbox
 
 \section{1.7 Extract ArgDown Graph Information as
 DataFrame}\label{extract-argdown-graph-information-as-dataframe}
@@ -8965,17 +9001,20 @@ FUNCTION CALL ``parse\_markdown\_hierarchy(markdown\_text, ArgDown =
 True)'' - so if you set ArgDown = True, it gives you only
 instantiations, no probabilities.
 
+\phantomsection\label{parsing_argdown_bayesdown}
 \begin{Shaded}
 \begin{Highlighting}[]
-\CommentTok{\# @title 1.7 {-}{-}{-} Parsing ArgDown \& BayesDown (.md to .csv) {-}{-}{-}}
+\CommentTok{\# @title 1.7 {-}{-}{-} Parsing ArgDown \& BayesDown (.md to .csv) {-}{-}{-} [parsing\_argdown\_bayesdown]}
 
 \CommentTok{"""}
 \CommentTok{BLOCK PURPOSE: Provides the core parsing functionality for transforming ArgDown and BayesDown}
 \CommentTok{text representations into structured DataFrame format for further processing.}
 
-\CommentTok{This block implements the critical extraction pipeline described in the AMTAIR project}
-\CommentTok{(see PY\_TechnicalImplementation) that converts argument structures into Bayesian networks.}
-\CommentTok{The function can handle both basic ArgDown (structure{-}only) and BayesDown (with probabilities).}
+\CommentTok{This block implements the critical extraction pipeline described in the AMTAIR}
+\CommentTok{project (see PY\_TechnicalImplementation) that converts argument structures}
+\CommentTok{into Bayesian networks.}
+\CommentTok{The function can handle both basic ArgDown (structure{-}only) and}
+\CommentTok{BayesDown (with probabilities).}
 
 \CommentTok{Key steps in the parsing process:}
 \CommentTok{1. Remove comments from the markdown text}
@@ -9413,6 +9452,7 @@ instantiations, no probabilities.
 \end{Highlighting}
 \end{Shaded}
 
+\phantomsection\label{example_use_case}
 \begin{longtable}[]{@{}lllllllllllll@{}}
 \toprule\noalign{}
 & Title & Description & line & line\_numbers & indentation &
@@ -9524,6 +9564,8 @@ power-s... & 24 & {[}24{]} & 0 & {[}0{]} & {[}{]} & {[}{]} &
 {[}stakes\_of\_error\_HIGH, stakes\_of\_error\_LOW{]} & True & True &
 {[}{]} \\
 \end{longtable}
+
+example use case
 
 \section{1.8 Store ArgDown Information as `ArgDown.csv'
 file}\label{store-argdown-information-as-argdown.csv-file}
@@ -9774,15 +9816,16 @@ Bayesian networks.
 \section{2.1 Probability Extraction Questions --- `ArgDown.csv' to
 `ArgDown\_WithQuestions.csv'}\label{probability-extraction-questions-argdown.csv-to-argdown_withquestions.csv}
 
+\phantomsection\label{probability_extraction_questions_generation}
 \begin{Shaded}
 \begin{Highlighting}[]
-\CommentTok{\# @title 2.1 {-}{-}{-} Probability Extraction Questions Generation {-}{-}{-}}
+\CommentTok{\# @title 2.1 {-}{-}{-} Probability Extraction Questions Generation {-}{-}{-} [probability\_extraction\_questions\_generation]}
 
 \CommentTok{"""}
 \CommentTok{BLOCK PURPOSE: Generates probability questions for ArgDown nodes to prepare for BayesDown conversion.}
 
-\CommentTok{This block implements a key step in the pipeline where structure (from ArgDown) is prepared}
-\CommentTok{for probability integration (to create BayesDown). It:}
+\CommentTok{This block implements a key step in the pipeline where structure (from ArgDown)}
+\CommentTok{is prepared for probability integration (to create BayesDown). It:}
 
 \CommentTok{1. Processes a CSV file containing ArgDown structure}
 \CommentTok{2. For each node, generates appropriate probability questions:}
@@ -9906,7 +9949,7 @@ Bayesian networks.
 
     \CommentTok{\# Always generate a prior probability question, regardless of parents}
 \NormalTok{    prior\_question }\OperatorTok{=} \SpecialStringTok{f"What is the probability for }\SpecialCharTok{\{}\NormalTok{title}\SpecialCharTok{\}}\SpecialStringTok{=}\SpecialCharTok{\{}\NormalTok{instantiation}\SpecialCharTok{\}}\SpecialStringTok{?"}
-\NormalTok{    questions[prior\_question] }\OperatorTok{=} \StringTok{\textquotesingle{}prior\textquotesingle{}}  \CommentTok{\# Question is the key, \textquotesingle{}prior\textquotesingle{} is the value}
+\NormalTok{    questions[prior\_question] }\OperatorTok{=} \StringTok{\textquotesingle{}prior\textquotesingle{}} \CommentTok{\# Question is the key, \textquotesingle{}prior\textquotesingle{} is the value}
 
     \CommentTok{\# If no parents, return only the prior question}
     \ControlFlowTok{if} \KeywordTok{not}\NormalTok{ parents:}
@@ -10452,14 +10495,16 @@ power-s... & 24 & {[}24{]} & 0 & {[}0{]} & {[}{]} & {[}{]} &
 
 2.2 Save BayesDown Extraction Questions as `BayesDownQuestions.md'
 
+\phantomsection\label{bayesdown_questions_generation}
 \begin{Shaded}
 \begin{Highlighting}[]
-\CommentTok{\# @title 2.2 {-}{-}{-} BayesDown Questions Generation {-}{-}{-}}
+\CommentTok{\# @title 2.2 {-}{-}{-} BayesDown Questions Generation {-}{-}{-} [bayesdown\_questions\_generation]}
 
 \CommentTok{"""}
 \CommentTok{BLOCK PURPOSE: Transforms the ArgDown with questions into a BayesDown template with placeholders.}
 
-\CommentTok{This function creates a BayesDown representation with probability placeholders based on the questions generated in the previous step. It:}
+\CommentTok{This function creates a BayesDown representation with probability placeholders}
+\CommentTok{based on the questions generated in the previous step. It:}
 
 \CommentTok{1. Loads the CSV file with probability questions}
 \CommentTok{2. Constructs a directed graph to represent the causal structure}
@@ -10467,7 +10512,9 @@ power-s... & 24 & {[}24{]} & 0 & {[}0{]} & {[}{]} & {[}{]} &
 \CommentTok{4. Optionally includes comments with the specific questions to be answered}
 \CommentTok{5. Saves the result as a markdown file for the next stage of the pipeline}
 
-\CommentTok{The output is a BayesDown template that can be used in the probability extraction phase, where the placeholders will be replaced with actual probability values.}
+\CommentTok{The output is a BayesDown template that can be used in the probability}
+\CommentTok{extraction phase, where the placeholders will be replaced with actual}
+\CommentTok{probability values.}
 
 \CommentTok{DEPENDENCIES: networkx, pandas, json libraries}
 \CommentTok{INPUTS: CSV file with ArgDown structure and probability questions}
@@ -11266,7 +11313,7 @@ A BayesDown representation consists of:
 \ErrorTok{\#\#\#} \ErrorTok{3.1} \ErrorTok{ExtractBayesDown{-}Data\_v1}
 \ErrorTok{Build} \ErrorTok{data} \ErrorTok{frame} \ErrorTok{with} \ErrorTok{extractable} \ErrorTok{information} \ErrorTok{from} \ErrorTok{BayesDown}
 
-\ErrorTok{:::} \FunctionTok{\{}\ErrorTok{.cell} \ErrorTok{quarto{-}private{-}1=\textquotesingle{}\{}\DataTypeTok{"key"}\FunctionTok{:}\StringTok{"colab"}\FunctionTok{,}\DataTypeTok{"value"}\FunctionTok{:\{}\DataTypeTok{"base\_uri"}\FunctionTok{:}\StringTok{"https://localhost:8080/"}\FunctionTok{,}\DataTypeTok{"height"}\FunctionTok{:}\DecValTok{157}\FunctionTok{\}\}}\ErrorTok{\textquotesingle{}} \ErrorTok{outputId=\textquotesingle{}238cd031{-}1b16{-}47fe{-}aa6e{-}c7384b8b1a11\textquotesingle{}} \ErrorTok{execution\_count=41\}}
+\ErrorTok{:::} \FunctionTok{\{}\ErrorTok{.cell} \ErrorTok{quarto{-}private{-}1=\textquotesingle{}\{}\DataTypeTok{"key"}\FunctionTok{:}\StringTok{"colab"}\FunctionTok{,}\DataTypeTok{"value"}\FunctionTok{:\{}\DataTypeTok{"base\_uri"}\FunctionTok{:}\StringTok{"https://localhost:8080/"}\FunctionTok{,}\DataTypeTok{"height"}\FunctionTok{:}\DecValTok{157}\FunctionTok{\}\}}\ErrorTok{\textquotesingle{}} \ErrorTok{outputId=\textquotesingle{}e27e2c8c{-}bcb6{-}4e6b{-}e507{-}2b67d48ba814\textquotesingle{}} \ErrorTok{execution\_count=60\}}
 \ErrorTok{\textasciigrave{}\textasciigrave{}\textasciigrave{}} \FunctionTok{\{}\ErrorTok{.python} \ErrorTok{.cell{-}code}\FunctionTok{\}}
 \ErrorTok{\#} \ErrorTok{read} \ErrorTok{sprinkler} \ErrorTok{example} \ErrorTok{{-}{-}} \ErrorTok{Occam} \ErrorTok{Colab} \ErrorTok{Online}
 \ErrorTok{file\_path\_ex\_rain} \ErrorTok{=} \ErrorTok{"https://raw.githubusercontent.com/SingularitySmith/AMTAIR\_Prototype/main/data/example\_carlsmith/BayesDown.md"}
@@ -11884,9 +11931,10 @@ power-s... & 24 & {[}24{]} & 0 & {[}0{]} & {[}{]} & {[}{]} &
 
 Add rows to data frame that can be calculated from the extracted rows
 
+\phantomsection\label{data_post_processing_functions}
 \begin{Shaded}
 \begin{Highlighting}[]
-\CommentTok{\# @title 3.3.1 Data Post{-}Processing Functions {-}{-}{-}}
+\CommentTok{\# @title 3.3.1 Data Post{-}Processing Functions {-}{-}{-} [data\_post\_processing\_functions]}
 
 \CommentTok{"""}
 \CommentTok{BLOCK PURPOSE: Enhances the extracted BayesDown data with calculated metrics and network properties.}
@@ -12067,9 +12115,10 @@ Add rows to data frame that can be calculated from the extracted rows
 \end{Highlighting}
 \end{Shaded}
 
+\phantomsection\label{enhance_extracted_data_with_network_metrics}
 \begin{Shaded}
 \begin{Highlighting}[]
-\CommentTok{\# @title 3.3 {-}{-}{-} Enhance Extracted Data with Network Metrics {-}{-}{-}}
+\CommentTok{\# @title 3.3 {-}{-}{-} Enhance Extracted Data with Network Metrics {-}{-}{-} [enhance\_extracted\_data\_with\_network\_metrics]}
 
 \CommentTok{"""}
 \CommentTok{BLOCK PURPOSE: Applies the post{-}processing functions to enhance the extracted data.}
@@ -12201,9 +12250,10 @@ Enhanced data saved to 'enhanced_extracted_data.csv'
 \subsection{3.4 Download and save finished data frame as .csv
 file}\label{download-and-save-finished-data-frame-as-.csv-file}
 
+\phantomsection\label{save_extracted_data_for_further_processing}
 \begin{Shaded}
 \begin{Highlighting}[]
-\CommentTok{\# @title 3.4 {-}{-}{-} Save Extracted Data for Further Processing {-}{-}{-}}
+\CommentTok{\# @title 3.4 {-}{-}{-} Save Extracted Data for Further Processing {-}{-}{-} [save\_extracted\_data\_for\_further\_processing]}
 
 \CommentTok{"""}
 \CommentTok{BLOCK PURPOSE: Saves the extracted data to a CSV file for further processing.}
@@ -12317,18 +12367,20 @@ between technical and policy domains in AI governance discussions.
 \section{Phase 1:
 Dependencies/Functions}\label{phase-1-dependenciesfunctions}
 
+\phantomsection\label{bayesian_network_visualization_functions}
 \begin{Shaded}
 \begin{Highlighting}[]
-\CommentTok{\# @title 4.0 {-}{-}{-} Bayesian Network Visualization Functions {-}{-}{-}}
+\CommentTok{\# @title 4.0 {-}{-}{-} Bayesian Network Visualization Functions {-}{-}{-} [bayesian\_network\_visualization\_functions]}
 
 \CommentTok{"""}
-\CommentTok{BLOCK PURPOSE: Provides functions to create interactive Bayesian network visualizations}
-\CommentTok{from DataFrame representations of ArgDown/BayesDown data.}
+\CommentTok{BLOCK PURPOSE: Provides functions to create interactive Bayesian network}
+\CommentTok{visualizations from DataFrame representations of ArgDown/BayesDown data.}
 
-\CommentTok{This block implements the visualization pipeline described in the AMTAIR project, transforming}
-\CommentTok{the structured DataFrame extracted from ArgDown/BayesDown into an interactive network graph}
-\CommentTok{that displays nodes, relationships, and probability information. The visualization leverages}
-\CommentTok{NetworkX for graph representation and PyVis for interactive display.}
+\CommentTok{This block implements the visualization pipeline described in the AMTAIR project,}
+\CommentTok{transforming the structured DataFrame extracted from ArgDown/BayesDown into an}
+\CommentTok{interactive network graph that displays nodes, relationships, and probability}
+\CommentTok{information. The visualization leverages NetworkX for graph representation and}
+\CommentTok{PyVis for interactive display.}
 
 \CommentTok{Key visualization features:}
 \CommentTok{1. Color{-}coding of nodes based on probability values}
@@ -12535,15 +12587,17 @@ Dependencies/Functions}\label{phase-1-dependenciesfunctions}
 \section{Phase 2: Node Classification and Styling
 Module}\label{phase-2-node-classification-and-styling-module}
 
+\phantomsection\label{node_classification_and_styling_functions}
 \begin{Shaded}
 \begin{Highlighting}[]
-\CommentTok{\# @title 4.1 {-}{-}{-} Node Classification and Styling Functions {-}{-}{-}}
+\CommentTok{\# @title 4.1 {-}{-}{-} Node Classification and Styling Functions {-}{-}{-} [node\_classification\_and\_styling\_functions]}
 
 \CommentTok{"""}
 \CommentTok{BLOCK PURPOSE: Implements the visual classification and styling of nodes in the Bayesian network.}
 
-\CommentTok{This module handles the identification of node types based on their position in the network}
-\CommentTok{and provides appropriate visual styling for each type. The functions:}
+\CommentTok{This module handles the identification of node types based on their position in}
+\CommentTok{the network and provides appropriate visual styling for each type.}
+\CommentTok{The functions:}
 
 \CommentTok{1. Classify nodes as parents (causes), children (intermediate effects), or leaves (final effects)}
 \CommentTok{2. Assign appropriate border colors to visually distinguish node types}
@@ -12836,22 +12890,25 @@ Module}\label{phase-2-node-classification-and-styling-module}
 \section{Phase 3: HTML Content Generation
 Module}\label{phase-3-html-content-generation-module}
 
+\phantomsection\label{html_content_generation_functions}
 \begin{Shaded}
 \begin{Highlighting}[]
-\CommentTok{\# @title 4.2 {-}{-}{-} HTML Content Generation Functions {-}{-}{-}}
+\CommentTok{\# @title 4.2 {-}{-}{-} HTML Content Generation Functions {-}{-}{-} [html\_content\_generation\_functions]}
 
 \CommentTok{"""}
 \CommentTok{BLOCK PURPOSE: Creates rich HTML content for the interactive Bayesian network visualization.}
 
-\CommentTok{This module generates the HTML components that enhance the Bayesian network visualization:}
+\CommentTok{This module generates the HTML components that enhance the Bayesian network}
+\CommentTok{visualization:}
 \CommentTok{1. Probability bars {-} Visual representation of probability distributions}
 \CommentTok{2. Node tooltips {-} Rich information displayed on hover}
 \CommentTok{3. Expanded content {-} Detailed probability information shown when clicking nodes}
 
 \CommentTok{These HTML components make the mathematical concepts of Bayesian networks more}
 \CommentTok{intuitive and accessible to users without requiring deep statistical knowledge.}
-\CommentTok{The visual encoding of probabilities (colors, bars) and the progressive disclosure}
-\CommentTok{of information (hover, click) help users build understanding at their own pace.}
+\CommentTok{The visual encoding of probabilities (colors, bars) and the progressive}
+\CommentTok{disclosure of information (hover, click) help users build understanding at}
+\CommentTok{their own pace.}
 
 \CommentTok{DEPENDENCIES: HTML generation capabilities}
 \CommentTok{INPUTS: Node data from the Bayesian network}
@@ -13044,8 +13101,8 @@ Function}\label{phase-4-main-visualization-function}
 \begin{Highlighting}[]
 \KeywordTok{def}\NormalTok{ create\_bayesian\_network\_with\_probabilities(df):}
     \CommentTok{"""}
-\CommentTok{    Create an interactive Bayesian network visualization with enhanced probability visualization}
-\CommentTok{    and node classification based on network structure.}
+\CommentTok{    Create an interactive Bayesian network visualization with enhanced}
+\CommentTok{    probability visualization and node classification based on network structure.}
 \CommentTok{    """}
     \CommentTok{\# Create a directed graph}
 \NormalTok{    G }\OperatorTok{=}\NormalTok{ nx.DiGraph()}
@@ -13219,13 +13276,20 @@ Function}\label{phase-4-main-visualization-function}
 \end{Highlighting}
 \end{Shaded}
 
+\chapter{5.0 Extensions and next steps}\label{extensions-and-next-steps}
+
 \chapter{Quickly check HTML Outputs}\label{quickly-check-html-outputs}
 
 \begin{Shaded}
 \begin{Highlighting}[]
+\CommentTok{\# @title 5.1 {-}{-}{-} Save Visualization and Notebook Outputs as .HTML{-}{-}{-} [html\_graph\_visualization]}
+
 \NormalTok{create\_bayesian\_network\_with\_probabilities(result\_df)}
 \end{Highlighting}
 \end{Shaded}
+
+\phantomsection\label{html_graph_visualization}
+Save Visualization and Notebook Outputs as .HTML
 
 \begin{Shaded}
 \begin{Highlighting}[]
@@ -13595,9 +13659,10 @@ Run the code below to upload the ipynb.
 The html version will be downloaded automatically on your local machine.
 Enjoy it!
 
+\phantomsection\label{save_visualization_and_notebook_outputs_as_html}
 \begin{Shaded}
 \begin{Highlighting}[]
-\CommentTok{\# @title 6.0 {-}{-}{-} Save Visualization and Notebook Outputs as .HTML{-}{-}{-}}
+\CommentTok{\# @title 6.0 {-}{-}{-} Save Visualization and Notebook Outputs as .HTML{-}{-}{-} [save\_visualization\_and\_notebook\_outputs\_as\_html]}
 
 \CommentTok{"""}
 \CommentTok{BLOCK PURPOSE: Provides tools for saving the notebook results in various formats.}
@@ -13670,9 +13735,10 @@ AMTAIR_Prototype_ex 100%[===================>]   1.61M  6.36MB/s    in 0.3s
 \section{Convert .ipynb Notebook to
 MarkDown}\label{convert-.ipynb-notebook-to-markdown}
 
+\phantomsection\label{convert_notebook_to_markdown}
 \begin{Shaded}
 \begin{Highlighting}[]
-\CommentTok{\# @title {-}{-}{-} Convert .ipynb Notebook to MarkDown {-}{-}{-}}
+\CommentTok{\# @title 6.1 {-}{-}{-} Convert .ipynb Notebook to MarkDown {-}{-}{-} [convert\_notebook\_to\_markdown]}
 
 \ImportTok{import}\NormalTok{ nbformat}
 \ImportTok{from}\NormalTok{ nbconvert }\ImportTok{import}\NormalTok{ MarkdownExporter}
@@ -13718,9 +13784,10 @@ AMTAIR_Prototype_ex 100%[===================>]   1.61M  5.38MB/s    in 0.3s
 2025-05-24 20:09:48 (5.38 MB/s) - ‘AMTAIR_Prototype_example_carlsmith.ipynb’ saved [1689816/1689816]
 \end{verbatim}
 
+\phantomsection\label{convert_notebook_to_markdown_documentation}
 \begin{Shaded}
 \begin{Highlighting}[]
-\CommentTok{\# @title 6.1 {-}{-}{-} Convert Notebook to Markdown Documentation {-}{-}{-}}
+\CommentTok{\# @title 6.2 {-}{-}{-} Convert Notebook to Markdown Documentation {-}{-}{-} [convert\_notebook\_to\_markdown\_documentation]}
 
 \CommentTok{"""}
 \CommentTok{BLOCK PURPOSE: Converts the notebook to Markdown format for documentation purposes.}
@@ -13793,8 +13860,11 @@ AMTAIR_Prototype_ex 100%[===================>]   1.61M  5.78MB/s    in 0.3s
 ✅ Successfully saved Markdown version to: AMTAIR_Prototype_example_carlsmithIPYNB.md
 \end{verbatim}
 
+\phantomsection\label{pdf_and_latex}
 \begin{Shaded}
 \begin{Highlighting}[]
+\CommentTok{\# @title 6.3 {-}{-}{-} PDF and Latex{-}{-}{-} [pdf\_and\_latex]}
+
 \ImportTok{import}\NormalTok{ nbformat}
 \ImportTok{from}\NormalTok{ nbconvert }\ImportTok{import}\NormalTok{ PDFExporter}
 \ImportTok{import}\NormalTok{ os}

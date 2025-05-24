@@ -448,6 +448,24 @@ Link:
 
 Full Notebooks are embedded in the Appendix through the \_quarto.yml file with:
 
+
+
+
+## Embed .html result/rendering from .ipynb Notebook
+
+``` markdown
+{{< embed /AMTAIR_Prototype/data/example_carlsmith/AMTAIR_Prototype_example_carlsmith.ipynb#html_graph_visualization echo=true >}}
+```
+
+{{< embed /AMTAIR_Prototype/data/example_carlsmith/AMTAIR_Prototype_example_carlsmith.ipynb#html_graph_visualization echo=true >}}
+
+
+
+
+
+
+
+
 ## Diagrams
 
 Quarto has native support for embedding Mermaid and Graphviz diagrams. This enables you to create flowcharts, sequence diagrams, state diagrams, Gantt charts, and more using a plain text syntax inspired by markdown.
@@ -533,6 +551,20 @@ Chapter Cross-Reference @sec-crossref
 ::: landscape
 This will appear in landscape but only in PDF format. Testing crossreferencing headings @sec-carlsmith-model
 :::
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 # Abstract {#sec-abstract}
 
