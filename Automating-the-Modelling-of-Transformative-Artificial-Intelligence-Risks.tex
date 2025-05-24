@@ -303,12 +303,12 @@
 \@ifpackageloaded{subcaption}{}{\usepackage{subcaption}}
 \makeatother
 \makeatletter
-\definecolor{QuartoInternalColor4}{rgb}{0.15,0.56,0.56}
-\definecolor{QuartoInternalColor2}{rgb}{0,0,0}
-\definecolor{QuartoInternalColor6}{rgb}{0.00,0.64,0.31}
-\definecolor{QuartoInternalColor1}{rgb}{0.70,0.17,0.19}
-\definecolor{QuartoInternalColor3}{rgb}{0.00,0.45,0.15}
 \definecolor{QuartoInternalColor5}{rgb}{0.00,0.40,0.79}
+\definecolor{QuartoInternalColor4}{rgb}{0.15,0.56,0.56}
+\definecolor{QuartoInternalColor6}{rgb}{0.00,0.64,0.31}
+\definecolor{QuartoInternalColor3}{rgb}{0.00,0.45,0.15}
+\definecolor{QuartoInternalColor2}{rgb}{0,0,0}
+\definecolor{QuartoInternalColor1}{rgb}{0.70,0.17,0.19}
 \makeatother
 \usepackage{bookmark}
 \IfFileExists{xurl.sty}{\usepackage{xurl}}{} % add URL line breaks if available
@@ -457,10 +457,92 @@ to Upscale Conditional Policy Assessments in Bayesian Networks on a Narrow Path 
 \subsection*{Html Comments}\label{html-comments}
 \addcontentsline{toc}{subsection}{Html Comments}
 
+\section*{Syntax for Tasks}\label{syntax-for-tasks}
+\addcontentsline{toc}{section}{Syntax for Tasks}
+
+\markright{Syntax for Tasks}
+
 \subsection*{Tasks with ToDo Tree}\label{tasks-with-todo-tree}
 \addcontentsline{toc}{subsection}{Tasks with ToDo Tree}
 
+\subsubsection*{Simple ``One-line tasks''}\label{simple-one-line-tasks}
+\addcontentsline{toc}{subsubsection}{Simple ``One-line tasks''}
+
+Use Code ticks and html comment and task format for tasks distinctly
+visible across all formats including the ToDo-Tree overview:
+
 \texttt{\textless{}!-\/-\ {[}\ {]}\ ToDos\ for\ things\ to\ do\ /\ tasks\ /\ reminders\ (allows\ "jump\ to\ with\ Taks\ Tree\ extension")\ -\/-\textgreater{}}
+
+Use html comment and task format for open or uncertain tasks, visible in
+the .qmd file:
+
+\subsubsection*{More Complex Tasks with
+Notes}\label{more-complex-tasks-with-notes}
+\addcontentsline{toc}{subsubsection}{More Complex Tasks with Notes}
+
+\begin{verbatim}
+<!-- [ ] Task Title: short description-->
+
+  More Information about task
+
+  Relevant notes
+
+  Step-by-step implementation Plan
+
+  Etc.
+\end{verbatim}
+
+\subsubsection*{Completed Tasks}\label{completed-tasks}
+\addcontentsline{toc}{subsubsection}{Completed Tasks}
+
+Retain completed tasks in ToDo-Tree by adding an x in the brackets:
+\texttt{{[}x{]}}
+\texttt{\textless{}!-\/-\ {[}x{]}\ Tasks\ which\ have\ been\ finished\ but\ should\ remain\ for\ later\ verification\ -\/-\textgreater{}}
+
+Mark and remove completed tasks from ToDo-Tree by adding a minus in the
+brackets: \texttt{{[}-{]}}
+
+\texttt{\textless{}!-\/-\ {[}-{]}\ Tasks\ which\ have\ been\ finished\ but\ should\ remain\ visible\ for\ later\ verification\ -\/-\textgreater{}}
+
+\subsubsection*{Missing Citations}\label{missing-citations}
+\addcontentsline{toc}{subsubsection}{Missing Citations}
+
+\texttt{\textless{}!-\/-\ {[}\ {]}\ FIND:\ @CITATION\_KEY\_PURPOSE:\ "Description\ of\ the\ appropriate/idea\ source,\ including\ ideas\ /suggestions\ /\ search\ terms\ etc."\ -\/-\textgreater{}}
+
+\subsubsection*{Suggested Citation}\label{suggested-citation}
+\addcontentsline{toc}{subsubsection}{Suggested Citation}
+
+\texttt{\textless{}!-\/-\ {[}\ {]}\ VERIFY:\ @CITATION\_KEY\_SUGGESTED:\ "Description\ of\ the\ appropriate\ paper,\ book,\ source"\ {[}Include\ BibTex\ if\ known{]}\ -\/-\textgreater{}}
+
+\subsection*{Task Syntax Examples}\label{task-syntax-examples}
+\addcontentsline{toc}{subsection}{Task Syntax Examples}
+
+\texttt{\textless{}!-\/-\ {[}\ {]}\ (Example\ short:\ open\ and\ visible\ in\ text)\ \ \ Find\ and\ list\ the\ names\ of\ the\ MTAIR\ team-members\ responsible\ for\ the\ Analytica\ Implementation\ -\/-\textgreater{}}
+
+\begin{verbatim}
+<!-- [ ] (Example longer: open and visible in text)    Review/Plan/Discuss integrating Live Prediction Markets -->
+
+  Live prediction market integration requires:
+    (1) API connections to platforms (Metaculus, Manifold),
+    (2) Question-to-variable mapping algorithms,
+    (3) Probability update mechanisms, 
+    (4) Handling of market dynamics (thin markets, manipulation).
+    Current mentions may overstate readiness or underestimate complexity.
+    Need realistic assessment of what's achievable.
+
+  Implementation Steps:
+      0. List/mention all relevant platforms with a brief description each
+      1. Review all existing prediction market mentions for accuracy
+      2. Assess actual API availability and limitations
+      3. Describe/explain/discuss how to implement basic proof-of-concept with single platform
+      4. Document challenges: question mapping, market interpretation
+      5. Create realistic timeline for full implementation
+      6. Revise thesis claims to match reality
+      7. Add "Future Work" and/or extension section on complete integration
+      8. Include descriptions of mockups/designs even if not fully built 
+      9. Highlight/discuss the advantages of such integrations
+      10. Quickly brainstorm for downsides worth mentioning
+\end{verbatim}
 
 \subsection*{Verbatim Code Formatting}\label{verbatim-code-formatting}
 \addcontentsline{toc}{subsection}{Verbatim Code Formatting}
@@ -609,9 +691,9 @@ Table~\ref{tbl-second}.
 \end{Shaded}
 
 \begin{longtable}[]{@{}
-  >{\raggedright\arraybackslash}p{(\linewidth - 4\tabcolsep) * \real{0.1667}}
-  >{\raggedright\arraybackslash}p{(\linewidth - 4\tabcolsep) * \real{0.1667}}
-  >{\raggedright\arraybackslash}p{(\linewidth - 4\tabcolsep) * \real{0.2917}}@{}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 4\tabcolsep) * \real{0.1806}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 4\tabcolsep) * \real{0.1806}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 4\tabcolsep) * \real{0.3194}}@{}}
 \caption{Sample grid table.}\tabularnewline
 \toprule\noalign{}
 \begin{minipage}[b]{\linewidth}\raggedright
@@ -800,13 +882,13 @@ Quarto's native callouts work without additional packages:
 This is written in a `note' environment -- but it does not seem to
 produce any special rendering.
 
-\begin{tcolorbox}[enhanced jigsaw, colbacktitle=quarto-callout-note-color!10!white, colframe=quarto-callout-note-color-frame, toprule=.15mm, leftrule=.75mm, colback=white, opacitybacktitle=0.6, arc=.35mm, bottomrule=.15mm, titlerule=0mm, coltitle=black, rightrule=.15mm, bottomtitle=1mm, left=2mm, toptitle=1mm, title=\textcolor{quarto-callout-note-color}{\faInfo}\hspace{0.5em}{Optional Title}, opacityback=0, breakable]
+\begin{tcolorbox}[enhanced jigsaw, colbacktitle=quarto-callout-note-color!10!white, toprule=.15mm, coltitle=black, opacityback=0, colback=white, bottomtitle=1mm, title=\textcolor{quarto-callout-note-color}{\faInfo}\hspace{0.5em}{Optional Title}, rightrule=.15mm, bottomrule=.15mm, breakable, arc=.35mm, toptitle=1mm, leftrule=.75mm, titlerule=0mm, left=2mm, opacitybacktitle=0.6, colframe=quarto-callout-note-color-frame]
 
 Content here
 
 \end{tcolorbox}
 
-\begin{tcolorbox}[enhanced jigsaw, colbacktitle=quarto-callout-note-color!10!white, colframe=quarto-callout-note-color-frame, toprule=.15mm, leftrule=.75mm, colback=white, opacitybacktitle=0.6, arc=.35mm, bottomrule=.15mm, titlerule=0mm, coltitle=black, rightrule=.15mm, bottomtitle=1mm, left=2mm, toptitle=1mm, title=\textcolor{quarto-callout-note-color}{\faInfo}\hspace{0.5em}{Important Note2}, opacityback=0, breakable]
+\begin{tcolorbox}[enhanced jigsaw, colbacktitle=quarto-callout-note-color!10!white, toprule=.15mm, coltitle=black, opacityback=0, colback=white, bottomtitle=1mm, title=\textcolor{quarto-callout-note-color}{\faInfo}\hspace{0.5em}{Important Note2}, rightrule=.15mm, bottomrule=.15mm, breakable, arc=.35mm, toptitle=1mm, leftrule=.75mm, titlerule=0mm, left=2mm, opacitybacktitle=0.6, colframe=quarto-callout-note-color-frame]
 
 This renders perfectly in both HTML and PDF.
 
@@ -1445,9 +1527,6 @@ MAD Mutually Assured Destruction
 \section{Next Steps (High-Priority
 Recommendations)}\label{next-steps-high-priority-recommendations}
 
-\subsection{1. Add Visual Elements
-Immediately}\label{add-visual-elements-immediately}
-
 Create and embed 5-7 key diagrams: AMTAIR pipeline, coordination crisis
 visualization, ArgDown→BayesDown transformation, example Bayesian
 network, and convergence analysis heatmap. These will dramatically
@@ -1489,18 +1568,88 @@ These changes would elevate an already strong thesis to exceptional,
 addressing the remaining gaps while maintaining the excellent narrative
 flow and intellectual contribution achieved in this revision.
 
+\section{Error Watch}\label{error-watch}
+
+\subsection{Catch all Potential
+Hallucinations}\label{catch-all-potential-hallucinations}
+
+\texttt{\textless{}!-\/-\ {[}\ {]}\ Keep\ track\ of\ all\ hallucinations\ that\ have\ been\ found\ here:\ -\/-\textgreater{}}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\item
+  \textbf{Validation Metrics}: Claims of ``85\%+ accuracy for structural
+  extraction'' and ``73\% for probability capture'' appear precise for
+  what seems to be a prototype system. These need careful verification
+  or qualification.
+\item
+  \textbf{Pilot Study Results}: ``40\% reduction in time to identify
+  disagreements'' and ``60\% improvement in agreement about
+  disagreement'' lack citations and seem surprisingly specific.
+\item
+  \textbf{Red-teaming Quantification}: ``34\% anchoring bias effect''
+  and other precise percentages from adversarial testing need support or
+  qualification as estimates.
+\item
+  \textbf{Prediction Market Integration}: Some passages imply deeper
+  integration than the ``future work'' status indicated elsewhere.
+\end{enumerate}
+
+\texttt{\textless{}!-\/-\ {[}\ {]}\ Make\ sure\ all\ hallucinations\ have\ been\ removed\ -\/-\textgreater{}}
+
+\section{General Style}\label{general-style}
+
+\texttt{\textless{}!-\/-\ {[}\ {]}\ Add\ Smooth\ transitions\ between\ chapters:\ Each\ chapter\ ends\ with\ preview\ of\ next,\ maintaining\ narrative\ flow\ -\/-\textgreater{}}
+
+\texttt{\textless{}!-\/-\ {[}\ {]}\ Improve\ Style/prose:\ Fewer\ lists,\ more\ prose.\ Lists\ converted\ to\ flowing\ paragraphs\ with\ transitional\ phrases.\ Bullet\ points\ reserved\ for\ true\ enumerations\ -\/-\textgreater{}}
+
+\section{General Formatting}\label{general-formatting}
+
+\texttt{\textless{}!-\/-\ {[}\ {]}\ Fix\ the\ Overlapping\ between\ Section\ Heading\ and\ Sub-Heading\ -\/-\textgreater{}}
+
+\texttt{\textless{}!-\/-\ {[}\ {]}\ Fix\ Formatting\ of\ Headings\ in\ Affidavit\ -\/-\textgreater{}}
+
+\texttt{\textless{}!-\/-\ {[}\ {]}\ Implement\ a\ "jump\ to\ ToC"\ functionality\ (also\ in\ PDF)\ -\/-\textgreater{}}
+
+\texttt{\textless{}!-\/-\ {[}\ {]}\ Determine\ whether\ section\ title\ yml\ head\ or\ \#\ (first-level-Heading)\ is\ better-\/-\textgreater{}}
+
+\texttt{\textless{}!-\/-\ {[}\ {]}\ Consider\ adding\ an\ index:\ https://quarto.org/docs/books/book-structure.html\#creating-an-index\ -\/-\textgreater{}}
+
+\section{Commentary / Feedback}\label{commentary-feedback}
+
+\subsection{Areas Needing Work}\label{areas-needing-work}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\item
+  \textbf{Visual Communication}: While visualization is discussed
+  extensively, the document lacks actual diagrams and figures that would
+  enhance understanding.
+\item
+  \textbf{Policy Specifics}: Named policies (Narrow Path, SB 1047) are
+  mentioned but not analyzed in detail, missing an opportunity for
+  concrete demonstration.
+\item
+  \textbf{Multiple Model Extraction}: Only Carlsmith is deeply analyzed;
+  adding 2-3 more models would strengthen empirical claims.
+\item
+  \textbf{Implementation Clarity}: Some features (prediction markets,
+  probability distributions) are discussed ambiguously regarding current
+  vs.~future capabilities.
+\end{enumerate}
+
 \begin{landscape}
 
 \section{General Edits}\label{general-edits}
 
 \begin{longtable}[]{@{}
-  >{\raggedright\arraybackslash}p{(\linewidth - 12\tabcolsep) * \real{0.0784}}
-  >{\raggedright\arraybackslash}p{(\linewidth - 12\tabcolsep) * \real{0.1089}}
-  >{\raggedright\arraybackslash}p{(\linewidth - 12\tabcolsep) * \real{0.0501}}
-  >{\raggedright\arraybackslash}p{(\linewidth - 12\tabcolsep) * \real{0.2614}}
-  >{\raggedright\arraybackslash}p{(\linewidth - 12\tabcolsep) * \real{0.1852}}
-  >{\raggedright\arraybackslash}p{(\linewidth - 12\tabcolsep) * \real{0.1394}}
-  >{\raggedright\arraybackslash}p{(\linewidth - 12\tabcolsep) * \real{0.1656}}@{}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 12\tabcolsep) * \real{0.1013}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 12\tabcolsep) * \real{0.1097}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 12\tabcolsep) * \real{0.0506}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 12\tabcolsep) * \real{0.2532}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 12\tabcolsep) * \real{0.1793}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 12\tabcolsep) * \real{0.1350}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 12\tabcolsep) * \real{0.1603}}@{}}
 \toprule\noalign{}
 \begin{minipage}[b]{\linewidth}\raggedright
 Section
@@ -1636,22 +1785,17 @@ expert input mechanism & None \\
 estimates & Theory explained well & Clarify implementation status &
 ``Beta distributions for probabilities'' may overstate current
 capabilities \\
-\textbf{Graphics and visualizations} & Strategic graphics throughout &
-Partial & Visualization design discussed but few actual graphics in
-document & Text descriptions good but visuals needed & Create and embed
-key diagrams & None \\
-\textbf{Section transitions} & Smooth transitions between chapters & Yes
-& Each chapter ends with preview of next, maintaining narrative flow &
-Excellent narrative coherence & None needed & None \\
+\ul{\textbf{Graphics and visualizations}} & \ul{Strategic graphics
+throughout} & \ul{Partial} & \ul{Visualization design discussed but few
+actual graphics in document} & \ul{Text descriptions good but visuals
+needed} & \ul{Create and embed key diagrams} & \ul{None} \\
+\ul{\textbf{Section transitions}} & \ul{Smooth transitions between
+chapters} & \ul{Yes} & \ul{Each chapter ends with preview of next,
+maintaining narrative flow} & \ul{Excellent narrative coherence} &
+\ul{None needed} & \ul{None} \\
 \end{longtable}
 
 \end{landscape}
-
-\section{General Style}\label{general-style}
-
-\section{General Formatting}\label{general-formatting}
-
-\section{Commentary / Feedback}\label{commentary-feedback}
 
 \subsection{Key Areas of Success}\label{key-areas-of-success}
 
@@ -1676,51 +1820,7 @@ Excellent narrative coherence & None needed & None \\
   evaluation examples ground the work in real-world applications.
 \end{enumerate}
 
-\subsection{Areas Needing Work}\label{areas-needing-work}
-
-\begin{enumerate}
-\def\labelenumi{\arabic{enumi}.}
-\item
-  \textbf{Visual Communication}: While visualization is discussed
-  extensively, the document lacks actual diagrams and figures that would
-  enhance understanding.
-\item
-  \textbf{Policy Specifics}: Named policies (Narrow Path, SB 1047) are
-  mentioned but not analyzed in detail, missing an opportunity for
-  concrete demonstration.
-\item
-  \textbf{Multiple Model Extraction}: Only Carlsmith is deeply analyzed;
-  adding 2-3 more models would strengthen empirical claims.
-\item
-  \textbf{Implementation Clarity}: Some features (prediction markets,
-  probability distributions) are discussed ambiguously regarding current
-  vs.~future capabilities.
-\end{enumerate}
-
-\subsection{Critical Potential
-Hallucinations}\label{critical-potential-hallucinations}
-
-\begin{enumerate}
-\def\labelenumi{\arabic{enumi}.}
-\item
-  \textbf{Validation Metrics}: Claims of ``85\%+ accuracy for structural
-  extraction'' and ``73\% for probability capture'' appear precise for
-  what seems to be a prototype system. These need careful verification
-  or qualification.
-\item
-  \textbf{Pilot Study Results}: ``40\% reduction in time to identify
-  disagreements'' and ``60\% improvement in agreement about
-  disagreement'' lack citations and seem surprisingly specific.
-\item
-  \textbf{Red-teaming Quantification}: ``34\% anchoring bias effect''
-  and other precise percentages from adversarial testing need support or
-  qualification as estimates.
-\item
-  \textbf{Prediction Market Integration}: Some passages imply deeper
-  integration than the ``future work'' status indicated elsewhere.
-\end{enumerate}
-
-\section{\texorpdfstring{Checklists }{Checklists }}\label{checklists}
+\section{Old Checklists}\label{old-checklists}
 
 \section{``Usual paper requirements''}\label{usual-paper-requirements}
 
@@ -1768,8 +1868,6 @@ understand}\label{format-anything-that-makes-it-easier-to-understand}
 -- the paper can \textbf{focus} on \textbf{one aspect of the
 presentation}
 
--- ``open door policy'' for (content) questions
-
 \textasciitilde{} demonstrate ability for novel research
 
 -- ``solve research question with the tools accessible to you''
@@ -1788,6 +1886,83 @@ same topic
 -- pretty much determined by presentation \& proposal but narrow down
 further (\& choose supervisor?)
 
+\section{Syntax for Tasks}\label{syntax-for-tasks-1}
+
+\subsection{Tasks with ToDo Tree}\label{tasks-with-todo-tree-1}
+
+\subsubsection{Simple ``One-line tasks''}\label{simple-one-line-tasks-1}
+
+Use Code ticks and html comment and task format for tasks distinctly
+visible across all formats including the ToDo-Tree overview:
+
+\texttt{\textless{}!-\/-\ {[}\ {]}\ ToDos\ for\ things\ to\ do\ /\ tasks\ /\ reminders\ (allows\ "jump\ to\ with\ Taks\ Tree\ extension")\ -\/-\textgreater{}}
+
+Use html comment and task format for open or uncertain tasks, visible in
+the .qmd file:
+
+\subsubsection{More Complex Tasks with
+Notes}\label{more-complex-tasks-with-notes-1}
+
+\begin{verbatim}
+<!-- [ ] Task Title: short description-->
+
+  More Information about task
+
+  Relevant notes
+
+  Step-by-step implementation Plan
+
+  Etc.
+\end{verbatim}
+
+\subsubsection{Completed Tasks}\label{completed-tasks-1}
+
+Retain completed tasks in ToDo-Tree by adding an x in the brackets:
+\texttt{{[}x{]}}
+\texttt{\textless{}!-\/-\ {[}x{]}\ Tasks\ which\ have\ been\ finished\ but\ should\ remain\ for\ later\ verification\ -\/-\textgreater{}}
+
+Mark and remove completed tasks from ToDo-Tree by adding a minus in the
+brackets: \texttt{{[}-{]}}
+
+\texttt{\textless{}!-\/-\ {[}-{]}\ Tasks\ which\ have\ been\ finished\ but\ should\ remain\ visible\ for\ later\ verification\ -\/-\textgreater{}}
+
+\subsubsection{Missing Citations}\label{missing-citations-1}
+
+\texttt{\textless{}!-\/-\ {[}\ {]}\ FIND:\ @CITATION\_KEY\_PURPOSE:\ "Description\ of\ the\ appropriate/idea\ source,\ including\ ideas\ /suggestions\ /\ search\ terms\ etc."\ -\/-\textgreater{}}
+
+\subsubsection{Suggested Citation}\label{suggested-citation-1}
+
+\texttt{\textless{}!-\/-\ {[}\ {]}\ VERIFY:\ @CITATION\_KEY\_SUGGESTED:\ "Description\ of\ the\ appropriate\ paper,\ book,\ source"\ {[}Include\ BibTex\ if\ known{]}\ -\/-\textgreater{}}
+
+\subsection{Examples}\label{examples}
+
+\texttt{\textless{}!-\/-\ {[}\ {]}\ (Example\ short:\ open\ and\ visible\ in\ text)\ \ \ Find\ and\ list\ the\ names\ of\ the\ MTAIR\ team-members\ responsible\ for\ the\ Analytica\ Implementation\ -\/-\textgreater{}}
+
+\begin{verbatim}
+<!-- [ ] (Example longer: open and visible in text)    Review/Plan/Discuss integrating Live Prediction Markets -->
+
+  Live prediction market integration requires:
+    (1) API connections to platforms (Metaculus, Manifold),
+    (2) Question-to-variable mapping algorithms,
+    (3) Probability update mechanisms, 
+    (4) Handling of market dynamics (thin markets, manipulation).
+    Current mentions may overstate readiness or underestimate complexity.
+    Need realistic assessment of what's achievable.
+
+  Implementation Steps:
+      0. List/mention all relevant platforms with a brief description each
+      1. Review all existing prediction market mentions for accuracy
+      2. Assess actual API availability and limitations
+      3. Describe/explain/discuss how to implement basic proof-of-concept with single platform
+      4. Document challenges: question mapping, market interpretation
+      5. Create realistic timeline for full implementation
+      6. Revise thesis claims to match reality
+      7. Add "Future Work" and/or extension section on complete integration
+      8. Include descriptions of mockups/designs even if not fully built 
+      9. Highlight/discuss the advantages of such integrations
+      10. Quickly brainstorm for downsides worth mentioning
+\end{verbatim}
+
 \bookmarksetup{startatroot}
 
 \chapter{Introduction}\label{sec-introduction}
@@ -1798,17 +1973,23 @@ Upscale Conditional Policy Assessments in Bayesian Networks on a Narrow
 Path towards Existential Safety
 \end{quote}
 
-\begin{verbatim}
-### 10% of Grade: ~ 14% of text ~ 4200 words ~ 10 pages
+\begin{tcolorbox}[enhanced jigsaw, colbacktitle=quarto-callout-note-color!10!white, toprule=.15mm, coltitle=black, opacityback=0, colback=white, bottomtitle=1mm, title=\textcolor{quarto-callout-note-color}{\faInfo}\hspace{0.5em}{10\% of Grade: \textasciitilde{} 14\% of text \textasciitilde{} 4200
+words \textasciitilde{} 10 pages}, rightrule=.15mm, bottomrule=.15mm, breakable, arc=.35mm, toptitle=1mm, leftrule=.75mm, titlerule=0mm, left=2mm, opacitybacktitle=0.6, colframe=quarto-callout-note-color-frame]
 
--   introduces and motivates the core question or problem
+\begin{itemize}
+\item
+  introduces and motivates the core question or problem
+\item
+  provides context for discussion (places issue within a larger debate
+  or sphere of relevance)
+\item
+  states precise thesis or position the author will argue for
+\item
+  provides roadmap indicating structure and key content points of the
+  essay
+\end{itemize}
 
--   provides context for discussion (places issue within a larger debate or sphere of relevance)
-
--   states precise thesis or position the author will argue for
-
--   provides roadmap indicating structure and key content points of the essay
-\end{verbatim}
+\end{tcolorbox}
 
 \texttt{{[}x{]}\ \ introduces\ and\ motivates\ the\ core\ question\ or\ problem}
 
@@ -2069,19 +2250,26 @@ tools for improving coordination in AI governance.
 
 \chapter{Context \& Background}\label{sec-context}
 
-\begin{verbatim}
-### 20% of Grade: ~ 29% of text ~ 8700 words ~ 20 pages
+\begin{tcolorbox}[enhanced jigsaw, colbacktitle=quarto-callout-note-color!10!white, toprule=.15mm, coltitle=black, opacityback=0, colback=white, bottomtitle=1mm, title=\textcolor{quarto-callout-note-color}{\faInfo}\hspace{0.5em}{20\% of Grade: \textasciitilde{} 29\% of text \textasciitilde{} 8700
+words \textasciitilde{} 20 pages}, rightrule=.15mm, bottomrule=.15mm, breakable, arc=.35mm, toptitle=1mm, leftrule=.75mm, titlerule=0mm, left=2mm, opacitybacktitle=0.6, colframe=quarto-callout-note-color-frame]
 
-- demonstrates understanding of all relevant core concepts
+\begin{itemize}
+\item
+  demonstrates understanding of all relevant core concepts
+\item
+  explains why the question/thesis/problem is relevant in student's own
+  words (supported by quotations)
+\item
+  situates it within the debate/course material
+\item
+  reconstructs selected arguments and identifies relevant assumptions
+\item
+  describes additional relevant material that has been consulted and
+  integrates it with the course material as well as the research
+  question/thesis/problem
+\end{itemize}
 
-- explains why the question/thesis/problem is relevant in student’s own words (supported by quotations)
-
-- situates it within the debate/course material
-
-- reconstructs selected arguments and identifies relevant assumptions
-
-- describes additional relevant material that has been consulted and integrates it with the course material as well as the research question/thesis/problem
-\end{verbatim}
+\end{tcolorbox}
 
 \section{Theoretical Foundations}\label{sec-theoretical-foundations}
 
@@ -3366,19 +3554,26 @@ Testing crossreferencing grapics Figure~\ref{fig-automation_pipeline}.
 
 \chapter{AMTAIR}\label{amtair}
 
-\begin{verbatim}
-### 20% of Grade: ~ 29% of text ~ 8700 words ~ 20 pages
+\begin{tcolorbox}[enhanced jigsaw, colbacktitle=quarto-callout-note-color!10!white, toprule=.15mm, coltitle=black, opacityback=0, colback=white, bottomtitle=1mm, title=\textcolor{quarto-callout-note-color}{\faInfo}\hspace{0.5em}{20\% of Grade: \textasciitilde{} 29\% of text \textasciitilde{} 8700
+words \textasciitilde{} 20 pages}, rightrule=.15mm, bottomrule=.15mm, breakable, arc=.35mm, toptitle=1mm, leftrule=.75mm, titlerule=0mm, left=2mm, opacitybacktitle=0.6, colframe=quarto-callout-note-color-frame]
 
-- provides critical or constructive evaluation of positions introduced
+\begin{itemize}
+\item
+  provides critical or constructive evaluation of positions introduced
+\item
+  develops strong (plausible) argument in support of author's own
+  position/thesis
+\item
+  argument draws on relevant course material claim/argument
+\item
+  demonstrate understanding of the course materials incl.~key arguments
+  and core concepts within the debate
+\item
+  claim/argument is original or insightful, possibly even presents an
+  original contribution to the debate
+\end{itemize}
 
-- develops strong (plausible) argument in support of author’s own position/thesis
-
-- argument draws on relevant course material claim/argument
-
-- demonstrate understanding of the course materials incl. key arguments and core concepts within the debate
-
-- claim/argument is original or insightful, possibly even presents an original contribution to the debate 
-\end{verbatim}
+\end{tcolorbox}
 
 \section{AMTAIR Implementation}\label{sec-amtair-implementation}
 
@@ -3391,15 +3586,19 @@ Text to render
 
 \chapter{Discussion}\label{discussion}
 
-\begin{verbatim}
-### 10% of Grade: ~ 14% of text ~ 4200 words ~ 10 pages
+\begin{tcolorbox}[enhanced jigsaw, colbacktitle=quarto-callout-note-color!10!white, toprule=.15mm, coltitle=black, opacityback=0, colback=white, bottomtitle=1mm, title=\textcolor{quarto-callout-note-color}{\faInfo}\hspace{0.5em}{10\% of Grade: \textasciitilde{} 14\% of text \textasciitilde{} 4200
+words \textasciitilde{} 10 pages}, rightrule=.15mm, bottomrule=.15mm, breakable, arc=.35mm, toptitle=1mm, leftrule=.75mm, titlerule=0mm, left=2mm, opacitybacktitle=0.6, colframe=quarto-callout-note-color-frame]
 
-- discusses a specific objection to student’s own argument
+\begin{itemize}
+\item
+  discusses a specific objection to student's own argument
+\item
+  provides a convincing reply that bolsters or refines the main argument
+\item
+  relates to or extends beyond materials/arguments covered in class
+\end{itemize}
 
-- provides a convincing reply that bolsters or refines the main argument
-
-- relates to or extends beyond materials/arguments covered in class
-\end{verbatim}
+\end{tcolorbox}
 
 \bookmarksetup{startatroot}
 
@@ -4482,19 +4681,23 @@ modeling
 
 \chapter{Conclusion}\label{conclusion}
 
-\begin{verbatim}
-### 10% of Grade: ~ 14% of text ~ 4200 words ~ 10 pages
+\begin{tcolorbox}[enhanced jigsaw, colbacktitle=quarto-callout-note-color!10!white, toprule=.15mm, coltitle=black, opacityback=0, colback=white, bottomtitle=1mm, title=\textcolor{quarto-callout-note-color}{\faInfo}\hspace{0.5em}{10\% of Grade: \textasciitilde{} 14\% of text \textasciitilde{} 4200
+words \textasciitilde{} 10 pages}, rightrule=.15mm, bottomrule=.15mm, breakable, arc=.35mm, toptitle=1mm, leftrule=.75mm, titlerule=0mm, left=2mm, opacitybacktitle=0.6, colframe=quarto-callout-note-color-frame]
 
-- summarizes thesis and line of argument
+\begin{itemize}
+\item
+  summarizes thesis and line of argument
+\item
+  outlines possible implications
+\item
+  notes outstanding issues / limitations of discussion
+\item
+  points to avenues for further research
+\item
+  overall conclusion is in line with introduction
+\end{itemize}
 
-- outlines possible implications
-
-- notes outstanding issues / limitations of discussion
-
-- points to avenues for further research
-
-- overall conclusion is in line with introduction
-\end{verbatim}
+\end{tcolorbox}
 
 \bookmarksetup{startatroot}
 

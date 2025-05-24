@@ -1393,11 +1393,11 @@
         for why it would help.</inferred_meaning>
     <implementation_plan>
         1. Research self-correction methods in recent LLM literature
-        2. Design correction chain architecture for AMTAIR
+        2. Outline and explain design correction chain architecture for AMTAIR
         3. Implement basic version if time allows
         4. Test impact: does self-correction improve extraction quality?
         5. Analyze cost/benefit: quality improvement vs. API calls
-        6. Document in thesis as either implementation or future work
+        6. Document in thesis as future work
         7. Create ablation study if implemented
         8. Connect to broader themes of human-AI collaboration
         9. Be clear about implementation status

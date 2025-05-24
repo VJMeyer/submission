@@ -3,8 +3,6 @@ number-sections: true
 ---
 
 
-<!-- [ ] Determine whether section title yml head or # (first-level-Heading) is better-->
-
 
 # Remaining Edits
 
@@ -12,9 +10,11 @@ number-sections: true
 
 <!-- [ ] Reformat the next steps below with proper task syntax-->
 
-### 1. Add Visual Elements Immediately
+<!-- [ ] ### 1. Add Visual Elements Immediately -->
 
 Create and embed 5-7 key diagrams: AMTAIR pipeline, coordination crisis visualization, ArgDown→BayesDown transformation, example Bayesian network, and convergence analysis heatmap. These will dramatically improve comprehension and professional presentation.
+
+<!-- [ ] Add Strategic graphics throughout, Text descriptions good but visuals needed, Create and embed key diagrams-->
 
 ### 2. Develop Concrete Policy Analysis Section
 
@@ -34,108 +34,136 @@ Either provide supporting evidence for specific percentages (validation accuracy
 
 These changes would elevate an already strong thesis to exceptional, addressing the remaining gaps while maintaining the excellent narrative flow and intellectual contribution achieved in this revision.
 
+## Error Watch
+
+### Catch all Potential Hallucinations
+
+`<!-- [ ] Keep track of all hallucinations that have been found here: -->`
+
+1.  **Validation Metrics**: Claims of "85%+ accuracy for structural extraction" and "73% for probability capture" appear precise for what seems to be a prototype system. These need careful verification or qualification.
+
+2.  **Pilot Study Results**: "40% reduction in time to identify disagreements" and "60% improvement in agreement about disagreement" lack citations and seem surprisingly specific.
+
+3.  **Red-teaming Quantification**: "34% anchoring bias effect" and other precise percentages from adversarial testing need support or qualification as estimates.
+
+4.  **Prediction Market Integration**: Some passages imply deeper integration than the "future work" status indicated elsewhere.
 
 
 
 
 
 
+`<!-- [ ] Make sure all hallucinations have been removed -->`
 
 
-::: landscape
-
-## General Edits
 
 
-<!-- [ ] Task -->
-
-+-----------------------------------+-------------------------------------------------+----------------------+-----------------------------------------------------------------------------------------------------------------------+------------------------------------------------------------------------------------+---------------------------------------------------------------+---------------------------------------------------------------------------+
-| Section                           | Suggested Change                                | Implemented - Status | Analysis                                                                                                              | Evaluation                                                                         | Improvement Suggestions                                       | Potential Hallucinations                                                  |
-+===================================+=================================================+======================+=======================================================================================================================+====================================================================================+===============================================================+===========================================================================+
-| **General Formatting**            | Use American spelling consistently              | Yes                  | Document uses "modeling" not "modelling", "analyze" not "analyse", "formalization" not "formalisation" throughout     | Excellent consistency - creates professional impression for international audience | None needed                                                   | None detected                                                             |
-|                                   |                                                 |                      |                                                                                                                       |                                                                                    |                                                               |                                                                           |
-|                                   | <!-- [ ] Use American spelling consistently --> |                      |                                                                                                                       |                                                                                    |                                                               |                                                                           |
-+-----------------------------------+-------------------------------------------------+----------------------+-----------------------------------------------------------------------------------------------------------------------+------------------------------------------------------------------------------------+---------------------------------------------------------------+---------------------------------------------------------------------------+
-| **General Style**                 | Fewer lists, more prose                         | Yes                  | Lists converted to flowing paragraphs with transitional phrases. Bullet points reserved for true enumerations         | Significantly improves academic tone and readability                               | Could further reduce lists in technical sections              | None                                                                      |
-+-----------------------------------+-------------------------------------------------+----------------------+-----------------------------------------------------------------------------------------------------------------------+------------------------------------------------------------------------------------+---------------------------------------------------------------+---------------------------------------------------------------------------+
-| **Abstract**                      | Clearer thesis statement                        | Yes                  | "This thesis introduces AMTAIR...computational approach that addresses coordination failure by automating extraction" | Clear and specific, balances technical precision with strategic vision             | Could be slightly more concise                                | None                                                                      |
-+-----------------------------------+-------------------------------------------------+----------------------+-----------------------------------------------------------------------------------------------------------------------+------------------------------------------------------------------------------------+---------------------------------------------------------------+---------------------------------------------------------------------------+
-| **Introduction**                  | Opening scenario with policymaker               | Yes                  | Vivid scenario of senior policy advisor reviewing conflicting AI safety reports                                       | Highly effective - immediately grounds abstract concepts in concrete dilemma       | Could add specific policy examples (e.g., compute thresholds) | None                                                                      |
-+-----------------------------------+-------------------------------------------------+----------------------+-----------------------------------------------------------------------------------------------------------------------+------------------------------------------------------------------------------------+---------------------------------------------------------------+---------------------------------------------------------------------------+
-| **Introduction**                  | Coordination crisis framing                     | Yes                  | Extensive discussion of fragmentation, safety gaps, resource misallocation, negative-sum dynamics                     | Compelling diagnosis that motivates the solution                                   | Could quantify coordination failures with specific examples   | None                                                                      |
-+-----------------------------------+-------------------------------------------------+----------------------+-----------------------------------------------------------------------------------------------------------------------+------------------------------------------------------------------------------------+---------------------------------------------------------------+---------------------------------------------------------------------------+
-| **Introduction**                  | Multiplicative benefits framework               | Yes                  | Full section explaining how extraction + markets + evaluation create synergistic value                                | Novel contribution clearly articulated                                             | Could use visual diagram to illustrate synergies              | None                                                                      |
-+-----------------------------------+-------------------------------------------------+----------------------+-----------------------------------------------------------------------------------------------------------------------+------------------------------------------------------------------------------------+---------------------------------------------------------------+---------------------------------------------------------------------------+
-| **Context**                       | Carlsmith model as exemplar                     | Yes                  | Detailed six-premise decomposition with probabilities and explanation of formalizability                              | Excellent concrete grounding for abstract concepts                                 | Could add comparison table with other models                  | None                                                                      |
-+-----------------------------------+-------------------------------------------------+----------------------+-----------------------------------------------------------------------------------------------------------------------+------------------------------------------------------------------------------------+---------------------------------------------------------------+---------------------------------------------------------------------------+
-| **Context**                       | Epistemic challenges section                    | Yes                  | Comprehensive discussion of deep uncertainty, multi-level causation, irreversibility                                  | Thoughtful analysis of unique AI governance challenges                             | Could add more policy-specific examples                       | None                                                                      |
-+-----------------------------------+-------------------------------------------------+----------------------+-----------------------------------------------------------------------------------------------------------------------+------------------------------------------------------------------------------------+---------------------------------------------------------------+---------------------------------------------------------------------------+
-| **Context**                       | Bayesian networks explanation                   | Yes                  | Mathematical foundations, rain-sprinkler example, advantages for risk modeling                                        | Good balance of technical depth and accessibility                                  | Visual representation of rain-sprinkler network would help    | None                                                                      |
-+-----------------------------------+-------------------------------------------------+----------------------+-----------------------------------------------------------------------------------------------------------------------+------------------------------------------------------------------------------------+---------------------------------------------------------------+---------------------------------------------------------------------------+
-| **Context**                       | MTAIR framework analysis                        | Yes                  | Achievements, limitations, and automation opportunity clearly presented                                               | Fair assessment that positions AMTAIR as evolution not revolution                  | Could include specific timing/cost comparisons                | None                                                                      |
-+-----------------------------------+-------------------------------------------------+----------------------+-----------------------------------------------------------------------------------------------------------------------+------------------------------------------------------------------------------------+---------------------------------------------------------------+---------------------------------------------------------------------------+
-| **AMTAIR**                        | Two-stage extraction process                    | Yes                  | ArgDown → BayesDown separation with clear rationale and benefits                                                      | Core technical innovation well explained                                           | Could add flowchart of extraction pipeline                    | None                                                                      |
-+-----------------------------------+-------------------------------------------------+----------------------+-----------------------------------------------------------------------------------------------------------------------+------------------------------------------------------------------------------------+---------------------------------------------------------------+---------------------------------------------------------------------------+
-| **AMTAIR**                        | Less code, more description                     | Yes                  | Minimal code snippets, focus on conceptual explanation and architecture                                               | Much more accessible to non-technical readers                                      | Good balance achieved                                         | None                                                                      |
-+-----------------------------------+-------------------------------------------------+----------------------+-----------------------------------------------------------------------------------------------------------------------+------------------------------------------------------------------------------------+---------------------------------------------------------------+---------------------------------------------------------------------------+
-| **AMTAIR**                        | Case studies (simple to complex)                | Yes                  | Rain-sprinkler-grass followed by Carlsmith model                                                                      | Excellent pedagogical progression                                                  | Could add intermediate complexity example                     | None                                                                      |
-+-----------------------------------+-------------------------------------------------+----------------------+-----------------------------------------------------------------------------------------------------------------------+------------------------------------------------------------------------------------+---------------------------------------------------------------+---------------------------------------------------------------------------+
-| **AMTAIR**                        | Validation methodology                          | Yes                  | Ground truth construction, metrics, results summary, error analysis                                                   | Rigorous scientific approach builds credibility                                    | Could expand on inter-rater reliability process               | Claimed "85%+ accuracy" needs careful verification                        |
-+-----------------------------------+-------------------------------------------------+----------------------+-----------------------------------------------------------------------------------------------------------------------+------------------------------------------------------------------------------------+---------------------------------------------------------------+---------------------------------------------------------------------------+
-| **AMTAIR**                        | Policy evaluation capabilities                  | Yes                  | Intervention representation, deployment governance example, robustness analysis                                       | Practical value clearly demonstrated                                               | Could add more policy examples                                | None                                                                      |
-+-----------------------------------+-------------------------------------------------+----------------------+-----------------------------------------------------------------------------------------------------------------------+------------------------------------------------------------------------------------+---------------------------------------------------------------+---------------------------------------------------------------------------+
-| **Discussion**                    | Objection-response format                       | Yes                  | Five major objections with detailed responses                                                                         | Intellectually honest engagement with limitations                                  | Could add objection about scalability to global governance    | None                                                                      |
-+-----------------------------------+-------------------------------------------------+----------------------+-----------------------------------------------------------------------------------------------------------------------+------------------------------------------------------------------------------------+---------------------------------------------------------------+---------------------------------------------------------------------------+
-| **Discussion**                    | Red-teaming results                             | Yes                  | Adversarial testing with specific failure modes and robustness findings                                               | Transparent about system limitations                                               | Could quantify performance degradation curves                 | "34% anchoring bias effect" seems precise for a prototype                 |
-+-----------------------------------+-------------------------------------------------+----------------------+-----------------------------------------------------------------------------------------------------------------------+------------------------------------------------------------------------------------+---------------------------------------------------------------+---------------------------------------------------------------------------+
-| **Discussion**                    | Epistemic security benefits                     | Yes                  | Model inspectability, convergence patterns, collective reasoning improvements                                         | Compelling case for practical benefits                                             | Could add metrics from pilot studies                          | "40% reduction in disagreement identification time" needs citation        |
-+-----------------------------------+-------------------------------------------------+----------------------+-----------------------------------------------------------------------------------------------------------------------+------------------------------------------------------------------------------------+---------------------------------------------------------------+---------------------------------------------------------------------------+
-| **Conclusion**                    | Summary of contributions                        | Yes                  | Theoretical, methodological, technical, and empirical contributions clearly listed                                    | Comprehensive without overstating claims                                           | Well balanced                                                 | None                                                                      |
-+-----------------------------------+-------------------------------------------------+----------------------+-----------------------------------------------------------------------------------------------------------------------+------------------------------------------------------------------------------------+---------------------------------------------------------------+---------------------------------------------------------------------------+
-| **Conclusion**                    | Stakeholder recommendations                     | Yes                  | Specific actionable steps for researchers, policymakers, technologists, funders                                       | Highly practical and actionable                                                    | Could prioritize recommendations                              | None                                                                      |
-+-----------------------------------+-------------------------------------------------+----------------------+-----------------------------------------------------------------------------------------------------------------------+------------------------------------------------------------------------------------+---------------------------------------------------------------+---------------------------------------------------------------------------+
-| **Conclusion**                    | Future research agenda                          | Yes                  | Technical priorities, methodological development, application expansion                                               | Comprehensive research program outlined                                            | Could add timeline estimates                                  | None                                                                      |
-+-----------------------------------+-------------------------------------------------+----------------------+-----------------------------------------------------------------------------------------------------------------------+------------------------------------------------------------------------------------+---------------------------------------------------------------+---------------------------------------------------------------------------+
-| **References**                    | American citation style                         | Yes                  | Consistent (Author, Year) format throughout                                                                           | Professional formatting                                                            | None needed                                                   | None                                                                      |
-+-----------------------------------+-------------------------------------------------+----------------------+-----------------------------------------------------------------------------------------------------------------------+------------------------------------------------------------------------------------+---------------------------------------------------------------+---------------------------------------------------------------------------+
-| **Manual extraction examples**    | 2-3 "inside view" models                        | Partial              | Carlsmith extensively analyzed, but only one model deeply examined                                                    | Good depth on one model, missing breadth                                           | Add 2 more models (e.g., Christiano, Critch)                  | None                                                                      |
-+-----------------------------------+-------------------------------------------------+----------------------+-----------------------------------------------------------------------------------------------------------------------+------------------------------------------------------------------------------------+---------------------------------------------------------------+---------------------------------------------------------------------------+
-| **Policy candidates**             | Narrow Path, SB 1047                            | Partial              | Deployment governance discussed but specific policies not analyzed                                                    | Generic policy analysis provided                                                   | Add concrete analysis of named policies                       | None                                                                      |
-+-----------------------------------+-------------------------------------------------+----------------------+-----------------------------------------------------------------------------------------------------------------------+------------------------------------------------------------------------------------+---------------------------------------------------------------+---------------------------------------------------------------------------+
-| **Correlation handling**          | Workarounds for correlations                    | Yes                  | Explicit correlation nodes, copulas, sensitivity bounds discussed                                                     | Honest about limitations with practical solutions                                  | Could add worked example                                      | None                                                                      |
-+-----------------------------------+-------------------------------------------------+----------------------+-----------------------------------------------------------------------------------------------------------------------+------------------------------------------------------------------------------------+---------------------------------------------------------------+---------------------------------------------------------------------------+
-| **Prediction market integration** | Live data integration                           | Partial              | Architecture designed for integration but not implemented                                                             | Honest about implementation status                                                 | Be clearer this is future work throughout                     | Some sections imply fuller integration than exists                        |
-+-----------------------------------+-------------------------------------------------+----------------------+-----------------------------------------------------------------------------------------------------------------------+------------------------------------------------------------------------------------+---------------------------------------------------------------+---------------------------------------------------------------------------+
-| **Expert feedback system**        | Variable validation by experts                  | Partial              | Validation methodology includes experts but ongoing feedback system not detailed                                      | Good for initial validation                                                        | Develop continuous expert input mechanism                     | None                                                                      |
-+-----------------------------------+-------------------------------------------------+----------------------+-----------------------------------------------------------------------------------------------------------------------+------------------------------------------------------------------------------------+---------------------------------------------------------------+---------------------------------------------------------------------------+
-| **Probability distributions**     | Full distribution support                       | Partial              | Conceptually addressed but implementation seems limited to point estimates                                            | Theory explained well                                                              | Clarify implementation status                                 | "Beta distributions for probabilities" may overstate current capabilities |
-+-----------------------------------+-------------------------------------------------+----------------------+-----------------------------------------------------------------------------------------------------------------------+------------------------------------------------------------------------------------+---------------------------------------------------------------+---------------------------------------------------------------------------+
-| **Graphics and visualizations**   | Strategic graphics throughout                   | Partial              | Visualization design discussed but few actual graphics in document                                                    | Text descriptions good but visuals needed                                          | Create and embed key diagrams                                 | None                                                                      |
-+-----------------------------------+-------------------------------------------------+----------------------+-----------------------------------------------------------------------------------------------------------------------+------------------------------------------------------------------------------------+---------------------------------------------------------------+---------------------------------------------------------------------------+
-| **Section transitions**           | Smooth transitions between chapters             | Yes                  | Each chapter ends with preview of next, maintaining narrative flow                                                    | Excellent narrative coherence                                                      | None needed                                                   | None                                                                      |
-+-----------------------------------+-------------------------------------------------+----------------------+-----------------------------------------------------------------------------------------------------------------------+------------------------------------------------------------------------------------+---------------------------------------------------------------+---------------------------------------------------------------------------+
-
-
-:::
 
 ## General Style
 
+`<!-- [ ] Add Smooth transitions between chapters: Each chapter ends with preview of next, maintaining narrative flow -->`
 
+`<!-- [ ] Improve Style/prose: Fewer lists, more prose. Lists converted to flowing paragraphs with transitional phrases. Bullet points reserved for true enumerations -->`
 
 ## General Formatting
 
 
-<!-- [ ] Consider adding an index: https://quarto.org/docs/books/book-structure.html#creating-an-index -->
 
-<!-- [ ] Fix the Overlapping between Section Heading and Sub-Heading -->
+`<!-- [ ] Fix the Overlapping between Section Heading and Sub-Heading -->`
 
-<!-- [ ] Fix Formatting of Headings in Affidavit -->
+`<!-- [ ] Fix Formatting of Headings in Affidavit -->`
 
-<!-- [ ] Implement a "jump to ToC" functionality (also in PDF) -->
+`<!-- [ ] Implement a "jump to ToC" functionality (also in PDF) -->`
 
+`<!-- [ ] Determine whether section title yml head or # (first-level-Heading) is better-->`
+
+`<!-- [ ] Consider adding an index: https://quarto.org/docs/books/book-structure.html#creating-an-index -->`
 
 ## Commentary / Feedback
 
+### Areas Needing Work
+
+1.  **Visual Communication**: While visualization is discussed extensively, the document lacks actual diagrams and figures that would enhance understanding.
+
+2.  **Policy Specifics**: Named policies (Narrow Path, SB 1047) are mentioned but not analyzed in detail, missing an opportunity for concrete demonstration.
+
+3.  **Multiple Model Extraction**: Only Carlsmith is deeply analyzed; adding 2-3 more models would strengthen empirical claims.
+
+4.  **Implementation Clarity**: Some features (prediction markets, probability distributions) are discussed ambiguously regarding current vs. future capabilities.
+
+
+
+::: landscape
+## General Edits
+
+<!-- [ ] Task -->
+
++-----------------------------------------------+---------------------------------------------------+-----------------------+-----------------------------------------------------------------------------------------------------------------------+------------------------------------------------------------------------------------+---------------------------------------------------------------+---------------------------------------------------------------------------+
+| Section                                       | Suggested Change                                  | Implemented - Status  | Analysis                                                                                                              | Evaluation                                                                         | Improvement Suggestions                                       | Potential Hallucinations                                                  |
++===============================================+===================================================+=======================+=======================================================================================================================+====================================================================================+===============================================================+===========================================================================+
+| **General Formatting**                        | Use American spelling consistently                | Yes                   | Document uses "modeling" not "modelling", "analyze" not "analyse", "formalization" not "formalisation" throughout     | Excellent consistency - creates professional impression for international audience | None needed                                                   | None detected                                                             |
+|                                               |                                                   |                       |                                                                                                                       |                                                                                    |                                                               |                                                                           |
+|                                               | <!-- [ ] Use American spelling consistently -->   |                       |                                                                                                                       |                                                                                    |                                                               |                                                                           |
++-----------------------------------------------+---------------------------------------------------+-----------------------+-----------------------------------------------------------------------------------------------------------------------+------------------------------------------------------------------------------------+---------------------------------------------------------------+---------------------------------------------------------------------------+
+| **General Style**                             | Fewer lists, more prose                           | Yes                   | Lists converted to flowing paragraphs with transitional phrases. Bullet points reserved for true enumerations         | Significantly improves academic tone and readability                               | Could further reduce lists in technical sections              | None                                                                      |
++-----------------------------------------------+---------------------------------------------------+-----------------------+-----------------------------------------------------------------------------------------------------------------------+------------------------------------------------------------------------------------+---------------------------------------------------------------+---------------------------------------------------------------------------+
+| **Abstract**                                  | Clearer thesis statement                          | Yes                   | "This thesis introduces AMTAIR...computational approach that addresses coordination failure by automating extraction" | Clear and specific, balances technical precision with strategic vision             | Could be slightly more concise                                | None                                                                      |
++-----------------------------------------------+---------------------------------------------------+-----------------------+-----------------------------------------------------------------------------------------------------------------------+------------------------------------------------------------------------------------+---------------------------------------------------------------+---------------------------------------------------------------------------+
+| **Introduction**                              | Opening scenario with policymaker                 | Yes                   | Vivid scenario of senior policy advisor reviewing conflicting AI safety reports                                       | Highly effective - immediately grounds abstract concepts in concrete dilemma       | Could add specific policy examples (e.g., compute thresholds) | None                                                                      |
++-----------------------------------------------+---------------------------------------------------+-----------------------+-----------------------------------------------------------------------------------------------------------------------+------------------------------------------------------------------------------------+---------------------------------------------------------------+---------------------------------------------------------------------------+
+| **Introduction**                              | Coordination crisis framing                       | Yes                   | Extensive discussion of fragmentation, safety gaps, resource misallocation, negative-sum dynamics                     | Compelling diagnosis that motivates the solution                                   | Could quantify coordination failures with specific examples   | None                                                                      |
++-----------------------------------------------+---------------------------------------------------+-----------------------+-----------------------------------------------------------------------------------------------------------------------+------------------------------------------------------------------------------------+---------------------------------------------------------------+---------------------------------------------------------------------------+
+| **Introduction**                              | Multiplicative benefits framework                 | Yes                   | Full section explaining how extraction + markets + evaluation create synergistic value                                | Novel contribution clearly articulated                                             | Could use visual diagram to illustrate synergies              | None                                                                      |
++-----------------------------------------------+---------------------------------------------------+-----------------------+-----------------------------------------------------------------------------------------------------------------------+------------------------------------------------------------------------------------+---------------------------------------------------------------+---------------------------------------------------------------------------+
+| **Context**                                   | Carlsmith model as exemplar                       | Yes                   | Detailed six-premise decomposition with probabilities and explanation of formalizability                              | Excellent concrete grounding for abstract concepts                                 | Could add comparison table with other models                  | None                                                                      |
++-----------------------------------------------+---------------------------------------------------+-----------------------+-----------------------------------------------------------------------------------------------------------------------+------------------------------------------------------------------------------------+---------------------------------------------------------------+---------------------------------------------------------------------------+
+| **Context**                                   | Epistemic challenges section                      | Yes                   | Comprehensive discussion of deep uncertainty, multi-level causation, irreversibility                                  | Thoughtful analysis of unique AI governance challenges                             | Could add more policy-specific examples                       | None                                                                      |
++-----------------------------------------------+---------------------------------------------------+-----------------------+-----------------------------------------------------------------------------------------------------------------------+------------------------------------------------------------------------------------+---------------------------------------------------------------+---------------------------------------------------------------------------+
+| **Context**                                   | Bayesian networks explanation                     | Yes                   | Mathematical foundations, rain-sprinkler example, advantages for risk modeling                                        | Good balance of technical depth and accessibility                                  | Visual representation of rain-sprinkler network would help    | None                                                                      |
++-----------------------------------------------+---------------------------------------------------+-----------------------+-----------------------------------------------------------------------------------------------------------------------+------------------------------------------------------------------------------------+---------------------------------------------------------------+---------------------------------------------------------------------------+
+| **Context**                                   | MTAIR framework analysis                          | Yes                   | Achievements, limitations, and automation opportunity clearly presented                                               | Fair assessment that positions AMTAIR as evolution not revolution                  | Could include specific timing/cost comparisons                | None                                                                      |
++-----------------------------------------------+---------------------------------------------------+-----------------------+-----------------------------------------------------------------------------------------------------------------------+------------------------------------------------------------------------------------+---------------------------------------------------------------+---------------------------------------------------------------------------+
+| **AMTAIR**                                    | Two-stage extraction process                      | Yes                   | ArgDown → BayesDown separation with clear rationale and benefits                                                      | Core technical innovation well explained                                           | Could add flowchart of extraction pipeline                    | None                                                                      |
++-----------------------------------------------+---------------------------------------------------+-----------------------+-----------------------------------------------------------------------------------------------------------------------+------------------------------------------------------------------------------------+---------------------------------------------------------------+---------------------------------------------------------------------------+
+| **AMTAIR**                                    | Less code, more description                       | Yes                   | Minimal code snippets, focus on conceptual explanation and architecture                                               | Much more accessible to non-technical readers                                      | Good balance achieved                                         | None                                                                      |
++-----------------------------------------------+---------------------------------------------------+-----------------------+-----------------------------------------------------------------------------------------------------------------------+------------------------------------------------------------------------------------+---------------------------------------------------------------+---------------------------------------------------------------------------+
+| **AMTAIR**                                    | Case studies (simple to complex)                  | Yes                   | Rain-sprinkler-grass followed by Carlsmith model                                                                      | Excellent pedagogical progression                                                  | Could add intermediate complexity example                     | None                                                                      |
++-----------------------------------------------+---------------------------------------------------+-----------------------+-----------------------------------------------------------------------------------------------------------------------+------------------------------------------------------------------------------------+---------------------------------------------------------------+---------------------------------------------------------------------------+
+| **AMTAIR**                                    | Validation methodology                            | Yes                   | Ground truth construction, metrics, results summary, error analysis                                                   | Rigorous scientific approach builds credibility                                    | Could expand on inter-rater reliability process               | Claimed "85%+ accuracy" needs careful verification                        |
++-----------------------------------------------+---------------------------------------------------+-----------------------+-----------------------------------------------------------------------------------------------------------------------+------------------------------------------------------------------------------------+---------------------------------------------------------------+---------------------------------------------------------------------------+
+| **AMTAIR**                                    | Policy evaluation capabilities                    | Yes                   | Intervention representation, deployment governance example, robustness analysis                                       | Practical value clearly demonstrated                                               | Could add more policy examples                                | None                                                                      |
++-----------------------------------------------+---------------------------------------------------+-----------------------+-----------------------------------------------------------------------------------------------------------------------+------------------------------------------------------------------------------------+---------------------------------------------------------------+---------------------------------------------------------------------------+
+| **Discussion**                                | Objection-response format                         | Yes                   | Five major objections with detailed responses                                                                         | Intellectually honest engagement with limitations                                  | Could add objection about scalability to global governance    | None                                                                      |
++-----------------------------------------------+---------------------------------------------------+-----------------------+-----------------------------------------------------------------------------------------------------------------------+------------------------------------------------------------------------------------+---------------------------------------------------------------+---------------------------------------------------------------------------+
+| **Discussion**                                | Red-teaming results                               | Yes                   | Adversarial testing with specific failure modes and robustness findings                                               | Transparent about system limitations                                               | Could quantify performance degradation curves                 | "34% anchoring bias effect" seems precise for a prototype                 |
++-----------------------------------------------+---------------------------------------------------+-----------------------+-----------------------------------------------------------------------------------------------------------------------+------------------------------------------------------------------------------------+---------------------------------------------------------------+---------------------------------------------------------------------------+
+| **Discussion**                                | Epistemic security benefits                       | Yes                   | Model inspectability, convergence patterns, collective reasoning improvements                                         | Compelling case for practical benefits                                             | Could add metrics from pilot studies                          | "40% reduction in disagreement identification time" needs citation        |
++-----------------------------------------------+---------------------------------------------------+-----------------------+-----------------------------------------------------------------------------------------------------------------------+------------------------------------------------------------------------------------+---------------------------------------------------------------+---------------------------------------------------------------------------+
+| **Conclusion**                                | Summary of contributions                          | Yes                   | Theoretical, methodological, technical, and empirical contributions clearly listed                                    | Comprehensive without overstating claims                                           | Well balanced                                                 | None                                                                      |
++-----------------------------------------------+---------------------------------------------------+-----------------------+-----------------------------------------------------------------------------------------------------------------------+------------------------------------------------------------------------------------+---------------------------------------------------------------+---------------------------------------------------------------------------+
+| **Conclusion**                                | Stakeholder recommendations                       | Yes                   | Specific actionable steps for researchers, policymakers, technologists, funders                                       | Highly practical and actionable                                                    | Could prioritize recommendations                              | None                                                                      |
++-----------------------------------------------+---------------------------------------------------+-----------------------+-----------------------------------------------------------------------------------------------------------------------+------------------------------------------------------------------------------------+---------------------------------------------------------------+---------------------------------------------------------------------------+
+| **Conclusion**                                | Future research agenda                            | Yes                   | Technical priorities, methodological development, application expansion                                               | Comprehensive research program outlined                                            | Could add timeline estimates                                  | None                                                                      |
++-----------------------------------------------+---------------------------------------------------+-----------------------+-----------------------------------------------------------------------------------------------------------------------+------------------------------------------------------------------------------------+---------------------------------------------------------------+---------------------------------------------------------------------------+
+| **References**                                | American citation style                           | Yes                   | Consistent (Author, Year) format throughout                                                                           | Professional formatting                                                            | None needed                                                   | None                                                                      |
++-----------------------------------------------+---------------------------------------------------+-----------------------+-----------------------------------------------------------------------------------------------------------------------+------------------------------------------------------------------------------------+---------------------------------------------------------------+---------------------------------------------------------------------------+
+| **Manual extraction examples**                | 2-3 "inside view" models                          | Partial               | Carlsmith extensively analyzed, but only one model deeply examined                                                    | Good depth on one model, missing breadth                                           | Add 2 more models (e.g., Christiano, Critch)                  | None                                                                      |
++-----------------------------------------------+---------------------------------------------------+-----------------------+-----------------------------------------------------------------------------------------------------------------------+------------------------------------------------------------------------------------+---------------------------------------------------------------+---------------------------------------------------------------------------+
+| **Policy candidates**                         | Narrow Path, SB 1047                              | Partial               | Deployment governance discussed but specific policies not analyzed                                                    | Generic policy analysis provided                                                   | Add concrete analysis of named policies                       | None                                                                      |
++-----------------------------------------------+---------------------------------------------------+-----------------------+-----------------------------------------------------------------------------------------------------------------------+------------------------------------------------------------------------------------+---------------------------------------------------------------+---------------------------------------------------------------------------+
+| **Correlation handling**                      | Workarounds for correlations                      | Yes                   | Explicit correlation nodes, copulas, sensitivity bounds discussed                                                     | Honest about limitations with practical solutions                                  | Could add worked example                                      | None                                                                      |
++-----------------------------------------------+---------------------------------------------------+-----------------------+-----------------------------------------------------------------------------------------------------------------------+------------------------------------------------------------------------------------+---------------------------------------------------------------+---------------------------------------------------------------------------+
+| **Prediction market integration**             | Live data integration                             | Partial               | Architecture designed for integration but not implemented                                                             | Honest about implementation status                                                 | Be clearer this is future work throughout                     | Some sections imply fuller integration than exists                        |
++-----------------------------------------------+---------------------------------------------------+-----------------------+-----------------------------------------------------------------------------------------------------------------------+------------------------------------------------------------------------------------+---------------------------------------------------------------+---------------------------------------------------------------------------+
+| **Expert feedback system**                    | Variable validation by experts                    | Partial               | Validation methodology includes experts but ongoing feedback system not detailed                                      | Good for initial validation                                                        | Develop continuous expert input mechanism                     | None                                                                      |
++-----------------------------------------------+---------------------------------------------------+-----------------------+-----------------------------------------------------------------------------------------------------------------------+------------------------------------------------------------------------------------+---------------------------------------------------------------+---------------------------------------------------------------------------+
+| **Probability distributions**                 | Full distribution support                         | Partial               | Conceptually addressed but implementation seems limited to point estimates                                            | Theory explained well                                                              | Clarify implementation status                                 | "Beta distributions for probabilities" may overstate current capabilities |
++-----------------------------------------------+---------------------------------------------------+-----------------------+-----------------------------------------------------------------------------------------------------------------------+------------------------------------------------------------------------------------+---------------------------------------------------------------+---------------------------------------------------------------------------+
+| [**Graphics and visualizations**]{.underline} | [Strategic graphics throughout]{.underline}       | [Partial]{.underline} | [Visualization design discussed but few actual graphics in document]{.underline}                                      | [Text descriptions good but visuals needed]{.underline}                            | [Create and embed key diagrams]{.underline}                   | [None]{.underline}                                                        |
++-----------------------------------------------+---------------------------------------------------+-----------------------+-----------------------------------------------------------------------------------------------------------------------+------------------------------------------------------------------------------------+---------------------------------------------------------------+---------------------------------------------------------------------------+
+| [**Section transitions**]{.underline}         | [Smooth transitions between chapters]{.underline} | [Yes]{.underline}     | [Each chapter ends with preview of next, maintaining narrative flow]{.underline}                                      | [Excellent narrative coherence]{.underline}                                        | [None needed]{.underline}                                     | [None]{.underline}                                                        |
++-----------------------------------------------+---------------------------------------------------+-----------------------+-----------------------------------------------------------------------------------------------------------------------+------------------------------------------------------------------------------------+---------------------------------------------------------------+---------------------------------------------------------------------------+
+:::
 
 
 
@@ -151,65 +179,29 @@ These changes would elevate an already strong thesis to exceptional, addressing 
 
 
 
+## Old Checklists
 
-### Areas Needing Work
-
-1.  **Visual Communication**: While visualization is discussed extensively, the document lacks actual diagrams and figures that would enhance understanding.
-
-2.  **Policy Specifics**: Named policies (Narrow Path, SB 1047) are mentioned but not analyzed in detail, missing an opportunity for concrete demonstration.
-
-3.  **Multiple Model Extraction**: Only Carlsmith is deeply analyzed; adding 2-3 more models would strengthen empirical claims.
-
-4.  **Implementation Clarity**: Some features (prediction markets, probability distributions) are discussed ambiguously regarding current vs. future capabilities.
-
-### Critical Potential Hallucinations
-
-1.  **Validation Metrics**: Claims of "85%+ accuracy for structural extraction" and "73% for probability capture" appear precise for what seems to be a prototype system. These need careful verification or qualification.
-
-2.  **Pilot Study Results**: "40% reduction in time to identify disagreements" and "60% improvement in agreement about disagreement" lack citations and seem surprisingly specific.
-
-3.  **Red-teaming Quantification**: "34% anchoring bias effect" and other precise percentages from adversarial testing need support or qualification as estimates.
-
-4.  **Prediction Market Integration**: Some passages imply deeper integration than the "future work" status indicated elsewhere.
-
-
-
-
-
-## Checklists <!-- [ ] Final Checklists -->
-
-
-
+<!-- [ ] Walk through old Checklists below -->
 
 ## “Usual paper requirements”
 
-* introduce all terminology  
-  - go through text, make sure all terms are defined, explained (and added to the list of Abbr.) when first mentioned  
-* readership is intelligent and interested but has no prior knowledge
-
-
+-   introduce all terminology
+    -   go through text, make sure all terms are defined, explained (and added to the list of Abbr.) when first mentioned\
+-   readership is intelligent and interested but has no prior knowledge
 
 This chapter presents the complete computational implementation of the AMTAIR system, demonstrating the end-to-end pipeline from document processing through interactive visualization.
 
-
-
-
-
-
-
 ## (Format:) \~ Anything that makes it easier to understand
 
-- short sentences  
-- paragraphs (one idea per paragraph)  
-- simplicity  
-- \!limit use of passive voice\!  
-- use active voice, even prefer I over we\!  
-- minimise use of “zombi nouns” (don’t turn verbs/adjectives to nouns\!)  
-- “find words that can be cut”
+-   short sentences\
+-   paragraphs (one idea per paragraph)\
+-   simplicity\
+-   !limit use of passive voice!\
+-   use active voice, even prefer I over we!\
+-   minimise use of “zombi nouns” (don’t turn verbs/adjectives to nouns!)\
+-   “find words that can be cut”
 
 – the paper can **focus** on **one aspect of the presentation**
-
-– “open door policy” for (content) questions
 
 \~ demonstrate ability for novel research
 
@@ -217,7 +209,7 @@ This chapter presents the complete computational implementation of the AMTAIR sy
 
 – “show something that has not been shown before / should be publishable in principle”
 
-– new idea (or criticism) “in this field” 
+– new idea (or criticism) “in this field”
 
 – Outline idea THEN reading with a purpose (answering concrete questions)
 
@@ -231,15 +223,94 @@ This chapter presents the complete computational implementation of the AMTAIR sy
 
 
 
+## Syntax for Tasks
+
+
+### Tasks with ToDo Tree
+
+
+#### Simple "One-line tasks"
+
+Use Code ticks and html comment and task format for tasks distinctly visible across all formats including the ToDo-Tree overview:
+
+`<!-- [ ] ToDos for things to do / tasks / reminders (allows "jump to with Taks Tree extension") -->`
+
+Use html comment and task format for open or uncertain tasks, visible in the .qmd file:
+
+<!-- [ ] ToDos for things to do / tasks / reminders (allows "jump to with Taks Tree extension") -->
 
 
 
+#### More Complex Tasks with Notes
+
+```         
+<!-- [ ] Task Title: short description-->
+
+  More Information about task
+
+  Relevant notes
+
+  Step-by-step implementation Plan
+
+  Etc.
+
+```
+
+#### Completed Tasks
+
+Retain completed tasks in ToDo-Tree by adding an x in the brackets: `[x]`
+`<!-- [x] Tasks which have been finished but should remain for later verification -->`
+
+<!-- [x] Tasks which have been finished but should remain for later verification -->
+
+
+Mark and remove completed tasks from ToDo-Tree by adding a minus in the brackets: `[-]`
+
+`<!-- [-] Tasks which have been finished but should remain visible for later verification -->`
+
+<!-- [-] Tasks which have been finished but should remain for later verification (only in .qmd) -->
+
+
+#### Missing Citations
+
+`<!-- [ ] FIND: @CITATION_KEY_PURPOSE: "Description of the appropriate/idea source, including ideas /suggestions / search terms etc." -->`
+
+#### Suggested Citation
+
+`<!-- [ ] VERIFY: @CITATION_KEY_SUGGESTED: "Description of the appropriate paper, book, source" [Include BibTex if known] -->`
+
+
+### Examples
+
+`<!-- [ ] (Example short: open and visible in text)   Find and list the names of the MTAIR team-members responsible for the Analytica Implementation -->`
 
 
 
+```
+<!-- [ ] (Example longer: open and visible in text)    Review/Plan/Discuss integrating Live Prediction Markets -->
 
+  Live prediction market integration requires:
+    (1) API connections to platforms (Metaculus, Manifold),
+    (2) Question-to-variable mapping algorithms,
+    (3) Probability update mechanisms, 
+    (4) Handling of market dynamics (thin markets, manipulation).
+    Current mentions may overstate readiness or underestimate complexity.
+    Need realistic assessment of what's achievable.
 
+  Implementation Steps:
+      0. List/mention all relevant platforms with a brief description each
+      1. Review all existing prediction market mentions for accuracy
+      2. Assess actual API availability and limitations
+      3. Describe/explain/discuss how to implement basic proof-of-concept with single platform
+      4. Document challenges: question mapping, market interpretation
+      5. Create realistic timeline for full implementation
+      6. Revise thesis claims to match reality
+      7. Add "Future Work" and/or extension section on complete integration
+      8. Include descriptions of mockups/designs even if not fully built 
+      9. Highlight/discuss the advantages of such integrations
+      10. Quickly brainstorm for downsides worth mentioning
+```
 
+<!-- [x] (Example: done but remaining as a reminder in .qmd and visible in ToDo Tree until verified)   Verify that the Orcid IDs are correct -->
 
-
-
+<!-- [-] (Example: done and verified but remaining as a peristent reminder)  Test and verify correct inclusion and formatting of .md files  -->

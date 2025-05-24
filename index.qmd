@@ -16,15 +16,97 @@ numbering:
 
 <!-- Comments for comments -->
 
+
+## Syntax for Tasks
+
+
 ### Tasks with ToDo Tree
+
+
+#### Simple "One-line tasks"
+
+Use Code ticks and html comment and task format for tasks distinctly visible across all formats including the ToDo-Tree overview:
 
 `<!-- [ ] ToDos for things to do / tasks / reminders (allows "jump to with Taks Tree extension") -->`
 
+Use html comment and task format for open or uncertain tasks, visible in the .qmd file:
+
 <!-- [ ] ToDos for things to do / tasks / reminders (allows "jump to with Taks Tree extension") -->
 
-`<!-- [-] Tasks which have been finished but should remain for later verification -->`
-<!-- [-] Tasks which have been finished but should remain for later verification -->
 
+
+#### More Complex Tasks with Notes
+
+```         
+<!-- [ ] Task Title: short description-->
+
+  More Information about task
+
+  Relevant notes
+
+  Step-by-step implementation Plan
+
+  Etc.
+
+```
+
+#### Completed Tasks
+
+Retain completed tasks in ToDo-Tree by adding an x in the brackets: `[x]`
+`<!-- [x] Tasks which have been finished but should remain for later verification -->`
+
+<!-- [x] Tasks which have been finished but should remain for later verification -->
+
+
+Mark and remove completed tasks from ToDo-Tree by adding a minus in the brackets: `[-]`
+
+`<!-- [-] Tasks which have been finished but should remain visible for later verification -->`
+
+<!-- [-] Tasks which have been finished but should remain for later verification (only in .qmd) -->
+
+#### Missing Citations
+
+`<!-- [ ] FIND: @CITATION_KEY_PURPOSE: "Description of the appropriate/idea source, including ideas /suggestions / search terms etc." -->`
+
+#### Suggested Citation
+
+`<!-- [ ] VERIFY: @CITATION_KEY_SUGGESTED: "Description of the appropriate paper, book, source" [Include BibTex if known] -->`
+
+
+### Task Syntax Examples
+
+`<!-- [ ] (Example short: open and visible in text)   Find and list the names of the MTAIR team-members responsible for the Analytica Implementation -->`
+
+
+
+```
+<!-- [ ] (Example longer: open and visible in text)    Review/Plan/Discuss integrating Live Prediction Markets -->
+
+  Live prediction market integration requires:
+    (1) API connections to platforms (Metaculus, Manifold),
+    (2) Question-to-variable mapping algorithms,
+    (3) Probability update mechanisms, 
+    (4) Handling of market dynamics (thin markets, manipulation).
+    Current mentions may overstate readiness or underestimate complexity.
+    Need realistic assessment of what's achievable.
+
+  Implementation Steps:
+      0. List/mention all relevant platforms with a brief description each
+      1. Review all existing prediction market mentions for accuracy
+      2. Assess actual API availability and limitations
+      3. Describe/explain/discuss how to implement basic proof-of-concept with single platform
+      4. Document challenges: question mapping, market interpretation
+      5. Create realistic timeline for full implementation
+      6. Revise thesis claims to match reality
+      7. Add "Future Work" and/or extension section on complete integration
+      8. Include descriptions of mockups/designs even if not fully built 
+      9. Highlight/discuss the advantages of such integrations
+      10. Quickly brainstorm for downsides worth mentioning
+```
+
+<!-- [x] (Example: done but remaining as a reminder in .qmd and visible in ToDo Tree until verified)   Verify that the Orcid IDs are correct -->
+
+<!-- [-] (Example: done and verified but remaining as a peristent reminder)  Test and verify correct inclusion and formatting of .md files  -->
 
 ### Verbatim Code Formatting
 
@@ -41,14 +123,13 @@ Also code blocks for more extensive notes and ideas to be included and checklist
 3. third
 ```
 
-```
+```         
 code
 ```
 
 Add a language to syntax highlight code blocks:
 
-
-```python
+``` python
 1 + 1
 ```
 
@@ -60,9 +141,10 @@ Add a language to syntax highlight code blocks:
 
 | Right | Left | Default | Center |
 |------:|:-----|---------|:------:|
-|   12  |  12  |    12   |    12  |
-|  123  |  123 |   123   |   123  |
-|    1  |    1 |     1   |     1  |
+|    12 | 12   | 12      |   12   |
+|   123 | 123  | 123     |  123   |
+|     1 | 1    | 1       |   1    |
+
 : Demonstration of pipe table syntax {#tbl-letters}
 
 | Col1 | Col2 | Col3 |
@@ -75,8 +157,7 @@ Add a language to syntax highlight code blocks:
 
 Referencing tables with `@tbl-KEY`: See @tbl-letters.
 
-
-::: {#tbl-panel layout-ncol=2}
+::: {#tbl-panel layout-ncol="2"}
 | Col1 | Col2 | Col3 |
 |------|------|------|
 | A    | B    | C    |
@@ -98,8 +179,7 @@ Main Caption
 
 See @tbl-panel for details, especially @tbl-second.
 
-
-```markdown
+``` markdown
 python
 #| label: tbl-planets
 #| tbl-cap: Astronomical object
@@ -116,22 +196,20 @@ Markdown(tabulate(
 ))
 ```
 
-+-----------+-----------+--------------------+
-| Fruit     | Price     | Advantages         |
-+===========+===========+====================+
-| Bananas   | $1.34     | - built-in wrapper |
-|           |           | - bright color     |
-+-----------+-----------+--------------------+
-| Oranges   | $2.10     | - cures scurvy     |
-|           |           | - tasty            |
-+-----------+-----------+--------------------+
++------------+------------+----------------------+
+| Fruit      | Price      | Advantages           |
++============+============+======================+
+| Bananas    | \$1.34     | -   built-in wrapper |
+|            |            | -   bright color     |
++------------+------------+----------------------+
+| Oranges    | \$2.10     | -   cures scurvy     |
+|            |            | -   tasty            |
++------------+------------+----------------------+
 
 : Sample grid table.
 
 ::: {html-table-processing="none"}
-
 Content with HTML tables you don't want processed.
-
 :::
 
 ## Headings & Potential Headings in Standard Markdown formatting ('\##') {#sec-heading}
@@ -141,19 +219,18 @@ Content with HTML tables you don't want processed.
 #### Heading 4
 
 <!-- Using Headings deeper than 4 requires some LaTeX fix -->
+
 <!-- [ ] Enable Headings 5 & 6 -->
 
 <!-- ##### Heading 5 -->
 
 <!-- ###### Heading 6 -->
 
-
 ## Text Formatting Options
 
 *italics*, **bold**, ***bold italics***
 
-superscript^2^ 
-and  subscript~2~
+superscript^2^ and subscript~2~
 
 ~~strikethrough~~
 
@@ -201,17 +278,17 @@ For HTML math processed using MathJax (the default) you can use the \\def, \\new
 
 ## Footnotes
 
-Here is an inline note.[^1]
+Here is an inline note.[^index-1]
 
-[^1]: Inlines notes are easier to write, since you don't have to pick an identifier and move down to type the note.
+[^index-1]: Inlines notes are easier to write, since you don't have to pick an identifier and move down to type the note.
 
-Here is a footnote reference,[^2]
+Here is a footnote reference,[^index-2]
 
-[^2]: Here is the footnote.
+[^index-2]: Here is the footnote.
 
-Another Text with a footnote[^3] but this time a "longnote".
+Another Text with a footnote[^index-3] but this time a "longnote".
 
-[^3]: Here's one with multiple blocks.
+[^index-3]: Here's one with multiple blocks.
 
     Subsequent paragraphs are indented to show that they belong to the previous footnote.
 
@@ -441,15 +518,6 @@ Chapter Cross-Reference @sec-crossref
 This will appear in landscape but only in PDF format. Testing crossreferencing headings @sec-carlsmith-model
 :::
 
-
-
-
-
-
-
-
-
-
 # Abstract {#sec-abstract}
 
 ```{=html}
@@ -469,109 +537,79 @@ Emphasize both technical contributions and policy relevance. -->
 
 <!-- [ ] Add key quantitative results and validation findings to Abstract-->
 
-
-
-
-
-
 # Prefatory Apparatus: Frontmatter {.unnumbered}
 
-
-
-## Illustrations and Terminology --- Quick References{.unnumbered}
-
+## Illustrations and Terminology --- Quick References {.unnumbered}
 
 ### **Acknowledgments**
 
-* Academic supervisor (Prof. Timo Speith) and institution (University of Bayreuth)  
-* Research collaborators, especially those connected to the original MTAIR project  
-* Technical advisors who provided feedback on implementation aspects   
-* Personal supporters who enabled the research through encouragement and feedback
-
+-   Academic supervisor (Prof. Timo Speith) and institution (University of Bayreuth)\
+-   Research collaborators, especially those connected to the original MTAIR project\
+-   Technical advisors who provided feedback on implementation aspects\
+-   Personal supporters who enabled the research through encouragement and feedback
 
 <!-- [ ] Ensure List of Tables is up-to-date -->
 
-
-
-
-
-
-## List of Graphics & Figures{.unnumbered}
+## List of Graphics & Figures {.unnumbered}
 
 <!-- [ ] Replace Placeholder List of Graphics & Figures with native Quarto LoF -->
+
 <!-- [ ] Populate List of Graphics & Figures with ALL figures from thesis -->
 
+-   Figure 1.1: The coordination crisis in AI governance - visualization of fragmentation\
+-   Figure 2.1: The Carlsmith model - DAG representation\
+-   Figure 3.1: Research design overview - workflow diagram\
+-   Figure 3.2: From natural language to BayesDown - transformation process\
+-   Figure 4.1: ARPA system architecture - component diagram\
+-   Figure 4.2: Visualization of Rain-Sprinkler-Grass_Wet Bayesian network - screenshot\
+-   Figure 5.1: Extraction quality metrics - comparative chart\
+-   Figure 5.2: Comparative analysis of AI governance worldviews - network visualization
 
-* Figure 1.1: The coordination crisis in AI governance \- visualization of fragmentation  
-* Figure 2.1: The Carlsmith model \- DAG representation  
-* Figure 3.1: Research design overview \- workflow diagram  
-* Figure 3.2: From natural language to BayesDown \- transformation process  
-* Figure 4.1: ARPA system architecture \- component diagram  
-* Figure 4.2: Visualization of Rain-Sprinkler-Grass\_Wet Bayesian network \- screenshot  
-* Figure 5.1: Extraction quality metrics \- comparative chart  
-* Figure 5.2: Comparative analysis of AI governance worldviews \- network visualization  
-
-
-
-## List of Abbreviations{.unnumbered}
+## List of Abbreviations {.unnumbered}
 
 <!-- [ ] Replace Placeholder List of Abbreviations with native Quarto Glossary -->
+
 <!-- [ ] Populate List of Abbreviations with ALL terms from thesis -->
 
-esp.		especially
+esp. especially
 
-f., ff.		following
+f., ff. following
 
-incl.		including
+incl. including
 
-p., pp.		page(s)
+p., pp. page(s)
 
-MAD		Mutually Assured Destruction
+MAD Mutually Assured Destruction
 
-* AI \- Artificial Intelligence  
-* AGI \- Artificial General Intelligence  
-* ARPA \- AI Risk Pathway Analyzer  
-* DAG \- Directed Acyclic Graph  
-* LLM \- Large Language Model  
-* MTAIR \- Modeling Transformative AI Risks  
-* P(Doom) \- Probability of existential catastrophe from misaligned AI  
-* CPT \- Conditional Probability Table
+-   AI - Artificial Intelligence\
+-   AGI - Artificial General Intelligence\
+-   ARPA - AI Risk Pathway Analyzer\
+-   DAG - Directed Acyclic Graph\
+-   LLM - Large Language Model\
+-   MTAIR - Modeling Transformative AI Risks\
+-   P(Doom) - Probability of existential catastrophe from misaligned AI\
+-   CPT - Conditional Probability Table
 
-
-
-
-
-## Glossary {.unnumbered .unlisted} 
+## Glossary {.unnumbered .unlisted}
 
 <!-- [ ] Replace Placeholder Glossary with native Quarto Glossary -->
+
 <!-- [ ] Populate Glossary with ALL terms from thesis -->
 
-* **Argument mapping**: A method for visually representing the structure of arguments  
-* **BayesDown**: An extension of ArgDown that incorporates probabilistic information  
-* **Bayesian network**: A probabilistic graphical model representing variables and their dependencies  
-* **Conditional probability**: The probability of an event given that another event has occurred  
-* **Directed Acyclic Graph (DAG)**: A graph with directed edges and no cycles  
-* **Existential risk**: Risk of permanent curtailment of humanity's potential  
-* **Power-seeking AI**: AI systems with instrumental incentives to acquire resources and power  
-* **Prediction market**: A market where participants trade contracts that resolve based on future events  
-* **d-separation**: A criterion for identifying conditional independence relationships in Bayesian networks  
-* **Monte Carlo sampling**: A computational technique using random sampling to obtain numerical results
-
-
-
-
-
-
-
+-   **Argument mapping**: A method for visually representing the structure of arguments\
+-   **BayesDown**: An extension of ArgDown that incorporates probabilistic information\
+-   **Bayesian network**: A probabilistic graphical model representing variables and their dependencies\
+-   **Conditional probability**: The probability of an event given that another event has occurred\
+-   **Directed Acyclic Graph (DAG)**: A graph with directed edges and no cycles\
+-   **Existential risk**: Risk of permanent curtailment of humanity's potential\
+-   **Power-seeking AI**: AI systems with instrumental incentives to acquire resources and power\
+-   **Prediction market**: A market where participants trade contracts that resolve based on future events\
+-   **d-separation**: A criterion for identifying conditional independence relationships in Bayesian networks\
+-   **Monte Carlo sampling**: A computational technique using random sampling to obtain numerical results
 
 <!-- {{< include chapters/Outlining-Workflow.md >}} -->
 
 <!-- \listoffigures -->
-
-
-
-
-
 
 ### Quarto Features Previously Incompatible with LaTeX (Below) {.unnumbered .unlisted}
 

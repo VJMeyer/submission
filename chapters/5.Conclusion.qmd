@@ -8,7 +8,7 @@ numbering:
 
 <!-- ## The Current State of Things & How to Continue -->
 
-```         
+::: callout-note
 ### 10% of Grade: ~ 14% of text ~ 4200 words ~ 10 pages
 
 - summarizes thesis and line of argument
@@ -20,7 +20,9 @@ numbering:
 - points to avenues for further research
 
 - overall conclusion is in line with introduction
-```
+:::
+
+
 
 <!-- summarizes thesis and line of argument -->
 

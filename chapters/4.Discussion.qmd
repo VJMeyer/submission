@@ -6,7 +6,8 @@ numbering:
   level: 1         # Chapter level
 ---
 
-```         
+::: callout-note
+      
 ### 10% of Grade: ~ 14% of text ~ 4200 words ~ 10 pages
 
 - discusses a specific objection to student’s own argument
@@ -14,7 +15,10 @@ numbering:
 - provides a convincing reply that bolsters or refines the main argument
 
 - relates to or extends beyond materials/arguments covered in class
-```
+:::
+
+
+
 
 <!-- discusses specific objection to student's own argument -->
 

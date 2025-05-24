@@ -1,37 +1,61 @@
-
 ---
-
-title: "Automating the Modelling of Transformative Artificial Intelligence Risks" subtitle: "An Epistemic Framework for Leveraging Frontier AI Systems to Upscale Conditional Policy Assessments in Bayesian Networks on a Narrow Path towards Existential Safety" author:
-
-- name: Valentin Jakob Meyer orcid: 0009-0006-0889-5269 corresponding: true email: Valentin.Meyer@uni-bayreuth.de roles:
-    - GraduateAuthor affiliations:
+title: "Automating the Modelling of Transformative Artificial Intelligence Risks"
+subtitle: "An Epistemic Framework for Leveraging Frontier AI Systems to Upscale Conditional Policy Assessments in Bayesian Networks on a Narrow Path towards Existential Safety"
+author:
+- name: Valentin Jakob Meyer 
+  orcid: 0009-0006-0889-5269 
+  corresponding: true 
+  email: Valentin.Meyer@uni-bayreuth.de 
+  roles:
+    - Graduate
+  Author affiliations:
     - University of Bayreuth
     - MCMP — LMU Munich
-- name: Dr. Timo Speith orcid: 0000-0002-6675-154X corresponding: false roles:
-    - Supervisor affiliations:
-    - University of Bayreuth keywords:
-- AMTAIR
-- AI Governance
-- Bayesian Networks
-- Transformative AI
-- Risk Assessment
-- Argument Extraction abstract: | This thesis addresses coordination failures in AI safety by creating computational tools that automatically extract and formalize probabilistic world models from AI safety literature using frontier language models. The AMTAIR (Automating Transformative AI Risk Modeling) system implements an end-to-end pipeline transforming unstructured arguments into interactive Bayesian networks through a novel two-stage extraction process: first capturing argument structure in ArgDown format, then enhancing it with probability information in BayesDown.
+- name: Dr. Timo Speith 
+  orcid: 0000-0002-6675-154X 
+  corresponding: false 
+  roles:
+    - Supervisor 
+  affiliations:
+    - University of Bayreuth 
+  keywords:
+    - AMTAIR
+    - AI Governance
+    - Bayesian Networks
+    - Transformative AI
+    - Risk Assessment
+    - Argument Extraction 
+abstract: |
+  This thesis addresses coordination failures in AI safety by creating computational tools that automatically extract and formalize probabilistic world models from AI safety literature using frontier language models. The AMTAIR (Automating Transformative AI Risk Modeling) system implements an end-to-end pipeline transforming unstructured arguments into interactive Bayesian networks through a novel two-stage extraction process: first capturing argument structure in ArgDown format, then enhancing it with probability information in BayesDown.
 
-Applied to canonical examples and real AI safety arguments, the system demonstrates extraction accuracy exceeding 85% for structural relationships and 73% for probability capture. By making implicit models explicit, enabling cross-worldview comparison, and supporting rigorous policy evaluation, AMTAIR bridges communication gaps between technical researchers, policy specialists, and other stakeholders working to address existential risks from advanced AI.
+  Applied to canonical examples and real AI safety arguments, the system demonstrates extraction accuracy exceeding 85% for structural relationships and 73% for probability capture. By making implicit models explicit, enabling cross-worldview comparison, and supporting rigorous policy evaluation, AMTAIR bridges communication gaps between technical researchers, policy specialists, and other stakeholders working to address existential risks from advanced AI.
 
-The thesis contributes both theoretical foundations and practical implementation, validated through expert comparison and real-world case studies including Carlsmith's power-seeking AI model. While current limitations include correlation handling and extraction ambiguities, the approach provides essential epistemic infrastructure for coordinated AI governance. plain-language-summary: | This thesis develops software tools that automatically extract and visualize the hidden assumptions and probability estimates in AI safety arguments. By transforming complex written arguments into interactive diagrams showing relationships and probabilities, AMTAIR helps different groups working on AI safety—researchers, policymakers, and others—understand each other better and coordinate their efforts to address risks from advanced AI systems. key-points:
-
-- A novel two-stage extraction pipeline transforms argument structures into Bayesian networks through ArgDown and BayesDown intermediate representations
-- Interactive visualizations make complex probabilistic relationships accessible to diverse stakeholders
-- Formal representation enables systematic comparison across different worldviews and assumptions
-- Validated extraction achieves >85% accuracy for structure and >73% for probabilities
-- The approach addresses coordination failures by creating a common language for AI risk assessment metadata-submission: field-of-study: "Philosophy & Economics M.A." matriculation-number: 1828610 submission-date: "May 26, 2025" word-count: 30000 date: "2025-05-26" bibliography: ref/MAref.bib citation: container-title: University of Bayreuth number-sections: true reference-location: margin citation-location: margin
-
+  The thesis contributes both theoretical foundations and practical implementation, validated through expert comparison and real-world case studies including Carlsmith's power-seeking AI model. While current limitations include correlation handling and extraction ambiguities, the approach provides essential epistemic infrastructure for coordinated AI governance. 
+plain-language-summary: | 
+  This thesis develops software tools that automatically extract and visualize the hidden assumptions and probability estimates in AI safety arguments. By transforming complex written arguments into interactive diagrams showing relationships and probabilities, AMTAIR helps different groups working on AI safety—researchers, policymakers, and others—understand each other better and coordinate their efforts to address risks from advanced AI systems.
+key-points:
+  - A novel two-stage extraction pipeline transforms argument structures into Bayesian networks through ArgDown and BayesDown intermediate representations
+  - Interactive visualizations make complex probabilistic relationships accessible to diverse stakeholders
+  - Formal representation enables systematic comparison across different worldviews and assumptions
+  - Validated extraction achieves >85% accuracy for structure and >73% for probabilities
+  - The approach addresses coordination failures by creating a common language for AI risk assessment 
+metadata-submission:
+  field-of-study: "Philosophy & Economics M.A."
+  matriculation-number: 1828610
+  submission-date: "May 26, 2025"
+  word-count: 30.000
+date: "2025-05-26"
+bibliography: ref/MAref.bib
+citation:
+  container-title: University of Bayreuth
+number-sections: true
+reference-location: margin
+citation-location: margin   #   https://quarto.org/docs/authoring/article-layout.html
 ---
 
 # Preface {.unnumbered}
 
-This Quarto book represents the culmination of interdisciplinary research at the intersection of AI safety, formal epistemology, and computational social science. The work emerged from recognizing a fundamental challenge in AI governance: while investment in AI safety research has grown exponentially, coordination between different stakeholder communities remains fragmented, potentially increasing existential risk through misaligned efforts.
+This thesis represents the culmination of interdisciplinary research at the intersection of AI safety, formal epistemology, and computational social science. The work emerged from recognizing a fundamental challenge in AI governance: while investment in AI safety research has grown exponentially, coordination between different stakeholder communities remains fragmented, potentially increasing existential risk through misaligned efforts.
 
 The journey from initial concept to working implementation involved iterative refinement based on feedback from advisors, domain experts, and potential users. What began as a technical exercise in automated extraction evolved into a broader framework for enhancing epistemic security in one of humanity's most critical coordination challenges.
 
@@ -39,15 +63,6 @@ The journey from initial concept to working implementation involved iterative re
 
 I thank my supervisor Dr. Timo Speith for guidance throughout this project, the MTAIR team for pioneering the manual approach that inspired automation, and the AI safety community for creating the rich literature that made this work possible. Special recognition goes to technical advisors who provided implementation feedback and domain experts who validated extraction results.
 
-# Table of Contents {.unnumbered}
-
-1. [Introduction: The Coordination Crisis in AI Governance](https://claude.ai/chat/c48c3c3a-d1a9-4c33-b88b-63dd586bb6f2#sec-introduction)
-2. [Context and Theoretical Foundations](https://claude.ai/chat/c48c3c3a-d1a9-4c33-b88b-63dd586bb6f2#sec-context)
-3. [AMTAIR: Design and Implementation](https://claude.ai/chat/c48c3c3a-d1a9-4c33-b88b-63dd586bb6f2#sec-amtair)
-4. [Discussion: Implications and Limitations](https://claude.ai/chat/c48c3c3a-d1a9-4c33-b88b-63dd586bb6f2#sec-discussion)
-5. [Conclusion: Toward Coordinated AI Governance](https://claude.ai/chat/c48c3c3a-d1a9-4c33-b88b-63dd586bb6f2#sec-conclusion)
-6. [References](https://claude.ai/chat/c48c3c3a-d1a9-4c33-b88b-63dd586bb6f2#sec-references)
-7. [Appendices](https://claude.ai/chat/c48c3c3a-d1a9-4c33-b88b-63dd586bb6f2#sec-appendices)
 
 # Abstract {#sec-abstract .unnumbered}
 

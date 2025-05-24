@@ -7,8 +7,7 @@ numbering:
 ---
 
 # Context & Background {#sec-context}
-
-```         
+::: callout-note
 ### 20% of Grade: ~ 29% of text ~ 8700 words ~ 20 pages
 
 - demonstrates understanding of all relevant core concepts
@@ -20,7 +19,9 @@ numbering:
 - reconstructs selected arguments and identifies relevant assumptions
 
 - describes additional relevant material that has been consulted and integrates it with the course material as well as the research question/thesis/problem
-```
+
+:::
+
 
 ```{=html}
 <!-- 1. successively (chunk my chunk) introduce concepts/ideas ---
