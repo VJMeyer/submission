@@ -54,3 +54,47 @@
 
 
 <!-- [ ] Task_Syntax -->
+
+
+## .Qmd Embed Python Syntax
+
+
+
+```{python}
+#| echo: true
+#| eval: true
+#| label: fig-extraction-pipeline
+#| fig-cap: "AMTAIR extraction pipeline visualization"
+#| fig-link: "https://colab.research.google.com/drive/your-notebook-id"
+#| fig-alt: "Detailed description for accessibility"
+
+import pandas as pd
+print("AMTAIR is working!")
+```
+
+
+
+## Reference or Embed Code from .ipynb files
+
+#### Code chunks from .ipynb notebooks can be embedded in the .qmd text with:
+
+``` markdown
+{{< embed /AMTAIR_Prototype/data/example_carlsmith/AMTAIR_Prototype_example_carlsmith.ipynb#my_code_cell_test >}}
+```
+
+#### which produces the output of executing the code cell:
+
+{{< embed /AMTAIR_Prototype/data/example_carlsmith/AMTAIR_Prototype_example_carlsmith.ipynb#my_code_cell_test >}}
+
+#### including 'echo=true' renders the code of the cell:
+
+``` markdown
+{{< embed /AMTAIR_Prototype/data/example_carlsmith/AMTAIR_Prototype_example_carlsmith.ipynb#my_code_cell_test echo=true >}}
+```
+
+{{< embed /AMTAIR_Prototype/data/example_carlsmith/AMTAIR_Prototype_example_carlsmith.ipynb#my_code_cell_test echo=true >}}
+
+Link:
+
+Full Notebooks are embedded in the Appendix through the \_quarto.yml file with:
+
