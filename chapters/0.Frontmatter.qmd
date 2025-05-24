@@ -279,6 +279,15 @@ Mark and remove completed tasks from ToDo-Tree by adding a minus in the brackets
 
 `<!-- [ ] VERIFY: @CITATION_KEY_SUGGESTED: "Description of the appropriate paper, book, source" [Include BibTex if known] -->`
 
+#### Missing Graphic
+
+`<!-- [ ] FIND: {#fig-GRAPHIC_IDEA}]: "Description of the appropriate/idea source, including ideas /suggestions / search terms etc." -->`
+
+#### Suggested Graphic
+
+`<!-- [ ] VERIFY: {#fig-GRAPHIC_IDEA}: "Description of the appropriate paper, book, source" [Include figure syntax if known] -->`
+
+Missing and/or suggested tables, concepts, explanations as well as other elements should be suggested similarily.
 
 ### Examples
 
