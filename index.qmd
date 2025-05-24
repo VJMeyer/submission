@@ -1,5 +1,5 @@
 ---
-# title: "index"
+# title: "Index"
 # Control if this file starts numbering
 numbering:
   start-at: 0      # Start at Section 1
@@ -21,6 +21,10 @@ numbering:
 `<!-- [ ] ToDos for things to do / tasks / reminders (allows "jump to with Taks Tree extension") -->`
 
 <!-- [ ] ToDos for things to do / tasks / reminders (allows "jump to with Taks Tree extension") -->
+
+`<!-- [-] Tasks which have been finished but should remain for later verification -->`
+<!-- [-] Tasks which have been finished but should remain for later verification -->
+
 
 ### Verbatim Code Formatting
 
@@ -59,6 +63,7 @@ Add a language to syntax highlight code blocks:
 |   12  |  12  |    12   |    12  |
 |  123  |  123 |   123   |   123  |
 |    1  |    1 |     1   |     1  |
+: Demonstration of pipe table syntax {#tbl-letters}
 
 | Col1 | Col2 | Col3 |
 |------|------|------|
@@ -66,17 +71,77 @@ Add a language to syntax highlight code blocks:
 | E    | F    | G    |
 | A    | G    | G    |
 
-: My Caption {#tbl-letters}
+: My Caption 1 {#tbl-letters}
 
-See @tbl-letters.
+Referencing tables with `@tbl-KEY`: See @tbl-letters.
 
 
+::: {#tbl-panel layout-ncol=2}
+| Col1 | Col2 | Col3 |
+|------|------|------|
+| A    | B    | C    |
+| E    | F    | G    |
+| A    | G    | G    |
+
+: First Table {#tbl-first}
+
+| Col1 | Col2 | Col3 |
+|------|------|------|
+| A    | B    | C    |
+| E    | F    | G    |
+| A    | G    | G    |
+
+: Second Table {#tbl-second}
+
+Main Caption
+:::
+
+See @tbl-panel for details, especially @tbl-second.
+
+
+```markdown
+python
+#| label: tbl-planets
+#| tbl-cap: Astronomical object
+
+from IPython.display import Markdown
+from tabulate import tabulate
+table = [["Sun","696,000",1.989e30],
+         ["Earth","6,371",5.972e24],
+         ["Moon","1,737",7.34e22],
+         ["Mars","3,390",6.39e23]]
+Markdown(tabulate(
+  table, 
+  headers=["Astronomical object","R (km)", "mass (kg)"]
+))
+```
+
++-----------+-----------+--------------------+
+| Fruit     | Price     | Advantages         |
++===========+===========+====================+
+| Bananas   | $1.34     | - built-in wrapper |
+|           |           | - bright color     |
++-----------+-----------+--------------------+
+| Oranges   | $2.10     | - cures scurvy     |
+|           |           | - tasty            |
++-----------+-----------+--------------------+
+
+: Sample grid table.
+
+::: {html-table-processing="none"}
+
+Content with HTML tables you don't want processed.
+
+:::
 
 ## Headings & Potential Headings in Standard Markdown formatting ('\##') {#sec-heading}
 
 ### Heading 3
 
 #### Heading 4
+
+<!-- Using Headings deeper than 4 requires some LaTeX fix -->
+<!-- [ ] Enable Headings 5 & 6 -->
 
 <!-- ##### Heading 5 -->
 
@@ -402,13 +467,111 @@ Emphasize both technical contributions and policy relevance. -->
 
 `The AMTAIR system implements an end-to-end pipeline that transforms unstructured text into interactive Bayesian networks through a novel two-stage extraction process: first capturing argument structure in ArgDown format, then enhancing it with probability information in BayesDown. This approach bridges communication gaps between stakeholders by making implicit models explicit, enabling comparison across different worldviews, providing a common language for discussing probabilistic relationships, and supporting policy evaluation across diverse scenarios.`
 
-<!-- [ ] Add key quantitative results and validation findings -->
+<!-- [ ] Add key quantitative results and validation findings to Abstract-->
 
-<!-- [ ] Implement a "jump to ToC" functionality (also in PDF) -->
+
+
+
+
+
+# Prefatory Apparatus: Frontmatter {.unnumbered}
+
+
+
+## Illustrations and Terminology --- Quick References{.unnumbered}
+
+
+### **Acknowledgments**
+
+* Academic supervisor (Prof. Timo Speith) and institution (University of Bayreuth)  
+* Research collaborators, especially those connected to the original MTAIR project  
+* Technical advisors who provided feedback on implementation aspects   
+* Personal supporters who enabled the research through encouragement and feedback
+
+
+<!-- [ ] Ensure List of Tables is up-to-date -->
+
+
+
+
+
+
+## List of Graphics & Figures{.unnumbered}
+
+<!-- [ ] Replace Placeholder List of Graphics & Figures with native Quarto LoF -->
+<!-- [ ] Populate List of Graphics & Figures with ALL figures from thesis -->
+
+
+* Figure 1.1: The coordination crisis in AI governance \- visualization of fragmentation  
+* Figure 2.1: The Carlsmith model \- DAG representation  
+* Figure 3.1: Research design overview \- workflow diagram  
+* Figure 3.2: From natural language to BayesDown \- transformation process  
+* Figure 4.1: ARPA system architecture \- component diagram  
+* Figure 4.2: Visualization of Rain-Sprinkler-Grass\_Wet Bayesian network \- screenshot  
+* Figure 5.1: Extraction quality metrics \- comparative chart  
+* Figure 5.2: Comparative analysis of AI governance worldviews \- network visualization  
+
+
+
+## List of Abbreviations{.unnumbered}
+
+<!-- [ ] Replace Placeholder List of Abbreviations with native Quarto Glossary -->
+<!-- [ ] Populate List of Abbreviations with ALL terms from thesis -->
+
+esp.		especially
+
+f., ff.		following
+
+incl.		including
+
+p., pp.		page(s)
+
+MAD		Mutually Assured Destruction
+
+* AI \- Artificial Intelligence  
+* AGI \- Artificial General Intelligence  
+* ARPA \- AI Risk Pathway Analyzer  
+* DAG \- Directed Acyclic Graph  
+* LLM \- Large Language Model  
+* MTAIR \- Modeling Transformative AI Risks  
+* P(Doom) \- Probability of existential catastrophe from misaligned AI  
+* CPT \- Conditional Probability Table
+
+
+
+
+
+## Glossary {.unnumbered .unlisted} 
+
+<!-- [ ] Replace Placeholder Glossary with native Quarto Glossary -->
+<!-- [ ] Populate Glossary with ALL terms from thesis -->
+
+* **Argument mapping**: A method for visually representing the structure of arguments  
+* **BayesDown**: An extension of ArgDown that incorporates probabilistic information  
+* **Bayesian network**: A probabilistic graphical model representing variables and their dependencies  
+* **Conditional probability**: The probability of an event given that another event has occurred  
+* **Directed Acyclic Graph (DAG)**: A graph with directed edges and no cycles  
+* **Existential risk**: Risk of permanent curtailment of humanity's potential  
+* **Power-seeking AI**: AI systems with instrumental incentives to acquire resources and power  
+* **Prediction market**: A market where participants trade contracts that resolve based on future events  
+* **d-separation**: A criterion for identifying conditional independence relationships in Bayesian networks  
+* **Monte Carlo sampling**: A computational technique using random sampling to obtain numerical results
+
+
+
+
+
+
+
 
 <!-- {{< include chapters/Outlining-Workflow.md >}} -->
 
 <!-- \listoffigures -->
+
+
+
+
+
 
 ### Quarto Features Previously Incompatible with LaTeX (Below) {.unnumbered .unlisted}
 

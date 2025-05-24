@@ -14,7 +14,7 @@
     "href": "index.html#main-formatting",
     "title": "Automating the Modelling of Transformative Artificial Intelligence Risks",
     "section": "Main Formatting",
-    "text": "Main Formatting\n\nHtml Comments\n\n\n\nTasks with ToDo Tree\n&lt;!-- [ ] ToDos for things to do / tasks / reminders (allows \"jump to with Taks Tree extension\") --&gt;\n\n\n\nVerbatim Code Formatting\nverbatim code formatting for notes and ideas to be included (here)\n\n\nCode Block formatting\nAlso code blocks for more extensive notes and ideas to be included and checklists\n- test 1. \n- test 2. \n- test 3.\n2. second\n3. third\ncode\nAdd a language to syntax highlight code blocks:\n1 + 1\n\n\nBlockquote Formatting\n\nBlockquote formatting for “Suggested Citations (e.g. carlsmith 2024 on …)” and/or claims which require a citation (e.g. claim x should be backed-up by a ciation from the literature)\n\n\n\nTables\n\n\n\nRight\nLeft\nDefault\nCenter\n\n\n\n\n12\n12\n12\n12\n\n\n123\n123\n123\n123\n\n\n1\n1\n1\n1\n\n\n\n\n\n\nTable 1.1: My Caption\n\n\n\n\n\nCol1\nCol2\nCol3\n\n\n\n\nA\nB\nC\n\n\nE\nF\nG\n\n\nA\nG\nG\n\n\n\n\n\n\nSee Table 1.1.",
+    "text": "Main Formatting\n\nHtml Comments\n\n\n\nTasks with ToDo Tree\n&lt;!-- [ ] ToDos for things to do / tasks / reminders (allows \"jump to with Taks Tree extension\") --&gt;\n\n\n\nVerbatim Code Formatting\nverbatim code formatting for notes and ideas to be included (here)\n\n\nCode Block formatting\nAlso code blocks for more extensive notes and ideas to be included and checklists\n- test 1. \n- test 2. \n- test 3.\n2. second\n3. third\ncode\nAdd a language to syntax highlight code blocks:\n1 + 1\n\n\nBlockquote Formatting\n\nBlockquote formatting for “Suggested Citations (e.g. carlsmith 2024 on …)” and/or claims which require a citation (e.g. claim x should be backed-up by a ciation from the literature)\n\n\n\nTables\n\n\n\nTable 1.1: Demonstration of pipe table syntax\n\n\n\n\n\nRight\nLeft\nDefault\nCenter\n\n\n\n\n12\n12\n12\n12\n\n\n123\n123\n123\n123\n\n\n1\n1\n1\n1\n\n\n\n\n\n\n\n\n\nTable 1.2: My Caption 1\n\n\n\n\n\nCol1\nCol2\nCol3\n\n\n\n\nA\nB\nC\n\n\nE\nF\nG\n\n\nA\nG\nG\n\n\n\n\n\n\nReferencing tables with @tbl-KEY: See Table 1.2.\n\n\n\nTable 1.3: Main Caption\n\n\n\n\n\n\n\n(a) First Table\n\n\n\n\n\nCol1\nCol2\nCol3\n\n\n\n\nA\nB\nC\n\n\nE\nF\nG\n\n\nA\nG\nG\n\n\n\n\n\n\n\n\n\n\n\n(b) Second Table\n\n\n\n\n\nCol1\nCol2\nCol3\n\n\n\n\nA\nB\nC\n\n\nE\nF\nG\n\n\nA\nG\nG\n\n\n\n\n\n\n\n\n\n\n\nSee Table 1.3 for details, especially Table 1.3 (b).\npython\n#| label: tbl-planets\n#| tbl-cap: Astronomical object\n\nfrom IPython.display import Markdown\nfrom tabulate import tabulate\ntable = [[\"Sun\",\"696,000\",1.989e30],\n         [\"Earth\",\"6,371\",5.972e24],\n         [\"Moon\",\"1,737\",7.34e22],\n         [\"Mars\",\"3,390\",6.39e23]]\nMarkdown(tabulate(\n  table, \n  headers=[\"Astronomical object\",\"R (km)\", \"mass (kg)\"]\n))\n\nSample grid table.\n\n\n\n\n\n\n\nFruit\nPrice\nAdvantages\n\n\n\n\nBananas\n$1.34\n\nbuilt-in wrapper\nbright color\n\n\n\nOranges\n$2.10\n\ncures scurvy\ntasty\n\n\n\n\nContent with HTML tables you don’t want processed.",
     "crumbs": [
       "Preface"
     ]
@@ -34,7 +34,7 @@
     "href": "index.html#text-formatting-options",
     "title": "Automating the Modelling of Transformative Artificial Intelligence Risks",
     "section": "Text Formatting Options",
-    "text": "Text Formatting Options\nitalics, bold, bold italics\nsuperscript2 / subscript2\nstrikethrough\nThis text is highlighted\nThis text is underlined\nThis text is smallcaps",
+    "text": "Text Formatting Options\nitalics, bold, bold italics\nsuperscript2 and subscript2\nstrikethrough\nThis text is highlighted\nThis text is underlined\nThis text is smallcaps",
     "crumbs": [
       "Preface"
     ]
@@ -170,6 +170,46 @@
     ]
   },
   {
+    "objectID": "index.html#illustrations-and-terminology-quick-references",
+    "href": "index.html#illustrations-and-terminology-quick-references",
+    "title": "Automating the Modelling of Transformative Artificial Intelligence Risks",
+    "section": "Illustrations and Terminology — Quick References",
+    "text": "Illustrations and Terminology — Quick References\n\nAcknowledgments\n\nAcademic supervisor (Prof. Timo Speith) and institution (University of Bayreuth)\n\nResearch collaborators, especially those connected to the original MTAIR project\n\nTechnical advisors who provided feedback on implementation aspects\n\nPersonal supporters who enabled the research through encouragement and feedback",
+    "crumbs": [
+      "Preface"
+    ]
+  },
+  {
+    "objectID": "index.html#list-of-graphics-figures",
+    "href": "index.html#list-of-graphics-figures",
+    "title": "Automating the Modelling of Transformative Artificial Intelligence Risks",
+    "section": "List of Graphics & Figures",
+    "text": "List of Graphics & Figures\n\n\n\nFigure 1.1: The coordination crisis in AI governance - visualization of fragmentation\n\nFigure 2.1: The Carlsmith model - DAG representation\n\nFigure 3.1: Research design overview - workflow diagram\n\nFigure 3.2: From natural language to BayesDown - transformation process\n\nFigure 4.1: ARPA system architecture - component diagram\n\nFigure 4.2: Visualization of Rain-Sprinkler-Grass_Wet Bayesian network - screenshot\n\nFigure 5.1: Extraction quality metrics - comparative chart\n\nFigure 5.2: Comparative analysis of AI governance worldviews - network visualization",
+    "crumbs": [
+      "Preface"
+    ]
+  },
+  {
+    "objectID": "index.html#list-of-abbreviations",
+    "href": "index.html#list-of-abbreviations",
+    "title": "Automating the Modelling of Transformative Artificial Intelligence Risks",
+    "section": "List of Abbreviations",
+    "text": "List of Abbreviations\n\n\nesp. especially\nf., ff. following\nincl. including\np., pp. page(s)\nMAD Mutually Assured Destruction\n\nAI - Artificial Intelligence\n\nAGI - Artificial General Intelligence\n\nARPA - AI Risk Pathway Analyzer\n\nDAG - Directed Acyclic Graph\n\nLLM - Large Language Model\n\nMTAIR - Modeling Transformative AI Risks\n\nP(Doom) - Probability of existential catastrophe from misaligned AI\n\nCPT - Conditional Probability Table",
+    "crumbs": [
+      "Preface"
+    ]
+  },
+  {
+    "objectID": "index.html#glossary",
+    "href": "index.html#glossary",
+    "title": "Automating the Modelling of Transformative Artificial Intelligence Risks",
+    "section": "Glossary",
+    "text": "Glossary\n\n\n\nArgument mapping: A method for visually representing the structure of arguments\n\nBayesDown: An extension of ArgDown that incorporates probabilistic information\n\nBayesian network: A probabilistic graphical model representing variables and their dependencies\n\nConditional probability: The probability of an event given that another event has occurred\n\nDirected Acyclic Graph (DAG): A graph with directed edges and no cycles\n\nExistential risk: Risk of permanent curtailment of humanity’s potential\n\nPower-seeking AI: AI systems with instrumental incentives to acquire resources and power\n\nPrediction market: A market where participants trade contracts that resolve based on future events\n\nd-separation: A criterion for identifying conditional independence relationships in Bayesian networks\n\nMonte Carlo sampling: A computational technique using random sampling to obtain numerical results\n\n\n\n\nQuarto Features Previously Incompatible with LaTeX (Below)\n\n\n\n\n\n\n\n\n\nGrowiec, Jakub. 2024. “Existential Risk from Transformative AI: An Economic Perspective.” Technological and Economic Development of Economy, 1–27.\n\n\nKnuth, Donald E. 1984. “Literate Programming.” Computer Journal 27 (2): 97–111. https://doi.org/10.1093/comjnl/27.2.97.\n\n\nSoares, Nate, and Benja Fallenstein. 2014. “Aligning Superintelligence with Human Interests: A Technical Research Agenda.”",
+    "crumbs": [
+      "Preface"
+    ]
+  },
+  {
     "objectID": "chapters/0.Frontmatter.html",
     "href": "chapters/0.Frontmatter.html",
     "title": "1  Remaining Edits",
@@ -255,56 +295,6 @@
     "title": "1  Remaining Edits",
     "section": "1.8 (Format:) ~ Anything that makes it easier to understand",
     "text": "1.8 (Format:) ~ Anything that makes it easier to understand\n\nshort sentences\n\nparagraphs (one idea per paragraph)\n\nsimplicity\n\n!limit use of passive voice!\n\nuse active voice, even prefer I over we!\n\nminimise use of “zombi nouns” (don’t turn verbs/adjectives to nouns!)\n\n“find words that can be cut”\n\n– the paper can focus on one aspect of the presentation\n– “open door policy” for (content) questions\n~ demonstrate ability for novel research\n– “solve research question with the tools accessible to you”\n– “show something that has not been shown before / should be publishable in principle”\n– new idea (or criticism) “in this field”\n– Outline idea THEN reading with a purpose (answering concrete questions)\n– “Only” confirm that nobody has published the exact same idea on the same topic\n– pretty much determined by presentation & proposal but narrow down further (& choose supervisor?)",
-    "crumbs": [
-      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Remaining Edits</span>"
-    ]
-  },
-  {
-    "objectID": "chapters/0.Frontmatter.html#illustrations-and-terminology-quick-references",
-    "href": "chapters/0.Frontmatter.html#illustrations-and-terminology-quick-references",
-    "title": "1  Remaining Edits",
-    "section": "Illustrations and Terminology — Quick References",
-    "text": "Illustrations and Terminology — Quick References\n\n1.8.1 Acknowledgments\n\nAcademic supervisor (Prof. Timo Speith) and institution (University of Bayreuth)\n\nResearch collaborators, especially those connected to the original MTAIR project\n\nTechnical advisors who provided feedback on implementation aspects\n\nFunding sources and those who provided computational resources or API access\n\nPersonal supporters who enabled the research through encouragement and feedback",
-    "crumbs": [
-      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Remaining Edits</span>"
-    ]
-  },
-  {
-    "objectID": "chapters/0.Frontmatter.html#list-of-tables",
-    "href": "chapters/0.Frontmatter.html#list-of-tables",
-    "title": "1  Remaining Edits",
-    "section": "List of Tables",
-    "text": "List of Tables\nTable 1: Table name\nTable 2: Table name\nTable 3: Table name\n\nFigure 1.1: The coordination crisis in AI governance - visualization of fragmentation\n\nFigure 2.1: The Carlsmith model - DAG representation\n\nFigure 3.1: Research design overview - workflow diagram\n\nFigure 3.2: From natural language to BayesDown - transformation process\n\nFigure 4.1: ARPA system architecture - component diagram\n\nFigure 4.2: Visualization of Rain-Sprinkler-Grass_Wet Bayesian network - screenshot\n\nFigure 5.1: Extraction quality metrics - comparative chart\n\nFigure 5.2: Comparative analysis of AI governance worldviews - network visualization\n\nTable 2.1: Comparison of approaches to AI risk modeling\n\nTable 3.1: Probabilistic translation guide for qualitative expressions\n\nTable 4.1: System component responsibilities and interactions\n\nTable 5.1: Policy impact evaluation results - summary metrics",
-    "crumbs": [
-      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Remaining Edits</span>"
-    ]
-  },
-  {
-    "objectID": "chapters/0.Frontmatter.html#list-of-graphics-figures",
-    "href": "chapters/0.Frontmatter.html#list-of-graphics-figures",
-    "title": "1  Remaining Edits",
-    "section": "List of Graphics & Figures",
-    "text": "List of Graphics & Figures",
-    "crumbs": [
-      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Remaining Edits</span>"
-    ]
-  },
-  {
-    "objectID": "chapters/0.Frontmatter.html#list-of-abbreviations",
-    "href": "chapters/0.Frontmatter.html#list-of-abbreviations",
-    "title": "1  Remaining Edits",
-    "section": "List of Abbreviations",
-    "text": "List of Abbreviations\nesp. especially\nf., ff. following\nincl. including\np., pp. page(s)\nMAD Mutually Assured Destruction\n\nAI - Artificial Intelligence\n\nAGI - Artificial General Intelligence\n\nARPA - AI Risk Pathway Analyzer\n\nDAG - Directed Acyclic Graph\n\nLLM - Large Language Model\n\nMTAIR - Modeling Transformative AI Risks\n\nP(Doom) - Probability of existential catastrophe from misaligned AI\n\nCPT - Conditional Probability Table",
-    "crumbs": [
-      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Remaining Edits</span>"
-    ]
-  },
-  {
-    "objectID": "chapters/0.Frontmatter.html#glossary",
-    "href": "chapters/0.Frontmatter.html#glossary",
-    "title": "1  Remaining Edits",
-    "section": "Glossary",
-    "text": "Glossary\n\nArgument mapping: A method for visually representing the structure of arguments\n\nBayesDown: An extension of ArgDown that incorporates probabilistic information\n\nBayesian network: A probabilistic graphical model representing variables and their dependencies\n\nConditional probability: The probability of an event given that another event has occurred\n\nDirected Acyclic Graph (DAG): A graph with directed edges and no cycles\n\nExistential risk: Risk of permanent curtailment of humanity’s potential\n\nPower-seeking AI: AI systems with instrumental incentives to acquire resources and power\n\nPrediction market: A market where participants trade contracts that resolve based on future events\n\nd-separation: A criterion for identifying conditional independence relationships in Bayesian networks\n\nMonte Carlo sampling: A computational technique using random sampling to obtain numerical results",
     "crumbs": [
       "<span class='chapter-number'>1</span>  <span class='chapter-title'>Remaining Edits</span>"
     ]
