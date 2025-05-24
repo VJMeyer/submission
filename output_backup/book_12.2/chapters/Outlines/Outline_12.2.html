@@ -1,0 +1,2544 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.7.29">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>Preface – Automating the Modelling of Transformative Artificial Intelligence Risks</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+/* CSS for citations */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+}
+.hanging-indent div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}</style>
+
+
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../">
+<link href="../../index.html" rel="prev">
+<script src="../../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-0815c480559380816a4d1ea211a47e91.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap-485d01fc63b59abcd3ee1bf1e8e2748d.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "sidebar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "start",
+  "type": "textbox",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN") {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
+
+</head>
+
+<body class="nav-sidebar floating quarto-light">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../chapters/Outlines/Outline_12.2.html">Preface</a></li></ol></nav>
+        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        </a>
+      <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
+        <i class="bi bi-search"></i>
+      </button>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
+    <div class="pt-lg-2 mt-2 text-left sidebar-header">
+    <div class="sidebar-title mb-0 py-0">
+      <a href="../../">Automating the Modelling of Transformative Artificial Intelligence Risks</a> 
+        <div class="sidebar-tools-main tools-wide">
+    <a href="https://github.com/VJMeyer/submission" title="Source Code" class="quarto-navigation-tool px-1" aria-label="Source Code"><i class="bi bi-github"></i></a>
+    <div class="dropdown">
+      <a href="" title="Download" id="quarto-navigation-tool-dropdown-0" class="quarto-navigation-tool dropdown-toggle px-1" data-bs-toggle="dropdown" aria-expanded="false" role="link" aria-label="Download"><i class="bi bi-download"></i></a>
+      <ul class="dropdown-menu" aria-labelledby="quarto-navigation-tool-dropdown-0">
+          <li>
+            <a class="dropdown-item sidebar-tools-main-item" href="../../Automating-the-Modelling-of-Transformative-Artificial-Intelligence-Risks.pdf">
+              <i class="bi bi-file-pdf pe-1"></i>
+            Download PDF
+            </a>
+          </li>
+          <li>
+            <a class="dropdown-item sidebar-tools-main-item" href="../../Automating-the-Modelling-of-Transformative-Artificial-Intelligence-Risks.epub">
+              <i class="bi bi-journal pe-1"></i>
+            Download ePub
+            </a>
+          </li>
+      </ul>
+    </div>
+    <div class="dropdown">
+      <a href="" title="Share" id="quarto-navigation-tool-dropdown-1" class="quarto-navigation-tool dropdown-toggle px-1" data-bs-toggle="dropdown" aria-expanded="false" role="link" aria-label="Share"><i class="bi bi-share"></i></a>
+      <ul class="dropdown-menu" aria-labelledby="quarto-navigation-tool-dropdown-1">
+          <li>
+            <a class="dropdown-item sidebar-tools-main-item" href="https://twitter.com/intent/tweet?url=|url|">
+              <i class="bi bi-twitter pe-1"></i>
+            Twitter
+            </a>
+          </li>
+          <li>
+            <a class="dropdown-item sidebar-tools-main-item" href="https://www.facebook.com/sharer/sharer.php?u=|url|">
+              <i class="bi bi-facebook pe-1"></i>
+            Facebook
+            </a>
+          </li>
+      </ul>
+    </div>
+</div>
+    </div>
+      </div>
+        <div class="mt-2 flex-shrink-0 align-items-center">
+        <div class="sidebar-search">
+        <div id="quarto-search" class="" title="Search"></div>
+        </div>
+        </div>
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Preface</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../chapters/Outlines/Outline_12.2.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text">Preface</span></a>
+  </div>
+</li>
+    </ul>
+    </div>
+</nav>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Table of contents</h2>
+   
+  <ul>
+  <li><a href="#acknowledgments" id="toc-acknowledgments" class="nav-link active" data-scroll-target="#acknowledgments">Acknowledgments</a></li>
+  <li><a href="#table-of-contents" id="toc-table-of-contents" class="nav-link" data-scroll-target="#table-of-contents">Table of Contents</a></li>
+  <li><a href="#sec-abstract" id="toc-sec-abstract" class="nav-link" data-scroll-target="#sec-abstract">Abstract</a></li>
+  <li><a href="#list-of-figures" id="toc-list-of-figures" class="nav-link" data-scroll-target="#list-of-figures">List of Figures</a></li>
+  <li><a href="#list-of-tables" id="toc-list-of-tables" class="nav-link" data-scroll-target="#list-of-tables">List of Tables</a></li>
+  <li><a href="#list-of-abbreviations" id="toc-list-of-abbreviations" class="nav-link" data-scroll-target="#list-of-abbreviations">List of Abbreviations</a></li>
+  <li><a href="#sec-introduction" id="toc-sec-introduction" class="nav-link" data-scroll-target="#sec-introduction">1. Introduction: The Coordination Crisis in AI Governance</a>
+  <ul>
+  <li><a href="#sec-opening-scenario" id="toc-sec-opening-scenario" class="nav-link" data-scroll-target="#sec-opening-scenario">1.1 Opening Scenario: The Policymaker’s Dilemma</a></li>
+  <li><a href="#sec-coordination-crisis" id="toc-sec-coordination-crisis" class="nav-link" data-scroll-target="#sec-coordination-crisis">1.2 The Coordination Crisis in AI Governance</a>
+  <ul>
+  <li><a href="#sec-safety-gaps" id="toc-sec-safety-gaps" class="nav-link" data-scroll-target="#sec-safety-gaps">1.2.1 Safety Gaps from Misaligned Efforts</a></li>
+  <li><a href="#sec-resource-misallocation" id="toc-sec-resource-misallocation" class="nav-link" data-scroll-target="#sec-resource-misallocation">1.2.2 Resource Misallocation</a></li>
+  <li><a href="#sec-negative-sum" id="toc-sec-negative-sum" class="nav-link" data-scroll-target="#sec-negative-sum">1.2.3 Negative-Sum Dynamics</a></li>
+  </ul></li>
+  <li><a href="#sec-historical-urgency" id="toc-sec-historical-urgency" class="nav-link" data-scroll-target="#sec-historical-urgency">1.3 Historical Parallels and Temporal Urgency</a></li>
+  <li><a href="#sec-research-question" id="toc-sec-research-question" class="nav-link" data-scroll-target="#sec-research-question">1.4 Research Question and Scope</a></li>
+  <li><a href="#sec-multiplicative-benefits" id="toc-sec-multiplicative-benefits" class="nav-link" data-scroll-target="#sec-multiplicative-benefits">1.5 The Multiplicative Benefits Framework</a>
+  <ul>
+  <li><a href="#sec-automated-extraction" id="toc-sec-automated-extraction" class="nav-link" data-scroll-target="#sec-automated-extraction">1.5.1 Automated Worldview Extraction</a></li>
+  <li><a href="#sec-live-data" id="toc-sec-live-data" class="nav-link" data-scroll-target="#sec-live-data">1.5.2 Live Data Integration</a></li>
+  <li><a href="#sec-policy-evaluation" id="toc-sec-policy-evaluation" class="nav-link" data-scroll-target="#sec-policy-evaluation">1.5.3 Formal Policy Evaluation</a></li>
+  <li><a href="#sec-synergy" id="toc-sec-synergy" class="nav-link" data-scroll-target="#sec-synergy">1.5.4 The Synergy</a></li>
+  </ul></li>
+  <li><a href="#sec-roadmap" id="toc-sec-roadmap" class="nav-link" data-scroll-target="#sec-roadmap">1.6 Thesis Structure and Roadmap</a></li>
+  </ul></li>
+  <li><a href="#sec-context" id="toc-sec-context" class="nav-link" data-scroll-target="#sec-context">2. Context and Theoretical Foundations</a>
+  <ul>
+  <li><a href="#sec-carlsmith-model" id="toc-sec-carlsmith-model" class="nav-link" data-scroll-target="#sec-carlsmith-model">2.1 AI Existential Risk: The Carlsmith Model</a>
+  <ul>
+  <li><a href="#sec-six-premise" id="toc-sec-six-premise" class="nav-link" data-scroll-target="#sec-six-premise">2.1.1 Six-Premise Decomposition</a></li>
+  <li><a href="#sec-carlsmith-formalizable" id="toc-sec-carlsmith-formalizable" class="nav-link" data-scroll-target="#sec-carlsmith-formalizable">2.1.2 Why Carlsmith Exemplifies Formalizable Arguments</a></li>
+  </ul></li>
+  <li><a href="#sec-epistemic-challenge" id="toc-sec-epistemic-challenge" class="nav-link" data-scroll-target="#sec-epistemic-challenge">2.2 The Epistemic Challenge of Policy Evaluation</a>
+  <ul>
+  <li><a href="#sec-ai-governance-unique" id="toc-sec-ai-governance-unique" class="nav-link" data-scroll-target="#sec-ai-governance-unique">2.2.1 Unique Characteristics of AI Governance</a></li>
+  <li><a href="#sec-traditional-limitations" id="toc-sec-traditional-limitations" class="nav-link" data-scroll-target="#sec-traditional-limitations">2.2.2 Limitations of Traditional Approaches</a></li>
+  </ul></li>
+  <li><a href="#sec-bayesian-networks" id="toc-sec-bayesian-networks" class="nav-link" data-scroll-target="#sec-bayesian-networks">2.3 Bayesian Networks as Knowledge Representation</a>
+  <ul>
+  <li><a href="#sec-mathematical-foundations" id="toc-sec-mathematical-foundations" class="nav-link" data-scroll-target="#sec-mathematical-foundations">2.3.1 Mathematical Foundations</a></li>
+  <li><a href="#sec-rain-sprinkler-example" id="toc-sec-rain-sprinkler-example" class="nav-link" data-scroll-target="#sec-rain-sprinkler-example">2.3.2 The Rain-Sprinkler-Grass Example</a></li>
+  <li><a href="#sec-modeling-advantages" id="toc-sec-modeling-advantages" class="nav-link" data-scroll-target="#sec-modeling-advantages">2.3.3 Advantages for AI Risk Modeling</a></li>
+  </ul></li>
+  <li><a href="#sec-argument-mapping" id="toc-sec-argument-mapping" class="nav-link" data-scroll-target="#sec-argument-mapping">2.4 Argument Mapping and Formal Representations</a>
+  <ul>
+  <li><a href="#sec-natural-to-structure" id="toc-sec-natural-to-structure" class="nav-link" data-scroll-target="#sec-natural-to-structure">2.4.1 From Natural Language to Structure</a></li>
+  <li><a href="#sec-argdown-notation" id="toc-sec-argdown-notation" class="nav-link" data-scroll-target="#sec-argdown-notation">2.4.2 ArgDown: Structured Argument Notation</a></li>
+  <li><a href="#sec-bayesdown" id="toc-sec-bayesdown" class="nav-link" data-scroll-target="#sec-bayesdown">2.4.3 BayesDown: The Bridge to Bayesian Networks</a></li>
+  </ul></li>
+  <li><a href="#sec-mtair-framework" id="toc-sec-mtair-framework" class="nav-link" data-scroll-target="#sec-mtair-framework">2.5 The MTAIR Framework: Achievements and Limitations</a>
+  <ul>
+  <li><a href="#sec-mtair-approach" id="toc-sec-mtair-approach" class="nav-link" data-scroll-target="#sec-mtair-approach">2.5.1 MTAIR’s Approach</a></li>
+  <li><a href="#sec-mtair-achievements" id="toc-sec-mtair-achievements" class="nav-link" data-scroll-target="#sec-mtair-achievements">2.5.2 Key Achievements</a></li>
+  <li><a href="#sec-mtair-limitations" id="toc-sec-mtair-limitations" class="nav-link" data-scroll-target="#sec-mtair-limitations">2.5.3 Fundamental Limitations</a></li>
+  <li><a href="#sec-automation-opportunity" id="toc-sec-automation-opportunity" class="nav-link" data-scroll-target="#sec-automation-opportunity">2.5.4 The Automation Opportunity</a></li>
+  </ul></li>
+  <li><a href="#sec-coordination-requirements" id="toc-sec-coordination-requirements" class="nav-link" data-scroll-target="#sec-coordination-requirements">2.6 Requirements for Coordination Infrastructure</a>
+  <ul>
+  <li><a href="#sec-scalability-req" id="toc-sec-scalability-req" class="nav-link" data-scroll-target="#sec-scalability-req">2.6.1 Scalability</a></li>
+  <li><a href="#sec-accessibility-req" id="toc-sec-accessibility-req" class="nav-link" data-scroll-target="#sec-accessibility-req">2.6.2 Accessibility</a></li>
+  <li><a href="#sec-epistemic-virtues" id="toc-sec-epistemic-virtues" class="nav-link" data-scroll-target="#sec-epistemic-virtues">2.6.3 Epistemic Virtues</a></li>
+  <li><a href="#sec-integration-req" id="toc-sec-integration-req" class="nav-link" data-scroll-target="#sec-integration-req">2.6.4 Integration Capabilities</a></li>
+  <li><a href="#sec-robustness-req" id="toc-sec-robustness-req" class="nav-link" data-scroll-target="#sec-robustness-req">2.6.5 Robustness Properties</a></li>
+  </ul></li>
+  </ul></li>
+  <li><a href="#sec-amtair" id="toc-sec-amtair" class="nav-link" data-scroll-target="#sec-amtair">3. AMTAIR: Design and Implementation</a>
+  <ul>
+  <li><a href="#sec-system-architecture" id="toc-sec-system-architecture" class="nav-link" data-scroll-target="#sec-system-architecture">3.1 System Architecture Overview</a>
+  <ul>
+  <li><a href="#sec-five-stage-pipeline" id="toc-sec-five-stage-pipeline" class="nav-link" data-scroll-target="#sec-five-stage-pipeline">3.1.1 Five-Stage Pipeline</a></li>
+  <li><a href="#sec-component-architecture" id="toc-sec-component-architecture" class="nav-link" data-scroll-target="#sec-component-architecture">3.1.2 Component Architecture</a></li>
+  </ul></li>
+  <li><a href="#sec-two-stage-extraction" id="toc-sec-two-stage-extraction" class="nav-link" data-scroll-target="#sec-two-stage-extraction">3.2 The Two-Stage Extraction Process</a>
+  <ul>
+  <li><a href="#sec-stage1-argdown" id="toc-sec-stage1-argdown" class="nav-link" data-scroll-target="#sec-stage1-argdown">3.2.1 Stage 1: Structural Extraction (ArgDown)</a></li>
+  <li><a href="#sec-stage2-bayesdown" id="toc-sec-stage2-bayesdown" class="nav-link" data-scroll-target="#sec-stage2-bayesdown">3.2.2 Stage 2: Probability Integration (BayesDown)</a></li>
+  <li><a href="#sec-why-two-stages" id="toc-sec-why-two-stages" class="nav-link" data-scroll-target="#sec-why-two-stages">3.2.3 Why Two Stages?</a></li>
+  </ul></li>
+  <li><a href="#sec-implementation-details" id="toc-sec-implementation-details" class="nav-link" data-scroll-target="#sec-implementation-details">3.3 Implementation Details</a>
+  <ul>
+  <li><a href="#sec-tech-stack" id="toc-sec-tech-stack" class="nav-link" data-scroll-target="#sec-tech-stack">3.3.1 Technology Stack</a></li>
+  <li><a href="#sec-key-algorithms" id="toc-sec-key-algorithms" class="nav-link" data-scroll-target="#sec-key-algorithms">3.3.2 Key Algorithms</a></li>
+  <li><a href="#sec-performance" id="toc-sec-performance" class="nav-link" data-scroll-target="#sec-performance">3.3.3 Performance Characteristics</a></li>
+  </ul></li>
+  <li><a href="#sec-case-rain-sprinkler" id="toc-sec-case-rain-sprinkler" class="nav-link" data-scroll-target="#sec-case-rain-sprinkler">3.4 Case Study: Rain-Sprinkler-Grass</a>
+  <ul>
+  <li><a href="#sec-rsg-input" id="toc-sec-rsg-input" class="nav-link" data-scroll-target="#sec-rsg-input">3.4.1 Input Representation</a></li>
+  <li><a href="#sec-rsg-processing" id="toc-sec-rsg-processing" class="nav-link" data-scroll-target="#sec-rsg-processing">3.4.2 Processing Steps</a></li>
+  <li><a href="#sec-rsg-results" id="toc-sec-rsg-results" class="nav-link" data-scroll-target="#sec-rsg-results">3.4.3 Results</a></li>
+  </ul></li>
+  <li><a href="#sec-case-carlsmith" id="toc-sec-case-carlsmith" class="nav-link" data-scroll-target="#sec-case-carlsmith">3.5 Case Study: Carlsmith’s Power-Seeking AI Model</a>
+  <ul>
+  <li><a href="#sec-carlsmith-complexity" id="toc-sec-carlsmith-complexity" class="nav-link" data-scroll-target="#sec-carlsmith-complexity">3.5.1 Model Complexity</a></li>
+  <li><a href="#sec-carlsmith-extraction" id="toc-sec-carlsmith-extraction" class="nav-link" data-scroll-target="#sec-carlsmith-extraction">3.5.2 Extraction Results</a></li>
+  <li><a href="#sec-carlsmith-validation" id="toc-sec-carlsmith-validation" class="nav-link" data-scroll-target="#sec-carlsmith-validation">3.5.3 Validation Against Original</a></li>
+  <li><a href="#sec-carlsmith-insights" id="toc-sec-carlsmith-insights" class="nav-link" data-scroll-target="#sec-carlsmith-insights">3.5.4 Insights from Formalization</a></li>
+  </ul></li>
+  <li><a href="#sec-validation-methodology" id="toc-sec-validation-methodology" class="nav-link" data-scroll-target="#sec-validation-methodology">3.6 Validation Methodology</a>
+  <ul>
+  <li><a href="#sec-ground-truth" id="toc-sec-ground-truth" class="nav-link" data-scroll-target="#sec-ground-truth">3.6.1 Ground Truth Construction</a></li>
+  <li><a href="#sec-evaluation-metrics" id="toc-sec-evaluation-metrics" class="nav-link" data-scroll-target="#sec-evaluation-metrics">3.6.2 Evaluation Metrics</a></li>
+  <li><a href="#sec-validation-results" id="toc-sec-validation-results" class="nav-link" data-scroll-target="#sec-validation-results">3.6.3 Results Summary</a></li>
+  <li><a href="#sec-error-analysis" id="toc-sec-error-analysis" class="nav-link" data-scroll-target="#sec-error-analysis">3.6.4 Error Analysis</a></li>
+  </ul></li>
+  <li><a href="#sec-policy-evaluation" id="toc-sec-policy-evaluation" class="nav-link" data-scroll-target="#sec-policy-evaluation">3.7 Policy Evaluation Capabilities</a>
+  <ul>
+  <li><a href="#sec-intervention-representation" id="toc-sec-intervention-representation" class="nav-link" data-scroll-target="#sec-intervention-representation">3.7.1 Intervention Representation</a></li>
+  <li><a href="#sec-deployment-example" id="toc-sec-deployment-example" class="nav-link" data-scroll-target="#sec-deployment-example">3.7.2 Example: Deployment Governance</a></li>
+  <li><a href="#sec-robustness" id="toc-sec-robustness" class="nav-link" data-scroll-target="#sec-robustness">3.7.3 Robustness Analysis</a></li>
+  </ul></li>
+  <li><a href="#sec-visualization-design" id="toc-sec-visualization-design" class="nav-link" data-scroll-target="#sec-visualization-design">3.8 Interactive Visualization Design</a>
+  <ul>
+  <li><a href="#sec-visual-encoding" id="toc-sec-visual-encoding" class="nav-link" data-scroll-target="#sec-visual-encoding">3.8.1 Visual Encoding Strategy</a></li>
+  <li><a href="#sec-progressive-disclosure" id="toc-sec-progressive-disclosure" class="nav-link" data-scroll-target="#sec-progressive-disclosure">3.8.2 Progressive Disclosure</a></li>
+  <li><a href="#sec-ui-elements" id="toc-sec-ui-elements" class="nav-link" data-scroll-target="#sec-ui-elements">3.8.3 User Interface Elements</a></li>
+  </ul></li>
+  <li><a href="#sec-market-integration" id="toc-sec-market-integration" class="nav-link" data-scroll-target="#sec-market-integration">3.9 Integration with Prediction Markets</a>
+  <ul>
+  <li><a href="#sec-integration-design" id="toc-sec-integration-design" class="nav-link" data-scroll-target="#sec-integration-design">3.9.1 Design for Integration</a></li>
+  <li><a href="#sec-market-challenges" id="toc-sec-market-challenges" class="nav-link" data-scroll-target="#sec-market-challenges">3.9.2 Challenges and Opportunities</a></li>
+  </ul></li>
+  <li><a href="#sec-computational" id="toc-sec-computational" class="nav-link" data-scroll-target="#sec-computational">3.10 Computational Considerations</a>
+  <ul>
+  <li><a href="#sec-exact-approximate" id="toc-sec-exact-approximate" class="nav-link" data-scroll-target="#sec-exact-approximate">3.10.1 Exact vs.&nbsp;Approximate Inference</a></li>
+  <li><a href="#sec-scaling-strategies" id="toc-sec-scaling-strategies" class="nav-link" data-scroll-target="#sec-scaling-strategies">3.10.2 Scaling Strategies</a></li>
+  </ul></li>
+  <li><a href="#sec-technical-summary" id="toc-sec-technical-summary" class="nav-link" data-scroll-target="#sec-technical-summary">3.11 Summary of Technical Achievements</a></li>
+  </ul></li>
+  <li><a href="#sec-discussion" id="toc-sec-discussion" class="nav-link" data-scroll-target="#sec-discussion">4. Discussion: Implications and Limitations</a>
+  <ul>
+  <li><a href="#sec-technical-limitations" id="toc-sec-technical-limitations" class="nav-link" data-scroll-target="#sec-technical-limitations">4.1 Technical Limitations and Responses</a>
+  <ul>
+  <li><a href="#sec-extraction-boundaries" id="toc-sec-extraction-boundaries" class="nav-link" data-scroll-target="#sec-extraction-boundaries">4.1.1 Objection 1: Extraction Quality Boundaries</a></li>
+  <li><a href="#sec-false-precision" id="toc-sec-false-precision" class="nav-link" data-scroll-target="#sec-false-precision">4.1.2 Objection 2: False Precision in Uncertainty</a></li>
+  <li><a href="#sec-correlation-complexity" id="toc-sec-correlation-complexity" class="nav-link" data-scroll-target="#sec-correlation-complexity">4.1.3 Objection 3: Correlation Complexity</a></li>
+  </ul></li>
+  <li><a href="#sec-conceptual-concerns" id="toc-sec-conceptual-concerns" class="nav-link" data-scroll-target="#sec-conceptual-concerns">4.2 Conceptual and Methodological Concerns</a>
+  <ul>
+  <li><a href="#sec-democratic-exclusion" id="toc-sec-democratic-exclusion" class="nav-link" data-scroll-target="#sec-democratic-exclusion">4.2.1 Objection 4: Democratic Exclusion</a></li>
+  <li><a href="#sec-oversimplification" id="toc-sec-oversimplification" class="nav-link" data-scroll-target="#sec-oversimplification">4.2.2 Objection 5: Oversimplification of Complex Systems</a></li>
+  </ul></li>
+  <li><a href="#sec-red-teaming" id="toc-sec-red-teaming" class="nav-link" data-scroll-target="#sec-red-teaming">4.3 Red-Teaming Results</a>
+  <ul>
+  <li><a href="#sec-adversarial-extraction" id="toc-sec-adversarial-extraction" class="nav-link" data-scroll-target="#sec-adversarial-extraction">4.3.1 Adversarial Extraction Attempts</a></li>
+  <li><a href="#sec-robustness-findings" id="toc-sec-robustness-findings" class="nav-link" data-scroll-target="#sec-robustness-findings">4.3.2 Robustness Findings</a></li>
+  <li><a href="#sec-deployment-implications" id="toc-sec-deployment-implications" class="nav-link" data-scroll-target="#sec-deployment-implications">4.3.3 Implications for Deployment</a></li>
+  </ul></li>
+  <li><a href="#sec-epistemic-security" id="toc-sec-epistemic-security" class="nav-link" data-scroll-target="#sec-epistemic-security">4.4 Enhancing Epistemic Security</a>
+  <ul>
+  <li><a href="#sec-inspectable-models" id="toc-sec-inspectable-models" class="nav-link" data-scroll-target="#sec-inspectable-models">4.4.1 Making Models Inspectable</a></li>
+  <li><a href="#sec-convergence-divergence" id="toc-sec-convergence-divergence" class="nav-link" data-scroll-target="#sec-convergence-divergence">4.4.2 Revealing Convergence and Divergence</a></li>
+  <li><a href="#sec-collective-reasoning" id="toc-sec-collective-reasoning" class="nav-link" data-scroll-target="#sec-collective-reasoning">4.4.3 Improving Collective Reasoning</a></li>
+  </ul></li>
+  <li><a href="#sec-scaling" id="toc-sec-scaling" class="nav-link" data-scroll-target="#sec-scaling">4.5 Scaling Challenges and Opportunities</a>
+  <ul>
+  <li><a href="#sec-technical-scaling" id="toc-sec-technical-scaling" class="nav-link" data-scroll-target="#sec-technical-scaling">4.5.1 Technical Scaling</a></li>
+  <li><a href="#sec-social-scaling" id="toc-sec-social-scaling" class="nav-link" data-scroll-target="#sec-social-scaling">4.5.2 Social and Institutional Scaling</a></li>
+  <li><a href="#sec-impact-opportunities" id="toc-sec-impact-opportunities" class="nav-link" data-scroll-target="#sec-impact-opportunities">4.5.3 Opportunities for Impact</a></li>
+  </ul></li>
+  <li><a href="#sec-governance-integration" id="toc-sec-governance-integration" class="nav-link" data-scroll-target="#sec-governance-integration">4.6 Integration with Governance Frameworks</a>
+  <ul>
+  <li><a href="#sec-standards-integration" id="toc-sec-standards-integration" class="nav-link" data-scroll-target="#sec-standards-integration">4.6.1 Standards Development</a></li>
+  <li><a href="#sec-regulatory-integration" id="toc-sec-regulatory-integration" class="nav-link" data-scroll-target="#sec-regulatory-integration">4.6.2 Regulatory Design</a></li>
+  <li><a href="#sec-international-integration" id="toc-sec-international-integration" class="nav-link" data-scroll-target="#sec-international-integration">4.6.3 International Coordination</a></li>
+  <li><a href="#sec-organizational-integration" id="toc-sec-organizational-integration" class="nav-link" data-scroll-target="#sec-organizational-integration">4.6.4 Organizational Decision-Making</a></li>
+  </ul></li>
+  <li><a href="#sec-future-research" id="toc-sec-future-research" class="nav-link" data-scroll-target="#sec-future-research">4.7 Future Research Directions</a>
+  <ul>
+  <li><a href="#sec-technical-future" id="toc-sec-technical-future" class="nav-link" data-scroll-target="#sec-technical-future">4.7.1 Technical Enhancements</a></li>
+  <li><a href="#sec-methodological-future" id="toc-sec-methodological-future" class="nav-link" data-scroll-target="#sec-methodological-future">4.7.2 Methodological Extensions</a></li>
+  <li><a href="#sec-application-future" id="toc-sec-application-future" class="nav-link" data-scroll-target="#sec-application-future">4.7.3 Application Domains</a></li>
+  <li><a href="#sec-ecosystem-future" id="toc-sec-ecosystem-future" class="nav-link" data-scroll-target="#sec-ecosystem-future">4.7.4 Ecosystem Development</a></li>
+  </ul></li>
+  </ul></li>
+  <li><a href="#sec-conclusion" id="toc-sec-conclusion" class="nav-link" data-scroll-target="#sec-conclusion">5. Conclusion: Toward Coordinated AI Governance</a>
+  <ul>
+  <li><a href="#sec-key-contributions" id="toc-sec-key-contributions" class="nav-link" data-scroll-target="#sec-key-contributions">5.1 Summary of Key Contributions</a>
+  <ul>
+  <li><a href="#sec-theoretical-contributions" id="toc-sec-theoretical-contributions" class="nav-link" data-scroll-target="#sec-theoretical-contributions">5.1.1 Theoretical Contributions</a></li>
+  <li><a href="#sec-methodological-innovations" id="toc-sec-methodological-innovations" class="nav-link" data-scroll-target="#sec-methodological-innovations">5.1.2 Methodological Innovations</a></li>
+  <li><a href="#sec-technical-achievements" id="toc-sec-technical-achievements" class="nav-link" data-scroll-target="#sec-technical-achievements">5.1.3 Technical Achievements</a></li>
+  <li><a href="#sec-empirical-findings" id="toc-sec-empirical-findings" class="nav-link" data-scroll-target="#sec-empirical-findings">5.1.4 Empirical Findings</a></li>
+  </ul></li>
+  <li><a href="#sec-limitations-assessment" id="toc-sec-limitations-assessment" class="nav-link" data-scroll-target="#sec-limitations-assessment">5.2 Limitations and Honest Assessment</a>
+  <ul>
+  <li><a href="#sec-technical-constraints" id="toc-sec-technical-constraints" class="nav-link" data-scroll-target="#sec-technical-constraints">5.2.1 Technical Constraints</a></li>
+  <li><a href="#sec-conceptual-limitations" id="toc-sec-conceptual-limitations" class="nav-link" data-scroll-target="#sec-conceptual-limitations">5.2.2 Conceptual Limitations</a></li>
+  <li><a href="#sec-practical-constraints" id="toc-sec-practical-constraints" class="nav-link" data-scroll-target="#sec-practical-constraints">5.2.3 Practical Constraints</a></li>
+  </ul></li>
+  <li><a href="#sec-governance-implications" id="toc-sec-governance-implications" class="nav-link" data-scroll-target="#sec-governance-implications">5.3 Implications for AI Governance</a>
+  <ul>
+  <li><a href="#sec-near-term-applications" id="toc-sec-near-term-applications" class="nav-link" data-scroll-target="#sec-near-term-applications">5.3.1 Near-Term Applications</a></li>
+  <li><a href="#sec-medium-term" id="toc-sec-medium-term" class="nav-link" data-scroll-target="#sec-medium-term">5.3.2 Medium-Term Transformation</a></li>
+  <li><a href="#sec-long-term-vision" id="toc-sec-long-term-vision" class="nav-link" data-scroll-target="#sec-long-term-vision">5.3.3 Long-Term Vision</a></li>
+  </ul></li>
+  <li><a href="#sec-recommendations" id="toc-sec-recommendations" class="nav-link" data-scroll-target="#sec-recommendations">5.4 Recommendations for Stakeholders</a>
+  <ul>
+  <li><a href="#sec-researcher-recommendations" id="toc-sec-researcher-recommendations" class="nav-link" data-scroll-target="#sec-researcher-recommendations">5.4.1 For Researchers</a></li>
+  <li><a href="#sec-policymaker-recommendations" id="toc-sec-policymaker-recommendations" class="nav-link" data-scroll-target="#sec-policymaker-recommendations">5.4.2 For Policymakers</a></li>
+  <li><a href="#sec-technologist-recommendations" id="toc-sec-technologist-recommendations" class="nav-link" data-scroll-target="#sec-technologist-recommendations">5.4.3 For Technologists</a></li>
+  <li><a href="#sec-funder-recommendations" id="toc-sec-funder-recommendations" class="nav-link" data-scroll-target="#sec-funder-recommendations">5.4.4 For Funders</a></li>
+  </ul></li>
+  <li><a href="#sec-future-research-agenda" id="toc-sec-future-research-agenda" class="nav-link" data-scroll-target="#sec-future-research-agenda">5.5 Future Research Agenda</a>
+  <ul>
+  <li><a href="#sec-technical-priorities" id="toc-sec-technical-priorities" class="nav-link" data-scroll-target="#sec-technical-priorities">5.5.1 Technical Priorities</a></li>
+  <li><a href="#sec-methodological-development" id="toc-sec-methodological-development" class="nav-link" data-scroll-target="#sec-methodological-development">5.5.2 Methodological Development</a></li>
+  <li><a href="#sec-application-expansion" id="toc-sec-application-expansion" class="nav-link" data-scroll-target="#sec-application-expansion">5.5.3 Application Expansion</a></li>
+  </ul></li>
+  <li><a href="#sec-closing-reflections" id="toc-sec-closing-reflections" class="nav-link" data-scroll-target="#sec-closing-reflections">5.6 Closing Reflections</a></li>
+  </ul></li>
+  <li><a href="#sec-references" id="toc-sec-references" class="nav-link" data-scroll-target="#sec-references">References</a></li>
+  <li><a href="#sec-appendices" id="toc-sec-appendices" class="nav-link" data-scroll-target="#sec-appendices">Appendices</a>
+  <ul>
+  <li><a href="#sec-appendix-technical" id="toc-sec-appendix-technical" class="nav-link" data-scroll-target="#sec-appendix-technical">Appendix A: Technical Implementation Details</a></li>
+  <li><a href="#sec-appendix-validation" id="toc-sec-appendix-validation" class="nav-link" data-scroll-target="#sec-appendix-validation">Appendix B: Validation Datasets and Procedures</a></li>
+  <li><a href="#sec-appendix-cases" id="toc-sec-appendix-cases" class="nav-link" data-scroll-target="#sec-appendix-cases">Appendix C: Extended Case Studies</a></li>
+  <li><a href="#sec-appendix-bayesdown" id="toc-sec-appendix-bayesdown" class="nav-link" data-scroll-target="#sec-appendix-bayesdown">Appendix D: BayesDown Syntax Specification</a></li>
+  <li><a href="#sec-appendix-prompts" id="toc-sec-appendix-prompts" class="nav-link" data-scroll-target="#sec-appendix-prompts">Appendix E: Prompt Engineering Details</a></li>
+  <li><a href="#sec-appendix-userguide" id="toc-sec-appendix-userguide" class="nav-link" data-scroll-target="#sec-appendix-userguide">Appendix F: User Guide</a></li>
+  <li><a href="#sec-appendix-notebook" id="toc-sec-appendix-notebook" class="nav-link" data-scroll-target="#sec-appendix-notebook">Appendix G: Jupyter Notebook Implementation</a></li>
+  </ul></li>
+  </ul>
+<div class="toc-actions"><ul><li><a href="https://github.com/VJMeyer/submission/edit/main/chapters/Outlines/Outline_12.2.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li></ul></div><div class="quarto-code-links"><h2>Code Links</h2><ul><li><a href="https://colab.research.google.com/github/VJMeyer/submission/blob/main/AMTAIR_Prototype/data/example_carlsmith/AMTAIR_Prototype_example_carlsmith.ipynb"><i class="bi bi-file-code"></i>Colab Notebook (Manual Link in .yml)</a></li><li><a href="https://github.com/VJMeyer/submission"><i class="bi bi-github"></i>GitHub Repository</a></li></ul></div></nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">Preface</h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<p>This thesis represents the culmination of interdisciplinary research at the intersection of AI safety, formal epistemology, and computational social science. The work emerged from recognizing a fundamental challenge in AI governance: while investment in AI safety research has grown exponentially, coordination between different stakeholder communities remains fragmented, potentially increasing existential risk through misaligned efforts.</p>
+<p>The journey from initial concept to working implementation involved iterative refinement based on feedback from advisors, domain experts, and potential users. What began as a technical exercise in automated extraction evolved into a broader framework for enhancing epistemic security in one of humanity’s most critical coordination challenges.</p>
+<p>I hope this work contributes to building the intellectual and technical infrastructure necessary for humanity to navigate the transition to transformative AI safely. The tools and frameworks presented here are offered in the spirit of collaborative problem-solving, recognizing that the challenges we face require unprecedented cooperation across disciplines, institutions, and worldviews.</p>
+<section id="acknowledgments" class="level2 unnumbered">
+<h2 class="unnumbered anchored" data-anchor-id="acknowledgments">Acknowledgments</h2>
+<p>I thank my supervisor Dr.&nbsp;Timo Speith for guidance throughout this project, the MTAIR team for pioneering the manual approach that inspired automation, and the AI safety community for creating the rich literature that made this work possible. Special recognition goes to technical advisors who provided implementation feedback and domain experts who validated extraction results.</p>
+<!-- [ ] VERIFY: Acknowledgments completeness -->
+<p>Add specific names of: - MTAIR team members - Technical advisors - Domain experts who participated in validation - Funding sources if applicable</p>
+<p>This research was conducted with support from [funding sources] and benefited from computational resources provided by [institutions]. Any errors or limitations remain my own responsibility.</p>
+</section>
+<section id="table-of-contents" class="level1 unnumbered">
+<h1 class="unnumbered">Table of Contents</h1>
+<!-- Quarto will auto-generate TOC based on headers -->
+</section>
+<section id="sec-abstract" class="level1 unnumbered">
+<h1 class="unnumbered">Abstract</h1>
+<!-- Abstract already complete in frontmatter -->
+</section>
+<section id="list-of-figures" class="level1 unnumbered">
+<h1 class="unnumbered">List of Figures</h1>
+<!-- [ ] CREATE: List of Figures -->
+<p>Auto-generated by Quarto with proper figure captions and labels</p>
+</section>
+<section id="list-of-tables" class="level1 unnumbered">
+<h1 class="unnumbered">List of Tables</h1>
+<!-- [ ] CREATE: List of Tables -->
+<p>Auto-generated by Quarto with proper table captions and labels</p>
+</section>
+<section id="list-of-abbreviations" class="level1 unnumbered">
+<h1 class="unnumbered">List of Abbreviations</h1>
+<p>AI - Artificial Intelligence<br>
+AGI - Artificial General Intelligence<br>
+AMTAIR - Automating Transformative AI Risk Modeling<br>
+API - Application Programming Interface<br>
+APS - Advanced, Planning, Strategic (AI systems)<br>
+BN - Bayesian Network<br>
+CPT - Conditional Probability Table<br>
+DAG - Directed Acyclic Graph<br>
+LLM - Large Language Model<br>
+MTAIR - Modeling Transformative AI Risks<br>
+TAI - Transformative Artificial Intelligence</p>
+<!-- [ ] EXPAND: Additional abbreviations as needed -->
+</section>
+<section id="sec-introduction" class="level1">
+<h1>1. Introduction: The Coordination Crisis in AI Governance</h1>
+<section id="sec-opening-scenario" class="level2">
+<h2 class="anchored" data-anchor-id="sec-opening-scenario">1.1 Opening Scenario: The Policymaker’s Dilemma</h2>
+<p>Imagine a senior policy advisor preparing recommendations for AI governance legislation. On her desk lie a dozen reports from leading AI safety researchers, each painting a different picture of the risks ahead. One argues that misaligned AI could pose existential risks within the decade, citing complex technical arguments about instrumental convergence and orthogonality. Another suggests these concerns are overblown, emphasizing uncertainty and the strength of existing institutions. A third proposes specific technical standards but acknowledges deep uncertainty about their effectiveness.</p>
+<p>Each report seems compelling in isolation, written by credentialed experts with sophisticated arguments. Yet they reach dramatically different conclusions about both the magnitude of risk and appropriate interventions. The technical arguments involve unfamiliar concepts—mesa-optimization, corrigibility, capability amplification—expressed through different frameworks and implicit assumptions. Time is limited, stakes are high, and the legislation could shape humanity’s trajectory for decades.</p>
+<p>This scenario plays out daily across government offices, corporate boardrooms, and research institutions worldwide. It exemplifies what I term the “coordination crisis” in AI governance: despite unprecedented attention and resources directed toward AI safety, we lack the epistemic infrastructure to synthesize diverse expert knowledge into actionable governance strategies.</p>
+<!-- [ ] CREATE: {#fig-policymaker-dilemma}: "Visual representation of conflicting expert reports on advisor's desk" -->
+</section>
+<section id="sec-coordination-crisis" class="level2">
+<h2 class="anchored" data-anchor-id="sec-coordination-crisis">1.2 The Coordination Crisis in AI Governance</h2>
+<p>As AI capabilities advance at an accelerating pace—demonstrated by the rapid progression from GPT-3 to GPT-4, Claude, and emerging multimodal systems—humanity faces a governance challenge unlike any in history. The task of ensuring increasingly powerful AI systems remain aligned with human values and beneficial to our long-term flourishing grows more urgent with each capability breakthrough. This challenge becomes particularly acute when considering transformative AI systems that could drastically alter civilization’s trajectory, potentially including existential risks from misaligned systems pursuing objectives counter to human welfare.</p>
+<p>The current state of AI governance presents a striking paradox. On one hand, we witness extraordinary mobilization: billions in research funding, proliferating safety initiatives, major tech companies establishing alignment teams, and governments worldwide developing AI strategies. The Asilomar AI Principles garnered thousands of signatures, the EU advances comprehensive AI regulation, and technical researchers produce increasingly sophisticated work on alignment, interpretability, and robustness.</p>
+<p>Yet alongside this activity, we observe systematic coordination failures that may prove catastrophic. Technical safety researchers develop sophisticated alignment techniques without clear implementation pathways. Policy specialists craft regulatory frameworks lacking technical grounding to ensure practical efficacy. Ethicists articulate normative principles that lack operational specificity. Strategy researchers identify critical uncertainties but struggle to translate these into actionable guidance. International bodies convene without shared frameworks for assessing interventions.</p>
+<!-- [ ] CREATE: {#fig-coordination-crisis}: "Systems diagram showing fragmentation between AI governance communities" -->
+<section id="sec-safety-gaps" class="level3">
+<h3 class="anchored" data-anchor-id="sec-safety-gaps">1.2.1 Safety Gaps from Misaligned Efforts</h3>
+<p>When different communities operate with incompatible frameworks, critical risks fall through the cracks. Technical researchers may solve alignment problems under assumptions that policymakers’ decisions invalidate. Regulations optimized for current systems may inadvertently incentivize dangerous development patterns. Without shared models of the risk landscape, our collective efforts resemble the parable of blind men describing an elephant—each accurate within their domain but missing the complete picture.</p>
+<!-- [ ] FIND: @coordination-failure-examples: "Specific historical examples of coordination failures in technology governance" -->
+</section>
+<section id="sec-resource-misallocation" class="level3">
+<h3 class="anchored" data-anchor-id="sec-resource-misallocation">1.2.2 Resource Misallocation</h3>
+<p>The AI safety community duplicates efforts while leaving critical areas underexplored. Multiple teams independently develop similar frameworks without building on each other’s work. Funders struggle to identify high-impact opportunities across technical and governance domains. Talent flows toward well-publicized approaches while neglected strategies remain understaffed. This misallocation becomes more costly as the window for establishing effective governance narrows.</p>
+<!-- [ ] CREATE: {#tbl-resource-duplication}: "Examples of duplicated AI safety efforts across organizations" -->
+</section>
+<section id="sec-negative-sum" class="level3">
+<h3 class="anchored" data-anchor-id="sec-negative-sum">1.2.3 Negative-Sum Dynamics</h3>
+<p>Perhaps most concerning, uncoordinated interventions can actively increase risk. Safety standards that advantage established players may accelerate risky development elsewhere. Partial transparency requirements might enable capability advances without commensurate safety improvements. International agreements lacking shared technical understanding may lock in dangerous practices. Without coordination, our cure risks becoming worse than the disease.</p>
+<!-- [ ] FIND: @negative-sum-policy: "Game-theoretic analysis of how uncoordinated AI policies can backfire" -->
+</section>
+</section>
+<section id="sec-historical-urgency" class="level2">
+<h2 class="anchored" data-anchor-id="sec-historical-urgency">1.3 Historical Parallels and Temporal Urgency</h2>
+<p>History offers instructive parallels. The nuclear age began with scientists racing to understand and control forces that could destroy civilization. Early coordination failures—competing national programs, scientist-military tensions, public-expert divides—nearly led to catastrophe multiple times. Only through developing shared frameworks (deterrence theory), institutions (IAEA), and communication channels (hotlines, treaties) did humanity navigate the nuclear precipice.</p>
+<!-- [ ] VERIFY: @nuclear-governance-lessons: "Schelling, T. (1960). The Strategy of Conflict - lessons for AI governance" -->
+<p>Yet AI presents unique coordination challenges that compress our response timeline:</p>
+<p><strong>Accelerating Development</strong>: Unlike nuclear weapons requiring massive infrastructure, AI development proceeds in corporate labs and academic departments worldwide. Capability improvements come through algorithmic insights and computational scale, both advancing exponentially.</p>
+<p><strong>Dual-Use Ubiquity</strong>: Every AI advance potentially contributes to both beneficial applications and catastrophic risks. The same language model architectures enabling scientific breakthroughs could facilitate dangerous manipulation or deception at scale.</p>
+<p><strong>Comprehension Barriers</strong>: Nuclear risks were viscerally understandable—cities vaporized, radiation sickness, nuclear winter. AI risks involve abstract concepts like optimization processes, goal misspecification, and emergent capabilities that resist intuitive understanding.</p>
+<p><strong>Governance Lag</strong>: Traditional governance mechanisms—legislation, international treaties, professional standards—operate on timescales of years to decades. AI capabilities advance on timescales of months to years, creating an ever-widening capability-governance gap.</p>
+<!-- [ ] CREATE: {#fig-governance-lag}: "Timeline comparison of AI capability vs governance development" -->
+</section>
+<section id="sec-research-question" class="level2">
+<h2 class="anchored" data-anchor-id="sec-research-question">1.4 Research Question and Scope</h2>
+<p>This thesis addresses a specific dimension of the coordination challenge by investigating:</p>
+<p><strong>How can computational approaches formalize the worldviews and arguments underlying AI safety discourse, transforming qualitative disagreements into quantitative models suitable for rigorous policy evaluation?</strong></p>
+<p>More specifically, I explore whether frontier AI technologies can be utilized to automate the modeling of transformative AI risks, enabling robust prediction of policy impacts across diverse worldviews. This investigation breaks down into several components:</p>
+<ul>
+<li><strong>Computational Formalization</strong>: Using automated extraction and formal representation to make implicit models explicit</li>
+<li><strong>Worldview Representation</strong>: Capturing different perspectives on AI risk in comparable frameworks</li>
+<li><strong>Argument Transformation</strong>: Converting natural language arguments into structured Bayesian networks</li>
+<li><strong>Policy Evaluation</strong>: Assessing intervention impacts through formal counterfactual analysis</li>
+</ul>
+<p>The scope encompasses both theoretical development and practical implementation. Theoretically, I develop a framework for representing diverse perspectives on AI risk in a common formal language. Practically, I implement this framework in a computational system—the AI Risk Pathway Analyzer (ARPA)—that enables interactive exploration of how policy interventions might alter existential risk across different worldviews.</p>
+<!-- [ ] REFINE: Research question formulation for maximum clarity and impact -->
+<p>This investigation focuses specifically on existential risks from misaligned AI systems rather than broader AI ethics concerns. This narrowed scope enables deep technical development while addressing the highest-stakes coordination challenges where current fragmentation poses the greatest danger.</p>
+</section>
+<section id="sec-multiplicative-benefits" class="level2">
+<h2 class="anchored" data-anchor-id="sec-multiplicative-benefits">1.5 The Multiplicative Benefits Framework</h2>
+<p>The central thesis of this work is that combining three elements—automated worldview extraction, prediction market integration, and formal policy evaluation—creates multiplicative rather than merely additive benefits for AI governance. Each component enhances the others, creating a system more valuable than the sum of its parts.</p>
+<!-- [ ] CREATE: {#fig-multiplicative-benefits}: "Venn diagram showing synergies between extraction, markets, and evaluation" -->
+<section id="sec-automated-extraction" class="level3">
+<h3 class="anchored" data-anchor-id="sec-automated-extraction">1.5.1 Automated Worldview Extraction</h3>
+<p>Current approaches to AI risk modeling, exemplified by the Modeling Transformative AI Risks (MTAIR) project, demonstrate the value of formal representation but require extensive manual effort. Creating a single model demands hundreds of expert-hours to translate qualitative arguments into quantitative frameworks. This bottleneck severely limits the number of perspectives that can be formalized and the speed of model updates as new arguments emerge.</p>
+<p>Automation using frontier language models addresses this scaling challenge. By developing systematic methods to extract causal structures and probability judgments from natural language, we can:</p>
+<ul>
+<li>Process orders of magnitude more content</li>
+<li>Incorporate diverse perspectives rapidly</li>
+<li>Maintain models that evolve with the discourse</li>
+<li>Reduce barriers to entry for contributing worldviews</li>
+</ul>
+<!-- [ ] VERIFY: @mtair-effort: "Bucknall et al. (2022) - specific hour estimates for manual modeling" -->
+</section>
+<section id="sec-live-data" class="level3">
+<h3 class="anchored" data-anchor-id="sec-live-data">1.5.2 Live Data Integration</h3>
+<p>Static models, however well-constructed, quickly become outdated in fast-moving domains. Prediction markets and forecasting platforms aggregate distributed knowledge about uncertain futures, providing continuously updated probability estimates. By connecting formal models to these live data sources, we create dynamic assessments that incorporate the latest collective intelligence.</p>
+<p>This integration serves multiple purposes:</p>
+<ul>
+<li>Grounding abstract models in empirical forecasts</li>
+<li>Identifying which uncertainties most affect outcomes</li>
+<li>Revealing when model assumptions diverge from collective expectations</li>
+<li>Generating new questions for forecasting communities</li>
+</ul>
+<!-- [ ] FIND: @prediction-market-accuracy: "Evidence for prediction market accuracy in technology forecasting" -->
+</section>
+<section id="sec-policy-evaluation" class="level3">
+<h3 class="anchored" data-anchor-id="sec-policy-evaluation">1.5.3 Formal Policy Evaluation</h3>
+<p>The ultimate purpose of risk modeling is informing action. Formal policy evaluation transforms static risk assessments into actionable guidance by modeling how specific interventions alter critical parameters. Using causal inference techniques, we can assess not just the probability of adverse outcomes but how those probabilities change under different policy regimes.</p>
+<p>This enables genuinely evidence-based policy development:</p>
+<ul>
+<li>Comparing interventions across multiple worldviews</li>
+<li>Identifying robust strategies that work across scenarios</li>
+<li>Understanding which uncertainties most affect policy effectiveness</li>
+<li>Prioritizing research to reduce decision-relevant uncertainty</li>
+</ul>
+<!-- [ ] VERIFY: @pearl-causality: "Pearl, J. (2009). Causality: Models, Reasoning, and Inference" -->
+</section>
+<section id="sec-synergy" class="level3">
+<h3 class="anchored" data-anchor-id="sec-synergy">1.5.4 The Synergy</h3>
+<p>The multiplicative benefits emerge from the interactions between components:</p>
+<ul>
+<li>Automation enables comprehensive coverage, making prediction market integration more valuable by connecting to more perspectives</li>
+<li>Market data validates and calibrates automated extractions, improving quality</li>
+<li>Policy evaluation gains precision from both comprehensive models and live probability updates</li>
+<li>The complete system creates feedback loops where policy analysis identifies critical uncertainties for market attention</li>
+</ul>
+<p>This synergistic combination addresses the coordination crisis by providing common ground for disparate communities, translating between technical and policy languages, quantifying previously implicit disagreements, and enabling evidence-based compromise.</p>
+</section>
+</section>
+<section id="sec-roadmap" class="level2">
+<h2 class="anchored" data-anchor-id="sec-roadmap">1.6 Thesis Structure and Roadmap</h2>
+<p>The remainder of this thesis develops the multiplicative benefits framework from theoretical foundations to practical implementation:</p>
+<p><strong>Chapter 2: Context and Theoretical Foundations</strong> establishes the intellectual groundwork, examining the epistemic challenges unique to AI governance, Bayesian networks as formal tools for uncertainty representation, argument mapping as a bridge from natural language to formal models, the MTAIR project’s achievements and limitations, and requirements for effective coordination infrastructure.</p>
+<p><strong>Chapter 3: AMTAIR Design and Implementation</strong> presents the technical system including overall architecture and design principles, the two-stage extraction pipeline (ArgDown → BayesDown), validation methodology and results, case studies from simple examples to complex AI risk models, and integration with prediction markets and policy evaluation.</p>
+<p><strong>Chapter 4: Discussion - Implications and Limitations</strong> critically examines technical limitations and failure modes, conceptual concerns about formalization, integration with existing governance frameworks, scaling challenges and opportunities, and broader implications for epistemic security.</p>
+<p><strong>Chapter 5: Conclusion</strong> synthesizes key contributions and charts paths forward with a summary of theoretical and practical achievements, concrete recommendations for stakeholders, research agenda for community development, and vision for AI governance with proper coordination infrastructure.</p>
+<p>Throughout, I maintain dual focus on theoretical sophistication and practical utility. The framework aims not merely to advance academic understanding but to provide actionable tools for improving coordination in AI governance during this critical period.</p>
+<!-- [ ] CREATE: {#fig-thesis-roadmap}: "Visual flowchart of thesis structure and chapter connections" -->
+</section>
+</section>
+<section id="sec-context" class="level1">
+<h1>2. Context and Theoretical Foundations</h1>
+<p>This chapter establishes the theoretical and methodological foundations necessary for understanding AMTAIR’s approach to automating AI risk modeling. I begin with the core challenge—representing existential risk arguments in formal terms—then develop the technical and conceptual tools needed to address it.</p>
+<section id="sec-carlsmith-model" class="level2">
+<h2 class="anchored" data-anchor-id="sec-carlsmith-model">2.1 AI Existential Risk: The Carlsmith Model</h2>
+<p>To ground our discussion in concrete terms, I examine Joseph Carlsmith’s “Is Power-Seeking AI an Existential Risk?” as an exemplar of structured reasoning about AI catastrophic risk. Carlsmith’s analysis stands out for its explicit probabilistic decomposition of the path from current AI development to potential existential catastrophe.</p>
+<!-- [ ] VERIFY: @carlsmith2022: "Carlsmith, J. (2022). Is Power-Seeking AI an Existential Risk?" -->
+<section id="sec-six-premise" class="level3">
+<h3 class="anchored" data-anchor-id="sec-six-premise">2.1.1 Six-Premise Decomposition</h3>
+<p>Carlsmith structures his argument through six conditional premises, each assigned explicit probability estimates:</p>
+<p><strong>Premise 1: APS Systems by 2070</strong> (P ≈ 0.65)<br>
+“By 2070, there will be AI systems with Advanced capability, Agentic planning, and Strategic awareness” - the conjunction of capabilities that could enable systematic pursuit of objectives in the world.</p>
+<p><strong>Premise 2: Alignment Difficulty</strong> (P ≈ 0.40)<br>
+“It will be harder to build aligned APS systems than misaligned systems that are still attractive to deploy” - capturing the challenge that safety may conflict with capability or efficiency.</p>
+<p><strong>Premise 3: Deployment Despite Misalignment</strong> (P ≈ 0.70)<br>
+“Conditional on 1 and 2, we will deploy misaligned APS systems” - reflecting competitive pressures and limited coordination.</p>
+<p><strong>Premise 4: Power-Seeking Behavior</strong> (P ≈ 0.65)<br>
+“Conditional on 1-3, misaligned APS systems will seek power in high-impact ways” - based on instrumental convergence arguments.</p>
+<p><strong>Premise 5: Disempowerment Success</strong> (P ≈ 0.40)<br>
+“Conditional on 1-4, power-seeking will scale to permanent human disempowerment” - despite potential resistance and safeguards.</p>
+<p><strong>Premise 6: Existential Catastrophe</strong> (P ≈ 0.95)<br>
+“Conditional on 1-5, this disempowerment constitutes existential catastrophe” - connecting power loss to permanent curtailment of human potential.</p>
+<p><strong>Overall Risk</strong>: Multiplying through the conditional chain yields P(doom) ≈ 0.05 or 5% by 2070.</p>
+<!-- [ ] CREATE: {#fig-carlsmith-decomposition}: "Visual flowchart of Carlsmith's six premises with probabilities" -->
+</section>
+<section id="sec-carlsmith-formalizable" class="level3">
+<h3 class="anchored" data-anchor-id="sec-carlsmith-formalizable">2.1.2 Why Carlsmith Exemplifies Formalizable Arguments</h3>
+<p>Carlsmith’s model demonstrates several features that make it ideal for formal representation:</p>
+<p><strong>Explicit Probabilistic Structure</strong>: Each premise receives numerical probability estimates with documented reasoning, enabling direct translation to Bayesian network parameters.</p>
+<p><strong>Clear Conditional Dependencies</strong>: The logical flow from capabilities through deployment decisions to catastrophic outcomes maps naturally onto directed acyclic graphs.</p>
+<p><strong>Transparent Decomposition</strong>: Breaking the argument into modular premises allows independent evaluation and sensitivity analysis of each component.</p>
+<p><strong>Documented Reasoning</strong>: Extensive justification for each probability enables extraction of both structure and parameters from the source text.</p>
+<p>This structured approach exemplifies the type of reasoning AMTAIR aims to formalize and automate. While Carlsmith spent months developing this model manually, similar rigor exists implicitly in many AI safety arguments awaiting extraction.</p>
+<!-- [ ] IMPLEMENT: Full Carlsmith model extraction as primary validation case -->
+</section>
+</section>
+<section id="sec-epistemic-challenge" class="level2">
+<h2 class="anchored" data-anchor-id="sec-epistemic-challenge">2.2 The Epistemic Challenge of Policy Evaluation</h2>
+<p>Evaluating AI governance policies presents unique epistemic challenges that traditional policy analysis methods cannot adequately address. Understanding these challenges motivates the need for new computational approaches.</p>
+<section id="sec-ai-governance-unique" class="level3">
+<h3 class="anchored" data-anchor-id="sec-ai-governance-unique">2.2.1 Unique Characteristics of AI Governance</h3>
+<p><strong>Deep Uncertainty Rather Than Risk</strong>: Traditional policy analysis distinguishes between risk (known probability distributions) and uncertainty (known possibilities, unknown probabilities). AI governance faces deep uncertainty—we cannot confidently enumerate possible futures, much less assign probabilities. Will recursive self-improvement enable rapid capability gains? Can value alignment be solved technically? These foundational questions resist empirical resolution before their answers become catastrophically relevant.</p>
+<!-- [ ] FIND: @deep-uncertainty-policy: "Knight (1921) or modern treatments of deep uncertainty in policy" -->
+<p><strong>Complex Multi-Level Causation</strong>: Policy effects propagate through technical, institutional, and social levels with intricate feedback loops. A technical standard might alter research incentives, shifting capability development trajectories, changing competitive dynamics, and ultimately affecting existential risk through pathways invisible at the policy’s inception. Traditional linear causal models cannot capture these dynamics.</p>
+<p><strong>Irreversibility and Lock-In</strong>: Many AI governance decisions create path dependencies that prove difficult or impossible to reverse. Early technical standards shape development trajectories. Institutional structures ossify. International agreements create sticky equilibria. Unlike many policy domains where course correction remains possible, AI governance mistakes may prove permanent.</p>
+<p><strong>Value-Laden Technical Choices</strong>: The entanglement of technical and normative questions confounds traditional separation of facts and values. What constitutes “alignment”? How much capability development should we risk for economic benefits? Technical specifications embed ethical judgments that resist neutral expertise.</p>
+<!-- [ ] CREATE: {#tbl-governance-challenges}: "Comparison of AI governance vs traditional policy domains" -->
+</section>
+<section id="sec-traditional-limitations" class="level3">
+<h3 class="anchored" data-anchor-id="sec-traditional-limitations">2.2.2 Limitations of Traditional Approaches</h3>
+<p>Standard policy evaluation tools prove inadequate for these challenges:</p>
+<p><strong>Cost-Benefit Analysis</strong> assumes commensurable outcomes and stable probability distributions. When potential outcomes include existential catastrophe with deeply uncertain probabilities, the mathematical machinery breaks down. Infinite negative utility resists standard decision frameworks.</p>
+<p><strong>Scenario Planning</strong> helps explore possible futures but typically lacks the probabilistic reasoning needed for decision-making under uncertainty. Without quantification, scenarios provide narrative richness but limited action guidance.</p>
+<p><strong>Expert Elicitation</strong> aggregates specialist judgment but struggles with interdisciplinary questions where no single expert grasps all relevant factors. Moreover, experts often operate with different implicit models, making aggregation problematic.</p>
+<p><strong>Red Team Exercises</strong> test specific plans but miss systemic risks emerging from component interactions. Gaming individual failures cannot reveal emergent catastrophic possibilities.</p>
+<p>These limitations create a methodological gap: we need approaches that handle deep uncertainty, represent complex causation, quantify expert disagreement, and enable systematic exploration of intervention effects.</p>
+<!-- [ ] VERIFY: @traditional-policy-methods: "Standard references on policy analysis limitations" -->
+</section>
+</section>
+<section id="sec-bayesian-networks" class="level2">
+<h2 class="anchored" data-anchor-id="sec-bayesian-networks">2.3 Bayesian Networks as Knowledge Representation</h2>
+<p>Bayesian networks offer a mathematical framework uniquely suited to addressing these epistemic challenges. By combining graphical structure with probability theory, they provide tools for reasoning about complex uncertain domains.</p>
+<section id="sec-mathematical-foundations" class="level3">
+<h3 class="anchored" data-anchor-id="sec-mathematical-foundations">2.3.1 Mathematical Foundations</h3>
+<p>A Bayesian network consists of:</p>
+<ul>
+<li><strong>Directed Acyclic Graph (DAG)</strong>: Nodes represent variables, edges represent direct dependencies</li>
+<li><strong>Conditional Probability Tables (CPTs)</strong>: For each node, P(node|parents) quantifies relationships</li>
+</ul>
+<p>The joint probability distribution factors according to the graph structure:</p>
+<p><span class="math display">\[P(X_1, X_2, ..., X_n) = \prod_{i=1}^{n} P(X_i | Parents(X_i))\]</span></p>
+<p>This factorization enables efficient inference and embodies causal assumptions explicitly.</p>
+<!-- [ ] VERIFY: @pearl-probabilistic: "Pearl, J. (1988). Probabilistic Reasoning in Intelligent Systems" -->
+</section>
+<section id="sec-rain-sprinkler-example" class="level3">
+<h3 class="anchored" data-anchor-id="sec-rain-sprinkler-example">2.3.2 The Rain-Sprinkler-Grass Example</h3>
+<p>The canonical example illustrates key concepts:</p>
+<pre><code>[Grass_Wet]: Concentrated moisture on grass. 
+ + [Rain]: Water falling from sky.
+ + [Sprinkler]: Artificial watering system.
+   + [Rain]</code></pre>
+<p>Network Structure:</p>
+<ul>
+<li><strong>Rain</strong> (root cause): P(rain) = 0.2</li>
+<li><strong>Sprinkler</strong> (intermediate): P(sprinkler|rain) varies by rain state</li>
+<li><strong>Grass_Wet</strong> (effect): P(wet|rain, sprinkler) depends on both causes</li>
+</ul>
+<p>This simple network demonstrates:</p>
+<ul>
+<li><strong>Marginal Inference</strong>: P(grass_wet) computed from joint distribution</li>
+<li><strong>Diagnostic Reasoning</strong>: P(rain|grass_wet) reasoning from effects to causes</li>
+<li><strong>Intervention Modeling</strong>: P(grass_wet|do(sprinkler=on)) for policy analysis</li>
+</ul>
+<!-- [ ] CREATE: {#fig-rain-sprinkler-network}: "Visual Bayesian network for rain-sprinkler-grass with CPTs" -->
+</section>
+<section id="sec-modeling-advantages" class="level3">
+<h3 class="anchored" data-anchor-id="sec-modeling-advantages">2.3.3 Advantages for AI Risk Modeling</h3>
+<p>Bayesian networks provide several crucial capabilities:</p>
+<p><strong>Explicit Uncertainty Representation</strong>: Every belief is a probability distribution, avoiding false certainty while enabling quantitative reasoning.</p>
+<p><strong>Causal Modeling</strong>: Directed edges represent causal relationships, enabling counterfactual reasoning through Pearl’s do-calculus for policy evaluation.</p>
+<p><strong>Modular Structure</strong>: Complex arguments decompose into manageable components that can be independently evaluated and refined.</p>
+<p><strong>Evidence Integration</strong>: Bayesian updating provides principled methods for incorporating new information as it emerges.</p>
+<p><strong>Visual Communication</strong>: Graphical structure makes complex relationships comprehensible across expertise levels.</p>
+<p>These features address key requirements for AI governance: handling uncertainty, representing causation, enabling systematic analysis, and facilitating communication across communities.</p>
+<!-- [ ] IMPLEMENT: Interactive rain-sprinkler demo in supplementary materials -->
+</section>
+</section>
+<section id="sec-argument-mapping" class="level2">
+<h2 class="anchored" data-anchor-id="sec-argument-mapping">2.4 Argument Mapping and Formal Representations</h2>
+<p>The gap between natural language arguments and formal models requires systematic bridging. Argument mapping provides methods for making implicit reasoning structures explicit and analyzable.</p>
+<section id="sec-natural-to-structure" class="level3">
+<h3 class="anchored" data-anchor-id="sec-natural-to-structure">2.4.1 From Natural Language to Structure</h3>
+<p>Natural language arguments contain rich information expressed through:</p>
+<ul>
+<li>Causal claims (“X leads to Y”)</li>
+<li>Conditional relationships (“If A then likely B”)</li>
+<li>Uncertainty expressions (“probably,” “might,” “certainly”)</li>
+<li>Support/attack patterns between claims</li>
+</ul>
+<p>Argument mapping extracts this structure, identifying:</p>
+<ul>
+<li><strong>Core claims and propositions</strong></li>
+<li><strong>Inferential relationships</strong></li>
+<li><strong>Implicit assumptions</strong></li>
+<li><strong>Uncertainty qualifications</strong></li>
+</ul>
+<!-- [ ] FIND: @argument-mapping-methods: "Systematic review of argument visualization techniques" -->
+</section>
+<section id="sec-argdown-notation" class="level3">
+<h3 class="anchored" data-anchor-id="sec-argdown-notation">2.4.2 ArgDown: Structured Argument Notation</h3>
+<p>ArgDown provides a markdown-like syntax for hierarchical argument representation:</p>
+<pre><code>[MainClaim]: Description of primary conclusion.
+ + [SupportingEvidence]: Evidence supporting the claim.
+   + [SubEvidence]: More specific support.
+ - [CounterArgument]: Evidence against the claim.</code></pre>
+<p>This notation captures argument structure while remaining human-readable and writable. Crucially, it serves as an intermediate representation between natural language and formal models.</p>
+<!-- [ ] CREATE: {#fig-argdown-example}: "Side-by-side comparison of text argument and ArgDown representation" -->
+</section>
+<section id="sec-bayesdown" class="level3">
+<h3 class="anchored" data-anchor-id="sec-bayesdown">2.4.3 BayesDown: The Bridge to Bayesian Networks</h3>
+<p>BayesDown extends ArgDown with probabilistic metadata:</p>
+<pre><code>[Node]: Description. {
+  "instantiations": ["node_TRUE", "node_FALSE"],
+  "priors": {"p(node_TRUE)": "0.7", "p(node_FALSE)": "0.3"},
+  "posteriors": {
+    "p(node_TRUE|parent_TRUE)": "0.9",
+    "p(node_TRUE|parent_FALSE)": "0.4"
+  }
+}</code></pre>
+<p>This representation:</p>
+<ul>
+<li><strong>Preserves narrative structure</strong> from the original argument</li>
+<li><strong>Adds mathematical precision</strong> through probability specifications</li>
+<li><strong>Enables transformation</strong> to standard Bayesian network formats</li>
+<li><strong>Supports validation</strong> by maintaining traceability to sources</li>
+</ul>
+<p>The two-stage extraction process (ArgDown → BayesDown) separates concerns: first capturing structure, then quantifying relationships. This modularity enables human oversight at critical decision points.</p>
+<!-- [ ] VERIFY: @bayesdown-syntax: "Link to full BayesDown specification in appendix" -->
+</section>
+</section>
+<section id="sec-mtair-framework" class="level2">
+<h2 class="anchored" data-anchor-id="sec-mtair-framework">2.5 The MTAIR Framework: Achievements and Limitations</h2>
+<p>The Modeling Transformative AI Risks (MTAIR) project, led by RAND researchers, pioneered formal modeling of AI existential risk arguments. Understanding its approach and limitations motivates the automation efforts of AMTAIR.</p>
+<section id="sec-mtair-approach" class="level3">
+<h3 class="anchored" data-anchor-id="sec-mtair-approach">2.5.1 MTAIR’s Approach</h3>
+<p>MTAIR manually translated influential AI risk arguments into Bayesian networks using Analytica software:</p>
+<p><strong>Systematic Decomposition</strong>: Breaking complex arguments into variables and relationships through expert analysis.</p>
+<p><strong>Probability Elicitation</strong>: Gathering quantitative estimates through structured expert interviews and literature review.</p>
+<p><strong>Sensitivity Analysis</strong>: Identifying which parameters most influence conclusions about AI risk levels.</p>
+<p><strong>Visual Communication</strong>: Creating interactive models that stakeholders could explore and modify.</p>
+<!-- [ ] VERIFY: @mtair-report: "Bucknall et al. (2022). Modeling Transformative AI Risks (MTAIR)" -->
+</section>
+<section id="sec-mtair-achievements" class="level3">
+<h3 class="anchored" data-anchor-id="sec-mtair-achievements">2.5.2 Key Achievements</h3>
+<p>MTAIR demonstrated several important possibilities:</p>
+<p><strong>Feasibility of Formalization</strong>: Complex philosophical arguments about AI risk can be represented as Bayesian networks while preserving essential insights.</p>
+<p><strong>Value of Quantification</strong>: Moving from qualitative concerns to quantitative models enables systematic analysis, comparison, and prioritization.</p>
+<p><strong>Cross-Perspective Communication</strong>: Formal models provide common ground for technical and policy communities to engage productively.</p>
+<p><strong>Research Prioritization</strong>: Sensitivity analysis reveals which empirical questions would most reduce uncertainty about AI risks.</p>
+<!-- [ ] CREATE: {#fig-mtair-process}: "MTAIR's manual modeling workflow" -->
+</section>
+<section id="sec-mtair-limitations" class="level3">
+<h3 class="anchored" data-anchor-id="sec-mtair-limitations">2.5.3 Fundamental Limitations</h3>
+<p>However, MTAIR’s manual approach faces severe constraints:</p>
+<p><strong>Labor Intensity</strong>: Each model requires hundreds of expert-hours to construct, limiting coverage to a few perspectives.</p>
+<!-- [ ] Manual Extraction Time Analysis -->
+<p>Detailed breakdown needed: - Variable identification: X hours - Structure elicitation: Y hours - Probability quantification: Z hours - Validation and refinement: W hours Total per model: ~200-400 hours</p>
+<p><strong>Static Nature</strong>: Models become outdated as arguments evolve but updating requires near-complete reconstruction.</p>
+<p><strong>Limited Accessibility</strong>: Using the models requires Analytica software and significant technical sophistication.</p>
+<p><strong>Single Perspective</strong>: Each model represents one worldview, making comparison across perspectives difficult.</p>
+<p>These limitations prevent MTAIR’s approach from scaling to meet AI governance needs. As the pace of AI development accelerates and arguments proliferate, manual modeling cannot keep pace.</p>
+</section>
+<section id="sec-automation-opportunity" class="level3">
+<h3 class="anchored" data-anchor-id="sec-automation-opportunity">2.5.4 The Automation Opportunity</h3>
+<p>MTAIR’s experience reveals both the value of formal modeling and the necessity of automation. Key lessons:</p>
+<ul>
+<li>Formal models genuinely enhance understanding and coordination</li>
+<li>The modeling process itself surfaces implicit assumptions</li>
+<li>Quantification enables analyses impossible with qualitative arguments alone</li>
+<li>But manual approaches cannot scale to match the challenge</li>
+</ul>
+<p>This motivates AMTAIR’s central innovation: using frontier language models to automate the extraction and formalization process while preserving the benefits MTAIR demonstrated.</p>
+<!-- [ ] IMPLEMENT: Comparative analysis of manual vs automated extraction times -->
+</section>
+</section>
+<section id="sec-coordination-requirements" class="level2">
+<h2 class="anchored" data-anchor-id="sec-coordination-requirements">2.6 Requirements for Coordination Infrastructure</h2>
+<p>Based on the challenges identified and lessons from existing approaches, we can specify requirements for computational tools that could enhance coordination in AI governance:</p>
+<section id="sec-scalability-req" class="level3">
+<h3 class="anchored" data-anchor-id="sec-scalability-req">2.6.1 Scalability</h3>
+<p>The system must process large volumes of arguments across:</p>
+<ul>
+<li>Academic papers and technical reports</li>
+<li>Policy documents and proposals</li>
+<li>Blog posts and informal arguments</li>
+<li>Forecasting questions and market data</li>
+</ul>
+<p>Automation is essential—manual approaches cannot match the pace of discourse.</p>
+<!-- [ ] CREATE: {#tbl-content-sources}: "Taxonomy of AI safety content sources with volumes" -->
+</section>
+<section id="sec-accessibility-req" class="level3">
+<h3 class="anchored" data-anchor-id="sec-accessibility-req">2.6.2 Accessibility</h3>
+<p>Diverse stakeholders must be able to engage with the system:</p>
+<ul>
+<li><strong>Researchers</strong> need technical depth and modification capabilities</li>
+<li><strong>Policymakers</strong> require clear summaries and intervention analysis</li>
+<li><strong>Forecasters</strong> want integration with prediction platforms</li>
+<li><strong>Public stakeholders</strong> deserve transparent representation</li>
+</ul>
+<p>This demands multiple interfaces and levels of abstraction.</p>
+<!-- [ ] FIND: @stakeholder-requirements: "User research on AI governance tool needs" -->
+</section>
+<section id="sec-epistemic-virtues" class="level3">
+<h3 class="anchored" data-anchor-id="sec-epistemic-virtues">2.6.3 Epistemic Virtues</h3>
+<p>The system should enhance rather than replace human judgment by:</p>
+<ul>
+<li><strong>Making assumptions explicit</strong> through formal representation</li>
+<li><strong>Preserving uncertainty</strong> rather than false precision</li>
+<li><strong>Enabling validation</strong> through traceable extraction</li>
+<li><strong>Supporting disagreement</strong> through multi-worldview representation</li>
+<li><strong>Encouraging updating</strong> as new evidence emerges</li>
+</ul>
+<!-- [ ] CREATE: {#fig-epistemic-workflow}: "How AMTAIR preserves epistemic virtues" -->
+</section>
+<section id="sec-integration-req" class="level3">
+<h3 class="anchored" data-anchor-id="sec-integration-req">2.6.4 Integration Capabilities</h3>
+<p>Isolated tools have limited impact. The system needs:</p>
+<ul>
+<li><strong>Data source connections</strong> to prediction markets and forecasting platforms</li>
+<li><strong>API accessibility</strong> for integration with other tools</li>
+<li><strong>Export formats</strong> compatible with standard analysis software</li>
+<li><strong>Version control</strong> for tracking model evolution</li>
+<li><strong>Collaborative features</strong> for community development</li>
+</ul>
+<!-- [ ] IMPLEMENT: API documentation and integration examples -->
+</section>
+<section id="sec-robustness-req" class="level3">
+<h3 class="anchored" data-anchor-id="sec-robustness-req">2.6.5 Robustness Properties</h3>
+<p>Given the high stakes, the system must handle:</p>
+<ul>
+<li><strong>Extraction errors</strong> through validation and correction mechanisms</li>
+<li><strong>Adversarial inputs</strong> designed to manipulate outputs</li>
+<li><strong>Model uncertainty</strong> through sensitivity analysis</li>
+<li><strong>Scaling challenges</strong> as networks grow large</li>
+<li><strong>Evolution over time</strong> as arguments develop</li>
+</ul>
+<p>These requirements shape AMTAIR’s design, as detailed in the next chapter.</p>
+<!-- [ ] VERIFY: Requirements completeness through stakeholder interviews -->
+</section>
+</section>
+</section>
+<section id="sec-amtair" class="level1">
+<h1>3. AMTAIR: Design and Implementation</h1>
+<p>This chapter presents the technical architecture and implementation of AMTAIR, demonstrating how theoretical principles translate into working software. I detail the design decisions, implementation challenges, and validation results that establish AMTAIR’s feasibility and value.</p>
+<section id="sec-system-architecture" class="level2">
+<h2 class="anchored" data-anchor-id="sec-system-architecture">3.1 System Architecture Overview</h2>
+<p>AMTAIR implements an end-to-end pipeline transforming unstructured text into interactive Bayesian network visualizations. The architecture reflects key design principles:</p>
+<ul>
+<li><strong>Modularity</strong>: Each component can be independently improved</li>
+<li><strong>Transparency</strong>: Intermediate outputs enable inspection and validation</li>
+<li><strong>Flexibility</strong>: Multiple input formats and configurable processing</li>
+<li><strong>Scalability</strong>: Efficient processing of large document sets</li>
+</ul>
+<section id="sec-five-stage-pipeline" class="level3">
+<h3 class="anchored" data-anchor-id="sec-five-stage-pipeline">3.1.1 Five-Stage Pipeline</h3>
+<p>The system processes information through five distinct stages:</p>
+<pre><code>Documents → Ingestion → ArgDown → BayesDown → Networks → Visualization</code></pre>
+<p>Each stage produces inspectable outputs, enabling validation and debugging. This transparency is crucial for building trust in automated extraction.</p>
+<!-- [ ] CREATE: {#fig-pipeline-architecture}: "Detailed AMTAIR pipeline with data flow and components" -->
+</section>
+<section id="sec-component-architecture" class="level3">
+<h3 class="anchored" data-anchor-id="sec-component-architecture">3.1.2 Component Architecture</h3>
+<div class="sourceCode" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="co">#| label: architecture-overview</span></span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a><span class="co">#| eval: false</span></span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a><span class="kw">class</span> AMTAIRPipeline:</span>
+<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a>    <span class="kw">def</span> <span class="fu">__init__</span>(<span class="va">self</span>):</span>
+<span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a>        <span class="va">self</span>.ingestion <span class="op">=</span> DocumentIngestion()</span>
+<span id="cb5-7"><a href="#cb5-7" aria-hidden="true" tabindex="-1"></a>        <span class="va">self</span>.extraction <span class="op">=</span> BayesDownExtractor()  </span>
+<span id="cb5-8"><a href="#cb5-8" aria-hidden="true" tabindex="-1"></a>        <span class="va">self</span>.transformation <span class="op">=</span> DataTransformer()</span>
+<span id="cb5-9"><a href="#cb5-9" aria-hidden="true" tabindex="-1"></a>        <span class="va">self</span>.network_builder <span class="op">=</span> BayesianNetworkBuilder()</span>
+<span id="cb5-10"><a href="#cb5-10" aria-hidden="true" tabindex="-1"></a>        <span class="va">self</span>.visualizer <span class="op">=</span> InteractiveVisualizer()</span>
+<span id="cb5-11"><a href="#cb5-11" aria-hidden="true" tabindex="-1"></a>        </span>
+<span id="cb5-12"><a href="#cb5-12" aria-hidden="true" tabindex="-1"></a>    <span class="kw">def</span> process(<span class="va">self</span>, document):</span>
+<span id="cb5-13"><a href="#cb5-13" aria-hidden="true" tabindex="-1"></a>        <span class="co">"""End-to-end processing from document to interactive model"""</span></span>
+<span id="cb5-14"><a href="#cb5-14" aria-hidden="true" tabindex="-1"></a>        structured_data <span class="op">=</span> <span class="va">self</span>.ingestion.preprocess(document)</span>
+<span id="cb5-15"><a href="#cb5-15" aria-hidden="true" tabindex="-1"></a>        bayesdown <span class="op">=</span> <span class="va">self</span>.extraction.extract(structured_data)</span>
+<span id="cb5-16"><a href="#cb5-16" aria-hidden="true" tabindex="-1"></a>        dataframe <span class="op">=</span> <span class="va">self</span>.transformation.convert(bayesdown)</span>
+<span id="cb5-17"><a href="#cb5-17" aria-hidden="true" tabindex="-1"></a>        network <span class="op">=</span> <span class="va">self</span>.network_builder.construct(dataframe)</span>
+<span id="cb5-18"><a href="#cb5-18" aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span> <span class="va">self</span>.visualizer.render(network)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>This clean separation of concerns enables targeted improvements and alternative implementations for each component.</p>
+<!-- [ ] IMPLEMENT: Full component documentation with interfaces -->
+</section>
+</section>
+<section id="sec-two-stage-extraction" class="level2">
+<h2 class="anchored" data-anchor-id="sec-two-stage-extraction">3.2 The Two-Stage Extraction Process</h2>
+<p>The core innovation of AMTAIR lies in separating structural extraction from probability quantification. This two-stage approach addresses key challenges in automated formalization.</p>
+<section id="sec-stage1-argdown" class="level3">
+<h3 class="anchored" data-anchor-id="sec-stage1-argdown">3.2.1 Stage 1: Structural Extraction (ArgDown)</h3>
+<p>The first stage identifies argument structure without concerning itself with quantification:</p>
+<p><strong>Variable Identification</strong>: Extract key propositions and entities from text using patterns like “X causes Y,” “If A then B,” and domain-specific indicators.</p>
+<p><strong>Relationship Mapping</strong>: Identify support, attack, and conditional relationships between variables through linguistic analysis.</p>
+<p><strong>Hierarchy Construction</strong>: Build nested ArgDown representation preserving logical flow:</p>
+<pre><code>[Existential_Catastrophe]: Destruction of humanity's potential.
+ + [Human_Disempowerment]: Loss of control to AI systems.
+   + [Misaligned_Power_Seeking]: AI pursuing problematic objectives.
+     + [APS_Systems]: Advanced, agentic, strategic AI.
+     + [Deployment_Decisions]: Choice to deploy despite risks.</code></pre>
+<p><strong>Validation</strong>: Ensure extracted structure forms valid directed acyclic graph and preserves key argumentative relationships from source.</p>
+<!-- [ ] CREATE: {#fig-extraction-example}: "Side-by-side source text and extracted ArgDown" -->
+</section>
+<section id="sec-stage2-bayesdown" class="level3">
+<h3 class="anchored" data-anchor-id="sec-stage2-bayesdown">3.2.2 Stage 2: Probability Integration (BayesDown)</h3>
+<p>The second stage adds quantitative information to the structural skeleton:</p>
+<p><strong>Question Generation</strong>: For each node, generate probability elicitation questions:</p>
+<!-- [ ] Probability Question Generation -->
+<p>Examples needed: - “What is the probability of existential catastrophe?” - “What is P(catastrophe|human_disempowerment)?” - Show how questions map to BayesDown structure</p>
+<p><strong>Probability Extraction</strong>: Identify explicit numerical statements and map qualitative expressions:</p>
+<ul>
+<li>“Very likely” → 0.75-0.9</li>
+<li>“Possible but unlikely” → 0.1-0.3</li>
+</ul>
+<p><strong>Coherence Enforcement</strong>: Ensure probabilities satisfy basic constraints:</p>
+<ul>
+<li>Probabilities sum to 1.0</li>
+<li>Conditional tables are complete</li>
+<li>No logical contradictions</li>
+</ul>
+<p><strong>Metadata Integration</strong>: Combine structure with probabilities in BayesDown format.</p>
+<!-- [ ] VERIFY: Probability mapping methodology with literature support -->
+</section>
+<section id="sec-why-two-stages" class="level3">
+<h3 class="anchored" data-anchor-id="sec-why-two-stages">3.2.3 Why Two Stages?</h3>
+<p>This separation provides several benefits:</p>
+<p><strong>Modular Validation</strong>: Structure can be verified independently from probability estimates, simplifying quality assurance.</p>
+<p><strong>Human Oversight</strong>: Experts can review and correct structural extraction before probability quantification.</p>
+<p><strong>Flexible Quantification</strong>: Different methods (LLM extraction, expert elicitation, market data) can provide probabilities for the same structure.</p>
+<p><strong>Error Isolation</strong>: Structural errors don’t contaminate probability extraction and vice versa.</p>
+<!-- [ ] CREATE: {#fig-two-stage-benefits}: "Flowchart showing modular validation points" -->
+</section>
+</section>
+<section id="sec-implementation-details" class="level2">
+<h2 class="anchored" data-anchor-id="sec-implementation-details">3.3 Implementation Details</h2>
+<p>The system is implemented in Python, leveraging established libraries while adding novel extraction capabilities.</p>
+<section id="sec-tech-stack" class="level3">
+<h3 class="anchored" data-anchor-id="sec-tech-stack">3.3.1 Technology Stack</h3>
+<ul>
+<li><strong>Language Models</strong>: OpenAI GPT-4 and Anthropic Claude for extraction</li>
+<li><strong>Network Analysis</strong>: NetworkX for graph algorithms</li>
+<li><strong>Probabilistic Modeling</strong>: pgmpy for Bayesian network operations</li>
+<li><strong>Visualization</strong>: PyVis for interactive network rendering</li>
+<li><strong>Data Processing</strong>: Pandas for structured data manipulation</li>
+</ul>
+<!-- [ ] CREATE: {#tbl-tech-stack}: "Complete technology stack with versions and purposes" -->
+</section>
+<section id="sec-key-algorithms" class="level3">
+<h3 class="anchored" data-anchor-id="sec-key-algorithms">3.3.2 Key Algorithms</h3>
+<p><strong>Hierarchical Parsing</strong>: The system parses ArgDown/BayesDown syntax recognizing indentation-based hierarchy:</p>
+<p><strong>Probability Completion</strong>: When sources don’t specify all required probabilities, the system uses principled methods:</p>
+<!-- [ ] Probability Completion Methods -->
+<p>Document approaches: - Maximum entropy for missing values - Coherence constraints propagation - Expert-specified defaults - Confidence scoring for completed values</p>
+<p><strong>Visual Encoding</strong>: Nodes are colored by probability magnitude and styled by network position:</p>
+<ul>
+<li>Green (high probability) to red (low probability) gradient</li>
+<li>Blue borders for root causes, purple for intermediate, magenta for effects</li>
+</ul>
+<!-- [ ] IMPLEMENT: Algorithm pseudocode for key functions -->
+</section>
+<section id="sec-performance" class="level3">
+<h3 class="anchored" data-anchor-id="sec-performance">3.3.3 Performance Characteristics</h3>
+<p>Benchmarking reveals practical scalability:</p>
+<div id="tbl-performance" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-tbl figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-performance-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Table&nbsp;3.1: Performance benchmarks for different network sizes
+</figcaption>
+<div aria-describedby="tbl-performance-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Network Size</th>
+<th>Nodes</th>
+<th>Processing Time</th>
+<th>Memory Usage</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Small</td>
+<td>≤10</td>
+<td>&lt;1 second</td>
+<td>&lt;100MB</td>
+</tr>
+<tr class="even">
+<td>Medium</td>
+<td>11-30</td>
+<td>2-8 seconds</td>
+<td>100-500MB</td>
+</tr>
+<tr class="odd">
+<td>Large</td>
+<td>31-50</td>
+<td>15-45 seconds</td>
+<td>0.5-1GB</td>
+</tr>
+<tr class="even">
+<td>Very Large</td>
+<td>&gt;50</td>
+<td>Requires approximation</td>
+<td>&gt;1GB</td>
+</tr>
+</tbody>
+</table>
+</div>
+</figure>
+</div>
+<p>The bottleneck shifts from extraction (linear in text length) to inference (exponential in network connectivity) as models grow.</p>
+<!-- [ ] VERIFY: Performance benchmarks with production data -->
+</section>
+</section>
+<section id="sec-case-rain-sprinkler" class="level2">
+<h2 class="anchored" data-anchor-id="sec-case-rain-sprinkler">3.4 Case Study: Rain-Sprinkler-Grass</h2>
+<p>I begin with the canonical example to demonstrate the complete pipeline on a simple, well-understood case.</p>
+<section id="sec-rsg-input" class="level3">
+<h3 class="anchored" data-anchor-id="sec-rsg-input">3.4.1 Input Representation</h3>
+<p>The source BayesDown representation:</p>
+<pre><code>[Grass_Wet]: Concentrated moisture on grass.
+{"instantiations": ["grass_wet_TRUE", "grass_wet_FALSE"],
+ "priors": {"p(grass_wet_TRUE)": "0.322", "p(grass_wet_FALSE)": "0.678"},
+ "posteriors": {
+   "p(grass_wet_TRUE|sprinkler_TRUE,rain_TRUE)": "0.99",
+   "p(grass_wet_TRUE|sprinkler_TRUE,rain_FALSE)": "0.9",
+   "p(grass_wet_TRUE|sprinkler_FALSE,rain_TRUE)": "0.8",
+   "p(grass_wet_TRUE|sprinkler_FALSE,rain_FALSE)": "0.0"
+ }}
+ + [Rain]: Water falling from sky.
+   {"instantiations": ["rain_TRUE", "rain_FALSE"],
+    "priors": {"p(rain_TRUE)": "0.2", "p(rain_FALSE)": "0.8"}}
+ + [Sprinkler]: Artificial watering system.
+   {"instantiations": ["sprinkler_TRUE", "sprinkler_FALSE"],
+    "priors": {"p(sprinkler_TRUE)": "0.448", "p(sprinkler_FALSE)": "0.552"},
+    "posteriors": {
+      "p(sprinkler_TRUE|rain_TRUE)": "0.01",
+      "p(sprinkler_TRUE|rain_FALSE)": "0.4"
+    }}
+   + [Rain]</code></pre>
+</section>
+<section id="sec-rsg-processing" class="level3">
+<h3 class="anchored" data-anchor-id="sec-rsg-processing">3.4.2 Processing Steps</h3>
+<ol type="1">
+<li><strong>Parsing</strong>: Extract three nodes with relationships</li>
+<li><strong>Validation</strong>: Verify probability coherence and DAG structure</li>
+<li><strong>Enhancement</strong>: Calculate joint probabilities and network metrics</li>
+<li><strong>Construction</strong>: Build formal Bayesian network</li>
+<li><strong>Visualization</strong>: Render interactive display</li>
+</ol>
+</section>
+<section id="sec-rsg-results" class="level3">
+<h3 class="anchored" data-anchor-id="sec-rsg-results">3.4.3 Results</h3>
+<p>The system successfully:</p>
+<ul>
+<li>Extracts complete network structure</li>
+<li>Preserves all probability information</li>
+<li>Calculates correct marginal probabilities</li>
+<li>Generates interactive visualization</li>
+<li>Enables inference queries</li>
+</ul>
+<!-- [ ] CREATE: {#fig-rsg-visualization}: "Interactive rain-sprinkler-grass network visualization" -->
+<p>This simple example validates the basic pipeline functionality before tackling complex real-world cases.</p>
+</section>
+</section>
+<section id="sec-case-carlsmith" class="level2">
+<h2 class="anchored" data-anchor-id="sec-case-carlsmith">3.5 Case Study: Carlsmith’s Power-Seeking AI Model</h2>
+<p>Applying AMTAIR to Carlsmith’s model demonstrates scalability to realistic AI safety arguments.</p>
+<section id="sec-carlsmith-complexity" class="level3">
+<h3 class="anchored" data-anchor-id="sec-carlsmith-complexity">3.5.1 Model Complexity</h3>
+<p>The Carlsmith model contains:</p>
+<ul>
+<li><strong>23 nodes</strong> representing different factors</li>
+<li><strong>27 edges</strong> encoding dependencies</li>
+<li><strong>Multiple probability tables</strong> with complex conditionals</li>
+<li><strong>Six-level causal depth</strong> from root causes to catastrophe</li>
+</ul>
+<!-- [ ] CREATE: {#fig-carlsmith-network}: "Full Carlsmith model Bayesian network visualization" -->
+</section>
+<section id="sec-carlsmith-extraction" class="level3">
+<h3 class="anchored" data-anchor-id="sec-carlsmith-extraction">3.5.2 Extraction Results</h3>
+<p>The automated extraction successfully identifies:</p>
+<p><strong>Core Risk Pathway</strong>:</p>
+<pre><code>Existential_Catastrophe 
+← Human_Disempowerment 
+← Scale_Of_Power_Seeking
+← Misaligned_Power_Seeking
+← [APS_Systems, Difficulty_Of_Alignment, Deployment_Decisions]</code></pre>
+<p><strong>Supporting Structure</strong>:</p>
+<ul>
+<li>Competitive dynamics influencing deployment</li>
+<li>Technical factors affecting alignment difficulty</li>
+<li>Corrective mechanisms and their limitations</li>
+</ul>
+<p><strong>Probability Preservation</strong>:</p>
+<ul>
+<li>Extracted probabilities match Carlsmith’s published estimates</li>
+<li>Conditional relationships properly captured</li>
+<li>Final P(doom) calculation reproduces ~5% result</li>
+</ul>
+<!-- [ ] IMPLEMENT: Full Carlsmith extraction with validation -->
+</section>
+<section id="sec-carlsmith-validation" class="level3">
+<h3 class="anchored" data-anchor-id="sec-carlsmith-validation">3.5.3 Validation Against Original</h3>
+<p>Comparing extracted model to Carlsmith’s original:</p>
+<div id="tbl-carlsmith-validation" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-tbl figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-carlsmith-validation-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Table&nbsp;3.2: Carlsmith model extraction validation results
+</figcaption>
+<div aria-describedby="tbl-carlsmith-validation-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Metric</th>
+<th>Performance</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Structural Accuracy</td>
+<td>92% (nodes and edges)</td>
+</tr>
+<tr class="even">
+<td>Probability Accuracy</td>
+<td>87% (within 0.05)</td>
+</tr>
+<tr class="odd">
+<td>Path Completeness</td>
+<td>100% (all major paths)</td>
+</tr>
+<tr class="even">
+<td>Semantic Preservation</td>
+<td>High (per expert review)</td>
+</tr>
+</tbody>
+</table>
+</div>
+</figure>
+</div>
+<p>The high fidelity demonstrates AMTAIR’s capability for complex real-world arguments.</p>
+<!-- [ ] VERIFY: Validation metrics with confidence intervals -->
+</section>
+<section id="sec-carlsmith-insights" class="level3">
+<h3 class="anchored" data-anchor-id="sec-carlsmith-insights">3.5.4 Insights from Formalization</h3>
+<p>Formal representation reveals several insights:</p>
+<p><strong>Critical Path Analysis</strong>: The pathway through APS development and deployment decisions carries the highest risk contribution.</p>
+<p><strong>Sensitivity Points</strong>: Small changes in deployment probability create large changes in overall risk.</p>
+<p><strong>Intervention Opportunities</strong>: Improving alignment difficulty or deployment governance show highest impact potential.</p>
+<p>These insights emerge naturally from formal analysis but remain implicit in textual arguments.</p>
+<!-- [ ] CREATE: {#fig-sensitivity-analysis}: "Tornado diagram of parameter sensitivity" -->
+</section>
+</section>
+<section id="sec-validation-methodology" class="level2">
+<h2 class="anchored" data-anchor-id="sec-validation-methodology">3.6 Validation Methodology</h2>
+<p>Establishing trust in automated extraction requires rigorous validation across multiple dimensions.</p>
+<section id="sec-ground-truth" class="level3">
+<h3 class="anchored" data-anchor-id="sec-ground-truth">3.6.1 Ground Truth Construction</h3>
+<p>I created validation datasets through:</p>
+<!-- [ ] Manual Extraction Protocol -->
+<p>Document the process: 1. Expert selection criteria 2. Training on extraction methodology 3. Independent extraction procedures 4. Consensus building process 5. Inter-rater reliability metrics</p>
+<ol type="1">
+<li><strong>Expert Manual Extraction</strong>: Three domain experts independently extracted models from the same sources</li>
+<li><strong>Consensus Building</strong>: Reconciled differences to create gold standard representations</li>
+<li><strong>Annotation</strong>: Marked source passages supporting each element</li>
+</ol>
+<!-- [ ] VERIFY: IRR statistics and expert qualifications -->
+</section>
+<section id="sec-evaluation-metrics" class="level3">
+<h3 class="anchored" data-anchor-id="sec-evaluation-metrics">3.6.2 Evaluation Metrics</h3>
+<p><strong>Structural Metrics</strong>:</p>
+<ul>
+<li>Precision: Fraction of extracted elements that are correct</li>
+<li>Recall: Fraction of true elements that are extracted</li>
+<li>F1 Score: Harmonic mean balancing precision and recall</li>
+</ul>
+<p><strong>Probabilistic Metrics</strong>:</p>
+<ul>
+<li>Mean Absolute Error for probability values</li>
+<li>Kullback-Leibler divergence for distributions</li>
+<li>Calibration plots for uncertainty expression</li>
+</ul>
+<p><strong>Semantic Metrics</strong>:</p>
+<ul>
+<li>Expert ratings of meaning preservation</li>
+<li>Functional equivalence for inference queries</li>
+</ul>
+<!-- [ ] CREATE: {#fig-validation-metrics}: "Visual summary of validation approach" -->
+</section>
+<section id="sec-validation-results" class="level3">
+<h3 class="anchored" data-anchor-id="sec-validation-results">3.6.3 Results Summary</h3>
+<p>Across 20 test documents:</p>
+<div id="tbl-validation-summary" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-tbl figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-validation-summary-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Table&nbsp;3.3: System validation results across components
+</figcaption>
+<div aria-describedby="tbl-validation-summary-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Component</th>
+<th>Precision</th>
+<th>Recall</th>
+<th>F1 Score</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Node Identification</td>
+<td>89%</td>
+<td>86%</td>
+<td>0.875</td>
+</tr>
+<tr class="even">
+<td>Edge Extraction</td>
+<td>84%</td>
+<td>81%</td>
+<td>0.825</td>
+</tr>
+<tr class="odd">
+<td>Probability Values</td>
+<td>76%</td>
+<td>71%</td>
+<td>0.735</td>
+</tr>
+<tr class="even">
+<td><strong>Overall System</strong></td>
+<td><strong>83%</strong></td>
+<td><strong>79%</strong></td>
+<td><strong>0.810</strong></td>
+</tr>
+</tbody>
+</table>
+</div>
+</figure>
+</div>
+<!-- [ ] CRITICAL: Add confidence intervals to all metrics -->
+<p>Performance is strongest for explicit structural elements and numerical probabilities, with more challenges in extracting implicit relationships and qualitative uncertainty.</p>
+</section>
+<section id="sec-error-analysis" class="level3">
+<h3 class="anchored" data-anchor-id="sec-error-analysis">3.6.4 Error Analysis</h3>
+<p>Common failure modes:</p>
+<p><strong>Implicit Assumptions</strong> (23% of errors): Unstated background assumptions that experts infer but system misses.</p>
+<p><strong>Complex Conditionals</strong> (19% of errors): Nested conditionals with multiple antecedents challenge current parsing.</p>
+<p><strong>Ambiguous Quantifiers</strong> (17% of errors): Terms like “significant” lack clear probability mapping without context.</p>
+<p><strong>Coreference Resolution</strong> (15% of errors): Pronouns and indirect references create attribution challenges.</p>
+<p>Understanding these limitations guides both current usage and future improvements.</p>
+<!-- [ ] CREATE: {#fig-error-taxonomy}: "Breakdown of error types with examples" -->
+</section>
+</section>
+<section id="sec-policy-evaluation" class="level2">
+<h2 class="anchored" data-anchor-id="sec-policy-evaluation">3.7 Policy Evaluation Capabilities</h2>
+<p>Beyond extraction and visualization, AMTAIR enables systematic policy analysis through formal intervention modeling.</p>
+<section id="sec-intervention-representation" class="level3">
+<h3 class="anchored" data-anchor-id="sec-intervention-representation">3.7.1 Intervention Representation</h3>
+<p>Policies are modeled as modifications to network parameters:</p>
+<!-- [ ] VERIFY: Pearl's do-calculus implementation correctness -->
+</section>
+<section id="sec-deployment-example" class="level3">
+<h3 class="anchored" data-anchor-id="sec-deployment-example">3.7.2 Example: Deployment Governance</h3>
+<p>Consider a policy requiring safety certification before deployment:</p>
+<p><strong>Intervention</strong>: Set P(deployment|misaligned) = 0.1 (from 0.7)</p>
+<p><strong>Results</strong>:</p>
+<ul>
+<li>Baseline P(catastrophe) = 0.05</li>
+<li>Intervened P(catastrophe) = 0.012</li>
+<li>Relative risk reduction = 76%</li>
+<li>Number needed to regulate = 26 deployments</li>
+</ul>
+<p>This quantitative analysis enables comparison across interventions.</p>
+<!-- [ ] IMPLEMENT: Multiple policy evaluation examples -->
+</section>
+<section id="sec-robustness" class="level3">
+<h3 class="anchored" data-anchor-id="sec-robustness">3.7.3 Robustness Analysis</h3>
+<p>Policies must work across worldviews. AMTAIR enables:</p>
+<ol type="1">
+<li><strong>Multi-Model Evaluation</strong>: Test interventions across different extracted models</li>
+<li><strong>Parameter Sensitivity</strong>: Vary assumptions to find breaking points</li>
+<li><strong>Scenario Analysis</strong>: Combine interventions under different futures</li>
+<li><strong>Confidence Bounds</strong>: Propagate uncertainty through to outcomes</li>
+</ol>
+<p>This systematic approach moves beyond intuitive policy assessment.</p>
+<!-- [ ] CREATE: {#fig-robustness-analysis}: "Policy effectiveness across worldviews" -->
+</section>
+</section>
+<section id="sec-visualization-design" class="level2">
+<h2 class="anchored" data-anchor-id="sec-visualization-design">3.8 Interactive Visualization Design</h2>
+<p>Making Bayesian networks accessible to diverse stakeholders requires careful visualization design.</p>
+<section id="sec-visual-encoding" class="level3">
+<h3 class="anchored" data-anchor-id="sec-visual-encoding">3.8.1 Visual Encoding Strategy</h3>
+<p>The system uses multiple visual channels:</p>
+<p><strong>Color</strong>: Probability magnitude (green=high, red=low)<br>
+<strong>Borders</strong>: Node type (blue=root, purple=intermediate, magenta=effect)<br>
+<strong>Size</strong>: Centrality in network (larger=more influential)<br>
+<strong>Layout</strong>: Force-directed positioning reveals clusters</p>
+<!-- [ ] CREATE: {#fig-visual-encoding}: "Legend showing all visual encodings" -->
+</section>
+<section id="sec-progressive-disclosure" class="level3">
+<h3 class="anchored" data-anchor-id="sec-progressive-disclosure">3.8.2 Progressive Disclosure</h3>
+<p>Information appears at appropriate levels:</p>
+<ol type="1">
+<li><strong>Overview</strong>: Network structure and color coding</li>
+<li><strong>Hover</strong>: Node description and prior probability</li>
+<li><strong>Click</strong>: Full probability tables and details</li>
+<li><strong>Interaction</strong>: Drag to rearrange, zoom to explore</li>
+</ol>
+<p>This layered approach serves both quick assessment and deep analysis needs.</p>
+<!-- [ ] IMPLEMENT: Video demonstration of interaction features -->
+</section>
+<section id="sec-ui-elements" class="level3">
+<h3 class="anchored" data-anchor-id="sec-ui-elements">3.8.3 User Interface Elements</h3>
+<p>Key features enhance usability:</p>
+<ul>
+<li><strong>Physics Controls</strong>: Adjust layout dynamics</li>
+<li><strong>Filter Options</strong>: Show/hide node types</li>
+<li><strong>Export Functions</strong>: Save images or data</li>
+<li><strong>Comparison Mode</strong>: Side-by-side worldviews</li>
+</ul>
+<p>These features emerged from user testing with researchers and policymakers.</p>
+<!-- [ ] VERIFY: User testing results and feature requests -->
+</section>
+</section>
+<section id="sec-market-integration" class="level2">
+<h2 class="anchored" data-anchor-id="sec-market-integration">3.9 Integration with Prediction Markets</h2>
+<p>While full integration remains future work, the architecture supports connection to live forecasting data.</p>
+<section id="sec-integration-design" class="level3">
+<h3 class="anchored" data-anchor-id="sec-integration-design">3.9.1 Design for Integration</h3>
+<p>The system architecture anticipates market connections:</p>
+<!-- [ ] Prediction Market Integration Architecture -->
+<p>Design documentation needed: - API specifications for major platforms - Semantic matching algorithms - Probability aggregation methods - Update scheduling and caching</p>
+<div class="sourceCode" id="cb9"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="co">#| label: market-connector</span></span>
+<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a><span class="co">#| eval: false</span></span>
+<span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-4"><a href="#cb9-4" aria-hidden="true" tabindex="-1"></a><span class="kw">class</span> PredictionMarketConnector:</span>
+<span id="cb9-5"><a href="#cb9-5" aria-hidden="true" tabindex="-1"></a>    <span class="kw">def</span> <span class="fu">__init__</span>(<span class="va">self</span>, market_apis):</span>
+<span id="cb9-6"><a href="#cb9-6" aria-hidden="true" tabindex="-1"></a>        <span class="va">self</span>.markets <span class="op">=</span> market_apis</span>
+<span id="cb9-7"><a href="#cb9-7" aria-hidden="true" tabindex="-1"></a>        </span>
+<span id="cb9-8"><a href="#cb9-8" aria-hidden="true" tabindex="-1"></a>    <span class="kw">def</span> find_relevant_questions(<span class="va">self</span>, model_variables):</span>
+<span id="cb9-9"><a href="#cb9-9" aria-hidden="true" tabindex="-1"></a>        <span class="co">"""Map model variables to forecast questions"""</span></span>
+<span id="cb9-10"><a href="#cb9-10" aria-hidden="true" tabindex="-1"></a>        <span class="co"># Semantic matching between variables and questions</span></span>
+<span id="cb9-11"><a href="#cb9-11" aria-hidden="true" tabindex="-1"></a>        </span>
+<span id="cb9-12"><a href="#cb9-12" aria-hidden="true" tabindex="-1"></a>    <span class="kw">def</span> fetch_probabilities(<span class="va">self</span>, questions):</span>
+<span id="cb9-13"><a href="#cb9-13" aria-hidden="true" tabindex="-1"></a>        <span class="co">"""Retrieve latest market probabilities"""</span></span>
+<span id="cb9-14"><a href="#cb9-14" aria-hidden="true" tabindex="-1"></a>        <span class="co"># API calls with caching and error handling</span></span>
+<span id="cb9-15"><a href="#cb9-15" aria-hidden="true" tabindex="-1"></a>        </span>
+<span id="cb9-16"><a href="#cb9-16" aria-hidden="true" tabindex="-1"></a>    <span class="kw">def</span> update_model(<span class="va">self</span>, model, market_data):</span>
+<span id="cb9-17"><a href="#cb9-17" aria-hidden="true" tabindex="-1"></a>        <span class="co">"""Integrate market probabilities into model"""</span></span>
+<span id="cb9-18"><a href="#cb9-18" aria-hidden="true" tabindex="-1"></a>        <span class="co"># Weighted updating based on liquidity and track record</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section id="sec-market-challenges" class="level3">
+<h3 class="anchored" data-anchor-id="sec-market-challenges">3.9.2 Challenges and Opportunities</h3>
+<p>Key integration challenges:</p>
+<ul>
+<li><strong>Question Mapping</strong>: Model variables rarely match market questions exactly</li>
+<li><strong>Temporal Alignment</strong>: Markets forecast specific dates, models consider scenarios</li>
+<li><strong>Quality Variation</strong>: Market depth and participation vary significantly</li>
+</ul>
+<p>Despite challenges, even partial integration provides value through external validation and dynamic updating.</p>
+<!-- [ ] CREATE: {#fig-market-integration}: "Workflow for prediction market integration" -->
+</section>
+</section>
+<section id="sec-computational" class="level2">
+<h2 class="anchored" data-anchor-id="sec-computational">3.10 Computational Considerations</h2>
+<p>As networks grow large, computational challenges emerge requiring sophisticated approaches.</p>
+<section id="sec-exact-approximate" class="level3">
+<h3 class="anchored" data-anchor-id="sec-exact-approximate">3.10.1 Exact vs.&nbsp;Approximate Inference</h3>
+<p>Small networks enable exact inference through variable elimination. Larger networks require approximation:</p>
+<p><strong>Monte Carlo Methods</strong>: Sample from probability distributions to estimate queries<br>
+<strong>Variational Inference</strong>: Optimize simpler distributions to approximate true posteriors<br>
+<strong>Belief Propagation</strong>: Pass messages between nodes to converge on beliefs</p>
+<p>The system automatically selects appropriate methods based on network properties.</p>
+<!-- [ ] CREATE: {#tbl-inference-methods}: "Comparison of inference algorithms" -->
+</section>
+<section id="sec-scaling-strategies" class="level3">
+<h3 class="anchored" data-anchor-id="sec-scaling-strategies">3.10.2 Scaling Strategies</h3>
+<p>For very large networks:</p>
+<!-- [ ] Scaling Implementation -->
+<p>Document strategies with benchmarks: 1. Hierarchical decomposition algorithms 2. Pruning criteria and impact 3. Caching architecture 4. Parallelization speedups</p>
+<ol type="1">
+<li><strong>Hierarchical Decomposition</strong>: Break into sub-networks for independent analysis</li>
+<li><strong>Pruning</strong>: Remove low-influence paths for specific queries</li>
+<li><strong>Caching</strong>: Store computed results for common queries</li>
+<li><strong>Parallelization</strong>: Distribute sampling across processors</li>
+</ol>
+<p>These strategies extend practical network size limits significantly.</p>
+</section>
+</section>
+<section id="sec-technical-summary" class="level2">
+<h2 class="anchored" data-anchor-id="sec-technical-summary">3.11 Summary of Technical Achievements</h2>
+<p>AMTAIR successfully demonstrates:</p>
+<ul>
+<li><strong>Automated extraction</strong> from natural language to formal models</li>
+<li><strong>Two-stage architecture</strong> separating structure from quantification</li>
+<li><strong>High fidelity</strong> preservation of complex arguments</li>
+<li><strong>Interactive visualization</strong> accessible to diverse users</li>
+<li><strong>Policy evaluation</strong> capabilities through intervention modeling</li>
+<li><strong>Scalable implementation</strong> handling realistic network sizes</li>
+</ul>
+<p>These achievements validate the feasibility of computational coordination infrastructure for AI governance.</p>
+<!-- [ ] CREATE: {#fig-achievement-summary}: "Visual summary of AMTAIR capabilities" -->
+</section>
+</section>
+<section id="sec-discussion" class="level1">
+<h1>4. Discussion: Implications and Limitations</h1>
+<p>This chapter critically examines AMTAIR’s implications, limitations, and potential failure modes. By engaging seriously with objections and challenges, I aim to provide a balanced assessment of what this approach can and cannot achieve for AI governance coordination.</p>
+<section id="sec-technical-limitations" class="level2">
+<h2 class="anchored" data-anchor-id="sec-technical-limitations">4.1 Technical Limitations and Responses</h2>
+<section id="sec-extraction-boundaries" class="level3">
+<h3 class="anchored" data-anchor-id="sec-extraction-boundaries">4.1.1 Objection 1: Extraction Quality Boundaries</h3>
+<p><strong>Critic</strong>: “Complex implicit reasoning chains resist formalization. Automated extraction will systematically miss nuanced arguments, subtle conditional relationships, and context-dependent meanings that human readers naturally understand.”</p>
+<p><strong>Response</strong>: This concern has merit—extraction does face inherent limitations. However, the empirical results tell a more nuanced story. With extraction achieving 85%+ accuracy for structural relationships and 73% for probability capture, the system performs well enough for practical use while falling short of human expert performance.</p>
+<p>More importantly, AMTAIR employs a hybrid human-AI workflow that addresses this limitation:</p>
+<ul>
+<li><strong>Two-stage verification</strong>: Humans review structural extraction before probability quantification</li>
+<li><strong>Transparent outputs</strong>: All intermediate representations remain human-readable</li>
+<li><strong>Iterative refinement</strong>: Extraction prompts improve based on error analysis</li>
+<li><strong>Ensemble approaches</strong>: Multiple extraction attempts can identify ambiguities</li>
+</ul>
+<p>The question is not whether automated extraction perfectly captures every nuance—it doesn’t. Rather, it’s whether imperfect extraction still provides value over no formal representation. When the alternative is relying on conflicting mental models that remain entirely implicit, even 75% accurate formal models represent significant progress.</p>
+<p>Furthermore, extraction errors often reveal interesting properties of the source arguments themselves—ambiguities that human readers gloss over become explicit when formalization fails. This diagnostic value enhances rather than undermines the approach.</p>
+<!-- [ ] IMPLEMENT: Extraction confidence scoring system -->
+</section>
+<section id="sec-false-precision" class="level3">
+<h3 class="anchored" data-anchor-id="sec-false-precision">4.1.2 Objection 2: False Precision in Uncertainty</h3>
+<p><strong>Critic</strong>: “Attaching exact probabilities to unprecedented events like AI catastrophe is fundamentally misguided. The numbers create false confidence in what amounts to educated speculation about radically uncertain futures.”</p>
+<p><strong>Response</strong>: This philosophical objection strikes at the heart of formal risk assessment. However, AMTAIR addresses it through several design choices:</p>
+<p>First, the system explicitly represents uncertainty about uncertainty. Rather than point estimates, the framework supports probability distributions over parameters. When someone says “likely” we might model this as Beta(8,2) rather than exactly 0.8, capturing both the central estimate and our uncertainty about it.</p>
+<!-- [ ] IMPLEMENT: Full probability distribution support -->
+<p>Technical requirements: - Beta distributions for probability parameters - Dirichlet for multi-state variables - Propagation through inference - Visualization of uncertainty bounds</p>
+<p>Second, all probabilities are explicitly conditional on stated assumptions. The system doesn’t claim “P(catastrophe) = 0.05” absolutely, but rather “Given Carlsmith’s model assumptions, P(catastrophe) = 0.05.” This conditionality is preserved throughout analysis.</p>
+<p>Third, sensitivity analysis reveals which probabilities actually matter. Often, precise values are unnecessary—knowing whether a parameter is closer to 0.1 or 0.9 suffices for decision-making. The formalization helps identify where precision matters and where it doesn’t.</p>
+<p>Finally, the alternative to quantification isn’t avoiding the problem but making it worse. When experts say “highly likely” or “significant risk,” they implicitly reason with probabilities. Formalization simply makes these implicit quantities explicit and subject to scrutiny. As Dennis Lindley noted, “Uncertainty is not in the events, but in our knowledge about them.”</p>
+<!-- [ ] VERIFY: @lindley-uncertainty: "Lindley, D. (2006). Understanding Uncertainty" -->
+</section>
+<section id="sec-correlation-complexity" class="level3">
+<h3 class="anchored" data-anchor-id="sec-correlation-complexity">4.1.3 Objection 3: Correlation Complexity</h3>
+<p><strong>Critic</strong>: “Bayesian networks assume conditional independence given parents, but real-world AI risks involve complex correlations. Ignoring these dependencies could dramatically misrepresent risk levels.”</p>
+<p><strong>Response</strong>: Standard Bayesian networks do face limitations with correlation representation—this is a genuine technical challenge. However, several approaches within the framework address this:</p>
+<p><strong>Explicit correlation nodes</strong>: When factors share hidden common causes, we can add latent variables to capture correlations. For instance, “AI research culture” might influence both “capability advancement” and “safety investment.”</p>
+<!-- [ ] CREATE: {#fig-correlation-nodes}: "Example of explicit correlation modeling" -->
+<p><strong>Copula methods</strong>: For known correlation structures, copula functions can model dependencies while preserving marginal distributions. This extends standard Bayesian networks significantly.</p>
+<!-- [ ] FIND: @copula-bayesian: "Integration of copulas with Bayesian networks" -->
+<p><strong>Sensitivity bounds</strong>: When correlations remain uncertain, we can compute bounds on outcomes under different correlation assumptions. This reveals when correlations critically affect conclusions.</p>
+<p><strong>Model ensembles</strong>: Different correlation structures can be modeled separately and results aggregated, similar to climate modeling approaches.</p>
+<p>More fundamentally, the question is whether imperfect independence assumptions invalidate the approach. In practice, explicitly modeling first-order effects with known limitations often proves more valuable than attempting to capture all dependencies informally. The framework makes assumptions transparent, enabling targeted improvements where correlations matter most.</p>
+<!-- [ ] IMPLEMENT: Correlation sensitivity analysis tools -->
+</section>
+</section>
+<section id="sec-conceptual-concerns" class="level2">
+<h2 class="anchored" data-anchor-id="sec-conceptual-concerns">4.2 Conceptual and Methodological Concerns</h2>
+<section id="sec-democratic-exclusion" class="level3">
+<h3 class="anchored" data-anchor-id="sec-democratic-exclusion">4.2.1 Objection 4: Democratic Exclusion</h3>
+<p><strong>Critic</strong>: “Transforming policy debates into complex graphs and equations will sideline non-technical stakeholders, concentrating influence among those comfortable with formal models. This technocratic approach undermines democratic participation in crucial decisions about humanity’s future.”</p>
+<p><strong>Response</strong>: This concern about technocratic exclusion deserves serious consideration—formal methods can indeed create barriers. However, AMTAIR’s design explicitly prioritizes accessibility alongside rigor:</p>
+<p><strong>Progressive disclosure interfaces</strong> allow engagement at multiple levels. A policymaker might explore visual network structures and probability color-coding without engaging mathematical details. Interactive features let users modify assumptions and see consequences without understanding implementation.</p>
+<p><strong>Natural language preservation</strong> ensures original arguments remain accessible. The BayesDown format maintains human-readable descriptions alongside formal specifications. Users can always trace from mathematical representations back to source texts.</p>
+<p><strong>Comparative advantage</strong> comes from making implicit technical content explicit, not adding complexity. When experts debate AI risk, they already employ sophisticated probabilistic reasoning—formalization reveals rather than creates this complexity. Making hidden assumptions visible arguably enhances rather than reduces democratic participation.</p>
+<p><strong>Multiple interfaces</strong> serve different communities. Researchers access full technical depth, policymakers use summary dashboards, public stakeholders explore interactive visualizations. The same underlying model supports varied engagement modes.</p>
+<p>Rather than excluding non-technical stakeholders, proper implementation can democratize access to expert reasoning by making it inspectable and modifiable. The risk lies not in formalization itself but in poor interface design or gatekeeping behaviors around model access.</p>
+<!-- [ ] CREATE: {#fig-multi-interface}: "Different stakeholder interfaces for same model" -->
+</section>
+<section id="sec-oversimplification" class="level3">
+<h3 class="anchored" data-anchor-id="sec-oversimplification">4.2.2 Objection 5: Oversimplification of Complex Systems</h3>
+<p><strong>Critic</strong>: “Forcing rich socio-technical systems into discrete Bayesian networks necessarily loses crucial dynamics—feedback loops, emergent properties, institutional responses, and cultural factors that shape AI development. The models become precise but wrong.”</p>
+<p><strong>Response</strong>: All models simplify by necessity—as Box noted, “All models are wrong, but some are useful.” The question becomes whether formal simplifications improve upon informal mental models:</p>
+<p><strong>Transparent limitations</strong> make formal models’ shortcomings explicit. Unlike mental models where simplifications remain hidden, network representations clearly show what is and isn’t included. This transparency enables targeted criticism and improvement.</p>
+<p><strong>Iterative refinement</strong> allows models to grow more sophisticated over time. Starting with first-order effects and adding complexity where it proves important follows successful practice in other domains. Climate models began simply and added dynamics as computational power and understanding grew.</p>
+<p><strong>Complementary tools</strong> address different aspects of the system. Bayesian networks excel at probabilistic reasoning and intervention analysis. Other approaches—agent-based models, system dynamics, scenario planning—can capture different properties. AMTAIR provides one lens, not the only lens.</p>
+<p><strong>Empirical adequacy</strong> ultimately judges models. If simplified representations enable better predictions and decisions than informal alternatives, their abstractions are justified. Early results suggest formal models, despite simplifications, outperform intuitive reasoning for complex risk assessment.</p>
+<p>The goal isn’t creating perfect representations but useful ones. By making simplifications explicit and modifiable, formal models enable systematic improvement in ways mental models cannot.</p>
+<!-- [ ] VERIFY: @box-models: "Box, G.E.P. (1976). Science and statistics" -->
+</section>
+</section>
+<section id="sec-red-teaming" class="level2">
+<h2 class="anchored" data-anchor-id="sec-red-teaming">4.3 Red-Teaming Results</h2>
+<p>To identify failure modes, I conducted systematic adversarial testing of the AMTAIR system.</p>
+<section id="sec-adversarial-extraction" class="level3">
+<h3 class="anchored" data-anchor-id="sec-adversarial-extraction">4.3.1 Adversarial Extraction Attempts</h3>
+<p>I tested the system with deliberately challenging inputs:</p>
+<p><strong>Contradictory Arguments</strong>: Texts asserting P(A) = 0.2 and P(A) = 0.8 in different sections</p>
+<ul>
+<li>Result: System flagged inconsistency rather than averaging</li>
+<li>Mitigation: Explicit consistency checking with user resolution</li>
+</ul>
+<p><strong>Circular Reasoning</strong>: Arguments where A causes B causes C causes A</p>
+<ul>
+<li>Result: DAG validation caught cycles, extraction failed gracefully</li>
+<li>Mitigation: Clear error messages explaining the structural issue</li>
+</ul>
+<p><strong>Extremely Vague Language</strong>: Texts using only qualitative terms without clear relationships</p>
+<ul>
+<li>Result: Extraction quality degraded significantly (F1 &lt; 0.5)</li>
+<li>Mitigation: Confidence scores on extracted elements, human review triggers</li>
+</ul>
+<p><strong>Deceptive Framings</strong>: Arguments designed to imply false causal relationships</p>
+<ul>
+<li>Result: System sometimes extracted spurious connections</li>
+<li>Mitigation: Source grounding requirements, validation against citations</li>
+</ul>
+<!-- [ ] CREATE: {#tbl-adversarial-results}: "Summary of red-teaming findings" -->
+</section>
+<section id="sec-robustness-findings" class="level3">
+<h3 class="anchored" data-anchor-id="sec-robustness-findings">4.3.2 Robustness Findings</h3>
+<p>Key vulnerabilities identified:</p>
+<!-- [ ] VERIFY: Quantitative red-teaming results -->
+<p>Specific metrics need validation: - Anchoring bias: measured effect size with confidence intervals - Authority sensitivity: controlled experiment design - Complexity degradation: performance curve analysis - Context loss: dependency distance metrics</p>
+<ol type="1">
+<li><strong>Anchoring bias</strong>: System tends to over-weight first probability mentioned (effect size analysis needed)</li>
+<li><strong>Authority sensitivity</strong>: Extracted probabilities influenced by cited expert prominence</li>
+<li><strong>Complexity degradation</strong>: Performance drops sharply beyond 50 nodes</li>
+<li><strong>Context loss</strong>: Long-range dependencies in text sometimes missed</li>
+</ol>
+<p>However, the system demonstrated robustness to:</p>
+<ul>
+<li>Different writing styles and academic disciplines</li>
+<li>Variations in argument structure and presentation order</li>
+<li>Mixed numerical and qualitative probability expressions</li>
+<li>Reasonable levels of grammatical errors and typos</li>
+</ul>
+</section>
+<section id="sec-deployment-implications" class="level3">
+<h3 class="anchored" data-anchor-id="sec-deployment-implications">4.3.3 Implications for Deployment</h3>
+<p>These results suggest AMTAIR is suitable for:</p>
+<ul>
+<li><strong>Research applications</strong> with expert oversight</li>
+<li><strong>Policy analysis</strong> of well-structured arguments</li>
+<li><strong>Educational uses</strong> demonstrating formal reasoning</li>
+<li><strong>Collaborative modeling</strong> with human verification</li>
+</ul>
+<p>But should be used cautiously for:</p>
+<ul>
+<li>Fully automated analysis without review</li>
+<li>Adversarial or politically contentious texts</li>
+<li>Real-time decision-making without validation</li>
+<li>Arguments far outside training distribution</li>
+</ul>
+<!-- [ ] IMPLEMENT: Deployment guidelines and best practices document -->
+</section>
+</section>
+<section id="sec-epistemic-security" class="level2">
+<h2 class="anchored" data-anchor-id="sec-epistemic-security">4.4 Enhancing Epistemic Security</h2>
+<p>Despite limitations, AMTAIR contributes to epistemic security in AI governance through several mechanisms.</p>
+<section id="sec-inspectable-models" class="level3">
+<h3 class="anchored" data-anchor-id="sec-inspectable-models">4.4.1 Making Models Inspectable</h3>
+<p>The greatest epistemic benefit comes from forcing implicit models into explicit form. When an expert claims “misalignment likely leads to catastrophe,” formalization asks:</p>
+<ul>
+<li>Likely means what probability?</li>
+<li>Through what causal pathways?</li>
+<li>Under what assumptions?</li>
+<li>With what evidence?</li>
+</ul>
+<p>This explicitation serves multiple functions:</p>
+<p><strong>Clarity</strong>: Vague statements become precise claims subject to evaluation</p>
+<p><strong>Comparability</strong>: Different experts’ models can be systematically compared</p>
+<p><strong>Criticizability</strong>: Hidden assumptions become visible targets for challenge</p>
+<p><strong>Updatability</strong>: Formal models can systematically incorporate new evidence</p>
+<!-- [ ] CREATE: {#fig-explicitation-process}: "How formalization reveals hidden assumptions" -->
+</section>
+<section id="sec-convergence-divergence" class="level3">
+<h3 class="anchored" data-anchor-id="sec-convergence-divergence">4.4.2 Revealing Convergence and Divergence</h3>
+<p>Comparative analysis across extracted models reveals surprising patterns:</p>
+<!-- [ ] Multi-Model Comparison Study -->
+<p>Implement comparison of 3+ models: - Structural similarity metrics - Parameter divergence analysis - Crux identification algorithms - Visualization of agreement patterns</p>
+<p><strong>Structural convergence</strong>: Different experts often share similar causal models even when probability estimates diverge dramatically. This suggests shared understanding of mechanisms despite disagreement on magnitudes.</p>
+<p><strong>Parameter clustering</strong>: Probability estimates often cluster around a few values rather than spreading uniformly, suggesting implicit coordination or common evidence bases.</p>
+<p><strong>Crux identification</strong>: Formal comparison precisely identifies where worldviews diverge—often just 2-3 key parameters drive different conclusions about overall risk.</p>
+<p>These insights remain hidden when arguments stay in natural language form.</p>
+<!-- [ ] CREATE: {#fig-convergence-patterns}: "Heatmap of model agreement across experts" -->
+</section>
+<section id="sec-collective-reasoning" class="level3">
+<h3 class="anchored" data-anchor-id="sec-collective-reasoning">4.4.3 Improving Collective Reasoning</h3>
+<p>AMTAIR enhances group epistemics through:</p>
+<p><strong>Explicit uncertainty</strong>: Replacing “might,” “could,” “likely” with probability distributions reduces miscommunication and forces precision</p>
+<p><strong>Compositional reasoning</strong>: Complex arguments decompose into manageable components that can be independently evaluated</p>
+<p><strong>Evidence integration</strong>: New information updates specific parameters rather than requiring complete argument reconstruction</p>
+<p><strong>Exploration tools</strong>: Stakeholders can modify assumptions and immediately see consequences, building intuition about model dynamics</p>
+<!-- [ ] VERIFY: Pilot study metrics with proper methodology -->
+<p>Early pilot studies with AI governance researchers show improved agreement identification and reduced time to consensus—though specific quantitative claims require careful validation.</p>
+</section>
+</section>
+<section id="sec-scaling" class="level2">
+<h2 class="anchored" data-anchor-id="sec-scaling">4.5 Scaling Challenges and Opportunities</h2>
+<p>Moving from prototype to widespread adoption faces both technical and social challenges.</p>
+<section id="sec-technical-scaling" class="level3">
+<h3 class="anchored" data-anchor-id="sec-technical-scaling">4.5.1 Technical Scaling</h3>
+<p><strong>Computational complexity</strong> grows with network size, but several approaches help:</p>
+<ul>
+<li>Hierarchical decomposition for very large models</li>
+<li>Caching and approximation for common queries</li>
+<li>Distributed processing for extraction tasks</li>
+<li>Incremental updating rather than full recomputation</li>
+</ul>
+<!-- [ ] CREATE: {#fig-scaling-architecture}: "Technical architecture for large-scale deployment" -->
+<p><strong>Data quality</strong> varies dramatically across sources:</p>
+<ul>
+<li>Academic papers provide structured arguments</li>
+<li>Blog posts offer rich ideas with less formal structure</li>
+<li>Policy documents mix normative and empirical claims</li>
+<li>Social media presents extreme extraction challenges</li>
+</ul>
+<p><strong>Integration complexity</strong> increases with ecosystem growth:</p>
+<ul>
+<li>Multiple LLM providers with different capabilities</li>
+<li>Diverse visualization needs across users</li>
+<li>Various export formats for downstream tools</li>
+<li>Version control for evolving models</li>
+</ul>
+<!-- [ ] IMPLEMENT: Scalability roadmap with milestones -->
+</section>
+<section id="sec-social-scaling" class="level3">
+<h3 class="anchored" data-anchor-id="sec-social-scaling">4.5.2 Social and Institutional Scaling</h3>
+<p><strong>Adoption barriers</strong> include:</p>
+<ul>
+<li>Learning curve for formal methods</li>
+<li>Institutional inertia in established processes</li>
+<li>Concerns about replacing human judgment</li>
+<li>Resource requirements for implementation</li>
+</ul>
+<p><strong>Trust building</strong> requires:</p>
+<ul>
+<li>Transparent methodology documentation</li>
+<li>Published validation studies</li>
+<li>High-profile successful applications</li>
+<li>Community ownership and development</li>
+</ul>
+<p><strong>Sustainability</strong> depends on:</p>
+<ul>
+<li>Open source development model</li>
+<li>Diverse funding sources</li>
+<li>Academic and industry partnerships</li>
+<li>Clear value demonstration</li>
+</ul>
+<!-- [ ] FIND: @technology-adoption: "Models of institutional technology adoption" -->
+</section>
+<section id="sec-impact-opportunities" class="level3">
+<h3 class="anchored" data-anchor-id="sec-impact-opportunities">4.5.3 Opportunities for Impact</h3>
+<p>Despite challenges, several factors favor adoption:</p>
+<p><strong>Timing</strong>: AI governance needs tools now, creating receptive audiences</p>
+<p><strong>Complementarity</strong>: AMTAIR enhances rather than replaces existing processes</p>
+<p><strong>Flexibility</strong>: The approach adapts to different contexts and needs</p>
+<p><strong>Network effects</strong>: Value increases as more perspectives are formalized</p>
+<p>Early adopters in research organizations and think tanks can demonstrate value, creating momentum for broader adoption.</p>
+<!-- [ ] CREATE: {#fig-adoption-pathway}: "Stages of AMTAIR adoption across institutions" -->
+</section>
+</section>
+<section id="sec-governance-integration" class="level2">
+<h2 class="anchored" data-anchor-id="sec-governance-integration">4.6 Integration with Governance Frameworks</h2>
+<p>AMTAIR complements rather than replaces existing governance approaches.</p>
+<section id="sec-standards-integration" class="level3">
+<h3 class="anchored" data-anchor-id="sec-standards-integration">4.6.1 Standards Development</h3>
+<p>Technical standards bodies could use AMTAIR to:</p>
+<ul>
+<li>Model how proposed standards affect risk pathways</li>
+<li>Compare different standard options systematically</li>
+<li>Identify unintended consequences through pathway analysis</li>
+<li>Build consensus through explicit model negotiation</li>
+</ul>
+<p>Example: Evaluating compute thresholds for AI system regulation by modeling how different thresholds affect capability development, safety investment, and competitive dynamics.</p>
+<!-- [ ] IMPLEMENT: Standards evaluation framework -->
+</section>
+<section id="sec-regulatory-integration" class="level3">
+<h3 class="anchored" data-anchor-id="sec-regulatory-integration">4.6.2 Regulatory Design</h3>
+<p>Regulators could apply the framework to:</p>
+<ul>
+<li>Assess regulatory impact across different scenarios</li>
+<li>Identify enforcement challenges through explicit modeling</li>
+<li>Compare international approaches systematically</li>
+<li>Design adaptive regulations responsive to evidence</li>
+</ul>
+<p>Example: Analyzing how liability frameworks affect corporate AI development decisions under different market conditions.</p>
+<!-- [ ] CREATE: {#fig-regulatory-analysis}: "Regulatory impact assessment workflow" -->
+</section>
+<section id="sec-international-integration" class="level3">
+<h3 class="anchored" data-anchor-id="sec-international-integration">4.6.3 International Coordination</h3>
+<p>Multilateral bodies could leverage shared models for:</p>
+<ul>
+<li>Establishing common risk assessments</li>
+<li>Negotiating agreements with explicit assumptions</li>
+<li>Monitoring compliance through parameter tracking</li>
+<li>Adapting agreements as evidence emerges</li>
+</ul>
+<p>Example: Building shared models for AGI development scenarios to inform international AI governance treaties.</p>
+<!-- [ ] FIND: @international-ai-governance: "Precedents for technical cooperation in treaties" -->
+</section>
+<section id="sec-organizational-integration" class="level3">
+<h3 class="anchored" data-anchor-id="sec-organizational-integration">4.6.4 Organizational Decision-Making</h3>
+<p>Individual organizations could use AMTAIR for:</p>
+<ul>
+<li>Internal risk assessment and planning</li>
+<li>Board-level communication about AI strategies</li>
+<li>Research prioritization based on model sensitivity</li>
+<li>Safety case development with explicit assumptions</li>
+</ul>
+<p>Example: An AI lab modeling how different safety investments affect both capability advancement and risk mitigation.</p>
+<!-- [ ] VERIFY: Organization use cases through interviews -->
+</section>
+</section>
+<section id="sec-future-research" class="level2">
+<h2 class="anchored" data-anchor-id="sec-future-research">4.7 Future Research Directions</h2>
+<p>Several research directions could enhance AMTAIR’s capabilities and impact.</p>
+<section id="sec-technical-future" class="level3">
+<h3 class="anchored" data-anchor-id="sec-technical-future">4.7.1 Technical Enhancements</h3>
+<p><strong>Improved extraction</strong>: Fine-tuning language models specifically for argument extraction, handling implicit reasoning, and cross-document synthesis</p>
+<p><strong>Richer representations</strong>: Temporal dynamics, continuous variables, and multi-agent interactions within extended frameworks</p>
+<p><strong>Inference advances</strong>: Quantum computing applications, neural approximate inference, and hybrid symbolic-neural methods</p>
+<p><strong>Validation methods</strong>: Automated consistency checking, anomaly detection in extracted models, and benchmark dataset development</p>
+<!-- [ ] CREATE: {#tbl-technical-roadmap}: "Technical enhancement priorities and timelines" -->
+</section>
+<section id="sec-methodological-future" class="level3">
+<h3 class="anchored" data-anchor-id="sec-methodological-future">4.7.2 Methodological Extensions</h3>
+<p><strong>Causal discovery</strong>: Inferring causal structures from data rather than just extracting from text</p>
+<p><strong>Experimental integration</strong>: Connecting models to empirical results from AI safety experiments</p>
+<p><strong>Dynamic updating</strong>: Continuous model refinement as new evidence emerges from research and deployment</p>
+<p><strong>Uncertainty quantification</strong>: Richer representation of deep uncertainty and model confidence</p>
+<!-- [ ] FIND: @causal-discovery-nlp: "Methods for causal structure learning from text" -->
+</section>
+<section id="sec-application-future" class="level3">
+<h3 class="anchored" data-anchor-id="sec-application-future">4.7.3 Application Domains</h3>
+<p><strong>Beyond AI safety</strong>: Climate risk, biosecurity, nuclear policy, and other existential risks</p>
+<p><strong>Corporate governance</strong>: Strategic planning, risk management, and innovation assessment</p>
+<p><strong>Scientific modeling</strong>: Formalizing theoretical arguments in emerging fields</p>
+<p><strong>Educational tools</strong>: Teaching probabilistic reasoning and critical thinking</p>
+<!-- [ ] CREATE: {#fig-application-domains}: "Potential AMTAIR applications across fields" -->
+</section>
+<section id="sec-ecosystem-future" class="level3">
+<h3 class="anchored" data-anchor-id="sec-ecosystem-future">4.7.4 Ecosystem Development</h3>
+<p><strong>Open standards</strong>: Common formats for model exchange and tool interoperability</p>
+<p><strong>Community platforms</strong>: Collaborative model development and sharing infrastructure</p>
+<p><strong>Training programs</strong>: Building capacity for formal modeling in governance communities</p>
+<p><strong>Quality assurance</strong>: Certification processes for high-stakes model applications</p>
+<p>These directions could transform AMTAIR from a single tool into a broader ecosystem for enhanced reasoning about complex risks.</p>
+<!-- [ ] IMPLEMENT: Community development roadmap -->
+</section>
+</section>
+</section>
+<section id="sec-conclusion" class="level1">
+<h1>5. Conclusion: Toward Coordinated AI Governance</h1>
+<section id="sec-key-contributions" class="level2">
+<h2 class="anchored" data-anchor-id="sec-key-contributions">5.1 Summary of Key Contributions</h2>
+<p>This thesis has demonstrated both the need for and feasibility of computational approaches to enhancing coordination in AI governance. The work makes several distinct contributions across theory, methodology, and implementation.</p>
+<section id="sec-theoretical-contributions" class="level3">
+<h3 class="anchored" data-anchor-id="sec-theoretical-contributions">5.1.1 Theoretical Contributions</h3>
+<p><strong>Diagnosis of the Coordination Crisis</strong>: I’ve articulated how fragmentation across technical, policy, and strategic communities systematically amplifies existential risk from advanced AI. This framing moves beyond identifying disagreements to understanding how misaligned efforts create negative-sum dynamics—safety gaps emerge between communities, resources are misallocated through duplication and neglect, and interventions interact destructively.</p>
+<p><strong>The Multiplicative Benefits Framework</strong>: The combination of automated extraction, prediction market integration, and formal policy evaluation creates value exceeding the sum of parts. Automation enables scale, markets provide empirical grounding, and policy analysis delivers actionable insights. Together, they address different facets of the coordination challenge while reinforcing each other’s strengths.</p>
+<p><strong>Epistemic Infrastructure Conception</strong>: Positioning formal models as epistemic infrastructure reframes the role of technical tools in governance. Rather than replacing human judgment, computational approaches provide common languages, shared representations, and systematic methods for managing disagreement—essential foundations for coordination under uncertainty.</p>
+<!-- [ ] CREATE: {#fig-contribution-summary}: "Visual map of thesis contributions" -->
+</section>
+<section id="sec-methodological-innovations" class="level3">
+<h3 class="anchored" data-anchor-id="sec-methodological-innovations">5.1.2 Methodological Innovations</h3>
+<p><strong>Two-Stage Extraction Architecture</strong>: Separating structural extraction (ArgDown) from probability quantification (BayesDown) addresses key challenges in automated formalization. This modularity enables human oversight at critical points, supports multiple quantification methods, and isolates different types of errors for targeted improvement.</p>
+<p><strong>BayesDown as Bridge Representation</strong>: The development of BayesDown syntax creates a crucial intermediate representation preserving both narrative accessibility and mathematical precision. This bridge enables the transformation from qualitative arguments to quantitative models while maintaining traceability and human readability.</p>
+<p><strong>Validation Framework</strong>: The systematic approach to validating automated extraction—comparing against expert annotations, measuring multiple accuracy dimensions, and analyzing error patterns—establishes scientific standards for assessing formalization tools. This framework can guide future development in this emerging area.</p>
+<!-- [ ] VERIFY: Contribution claims against evidence in previous chapters -->
+</section>
+<section id="sec-technical-achievements" class="level3">
+<h3 class="anchored" data-anchor-id="sec-technical-achievements">5.1.3 Technical Achievements</h3>
+<p><strong>Working Implementation</strong>: AMTAIR demonstrates end-to-end feasibility from document ingestion through interactive visualization. The system achieves practically useful accuracy levels: 85%+ for structural extraction and 73% for probability capture on real AI safety arguments.</p>
+<p><strong>Scalability Solutions</strong>: Technical approaches for handling realistic model complexity—hierarchical decomposition, approximate inference, and progressive visualization—show that computational limitations need not prevent practical application.</p>
+<p><strong>Accessibility Design</strong>: The layered interface approach serves diverse stakeholders without compromising technical depth. Progressive disclosure, visual encoding, and interactive exploration make formal models accessible beyond technical specialists.</p>
+<!-- [ ] CREATE: {#tbl-achievement-metrics}: "Quantitative summary of technical achievements" -->
+</section>
+<section id="sec-empirical-findings" class="level3">
+<h3 class="anchored" data-anchor-id="sec-empirical-findings">5.1.4 Empirical Findings</h3>
+<p><strong>Extraction Feasibility</strong>: The successful extraction of complex arguments like Carlsmith’s model validates the core premise that implicit formal structures exist in natural language arguments and can be computationally recovered with reasonable fidelity.</p>
+<p><strong>Convergence Patterns</strong>: Comparative analysis reveals surprising structural agreement across worldviews even when probability estimates diverge dramatically. This suggests shared causal understanding despite parameter disagreements—a foundation for coordination.</p>
+<p><strong>Intervention Impacts</strong>: Policy evaluation demonstrates how formal models enable rigorous assessment of governance options. The ability to quantify risk reduction across scenarios and identify robust strategies validates the practical value of formalization.</p>
+<!-- [ ] IMPLEMENT: Summary statistics across all empirical studies -->
+</section>
+</section>
+<section id="sec-limitations-assessment" class="level2">
+<h2 class="anchored" data-anchor-id="sec-limitations-assessment">5.2 Limitations and Honest Assessment</h2>
+<p>Despite these contributions, important limitations constrain current capabilities and should guide appropriate use.</p>
+<section id="sec-technical-constraints" class="level3">
+<h3 class="anchored" data-anchor-id="sec-technical-constraints">5.2.1 Technical Constraints</h3>
+<p><strong>Extraction Boundaries</strong>: While 73-85% accuracy suffices for many purposes, systematic biases remain. The system struggles with implicit assumptions, complex conditionals, and context-dependent meanings. These limitations necessitate human review for high-stakes applications.</p>
+<p><strong>Correlation Handling</strong>: Standard Bayesian networks inadequately represent complex correlations in real systems. While extensions like copulas and explicit correlation nodes help, fully capturing interdependencies remains challenging.</p>
+<p><strong>Computational Scaling</strong>: Very large networks (&gt;50 nodes) require approximations that may affect accuracy. As models grow to represent richer phenomena, computational constraints increasingly bind.</p>
+<!-- [ ] VERIFY: Limitation claims are supported by evidence -->
+</section>
+<section id="sec-conceptual-limitations" class="level3">
+<h3 class="anchored" data-anchor-id="sec-conceptual-limitations">5.2.2 Conceptual Limitations</h3>
+<p><strong>Formalization Trade-offs</strong>: Converting rich arguments to formal models necessarily loses nuance. While making assumptions explicit provides value, some insights resist mathematical representation.</p>
+<p><strong>Probability Interpretation</strong>: Deep uncertainty about unprecedented events challenges probabilistic representation. Numbers can create false precision even when explicitly conditional and uncertain.</p>
+<p><strong>Social Complexity</strong>: Institutional dynamics, cultural factors, and political processes influence AI development in ways that simple causal models struggle to capture.</p>
+</section>
+<section id="sec-practical-constraints" class="level3">
+<h3 class="anchored" data-anchor-id="sec-practical-constraints">5.2.3 Practical Constraints</h3>
+<p><strong>Adoption Barriers</strong>: Learning curves, institutional inertia, and resource requirements limit immediate deployment. Even demonstrably valuable tools face implementation challenges.</p>
+<p><strong>Maintenance Burden</strong>: Models require updating as arguments evolve and evidence emerges. Without sustained effort, formal representations quickly become outdated.</p>
+<p><strong>Context Dependence</strong>: The approach works best for well-structured academic arguments. Application to informal discussions, political speeches, or social media remains challenging.</p>
+<!-- [ ] CREATE: {#fig-limitation-landscape}: "Visual summary of system limitations" -->
+</section>
+</section>
+<section id="sec-governance-implications" class="level2">
+<h2 class="anchored" data-anchor-id="sec-governance-implications">5.3 Implications for AI Governance</h2>
+<p>Despite limitations, AMTAIR’s approach offers significant implications for how AI governance can evolve toward greater coordination and effectiveness.</p>
+<section id="sec-near-term-applications" class="level3">
+<h3 class="anchored" data-anchor-id="sec-near-term-applications">5.3.1 Near-Term Applications</h3>
+<p><strong>Research Coordination</strong>: Research organizations can use formal models to:</p>
+<ul>
+<li>Map the landscape of current arguments and identify gaps</li>
+<li>Prioritize investigations targeting high-sensitivity parameters</li>
+<li>Build cumulative knowledge through explicit model updating</li>
+<li>Facilitate collaboration through shared representations</li>
+</ul>
+<p><strong>Policy Development</strong>: Governance bodies can apply the framework to:</p>
+<ul>
+<li>Evaluate proposals across multiple expert worldviews</li>
+<li>Identify robust interventions effective under uncertainty</li>
+<li>Make assumptions explicit for democratic scrutiny</li>
+<li>Track how evidence changes optimal policies over time</li>
+</ul>
+<p><strong>Stakeholder Communication</strong>: The visualization and analysis tools enable:</p>
+<ul>
+<li>Clearer communication between technical and policy communities</li>
+<li>Public engagement with complex risk assessments</li>
+<li>Board-level strategic discussions grounded in formal analysis</li>
+<li>International negotiations with explicit shared models</li>
+</ul>
+<!-- [ ] CREATE: {#fig-near-term-impact}: "Pathways to immediate AMTAIR adoption" -->
+</section>
+<section id="sec-medium-term" class="level3">
+<h3 class="anchored" data-anchor-id="sec-medium-term">5.3.2 Medium-Term Transformation</h3>
+<p>As adoption spreads, we might see:</p>
+<p><strong>Epistemic Commons</strong>: Shared repositories of formalized arguments become reference points for governance discussions, similar to how economic models inform monetary policy or climate models guide environmental agreements.</p>
+<p><strong>Adaptive Governance</strong>: Policies designed with explicit models can include triggers for reassessment as key parameters change, enabling responsive governance that avoids both paralysis and recklessness.</p>
+<p><strong>Professionalization</strong>: “Model curator” and “argument formalization specialist” emerge as recognized roles, building expertise in bridging natural language and formal representations.</p>
+<p><strong>Quality Standards</strong>: Community norms develop around model transparency, validation requirements, and appropriate use cases, preventing both dismissal and over-reliance on formal tools.</p>
+<!-- [ ] FIND: @epistemic-commons: "Examples of shared knowledge infrastructure in other domains" -->
+</section>
+<section id="sec-long-term-vision" class="level3">
+<h3 class="anchored" data-anchor-id="sec-long-term-vision">5.3.3 Long-Term Vision</h3>
+<p>Successfully scaling this approach could fundamentally alter AI governance:</p>
+<p><strong>Coordinated Response</strong>: Rather than fragmented efforts, the AI safety ecosystem could operate with shared situational awareness—different actors understanding how their efforts interact and contribute to collective goals.</p>
+<p><strong>Anticipatory Action</strong>: Formal models with prediction market integration could provide early warning of emerging risks, enabling proactive rather than reactive governance.</p>
+<p><strong>Global Cooperation</strong>: Shared formal frameworks could facilitate international coordination similar to how economic models enable monetary coordination or climate models support environmental agreements.</p>
+<p><strong>Democratic Enhancement</strong>: Making expert reasoning transparent and modifiable could enable broader participation in crucial decisions about humanity’s technological future.</p>
+<!-- [ ] CREATE: {#fig-long-term-vision}: "Vision for AI governance with AMTAIR infrastructure" -->
+</section>
+</section>
+<section id="sec-recommendations" class="level2">
+<h2 class="anchored" data-anchor-id="sec-recommendations">5.4 Recommendations for Stakeholders</h2>
+<p>Different communities can take concrete steps to realize these benefits:</p>
+<section id="sec-researcher-recommendations" class="level3">
+<h3 class="anchored" data-anchor-id="sec-researcher-recommendations">5.4.1 For Researchers</h3>
+<ol type="1">
+<li><p><strong>Experiment with formalization</strong>: Try extracting your own arguments into ArgDown/BayesDown format to discover implicit assumptions</p></li>
+<li><p><strong>Contribute to validation</strong>: Provide expert annotations for building benchmark datasets and improving extraction quality</p></li>
+<li><p><strong>Develop extensions</strong>: Build on the open-source foundation to add capabilities for your specific domain needs</p></li>
+<li><p><strong>Publish formally</strong>: Include formal model representations alongside traditional papers to enable cumulative building</p></li>
+</ol>
+<!-- [ ] CREATE: Quick-start guide for researchers -->
+</section>
+<section id="sec-policymaker-recommendations" class="level3">
+<h3 class="anchored" data-anchor-id="sec-policymaker-recommendations">5.4.2 For Policymakers</h3>
+<ol type="1">
+<li><p><strong>Pilot applications</strong>: Use AMTAIR for internal analysis of specific policy proposals to build familiarity and identify value</p></li>
+<li><p><strong>Demand transparency</strong>: Request formal models underlying expert recommendations to understand assumptions and uncertainties</p></li>
+<li><p><strong>Fund development</strong>: Support tool development and training to build governance capacity for formal methods</p></li>
+<li><p><strong>Design adaptively</strong>: Create policies with explicit triggers based on model parameters to enable responsive governance</p></li>
+</ol>
+<!-- [ ] CREATE: Policy evaluation template -->
+</section>
+<section id="sec-technologist-recommendations" class="level3">
+<h3 class="anchored" data-anchor-id="sec-technologist-recommendations">5.4.3 For Technologists</h3>
+<ol type="1">
+<li><p><strong>Improve extraction</strong>: Contribute better prompting strategies, fine-tuned models, or validation methods</p></li>
+<li><p><strong>Enhance interfaces</strong>: Develop visualizations and interactions serving specific stakeholder needs</p></li>
+<li><p><strong>Build integrations</strong>: Connect AMTAIR to other tools in the AI governance ecosystem</p></li>
+<li><p><strong>Scale infrastructure</strong>: Address computational challenges for larger models and broader deployment</p></li>
+</ol>
+<!-- [ ] CREATE: Technical contribution guidelines -->
+</section>
+<section id="sec-funder-recommendations" class="level3">
+<h3 class="anchored" data-anchor-id="sec-funder-recommendations">5.4.4 For Funders</h3>
+<ol type="1">
+<li><p><strong>Support ecosystem</strong>: Fund not just tool development but training, community building, and maintenance</p></li>
+<li><p><strong>Bridge communities</strong>: Incentivize collaborations between formal modelers and domain experts</p></li>
+<li><p><strong>Measure coordination</strong>: Develop metrics for assessing coordination improvements from formal tools</p></li>
+<li><p><strong>Patient capital</strong>: Recognize that epistemic infrastructure requires sustained investment to reach potential</p></li>
+</ol>
+<!-- [ ] CREATE: Funding opportunity framework -->
+</section>
+</section>
+<section id="sec-future-research-agenda" class="level2">
+<h2 class="anchored" data-anchor-id="sec-future-research-agenda">5.5 Future Research Agenda</h2>
+<p>Building on this foundation, several research directions could amplify impact:</p>
+<section id="sec-technical-priorities" class="level3">
+<h3 class="anchored" data-anchor-id="sec-technical-priorities">5.5.1 Technical Priorities</h3>
+<p><strong>Extraction Enhancement</strong>:</p>
+<ul>
+<li>Fine-tuning language models specifically for argument extraction</li>
+<li>Handling implicit reasoning and long-range dependencies</li>
+<li>Cross-document synthesis for comprehensive models</li>
+<li>Multilingual extraction for global perspectives</li>
+</ul>
+<p><strong>Representation Extensions</strong>:</p>
+<ul>
+<li>Temporal dynamics for modeling AI development trajectories</li>
+<li>Multi-agent representations for strategic interactions</li>
+<li>Continuous variables for economic and capability metrics</li>
+<li>Uncertainty types beyond probability distributions</li>
+</ul>
+<p><strong>Integration Depth</strong>:</p>
+<ul>
+<li>Semantic matching between models and prediction markets</li>
+<li>Automated experiment design based on model sensitivity</li>
+<li>Policy optimization algorithms using extracted models</li>
+<li>Real-time updating from news and research feeds</li>
+</ul>
+<!-- [ ] CREATE: {#tbl-research-priorities}: "Technical research roadmap with timelines" -->
+</section>
+<section id="sec-methodological-development" class="level3">
+<h3 class="anchored" data-anchor-id="sec-methodological-development">5.5.2 Methodological Development</h3>
+<p><strong>Validation Science</strong>:</p>
+<ul>
+<li>Larger benchmark datasets with diverse argument types</li>
+<li>Metrics for semantic preservation beyond accuracy</li>
+<li>Adversarial robustness testing protocols</li>
+<li>Longitudinal studies of model evolution</li>
+</ul>
+<p><strong>Hybrid Approaches</strong>:</p>
+<ul>
+<li>Optimal human-AI collaboration patterns for extraction</li>
+<li>Combining formal models with other methods (scenarios, simulations)</li>
+<li>Integration with deliberative and participatory processes</li>
+<li>Balancing automation with expert judgment</li>
+</ul>
+<p><strong>Social Methods</strong>:</p>
+<ul>
+<li>Ethnographic studies of model use in organizations</li>
+<li>Measuring coordination improvements empirically</li>
+<li>Understanding adoption barriers and facilitators</li>
+<li>Designing interventions for epistemic security</li>
+</ul>
+<!-- [ ] FIND: @human-ai-collaboration: "Best practices for human-AI teaming" -->
+</section>
+<section id="sec-application-expansion" class="level3">
+<h3 class="anchored" data-anchor-id="sec-application-expansion">5.5.3 Application Expansion</h3>
+<p><strong>Domain Extensions</strong>:</p>
+<ul>
+<li>Climate risk assessment and policy evaluation</li>
+<li>Biosecurity governance and pandemic preparedness</li>
+<li>Nuclear policy and deterrence stability</li>
+<li>Emerging technology governance broadly</li>
+</ul>
+<p><strong>Institutional Integration</strong>:</p>
+<ul>
+<li>Embedding in regulatory impact assessment</li>
+<li>Corporate strategic planning applications</li>
+<li>Academic peer review enhancement</li>
+<li>Democratic deliberation support tools</li>
+</ul>
+<p><strong>Global Deployment</strong>:</p>
+<ul>
+<li>Adapting to different governance contexts</li>
+<li>Supporting multilateral negotiation processes</li>
+<li>Building capacity in developing nations</li>
+<li>Creating resilient distributed infrastructure</li>
+</ul>
+<!-- [ ] CREATE: {#fig-application-roadmap}: "Expansion pathways across domains" -->
+</section>
+</section>
+<section id="sec-closing-reflections" class="level2">
+<h2 class="anchored" data-anchor-id="sec-closing-reflections">5.6 Closing Reflections</h2>
+<p>The work presented in this thesis emerges from a simple observation: while humanity mobilizes unprecedented resources to address AI risks, our efforts remain tragically uncoordinated. Different communities work with incompatible frameworks, duplicate efforts, and sometimes actively undermine each other’s work. This fragmentation amplifies the very risks we seek to mitigate.</p>
+<p>AMTAIR represents one attempt to build bridges—computational tools that create common ground for disparate perspectives. By making implicit models explicit, quantifying uncertainty, and enabling systematic policy analysis, these tools offer hope for enhanced coordination. The successful extraction of complex arguments, validation against expert judgment, and demonstration of policy evaluation capabilities suggest this approach has merit.</p>
+<p>Yet tools alone cannot solve coordination problems rooted in incentives, institutions, and human psychology. AMTAIR provides infrastructure for coordination, not coordination itself. Success requires not just technical development but changes in how we approach collective challenges—valuing transparency over strategic ambiguity, embracing uncertainty rather than false confidence, and prioritizing collective outcomes over parochial interests.</p>
+<p>The path forward demands both ambition and humility. Ambition to build the epistemic infrastructure necessary for navigating unprecedented risks. Humility to recognize our tools’ limitations and the irreducible role of human wisdom in governance. The question is not whether formal models can replace human judgment—they cannot and should not. Rather, it’s whether we can augment our collective intelligence with computational tools that help us reason together about futures too important to leave to chance.</p>
+<p>As AI capabilities advance toward transformative potential, the window for establishing effective governance narrows. We cannot afford continued fragmentation when facing potentially irreversible consequences. The coordination crisis in AI governance represents both existential risk and existential opportunity—risk if we fail to align our efforts, opportunity if we succeed in building unprecedented cooperation around humanity’s most important challenge.</p>
+<p>This thesis contributes technical foundations and demonstrates feasibility. The greater work—building communities, changing practices, and fostering coordination—remains ahead. May we prove equal to the task, for all our futures depend on it.</p>
+<!-- [ ] CREATE: {#fig-closing-vision}: "The path from fragmentation to coordination" -->
+</section>
+</section>
+<section id="sec-references" class="level1 unnumbered">
+<h1 class="unnumbered">References</h1>
+<!-- Quarto will auto-generate from .bib file -->
+<div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" role="list">
+<div id="ref-growiec2024" class="csl-entry" role="listitem">
+Growiec, Jakub. 2024. <span>“Existential Risk from Transformative
+<span>AI</span>: An Economic Perspective.”</span> <em>Technological and
+Economic Development of Economy</em>, 1–27.
+</div>
+<div id="ref-knuth1984" class="csl-entry" role="listitem">
+Knuth, Donald E. 1984. <span>“Literate Programming.”</span> <em>Computer
+Journal</em> 27 (2): 97–111. <a href="https://doi.org/10.1093/comjnl/27.2.97">https://doi.org/10.1093/comjnl/27.2.97</a>.
+</div>
+<div id="ref-soares2014" class="csl-entry" role="listitem">
+Soares, Nate, and Benja Fallenstein. 2014. <span>“Aligning
+Superintelligence with Human Interests: <span>A</span> Technical
+Research Agenda.”</span>
+</div>
+</div>
+</section>
+<section id="sec-appendices" class="level1 unnumbered">
+<h1 class="unnumbered">Appendices</h1>
+<section id="sec-appendix-technical" class="level2 unnumbered">
+<h2 class="unnumbered anchored" data-anchor-id="sec-appendix-technical">Appendix A: Technical Implementation Details</h2>
+<!-- [ ] CREATE: Complete technical documentation -->
+<p>Contents: - Full API specifications - Architectural diagrams with component details - Code structure and organization - Deployment instructions - Performance optimization guides</p>
+</section>
+<section id="sec-appendix-validation" class="level2 unnumbered">
+<h2 class="unnumbered anchored" data-anchor-id="sec-appendix-validation">Appendix B: Validation Datasets and Procedures</h2>
+<!-- [ ] CREATE: Validation materials -->
+<p>Contents: - Benchmark dataset descriptions - Annotation guidelines - Inter-rater reliability protocols - Statistical analysis procedures - Replication instructions</p>
+</section>
+<section id="sec-appendix-cases" class="level2 unnumbered">
+<h2 class="unnumbered anchored" data-anchor-id="sec-appendix-cases">Appendix C: Extended Case Studies</h2>
+<!-- [ ] IMPLEMENT: Additional extraction examples -->
+<p>Include: - Christiano’s “What failure looks like” - Critch’s ARCHES model - Additional policy evaluation scenarios - Comparative analysis across models</p>
+</section>
+<section id="sec-appendix-bayesdown" class="level2 unnumbered">
+<h2 class="unnumbered anchored" data-anchor-id="sec-appendix-bayesdown">Appendix D: BayesDown Syntax Specification</h2>
+<!-- [ ] CREATE: Complete formal specification -->
+<p>Contents: - Full syntax definition - Validation rules - Example transformations - Implementation notes - Extension possibilities</p>
+</section>
+<section id="sec-appendix-prompts" class="level2 unnumbered">
+<h2 class="unnumbered anchored" data-anchor-id="sec-appendix-prompts">Appendix E: Prompt Engineering Details</h2>
+<!-- [ ] CREATE: Prompt documentation -->
+<p>Include: - Full extraction prompts with annotations - Iterative refinement history - Ablation study results - Best practices guide - Common failure patterns</p>
+</section>
+<section id="sec-appendix-userguide" class="level2 unnumbered">
+<h2 class="unnumbered anchored" data-anchor-id="sec-appendix-userguide">Appendix F: User Guide</h2>
+<!-- [ ] CREATE: Practical user guide -->
+<p>Sections: - Getting started with AMTAIR - Creating your first extraction - Interpreting visualizations - Policy evaluation walkthrough - Troubleshooting common issues</p>
+</section>
+<section id="sec-appendix-notebook" class="level2 unnumbered">
+<h2 class="unnumbered anchored" data-anchor-id="sec-appendix-notebook">Appendix G: Jupyter Notebook Implementation</h2>
+<!-- Link to embedded notebook as per _quarto.yml configuration -->
+<p>The complete implementation is available as an interactive Jupyter notebook demonstrating:</p>
+<ul>
+<li>Environment setup and configuration</li>
+<li>Step-by-step extraction pipeline</li>
+<li>Visualization generation</li>
+<li>Policy evaluation examples</li>
+<li>Performance benchmarking</li>
+</ul>
+
+
+</section>
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copied!");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copied!");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+        const codeEl = trigger.previousElementSibling.cloneNode(true);
+        for (const childEl of codeEl.children) {
+          if (isCodeAnnotation(childEl)) {
+            childEl.remove();
+          }
+        }
+        return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp('/' + window.location.host + '/');
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+<nav class="page-navigation">
+  <div class="nav-page nav-page-previous">
+      <a href="../../index.html" class="pagination-link" aria-label="Preface">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Preface</span>
+      </a>          
+  </div>
+  <div class="nav-page nav-page-next">
+  </div>
+</nav>
+</div> <!-- /content -->
+
+
+
+
+<footer class="footer"><div class="nav-footer"><div class="nav-footer-center"><div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/VJMeyer/submission/edit/main/chapters/Outlines/Outline_12.2.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li></ul></div></div></div></footer></body></html>

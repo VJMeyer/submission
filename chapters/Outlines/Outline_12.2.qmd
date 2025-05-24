@@ -758,7 +758,7 @@ The system is implemented in Python, leveraging established libraries while addi
 
 **Hierarchical Parsing**: The system parses ArgDown/BayesDown syntax recognizing indentation-based hierarchy:
 
-{{< embed /AMTAIR_Prototype/data/example_carlsmith/AMTAIR_Prototype_example_carlsmith.ipynb#parse-hierarchy echo=true >}}
+<!-- {{< embed /AMTAIR_Prototype/data/example_carlsmith/AMTAIR_Prototype_example_carlsmith.ipynb#parse-hierarchy echo=true >}} -->
 
 **Probability Completion**: When sources don't specify all required probabilities, the system uses principled methods:
 
@@ -1006,7 +1006,7 @@ Beyond extraction and visualization, AMTAIR enables systematic policy analysis t
 
 Policies are modeled as modifications to network parameters:
 
-{{< embed /AMTAIR_Prototype/data/example_carlsmith/AMTAIR_Prototype_example_carlsmith.ipynb#policy-evaluation echo=true >}}
+<!-- {{< embed /AMTAIR_Prototype/data/example_carlsmith/AMTAIR_Prototype_example_carlsmith.ipynb#policy-evaluation echo=true >}} -->
 
 <!-- [ ] VERIFY: Pearl's do-calculus implementation correctness -->
 
@@ -1974,5 +1974,5 @@ The complete implementation is available as an interactive Jupyter notebook demo
 - Policy evaluation examples
 - Performance benchmarking
 
-{{< embed /AMTAIR_Prototype/data/example_carlsmith/AMTAIR_Prototype_example_carlsmith.ipynb >}}
+<!-- {{< embed /AMTAIR_Prototype/data/example_carlsmith/AMTAIR_Prototype_example_carlsmith.ipynb >}} -->
 
