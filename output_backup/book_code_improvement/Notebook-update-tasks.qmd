@@ -63,6 +63,9 @@
 ```{python}
 #| label: my_code_cell_test
 #| fig-cap: "AMTAIR extraction pipeline visualization"
+#| fig-subcap: 
+#|   - "Gentoo penguins tend to have thinner bills,"
+#|   - "and Adelie penguins tend to have shorter bills."
 #| fig-link: "https://colab.research.google.com/drive/your-notebook-id"
 #| fig-alt: "Detailed description for accessibility"
 
