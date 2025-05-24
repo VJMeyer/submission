@@ -1,0 +1,15 @@
+[0] Config.pm:308> INFO - This is Biber 2.20
+[0] Config.pm:311> INFO - Logfile is 'index.blg'
+[100] biber-darwin:340> INFO - === Sat May 24, 2025, 12:28:17
+[125] Biber.pm:420> INFO - Reading 'index.bcf'
+[290] Biber.pm:994> INFO - Found 8 citekeys in bib section 0
+[312] Biber.pm:4463> INFO - Processing section 0
+[325] Biber.pm:4654> INFO - Looking for bibtex file 'ref/MAref.bib' for section 0
+[351] bibtex.pm:1713> INFO - LaTeX decoding ...
+[769] bibtex.pm:1519> INFO - Found BibTeX data source 'ref/MAref.bib'
+[926] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'variable = shifted' with 'variable = non-ignorable'
+[926] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'normalization = NFD' with 'normalization = prenormalized'
+[926] Biber.pm:4283> INFO - Sorting list 'nty/global//global/global/global' of type 'entry' with template 'nty' and locale 'en-US'
+[926] Biber.pm:4289> INFO - No sort tailoring available for locale 'en-US'
+[943] bbl.pm:676> INFO - Writing 'index.bbl' with encoding 'UTF-8'
+[947] bbl.pm:779> INFO - Output to index.bbl
