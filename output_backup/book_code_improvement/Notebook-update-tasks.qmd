@@ -1,35 +1,52 @@
 ## Extrapolate .ipynb improvements / ideal notebook implementation (for outline / thesis)
 
-### 1. Notebook must keep working
+### 1. Notebook must keep working -- Main tasks
 
 <!-- [ ] add labels for each code cell: #| label: my_code_cell_test -->
  
 <!-- [ ] Test if alt text, caption etc. need to be added to code cells as well -->
-   
-<!-- [ ] investigate if splitting up and using .py functions works (and makes sense) -->
-
-<!-- [ ]  prevent “code-line overflow” -->
-
-<!-- [ ] check ideas from 'Code_Improvement_Plan' -->
-
-<!-- [ ] Does it make sense to introudce a new 'extensions' section? (does it improve clarity?) -->
-
-<!-- [ ] How to make the "API call Section" less annoying? -->
-
-<!-- [ ] save .html graph output properly (for thesis html integration AND as PDF image for latex) -->
 
 <!-- [ ] Create section with overview of code-labels -->
 
+
+
+<!-- [ ]  prevent “code-line overflow” -->
+
+
+
+<!-- [ ] save .html graph output properly (for thesis html integration AND as PDF image for latex) -->
+
+
+<!-- [ ] check ideas from 'Code_Improvement_Plan' -->
+
+
+### Pre-Repo Publication
+
+
 <!-- [ ]  Update file links e.g. where data is fetched from-->
 
+<!-- [ ] Redo Carlsmith data extraction - done but can be redone/improved with Opus4 -->
 
 
+### Structure Updates
+
+
+<!-- [ ] Does it make sense to introudce a new 'extensions' section? (does it improve clarity?) -->
+
+<!-- [ ] investigate if splitting up and using .py functions works (and makes sense) -->
 
 
 <!-- [ ] Review best practices from: “Automated Python-LaTeX Documentation Generation”:  https://github.com/pederw455/python-latex-repo/tree/main -->
 
+<!-- [ ] How to make the "API call Section" less annoying? -->
 
-<!-- [ ] Redo Carlsmith data extraction - done but can be redone/improved with Opus4 -->
+
+
+
+
+
+
+
 
 
 <!-- [ ] Simply pay for (or use free Gemini) API and test API calls (?) ... only if time permits -->
