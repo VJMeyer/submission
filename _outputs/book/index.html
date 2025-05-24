@@ -366,7 +366,11 @@ window.Quarto = {
   <li><a href="#which-produces-the-output-of-executing-the-code-cell" id="toc-which-produces-the-output-of-executing-the-code-cell" class="nav-link" data-scroll-target="#which-produces-the-output-of-executing-the-code-cell">which produces the output of executing the code cell:</a></li>
   <li><a href="#including-echotrue-renders-the-code-of-the-cell" id="toc-including-echotrue-renders-the-code-of-the-cell" class="nav-link" data-scroll-target="#including-echotrue-renders-the-code-of-the-cell">including ‘echo=true’ renders the code of the cell:</a></li>
   </ul></li>
-  <li><a href="#embed-.html-resultrendering-from-.ipynb-notebook" id="toc-embed-.html-resultrendering-from-.ipynb-notebook" class="nav-link" data-scroll-target="#embed-.html-resultrendering-from-.ipynb-notebook">Embed .html result/rendering from .ipynb Notebook</a></li>
+  <li><a href="#embed-.html-resultrendering-from-.ipynb-notebook" id="toc-embed-.html-resultrendering-from-.ipynb-notebook" class="nav-link" data-scroll-target="#embed-.html-resultrendering-from-.ipynb-notebook">Embed .html result/rendering from .ipynb Notebook</a>
+  <ul>
+  <li><a href="#html-graph-by-notebook-cell-inclusion---from-notebook-local-file" id="toc-html-graph-by-notebook-cell-inclusion---from-notebook-local-file" class="nav-link" data-scroll-target="#html-graph-by-notebook-cell-inclusion---from-notebook-local-file">Html Graph by Notebook Cell Inclusion? - (from notebook local file)</a></li>
+  <li><a href="#html-graph-by-notebook-cell-inclusion-with-website-call" id="toc-html-graph-by-notebook-cell-inclusion-with-website-call" class="nav-link" data-scroll-target="#html-graph-by-notebook-cell-inclusion-with-website-call">Html Graph by Notebook Cell Inclusion with Website Call?</a></li>
+  </ul></li>
   <li><a href="#diagrams" id="toc-diagrams" class="nav-link" data-scroll-target="#diagrams">Diagrams</a></li>
   <li><a href="#sec-crossref" id="toc-sec-crossref" class="nav-link" data-scroll-target="#sec-crossref">Section Cross-References</a>
   <ul>
@@ -886,7 +890,7 @@ Testing crossreferencing grapics @fig-automation_pipeline.
 ![Caption/Title 2](/images/cover.png){#fig-testgraphic2 fig-scap="Short 2 caption" fig-alt="2nd Alt Text / Description." fig-align="left" width="30%"}
 
 Testing crossreferencing grapics @fig-testgraphic2.</code></pre>
-<div id="fig-automation_pipeline" class="quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center" width="100%" data-fig-scap="Five-step AMTAIR automation pipeline from PDFs to Bayesian networks" alt="FLOWCHART: Five-step automation pipeline workflow for AMTAIR project.           DATA: The pipeline transforms PDFs through ArgDown, BayesDown, CSV, and HTML into Bayesian network visualizations.           PURPOSE: Illustrates the core technical process that enables automated extraction of probabilistic models from AI safety literature.           DETAILS: Five numbered green steps show: (1) LLM-based extraction from PDFs to ArgDown, (2) ArgDown to BayesDown completion with probabilities, (3) Extracting world-models as CSV data, (4) Software tools for data inference, and (5) Visualization of the resulting Bayesian network.           Each step includes example outputs, with the final visualization showing a Rain-Sprinkler-Grass Wet Bayesian network with probability tables.           SOURCE: Created by the author to explain the AMTAIR methodology           ">
+<div id="fig-automation_pipeline" class="quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center" width="100%" alt="FLOWCHART: Five-step automation pipeline workflow for AMTAIR project.           DATA: The pipeline transforms PDFs through ArgDown, BayesDown, CSV, and HTML into Bayesian network visualizations.           PURPOSE: Illustrates the core technical process that enables automated extraction of probabilistic models from AI safety literature.           DETAILS: Five numbered green steps show: (1) LLM-based extraction from PDFs to ArgDown, (2) ArgDown to BayesDown completion with probabilities, (3) Extracting world-models as CSV data, (4) Software tools for data inference, and (5) Visualization of the resulting Bayesian network.           Each step includes example outputs, with the final visualization showing a Rain-Sprinkler-Grass Wet Bayesian network with probability tables.           SOURCE: Created by the author to explain the AMTAIR methodology           " data-fig-scap="Five-step AMTAIR automation pipeline from PDFs to Bayesian networks">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-automation_pipeline-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <a href="https://github.com/VJMeyer/submission"><img src="./images/pipeline.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:100.0%" data-fig-scap="Five-step AMTAIR automation pipeline from PDFs to Bayesian networks" alt="FLOWCHART: Five-step automation pipeline workflow for AMTAIR project.           DATA: The pipeline transforms PDFs through ArgDown, BayesDown, CSV, and HTML into Bayesian network visualizations.           PURPOSE: Illustrates the core technical process that enables automated extraction of probabilistic models from AI safety literature.           DETAILS: Five numbered green steps show: (1) LLM-based extraction from PDFs to ArgDown, (2) ArgDown to BayesDown completion with probabilities, (3) Extracting world-models as CSV data, (4) Software tools for data inference, and (5) Visualization of the resulting Bayesian network.           Each step includes example outputs, with the final visualization showing a Rain-Sprinkler-Grass Wet Bayesian network with probability tables.           SOURCE: Created by the author to explain the AMTAIR methodology           "></a>
@@ -897,7 +901,7 @@ Figure&nbsp;1.1: AMTAIR Automation Pipeline from
 </figure>
 </div>
 <p>Testing crossreferencing grapics <a href="chapters/2.0.Context.html#fig-automation_pipeline" class="quarto-xref">Figure&nbsp;<span>3.2</span></a>. Note that the indentations of graphic inclusions get messed up by viewing them in “view mode” in VS code.</p>
-<div id="fig-testgraphic2" class="quarto-float quarto-figure quarto-figure-left anchored" alt="2nd Alt Text / Description." data-fig-scap="Short 2 caption" data-fig-align="left">
+<div id="fig-testgraphic2" class="quarto-float quarto-figure quarto-figure-left anchored" alt="2nd Alt Text / Description." data-fig-align="left" data-fig-scap="Short 2 caption">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-testgraphic2-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <img src="./images/cover.png" class="img-fluid quarto-figure quarto-figure-left figure-img" style="width:30.0%" data-fig-scap="Short 2 caption" alt="2nd Alt Text / Description.">
@@ -1194,12 +1198,14 @@ Attempting to load: https://raw.githubusercontent.com/SingularitySmith/AMTAIR_Pr
 </section>
 <section id="embed-.html-resultrendering-from-.ipynb-notebook" class="level2">
 <h2 class="anchored" data-anchor-id="embed-.html-resultrendering-from-.ipynb-notebook">Embed .html result/rendering from .ipynb Notebook</h2>
+<section id="html-graph-by-notebook-cell-inclusion---from-notebook-local-file" class="level3">
+<h3 class="anchored" data-anchor-id="html-graph-by-notebook-cell-inclusion---from-notebook-local-file">Html Graph by Notebook Cell Inclusion? - (from notebook local file)</h3>
 <div class="sourceCode" id="cb19"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a>{{&lt; embed /AMTAIR_Prototype/data/example_carlsmith/AMTAIR_Prototype_example_carlsmith.ipynb#html_graph_visualization echo=true &gt;}}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="quarto-embed-nb-cell" data-notebook="/Users/vjm/Library/Mobile Documents/iCloud~md~obsidian/Documents/Vaulty/2_DoingGood/Studies/P&amp;E/Specializations/Test_Sync_MAThesis/submission/AMTAIR_Prototype/data/example_carlsmith/AMTAIR_Prototype_example_carlsmith.ipynb" data-notebook-title="[AMTAIR Prototype Demonstration (Public Colab Notebook)](https://colab.research.google.com/github/SingularitySmith/AMTAIR_Prototype/blob/main/version_history/AMTAIR_Prototype_0_1.3.ipynb#scrollTo=lt8-AnebGUXr)" data-notebook-cellid="cell-html_graph_visualization">
 <div id="cell-html_graph_visualization" class="cell" data-outputid="7b597549-9638-4a10-d5b6-b92ba27e14de" data-quarto-private-1="{&quot;key&quot;:&quot;colab&quot;,&quot;value&quot;:{&quot;base_uri&quot;:&quot;https://localhost:8080/&quot;,&quot;height&quot;:1000}}" data-execution_count="59">
 <details class="code-fold">
 <summary>Code</summary>
-<div class="sourceCode cell-code" id="cb20"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb20-1"><a href="#cb20-1" aria-hidden="true" tabindex="-1"></a><span class="co"># @title 5.1 --- Save Visualization and Notebook Outputs as .HTML--- [html_graph_visualization]</span></span>
+<div class="sourceCode cell-code" id="cb20"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb20-1"><a href="#cb20-1" aria-hidden="true" tabindex="-1"></a><span class="co"># @title 5.1 --- Quick check HTML Outputs--- [html_graph_visualization]</span></span>
 <span id="cb20-2"><a href="#cb20-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb20-3"><a href="#cb20-3" aria-hidden="true" tabindex="-1"></a>create_bayesian_network_with_probabilities(result_df)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
@@ -1638,10 +1644,34 @@ function highlightFilter(filter) {
     });
     </script>
 
-<p>Save Visualization and Notebook Outputs as .HTML</p>
+<p>Quick check HTML Outputs</p>
 </div>
 </div>
 </div>
+</section>
+<section id="html-graph-by-notebook-cell-inclusion-with-website-call" class="level3">
+<h3 class="anchored" data-anchor-id="html-graph-by-notebook-cell-inclusion-with-website-call">Html Graph by Notebook Cell Inclusion with Website Call?</h3>
+<p>label: online_model</p>
+<div class="sourceCode" id="cb21"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb21-1"><a href="#cb21-1" aria-hidden="true" tabindex="-1"></a>{{&lt; embed /AMTAIR_Prototype/data/example_carlsmith/AMTAIR_Prototype_example_carlsmith.ipynb#online_model echo=true &gt;}}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="quarto-embed-nb-cell" data-notebook="/Users/vjm/Library/Mobile Documents/iCloud~md~obsidian/Documents/Vaulty/2_DoingGood/Studies/P&amp;E/Specializations/Test_Sync_MAThesis/submission/AMTAIR_Prototype/data/example_carlsmith/AMTAIR_Prototype_example_carlsmith.ipynb" data-notebook-title="[AMTAIR Prototype Demonstration (Public Colab Notebook)](https://colab.research.google.com/github/SingularitySmith/AMTAIR_Prototype/blob/main/version_history/AMTAIR_Prototype_0_1.3.ipynb#scrollTo=lt8-AnebGUXr)" data-notebook-cellid="cell-online_model">
+<div id="cell-online_model" class="cell" data-quarto-private-1="{&quot;key&quot;:&quot;colab&quot;,&quot;value&quot;:{&quot;base_uri&quot;:&quot;https://localhost:8080/&quot;,&quot;height&quot;:922}}" data-outputid="5600471d-65ca-46c7-b40b-778e6a956d83" data-execution_count="16">
+<details class="code-fold">
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb22"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb22-1"><a href="#cb22-1" aria-hidden="true" tabindex="-1"></a><span class="co"># @title 1.1.a) --- MTAIR Online Model (Analytica) --- [online_model]</span></span>
+<span id="cb22-2"><a href="#cb22-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb22-3"><a href="#cb22-3" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> IPython.display <span class="im">import</span> IFrame</span>
+<span id="cb22-4"><a href="#cb22-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb22-5"><a href="#cb22-5" aria-hidden="true" tabindex="-1"></a>IFrame(src<span class="op">=</span><span class="st">"https://acp.analytica.com/view0?invite=4560&amp;code=3000289064591444815"</span>, width<span class="op">=</span><span class="st">"100%"</span>, height<span class="op">=</span><span class="st">"900px"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div id="online_model" class="cell-output cell-output-display" data-execution_count="16">
+
+        <iframe width="100%" height="900px" src="https://acp.analytica.com/view0?invite=4560&amp;code=3000289064591444815" frameborder="0" allowfullscreen=""></iframe>
+        
+<p>MTAIR Online Model (Analytica)</p>
+</div>
+</div>
+</div>
+</section>
 </section>
 <section id="diagrams" class="level2">
 <h2 class="anchored" data-anchor-id="diagrams">Diagrams</h2>
@@ -1650,11 +1680,11 @@ function highlightFilter(filter) {
 <div class="cell" data-layout-align="default">
 <details class="code-fold">
 <summary>Code</summary>
-<div class="sourceCode cell-code" id="cb21"><pre class="sourceCode default code-with-copy"><code class="sourceCode default"><span id="cb21-1"><a href="#cb21-1" aria-hidden="true" tabindex="-1"></a>flowchart LR</span>
-<span id="cb21-2"><a href="#cb21-2" aria-hidden="true" tabindex="-1"></a>  A[Hard edge] --&gt; B(Round edge)</span>
-<span id="cb21-3"><a href="#cb21-3" aria-hidden="true" tabindex="-1"></a>  B --&gt; C{Decision}</span>
-<span id="cb21-4"><a href="#cb21-4" aria-hidden="true" tabindex="-1"></a>  C --&gt; D[Result one]</span>
-<span id="cb21-5"><a href="#cb21-5" aria-hidden="true" tabindex="-1"></a>  C --&gt; E[Result two]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb23"><pre class="sourceCode default code-with-copy"><code class="sourceCode default"><span id="cb23-1"><a href="#cb23-1" aria-hidden="true" tabindex="-1"></a>flowchart LR</span>
+<span id="cb23-2"><a href="#cb23-2" aria-hidden="true" tabindex="-1"></a>  A[Hard edge] --&gt; B(Round edge)</span>
+<span id="cb23-3"><a href="#cb23-3" aria-hidden="true" tabindex="-1"></a>  B --&gt; C{Decision}</span>
+<span id="cb23-4"><a href="#cb23-4" aria-hidden="true" tabindex="-1"></a>  C --&gt; D[Result one]</span>
+<span id="cb23-5"><a href="#cb23-5" aria-hidden="true" tabindex="-1"></a>  C --&gt; E[Result two]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 <div class="cell-output-display">
 <div>
@@ -1708,11 +1738,11 @@ function highlightFilter(filter) {
 <section id="sec-crossref" class="level2">
 <h2 class="anchored" data-anchor-id="sec-crossref">Section Cross-References</h2>
 <p>Refer to sections like: <a href="chapters/4.Discussion.html#sec-adaptive-governance" class="quarto-xref"><span>Toward Adaptive Governance</span></a> and <a href="#sec-crossref" class="quarto-xref"><span>Section Cross-References</span></a> <!-- Using @-sec-REFERENCE_HEADING requires that the .qmd file contains a yml section which details the "numbering" --></p>
-<div class="sourceCode" id="cb22"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb22-1"><a href="#cb22-1" aria-hidden="true" tabindex="-1"></a><span class="an">Caveat:</span><span class="co"> refering to sections with @sec-HEADINGS works only for sections with:</span></span>
-<span id="cb22-2"><a href="#cb22-2" aria-hidden="true" tabindex="-1"></a><span class="fu">## Heading {#sec-HEADINGS}</span></span>
-<span id="cb22-3"><a href="#cb22-3" aria-hidden="true" tabindex="-1"></a>It does not work for sections with ".unnumbered and/or .unlisted":</span>
-<span id="cb22-4"><a href="#cb22-4" aria-hidden="true" tabindex="-1"></a><span class="fu">## Heading {#sec-HEADINGS .unnumbered .unlisted}</span></span>
-<span id="cb22-5"><a href="#cb22-5" aria-hidden="true" tabindex="-1"></a>Furthermore the .qmd and/or .md yml settings (~ numbering have to be just right)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb24"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb24-1"><a href="#cb24-1" aria-hidden="true" tabindex="-1"></a><span class="an">Caveat:</span><span class="co"> refering to sections with @sec-HEADINGS works only for sections with:</span></span>
+<span id="cb24-2"><a href="#cb24-2" aria-hidden="true" tabindex="-1"></a><span class="fu">## Heading {#sec-HEADINGS}</span></span>
+<span id="cb24-3"><a href="#cb24-3" aria-hidden="true" tabindex="-1"></a>It does not work for sections with ".unnumbered and/or .unlisted":</span>
+<span id="cb24-4"><a href="#cb24-4" aria-hidden="true" tabindex="-1"></a><span class="fu">## Heading {#sec-HEADINGS .unnumbered .unlisted}</span></span>
+<span id="cb24-5"><a href="#cb24-5" aria-hidden="true" tabindex="-1"></a>Furthermore the .qmd and/or .md yml settings (~ numbering have to be just right)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <section id="section-numbers" class="level3">
 <h3 class="anchored" data-anchor-id="section-numbers">Section Numbers</h3>
 <p>By default, all headings in your document create a numbered section. You customize numbering depth using the number-depth option. For example, to only number sections immediately below the chapter level, use this:</p>

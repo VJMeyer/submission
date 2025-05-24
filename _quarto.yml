@@ -54,6 +54,8 @@ book:
 format:
   html:
     theme: cosmo
+      # light: flatly
+      # dark: darkly
     code-fold: true
     toc: true
     toc-depth: 5

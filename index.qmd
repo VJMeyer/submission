@@ -453,12 +453,38 @@ Full Notebooks are embedded in the Appendix through the \_quarto.yml file with:
 
 ## Embed .html result/rendering from .ipynb Notebook
 
+### Html Graph by Notebook Cell Inclusion? - (from notebook local file)
+
 ``` markdown
 {{< embed /AMTAIR_Prototype/data/example_carlsmith/AMTAIR_Prototype_example_carlsmith.ipynb#html_graph_visualization echo=true >}}
 ```
 
 {{< embed /AMTAIR_Prototype/data/example_carlsmith/AMTAIR_Prototype_example_carlsmith.ipynb#html_graph_visualization echo=true >}}
 
+
+### Html Graph by Notebook Cell Inclusion with Website Call?
+
+label: online_model
+
+
+``` markdown
+{{< embed /AMTAIR_Prototype/data/example_carlsmith/AMTAIR_Prototype_example_carlsmith.ipynb#online_model echo=true >}}
+```
+
+{{< embed /AMTAIR_Prototype/data/example_carlsmith/AMTAIR_Prototype_example_carlsmith.ipynb#online_model echo=true >}}
+
+
+```{python}
+#| echo: true
+#| eval: true
+#| label: pull_html_graph_from_github
+#| fig-cap: "Graph Visualization for Carlsmith Model"
+#| fig-link: "https://colab.research.google.com/drive/your-notebook-id"
+#| fig-alt: "Detailed description for accessibility"
+
+import pandas as pd
+print("AMTAIR is working!")
+```
 
 
 
