@@ -19,3 +19,4 @@
 - [ ] Update file links e.g. where data is fetched from
 
 - [ ] 
+<!-- [ ] Present overall architecture showing component interactions -->
