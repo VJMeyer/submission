@@ -568,4 +568,30 @@ Create Sidebars by applying the .sidebar attribute to a level 1 heading (for glo
     - "Language models can assist in complex reasoning tasks" (90%)
     - "Alignment challenges manifest in current systems" (85%)
 
+
+Zitat z.B.: https://benjamintodd.substack.com/p/looks-like-there-are-some-good-funding
+
+ Zitat: https://ourworldindata.org/scaling-up-ai 
+
+  https://hai-production.s3.amazonaws.com/files/hai_ai_index_report_2025.pdf
+  page 25
+
+ https://futureoflife.org/open-letter/ai-principles/
+
+  https://artificialintelligenceact.eu/the-act/ 
+
+ https://www.prismaguard.com/the-elephaint-are-we-all-like-the-six-blind-men-when-it-comes-to-ai/
+
+ passt nicht so richtig:
+ https://warontherocks.com/2025/01/the-battle-for-brilliant-minds-from-the-nuclear-age-to-ai/
+
+
+ Zitat: https://arxiv.org/pdf/2206.13353.pdf 
+oder hast du die gekürzte Version verwendet ?
+
+ Zitat ?
+https://argdown.org/ 
+
+
+
 ```
