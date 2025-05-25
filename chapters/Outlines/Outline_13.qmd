@@ -321,7 +321,7 @@ To ground our discussion in concrete terms, I examine Joseph Carlsmith's "Is Pow
 
 <!-- [ ] VERIFY: @carlsmith2022: "Carlsmith, J. (2022). Is Power-Seeking AI an Existential Risk?" -->
 
-<!-- [ ] Explain - as a footnote somewhere in this section - that there are multiple versions of the Carlsmith paper: @carlsmith2024 , @carlsmith2021 , @carlsmith2022 @carlsmith2023 
+<!-- [ ] Explain CITATION: - as a footnote somewhere in this section - that there are multiple versions of the Carlsmith paper: @carlsmith2024 , @carlsmith2021 , @carlsmith2022 @carlsmith2023 
 
     - The versions come with slight updates and changes in the probability estimates
     - We refer mainly to the version used by the original MTAIR team for their extraction

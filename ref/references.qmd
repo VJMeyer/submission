@@ -292,7 +292,7 @@ Create Sidebars by applying the .sidebar attribute to a level 1 heading (for glo
 ### Items from MAref.bib
 
 ```markdown
-
+<!-- [ ] Update different Carlsmith paper versions in Zotero -->
 #### `@carlsmith2021`: 
 
     Carlsmith, Joseph (2021)
