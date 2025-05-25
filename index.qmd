@@ -456,50 +456,47 @@ Full Notebooks are embedded in the Appendix through the \_quarto.yml file with:
 
 ## Embed .html result/rendering from .ipynb Notebook
 
-### Html Graph by Notebook Cell Inclusion? - (from notebook local file)
+### Html Graph by Notebook Cell Inclusion - (from github-pages)
 
 ``` markdown
-{{< embed /AMTAIR_Prototype/data/example_carlsmith/AMTAIR_Prototype_example_carlsmith.ipynb#file_import2 echo=true >}}
+{{< embed /AMTAIR_Prototype/data/example_carlsmith/AMTAIR_Prototype_example_carlsmith.ipynb#html_graph_visualization_from_githubpage echo=true >}}
 ```
 
-{{< embed /AMTAIR_Prototype/data/example_carlsmith/AMTAIR_Prototype_example_carlsmith.ipynb#file_import2 echo=true >}}
+{{< embed /AMTAIR_Prototype/data/example_carlsmith/AMTAIR_Prototype_example_carlsmith.ipynb#html_graph_visualization_from_githubpage echo=true >}}
 
 
 ### Html Graph by Notebook Cell Inclusion with Website Call?
 
-label: online_model
+https://singularitysmith.github.io/AMTAIR_Prototype/bayesian_network_carlsmith.html
 
+### Full Bayesian Network Rendering
 
 ``` markdown
-{{< embed /AMTAIR_Prototype/data/example_carlsmith/AMTAIR_Prototype_example_carlsmith.ipynb#online_model  echo=true >}}
+{{< embed /AMTAIR_Prototype/data/example_carlsmith/AMTAIR_Prototype_example_carlsmith.ipynb#html_graph_visualization_from_githubpage  echo=true >}}
 ```
 
-{{< embed /AMTAIR_Prototype/data/example_carlsmith/AMTAIR_Prototype_example_carlsmith.ipynb#online_model echo=true >}}
 
-online_model
 
-file_import
-
-file_import2
-
-## More Tests
+### Rain-Sprinkler-Grass Network Rendering
 ```{python}
+#| label: rain_sprinkler_grass_example_network_rendering
 #| echo: true
 #| eval: true
-#| label: pull_html_graph_from_github
-#| fig-cap: "Graph Visualization for Carlsmith Model"
-#| fig-subcap: 
-#|   - "Gentoo penguins tend to have thinner bills,"
-#|   - "and Adelie penguins tend to have shorter bills."
-#| fig-link: "https://colab.research.google.com/drive/your-notebook-id"
-#| fig-alt: "Detailed description for accessibility"
-
-import pandas as pd
-print("AMTAIR is working!")
+#| fig-cap: "Dynamic Html Rendering of the Rain-Sprinkler-Grass DAG"
+#| fig-link: "https://singularitysmith.github.io/AMTAIR_Prototype/bayesian_network.html"
+#| fig-alt: "Dynamic Html Renderin of the Rain-Sprinkler-Grass DAG"
 
 
+from IPython.display import IFrame
 
+IFrame(src="https://singularitysmith.github.io/AMTAIR_Prototype/bayesian_network.html", width="100%", height="600px")
 ```
+
+
+
+
+
+
 
 
 

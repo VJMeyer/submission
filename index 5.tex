@@ -303,12 +303,12 @@
 \@ifpackageloaded{subcaption}{}{\usepackage{subcaption}}
 \makeatother
 \makeatletter
-\definecolor{QuartoInternalColor1}{rgb}{0.70,0.17,0.19}
-\definecolor{QuartoInternalColor6}{rgb}{0.00,0.64,0.31}
 \definecolor{QuartoInternalColor5}{rgb}{0.00,0.40,0.79}
-\definecolor{QuartoInternalColor4}{rgb}{0.15,0.56,0.56}
+\definecolor{QuartoInternalColor1}{rgb}{0.70,0.17,0.19}
 \definecolor{QuartoInternalColor2}{rgb}{0,0,0}
 \definecolor{QuartoInternalColor3}{rgb}{0.00,0.45,0.15}
+\definecolor{QuartoInternalColor6}{rgb}{0.00,0.64,0.31}
+\definecolor{QuartoInternalColor4}{rgb}{0.15,0.56,0.56}
 \makeatother
 \usepackage{bookmark}
 \IfFileExists{xurl.sty}{\usepackage{xurl}}{} % add URL line breaks if available
@@ -895,13 +895,13 @@ Quarto's native callouts work without additional packages:
 This is written in a `note' environment -- but it does not seem to
 produce any special rendering.
 
-\begin{tcolorbox}[enhanced jigsaw, rightrule=.15mm, colbacktitle=quarto-callout-note-color!10!white, colback=white, bottomtitle=1mm, leftrule=.75mm, opacitybacktitle=0.6, arc=.35mm, opacityback=0, coltitle=black, toprule=.15mm, colframe=quarto-callout-note-color-frame, breakable, title=\textcolor{quarto-callout-note-color}{\faInfo}\hspace{0.5em}{Optional Title}, toptitle=1mm, titlerule=0mm, bottomrule=.15mm, left=2mm]
+\begin{tcolorbox}[enhanced jigsaw, colbacktitle=quarto-callout-note-color!10!white, opacitybacktitle=0.6, left=2mm, toprule=.15mm, coltitle=black, bottomrule=.15mm, bottomtitle=1mm, colback=white, leftrule=.75mm, colframe=quarto-callout-note-color-frame, breakable, toptitle=1mm, title=\textcolor{quarto-callout-note-color}{\faInfo}\hspace{0.5em}{Optional Title}, titlerule=0mm, rightrule=.15mm, arc=.35mm, opacityback=0]
 
 Content here
 
 \end{tcolorbox}
 
-\begin{tcolorbox}[enhanced jigsaw, rightrule=.15mm, colbacktitle=quarto-callout-note-color!10!white, colback=white, bottomtitle=1mm, leftrule=.75mm, opacitybacktitle=0.6, arc=.35mm, opacityback=0, coltitle=black, toprule=.15mm, colframe=quarto-callout-note-color-frame, breakable, title=\textcolor{quarto-callout-note-color}{\faInfo}\hspace{0.5em}{Important Note2}, toptitle=1mm, titlerule=0mm, bottomrule=.15mm, left=2mm]
+\begin{tcolorbox}[enhanced jigsaw, colbacktitle=quarto-callout-note-color!10!white, opacitybacktitle=0.6, left=2mm, toprule=.15mm, coltitle=black, bottomrule=.15mm, bottomtitle=1mm, colback=white, leftrule=.75mm, colframe=quarto-callout-note-color-frame, breakable, toptitle=1mm, title=\textcolor{quarto-callout-note-color}{\faInfo}\hspace{0.5em}{Important Note2}, titlerule=0mm, rightrule=.15mm, arc=.35mm, opacityback=0]
 
 This renders perfectly in both HTML and PDF.
 
@@ -1317,69 +1317,129 @@ Notebook}
 
 \markright{Embed .html result/rendering from .ipynb Notebook}
 
-\subsection*{Html Graph by Notebook Cell Inclusion - (from
-github-pages)}\label{html-graph-by-notebook-cell-inclusion---from-github-pages}
-\addcontentsline{toc}{subsection}{Html Graph by Notebook Cell Inclusion
-- (from github-pages)}
+\subsection*{Html Graph by Notebook Cell Inclusion? - (from notebook
+local
+file)}\label{html-graph-by-notebook-cell-inclusion---from-notebook-local-file}
+\addcontentsline{toc}{subsection}{Html Graph by Notebook Cell Inclusion?
+- (from notebook local file)}
 
 \begin{Shaded}
 \begin{Highlighting}[]
-\NormalTok{\{\{\textless{} embed /AMTAIR\_Prototype/data/example\_carlsmith/AMTAIR\_Prototype\_example\_carlsmith.ipynb\#html\_graph\_visualization\_from\_githubpage echo=true \textgreater{}\}\}}
+\NormalTok{\{\{\textless{} embed /AMTAIR\_Prototype/data/example\_carlsmith/AMTAIR\_Prototype\_example\_carlsmith.ipynb\#file\_import2 echo=true \textgreater{}\}\}}
 \end{Highlighting}
 \end{Shaded}
 
 \begin{Shaded}
 \begin{Highlighting}[]
-\ImportTok{from}\NormalTok{ IPython.display }\ImportTok{import}\NormalTok{ IFrame}
+\CommentTok{\# @title 5.2 {-}{-}{-} File Import {-}{-}{-} Load Files [file\_import2]}
 
-\NormalTok{IFrame(src}\OperatorTok{=}\StringTok{"https://singularitysmith.github.io/AMTAIR\_Prototype/bayesian\_network\_carlsmith.html"}\NormalTok{, width}\OperatorTok{=}\StringTok{"100\%"}\NormalTok{, height}\OperatorTok{=}\StringTok{"600px"}\NormalTok{)}
+\ImportTok{import}\NormalTok{ requests}
+\ImportTok{import}\NormalTok{ io}
+\ImportTok{from}\NormalTok{ IPython.display }\ImportTok{import}\NormalTok{ HTML, display}
+
+\KeywordTok{def}\NormalTok{ load\_and\_display\_html\_from\_github(repo\_url, relative\_path):}
+    \CommentTok{"""}
+\CommentTok{    Loads an HTML file from a public GitHub repository and displays it.}
+
+\CommentTok{    Args:}
+\CommentTok{        repo\_url (str): The base URL of the GitHub repository (raw content).}
+\CommentTok{        relative\_path (str): The path to the HTML file relative to the repo\_url.}
+\CommentTok{    """}
+\NormalTok{    file\_url }\OperatorTok{=} \SpecialStringTok{f"}\SpecialCharTok{\{}\NormalTok{repo\_url}\SpecialCharTok{\}}\SpecialStringTok{/}\SpecialCharTok{\{}\NormalTok{relative\_path}\SpecialCharTok{\}}\SpecialStringTok{"}
+    \BuiltInTok{print}\NormalTok{(}\SpecialStringTok{f"Attempting to load HTML from: }\SpecialCharTok{\{}\NormalTok{file\_url}\SpecialCharTok{\}}\SpecialStringTok{"}\NormalTok{)}
+
+    \ControlFlowTok{try}\NormalTok{:}
+        \CommentTok{\# Fetch the file content from GitHub}
+\NormalTok{        response }\OperatorTok{=}\NormalTok{ requests.get(file\_url)}
+
+        \CommentTok{\# Check for successful response}
+\NormalTok{        response.raise\_for\_status()}
+
+        \CommentTok{\# Read the content}
+\NormalTok{        html\_content }\OperatorTok{=}\NormalTok{ io.StringIO(response.text).read()}
+
+        \BuiltInTok{print}\NormalTok{(}\SpecialStringTok{f"✅ Successfully loaded }\SpecialCharTok{\{}\NormalTok{relative\_path}\SpecialCharTok{\}}\SpecialStringTok{."}\NormalTok{)}
+
+        \CommentTok{\# Render the HTML content directly in the notebook}
+\NormalTok{        display(HTML(html\_content))}
+
+    \ControlFlowTok{except}\NormalTok{ requests.exceptions.RequestException }\ImportTok{as}\NormalTok{ e:}
+        \BuiltInTok{print}\NormalTok{(}\SpecialStringTok{f"❌ Error loading HTML file: }\SpecialCharTok{\{}\NormalTok{e}\SpecialCharTok{\}}\SpecialStringTok{"}\NormalTok{)}
+        \BuiltInTok{print}\NormalTok{(}\StringTok{"Please check the URL and your internet connection."}\NormalTok{)}
+    \ControlFlowTok{except} \PreprocessorTok{Exception} \ImportTok{as}\NormalTok{ e:}
+        \BuiltInTok{print}\NormalTok{(}\SpecialStringTok{f"❌ An unexpected error occurred: }\SpecialCharTok{\{}\NormalTok{e}\SpecialCharTok{\}}\SpecialStringTok{"}\NormalTok{)}
+
+\CommentTok{\# Specify the base repository URL and the relative path to the HTML file}
+\NormalTok{repo\_base\_url }\OperatorTok{=} \StringTok{"https://raw.githubusercontent.com/VJMeyer/submission/refs/heads/main/AMTAIR\_Prototype/data/example\_carlsmith/"}
+\NormalTok{html\_relative\_path }\OperatorTok{=} \StringTok{"runtime\_created\_data/bayesian\_network.html"}
+
+\CommentTok{\# Load and display the HTML file}
+\NormalTok{load\_and\_display\_html\_from\_github(repo\_base\_url, html\_relative\_path)}
 \end{Highlighting}
 \end{Shaded}
 
-\phantomsection\label{html_graph_visualization_from_githubpage}
 \begin{verbatim}
-<IPython.lib.display.IFrame at 0x7f04d69f0d90>
+Attempting to load HTML from: https://raw.githubusercontent.com/VJMeyer/submission/refs/heads/main/AMTAIR_Prototype/data/example_carlsmith//runtime_created_data/bayesian_network.html
+✅ Successfully loaded runtime_created_data/bayesian_network.html.
 \end{verbatim}
 
-Dynamic Html Rendering of the Carlsmith Bayesian Network/DAG
-Visualization
+\phantomsection\label{file_import2}
+File Import 2
 
 \subsection*{Html Graph by Notebook Cell Inclusion with Website
 Call?}\label{html-graph-by-notebook-cell-inclusion-with-website-call}
 \addcontentsline{toc}{subsection}{Html Graph by Notebook Cell Inclusion
 with Website Call?}
 
-https://singularitysmith.github.io/AMTAIR\_Prototype/bayesian\_network\_carlsmith.html
-
-\subsection*{Full Bayesian Network
-Rendering}\label{full-bayesian-network-rendering}
-\addcontentsline{toc}{subsection}{Full Bayesian Network Rendering}
+label: online\_model
 
 \begin{Shaded}
 \begin{Highlighting}[]
-\NormalTok{\{\{\textless{} embed /AMTAIR\_Prototype/data/example\_carlsmith/AMTAIR\_Prototype\_example\_carlsmith.ipynb\#html\_graph\_visualization\_from\_githubpage  echo=true \textgreater{}\}\}}
+\NormalTok{\{\{\textless{} embed /AMTAIR\_Prototype/data/example\_carlsmith/AMTAIR\_Prototype\_example\_carlsmith.ipynb\#online\_model  echo=true \textgreater{}\}\}}
 \end{Highlighting}
 \end{Shaded}
 
-\subsection*{Rain-Sprinkler-Grass Network
-Rendering}\label{rain-sprinkler-grass-network-rendering}
-\addcontentsline{toc}{subsection}{Rain-Sprinkler-Grass Network
-Rendering}
-
 \begin{Shaded}
 \begin{Highlighting}[]
+\CommentTok{\# @title 1.1.a) {-}{-}{-} MTAIR Online Model (Analytica) {-}{-}{-} [online\_model]}
+
 \ImportTok{from}\NormalTok{ IPython.display }\ImportTok{import}\NormalTok{ IFrame}
 
-\NormalTok{IFrame(src}\OperatorTok{=}\StringTok{"https://singularitysmith.github.io/AMTAIR\_Prototype/bayesian\_network.html"}\NormalTok{, width}\OperatorTok{=}\StringTok{"100\%"}\NormalTok{, height}\OperatorTok{=}\StringTok{"600px"}\NormalTok{)}
+\NormalTok{IFrame(src}\OperatorTok{=}\StringTok{"https://acp.analytica.com/view0?invite=4560\&code=3000289064591444815"}\NormalTok{, width}\OperatorTok{=}\StringTok{"100\%"}\NormalTok{, height}\OperatorTok{=}\StringTok{"900px"}\NormalTok{)}
 \end{Highlighting}
 \end{Shaded}
 
-\phantomsection\label{rain_sprinkler_grass_example_network_rendering}
+\phantomsection\label{online_model}
 \begin{verbatim}
-<IPython.lib.display.IFrame at 0x10862af90>
+<IPython.lib.display.IFrame at 0x7b9cc9929f50>
 \end{verbatim}
 
-Dynamic Html Rendering of the Rain-Sprinkler-Grass DAG
+MTAIR Online Model (Analytica)
+
+online\_model
+
+file\_import
+
+file\_import2
+
+\section*{More Tests}\label{more-tests}
+\addcontentsline{toc}{section}{More Tests}
+
+\markright{More Tests}
+
+\phantomsection\label{pull_html_graph_from_github}
+\begin{Shaded}
+\begin{Highlighting}[]
+\ImportTok{import}\NormalTok{ pandas }\ImportTok{as}\NormalTok{ pd}
+\BuiltInTok{print}\NormalTok{(}\StringTok{"AMTAIR is working!"}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+AMTAIR is working!
+\end{verbatim}
+
+Graph Visualization for Carlsmith Model
 
 \section*{Diagrams}\label{diagrams}
 \addcontentsline{toc}{section}{Diagrams}
@@ -2149,8 +2209,8 @@ Upscale Conditional Policy Assessments in Bayesian Networks on a Narrow
 Path towards Existential Safety
 \end{quote}
 
-\begin{tcolorbox}[enhanced jigsaw, rightrule=.15mm, colbacktitle=quarto-callout-note-color!10!white, colback=white, bottomtitle=1mm, leftrule=.75mm, opacitybacktitle=0.6, arc=.35mm, opacityback=0, coltitle=black, toprule=.15mm, colframe=quarto-callout-note-color-frame, breakable, title=\textcolor{quarto-callout-note-color}{\faInfo}\hspace{0.5em}{10\% of Grade: \textasciitilde{} 14\% of text \textasciitilde{} 4200
-words \textasciitilde{} 10 pages}, toptitle=1mm, titlerule=0mm, bottomrule=.15mm, left=2mm]
+\begin{tcolorbox}[enhanced jigsaw, colbacktitle=quarto-callout-note-color!10!white, opacitybacktitle=0.6, left=2mm, toprule=.15mm, coltitle=black, bottomrule=.15mm, bottomtitle=1mm, colback=white, leftrule=.75mm, colframe=quarto-callout-note-color-frame, breakable, toptitle=1mm, title=\textcolor{quarto-callout-note-color}{\faInfo}\hspace{0.5em}{10\% of Grade: \textasciitilde{} 14\% of text \textasciitilde{} 4200
+words \textasciitilde{} 10 pages}, titlerule=0mm, rightrule=.15mm, arc=.35mm, opacityback=0]
 
 \begin{itemize}
 \item
@@ -2426,8 +2486,8 @@ tools for improving coordination in AI governance.
 
 \chapter{Context \& Background}\label{sec-context}
 
-\begin{tcolorbox}[enhanced jigsaw, rightrule=.15mm, colbacktitle=quarto-callout-note-color!10!white, colback=white, bottomtitle=1mm, leftrule=.75mm, opacitybacktitle=0.6, arc=.35mm, opacityback=0, coltitle=black, toprule=.15mm, colframe=quarto-callout-note-color-frame, breakable, title=\textcolor{quarto-callout-note-color}{\faInfo}\hspace{0.5em}{20\% of Grade: \textasciitilde{} 29\% of text \textasciitilde{} 8700
-words \textasciitilde{} 20 pages}, toptitle=1mm, titlerule=0mm, bottomrule=.15mm, left=2mm]
+\begin{tcolorbox}[enhanced jigsaw, colbacktitle=quarto-callout-note-color!10!white, opacitybacktitle=0.6, left=2mm, toprule=.15mm, coltitle=black, bottomrule=.15mm, bottomtitle=1mm, colback=white, leftrule=.75mm, colframe=quarto-callout-note-color-frame, breakable, toptitle=1mm, title=\textcolor{quarto-callout-note-color}{\faInfo}\hspace{0.5em}{20\% of Grade: \textasciitilde{} 29\% of text \textasciitilde{} 8700
+words \textasciitilde{} 20 pages}, titlerule=0mm, rightrule=.15mm, arc=.35mm, opacityback=0]
 
 \begin{itemize}
 \item
@@ -3730,8 +3790,8 @@ Testing crossreferencing grapics Figure~\ref{fig-automation_pipeline}.
 
 \chapter{AMTAIR}\label{amtair}
 
-\begin{tcolorbox}[enhanced jigsaw, rightrule=.15mm, colbacktitle=quarto-callout-note-color!10!white, colback=white, bottomtitle=1mm, leftrule=.75mm, opacitybacktitle=0.6, arc=.35mm, opacityback=0, coltitle=black, toprule=.15mm, colframe=quarto-callout-note-color-frame, breakable, title=\textcolor{quarto-callout-note-color}{\faInfo}\hspace{0.5em}{20\% of Grade: \textasciitilde{} 29\% of text \textasciitilde{} 8700
-words \textasciitilde{} 20 pages}, toptitle=1mm, titlerule=0mm, bottomrule=.15mm, left=2mm]
+\begin{tcolorbox}[enhanced jigsaw, colbacktitle=quarto-callout-note-color!10!white, opacitybacktitle=0.6, left=2mm, toprule=.15mm, coltitle=black, bottomrule=.15mm, bottomtitle=1mm, colback=white, leftrule=.75mm, colframe=quarto-callout-note-color-frame, breakable, toptitle=1mm, title=\textcolor{quarto-callout-note-color}{\faInfo}\hspace{0.5em}{20\% of Grade: \textasciitilde{} 29\% of text \textasciitilde{} 8700
+words \textasciitilde{} 20 pages}, titlerule=0mm, rightrule=.15mm, arc=.35mm, opacityback=0]
 
 \begin{itemize}
 \item
@@ -5044,8 +5104,8 @@ Sensitivity analysis revealed:
 
 \chapter{Discussion}\label{discussion}
 
-\begin{tcolorbox}[enhanced jigsaw, rightrule=.15mm, colbacktitle=quarto-callout-note-color!10!white, colback=white, bottomtitle=1mm, leftrule=.75mm, opacitybacktitle=0.6, arc=.35mm, opacityback=0, coltitle=black, toprule=.15mm, colframe=quarto-callout-note-color-frame, breakable, title=\textcolor{quarto-callout-note-color}{\faInfo}\hspace{0.5em}{10\% of Grade: \textasciitilde{} 14\% of text \textasciitilde{} 4200
-words \textasciitilde{} 10 pages}, toptitle=1mm, titlerule=0mm, bottomrule=.15mm, left=2mm]
+\begin{tcolorbox}[enhanced jigsaw, colbacktitle=quarto-callout-note-color!10!white, opacitybacktitle=0.6, left=2mm, toprule=.15mm, coltitle=black, bottomrule=.15mm, bottomtitle=1mm, colback=white, leftrule=.75mm, colframe=quarto-callout-note-color-frame, breakable, toptitle=1mm, title=\textcolor{quarto-callout-note-color}{\faInfo}\hspace{0.5em}{10\% of Grade: \textasciitilde{} 14\% of text \textasciitilde{} 4200
+words \textasciitilde{} 10 pages}, titlerule=0mm, rightrule=.15mm, arc=.35mm, opacityback=0]
 
 \begin{itemize}
 \item
@@ -6139,8 +6199,8 @@ modeling
 
 \chapter{Conclusion}\label{conclusion}
 
-\begin{tcolorbox}[enhanced jigsaw, rightrule=.15mm, colbacktitle=quarto-callout-note-color!10!white, colback=white, bottomtitle=1mm, leftrule=.75mm, opacitybacktitle=0.6, arc=.35mm, opacityback=0, coltitle=black, toprule=.15mm, colframe=quarto-callout-note-color-frame, breakable, title=\textcolor{quarto-callout-note-color}{\faInfo}\hspace{0.5em}{10\% of Grade: \textasciitilde{} 14\% of text \textasciitilde{} 4200
-words \textasciitilde{} 10 pages}, toptitle=1mm, titlerule=0mm, bottomrule=.15mm, left=2mm]
+\begin{tcolorbox}[enhanced jigsaw, colbacktitle=quarto-callout-note-color!10!white, opacitybacktitle=0.6, left=2mm, toprule=.15mm, coltitle=black, bottomrule=.15mm, bottomtitle=1mm, colback=white, leftrule=.75mm, colframe=quarto-callout-note-color-frame, breakable, toptitle=1mm, title=\textcolor{quarto-callout-note-color}{\faInfo}\hspace{0.5em}{10\% of Grade: \textasciitilde{} 14\% of text \textasciitilde{} 4200
+words \textasciitilde{} 10 pages}, titlerule=0mm, rightrule=.15mm, arc=.35mm, opacityback=0]
 
 \begin{itemize}
 \item
@@ -11394,7 +11454,7 @@ A BayesDown representation consists of:
 \ErrorTok{\#\#\#} \ErrorTok{3.1} \ErrorTok{ExtractBayesDown{-}Data\_v1}
 \ErrorTok{Build} \ErrorTok{data} \ErrorTok{frame} \ErrorTok{with} \ErrorTok{extractable} \ErrorTok{information} \ErrorTok{from} \ErrorTok{BayesDown}
 
-\ErrorTok{:::} \FunctionTok{\{}\ErrorTok{.cell} \ErrorTok{quarto{-}private{-}1=\textquotesingle{}\{}\DataTypeTok{"key"}\FunctionTok{:}\StringTok{"colab"}\FunctionTok{,}\DataTypeTok{"value"}\FunctionTok{:\{}\DataTypeTok{"base\_uri"}\FunctionTok{:}\StringTok{"https://localhost:8080/"}\FunctionTok{,}\DataTypeTok{"height"}\FunctionTok{:}\DecValTok{157}\FunctionTok{\}\}}\ErrorTok{\textquotesingle{}} \ErrorTok{outputId=\textquotesingle{}e27e2c8c{-}bcb6{-}4e6b{-}e507{-}2b67d48ba814\textquotesingle{}\}}
+\ErrorTok{:::} \FunctionTok{\{}\ErrorTok{.cell} \ErrorTok{quarto{-}private{-}1=\textquotesingle{}\{}\DataTypeTok{"key"}\FunctionTok{:}\StringTok{"colab"}\FunctionTok{,}\DataTypeTok{"value"}\FunctionTok{:\{}\DataTypeTok{"base\_uri"}\FunctionTok{:}\StringTok{"https://localhost:8080/"}\FunctionTok{,}\DataTypeTok{"height"}\FunctionTok{:}\DecValTok{157}\FunctionTok{\}\}}\ErrorTok{\textquotesingle{}} \ErrorTok{outputId=\textquotesingle{}e27e2c8c{-}bcb6{-}4e6b{-}e507{-}2b67d48ba814\textquotesingle{}} \ErrorTok{execution\_count=60\}}
 \ErrorTok{\textasciigrave{}\textasciigrave{}\textasciigrave{}} \FunctionTok{\{}\ErrorTok{.python} \ErrorTok{.cell{-}code}\FunctionTok{\}}
 \ErrorTok{\#} \ErrorTok{read} \ErrorTok{sprinkler} \ErrorTok{example} \ErrorTok{{-}{-}} \ErrorTok{Occam} \ErrorTok{Colab} \ErrorTok{Online}
 \ErrorTok{file\_path\_ex\_rain} \ErrorTok{=} \ErrorTok{"https://raw.githubusercontent.com/SingularitySmith/AMTAIR\_Prototype/main/data/example\_carlsmith/BayesDown.md"}
@@ -13669,7 +13729,7 @@ File Import
 
 \begin{Shaded}
 \begin{Highlighting}[]
-\CommentTok{\# @title 5.2.2 {-}{-}{-} File Import {-}{-}{-} Load Files [file\_import2]}
+\CommentTok{\# @title 5.2 {-}{-}{-} File Import {-}{-}{-} Load Files [file\_import2]}
 
 \ImportTok{import}\NormalTok{ requests}
 \ImportTok{import}\NormalTok{ io}
@@ -13723,22 +13783,6 @@ Attempting to load HTML from: https://raw.githubusercontent.com/VJMeyer/submissi
 
 \phantomsection\label{file_import2}
 File Import 2
-
-\begin{Shaded}
-\begin{Highlighting}[]
-\ImportTok{from}\NormalTok{ IPython.display }\ImportTok{import}\NormalTok{ IFrame}
-
-\NormalTok{IFrame(src}\OperatorTok{=}\StringTok{"https://singularitysmith.github.io/AMTAIR\_Prototype/bayesian\_network\_carlsmith.html"}\NormalTok{, width}\OperatorTok{=}\StringTok{"100\%"}\NormalTok{, height}\OperatorTok{=}\StringTok{"600px"}\NormalTok{)}
-\end{Highlighting}
-\end{Shaded}
-
-\phantomsection\label{html_graph_visualization_from_githubpage}
-\begin{verbatim}
-<IPython.lib.display.IFrame at 0x7f04d69f0d90>
-\end{verbatim}
-
-Dynamic Html Rendering of the Carlsmith Bayesian Network/DAG
-Visualization
 
 \chapter{Conclusion: From Prototype to
 Production}\label{conclusion-from-prototype-to-production}
