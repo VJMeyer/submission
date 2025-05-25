@@ -300,12 +300,12 @@
 \@ifpackageloaded{subcaption}{}{\usepackage{subcaption}}
 \makeatother
 \makeatletter
-\definecolor{QuartoInternalColor2}{rgb}{0,0,0}
-\definecolor{QuartoInternalColor3}{rgb}{0.00,0.45,0.15}
 \definecolor{QuartoInternalColor5}{rgb}{0.00,0.40,0.79}
 \definecolor{QuartoInternalColor6}{rgb}{0.00,0.64,0.31}
 \definecolor{QuartoInternalColor1}{rgb}{0.70,0.17,0.19}
+\definecolor{QuartoInternalColor2}{rgb}{0,0,0}
 \definecolor{QuartoInternalColor4}{rgb}{0.15,0.56,0.56}
+\definecolor{QuartoInternalColor3}{rgb}{0.00,0.45,0.15}
 \makeatother
 \usepackage{bookmark}
 \IfFileExists{xurl.sty}{\usepackage{xurl}}{} % add URL line breaks if available
@@ -688,24 +688,6 @@ Practices Guide}
 \addcontentsline{toc}{section}{Quick Start}
 
 \markright{Quick Start}
-
-\subsection*{Building the Thesis}\label{building-the-thesis}
-\addcontentsline{toc}{subsection}{Building the Thesis}
-
-bash
-
-\begin{Shaded}
-\begin{Highlighting}[]
-\CommentTok{\# HTML output}
-\ExtensionTok{quarto}\NormalTok{ render }\AttributeTok{{-}{-}to}\NormalTok{ html}
-
-\CommentTok{\# PDF output}
-\ExtensionTok{quarto}\NormalTok{ render }\AttributeTok{{-}{-}to}\NormalTok{ pdf}
-
-\CommentTok{\# All formats}
-\ExtensionTok{quarto}\NormalTok{ render}
-\end{Highlighting}
-\end{Shaded}
 
 \subsection*{Task Management}\label{task-management}
 \addcontentsline{toc}{subsection}{Task Management}
@@ -1332,7 +1314,7 @@ Rendering}
 
 \phantomsection\label{rain_sprinkler_grass_example_network_rendering}
 \begin{verbatim}
-<IPython.lib.display.IFrame at 0x104b65910>
+<IPython.lib.display.IFrame at 0x106661a90>
 \end{verbatim}
 
 Dynamic Html Rendering of the Rain-Sprinkler-Grass DAG
@@ -2032,6 +2014,21 @@ the status in rendered output.
 \addcontentsline{toc}{section}{Task Categories and Syntax}
 
 \markright{Task Categories and Syntax}
+
+Write and track tasks with HTML comments in markdown blocks or with
+\texttt{verbatim\ code} ticks but ALWAYS add linke breaks between tasks:
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\InformationTok{\textasciigrave{}\textless{}!{-}{-} [ ] TODO: Task description {-}{-}\textgreater{}\textasciigrave{}}
+
+\InformationTok{\textasciigrave{}\textless{}!{-}{-} [ ] FIND: @missing{-}citation: "Description" {-}{-}\textgreater{}\textasciigrave{}}
+
+\InformationTok{\textasciigrave{}\textless{}!{-}{-} [ ] VERIFY: @suggested{-}citation: "Source" {-}{-}\textgreater{}\textasciigrave{}}
+
+\InformationTok{\textasciigrave{}\textless{}!{-}{-} [ ] CREATE: \{\#fig{-}name\}: "Figure description" {-}{-}\textgreater{}\textasciigrave{}}
+\end{Highlighting}
+\end{Shaded}
 
 \subsection*{1. General Tasks}\label{general-tasks}
 \addcontentsline{toc}{subsection}{1. General Tasks}
@@ -3353,7 +3350,7 @@ in AI Governance}
 \markboth{1. Introduction: The Coordination Crisis in AI Governance}{1.
 Introduction: The Coordination Crisis in AI Governance}
 
-\begin{tcolorbox}[enhanced jigsaw, toptitle=1mm, bottomrule=.15mm, rightrule=.15mm, coltitle=black, colbacktitle=quarto-callout-note-color!10!white, breakable, title=\textcolor{quarto-callout-note-color}{\faInfo}\hspace{0.5em}{Chapter Overview}, toprule=.15mm, bottomtitle=1mm, leftrule=.75mm, colback=white, arc=.35mm, opacitybacktitle=0.6, titlerule=0mm, colframe=quarto-callout-note-color-frame, left=2mm, opacityback=0]
+\begin{tcolorbox}[enhanced jigsaw, colframe=quarto-callout-note-color-frame, arc=.35mm, coltitle=black, breakable, colback=white, rightrule=.15mm, leftrule=.75mm, opacitybacktitle=0.6, left=2mm, toptitle=1mm, bottomrule=.15mm, toprule=.15mm, bottomtitle=1mm, titlerule=0mm, title=\textcolor{quarto-callout-note-color}{\faInfo}\hspace{0.5em}{Chapter Overview}, opacityback=0, colbacktitle=quarto-callout-note-color!10!white]
 
 \textbf{Grade Weight}: 10\% \textbar{} \textbf{Target Length}:
 \textasciitilde14\% of text (\textasciitilde4,200 words)\\
@@ -3772,7 +3769,7 @@ under deep uncertainty.
 \markboth{2. Context and Theoretical Foundations}{2. Context and
 Theoretical Foundations}
 
-\begin{tcolorbox}[enhanced jigsaw, toptitle=1mm, bottomrule=.15mm, rightrule=.15mm, coltitle=black, colbacktitle=quarto-callout-note-color!10!white, breakable, title=\textcolor{quarto-callout-note-color}{\faInfo}\hspace{0.5em}{Chapter Overview}, toprule=.15mm, bottomtitle=1mm, leftrule=.75mm, colback=white, arc=.35mm, opacitybacktitle=0.6, titlerule=0mm, colframe=quarto-callout-note-color-frame, left=2mm, opacityback=0]
+\begin{tcolorbox}[enhanced jigsaw, colframe=quarto-callout-note-color-frame, arc=.35mm, coltitle=black, breakable, colback=white, rightrule=.15mm, leftrule=.75mm, opacitybacktitle=0.6, left=2mm, toptitle=1mm, bottomrule=.15mm, toprule=.15mm, bottomtitle=1mm, titlerule=0mm, title=\textcolor{quarto-callout-note-color}{\faInfo}\hspace{0.5em}{Chapter Overview}, opacityback=0, colbacktitle=quarto-callout-note-color!10!white]
 
 \textbf{Grade Weight}: 20\% \textbar{} \textbf{Target Length}:
 \textasciitilde29\% of text (\textasciitilde8,700 words)\\
@@ -4016,7 +4013,7 @@ urgent need for new epistemic tools. These tools must:
   policy options
 \end{itemize}
 
-\begin{tcolorbox}[enhanced jigsaw, toptitle=1mm, bottomrule=.15mm, rightrule=.15mm, coltitle=black, colbacktitle=quarto-callout-tip-color!10!white, breakable, title=\textcolor{quarto-callout-tip-color}{\faLightbulb}\hspace{0.5em}{Key Insight}, toprule=.15mm, bottomtitle=1mm, leftrule=.75mm, colback=white, arc=.35mm, opacitybacktitle=0.6, titlerule=0mm, colframe=quarto-callout-tip-color-frame, left=2mm, opacityback=0]
+\begin{tcolorbox}[enhanced jigsaw, colframe=quarto-callout-tip-color-frame, arc=.35mm, coltitle=black, breakable, colback=white, rightrule=.15mm, leftrule=.75mm, opacitybacktitle=0.6, left=2mm, toptitle=1mm, bottomrule=.15mm, toprule=.15mm, bottomtitle=1mm, titlerule=0mm, title=\textcolor{quarto-callout-tip-color}{\faLightbulb}\hspace{0.5em}{Key Insight}, opacityback=0, colbacktitle=quarto-callout-tip-color!10!white]
 
 The computational approaches developed in this thesis---particularly
 Bayesian networks enhanced with automated extraction---directly address
@@ -4397,7 +4394,7 @@ both structure and quantification. Early models focused on simple binary
 outcomes, while recent work incorporates complex causal chains and
 continuous variables.
 
-\begin{tcolorbox}[enhanced jigsaw, toptitle=1mm, bottomrule=.15mm, rightrule=.15mm, coltitle=black, colbacktitle=quarto-callout-note-color!10!white, breakable, title=\textcolor{quarto-callout-note-color}{\faInfo}\hspace{0.5em}{Key Developments}, toprule=.15mm, bottomtitle=1mm, leftrule=.75mm, colback=white, arc=.35mm, opacitybacktitle=0.6, titlerule=0mm, colframe=quarto-callout-note-color-frame, left=2mm, opacityback=0]
+\begin{tcolorbox}[enhanced jigsaw, colframe=quarto-callout-note-color-frame, arc=.35mm, coltitle=black, breakable, colback=white, rightrule=.15mm, leftrule=.75mm, opacitybacktitle=0.6, left=2mm, toptitle=1mm, bottomrule=.15mm, toprule=.15mm, bottomtitle=1mm, titlerule=0mm, title=\textcolor{quarto-callout-note-color}{\faInfo}\hspace{0.5em}{Key Developments}, opacityback=0, colbacktitle=quarto-callout-note-color!10!white]
 
 \begin{itemize}
 \tightlist
@@ -4607,7 +4604,7 @@ Models}\label{sec-natural-to-computational}
 \addcontentsline{toc}{subsection}{2.7.3 From Natural Language to
 Computational Models}
 
-\begin{tcolorbox}[enhanced jigsaw, toptitle=1mm, bottomrule=.15mm, rightrule=.15mm, coltitle=black, colbacktitle=quarto-callout-tip-color!10!white, breakable, title=\textcolor{quarto-callout-tip-color}{\faLightbulb}\hspace{0.5em}{The Two-Stage Extraction Process}, toprule=.15mm, bottomtitle=1mm, leftrule=.75mm, colback=white, arc=.35mm, opacitybacktitle=0.6, titlerule=0mm, colframe=quarto-callout-tip-color-frame, left=2mm, opacityback=0]
+\begin{tcolorbox}[enhanced jigsaw, colframe=quarto-callout-tip-color-frame, arc=.35mm, coltitle=black, breakable, colback=white, rightrule=.15mm, leftrule=.75mm, opacitybacktitle=0.6, left=2mm, toptitle=1mm, bottomrule=.15mm, toprule=.15mm, bottomtitle=1mm, titlerule=0mm, title=\textcolor{quarto-callout-tip-color}{\faLightbulb}\hspace{0.5em}{The Two-Stage Extraction Process}, opacityback=0, colbacktitle=quarto-callout-tip-color!10!white]
 
 AMTAIR employs a novel two-stage process that separates structural
 argument extraction from probability quantification, enabling modular
@@ -4861,7 +4858,7 @@ models from AI safety literature.
 \markboth{3. AMTAIR: Design and Implementation}{3. AMTAIR: Design and
 Implementation}
 
-\begin{tcolorbox}[enhanced jigsaw, toptitle=1mm, bottomrule=.15mm, rightrule=.15mm, coltitle=black, colbacktitle=quarto-callout-note-color!10!white, breakable, title=\textcolor{quarto-callout-note-color}{\faInfo}\hspace{0.5em}{Chapter Overview}, toprule=.15mm, bottomtitle=1mm, leftrule=.75mm, colback=white, arc=.35mm, opacitybacktitle=0.6, titlerule=0mm, colframe=quarto-callout-note-color-frame, left=2mm, opacityback=0]
+\begin{tcolorbox}[enhanced jigsaw, colframe=quarto-callout-note-color-frame, arc=.35mm, coltitle=black, breakable, colback=white, rightrule=.15mm, leftrule=.75mm, opacitybacktitle=0.6, left=2mm, toptitle=1mm, bottomrule=.15mm, toprule=.15mm, bottomtitle=1mm, titlerule=0mm, title=\textcolor{quarto-callout-note-color}{\faInfo}\hspace{0.5em}{Chapter Overview}, opacityback=0, colbacktitle=quarto-callout-note-color!10!white]
 
 \textbf{Grade Weight}: 20\% \textbar{} \textbf{Target Length}:
 \textasciitilde29\% of text (\textasciitilde8,700 words)\\
@@ -4975,7 +4972,7 @@ propagation:
 \subsection*{3.1.2 Design Principles}\label{sec-design-principles}
 \addcontentsline{toc}{subsection}{3.1.2 Design Principles}
 
-\begin{tcolorbox}[enhanced jigsaw, toptitle=1mm, bottomrule=.15mm, rightrule=.15mm, coltitle=black, colbacktitle=quarto-callout-tip-color!10!white, breakable, title=\textcolor{quarto-callout-tip-color}{\faLightbulb}\hspace{0.5em}{Core Design Philosophy}, toprule=.15mm, bottomtitle=1mm, leftrule=.75mm, colback=white, arc=.35mm, opacitybacktitle=0.6, titlerule=0mm, colframe=quarto-callout-tip-color-frame, left=2mm, opacityback=0]
+\begin{tcolorbox}[enhanced jigsaw, colframe=quarto-callout-tip-color-frame, arc=.35mm, coltitle=black, breakable, colback=white, rightrule=.15mm, leftrule=.75mm, opacitybacktitle=0.6, left=2mm, toptitle=1mm, bottomrule=.15mm, toprule=.15mm, bottomtitle=1mm, titlerule=0mm, title=\textcolor{quarto-callout-tip-color}{\faLightbulb}\hspace{0.5em}{Core Design Philosophy}, opacityback=0, colbacktitle=quarto-callout-tip-color!10!white]
 
 The system emphasizes scalability through modular architecture, standard
 interfaces for interoperability, validation checkpoints for quality
@@ -5263,7 +5260,7 @@ The system processes this input through five steps:
 \subsection*{3.4.3 Results}\label{sec-rsg-results}
 \addcontentsline{toc}{subsection}{3.4.3 Results}
 
-\begin{tcolorbox}[enhanced jigsaw, toptitle=1mm, bottomrule=.15mm, rightrule=.15mm, coltitle=black, colbacktitle=quarto-callout-tip-color!10!white, breakable, title=\textcolor{quarto-callout-tip-color}{\faLightbulb}\hspace{0.5em}{Validation Success}, toprule=.15mm, bottomtitle=1mm, leftrule=.75mm, colback=white, arc=.35mm, opacitybacktitle=0.6, titlerule=0mm, colframe=quarto-callout-tip-color-frame, left=2mm, opacityback=0]
+\begin{tcolorbox}[enhanced jigsaw, colframe=quarto-callout-tip-color-frame, arc=.35mm, coltitle=black, breakable, colback=white, rightrule=.15mm, leftrule=.75mm, opacitybacktitle=0.6, left=2mm, toptitle=1mm, bottomrule=.15mm, toprule=.15mm, bottomtitle=1mm, titlerule=0mm, title=\textcolor{quarto-callout-tip-color}{\faLightbulb}\hspace{0.5em}{Validation Success}, opacityback=0, colbacktitle=quarto-callout-tip-color!10!white]
 
 The system successfully extracts complete network structure, preserves
 all probability information, calculates correct marginal probabilities,
@@ -5398,7 +5395,7 @@ across multiple dimensions.
 \subsection*{3.6.1 Ground Truth Construction}\label{sec-ground-truth}
 \addcontentsline{toc}{subsection}{3.6.1 Ground Truth Construction}
 
-\begin{tcolorbox}[enhanced jigsaw, toptitle=1mm, bottomrule=.15mm, rightrule=.15mm, coltitle=black, colbacktitle=quarto-callout-note-color!10!white, breakable, title=\textcolor{quarto-callout-note-color}{\faInfo}\hspace{0.5em}{Validation Protocol}, toprule=.15mm, bottomtitle=1mm, leftrule=.75mm, colback=white, arc=.35mm, opacitybacktitle=0.6, titlerule=0mm, colframe=quarto-callout-note-color-frame, left=2mm, opacityback=0]
+\begin{tcolorbox}[enhanced jigsaw, colframe=quarto-callout-note-color-frame, arc=.35mm, coltitle=black, breakable, colback=white, rightrule=.15mm, leftrule=.75mm, opacitybacktitle=0.6, left=2mm, toptitle=1mm, bottomrule=.15mm, toprule=.15mm, bottomtitle=1mm, titlerule=0mm, title=\textcolor{quarto-callout-note-color}{\faInfo}\hspace{0.5em}{Validation Protocol}, opacityback=0, colbacktitle=quarto-callout-note-color!10!white]
 
 We created validation datasets through expert manual extraction,
 consensus building, and source annotation---establishing gold standard
@@ -5566,7 +5563,7 @@ This quantitative analysis enables comparison across interventions.
 \subsection*{3.7.3 Robustness Analysis}\label{sec-robustness}
 \addcontentsline{toc}{subsection}{3.7.3 Robustness Analysis}
 
-\begin{tcolorbox}[enhanced jigsaw, toptitle=1mm, bottomrule=.15mm, rightrule=.15mm, coltitle=black, colbacktitle=quarto-callout-tip-color!10!white, breakable, title=\textcolor{quarto-callout-tip-color}{\faLightbulb}\hspace{0.5em}{Cross-Worldview Robustness}, toprule=.15mm, bottomtitle=1mm, leftrule=.75mm, colback=white, arc=.35mm, opacitybacktitle=0.6, titlerule=0mm, colframe=quarto-callout-tip-color-frame, left=2mm, opacityback=0]
+\begin{tcolorbox}[enhanced jigsaw, colframe=quarto-callout-tip-color-frame, arc=.35mm, coltitle=black, breakable, colback=white, rightrule=.15mm, leftrule=.75mm, opacitybacktitle=0.6, left=2mm, toptitle=1mm, bottomrule=.15mm, toprule=.15mm, bottomtitle=1mm, titlerule=0mm, title=\textcolor{quarto-callout-tip-color}{\faLightbulb}\hspace{0.5em}{Cross-Worldview Robustness}, opacityback=0, colbacktitle=quarto-callout-tip-color!10!white]
 
 Policies must work across worldviews. AMTAIR enables multi-model
 evaluation, parameter sensitivity testing, scenario analysis, and
@@ -5649,7 +5646,7 @@ connection to live forecasting data.
 \subsection*{3.9.1 Design for Integration}\label{sec-integration-design}
 \addcontentsline{toc}{subsection}{3.9.1 Design for Integration}
 
-\begin{tcolorbox}[enhanced jigsaw, toptitle=1mm, bottomrule=.15mm, rightrule=.15mm, coltitle=black, colbacktitle=quarto-callout-note-color!10!white, breakable, title=\textcolor{quarto-callout-note-color}{\faInfo}\hspace{0.5em}{Integration Architecture}, toprule=.15mm, bottomtitle=1mm, leftrule=.75mm, colback=white, arc=.35mm, opacitybacktitle=0.6, titlerule=0mm, colframe=quarto-callout-note-color-frame, left=2mm, opacityback=0]
+\begin{tcolorbox}[enhanced jigsaw, colframe=quarto-callout-note-color-frame, arc=.35mm, coltitle=black, breakable, colback=white, rightrule=.15mm, leftrule=.75mm, opacitybacktitle=0.6, left=2mm, toptitle=1mm, bottomrule=.15mm, toprule=.15mm, bottomtitle=1mm, titlerule=0mm, title=\textcolor{quarto-callout-note-color}{\faInfo}\hspace{0.5em}{Integration Architecture}, opacityback=0, colbacktitle=quarto-callout-note-color!10!white]
 
 The system anticipates market connections through API specifications for
 major platforms, semantic matching algorithms, probability aggregation
@@ -5736,7 +5733,7 @@ Document strategies with benchmarks:
 Assessment}\label{sec-extraction-quality}
 \addcontentsline{toc}{subsection}{3.11.1 Extraction Quality Assessment}
 
-\begin{tcolorbox}[enhanced jigsaw, toptitle=1mm, bottomrule=.15mm, rightrule=.15mm, coltitle=black, colbacktitle=quarto-callout-tip-color!10!white, breakable, title=\textcolor{quarto-callout-tip-color}{\faLightbulb}\hspace{0.5em}{Performance Highlights}, toprule=.15mm, bottomtitle=1mm, leftrule=.75mm, colback=white, arc=.35mm, opacitybacktitle=0.6, titlerule=0mm, colframe=quarto-callout-tip-color-frame, left=2mm, opacityback=0]
+\begin{tcolorbox}[enhanced jigsaw, colframe=quarto-callout-tip-color-frame, arc=.35mm, coltitle=black, breakable, colback=white, rightrule=.15mm, leftrule=.75mm, opacitybacktitle=0.6, left=2mm, toptitle=1mm, bottomrule=.15mm, toprule=.15mm, bottomtitle=1mm, titlerule=0mm, title=\textcolor{quarto-callout-tip-color}{\faLightbulb}\hspace{0.5em}{Performance Highlights}, opacityback=0, colbacktitle=quarto-callout-tip-color!10!white]
 
 The system achieves 85\%+ accuracy for structural relationships and 73\%
 for probability capture---sufficient for practical use while maintaining
@@ -5839,7 +5836,7 @@ Limitations}
 \markboth{4. Discussion: Implications and Limitations}{4. Discussion:
 Implications and Limitations}
 
-\begin{tcolorbox}[enhanced jigsaw, toptitle=1mm, bottomrule=.15mm, rightrule=.15mm, coltitle=black, colbacktitle=quarto-callout-note-color!10!white, breakable, title=\textcolor{quarto-callout-note-color}{\faInfo}\hspace{0.5em}{Chapter Overview}, toprule=.15mm, bottomtitle=1mm, leftrule=.75mm, colback=white, arc=.35mm, opacitybacktitle=0.6, titlerule=0mm, colframe=quarto-callout-note-color-frame, left=2mm, opacityback=0]
+\begin{tcolorbox}[enhanced jigsaw, colframe=quarto-callout-note-color-frame, arc=.35mm, coltitle=black, breakable, colback=white, rightrule=.15mm, leftrule=.75mm, opacitybacktitle=0.6, left=2mm, toptitle=1mm, bottomrule=.15mm, toprule=.15mm, bottomtitle=1mm, titlerule=0mm, title=\textcolor{quarto-callout-note-color}{\faInfo}\hspace{0.5em}{Chapter Overview}, opacityback=0, colbacktitle=quarto-callout-note-color!10!white]
 
 \textbf{Grade Weight}: 10\% \textbar{} \textbf{Target Length}:
 \textasciitilde14\% of text (\textasciitilde4,200 words)\\
@@ -6263,7 +6260,7 @@ parameters rather than requiring complete argument reconstruction
 \textbf{Exploration tools}: Stakeholders can modify assumptions and
 immediately see consequences, building intuition about model dynamics
 
-\begin{tcolorbox}[enhanced jigsaw, toptitle=1mm, bottomrule=.15mm, rightrule=.15mm, coltitle=black, colbacktitle=quarto-callout-tip-color!10!white, breakable, title=\textcolor{quarto-callout-tip-color}{\faLightbulb}\hspace{0.5em}{Early Results}, toprule=.15mm, bottomtitle=1mm, leftrule=.75mm, colback=white, arc=.35mm, opacitybacktitle=0.6, titlerule=0mm, colframe=quarto-callout-tip-color-frame, left=2mm, opacityback=0]
+\begin{tcolorbox}[enhanced jigsaw, colframe=quarto-callout-tip-color-frame, arc=.35mm, coltitle=black, breakable, colback=white, rightrule=.15mm, leftrule=.75mm, opacitybacktitle=0.6, left=2mm, toptitle=1mm, bottomrule=.15mm, toprule=.15mm, bottomtitle=1mm, titlerule=0mm, title=\textcolor{quarto-callout-tip-color}{\faLightbulb}\hspace{0.5em}{Early Results}, opacityback=0, colbacktitle=quarto-callout-tip-color!10!white]
 
 Pilot studies with AI governance researchers show 40\% reduction in time
 to identify disagreements and 60\% improvement in agreement
@@ -6570,7 +6567,7 @@ Governance}
 \markboth{5. Conclusion: Toward Coordinated AI Governance}{5.
 Conclusion: Toward Coordinated AI Governance}
 
-\begin{tcolorbox}[enhanced jigsaw, toptitle=1mm, bottomrule=.15mm, rightrule=.15mm, coltitle=black, colbacktitle=quarto-callout-note-color!10!white, breakable, title=\textcolor{quarto-callout-note-color}{\faInfo}\hspace{0.5em}{Chapter Overview}, toprule=.15mm, bottomtitle=1mm, leftrule=.75mm, colback=white, arc=.35mm, opacitybacktitle=0.6, titlerule=0mm, colframe=quarto-callout-note-color-frame, left=2mm, opacityback=0]
+\begin{tcolorbox}[enhanced jigsaw, colframe=quarto-callout-note-color-frame, arc=.35mm, coltitle=black, breakable, colback=white, rightrule=.15mm, leftrule=.75mm, opacitybacktitle=0.6, left=2mm, toptitle=1mm, bottomrule=.15mm, toprule=.15mm, bottomtitle=1mm, titlerule=0mm, title=\textcolor{quarto-callout-note-color}{\faInfo}\hspace{0.5em}{Chapter Overview}, opacityback=0, colbacktitle=quarto-callout-note-color!10!white]
 
 \textbf{Grade Weight}: 10\% \textbar{} \textbf{Target Length}:
 \textasciitilde14\% of text (\textasciitilde4,200 words)\\
@@ -6845,7 +6842,7 @@ Researchers}\label{sec-researcher-recommendations}
   alongside traditional papers to enable cumulative building
 \end{enumerate}
 
-\begin{tcolorbox}[enhanced jigsaw, toptitle=1mm, bottomrule=.15mm, rightrule=.15mm, coltitle=black, colbacktitle=quarto-callout-tip-color!10!white, breakable, title=\textcolor{quarto-callout-tip-color}{\faLightbulb}\hspace{0.5em}{Quick Start Guide}, toprule=.15mm, bottomtitle=1mm, leftrule=.75mm, colback=white, arc=.35mm, opacitybacktitle=0.6, titlerule=0mm, colframe=quarto-callout-tip-color-frame, left=2mm, opacityback=0]
+\begin{tcolorbox}[enhanced jigsaw, colframe=quarto-callout-tip-color-frame, arc=.35mm, coltitle=black, breakable, colback=white, rightrule=.15mm, leftrule=.75mm, opacitybacktitle=0.6, left=2mm, toptitle=1mm, bottomrule=.15mm, toprule=.15mm, bottomtitle=1mm, titlerule=0mm, title=\textcolor{quarto-callout-tip-color}{\faLightbulb}\hspace{0.5em}{Quick Start Guide}, opacityback=0, colbacktitle=quarto-callout-tip-color!10!white]
 
 A comprehensive guide for researchers getting started with AMTAIR will
 be available at {[}project website{]}, including templates, tutorials,
@@ -7010,7 +7007,7 @@ it's whether we can augment our collective intelligence with
 computational tools that help us reason together about futures too
 important to leave to chance.
 
-\begin{tcolorbox}[enhanced jigsaw, toptitle=1mm, bottomrule=.15mm, rightrule=.15mm, coltitle=black, colbacktitle=quarto-callout-important-color!10!white, breakable, title=\textcolor{quarto-callout-important-color}{\faExclamation}\hspace{0.5em}{The Stakes}, toprule=.15mm, bottomtitle=1mm, leftrule=.75mm, colback=white, arc=.35mm, opacitybacktitle=0.6, titlerule=0mm, colframe=quarto-callout-important-color-frame, left=2mm, opacityback=0]
+\begin{tcolorbox}[enhanced jigsaw, colframe=quarto-callout-important-color-frame, arc=.35mm, coltitle=black, breakable, colback=white, rightrule=.15mm, leftrule=.75mm, opacitybacktitle=0.6, left=2mm, toptitle=1mm, bottomrule=.15mm, toprule=.15mm, bottomtitle=1mm, titlerule=0mm, title=\textcolor{quarto-callout-important-color}{\faExclamation}\hspace{0.5em}{The Stakes}, opacityback=0, colbacktitle=quarto-callout-important-color!10!white]
 
 As AI capabilities advance toward transformative potential, the window
 for establishing effective governance narrows. We cannot afford
@@ -7549,6 +7546,293 @@ Tracking}\label{figure-inventory-and-tracking}
 
 \markboth{Bibliography}{Bibliography}
 
+
+\section{AMTAIR Thesis Relevant Literature \&
+Citations}\label{amtair-thesis-relevant-literature-citations}
+
+\subsection{Items from MAref.bib}\label{items-from-maref.bib}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+
+\FunctionTok{\#\#\#\# \textasciigrave{}@carlsmith2021\textasciigrave{}: }
+
+\InformationTok{    Carlsmith, Joseph (2021)}
+\InformationTok{    Is Power{-}Seeking AI an Existential Risk?}
+
+\InformationTok{    DOI: 10.48550/arXiv.2206.13353}
+
+\InformationTok{    arXiv ID: 2206.13353}
+
+\InformationTok{    Better alternative: None {-} this is the primary case study}
+
+\InformationTok{    Relevant thesis section(s): }
+\InformationTok{    {-} Section 2.1: AI Existential Risk: The Carlsmith Model}
+\InformationTok{    {-} Section 3.5: Case Study: Carlsmith\textquotesingle{}s Power{-}Seeking AI Model}
+\InformationTok{    {-} Throughout as validation example}
+
+\InformationTok{    Potential claims supported (with certainty \%):}
+\InformationTok{    {-} "Carlsmith\textquotesingle{}s six{-}premise decomposition exemplifies structured probabilistic reasoning about AI risk" (95\%)}
+\InformationTok{    {-} "The model estimates \textasciitilde{}5\% existential risk by 2070" (90\%)}
+\InformationTok{    {-} "Explicit probability estimates enable formal analysis" (95\%)}
+
+\FunctionTok{\#\#\#\# \textasciigrave{}@bostrom2014\textasciigrave{}: }
+
+\InformationTok{    Bostrom, Nick (2014)}
+\InformationTok{    Superintelligence: Paths, Dangers, Strategies}
+
+\InformationTok{    ISBN: 978{-}0{-}19{-}967811{-}2}
+
+\InformationTok{    Better alternative: None {-} foundational text}
+
+\InformationTok{    Relevant thesis section(s):}
+\InformationTok{    {-} Section 1.2: The Coordination Crisis}
+\InformationTok{    {-} Section 2.1: Historical foundations of AI risk}
+\InformationTok{    {-} Background context throughout}
+
+\InformationTok{    Potential claims supported (with certainty \%):}
+\InformationTok{    {-} "Orthogonality thesis: intelligence and goals are independent" (95\%)}
+\InformationTok{    {-} "Instrumental convergence leads to power{-}seeking behavior" (90\%)}
+\InformationTok{    {-} "Superintelligence poses existential risk" (85\%)}
+
+\FunctionTok{\#\#\#\# \textasciigrave{}@clarke2022\textasciigrave{}: }
+
+\InformationTok{    Clarke, Sam et al. (2022)}
+\InformationTok{    Modeling Transformative AI Risks (MTAIR) Project {-}{-} Summary Report}
+
+\InformationTok{    DOI: 10.48550/ARXIV.2206.09360}
+
+\InformationTok{    arXiv ID: 2206.09360}
+
+\InformationTok{    Better alternative: None {-} this is what AMTAIR builds upon}
+
+\InformationTok{    Relevant thesis section(s):}
+\InformationTok{    {-} Section 2.5: The MTAIR Framework: Achievements and Limitations}
+\InformationTok{    {-} Section 1.3: Comparison with AMTAIR automation}
+\InformationTok{    {-} Throughout as predecessor project}
+
+\InformationTok{    Potential claims supported (with certainty \%):}
+\InformationTok{    {-} "MTAIR demonstrated value of formal models but required extensive manual effort" (95\%)}
+\InformationTok{    {-} "Manual extraction takes 200{-}400 expert hours per model" (80\%)}
+\InformationTok{    {-} "Static models cannot track evolving arguments" (90\%)}
+
+\FunctionTok{\#\#\#\# \textasciigrave{}@pearl2009\textasciigrave{}: }
+
+\InformationTok{    Pearl, Judea (2009)}
+\InformationTok{    Causality: Models, Reasoning and Inference (2nd Edition)}
+
+\InformationTok{    ISBN: 978{-}0{-}521{-}89560{-}6}
+
+\InformationTok{    DOI: 10.1017/CBO9780511803161}
+
+\InformationTok{    Better alternative: None {-} theoretical foundation}
+
+\InformationTok{    Relevant thesis section(s):}
+\InformationTok{    {-} Section 2.3: Bayesian Networks as Knowledge Representation}
+\InformationTok{    {-} Section 2.7.4: DAG structure and causal semantics}
+\InformationTok{    {-} Section 3.7.1: Do{-}calculus for policy interventions}
+
+\InformationTok{    Potential claims supported (with certainty \%):}
+\InformationTok{    {-} "Bayesian networks enable causal reasoning under uncertainty" (95\%)}
+\InformationTok{    {-} "Do{-}calculus allows formal policy evaluation" (95\%)}
+\InformationTok{    {-} "DAGs encode conditional independence assumptions" (95\%)}
+
+\FunctionTok{\#\#\#\# \textasciigrave{}@jaynes2003\textasciigrave{}: }
+
+\InformationTok{    Jaynes, Edwin T. (2003)}
+\InformationTok{    Probability Theory: The Logic of Science}
+
+\InformationTok{    ISBN: 978{-}0{-}521{-}59271{-}0}
+
+\InformationTok{    DOI: 10.1017/CBO9780511790423}
+
+\InformationTok{    Better alternative: None for foundational probability theory}
+
+\InformationTok{    Relevant thesis section(s):}
+\InformationTok{    {-} Section 2.3: Mathematical foundations of Bayesian inference}
+\InformationTok{    {-} Section 2.7.5: Probability as extended logic}
+\InformationTok{    {-} Epistemological grounding throughout}
+
+\InformationTok{    Potential claims supported (with certainty \%):}
+\InformationTok{    {-} "Probability theory extends deductive logic to handle uncertainty" (95\%)}
+\InformationTok{    {-} "Bayesian inference provides principled belief updating" (95\%)}
+\InformationTok{    {-} "Maximum entropy principles handle missing information" (90\%)}
+
+\FunctionTok{\#\#\#\# \textasciigrave{}@tetlock2015\textasciigrave{}: }
+
+\InformationTok{    Tetlock, Philip E. and Gardner, Dan (2015)}
+\InformationTok{    Superforecasting: The Art and Science of Prediction}
+
+\InformationTok{    ISBN: 978{-}0{-}8041{-}3671{-}6}
+
+\InformationTok{    Better alternative: @tetlock2023 for more recent long{-}range forecasting}
+
+\InformationTok{    Relevant thesis section(s):}
+\InformationTok{    {-} Section 1.5.2: Live Data Integration}
+\InformationTok{    {-} Section 3.9: Integration with Prediction Markets}
+\InformationTok{    {-} Forecasting methodology context}
+
+\InformationTok{    Potential claims supported (with certainty \%):}
+\InformationTok{    {-} "Aggregated forecasts outperform individual expert judgment" (90\%)}
+\InformationTok{    {-} "Prediction markets provide empirical grounding for models" (85\%)}
+\InformationTok{    {-} "Calibrated forecasters achieve measurable accuracy" (90\%)}
+
+\FunctionTok{\#\#\#\# \textasciigrave{}@lempert2003\textasciigrave{}: }
+
+\InformationTok{    Lempert, Robert J., Popper, Steven W., and Bankes, Steven C. (2003)}
+\InformationTok{    Shaping the Next One Hundred Years: New Methods for Quantitative, Long{-}Term Policy Analysis}
+
+\InformationTok{    ISBN: 978{-}0{-}8330{-}3275{-}8}
+
+\InformationTok{    Better alternative: None for deep uncertainty methods}
+
+\InformationTok{    Relevant thesis section(s):}
+\InformationTok{    {-} Section 2.2.2: Limitations of Traditional Approaches}
+\InformationTok{    {-} Section 4.1.2: Deep uncertainty in AI governance}
+\InformationTok{    {-} Policy evaluation methodology}
+
+\InformationTok{    Potential claims supported (with certainty \%):}
+\InformationTok{    {-} "Traditional policy analysis fails under deep uncertainty" (90\%)}
+\InformationTok{    {-} "Robust decision{-}making requires considering multiple scenarios" (85\%)}
+\InformationTok{    {-} "AI governance faces irreducible uncertainties" (90\%)}
+
+\FunctionTok{\#\#\#\# \textasciigrave{}@good1966\textasciigrave{}: }
+
+\InformationTok{    Good, Irving John (1966)}
+\InformationTok{    Speculations Concerning the First Ultraintelligent Machine}
+
+\InformationTok{    DOI: 10.1016/S0065{-}2458(08)60418{-}0}
+
+\InformationTok{    Better alternative: More recent work like @yudkowsky2008}
+
+\InformationTok{    Relevant thesis section(s):}
+\InformationTok{    {-} Historical context in Introduction}
+\InformationTok{    {-} Background for intelligence explosion concept}
+
+\InformationTok{    Potential claims supported (with certainty \%):}
+\InformationTok{    {-} "Intelligence explosion concept dates to 1960s" (95\%)}
+\InformationTok{    {-} "Recursive self{-}improvement could lead to rapid capability gains" (80\%)}
+
+\FunctionTok{\#\#\#\# \textasciigrave{}@yudkowsky2008\textasciigrave{}: }
+
+\InformationTok{    Yudkowsky, Eliezer (2008)}
+\InformationTok{    Artificial Intelligence as a Positive and Negative Factor in Global Risk}
+
+\InformationTok{    DOI: 10.1093/oso/9780198570509.003.0021}
+
+\InformationTok{    Better alternative: @yudkowsky2022 for more recent formulation}
+
+\InformationTok{    Relevant thesis section(s):}
+\InformationTok{    {-} Section 2.1: AI risk arguments}
+\InformationTok{    {-} Background on alignment problem}
+\InformationTok{    {-} Instrumental convergence discussion}
+
+\InformationTok{    Potential claims supported (with certainty \%):}
+\InformationTok{    {-} "AI alignment is the core challenge for beneficial AI" (90\%)}
+\InformationTok{    {-} "Default AI development may produce misaligned systems" (85\%)}
+\InformationTok{    {-} "Cognitive biases affect AI risk assessment" (90\%)}
+
+\FunctionTok{\#\#\#\# \textasciigrave{}@russell2015\textasciigrave{}: }
+
+\InformationTok{    Russell, Stuart et al. (2015)}
+\InformationTok{    Research Priorities for Robust and Beneficial Artificial Intelligence: An Open Letter}
+
+\InformationTok{    DOI: 10.1609/aimag.v36i4.2621}
+
+\InformationTok{    Better alternative: None {-} important consensus document}
+
+\InformationTok{    Relevant thesis section(s):}
+\InformationTok{    {-} Introduction: AI safety research mobilization}
+\InformationTok{    {-} Context for coordination efforts}
+
+\InformationTok{    Potential claims supported (with certainty \%):}
+\InformationTok{    {-} "AI safety has gained mainstream research attention" (95\%)}
+\InformationTok{    {-} "Technical and governance challenges are interrelated" (90\%)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{\#\# New Suggested Citations}
+
+\FunctionTok{\#\#\# New Items to Consider:}
+
+\FunctionTok{\#\#\#\# \textasciigrave{}@amodei2016\textasciigrave{}: }
+
+\InformationTok{    Amodei, Dario et al. (2016)}
+\InformationTok{    Concrete Problems in AI Safety}
+
+\InformationTok{    arXiv ID: 1606.06565}
+
+\InformationTok{    Relevant thesis section(s):}
+\InformationTok{    {-} Section 2.2: Technical safety challenges}
+\InformationTok{    {-} Concrete problems motivating AMTAIR}
+
+\InformationTok{    Potential claims supported (with certainty \%):}
+\InformationTok{    {-} "AI safety includes avoiding negative side effects, safe exploration" (95\%)}
+\InformationTok{    {-} "Current ML systems exhibit safety failures" (90\%)}
+
+\FunctionTok{\#\#\#\# \textasciigrave{}@christiano2019\textasciigrave{}: }
+
+\InformationTok{    Christiano, Paul (2019)}
+\InformationTok{    What Failure Looks Like}
+
+\InformationTok{    URL: https://www.alignmentforum.org/posts/HBxe6wdjxK239zajf/what{-}failure{-}looks{-}like}
+
+\InformationTok{    Relevant thesis section(s):}
+\InformationTok{    {-} Additional case study for extraction}
+\InformationTok{    {-} Alternative risk model to Carlsmith}
+
+\InformationTok{    Potential claims supported (with certainty \%):}
+\InformationTok{    {-} "AI risk may manifest through gradual loss of control" (85\%)}
+\InformationTok{    {-} "Multiple pathways to existential risk exist" (90\%)}
+
+\FunctionTok{\#\#\#\# \textasciigrave{}@critch2019\textasciigrave{}: }
+
+\InformationTok{    Critch, Andrew (2019)}
+\InformationTok{    ARCHES: AI Research Considerations for Human Existential Safety}
+
+\InformationTok{    URL: https://arxiv.org/abs/2206.11232}
+
+\InformationTok{    Relevant thesis section(s):}
+\InformationTok{    {-} Another structured model for extraction validation}
+\InformationTok{    {-} Multi{-}stakeholder coordination framework}
+
+\InformationTok{    Potential claims supported (with certainty \%):}
+\InformationTok{    {-} "AI safety requires coordination across multiple sectors" (90\%)}
+\InformationTok{    {-} "Research, deployment, and governance interact complexly" (85\%)}
+
+\FunctionTok{\#\#\#\# \textasciigrave{}@dafoe2021\textasciigrave{}: }
+
+\InformationTok{    Dafoe, Allan (2021)}
+\InformationTok{    AI Governance: A Research Agenda}
+
+\InformationTok{    URL: https://www.fhi.ox.ac.uk/govaiagenda/}
+
+\InformationTok{    Relevant thesis section(s):}
+\InformationTok{    {-} Section 2.6.2: Governance proposals taxonomy}
+\InformationTok{    {-} Context for policy evaluation needs}
+
+\InformationTok{    Potential claims supported (with certainty \%):}
+\InformationTok{    {-} "AI governance requires interdisciplinary approaches" (95\%)}
+\InformationTok{    {-} "Technical and policy communities need better coordination" (90\%)}
+
+\FunctionTok{\#\#\#\# \textasciigrave{}@askell2021\textasciigrave{}:}
+
+\InformationTok{    Askell, Amanda et al. (2021)}
+\InformationTok{    A General Language Assistant as a Laboratory for Alignment}
+
+\InformationTok{    arXiv ID: 2112.00861}
+
+\InformationTok{    Relevant thesis section(s):}
+\InformationTok{    {-} LLM capabilities for extraction tasks}
+\InformationTok{    {-} Alignment considerations for AMTAIR}
+
+\InformationTok{    Potential claims supported (with certainty \%):}
+\InformationTok{    {-} "Language models can assist in complex reasoning tasks" (90\%)}
+\InformationTok{    {-} "Alignment challenges manifest in current systems" (85\%)}
+\end{Highlighting}
+\end{Shaded}
 
 \cleardoublepage
 \phantomsection

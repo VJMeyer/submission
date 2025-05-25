@@ -146,21 +146,6 @@ MAD Mutually Assured Destruction
 
 ## Quick Start
 
-### Building the Thesis
-
-bash
-
-```bash
-# HTML output
-quarto render --to html
-
-# PDF output
-quarto render --to pdf
-
-# All formats
-quarto render
-```
-
 ### Task Management
 
 Write and track tasks with HTML comments in markdown blocks or with `verbatim code` ticks but ALWAYS add linke breaks between tasks:
@@ -903,6 +888,19 @@ graph TD
 This task management system uses HTML comments with specific formatting to create trackable, categorized tasks that integrate with VS Code's ToDo-Tree extension while remaining invisible or visible depending on the status in rendered output.
 
 ## Task Categories and Syntax
+
+Write and track tasks with HTML comments in markdown blocks or with `verbatim code` ticks but ALWAYS add linke breaks between tasks:
+
+```markdown
+`<!-- [ ] TODO: Task description -->`
+
+`<!-- [ ] FIND: @missing-citation: "Description" -->`
+
+`<!-- [ ] VERIFY: @suggested-citation: "Source" -->`
+
+`<!-- [ ] CREATE: {#fig-name}: "Figure description" -->`
+```
+
 
 ### 1. General Tasks
 

@@ -286,3 +286,286 @@ nocite: |
 
  <!-- ## Sidebars for comments {.sidebar}
 Create Sidebars by applying the .sidebar attribute to a level 1 heading (for global sidebars) or level 2 heading (for page level sidebars). -->
+
+## AMTAIR Thesis Relevant Literature & Citations
+
+### Items from MAref.bib
+
+```markdown
+
+#### `@carlsmith2021`: 
+
+    Carlsmith, Joseph (2021)
+    Is Power-Seeking AI an Existential Risk?
+
+    DOI: 10.48550/arXiv.2206.13353
+
+    arXiv ID: 2206.13353
+
+    Better alternative: None - this is the primary case study
+
+    Relevant thesis section(s): 
+    - Section 2.1: AI Existential Risk: The Carlsmith Model
+    - Section 3.5: Case Study: Carlsmith's Power-Seeking AI Model
+    - Throughout as validation example
+
+    Potential claims supported (with certainty %):
+    - "Carlsmith's six-premise decomposition exemplifies structured probabilistic reasoning about AI risk" (95%)
+    - "The model estimates ~5% existential risk by 2070" (90%)
+    - "Explicit probability estimates enable formal analysis" (95%)
+
+#### `@bostrom2014`: 
+
+    Bostrom, Nick (2014)
+    Superintelligence: Paths, Dangers, Strategies
+
+    ISBN: 978-0-19-967811-2
+
+    Better alternative: None - foundational text
+
+    Relevant thesis section(s):
+    - Section 1.2: The Coordination Crisis
+    - Section 2.1: Historical foundations of AI risk
+    - Background context throughout
+
+    Potential claims supported (with certainty %):
+    - "Orthogonality thesis: intelligence and goals are independent" (95%)
+    - "Instrumental convergence leads to power-seeking behavior" (90%)
+    - "Superintelligence poses existential risk" (85%)
+
+#### `@clarke2022`: 
+
+    Clarke, Sam et al. (2022)
+    Modeling Transformative AI Risks (MTAIR) Project -- Summary Report
+
+    DOI: 10.48550/ARXIV.2206.09360
+
+    arXiv ID: 2206.09360
+
+    Better alternative: None - this is what AMTAIR builds upon
+
+    Relevant thesis section(s):
+    - Section 2.5: The MTAIR Framework: Achievements and Limitations
+    - Section 1.3: Comparison with AMTAIR automation
+    - Throughout as predecessor project
+
+    Potential claims supported (with certainty %):
+    - "MTAIR demonstrated value of formal models but required extensive manual effort" (95%)
+    - "Manual extraction takes 200-400 expert hours per model" (80%)
+    - "Static models cannot track evolving arguments" (90%)
+
+#### `@pearl2009`: 
+
+    Pearl, Judea (2009)
+    Causality: Models, Reasoning and Inference (2nd Edition)
+
+    ISBN: 978-0-521-89560-6
+
+    DOI: 10.1017/CBO9780511803161
+
+    Better alternative: None - theoretical foundation
+
+    Relevant thesis section(s):
+    - Section 2.3: Bayesian Networks as Knowledge Representation
+    - Section 2.7.4: DAG structure and causal semantics
+    - Section 3.7.1: Do-calculus for policy interventions
+
+    Potential claims supported (with certainty %):
+    - "Bayesian networks enable causal reasoning under uncertainty" (95%)
+    - "Do-calculus allows formal policy evaluation" (95%)
+    - "DAGs encode conditional independence assumptions" (95%)
+
+#### `@jaynes2003`: 
+
+    Jaynes, Edwin T. (2003)
+    Probability Theory: The Logic of Science
+
+    ISBN: 978-0-521-59271-0
+
+    DOI: 10.1017/CBO9780511790423
+
+    Better alternative: None for foundational probability theory
+
+    Relevant thesis section(s):
+    - Section 2.3: Mathematical foundations of Bayesian inference
+    - Section 2.7.5: Probability as extended logic
+    - Epistemological grounding throughout
+
+    Potential claims supported (with certainty %):
+    - "Probability theory extends deductive logic to handle uncertainty" (95%)
+    - "Bayesian inference provides principled belief updating" (95%)
+    - "Maximum entropy principles handle missing information" (90%)
+
+#### `@tetlock2015`: 
+
+    Tetlock, Philip E. and Gardner, Dan (2015)
+    Superforecasting: The Art and Science of Prediction
+
+    ISBN: 978-0-8041-3671-6
+
+    Better alternative: @tetlock2023 for more recent long-range forecasting
+
+    Relevant thesis section(s):
+    - Section 1.5.2: Live Data Integration
+    - Section 3.9: Integration with Prediction Markets
+    - Forecasting methodology context
+
+    Potential claims supported (with certainty %):
+    - "Aggregated forecasts outperform individual expert judgment" (90%)
+    - "Prediction markets provide empirical grounding for models" (85%)
+    - "Calibrated forecasters achieve measurable accuracy" (90%)
+
+#### `@lempert2003`: 
+
+    Lempert, Robert J., Popper, Steven W., and Bankes, Steven C. (2003)
+    Shaping the Next One Hundred Years: New Methods for Quantitative, Long-Term Policy Analysis
+
+    ISBN: 978-0-8330-3275-8
+
+    Better alternative: None for deep uncertainty methods
+
+    Relevant thesis section(s):
+    - Section 2.2.2: Limitations of Traditional Approaches
+    - Section 4.1.2: Deep uncertainty in AI governance
+    - Policy evaluation methodology
+
+    Potential claims supported (with certainty %):
+    - "Traditional policy analysis fails under deep uncertainty" (90%)
+    - "Robust decision-making requires considering multiple scenarios" (85%)
+    - "AI governance faces irreducible uncertainties" (90%)
+
+#### `@good1966`: 
+
+    Good, Irving John (1966)
+    Speculations Concerning the First Ultraintelligent Machine
+
+    DOI: 10.1016/S0065-2458(08)60418-0
+
+    Better alternative: More recent work like @yudkowsky2008
+
+    Relevant thesis section(s):
+    - Historical context in Introduction
+    - Background for intelligence explosion concept
+
+    Potential claims supported (with certainty %):
+    - "Intelligence explosion concept dates to 1960s" (95%)
+    - "Recursive self-improvement could lead to rapid capability gains" (80%)
+
+#### `@yudkowsky2008`: 
+
+    Yudkowsky, Eliezer (2008)
+    Artificial Intelligence as a Positive and Negative Factor in Global Risk
+
+    DOI: 10.1093/oso/9780198570509.003.0021
+
+    Better alternative: @yudkowsky2022 for more recent formulation
+
+    Relevant thesis section(s):
+    - Section 2.1: AI risk arguments
+    - Background on alignment problem
+    - Instrumental convergence discussion
+
+    Potential claims supported (with certainty %):
+    - "AI alignment is the core challenge for beneficial AI" (90%)
+    - "Default AI development may produce misaligned systems" (85%)
+    - "Cognitive biases affect AI risk assessment" (90%)
+
+#### `@russell2015`: 
+
+    Russell, Stuart et al. (2015)
+    Research Priorities for Robust and Beneficial Artificial Intelligence: An Open Letter
+
+    DOI: 10.1609/aimag.v36i4.2621
+
+    Better alternative: None - important consensus document
+
+    Relevant thesis section(s):
+    - Introduction: AI safety research mobilization
+    - Context for coordination efforts
+
+    Potential claims supported (with certainty %):
+    - "AI safety has gained mainstream research attention" (95%)
+    - "Technical and governance challenges are interrelated" (90%)
+```
+
+```markdown
+## New Suggested Citations
+
+### New Items to Consider:
+
+#### `@amodei2016`: 
+
+    Amodei, Dario et al. (2016)
+    Concrete Problems in AI Safety
+
+    arXiv ID: 1606.06565
+
+    Relevant thesis section(s):
+    - Section 2.2: Technical safety challenges
+    - Concrete problems motivating AMTAIR
+
+    Potential claims supported (with certainty %):
+    - "AI safety includes avoiding negative side effects, safe exploration" (95%)
+    - "Current ML systems exhibit safety failures" (90%)
+
+#### `@christiano2019`: 
+
+    Christiano, Paul (2019)
+    What Failure Looks Like
+
+    URL: https://www.alignmentforum.org/posts/HBxe6wdjxK239zajf/what-failure-looks-like
+
+    Relevant thesis section(s):
+    - Additional case study for extraction
+    - Alternative risk model to Carlsmith
+
+    Potential claims supported (with certainty %):
+    - "AI risk may manifest through gradual loss of control" (85%)
+    - "Multiple pathways to existential risk exist" (90%)
+
+#### `@critch2019`: 
+
+    Critch, Andrew (2019)
+    ARCHES: AI Research Considerations for Human Existential Safety
+
+    URL: https://arxiv.org/abs/2206.11232
+
+    Relevant thesis section(s):
+    - Another structured model for extraction validation
+    - Multi-stakeholder coordination framework
+
+    Potential claims supported (with certainty %):
+    - "AI safety requires coordination across multiple sectors" (90%)
+    - "Research, deployment, and governance interact complexly" (85%)
+
+#### `@dafoe2021`: 
+
+    Dafoe, Allan (2021)
+    AI Governance: A Research Agenda
+
+    URL: https://www.fhi.ox.ac.uk/govaiagenda/
+
+    Relevant thesis section(s):
+    - Section 2.6.2: Governance proposals taxonomy
+    - Context for policy evaluation needs
+
+    Potential claims supported (with certainty %):
+    - "AI governance requires interdisciplinary approaches" (95%)
+    - "Technical and policy communities need better coordination" (90%)
+
+#### `@askell2021`:
+
+    Askell, Amanda et al. (2021)
+    A General Language Assistant as a Laboratory for Alignment
+
+    arXiv ID: 2112.00861
+
+    Relevant thesis section(s):
+    - LLM capabilities for extraction tasks
+    - Alignment considerations for AMTAIR
+
+    Potential claims supported (with certainty %):
+    - "Language models can assist in complex reasoning tasks" (90%)
+    - "Alignment challenges manifest in current systems" (85%)
+
+```
