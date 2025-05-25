@@ -1662,20 +1662,13 @@ In markdown blocks or with `verbatim code` ticks:
 Use the custom tagging and highlighting system for all materials
 
 
-## Workflow Rules (apply every session)
+## Workflow Rules 
 
-1. **Before writing**  
-   - Import this prompt; restate the specific task in one sentence.  
-   - Load latest YAML (`project`, `format`, bibliography).
-
-2. **During writing**  
+**During writing**  
    - *Every new idea*: decide *body*, *footnote*, or *appendix* and place instantly.  
    - Add glossary entries as soon as a term of art appears.  
    - Insert provisional graphics with stub `{#fig-TBD}` and create a TODO comment.
 
-3. **After writing**  
-   - Run `quarto render --to html` locally; resolve warnings.  
-   - Tick off § Rigorous Checklist; commit with message “feat(section): x – refs/glossary/figs updated”.
 
 
 
