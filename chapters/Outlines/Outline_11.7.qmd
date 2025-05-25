@@ -6,17 +6,16 @@
 
 
 
-# Introduction
 
-IMPORTANT NOTE: Changing the formatting (html comment) of the yml at the beginning of docs easily screws up the entire html rendering
 
-# Control if this file starts numbering
 
-## numbering: start-at: 1 # Start at Section 1 level: 1 # Chapter level
+
 
 # Introduction {#sec-introduction}
 
-<!-- [ ] Expand this section to ~14% of total text (approximately 4200 words) --> <!-- [ ] Convert all lists in this section to flowing prose with appropriate transitions -->
+<!-- [ ] Expand this section to ~14% of total text (approximately 4200 words) --> 
+<!-- [ ] Convert all lists in this section to flowing prose with appropriate transitions -->
+<!-- IMPORTANT NOTE: Changing the formatting (html comment) of the yml at the beginning of docs easily screws up the entire html rendering -->
 
 > Subtitle: An Epistemic Framework for Leveraging Frontier AI Systems to Upscale Conditional Policy Assessments in Bayesian Networks on a Narrow Path towards Existential Safety
 

@@ -422,7 +422,7 @@ print("AMTAIR is working!")
 ```{=latex}
 \renewcommand*{\labelitemi}{\textgreater}
 ```
-
+<!-- The benefits and use of in-line LaTeX and HTML are unclear to me. I am not even sure if they work properly. -->
 ### In-Line HTML
 
 Here's some raw inline HTML: <a>html</a>

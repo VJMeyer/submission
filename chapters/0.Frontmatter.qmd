@@ -2,8 +2,6 @@
 number-sections: true
 ---
 
-
-
 # Remaining Edits
 
 ## Next Steps (High-Priority Recommendations)
@@ -48,16 +46,7 @@ These changes would elevate an already strong thesis to exceptional, addressing 
 
 4.  **Prediction Market Integration**: Some passages imply deeper integration than the "future work" status indicated elsewhere.
 
-
-
-
-
-
 `<!-- [ ] Make sure all hallucinations have been removed -->`
-
-
-
-
 
 ## General Style
 
@@ -66,8 +55,6 @@ These changes would elevate an already strong thesis to exceptional, addressing 
 `<!-- [ ] Improve Style/prose: Fewer lists, more prose. Lists converted to flowing paragraphs with transitional phrases. Bullet points reserved for true enumerations -->`
 
 ## General Formatting
-
-
 
 `<!-- [ ] Fix the Overlapping between Section Heading and Sub-Heading -->`
 
@@ -90,8 +77,6 @@ These changes would elevate an already strong thesis to exceptional, addressing 
 3.  **Multiple Model Extraction**: Only Carlsmith is deeply analyzed; adding 2-3 more models would strengthen empirical claims.
 
 4.  **Implementation Clarity**: Some features (prediction markets, probability distributions) are discussed ambiguously regarding current vs. future capabilities.
-
-
 
 ::: landscape
 ## General Edits
@@ -165,8 +150,6 @@ These changes would elevate an already strong thesis to exceptional, addressing 
 +-----------------------------------------------+---------------------------------------------------+-----------------------+-----------------------------------------------------------------------------------------------------------------------+------------------------------------------------------------------------------------+---------------------------------------------------------------+---------------------------------------------------------------------------+
 :::
 
-
-
 ### Key Areas of Success
 
 1.  **Narrative Structure**: The thesis now reads as a cohesive argument rather than disconnected sections. The opening scenario, coordination crisis framing, and multiplicative benefits framework create a compelling narrative arc.
@@ -176,8 +159,6 @@ These changes would elevate an already strong thesis to exceptional, addressing 
 3.  **Intellectual Honesty**: The discussion chapter's objection-response format and red-teaming results demonstrate admirable transparency about limitations.
 
 4.  **Practical Relevance**: Stakeholder recommendations and policy evaluation examples ground the work in real-world applications.
-
-
 
 ## Old Checklists
 
@@ -217,17 +198,9 @@ This chapter presents the complete computational implementation of the AMTAIR sy
 
 – pretty much determined by presentation & proposal but narrow down further (& choose supervisor?)
 
-
-
-
-
-
-
 ## Syntax for Tasks
 
-
 ### Tasks with ToDo Tree
-
 
 #### Simple "One-line tasks"
 
@@ -238,8 +211,6 @@ Use Code ticks and html comment and task format for tasks distinctly visible acr
 Use html comment and task format for open or uncertain tasks, visible in the .qmd file:
 
 <!-- [ ] ToDos for things to do / tasks / reminders (allows "jump to with Taks Tree extension") -->
-
-
 
 #### More Complex Tasks with Notes
 
@@ -253,23 +224,19 @@ Use html comment and task format for open or uncertain tasks, visible in the .qm
   Step-by-step implementation Plan
 
   Etc.
-
 ```
 
 #### Completed Tasks
 
-Retain completed tasks in ToDo-Tree by adding an x in the brackets: `[x]`
-`<!-- [x] Tasks which have been finished but should remain for later verification -->`
+Retain completed tasks in ToDo-Tree by adding an x in the brackets: `[x]` `<!-- [x] Tasks which have been finished but should remain for later verification -->`
 
 <!-- [x] Tasks which have been finished but should remain for later verification -->
-
 
 Mark and remove completed tasks from ToDo-Tree by adding a minus in the brackets: `[-]`
 
 `<!-- [-] Tasks which have been finished but should remain visible for later verification -->`
 
 <!-- [-] Tasks which have been finished but should remain for later verification (only in .qmd) -->
-
 
 #### Missing Citations
 
@@ -293,9 +260,7 @@ Missing and/or suggested tables, concepts, explanations as well as other element
 
 `<!-- [ ] (Example short: open and visible in text)   Find and list the names of the MTAIR team-members responsible for the Analytica Implementation -->`
 
-
-
-```
+```         
 <!-- [ ] (Example longer: open and visible in text)    Review/Plan/Discuss integrating Live Prediction Markets -->
 
   Live prediction market integration requires:
@@ -323,14 +288,3 @@ Missing and/or suggested tables, concepts, explanations as well as other element
 <!-- [x] (Example: done but remaining as a reminder in .qmd and visible in ToDo Tree until verified)   Verify that the Orcid IDs are correct -->
 
 <!-- [-] (Example: done and verified but remaining as a peristent reminder)  Test and verify correct inclusion and formatting of .md files  -->
-
-
-
-
-
-
-
-
-
-
-
