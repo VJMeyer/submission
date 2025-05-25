@@ -291,9 +291,11 @@ Create Sidebars by applying the .sidebar attribute to a level 1 heading (for glo
 
 ### Items from MAref.bib
 
-```markdown
+<!-- [ ] ADD: INTEGRATE ALL THE CITATIONS FROM BELOW AT THE CORRESPONDING / BEST (MULTIPLE) SECTIONS OF THE THESIS -->
+
+
 <!-- [ ] Update different Carlsmith paper versions in Zotero -->
-#### `@carlsmith2021`: 
+#### `@carlsmith2021`: @carlsmith2021
 
     Carlsmith, Joseph (2021)
     Is Power-Seeking AI an Existential Risk?
@@ -309,12 +311,15 @@ Create Sidebars by applying the .sidebar attribute to a level 1 heading (for glo
     - Section 3.5: Case Study: Carlsmith's Power-Seeking AI Model
     - Throughout as validation example
 
+
     Potential claims supported (with certainty %):
     - "Carlsmith's six-premise decomposition exemplifies structured probabilistic reasoning about AI risk" (95%)
     - "The model estimates ~5% existential risk by 2070" (90%)
     - "Explicit probability estimates enable formal analysis" (95%)
 
-#### `@bostrom2014`: 
+#### `@bostrom2014`: @bostrom2014
+
+
 
     Bostrom, Nick (2014)
     Superintelligence: Paths, Dangers, Strategies
@@ -333,7 +338,9 @@ Create Sidebars by applying the .sidebar attribute to a level 1 heading (for glo
     - "Instrumental convergence leads to power-seeking behavior" (90%)
     - "Superintelligence poses existential risk" (85%)
 
-#### `@clarke2022`: 
+#### `@clarke2022`: @clarke2022
+
+
 
     Clarke, Sam et al. (2022)
     Modeling Transformative AI Risks (MTAIR) Project -- Summary Report
@@ -354,7 +361,9 @@ Create Sidebars by applying the .sidebar attribute to a level 1 heading (for glo
     - "Manual extraction takes 200-400 expert hours per model" (80%)
     - "Static models cannot track evolving arguments" (90%)
 
-#### `@pearl2009`: 
+#### `@pearl2009` and `@pearl2000`: @pearl2000 and @pearl2009
+
+
 
     Pearl, Judea (2009)
     Causality: Models, Reasoning and Inference (2nd Edition)
@@ -375,7 +384,9 @@ Create Sidebars by applying the .sidebar attribute to a level 1 heading (for glo
     - "Do-calculus allows formal policy evaluation" (95%)
     - "DAGs encode conditional independence assumptions" (95%)
 
-#### `@jaynes2003`: 
+#### `@jaynes2003`: @jaynes2003
+
+
 
     Jaynes, Edwin T. (2003)
     Probability Theory: The Logic of Science
@@ -396,7 +407,9 @@ Create Sidebars by applying the .sidebar attribute to a level 1 heading (for glo
     - "Bayesian inference provides principled belief updating" (95%)
     - "Maximum entropy principles handle missing information" (90%)
 
-#### `@tetlock2015`: 
+#### `@tetlock2015`: @tetlock2015
+
+
 
     Tetlock, Philip E. and Gardner, Dan (2015)
     Superforecasting: The Art and Science of Prediction
@@ -415,7 +428,9 @@ Create Sidebars by applying the .sidebar attribute to a level 1 heading (for glo
     - "Prediction markets provide empirical grounding for models" (85%)
     - "Calibrated forecasters achieve measurable accuracy" (90%)
 
-#### `@lempert2003`: 
+#### `@lempert2003`: @lempert2003
+
+
 
     Lempert, Robert J., Popper, Steven W., and Bankes, Steven C. (2003)
     Shaping the Next One Hundred Years: New Methods for Quantitative, Long-Term Policy Analysis
@@ -434,14 +449,16 @@ Create Sidebars by applying the .sidebar attribute to a level 1 heading (for glo
     - "Robust decision-making requires considering multiple scenarios" (85%)
     - "AI governance faces irreducible uncertainties" (90%)
 
-#### `@good1966`: 
+#### `@good1966`: @good1966
+
+
 
     Good, Irving John (1966)
     Speculations Concerning the First Ultraintelligent Machine
 
     DOI: 10.1016/S0065-2458(08)60418-0
 
-    Better alternative: More recent work like @yudkowsky2008
+
 
     Relevant thesis section(s):
     - Historical context in Introduction
@@ -451,7 +468,8 @@ Create Sidebars by applying the .sidebar attribute to a level 1 heading (for glo
     - "Intelligence explosion concept dates to 1960s" (95%)
     - "Recursive self-improvement could lead to rapid capability gains" (80%)
 
-#### `@yudkowsky2008`: 
+#### `@yudkowsky2008`: @yudkowsky2008
+
 
     Yudkowsky, Eliezer (2008)
     Artificial Intelligence as a Positive and Negative Factor in Global Risk
@@ -470,7 +488,8 @@ Create Sidebars by applying the .sidebar attribute to a level 1 heading (for glo
     - "Default AI development may produce misaligned systems" (85%)
     - "Cognitive biases affect AI risk assessment" (90%)
 
-#### `@russell2015`: 
+#### `@russell2015`: @russell2015
+
 
     Russell, Stuart et al. (2015)
     Research Priorities for Robust and Beneficial Artificial Intelligence: An Open Letter
@@ -486,14 +505,18 @@ Create Sidebars by applying the .sidebar attribute to a level 1 heading (for glo
     Potential claims supported (with certainty %):
     - "AI safety has gained mainstream research attention" (95%)
     - "Technical and governance challenges are interrelated" (90%)
-```
 
-```markdown
+
+
 ## New Suggested Citations
 
 ### New Items to Consider:
 
-#### `@amodei2016`: 
+<!-- [ ] ADD: INTEGRATE ALL THE CITATIONS FROM BELOW AT THE CORRESPONDING / BEST (MULTIPLE) SECTIONS OF THE THESIS -->
+
+
+#### `@amodei2016`: @amodei2016
+
 
     Amodei, Dario et al. (2016)
     Concrete Problems in AI Safety
@@ -508,7 +531,8 @@ Create Sidebars by applying the .sidebar attribute to a level 1 heading (for glo
     - "AI safety includes avoiding negative side effects, safe exploration" (95%)
     - "Current ML systems exhibit safety failures" (90%)
 
-#### `@christiano2019`: 
+#### `@christiano2019`: @christiano2019
+
 
     Christiano, Paul (2019)
     What Failure Looks Like
@@ -523,12 +547,13 @@ Create Sidebars by applying the .sidebar attribute to a level 1 heading (for glo
     - "AI risk may manifest through gradual loss of control" (85%)
     - "Multiple pathways to existential risk exist" (90%)
 
-#### `@critch2019`: 
+#### `@critch2019`: @critch2019
+
 
     Critch, Andrew (2019)
     ARCHES: AI Research Considerations for Human Existential Safety
 
-    URL: https://arxiv.org/abs/2206.11232
+    URL: https://arxiv.org/abs/2006.04948
 
     Relevant thesis section(s):
     - Another structured model for extraction validation
@@ -538,7 +563,7 @@ Create Sidebars by applying the .sidebar attribute to a level 1 heading (for glo
     - "AI safety requires coordination across multiple sectors" (90%)
     - "Research, deployment, and governance interact complexly" (85%)
 
-#### `@dafoe2021`: 
+#### `@dafoe2018` and updated `@dafoe2021`: @dafoe2021 and @dafoe2018
 
     Dafoe, Allan (2021)
     AI Governance: A Research Agenda
@@ -553,7 +578,7 @@ Create Sidebars by applying the .sidebar attribute to a level 1 heading (for glo
     - "AI governance requires interdisciplinary approaches" (95%)
     - "Technical and policy communities need better coordination" (90%)
 
-#### `@askell2021`:
+#### `@askell2021`: @askell2021
 
     Askell, Amanda et al. (2021)
     A General Language Assistant as a Laboratory for Alignment
@@ -569,29 +594,21 @@ Create Sidebars by applying the .sidebar attribute to a level 1 heading (for glo
     - "Alignment challenges manifest in current systems" (85%)
 
 
-Zitat z.B.: https://benjamintodd.substack.com/p/looks-like-there-are-some-good-funding
-
- Zitat: https://ourworldindata.org/scaling-up-ai 
-
-  https://hai-production.s3.amazonaws.com/files/hai_ai_index_report_2025.pdf
-  page 25
-
- https://futureoflife.org/open-letter/ai-principles/
-
-  https://artificialintelligenceact.eu/the-act/ 
-
- https://www.prismaguard.com/the-elephaint-are-we-all-like-the-six-blind-men-when-it-comes-to-ai/
-
- passt nicht so richtig:
- https://warontherocks.com/2025/01/the-battle-for-brilliant-minds-from-the-nuclear-age-to-ai/
-
-
- Zitat: https://arxiv.org/pdf/2206.13353.pdf 
-oder hast du die gekürzte Version verwendet ?
-
- Zitat ?
-https://argdown.org/ 
 
 
 
-```
+
+
+
+## Further Citations to Integrate:
+
+<!-- [ ] ADD: INTEGRATE ALL THE CITATIONS FROM BELOW AT THE CORRESPONDING / BEST (MULTIPLE) SECTIONS OF THE THESIS -->
+
+
+
+
+
+
+
+
+

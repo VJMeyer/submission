@@ -103,6 +103,10 @@ TAI - Transformative Artificial Intelligence
 
 <!-- [ ] TODO: Polish opening scenario for maximum impact -->
 
+<!-- [ ] FIND: @todd? url: https://benjamintodd.substack.com/p/looks-like-there-are-some-good-funding
+        add as reference for more resources
+-->
+
 Imagine a senior policy advisor preparing recommendations for AI governance legislation. On her desk lie a dozen reports from leading AI safety researchers, each painting a different picture of the risks ahead. One argues that misaligned AI could pose existential risks within the decade, citing complex technical arguments about instrumental convergence and orthogonality. Another suggests these concerns are overblown, emphasizing uncertainty and the strength of existing institutions. A third proposes specific technical standards but acknowledges deep uncertainty about their effectiveness.
 
 ::: {.redundant-content data-better-version="Outline_12.2#sec-opening"}
@@ -117,11 +121,30 @@ This scenario plays out daily across government offices, corporate boardrooms, a
 
 <!-- [ ] TODO: Frame the problem as coordination failure rather than merely technical challenge -->
 
+<!-- [ ] FIND: @our_world_data url: https://hai-production.s3.amazonaws.com/files/hai_ai_index_report_2025.pdf
+  Add citation for page 85 as evidence for accelerating capabilities
+-->
+
+<!-- [ ] FIND: @our_world_data url: https://ourworldindata.org/scaling-up-ai  
+    Add as citation for accelerating capabilities
+-->
+
 As AI capabilities advance at an accelerating pace—demonstrated by the rapid progression from GPT-3 to GPT-4, Claude, and emerging multimodal systems—humanity faces a governance challenge unlike any in history. The task of ensuring increasingly powerful AI systems remain aligned with human values and beneficial to our long-term flourishing grows more urgent with each capability breakthrough. This challenge becomes particularly acute when considering transformative AI systems that could drastically alter civilization's trajectory, potentially including existential risks from misaligned systems pursuing objectives counter to human welfare.
 
 > Despite unprecedented investment in AI safety research, rapidly growing awareness among key stakeholders, and proliferating frameworks for responsible AI development, we face what I'll term the "coordination crisis" in AI governance—a systemic failure to align diverse efforts across technical, policy, and strategic domains into a coherent response proportionate to the risks we face.
 
-The current state of AI governance presents a striking paradox. On one hand, we witness extraordinary mobilization: billions in research funding, proliferating safety initiatives, major tech companies establishing alignment teams, and governments worldwide developing AI strategies. The Asilomar AI Principles garnered thousands of signatures, the EU advances comprehensive AI regulation, and technical researchers produce increasingly sophisticated work on alignment, interpretability, and robustness.
+The current state of AI governance presents a striking paradox. On one hand, we witness extraordinary mobilization: billions in research funding, proliferating safety initiatives, major tech companies establishing alignment teams, and governments worldwide developing AI strategies. The [Asilomar AI Principles](https://futureoflife.org/open-letter/ai-principles/) garnered thousands of signatures, the EU advances [comprehensive AI regulation](https://artificialintelligenceact.eu/the-act/) , and technical researchers produce increasingly sophisticated work on alignment, interpretability, and robustness.
+
+
+<!-- [ ] FIND: @? url: https://futureoflife.org/open-letter/ai-principles/
+    and add citation (as footnote) 
+-->
+
+
+<!-- [ ] FIND: @? url: https://artificialintelligenceact.eu/the-act/ 
+    and add citation (as footnote)
+-->
+
 
 ::: {.duplicate-content data-source="Outline_11.7#sec-coordination-crisis"}
 Yet alongside this activity, we observe systematic coordination failures that may prove catastrophic. Technical safety researchers develop sophisticated alignment techniques without clear implementation pathways. Policy specialists craft regulatory frameworks lacking technical grounding to ensure practical efficacy. Ethicists articulate normative principles that lack operational specificity. Strategy researchers identify critical uncertainties but struggle to translate these into actionable guidance. International bodies convene without shared frameworks for assessing interventions.
@@ -138,6 +161,8 @@ The fragmentation problem manifests in incompatible frameworks between technical
 When different communities operate with incompatible frameworks, critical risks fall through the cracks. Technical researchers may solve alignment problems under assumptions that policymakers' decisions invalidate. Regulations optimized for current systems may inadvertently incentivize dangerous development patterns. Without shared models of the risk landscape, our collective efforts resemble the parable of blind men describing an elephant—each accurate within their domain but missing the complete picture.
 
 <!-- [ ] FIND: @coordination-failure-examples: "Specific historical examples of coordination failures in technology governance" -->
+
+<!-- [ ] FIND @? Url: https://www.prismaguard.com/the-elephaint-are-we-all-like-the-six-blind-men-when-it-comes-to-ai/--> 
 
 ### 1.2.2 Resource Misallocation {#sec-resource-misallocation}
 
@@ -166,6 +191,9 @@ Coordination failures systematically amplify existential risk through multiple p
 History offers instructive parallels. The nuclear age began with scientists racing to understand and control forces that could destroy civilization. Early coordination failures—competing national programs, scientist-military tensions, public-expert divides—nearly led to catastrophe multiple times. Only through developing shared frameworks (deterrence theory), institutions (IAEA), and communication channels (hotlines, treaties) did humanity navigate the nuclear precipice.
 
 <!-- [ ] VERIFY: @nuclear-governance-lessons: "Schelling, T. (1960). The Strategy of Conflict - lessons for AI governance" -->
+
+<!-- [ ] VERIFY: CITE @: from: https://warontherocks.com/2025/01/the-battle-for-brilliant-minds-from-the-nuclear-age-to-ai/ -->
+
 
 ::: {.redundant-content data-better-version="Outline_12.2#temporal-urgency"} 
 Yet AI presents unique coordination challenges that compress our response timeline:
@@ -307,7 +335,8 @@ Having established the coordination crisis and outlined how automated modeling c
 **Requirements**: Demonstrates understanding of relevant concepts, explains relevance, situates in debate, reconstructs arguments 
 :::
 
-<!-- [ ] TODO: Add conceptual dependency diagram showing prerequisite knowledge --> <!-- [ ] TODO: Create "Background Knowledge" boxes for key concepts -->
+<!-- [ ] TODO: Add conceptual dependency diagram showing prerequisite knowledge --> 
+<!-- [ ] TODO: Create "Background Knowledge" boxes for key concepts -->
 
 ## 2.1 AI Existential Risk: The Carlsmith Model {#sec-carlsmith-model}
 
@@ -324,6 +353,7 @@ To ground our discussion in concrete terms, I examine Joseph Carlsmith's "Is Pow
 <!-- [ ] Explain CITATION: - as a footnote somewhere in this section - that there are multiple versions of the Carlsmith paper: @carlsmith2024 , @carlsmith2021 , @carlsmith2022 @carlsmith2023 
 
     - The versions come with slight updates and changes in the probability estimates
+    - There are longer and shorter versions of the paper (long: 2206.13353  = @carlsmith2021)
     - We refer mainly to the version used by the original MTAIR team for their extraction
     - Mention that there is also an extended discussion of the paper and the probabilities involved on LessWrong (including important methodological contributions w.r.t. )
     - Explain that it contains data from experts who estimated probabilites
@@ -565,6 +595,10 @@ Argument mapping extracts this structure, identifying:
 <!-- [ ] FIND: @argument-mapping-methods: "Systematic review of argument visualization techniques" -->
 
 ### 2.4.2 ArgDown: Structured Argument Notation {#sec-argdown-notation}
+
+<!-- [ ] FIND: @argdown url: https://argdown.org/ 
+    add as reference for argdown 
+-->
 
 ArgDown provides a markdown-like syntax for hierarchical argument representation:
 
