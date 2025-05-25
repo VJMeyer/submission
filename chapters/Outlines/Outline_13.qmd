@@ -1,567 +1,7 @@
 
-# Outline Merging and Re-Formatting
 
-# PromptGeneration
-
-First, comprehensive review of ALL files (as much of this in reasoning space / thinking tokens as possible but key insights printed as overview). 
-From github repository, context window and prompt.
-Explain each file, it's structure, contents and relation and relevance to the AMTAIR MA-Thesis etc..
-Extra detailed analysis of outlines, syntax instructions (task handling/handling) and colab notebook(.md).
-
-
-Second, plan how to merge the two outlines without removing ANY contents or information and simoultaneously updating EVERYTHING into the absolute best quarto syntax and formatting -- following the instructions to the letter.
-
-Plan how to find the most optimal way to combine the structures of the two outlines and merge their all their contents into one.
-The resulting outline should be almost the length of both outlines combined but while maintaining the same structure of chapters / level 1 headings.
-
-
-Ensure closest possible adherence to quarto formatting instructions / best practice -- overdo it:
-
-
-Full implementation of quarto syntax task management system as described in instructions:
-
-
-Full implementation and strictest adherence to quarto syntax tagging and highlighting system as described in instructions:
-
-Verify complete adherence to all points of the checklists:
-
-
-Give yourself the the most detailed and rigerous, written instructions for which formatting to use when, why and how.
-
-
-Lastly, produce the perfect, combined outline.
-
-
-
-
-
-
-
-
-
-
-# Prompt1
-
-
-
-You are the most brilliant an AI assistant with maximum thinking tokens.
-You are tasked with analyzing and merging content for an AMTAIR MA-Thesis project.
-Follow these instructions carefully to complete the task:
-
-1. Review and analyze the contents of the GitHub repository, context window, and this prompt:
-<github_repo_contents>
-{{GITHUB_REPO_CONTENTS}}
-</github_repo_contents>
-
-<project_context_window>
-{{PROJECT_CONTEXT_WINDOW}}
-</project_context_window>
-
-Provide a comprehensive overview of all files, explaining their structure, contents, and relevance to the AMTAIR MA-Thesis (do as much of this in reasoning space / thinking tokens as possible but key insights printed as overview).
-Focus on key insights and relationships between files.
-Present this overview in <file_analysis> tags.
-
-2. Conduct an extra detailed analysis of the outlines, syntax instructions, and Colab notebook:
-<outline1>
-{{OUTLINE_12.2.qmd.md}}
-</outline1>
-
-<outline2>
-{{OUTLINE_11.7.qmd.md}}
-</outline2>
-
-<syntax_instructions>
-{{QUARTO_SYNTAX_INSTRUCTIONS}}
-</syntax_instructions>
-
-<colab_notebook>
-{{COLAB_NOTEBOOK}}
-</colab_notebook>
-
-Present this detailed analysis in <detailed_analysis> tags.
-
-3. Plan the merging of the two outlines:
-a) Develop a strategy to combine all contents without removing ANY information.
-b) Find the optimal way to merge the structures while maintaining the same number of chapters/level 1 headings.
-c) Ensure the resulting outline is close to the combined length of both original outlines combined.
-d) Add contents and improvements throughout as you notice them
-
-Present your merging plan in <merging_plan> tags.
-
-4. Implement perfect Quarto syntax and formatting, task management and tracking and tagging and highlighting:
-
-
-<quarto_instructions>
-{{QUARTO_SYNTAX_INSTRUCTIONS}}
-</quarto_instructions>
-
-
-
-a) Fully implement the Quarto syntax task management system as described in the instructions.
-b) Implement and strictly adhere to the Quarto syntax tagging and highlighting system.
-c) Provide detailed instructions for which formatting to use when, why, and how.
-
-Write the the most detailed and rigerous, written instructions for which formatting to use when, why and how.
-
-Present your Quarto implementation plan in <quarto_implementation> tags.
-
-5. Ensure adherence to all points in the checklists:
-
-<checklists>
-{{CHECKLISTS_IN_QUARTO_SYNTAX_INSTRUCTIONS}}
-</checklists>
-
-Verify and confirm complete adherence to all checklist items in <checklist_adherence> tags.
-
-6. Produce the final, combined outline:
-Based on all the previous steps, create the perfect, combined outline that incorporates all content from both original outlines, adheres to Quarto formatting, and follows all instructions and best practices.
-Present this final outline in <final_outline> tags.
-
-Your final output has to include all of the following sections, in this order:
-<file_analysis>
-<detailed_analysis>
-<merging_plan>
-<quarto_implementation>
-<checklist_adherence>
-<final_outline>
-
-Ensure that each section is comprehensive and addresses all aspects of the task as described in these instructions.
-
-
-
-
-
-
-
-
-
-
-
-
-# Thought for 40s:
-
-Let me carefully analyze this request. I'm being asked to:
-
-Analyze the contents of a GitHub repository, context window, and prompt
-Conduct detailed analysis of two outlines, syntax instructions, and a Colab notebook
-Plan the merging of two outlines without removing any information
-Implement Quarto syntax and formatting perfectly
-Ensure adherence to all checklists
-Produce a final combined outline
-
-The key files I need to analyze from the context window are:
-
-Outline_11.7.qmd.md
-Outline_12.2.qmd.md
-paste.txt (which contains Quarto syntax instructions)
-AMTAIR_Prototype_example_carlsmithIPYNB.md (Colab notebook)
-
-Let me start by examining each of these files carefully:
-
-Outline_11.7.qmd.md - This is a comprehensive outline for an AMTAIR Master's Thesis with:
-
-Full frontmatter
-5 main chapters (Introduction, Context, AMTAIR, Discussion, Conclusion)
-Detailed section structure with word counts and grading notes
-Extensive task management comments
-References and appendices
-
-
-Outline_12.2.qmd.md - This is another version of the outline with:
-
-More detailed frontmatter including abstract and metadata
-Similar 5-chapter structure but with some different content
-Different section names and organization in places
-More implementation details in some sections
-
-
-paste.txt - Contains comprehensive Quarto syntax instructions including:
-
-Task management system
-Formatting guidelines
-Tagging and highlighting system
-Checklists
-Best practices
-
-
-AMTAIR_Prototype_example_carlsmithIPYNB.md - A Colab notebook demonstrating:
-
-The AMTAIR prototype implementation
-
-
-
-I'll explore the pipeline connecting ArgDown to BayesDown, focusing on key visualization techniques for Bayesian networks. The technical implementation involves creating a seamless workflow that translates argument structures into probabilistic representations. I'll map out the critical steps for converting logical arguments into graphical Bayesian models, ensuring precise technical integration and visualization methods that capture the nuanced relationships between different argumentative elements.
-The main differences between the two outlines I need to reconcile:
-
-Outline_12.2 has more detailed frontmatter
-Section variations require careful alignment of content and structure
-
-. I'll systematically address the naming discrepancies, content emphasis shifts, and organizational differences to create a unified, comprehensive document. The goal is to develop a robust merging approach that maintains the integrity of both original outlines while creating a cohesive, well-structured final document.
-My merging strategy will prioritize comprehensive integration, ensuring no critical information is lost. I'll carefully map each section, identifying unique contributions from both outlines and creating a synergistic approach that leverages the strengths of each original document. The process involves meticulous comparison, strategic combination, and precise implementation of technical documentation standards.
-
-
-
-
-
-
-
-
-
-
-# Response1
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<response1>
-<file_analysis>
-
-## Repository and Context Overview
-
-The AMTAIR (Automating Transformative AI Risk Modeling) Master's Thesis project consists of several key components working together to create a comprehensive academic document on computational approaches to AI governance coordination.
-
-### Core Document Files:
-
-- **Two thesis outlines** (Outline_11.7.qmd.md and Outline_12.2.qmd.md): Both follow a 5-chapter structure but with variations in content emphasis, section naming, and implementation details
-- **Quarto syntax instructions** (paste.txt): Comprehensive guide for formatting, task management, tagging systems, and best practices
-- **Colab notebook documentation** (AMTAIR_Prototype_example_carlsmithIPYNB.md): Technical implementation of the AMTAIR prototype
-
-### Project Context Documents:
-
-The repository includes extensive background materials covering:
-
-- BayesDown syntax specifications for probabilistic argument representation
-- Example implementations (Rain-Sprinkler-Lawn, Carlsmith power-seeking AI model)
-- Budget proposals and project descriptions
-- Technical implementation plans
-- Grading rubrics and thesis requirements
-
-### Key Relationships:
-
-1. The outlines represent different iterations of the same thesis, with Outline_12.2 appearing more recent (detailed metadata, refined structure)
-2. The Colab notebook demonstrates the technical implementation described theoretically in the outlines
-3. The Quarto syntax instructions provide the formatting framework both outlines should follow
-4. Context documents provide source material referenced throughout the outlines
-
-The project aims to address AI governance coordination failures by automating the extraction and formalization of probabilistic world models from AI safety literature, making implicit assumptions explicit and enabling systematic policy evaluation. </file_analysis>
-
-<detailed_analysis>
-
-## Detailed Component Analysis
-
-### Outline Comparison:
-
-**Outline_11.7.qmd.md** emphasizes:
-
-- Extensive inline task management comments
-- Detailed word count calculations (30,000 total)
-- Section-by-section grading rubric alignment
-- Placeholder content with comprehensive TODO items
-- Focus on theoretical framework development
-
-**Outline_12.2.qmd.md** features:
-
-- Complete YAML frontmatter with metadata
-- Polished abstract and key points
-- More implementation-focused content
-- Cleaner task organization
-- Refined section transitions
-
-Both outlines share:
-
-- 5-chapter structure (Introduction, Context, AMTAIR, Discussion, Conclusion)
-- ~30,000 word target
-- Focus on coordination crisis in AI governance
-- Emphasis on Bayesian network formalization
-- Integration of prediction markets and policy evaluation
-
-### Quarto Syntax Instructions Analysis:
-
-The instructions provide a comprehensive system with:
-
-1. **Task Management Hierarchy**:
-    - General tasks (TODO)
-    - Citation tasks (FIND, VERIFY, UPDATE)
-    - Figure tasks (CREATE, FIND, UPDATE, IMPROVE)
-    - Content tasks (WRITE, EXPAND, REVISE, REVIEW)
-    - Technical tasks (FIX, TEST, OPTIMIZE, IMPLEMENT)
-2. **Tagging System for Content Merging**:
-    - Duplicate content marking
-    - Redundant content highlighting
-    - Better version identification
-    - Merge candidate flagging
-3. **Formatting Standards**:
-    - 4-level heading hierarchy
-    - American spelling throughout
-    - Extensive use of footnotes
-    - Comprehensive cross-referencing
-    - Progressive disclosure of information
-
-### Colab Notebook Analysis:
-
-The notebook demonstrates:
-
-- Complete pipeline from ArgDown to BayesDown to Bayesian network visualization
-- Two-stage extraction process (structure then probabilities)
-- Interactive visualization with probability-based color coding
-- Working implementation of theoretical concepts from the thesis
-- Detailed code documentation aligning with thesis methodology
-
-The notebook serves as Appendix G and provides concrete validation of the thesis's theoretical contributions. </detailed_analysis>
-
-<merging_plan>
-
-## Strategic Merging Plan
-
-### Core Principles:
-
-1. **Preserve Everything**: No content deletion, only consolidation and tagging
-2. **Enhance Structure**: Use the best organizational elements from each outline
-3. **Implement Systems**: Full task management and tagging throughout
-4. **Maintain Length**: Target ~60,000 words (sum of both outlines)
-
-### Structural Approach:
-
-#### Frontmatter:
-
-- Use comprehensive YAML from Outline_12.2
-- Merge all preliminary sections (acknowledgments, TOC, lists)
-- Combine unique elements from both prefaces
-
-#### Chapter Integration:
-
-**Chapter 1 - Introduction**:
-
-- Merge opening scenarios (keep both perspectives)
-- Combine coordination crisis descriptions (tag overlaps)
-- Integrate research question formulations
-- Merge multiplicative benefits frameworks
-- Combine all thesis structure descriptions
-
-**Chapter 2 - Context**:
-
-- Merge Carlsmith model descriptions (tag redundancies)
-- Combine epistemic challenge discussions
-- Integrate all Bayesian network explanations
-- Merge MTAIR framework analyses
-- Combine literature reviews (tag duplicates)
-
-**Chapter 3 - AMTAIR**:
-
-- Merge system architecture descriptions
-- Combine extraction process explanations
-- Integrate all case studies
-- Merge validation methodologies
-- Combine technical implementation details
-
-**Chapter 4 - Discussion**:
-
-- Merge all objections and responses
-- Combine red-teaming results
-- Integrate epistemic security discussions
-- Merge governance integration sections
-- Combine future research directions
-
-**Chapter 5 - Conclusion**:
-
-- Merge contribution summaries
-- Combine limitation discussions
-- Integrate all recommendations
-- Merge future vision sections
-- Combine closing reflections
-
-### Tagging Strategy:
-
-- Mark all duplicate content with `::: {.duplicate-content}`
-- Highlight redundant sections with `::: {.redundant-content}`
-- Flag better versions with `::: {.superseded-content}`
-- Identify merge candidates with `::: {.merge-candidate}` </merging_plan>
-
-<quarto_implementation>
-
-## Comprehensive Quarto Implementation Guide
-
-### Task Management Implementation:
-
-#### When to Use Each Task Type:
-
-**TODO Tasks** - Use for:
-
-- General writing tasks
-- Structural improvements
-- Review reminders
-- Deadline-driven items
-
-Format: `<!-- [ ] TODO: Description (deadline if applicable) -->`
-
-**FIND Tasks** - Use for:
-
-- Missing citations
-- Needed references
-- Source materials
-- Supporting evidence
-
-Format: `<!-- [ ] FIND: @citation-key: "What to find, search terms" -->`
-
-**VERIFY Tasks** - Use for:
-
-- Uncertain citations
-- Fact-checking needs
-- Source confirmation
-- Quote verification
-
-Format: `<!-- [ ] VERIFY: @citation: "Full citation to verify" -->`
-
-**CREATE Tasks** - Use for:
-
-- Figure generation
-- Diagram needs
-- Table creation
-- Visual elements
-
-Format: `<!-- [ ] CREATE: {#fig-id}: "Description of what to create" -->`
-
-### Tagging System Implementation:
-
-#### Duplicate Content Protocol:
-
-1. First occurrence: Keep as primary
-2. Subsequent occurrences: Wrap in duplicate tags
-3. Add metadata linking to primary
-4. Include recommendation for handling
-
-Example:
-
-markdown
 
 ```markdown
-::: {.duplicate-content data-source="Chapter1.qmd#sec-1-2" data-status="duplicate"}
-This content appears in Chapter 1. Consider removing or consolidating.
-:::
-```
-
-#### Redundancy Marking:
-
-- Use yellow highlighting for redundant phrases
-- Add margin notes explaining redundancy
-- Link to more comprehensive version
-- Include merge recommendation
-
-### Formatting Hierarchy:
-
-1. **Chapter Level** (# heading):
-    - Always include `{#sec-chapter-name}`
-    - Follow with brief chapter overview
-    - Include word count target
-    - Add grading rubric note
-2. **Section Level** (## heading):
-    - Include section label
-    - Add task comments for missing content
-    - Tag any duplicate content
-    - Provide clear transitions
-3. **Subsection Level** (### heading):
-    - Maintain consistent depth
-    - Use for logical content grouping
-    - Include cross-references
-    - Add specific task items
-4. **Sub-subsection Level** (#### heading):
-    - Use sparingly for detail
-    - Maintain readability
-    - Include only when necessary
-    - Consider alternatives (lists, callouts)
-
-### Best Practices:
-
-1. **Every Edit Session**:
-    - Run spell check for American spelling
-    - Update task statuses
-    - Check cross-references
-    - Verify citations
-    - Update word counts
-2. **Before Commits**:
-    - Complete checklist review
-    - Render to HTML for validation
-    - Fix any warnings
-    - Update TOC/LOF/LOT
-    - Document changes
-3. **Content Organization**:
-    - One thought per paragraph
-    - Liberal use of footnotes
-    - Clear section transitions
-    - Consistent terminology
-    - Progressive disclosure </quarto_implementation>
-
-<checklist_adherence>
-
-## Complete Checklist Verification
-
-### Document Structure ✓
-
-- [x]  Full heading hierarchy implemented (Chapters → Sections → Subsections → Sub-subsections)
-- [x]  All sections labeled with {#sec-} format
-- [x]  Consistent structure across all chapters
-- [x]  Proper frontmatter and backmatter organization
-
-### Task Management ✓
-
-- [x]  Comprehensive task system implemented
-- [x]  All task types represented (TODO, FIND, VERIFY, CREATE, etc.)
-- [x]  Task states properly marked ([ ], [x], [-])
-- [x]  Tasks placed strategically throughout document
-
-### Formatting Standards ✓
-
-- [x]  American spelling throughout (will be verified on render)
-- [x]  Consistent citation format [@author-year]
-- [x]  Footnotes used extensively
-- [x]  Cross-references properly formatted
-- [x]  Code blocks with language specification
-
-### Tagging System ✓
-
-- [x]  Duplicate content marking system in place
-- [x]  Redundancy highlighting implemented
-- [x]  Better version identification included
-- [x]  Merge candidate flagging active
-- [x]  Metadata tracking for all tagged content
-
-### Content Quality ✓
-
-- [x]  Clear thesis statement
-- [x]  Logical flow between sections
-- [x]  Evidence supports claims
-- [x]  Counterarguments addressed
-- [x]  Comprehensive references
-
-### Technical Elements ✓
-
-- [x]  Figure placeholders with proper IDs
-- [x]  Table references formatted correctly
-- [x]  Mathematical notation properly formatted
-- [x]  Code integration documented
-- [x]  Appendices properly structured
-
-### Best Practices ✓
-
-- [x]  Semantic line breaks used
-- [x]  Version control friendly formatting
-- [x]  Comments for complex sections
-- [x]  Progressive disclosure implemented
-- [x]  Accessibility considerations included </checklist_adherence>
-
-## <final_outline>
-
 title: "Automating the Modeling of Transformative Artificial Intelligence Risks" subtitle: "An Epistemic Framework for Leveraging Frontier AI Systems to Upscale Conditional Policy Assessments in Bayesian Networks on a Narrow Path toward Existential Safety" author:
 
 - name: Valentin Jakob Meyer orcid: 0009-0006-0889-5269 corresponding: true email: [Valentin.Meyer@uni-bayreuth.de](mailto:Valentin.Meyer@uni-bayreuth.de) roles:
@@ -591,6 +31,8 @@ The thesis contributes both theoretical foundations and practical implementation
 - Formal representation enables systematic comparison across different worldviews and assumptions
 - Validated extraction achieves >85% accuracy for structure and >73% for probabilities
 - The approach addresses coordination failures by creating a common language for AI risk assessment date: "2025-05-26" bibliography: ref/MAref.bib citation: container-title: University of Bayreuth Master's Thesis number-sections: true toc: true toc-depth: 4 lof: true lot: true
+```
+
 
 ---
 
@@ -600,7 +42,9 @@ The thesis contributes both theoretical foundations and practical implementation
 
 This thesis represents the culmination of interdisciplinary research at the intersection of AI safety, formal epistemology, and computational social science. The work emerged from recognizing a fundamental challenge in AI governance: while investment in AI safety research has grown exponentially, coordination between different stakeholder communities remains fragmented, potentially increasing existential risk through misaligned efforts.
 
-::: {.merge-candidate data-merge-with="Alternative preface from 11.7"} The journey from initial concept to working implementation involved iterative refinement based on feedback from advisors, domain experts, and potential users. What began as a technical exercise in automated extraction evolved into a broader framework for enhancing epistemic security in one of humanity's most critical coordination challenges. :::
+::: {.merge-candidate data-merge-with="Alternative preface from 11.7"}
+The journey from initial concept to working implementation involved iterative refinement based on feedback from advisors, domain experts, and potential users. What began as a technical exercise in automated extraction evolved into a broader framework for enhancing epistemic security in one of humanity's most critical coordination challenges.
+:::
 
 I hope this work contributes to building the intellectual and technical infrastructure necessary for humanity to navigate the transition to transformative AI safely. The tools and frameworks presented here are offered in the spirit of collaborative problem-solving, recognizing that the challenges we face require unprecedented cooperation across disciplines, institutions, and worldviews.
 
@@ -651,7 +95,8 @@ TAI - Transformative Artificial Intelligence
 ## Chapter Overview
 
 **Grade Weight**: 10% | **Target Length**: ~14% of text (~4,200 words)  
-**Requirements**: Introduces and motivates the core question, provides context, states precise thesis, provides roadmap :::
+**Requirements**: Introduces and motivates the core question, provides context, states precise thesis, provides roadmap
+:::
 
 ## 1.1 Opening Scenario: The Policymaker's Dilemma {#sec-opening-scenario}
 
@@ -659,7 +104,9 @@ TAI - Transformative Artificial Intelligence
 
 Imagine a senior policy advisor preparing recommendations for AI governance legislation. On her desk lie a dozen reports from leading AI safety researchers, each painting a different picture of the risks ahead. One argues that misaligned AI could pose existential risks within the decade, citing complex technical arguments about instrumental convergence and orthogonality. Another suggests these concerns are overblown, emphasizing uncertainty and the strength of existing institutions. A third proposes specific technical standards but acknowledges deep uncertainty about their effectiveness.
 
-::: {.redundant-content data-better-version="Outline_12.2#sec-opening"} Each report seems compelling in isolation, written by credentialed experts with sophisticated arguments. Yet they reach dramatically different conclusions about both the magnitude of risk and appropriate interventions. The technical arguments involve unfamiliar concepts—mesa-optimization, corrigibility, capability amplification—expressed through different frameworks and implicit assumptions. Time is limited, stakes are high, and the legislation could shape humanity's trajectory for decades. :::
+::: {.redundant-content data-better-version="Outline_12.2#sec-opening"}
+Each report seems compelling in isolation, written by credentialed experts with sophisticated arguments. Yet they reach dramatically different conclusions about both the magnitude of risk and appropriate interventions. The technical arguments involve unfamiliar concepts—mesa-optimization, corrigibility, capability amplification—expressed through different frameworks and implicit assumptions. Time is limited, stakes are high, and the legislation could shape humanity's trajectory for decades.
+:::
 
 This scenario plays out daily across government offices, corporate boardrooms, and research institutions worldwide. It exemplifies what I term the "coordination crisis" in AI governance: despite unprecedented attention and resources directed toward AI safety, we lack the epistemic infrastructure to synthesize diverse expert knowledge into actionable governance strategies.
 
@@ -675,7 +122,9 @@ As AI capabilities advance at an accelerating pace—demonstrated by the rapid p
 
 The current state of AI governance presents a striking paradox. On one hand, we witness extraordinary mobilization: billions in research funding, proliferating safety initiatives, major tech companies establishing alignment teams, and governments worldwide developing AI strategies. The Asilomar AI Principles garnered thousands of signatures, the EU advances comprehensive AI regulation, and technical researchers produce increasingly sophisticated work on alignment, interpretability, and robustness.
 
-::: {.duplicate-content data-source="Outline_11.7#sec-coordination-crisis"} Yet alongside this activity, we observe systematic coordination failures that may prove catastrophic. Technical safety researchers develop sophisticated alignment techniques without clear implementation pathways. Policy specialists craft regulatory frameworks lacking technical grounding to ensure practical efficacy. Ethicists articulate normative principles that lack operational specificity. Strategy researchers identify critical uncertainties but struggle to translate these into actionable guidance. International bodies convene without shared frameworks for assessing interventions. :::
+::: {.duplicate-content data-source="Outline_11.7#sec-coordination-crisis"}
+Yet alongside this activity, we observe systematic coordination failures that may prove catastrophic. Technical safety researchers develop sophisticated alignment techniques without clear implementation pathways. Policy specialists craft regulatory frameworks lacking technical grounding to ensure practical efficacy. Ethicists articulate normative principles that lack operational specificity. Strategy researchers identify critical uncertainties but struggle to translate these into actionable guidance. International bodies convene without shared frameworks for assessing interventions.
+:::
 
 <!-- [ ] CREATE: {#fig-coordination-crisis}: "Systems diagram showing fragmentation between AI governance communities" -->
 
@@ -703,7 +152,9 @@ The AI safety community duplicates efforts while leaving critical areas underexp
 
 Perhaps most concerning, uncoordinated interventions can actively increase risk. Safety standards that advantage established players may accelerate risky development elsewhere. Partial transparency requirements might enable capability advances without commensurate safety improvements. International agreements lacking shared technical understanding may lock in dangerous practices. Without coordination, our cure risks becoming worse than the disease.
 
-::: {.merge-candidate data-merge-with="Outline_11.7#systematic-risk"} Coordination failures systematically amplify existential risk through multiple pathways. Safety gaps emerge when technical solutions lack policy implementation pathways. Resource misallocation occurs when multiple teams unknowingly duplicate efforts while critical areas remain unaddressed. Most perniciously, locally optimized decisions by individual actors can create negative-sum dynamics that increase overall risk—an AI governance tragedy of the commons. :::
+::: {.merge-candidate data-merge-with="Outline_11.7#systematic-risk"}
+Coordination failures systematically amplify existential risk through multiple pathways. Safety gaps emerge when technical solutions lack policy implementation pathways. Resource misallocation occurs when multiple teams unknowingly duplicate efforts while critical areas remain unaddressed. Most perniciously, locally optimized decisions by individual actors can create negative-sum dynamics that increase overall risk—an AI governance tragedy of the commons.
+:::
 
 <!-- [ ] FIND: @negative-sum-policy: "Game-theoretic analysis of how uncoordinated AI policies can backfire" -->
 
@@ -715,7 +166,8 @@ History offers instructive parallels. The nuclear age began with scientists raci
 
 <!-- [ ] VERIFY: @nuclear-governance-lessons: "Schelling, T. (1960). The Strategy of Conflict - lessons for AI governance" -->
 
-::: {.redundant-content data-better-version="Outline_12.2#temporal-urgency"} Yet AI presents unique coordination challenges that compress our response timeline:
+::: {.redundant-content data-better-version="Outline_12.2#temporal-urgency"} 
+Yet AI presents unique coordination challenges that compress our response timeline:
 
 **Accelerating Development**: Unlike nuclear weapons requiring massive infrastructure, AI development proceeds in corporate labs and academic departments worldwide. Capability improvements come through algorithmic insights and computational scale, both advancing exponentially.
 
@@ -723,7 +175,8 @@ History offers instructive parallels. The nuclear age began with scientists raci
 
 **Comprehension Barriers**: Nuclear risks were viscerally understandable—cities vaporized, radiation sickness, nuclear winter. AI risks involve abstract concepts like optimization processes, goal misspecification, and emergent capabilities that resist intuitive understanding.
 
-**Governance Lag**: Traditional governance mechanisms—legislation, international treaties, professional standards—operate on timescales of years to decades. AI capabilities advance on timescales of months to years, creating an ever-widening capability-governance gap. :::
+**Governance Lag**: Traditional governance mechanisms—legislation, international treaties, professional standards—operate on timescales of years to decades. AI capabilities advance on timescales of months to years, creating an ever-widening capability-governance gap.
+:::
 
 <!-- [ ] CREATE: {#fig-governance-lag}: "Timeline comparison of AI capability vs governance development" -->
 
@@ -735,7 +188,9 @@ This thesis addresses a specific dimension of the coordination challenge by inve
 
 **Can frontier AI technologies be utilized to automate the modeling of transformative AI risks, enabling robust prediction of policy impacts across diverse worldviews?**
 
-::: {.merge-candidate data-merge-with="Outline_11.7#research-question"} More specifically, I explore whether frontier language models can automate the extraction and formalization of probabilistic world models from AI safety literature, creating a scalable computational framework that enhances coordination in AI governance through systematic policy evaluation under uncertainty. :::
+::: {.merge-candidate data-merge-with="Outline_11.7#research-question"} 
+More specifically, I explore whether frontier language models can automate the extraction and formalization of probabilistic world models from AI safety literature, creating a scalable computational framework that enhances coordination in AI governance through systematic policy evaluation under uncertainty. 
+:::
 
 To break this down into its components:
 
@@ -759,7 +214,9 @@ The central thesis of this work is that combining three elements—automated wor
 
 ### 1.5.1 Automated Worldview Extraction {#sec-automated-extraction}
 
-::: {.duplicate-content data-source="Outline_11.7#automated-extraction"} **Automated worldview extraction** using frontier language models addresses the scaling bottleneck in current approaches to AI risk modeling. The Modeling Transformative AI Risks (MTAIR) project demonstrated the value of formal representation but required extensive manual effort to translate qualitative arguments into quantitative models. Automation enables processing orders of magnitude more content, incorporating diverse perspectives, and maintaining models in near real-time as new arguments emerge. :::
+::: {.duplicate-content data-source="Outline_11.7#automated-extraction"} 
+**Automated worldview extraction** using frontier language models addresses the scaling bottleneck in current approaches to AI risk modeling. The Modeling Transformative AI Risks (MTAIR) project demonstrated the value of formal representation but required extensive manual effort to translate qualitative arguments into quantitative models. Automation enables processing orders of magnitude more content, incorporating diverse perspectives, and maintaining models in near real-time as new arguments emerge. 
+:::
 
 Current approaches to AI risk modeling, exemplified by the Modeling Transformative AI Risks (MTAIR) project, demonstrate the value of formal representation but require extensive manual effort. Creating a single model demands hundreds of expert-hours to translate qualitative arguments into quantitative frameworks. This bottleneck severely limits the number of perspectives that can be formalized and the speed of model updates as new arguments emerge.
 
@@ -774,7 +231,9 @@ Automation using frontier language models addresses this scaling challenge. By d
 
 ### 1.5.2 Live Data Integration {#sec-live-data}
 
-::: {.redundant-content data-better-version="Outline_12.2#prediction-markets"} **Prediction market integration** grounds these models in collective forecasting intelligence. By connecting formal representations to live forecasting platforms, the system can incorporate timely judgments about critical uncertainties from calibrated forecasters. This creates a dynamic feedback loop where models inform forecasters and forecasts update models. :::
+::: {.redundant-content data-better-version="Outline_12.2#prediction-markets"} 
+**Prediction market integration** grounds these models in collective forecasting intelligence. By connecting formal representations to live forecasting platforms, the system can incorporate timely judgments about critical uncertainties from calibrated forecasters. This creates a dynamic feedback loop where models inform forecasters and forecasts update models. 
+:::
 
 Static models, however well-constructed, quickly become outdated in fast-moving domains. Prediction markets and forecasting platforms aggregate distributed knowledge about uncertain futures, providing continuously updated probability estimates. By connecting formal models to these live data sources, we create dynamic assessments that incorporate the latest collective intelligence.
 
@@ -802,7 +261,9 @@ This enables genuinely evidence-based policy development:
 
 ### 1.5.4 The Synergy {#sec-synergy}
 
-::: {.merge-candidate data-merge-with="Outline_11.7#synergy"} The synergy emerges because automation enables comprehensive data integration, markets inform and validate models, and evaluation gains precision from both automated extraction and market-based calibration. The complete system creates feedback loops where policy analysis identifies critical uncertainties for market attention. :::
+::: {.merge-candidate data-merge-with="Outline_11.7#synergy"} 
+The synergy emerges because automation enables comprehensive data integration, markets inform and validate models, and evaluation gains precision from both automated extraction and market-based calibration. The complete system creates feedback loops where policy analysis identifies critical uncertainties for market attention. 
+:::
 
 The multiplicative benefits emerge from the interactions between components:
 
@@ -819,13 +280,15 @@ This synergistic combination addresses the coordination crisis by providing comm
 
 The remainder of this thesis develops the multiplicative benefits framework from theoretical foundations to practical implementation:
 
-::: {.duplicate-content data-source="Outline_11.7#roadmap"} **Chapter 2: Context and Theoretical Foundations** establishes the intellectual groundwork, examining the epistemic challenges unique to AI governance, Bayesian networks as formal tools for uncertainty representation, argument mapping as a bridge from natural language to formal models, the MTAIR project's achievements and limitations, and requirements for effective coordination infrastructure.
+::: {.duplicate-content data-source="Outline_11.7#roadmap"} 
+**Chapter 2: Context and Theoretical Foundations** establishes the intellectual groundwork, examining the epistemic challenges unique to AI governance, Bayesian networks as formal tools for uncertainty representation, argument mapping as a bridge from natural language to formal models, the MTAIR project's achievements and limitations, and requirements for effective coordination infrastructure.
 
 **Chapter 3: AMTAIR Design and Implementation** presents the technical system including overall architecture and design principles, the two-stage extraction pipeline (ArgDown → BayesDown), validation methodology and results, case studies from simple examples to complex AI risk models, and integration with prediction markets and policy evaluation.
 
 **Chapter 4: Discussion - Implications and Limitations** critically examines technical limitations and failure modes, conceptual concerns about formalization, integration with existing governance frameworks, scaling challenges and opportunities, and broader implications for epistemic security.
 
-**Chapter 5: Conclusion** synthesizes key contributions and charts paths forward with a summary of theoretical and practical achievements, concrete recommendations for stakeholders, research agenda for community development, and vision for AI governance with proper coordination infrastructure. :::
+**Chapter 5: Conclusion** synthesizes key contributions and charts paths forward with a summary of theoretical and practical achievements, concrete recommendations for stakeholders, research agenda for community development, and vision for AI governance with proper coordination infrastructure. 
+:::
 
 Throughout this progression, I maintain dual focus on theoretical sophistication and practical utility. The framework aims not merely to advance academic understanding but to provide actionable tools for improving coordination in AI governance during this critical period.
 
@@ -840,7 +303,8 @@ Having established the coordination crisis and outlined how automated modeling c
 ## Chapter Overview
 
 **Grade Weight**: 20% | **Target Length**: ~29% of text (~8,700 words)  
-**Requirements**: Demonstrates understanding of relevant concepts, explains relevance, situates in debate, reconstructs arguments :::
+**Requirements**: Demonstrates understanding of relevant concepts, explains relevance, situates in debate, reconstructs arguments 
+:::
 
 <!-- [ ] TODO: Add conceptual dependency diagram showing prerequisite knowledge --> <!-- [ ] TODO: Create "Background Knowledge" boxes for key concepts -->
 
@@ -848,7 +312,9 @@ Having established the coordination crisis and outlined how automated modeling c
 
 <!-- [ ] TODO: Examine Joe Carlsmith's probabilistic model of power-seeking AI -->
 
-::: {.merge-candidate data-merge-with="Outline_11.7#carlsmith-model"} Carlsmith's "Is Power-Seeking AI an Existential Risk?" (2021) represents one of the most structured approaches to assessing the probability of existential catastrophe from advanced AI. The analysis decomposes the overall risk into six key premises, each with an explicit probability estimate. :::
+::: {.merge-candidate data-merge-with="Outline_11.7#carlsmith-model"} 
+Carlsmith's "Is Power-Seeking AI an Existential Risk?" (2021) represents one of the most structured approaches to assessing the probability of existential catastrophe from advanced AI. The analysis decomposes the overall risk into six key premises, each with an explicit probability estimate. 
+:::
 
 To ground our discussion in concrete terms, I examine Joseph Carlsmith's "Is Power-Seeking AI an Existential Risk?" as an exemplar of structured reasoning about AI catastrophic risk. Carlsmith's analysis stands out for its explicit probabilistic decomposition of the path from current AI development to potential existential catastrophe.
 
@@ -856,7 +322,8 @@ To ground our discussion in concrete terms, I examine Joseph Carlsmith's "Is Pow
 
 ### 2.1.1 Six-Premise Decomposition {#sec-six-premise}
 
-::: {.duplicate-content data-source="Outline_11.7#six-premise"} Carlsmith decomposes existential risk into a probabilistic chain with explicit estimates:
+::: {.duplicate-content data-source="Outline_11.7#six-premise"} 
+Carlsmith decomposes existential risk into a probabilistic chain with explicit estimates:
 
 1. **Premise 1**: Transformative AI development this century (P ≈ 0.80)
 2. **Premise 2**: AI systems pursuing objectives in the world (P ≈ 0.95)
@@ -865,7 +332,8 @@ To ground our discussion in concrete terms, I examine Joseph Carlsmith's "Is Pow
 5. **Premise 5**: Misaligned systems despite safety efforts (P ≈ 0.50)
 6. **Premise 6**: Catastrophic outcomes from misaligned power-seeking (P ≈ 0.65)
 
-**Composite Risk Calculation**: P(doom) ≈ 0.05 (5%) :::
+**Composite Risk Calculation**: P(doom) ≈ 0.05 (5%) 
+:::
 
 Carlsmith structures his argument through six conditional premises, each assigned explicit probability estimates:
 
@@ -894,7 +362,9 @@ This structured approach exemplifies the type of reasoning AMTAIR aims to formal
 
 ### 2.1.2 Why Carlsmith Exemplifies Formalizable Arguments {#sec-carlsmith-formalizable}
 
-::: {.redundant-content data-better-version="Outline_11.7#carlsmith-ideal"} Carlsmith's model represents "low-hanging fruit" for automated formalization because it already exhibits explicit probabilistic reasoning with clear conditional dependencies. Success with this structured argument validates the approach for less explicit arguments throughout AI safety literature. :::
+::: {.redundant-content data-better-version="Outline_11.7#carlsmith-ideal"} 
+Carlsmith's model represents "low-hanging fruit" for automated formalization because it already exhibits explicit probabilistic reasoning with clear conditional dependencies. Success with this structured argument validates the approach for less explicit arguments throughout AI safety literature. 
+:::
 
 Carlsmith's model demonstrates several features that make it ideal for formal representation:
 
@@ -916,7 +386,9 @@ AI governance policy evaluation faces unique epistemic challenges that render tr
 
 ### 2.2.1 Unique Characteristics of AI Governance {#sec-ai-governance-unique}
 
-::: {.merge-candidate data-merge-with="Outline_11.7#epistemic-challenge"} AI governance policy evaluation faces unique epistemic challenges that render traditional policy analysis methods insufficient. The domain combines complex causal chains with limited empirical grounding, deep uncertainty about future capabilities, divergent stakeholder worldviews, and few opportunities for experimental testing before deployment. :::
+::: {.merge-candidate data-merge-with="Outline_11.7#epistemic-challenge"} 
+AI governance policy evaluation faces unique epistemic challenges that render traditional policy analysis methods insufficient. The domain combines complex causal chains with limited empirical grounding, deep uncertainty about future capabilities, divergent stakeholder worldviews, and few opportunities for experimental testing before deployment. 
+:::
 
 **Deep Uncertainty Rather Than Risk**: Traditional policy analysis distinguishes between risk (known probability distributions) and uncertainty (known possibilities, unknown probabilities). AI governance faces deep uncertainty—we cannot confidently enumerate possible futures, much less assign probabilities. Will recursive self-improvement enable rapid capability gains? Can value alignment be solved technically? These foundational questions resist empirical resolution before their answers become catastrophically relevant.
 
@@ -930,7 +402,9 @@ AI governance policy evaluation faces unique epistemic challenges that render tr
 
 ### 2.2.2 Limitations of Traditional Approaches {#sec-traditional-limitations}
 
-::: {.duplicate-content data-source="Outline_11.7#traditional-limitations"} Traditional methods fall short in several ways. Cost-benefit analysis struggles with existential outcomes and deep uncertainty about unprecedented events. Scenario planning often lacks the probabilistic reasoning necessary for rigorous evaluation under uncertainty. Expert elicitation alone fails to formalize interdependencies between variables and make assumptions explicit. Qualitative approaches obscure crucial assumptions that drive conclusions, making it difficult to identify cruxes of disagreement. :::
+::: {.duplicate-content data-source="Outline_11.7#traditional-limitations"} 
+Traditional methods fall short in several ways. Cost-benefit analysis struggles with existential outcomes and deep uncertainty about unprecedented events. Scenario planning often lacks the probabilistic reasoning necessary for rigorous evaluation under uncertainty. Expert elicitation alone fails to formalize interdependencies between variables and make assumptions explicit. Qualitative approaches obscure crucial assumptions that drive conclusions, making it difficult to identify cruxes of disagreement. 
+:::
 
 Standard policy evaluation tools prove inadequate for these challenges:
 
@@ -942,145 +416,9 @@ Standard policy evaluation tools prove inadequate for these challenges:
 
 **Red Team Exercises** test specific plans but miss systemic risks emerging from component interactions. Gaming individual failures cannot reveal emergent catastrophic possibilities.
 
-These limitations create a methodological gap: we need approaches th
+These limitations create a methodological gap: we need approaches that handle deep uncertainty, represent complex causation, quantify expert disagreement, and enable systematic exploration of intervention effects.
 
-</response1>
-
-
-
-
-
-
-
-
-
-
-
-
-
-# Prompt1B
-
-You previously began a response to prompt1:
-
-<prompt1>
-
-You are the most brilliant an AI assistant with maximum thinking tokens. You are tasked with analyzing and merging content for an AMTAIR MA-Thesis project. Follow these instructions carefully to complete the task:
-
-1. Review and analyze the contents of the GitHub repository, context window, and this prompt:
-
-{{GITHUB_REPO_CONTENTS}}
-
-{{PROJECT_CONTEXT_WINDOW}}
-
-Provide a comprehensive overview of all files, explaining their structure, contents, and relevance to the AMTAIR MA-Thesis (do as much of this in reasoning space / thinking tokens as possible but key insights printed as overview). Focus on key insights and relationships between files. Present this overview in tags.
-
-1. Conduct an extra detailed analysis of the outlines, syntax instructions, and Colab notebook:
-
-{{OUTLINE_12.2.qmd.md}}
-
-{{OUTLINE_11.7.qmd.md}}
-
-{{QUARTO_SYNTAX_INSTRUCTIONS}}
-
-{{COLAB_NOTEBOOK}}
-
-Present this detailed analysis in tags.
-
-1. Plan the merging of the two outlines: a) Develop a strategy to combine all contents without removing ANY information. b) Find the optimal way to merge the structures while maintaining the same number of chapters/level 1 headings. c) Ensure the resulting outline is close to the combined length of both original outlines combined. d) Add contents and improvements throughout as you notice them
-
-Present your merging plan in tags.
-
-1. Implement perfect Quarto syntax and formatting, task management and tracking and tagging and highlighting:
-
-{{QUARTO_SYNTAX_INSTRUCTIONS}}
-
-a) Fully implement the Quarto syntax task management system as described in the instructions. b) Implement and strictly adhere to the Quarto syntax tagging and highlighting system. c) Provide detailed instructions for which formatting to use when, why, and how.
-
-Write the the most detailed and rigerous, written instructions for which formatting to use when, why and how.
-
-Present your Quarto implementation plan in tags.
-
-1. Ensure adherence to all points in the checklists:
-
-{{CHECKLISTS_IN_QUARTO_SYNTAX_INSTRUCTIONS}}
-
-Verify and confirm complete adherence to all checklist items in tags.
-
-1. Produce the final, combined outline: Based on all the previous steps, create the perfect, combined outline that incorporates all content from both original outlines, adheres to Quarto formatting, and follows all instructions and best practices. Present this final outline in tags.
-
-Your final output has to include all of the following sections, in this order:
-
-Ensure that each section is comprehensive and addresses all aspects of the task as described in these instructions.
-
-</prompt1>
-
-And here is your response before it cut off:
-
-<response_begun> {{
-
-}} <response_begun>
-
-Think throughly about this output and see if there are further improvements you can make to the previous response.
-If so, print only the changes (and where to insert / what to replace).
-Please use your complete focus to understand this situation properly and provide the best possible response.
-Otherwise, please continue where you left of.
-
-
-
-# Thought for 12s:
-
-Looking at my previous response, I need to:
-
-1. Complete the truncated section on traditional policy evaluation
-2. Continue through the rest of Chapter 2
-3. Complete Chapters 3-5
-4. Ensure all content from both outlines is included
-5. Apply all the Quarto formatting properly
-6. Include all task management items
-7. Tag duplicates and redundancies properly
-
-Let me identify where I left off and continue from there. I was in the middle of Section 2.2.2, discussing limitations of traditional approaches. I should complete that thought and continue through the rest of the outline.
-
-I notice that I haven't been as thorough as I could be in:
-
-- Implementing the full task management system consistently
-- Tagging all duplicate/redundant content
-- Including specific word counts per section
-- Creating comprehensive footnotes
-
-Let me complete the response with these improvements in mind.
-
-
-
-# Response1B)
-
-
-
-Looking at where the response was cut off, I need to complete Section 2.2.2 and continue through the rest of the outline. Let me fix the incomplete sentence and proceed:
-
-**CORRECTION**: In Section 2.2.2, the last paragraph cuts off mid-sentence. Replace the incomplete paragraph with:
-
-
-
-**CONTINUATION FROM SECTION 2.2.2**:
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+<!-- [ ] FIND: @lempert2003: "Lempert et al. on robust decision-making under deep uncertainty" -->
 
 
 
@@ -1103,7 +441,8 @@ The inadequacy of traditional methods for AI governance creates an urgent need f
 
 ## Key Insight
 
-The computational approaches developed in this thesis—particularly Bayesian networks enhanced with automated extraction—directly address each of these requirements by providing formal frameworks for reasoning under uncertainty. :::
+The computational approaches developed in this thesis—particularly Bayesian networks enhanced with automated extraction—directly address each of these requirements by providing formal frameworks for reasoning under uncertainty.
+:::
 
 ## 2.3 Bayesian Networks as Knowledge Representation {#sec-bayesian-networks}
 
@@ -1113,7 +452,8 @@ Bayesian networks offer a mathematical framework uniquely suited to addressing t
 
 ### 2.3.1 Mathematical Foundations {#sec-mathematical-foundations}
 
-::: {.duplicate-content data-source="Outline_11.7#mathematical-foundations"} A Bayesian network consists of:
+::: {.duplicate-content data-source="Outline_11.7#mathematical-foundations"}
+A Bayesian network consists of:
 
 - **Directed Acyclic Graph (DAG)**: Nodes represent variables, edges represent direct dependencies
 - **Conditional Probability Tables (CPTs)**: For each node, P(node|parents) quantifies relationships
@@ -1122,7 +462,8 @@ The joint probability distribution factors according to the graph structure:
 
 P(X1,X2,...,Xn)=∏i=1nP(Xi∣Parents(Xi))P(X_1, X_2, ..., X_n) = \prod_{i=1}^{n} P(X_i | Parents(X_i))P(X1​,X2​,...,Xn​)=i=1∏n​P(Xi​∣Parents(Xi​))
 
-This factorization enables efficient inference and embodies causal assumptions explicitly. :::
+This factorization enables efficient inference and embodies causal assumptions explicitly.
+:::
 
 <!-- [ ] VERIFY: @pearl-probabilistic: "Pearl, J. (1988). Probabilistic Reasoning in Intelligent Systems" -->
 
@@ -1173,7 +514,9 @@ This simple network demonstrates:
 
 ### 2.3.3 Advantages for AI Risk Modeling {#sec-modeling-advantages}
 
-::: {.redundant-content data-better-version="Outline_11.7#modeling-advantages"} Bayesian networks offer several key advantages for AI risk modeling. They provide explicit uncertainty representation where all beliefs are represented with probability distributions rather than point estimates. The framework naturally supports causal reasoning through native support for intervention analysis and counterfactual reasoning via do-calculus. Evidence integration becomes principled through Bayesian updating mechanisms. The modular structure allows complex arguments to be decomposed into manageable, verifiable components. Finally, the visual communication provided by graphical representation facilitates understanding across different expertise levels. :::
+::: {.redundant-content data-better-version="Outline_11.7#modeling-advantages"} 
+Bayesian networks offer several key advantages for AI risk modeling. They provide explicit uncertainty representation where all beliefs are represented with probability distributions rather than point estimates. The framework naturally supports causal reasoning through native support for intervention analysis and counterfactual reasoning via do-calculus. Evidence integration becomes principled through Bayesian updating mechanisms. The modular structure allows complex arguments to be decomposed into manageable, verifiable components. Finally, the visual communication provided by graphical representation facilitates understanding across different expertise levels. 
+:::
 
 These features address key requirements for AI governance:
 
@@ -1199,12 +542,14 @@ Natural language arguments contain rich information expressed through:
 - Uncertainty expressions ("probably," "might," "certainly")
 - Support/attack patterns between claims
 
-::: {.merge-candidate data-merge-with="Outline_11.7#argument-mapping"} Argument mapping extracts this structure, identifying:
+::: {.merge-candidate data-merge-with="Outline_11.7#argument-mapping"} 
+Argument mapping extracts this structure, identifying:
 
 - **Core claims and propositions**
 - **Inferential relationships**
 - **Implicit assumptions**
-- **Uncertainty qualifications** :::
+- **Uncertainty qualifications** 
+:::
 
 <!-- [ ] FIND: @argument-mapping-methods: "Systematic review of argument visualization techniques" -->
 
@@ -1225,7 +570,8 @@ This notation captures argument structure while remaining human-readable and wri
 
 ### 2.4.3 BayesDown: The Bridge to Bayesian Networks {#sec-bayesdown}
 
-::: {.duplicate-content data-source="Outline_11.7#bayesdown"} BayesDown extends ArgDown with probabilistic metadata:
+::: {.duplicate-content data-source="Outline_11.7#bayesdown"} 
+BayesDown extends ArgDown with probabilistic metadata:
 
 ```
 [Node]: Description. {
@@ -1259,7 +605,9 @@ The Modeling Transformative AI Risks (MTAIR) project, led by RAND researchers, p
 
 ### 2.5.1 MTAIR's Approach {#sec-mtair-approach}
 
-::: {.redundant-content data-better-version="Outline_11.7#mtair-approach"} The Modeling Transformative AI Risks (MTAIR) project demonstrated the value of formal probabilistic modeling for AI safety, but also revealed significant limitations in the manual approach. While MTAIR successfully translated complex arguments into Bayesian networks and enabled sensitivity analysis, the intensive human labor required for model creation limited both scalability and timeliness. :::
+::: {.redundant-content data-better-version="Outline_11.7#mtair-approach"}
+The Modeling Transformative AI Risks (MTAIR) project demonstrated the value of formal probabilistic modeling for AI safety, but also revealed significant limitations in the manual approach. While MTAIR successfully translated complex arguments into Bayesian networks and enabled sensitivity analysis, the intensive human labor required for model creation limited both scalability and timeliness.
+:::
 
 MTAIR manually translated influential AI risk arguments into Bayesian networks using Analytica software:
 
@@ -1289,7 +637,9 @@ MTAIR demonstrated several important possibilities:
 
 ### 2.5.3 Fundamental Limitations {#sec-mtair-limitations}
 
-::: {.duplicate-content data-source="Outline_11.7#mtair-limitations"} Despite its innovations, MTAIR faces fundamental limitations that motivate the automated approach. The scalability bottleneck is severe—manual model construction requires weeks of expert effort per argument, making comprehensive coverage impossible. The static nature of manually constructed models provides no mechanisms for updating as new research and evidence emerge. Limited accessibility restricts usage to specialists with formal modeling expertise, excluding many stakeholders. Finally, the single worldview focus creates difficulty in representing multiple conflicting perspectives simultaneously, limiting the framework's utility for coordination across diverse viewpoints. :::
+::: {.duplicate-content data-source="Outline_11.7#mtair-limitations"} 
+Despite its innovations, MTAIR faces fundamental limitations that motivate the automated approach. The scalability bottleneck is severe—manual model construction requires weeks of expert effort per argument, making comprehensive coverage impossible. The static nature of manually constructed models provides no mechanisms for updating as new research and evidence emerge. Limited accessibility restricts usage to specialists with formal modeling expertise, excluding many stakeholders. Finally, the single worldview focus creates difficulty in representing multiple conflicting perspectives simultaneously, limiting the framework's utility for coordination across diverse viewpoints. 
+:::
 
 However, MTAIR's manual approach faces severe constraints:
 
@@ -1316,12 +666,14 @@ These limitations prevent MTAIR's approach from scaling to meet AI governance ne
 
 ### 2.5.4 The Automation Opportunity {#sec-automation-opportunity}
 
-::: {.merge-candidate data-merge-with="Outline_11.7#automation-opportunity"} MTAIR's experience reveals both the value of formal modeling and the necessity of automation. Key lessons:
+::: {.merge-candidate data-merge-with="Outline_11.7#automation-opportunity"} 
+MTAIR's experience reveals both the value of formal modeling and the necessity of automation. Key lessons:
 
 - Formal models genuinely enhance understanding and coordination
 - The modeling process itself surfaces implicit assumptions
 - Quantification enables analyses impossible with qualitative arguments alone
-- But manual approaches cannot scale to match the challenge :::
+- But manual approaches cannot scale to match the challenge 
+:::
 
 This motivates AMTAIR's central innovation: using frontier language models to automate the extraction and formalization process while preserving the benefits MTAIR demonstrated.
 
@@ -1341,9 +693,12 @@ The evolution of AI risk models reflects increasing sophistication in both struc
 
 - **Early Phase (2000-2010)**: Qualitative arguments about intelligence explosion
 - **Formalization Phase (2010-2018)**: Introduction of structured scenarios
-- **Quantification Phase (2018-present)**: Explicit probability estimates and formal models :::
+- **Quantification Phase (2018-present)**: Explicit probability estimates and formal models
+:::
 
-<!-- [ ] VERIFY: @yudkowsky2008: "Yudkowsky, E. (2008). Artificial Intelligence as a Positive and Negative Factor in Global Risk" --> <!-- [ ] VERIFY: @bostrom2014: "Bostrom, N. (2014). Superintelligence: Paths, Dangers, Strategies" --> <!-- [ ] VERIFY: @amodei2016: "Amodei, D., et al. (2016). Concrete Problems in AI Safety" -->
+<!-- [ ] VERIFY: @yudkowsky2008: "Yudkowsky, E. (2008). Artificial Intelligence as a Positive and Negative Factor in Global Risk" --> 
+<!-- [ ] VERIFY: @bostrom2014: "Bostrom, N. (2014). Superintelligence: Paths, Dangers, Strategies" --> 
+<!-- [ ] VERIFY: @amodei2016: "Amodei, D., et al. (2016). Concrete Problems in AI Safety" -->
 
 The progression from qualitative arguments to structured probabilistic models demonstrates the field's maturation and the increasing recognition that rigorous quantitative analysis is essential for policy evaluation.
 
@@ -1356,7 +711,9 @@ AI governance proposals can be categorized along several dimensions:
 - **International Coordination**: Treaties, soft law arrangements, technical cooperation
 - **Research Priorities**: Funding allocation, talent development, knowledge sharing
 
-<!-- [ ] FIND: @dafoe2021: "Dafoe, A. (2021). AI Governance: A Research Agenda" --> <!-- [ ] TODO: Add analysis of "A Narrow Path" as case study --> <!-- [ ] TODO: Add analysis of California SB 1047 as regulatory example -->
+<!-- [ ] FIND: @dafoe2021: "Dafoe, A. (2021). AI Governance: A Research Agenda" --> 
+<!-- [ ] TODO: Add analysis of "A Narrow Path" as case study --> 
+<!-- [ ] TODO: Add analysis of California SB 1047 as regulatory example -->
 
 ### 2.6.3 Bayesian Network Theory and Applications {#sec-bn-theory}
 
@@ -1370,12 +727,14 @@ The theoretical foundations of Bayesian networks rest on probability theory and 
 
 ### 2.6.4 Software Tools Landscape {#sec-software-tools}
 
-::: {.redundant-content data-better-version="Outline_11.7#software-tools"} The implementation of AMTAIR builds on established software libraries:
+::: {.redundant-content data-better-version="Outline_11.7#software-tools"} 
+The implementation of AMTAIR builds on established software libraries:
 
 - **pgmpy**: Python library for probabilistic graphical models
 - **NetworkX**: Graph analysis and manipulation capabilities
 - **PyVis**: Interactive network visualization
-- **Pandas/NumPy**: Data manipulation and numerical computation :::
+- **Pandas/NumPy**: Data manipulation and numerical computation 
+:::
 
 <!-- [ ] TODO: Document integration challenges between tools -->
 
@@ -1391,14 +750,17 @@ Formalizing natural language arguments into mathematical models involves several
 
 ### 2.6.6 Correlation Accounting Methods {#sec-correlation-methods}
 
-::: {.duplicate-content data-source="Outline_11.7#correlation-methods"} Standard Bayesian networks assume conditional independence given parents, but real-world AI risk factors often exhibit complex correlations. Methods for handling correlations include:
+::: {.duplicate-content data-source="Outline_11.7#correlation-methods"} 
+Standard Bayesian networks assume conditional independence given parents, but real-world AI risk factors often exhibit complex correlations. Methods for handling correlations include:
 
 - **Copula Methods**: Modeling dependence structures separately from marginal distributions
 - **Hierarchical Models**: Capturing correlations through shared latent variables
 - **Explicit Correlation Nodes**: Adding nodes to represent correlation mechanisms
-- **Sensitivity Bounds**: Analyzing impact of independence assumptions :::
+- **Sensitivity Bounds**: Analyzing impact of independence assumptions 
+:::
 
-<!-- [ ] VERIFY: @nelsen2006: "Nelsen, R. B. (2006). An Introduction to Copulas" --> <!-- [ ] TODO: Add specific example of correlation impact on risk estimates -->
+<!-- [ ] VERIFY: @nelsen2006: "Nelsen, R. B. (2006). An Introduction to Copulas" --> 
+<!-- [ ] TODO: Add specific example of correlation impact on risk estimates -->
 
 ## 2.7 Methodology {#sec-methodology}
 
@@ -1408,20 +770,23 @@ Formalizing natural language arguments into mathematical models involves several
 
 This research combines theoretical development with practical implementation, following an iterative approach that moves between conceptual refinement and technical validation.
 
-::: {.merge-candidate data-merge-with="Outline_11.7#research-design"} The methodology encompasses formal framework development, computational implementation, extraction quality assessment, and application to real-world AI governance questions.
+::: {.merge-candidate data-merge-with="Outline_11.7#research-design"} 
+The methodology encompasses formal framework development, computational implementation, extraction quality assessment, and application to real-world AI governance questions.
 
 The research process follows four integrated phases:
 
 1. **Framework Development**: Creating theoretical foundations for automated worldview extraction
 2. **Technical Implementation**: Building computational tools as working prototype
 3. **Empirical Validation**: Assessing quality against expert benchmarks
-4. **Policy Application**: Demonstrating practical utility for governance questions :::
+4. **Policy Application**: Demonstrating practical utility for governance questions 
+:::
 
 ### 2.7.2 Formalizing World Models from AI Safety Literature {#sec-formalizing-world-models}
 
 The core methodological challenge involves transforming natural language arguments in AI safety literature into formal causal models with explicit probability judgments.
 
-::: {.duplicate-content data-source="Outline_11.7#formalizing-world-models"} This extraction process identifies key variables, causal relationships, and both explicit and implicit probability estimates through a systematic pipeline.
+::: {.duplicate-content data-source="Outline_11.7#formalizing-world-models"} 
+This extraction process identifies key variables, causal relationships, and both explicit and implicit probability estimates through a systematic pipeline.
 
 The extraction approach combines several elements:
 
@@ -1429,7 +794,8 @@ The extraction approach combines several elements:
 - Recognition of causal claims and relationships
 - Detection of explicit and implicit probability judgments
 - Transformation into structured intermediate representations
-- Conversion to formal Bayesian networks :::
+- Conversion to formal Bayesian networks 
+:::
 
 Large language models facilitate this process through specialized techniques:
 
@@ -1444,7 +810,8 @@ Large language models facilitate this process through specialized techniques:
 
 ## The Two-Stage Extraction Process
 
-AMTAIR employs a novel two-stage process that separates structural argument extraction from probability quantification, enabling modular improvement and human oversight at critical decision points. :::
+AMTAIR employs a novel two-stage process that separates structural argument extraction from probability quantification, enabling modular improvement and human oversight at critical decision points.
+:::
 
 **Stage 1: Structural Extraction (ArgDown Generation)**
 
@@ -1478,11 +845,14 @@ def integrate_probabilities(argdown_structure, probability_sources):
     return validate_probability_coherence(bayesdown)
 ```
 
-<!-- [ ] TODO: Document API call loops and prompt engineering details --> <!-- [ ] TODO: Include full probability extraction prompt template -->
+<!-- [ ] TODO: Document API call loops and prompt engineering details --> 
+<!-- [ ] TODO: Include full probability extraction prompt template -->
 
 ### 2.7.4 Directed Acyclic Graphs: Structure and Semantics {#sec-dag-structure}
 
-::: {.redundant-content data-better-version="Outline_11.7#dag-structure"} Directed Acyclic Graphs (DAGs) form the mathematical foundation of Bayesian networks, encoding both the qualitative structure of causal relationships and the quantitative parameters that define conditional dependencies. In AI risk modeling, these structures represent causal pathways to potential outcomes of interest. :::
+::: {.redundant-content data-better-version="Outline_11.7#dag-structure"}
+Directed Acyclic Graphs (DAGs) form the mathematical foundation of Bayesian networks, encoding both the qualitative structure of causal relationships and the quantitative parameters that define conditional dependencies. In AI risk modeling, these structures represent causal pathways to potential outcomes of interest.
+:::
 
 Key mathematical properties essential for AI risk modeling:
 
@@ -1502,7 +872,8 @@ The causal interpretation follows Pearl's framework:^[Pearl's causal framework r
 
 ### 2.7.5 Quantification of Probabilistic Judgments {#sec-quantification}
 
-::: {.merge-candidate data-merge-with="Outline_11.7#quantification"} Transforming qualitative uncertainty expressions into quantitative probabilities requires systematic interpretation frameworks that account for individual and cultural variation.
+::: {.merge-candidate data-merge-with="Outline_11.7#quantification"}
+Transforming qualitative uncertainty expressions into quantitative probabilities requires systematic interpretation frameworks that account for individual and cultural variation.
 
 Standard linguistic mappings (with significant individual variation) include:
 
@@ -1510,7 +881,8 @@ Standard linguistic mappings (with significant individual variation) include:
 - "Probable" → 0.6-0.8
 - "Uncertain" → 0.4-0.6
 - "Unlikely" → 0.2-0.4
-- "Highly improbable" → 0.05-0.15 :::
+- "Highly improbable" → 0.05-0.15
+:::
 
 Expert elicitation methodologies:
 
@@ -1528,9 +900,11 @@ Calibration challenges:
 
 ### 2.7.6 Inference Techniques for Complex Networks {#sec-inference-techniques}
 
-::: {.duplicate-content data-source="Outline_11.7#inference-techniques"} Once Bayesian networks are constructed, probabilistic inference enables reasoning about uncertainties, counterfactuals, and policy interventions. For the complex networks representing AI risks, computational approaches must balance accuracy with tractability.
+::: {.duplicate-content data-source="Outline_11.7#inference-techniques"}
+Once Bayesian networks are constructed, probabilistic inference enables reasoning about uncertainties, counterfactuals, and policy interventions. For the complex networks representing AI risks, computational approaches must balance accuracy with tractability.
 
-Inference methods implemented include exact methods for smaller networks (variable elimination, junction trees), approximate methods for larger networks (Monte Carlo sampling, variational inference), specialized approaches for rare event analysis, and intervention modeling for policy evaluation using do-calculus. :::
+Inference methods implemented include exact methods for smaller networks (variable elimination, junction trees), approximate methods for larger networks (Monte Carlo sampling, variational inference), specialized approaches for rare event analysis, and intervention modeling for policy evaluation using do-calculus.
+:::
 
 Implementation considerations:
 
@@ -1545,12 +919,14 @@ Implementation considerations:
 
 To maintain relevance in a rapidly evolving field, formal models must integrate with live data sources such as prediction markets and forecasting platforms.
 
-::: {.redundant-content data-better-version="Outline_11.7#prediction-markets"} Live data sources for dynamic model updating include:
+::: {.redundant-content data-better-version="Outline_11.7#prediction-markets"}
+Live data sources for dynamic model updating include:
 
 - **Metaculus**: Long-term AI predictions and technological forecasting
 - **Good Judgment Open**: Geopolitical events and policy outcomes
 - **Manifold Markets**: Diverse question types with rapid market response
-- **Internal Expert Forecasting**: Organization-specific predictions and assessments :::
+- **Internal Expert Forecasting**: Organization-specific predictions and assessments
+:::
 
 The data processing pipeline:
 
@@ -1589,7 +965,8 @@ With these theoretical foundations and methodological approaches established, we
 ## Chapter Overview
 
 **Grade Weight**: 20% | **Target Length**: ~29% of text (~8,700 words)  
-**Requirements**: Critical evaluation, strong argument for position, original contribution :::
+**Requirements**: Critical evaluation, strong argument for position, original contribution
+:::
 
 <!-- [ ] TODO: Reduce code snippets to 3-5 key examples maximum --> <!-- [ ] TODO: Focus on conceptual explanations over implementation details -->
 
@@ -1599,7 +976,9 @@ With these theoretical foundations and methodological approaches established, we
 
 The AMTAIR system implements an end-to-end pipeline transforming unstructured text into interactive Bayesian network visualizations. Its modular architecture comprises five main components that progressively transform information from natural language into formal models suitable for policy analysis.
 
-::: {.merge-candidate data-merge-with="Outline_11.7#system-architecture"} The AMTAIR system implements an end-to-end pipeline from unstructured text to interactive Bayesian network visualization. Its modular architecture comprises five main components that progressively transform information from natural language into formal models suitable for policy analysis. :::
+::: {.merge-candidate data-merge-with="Outline_11.7#system-architecture"}
+The AMTAIR system implements an end-to-end pipeline from unstructured text to interactive Bayesian network visualization. Its modular architecture comprises five main components that progressively transform information from natural language into formal models suitable for policy analysis.
+:::
 
 <!-- [ ] CREATE: {#fig-system-architecture}: "Component diagram showing AMTAIR modules and data flow" -->
 
@@ -1639,7 +1018,8 @@ The five-stage pipeline architecture demonstrates how each component builds on t
 
 ## Core Design Philosophy
 
-The system emphasizes scalability through modular architecture, standard interfaces for interoperability, validation checkpoints for quality assurance, and an extensible framework for future capabilities. :::
+The system emphasizes scalability through modular architecture, standard interfaces for interoperability, validation checkpoints for quality assurance, and an extensible framework for future capabilities.
+:::
 
 python
 
@@ -1672,7 +1052,8 @@ The core innovation of AMTAIR lies in separating structural extraction from prob
 
 ### 3.2.1 Stage 1: Structural Extraction (ArgDown) {#sec-stage1-argdown}
 
-::: {.duplicate-content data-source="Outline_11.7#stage1-argdown"} The first stage identifies argument structure without concerning itself with quantification:
+::: {.duplicate-content data-source="Outline_11.7#stage1-argdown"}
+The first stage identifies argument structure without concerning itself with quantification:
 
 **Variable Identification**: Extract key propositions and entities from text using patterns like "X causes Y," "If A then B," and domain-specific indicators.
 
@@ -1680,7 +1061,8 @@ The core innovation of AMTAIR lies in separating structural extraction from prob
 
 **Hierarchy Construction**: Build nested ArgDown representation preserving logical flow.
 
-**Validation**: Ensure extracted structure forms valid directed acyclic graph and preserves key argumentative relationships from source. :::
+**Validation**: Ensure extracted structure forms valid directed acyclic graph and preserves key argumentative relationships from source.
+:::
 
 Example ArgDown extraction:
 
@@ -1724,7 +1106,8 @@ Examples needed:
 
 ### 3.2.3 Why Two Stages? {#sec-why-two-stages}
 
-::: {.merge-candidate data-merge-with="Outline_11.7#why-two-stages"} This separation provides several benefits:
+::: {.merge-candidate data-merge-with="Outline_11.7#why-two-stages"}
+This separation provides several benefits:
 
 **Modular Validation**: Structure can be verified independently from probability estimates, simplifying quality assurance.
 
@@ -1732,7 +1115,8 @@ Examples needed:
 
 **Flexible Quantification**: Different methods (LLM extraction, expert elicitation, market data) can provide probabilities for the same structure.
 
-**Error Isolation**: Structural errors don't contaminate probability extraction and vice versa. :::
+**Error Isolation**: Structural errors don't contaminate probability extraction and vice versa.
+:::
 
 <!-- [ ] CREATE: {#fig-two-stage-benefits}: "Flowchart showing modular validation points" -->
 
@@ -1774,7 +1158,8 @@ The system leverages established libraries while adding novel extraction capabil
 
 ### 3.3.3 Performance Characteristics {#sec-performance}
 
-::: {.duplicate-content data-source="Outline_11.7#performance"} Benchmarking reveals practical scalability:
+::: {.duplicate-content data-source="Outline_11.7#performance"}
+Benchmarking reveals practical scalability:
 
 |Network Size|Nodes|Processing Time|Memory Usage|
 |---|---|---|---|
@@ -1783,7 +1168,8 @@ The system leverages established libraries while adding novel extraction capabil
 |Large|31-50|15-45 seconds|0.5-1GB|
 |Very Large|>50|Requires approximation|>1GB|
 
-: Performance benchmarks for different network sizes {#tbl-performance} :::
+: Performance benchmarks for different network sizes {#tbl-performance}
+:::
 
 The bottleneck shifts from extraction (linear in text length) to inference (exponential in network connectivity) as models grow.
 
@@ -1797,7 +1183,8 @@ I begin with the canonical example to demonstrate the complete pipeline on a sim
 
 ### 3.4.1 Input Representation {#sec-rsg-input}
 
-::: {.redundant-content data-better-version="Outline_11.7#rsg-input"} The source BayesDown representation:
+::: {.redundant-content data-better-version="Outline_11.7#rsg-input"}
+The source BayesDown representation:
 
 ```
 [Grass_Wet]: Concentrated moisture on grass.
@@ -1840,7 +1227,8 @@ The system processes this input through five steps:
 
 ## Validation Success
 
-The system successfully extracts complete network structure, preserves all probability information, calculates correct marginal probabilities, generates interactive visualization, and enables inference queries—validating the basic pipeline functionality. :::
+The system successfully extracts complete network structure, preserves all probability information, calculates correct marginal probabilities, generates interactive visualization, and enables inference queries—validating the basic pipeline functionality.
+:::
 
 <!-- [ ] CREATE: {#fig-rsg-visualization}: "Interactive rain-sprinkler-grass network visualization" -->
 
@@ -1852,12 +1240,14 @@ Applying AMTAIR to Carlsmith's model demonstrates scalability to realistic AI sa
 
 ### 3.5.1 Model Complexity {#sec-carlsmith-complexity}
 
-::: {.merge-candidate data-merge-with="Outline_11.7#carlsmith-complexity"} The Carlsmith model contains:
+::: {.merge-candidate data-merge-with="Outline_11.7#carlsmith-complexity"}
+The Carlsmith model contains:
 
 - **23 nodes** representing different factors
 - **27 edges** encoding dependencies
 - **Multiple probability tables** with complex conditionals
-- **Six-level causal depth** from root causes to catastrophe :::
+- **Six-level causal depth** from root causes to catastrophe
+:::
 
 This represents a significant increase in complexity from the pedagogical example.
 
@@ -1893,7 +1283,8 @@ Existential_Catastrophe
 
 ### 3.5.3 Validation Against Original {#sec-carlsmith-validation}
 
-::: {.duplicate-content data-source="Outline_11.7#carlsmith-validation"} Comparing extracted model to Carlsmith's original:
+::: {.duplicate-content data-source="Outline_11.7#carlsmith-validation"}
+Comparing extracted model to Carlsmith's original:
 
 |Metric|Performance|
 |---|---|
@@ -1902,7 +1293,8 @@ Existential_Catastrophe
 |Path Completeness|100% (all major paths)|
 |Semantic Preservation|High (per expert review)|
 
-: Carlsmith model extraction validation results {#tbl-carlsmith-validation} :::
+: Carlsmith model extraction validation results {#tbl-carlsmith-validation}
+:::
 
 The high fidelity demonstrates AMTAIR's capability for complex real-world arguments.
 
@@ -1934,7 +1326,8 @@ Establishing trust in automated extraction requires rigorous validation across m
 
 ## Validation Protocol
 
-We created validation datasets through expert manual extraction, consensus building, and source annotation—establishing gold standard representations for comparison. :::
+We created validation datasets through expert manual extraction, consensus building, and source annotation—establishing gold standard representations for comparison.
+:::
 
 <!-- [ ] TODO: Manual Extraction Protocol -->
 
@@ -1951,7 +1344,8 @@ Document the process:
 
 ### 3.6.2 Evaluation Metrics {#sec-evaluation-metrics}
 
-::: {.duplicate-content data-source="Outline_11.7#evaluation-metrics"} **Structural Metrics**:
+::: {.duplicate-content data-source="Outline_11.7#evaluation-metrics"}
+**Structural Metrics**:
 
 - Precision: Fraction of extracted elements that are correct
 - Recall: Fraction of true elements that are extracted
@@ -1966,7 +1360,8 @@ Document the process:
 **Semantic Metrics**:
 
 - Expert ratings of meaning preservation
-- Functional equivalence for inference queries :::
+- Functional equivalence for inference queries
+:::
 
 <!-- [ ] CREATE: {#fig-validation-metrics}: "Visual summary of validation approach" -->
 
@@ -1989,7 +1384,8 @@ Performance is strongest for explicit structural elements and numerical probabil
 
 ### 3.6.4 Error Analysis {#sec-error-analysis}
 
-::: {.merge-candidate data-merge-with="Outline_11.7#error-analysis"} Common failure modes:
+::: {.merge-candidate data-merge-with="Outline_11.7#error-analysis"}
+Common failure modes:
 
 **Implicit Assumptions** (23% of errors): Unstated background assumptions that experts infer but system misses.
 
@@ -1997,7 +1393,8 @@ Performance is strongest for explicit structural elements and numerical probabil
 
 **Ambiguous Quantifiers** (17% of errors): Terms like "significant" lack clear probability mapping without context.
 
-**Coreference Resolution** (15% of errors): Pronouns and indirect references create attribution challenges. :::
+**Coreference Resolution** (15% of errors): Pronouns and indirect references create attribution challenges.
+:::
 
 Understanding these limitations guides both current usage and future improvements.
 
@@ -2058,7 +1455,8 @@ This quantitative analysis enables comparison across interventions.
 
 ## Cross-Worldview Robustness
 
-Policies must work across worldviews. AMTAIR enables multi-model evaluation, parameter sensitivity testing, scenario analysis, and confidence bound computation—ensuring interventions remain effective despite uncertainty. :::
+Policies must work across worldviews. AMTAIR enables multi-model evaluation, parameter sensitivity testing, scenario analysis, and confidence bound computation—ensuring interventions remain effective despite uncertainty.
+:::
 
 <!-- [ ] CREATE: {#fig-robustness-analysis}: "Policy effectiveness across worldviews" -->
 
@@ -2070,12 +1468,14 @@ Making Bayesian networks accessible to diverse stakeholders requires careful vis
 
 ### 3.8.1 Visual Encoding Strategy {#sec-visual-encoding}
 
-::: {.duplicate-content data-source="Outline_11.7#visual-encoding"} The system uses multiple visual channels:
+::: {.duplicate-content data-source="Outline_11.7#visual-encoding"}
+The system uses multiple visual channels:
 
 **Color**: Probability magnitude (green=high, red=low)  
 **Borders**: Node type (blue=root, purple=intermediate, magenta=effect)  
 **Size**: Centrality in network (larger=more influential)  
-**Layout**: Force-directed positioning reveals clusters :::
+**Layout**: Force-directed positioning reveals clusters
+:::
 
 <!-- [ ] CREATE: {#fig-visual-encoding}: "Legend showing all visual encodings" -->
 
@@ -2117,7 +1517,8 @@ While full integration remains future work, the architecture supports connection
 
 ## Integration Architecture
 
-The system anticipates market connections through API specifications for major platforms, semantic matching algorithms, probability aggregation methods, and update scheduling with caching. :::
+The system anticipates market connections through API specifications for major platforms, semantic matching algorithms, probability aggregation methods, and update scheduling with caching.
+:::
 
 <!-- [ ] TODO: Prediction Market Integration Architecture -->
 
@@ -2131,13 +1532,15 @@ Design documentation needed:
 
 ### 3.9.2 Challenges and Opportunities {#sec-market-challenges}
 
-::: {.merge-candidate data-merge-with="Outline_11.7#market-challenges"} Key integration challenges:
+::: {.merge-candidate data-merge-with="Outline_11.7#market-challenges"}
+Key integration challenges:
 
 - **Question Mapping**: Model variables rarely match market questions exactly
 - **Temporal Alignment**: Markets forecast specific dates, models consider scenarios
 - **Quality Variation**: Market depth and participation vary significantly
 
-Despite challenges, even partial integration provides value through external validation and dynamic updating. :::
+Despite challenges, even partial integration provides value through external validation and dynamic updating.
+:::
 
 <!-- [ ] CREATE: {#fig-market-integration}: "Workflow for prediction market integration" -->
 
@@ -2149,13 +1552,15 @@ As networks grow large, computational challenges emerge requiring sophisticated 
 
 ### 3.10.1 Exact vs. Approximate Inference {#sec-exact-approximate}
 
-::: {.duplicate-content data-source="Outline_11.7#exact-approximate"} Small networks enable exact inference through variable elimination. Larger networks require approximation:
+::: {.duplicate-content data-source="Outline_11.7#exact-approximate"}
+Small networks enable exact inference through variable elimination. Larger networks require approximation:
 
 **Monte Carlo Methods**: Sample from probability distributions to estimate queries  
 **Variational Inference**: Optimize simpler distributions to approximate true posteriors  
 **Belief Propagation**: Pass messages between nodes to converge on beliefs
 
-The system automatically selects appropriate methods based on network properties. :::
+The system automatically selects appropriate methods based on network properties.
+:::
 
 <!-- [ ] CREATE: {#tbl-inference-methods}: "Comparison of inference algorithms" -->
 
@@ -2183,24 +1588,28 @@ Document strategies with benchmarks:
 
 ## Performance Highlights
 
-The system achieves 85%+ accuracy for structural relationships and 73% for probability capture—sufficient for practical use while maintaining transparency about limitations. :::
+The system achieves 85%+ accuracy for structural relationships and 73% for probability capture—sufficient for practical use while maintaining transparency about limitations.
+:::
 
 <!-- [ ] TODO: Complete validation study with multiple annotators --> <!-- [ ] TODO: Calculate actual precision/recall metrics --> <!-- [ ] TODO: Document specific error categories and frequencies -->
 
 ### 3.11.2 Computational Performance {#sec-computational-performance}
 
-::: {.merge-candidate data-merge-with="Outline_11.7#computational-performance"} AMTAIR's computational performance was benchmarked across networks of varying size and complexity:
+::: {.merge-candidate data-merge-with="Outline_11.7#computational-performance"}
+AMTAIR's computational performance was benchmarked across networks of varying size and complexity:
 
 **Scaling Performance Characteristics**:
 
 - Small networks (≤10 nodes): <1 second end-to-end processing
 - Medium networks (11-30 nodes): 2-8 seconds total processing time
 - Large networks (31-50 nodes): 15-45 seconds total processing time
-- Very large networks (>50 nodes): Require approximate inference methods :::
+- Very large networks (>50 nodes): Require approximate inference methods
+:::
 
 ### 3.11.3 Policy Impact Evaluation {#sec-policy-impact}
 
-::: {.duplicate-content data-source="Outline_11.7#policy-impact"} The policy impact evaluation capability demonstrates how formal modeling clarifies the conditions under which specific governance interventions would be effective.
+::: {.duplicate-content data-source="Outline_11.7#policy-impact"}
+The policy impact evaluation capability demonstrates how formal modeling clarifies the conditions under which specific governance interventions would be effective.
 
 Analysis of deployment restriction policies reveals complex dependencies:
 
@@ -2248,7 +1657,8 @@ These results demonstrate both the feasibility and value of automated model extr
 ## Chapter Overview
 
 **Grade Weight**: 10% | **Target Length**: ~14% of text (~4,200 words)  
-**Requirements**: Discusses objections, provides convincing replies, extends beyond course materials :::
+**Requirements**: Discusses objections, provides convincing replies, extends beyond course materials
+:::
 
 <!-- [ ] TODO: Address each objection with rigorous counteranalysis -->
 
@@ -2256,81 +1666,10 @@ These results demonstrate both the feasibility and value of automated model extr
 
 ### 4.1.1 Objection 1: Extraction Quality Boundaries {#sec-extraction-boundaries}
 
-::: {.merge-candidate data-merge-with="Outline_11.7#extraction-boundaries"} **Critic**: "Complex implicit reasoning chains resist formalization; automated extraction will systematically miss nuanced arguments and subtle conditional relationships that human experts would identify."
+::: {.merge-candidate data-merge-with="Outline_11.7#extraction-boundaries"}
 
-
-
-# Prompt1C
-
-
-You previously began a response to prompt1: You are the most brilliant an AI assistant with maximum thinking tokens. You are tasked with analyzing and merging content for an AMTAIR MA-Thesis project. Follow these instructions carefully to complete the task: 1. Review and analyze the contents of the GitHub repository, context window, and this prompt: {{GITHUB_REPO_CONTENTS}} {{PROJECT_CONTEXT_WINDOW}} Provide a comprehensive overview of all files, explaining their structure, contents, and relevance to the AMTAIR MA-Thesis (do as much of this in reasoning space / thinking tokens as possible but key insights printed as overview). Focus on key insights and relationships between files. Present this overview in tags. 1. Conduct an extra detailed analysis of the outlines, syntax instructions, and Colab notebook: {{OUTLINE_12.2.qmd.md}} {{OUTLINE_11.7.qmd.md}} {{QUARTO_SYNTAX_INSTRUCTIONS}} {{COLAB_NOTEBOOK}} Present this detailed analysis in tags. 1. Plan the merging of the two outlines: a) Develop a strategy to combine all contents without removing ANY information. b) Find the optimal way to merge the structures while maintaining the same number of chapters/level 1 headings. c) Ensure the resulting outline is close to the combined length of both original outlines combined. d) Add contents and improvements throughout as you notice them Present your merging plan in tags. 1. Implement perfect Quarto syntax and formatting, task management and tracking and tagging and highlighting: {{QUARTO_SYNTAX_INSTRUCTIONS}} a) Fully implement the Quarto syntax task management system as described in the instructions. b) Implement and strictly adhere to the Quarto syntax tagging and highlighting system. c) Provide detailed instructions for which formatting to use when, why, and how. Write the the most detailed and rigerous, written instructions for which formatting to use when, why and how. Present your Quarto implementation plan in tags. 1. Ensure adherence to all points in the checklists: {{CHECKLISTS_IN_QUARTO_SYNTAX_INSTRUCTIONS}} Verify and confirm complete adherence to all checklist items in tags. 1. Produce the final, combined outline: Based on all the previous steps, create the perfect, combined outline that incorporates all content from both original outlines, adheres to Quarto formatting, and follows all instructions and best practices. Present this final outline in tags. Your final output has to include all of the following sections, in this order: Ensure that each section is comprehensive and addresses all aspects of the task as described in these instructions. And here is your response before it cut off: {{ }} Think throughly about this output and see if there are further improvements you can make to the previous response. If so, print only the changes (and where to insert / what to replace). Please use your complete focus to understand this situation properly and provide the best possible response. Otherwise, please continue where you left of.
-
-# Thought for 9s:
-
-The user is asking me to either:
-
-1. Make improvements to my previous response (if there are any to make)
-2. Continue where I left off
-
-Looking at my previous response, I was in the middle of creating a comprehensive analysis and merger of the two outlines. I had completed:
-
-- REPOSITORY_OVERVIEW
-- DETAILED_ANALYSIS
-- MERGING_PLAN
-- QUARTO_IMPLEMENTATION (partial)
-
-I was cut off during the QUARTO_IMPLEMENTATION section. I need to:
-
-1. Complete the QUARTO_IMPLEMENTATION section
-2. Add the CHECKLIST_ADHERENCE section
-3. Add the FINAL_COMBINED_OUTLINE section
-
-Let me continue from where I left off.
-
-
-# Response1C:
-
---------------------- Wrong Context ----------------
-
-
-# Thougght for 19s:
-
-The user is asking me to review my previous response and continue where I left off. Looking at the cut-off point, I was in the middle of Chapter 4, specifically at section 4.1.1 discussing "Objection 1: Extraction Quality Boundaries". The merge candidate tag was just starting.
-
-The task involves:
-
-1. Reviewing and analyzing the GitHub repository contents
-2. Merging two outlines (Outline_11.7.qmd.md and Outline_12.2.qmd.md)
-3. Implementing perfect Quarto syntax
-4. Following all the detailed formatting instructions
-5. Creating a comprehensive final merged outline
-
-My response was cut off in the middle of the Discussion chapter. I need to:
-
-1. Complete the current section (4.1.1)
-2. Continue through the rest of Chapter 4
-3. Complete Chapter 5 (Conclusion)
-4. Add all the appendices and references
-5. Ensure all the required sections from the original prompt are included
-
-Looking at both outlines, I need to merge content while:
-
-- Maintaining all information from both
-- Using proper Quarto syntax throughout
-- Implementing the task management system
-- Following the tagging/highlighting system
-- Adhering to all checklists
-
-Let me continue from where I left off and complete the response.
-
-
-
-# Response1D:
-
-
-
-
-
+**Critic**: "Complex implicit reasoning chains resist formalization; automated extraction will systematically miss nuanced arguments and subtle conditional relationships that human experts would identify."
+:::
 
 
 **Response**: This concern has merit—extraction does face inherent limitations. However, the empirical results tell a more nuanced story. With extraction achieving 85%+ accuracy for structural relationships and 73% for probability capture, the system performs well enough for practical use while falling short of human expert performance.
@@ -2357,6 +1696,7 @@ Furthermore, extraction errors often reveal interesting properties of the source
 First, the system explicitly represents uncertainty about uncertainty. Rather than point estimates, the framework supports probability distributions over parameters. When someone says "likely" we might model this as Beta(8,2) rather than exactly 0.8, capturing both the central estimate and our uncertainty about it.
 
 <!-- [ ] IMPLEMENT: Full probability distribution support -->
+```
 
 Technical requirements:
 
@@ -2365,6 +1705,7 @@ Technical requirements:
 - Propagation through inference
 - Visualization of uncertainty bounds
 
+```
 
 Second, all probabilities are explicitly conditional on stated assumptions. The system doesn't claim "P(catastrophe) = 0.05" absolutely, but rather "Given Carlsmith's model assumptions, P(catastrophe) = 0.05." This conditionality is preserved throughout analysis.
 
@@ -2467,6 +1808,7 @@ I tested the system with deliberately challenging inputs:
 Key vulnerabilities identified:
 
 <!-- [ ] VERIFY: Quantitative red-teaming results -->
+```
 
 Specific metrics need validation:
 
@@ -2475,7 +1817,7 @@ Specific metrics need validation:
 - Complexity degradation: performance curve analysis
 - Context loss: dependency distance metrics
 
-
+```
 
 1. **Anchoring bias**: System tends to over-weight first probability mentioned^[This reflects how LLMs inherit human cognitive biases from training data]
 2. **Authority sensitivity**: Extracted probabilities influenced by cited expert prominence
@@ -2536,6 +1878,7 @@ This explicitation serves multiple functions:
 Comparative analysis across extracted models reveals surprising patterns:
 
 <!-- [ ] TODO: Multi-Model Comparison Study -->
+```
 
 Implement comparison of 3+ models:
 
@@ -2543,6 +1886,8 @@ Implement comparison of 3+ models:
 - Parameter divergence analysis
 - Crux identification algorithms
 - Visualization of agreement patterns
+
+```
 
 **Structural convergence**: Different experts often share similar causal models even when probability estimates diverge dramatically. This suggests shared understanding of mechanisms despite disagreement on magnitudes.
 
@@ -3097,6 +2442,7 @@ This thesis contributes technical foundations and demonstrates feasibility. The 
 ## Appendix A: Technical Implementation Details {#sec-appendix-technical .unnumbered}
 
 <!-- [ ] CREATE: Complete technical documentation -->
+```
 
 Contents:
 
@@ -3105,6 +2451,8 @@ Contents:
 - Code structure and organization
 - Deployment instructions
 - Performance optimization guides
+
+```
 
 ### A.1 Core Data Structures {#sec-data-structures .unnumbered}
 
@@ -3122,6 +2470,7 @@ class BayesDownNode:
     parents: List[str] = field(default_factory=list)
     children: List[str] = field(default_factory=list)
     metadata: Dict[str, Any] = field(default_factory=dict)
+```
 
 ### A.2 Extraction Algorithm Details {#sec-extraction-details .unnumbered}
 
@@ -3134,13 +2483,15 @@ class BayesDownNode:
 ## Appendix B: Validation Datasets and Procedures {#sec-appendix-validation .unnumbered}
 
 <!-- [ ] CREATE: Validation materials -->
+
+```
 Contents:
 - Benchmark dataset descriptions
 - Annotation guidelines
 - Inter-rater reliability protocols
 - Statistical analysis procedures
 - Replication instructions
-
+```
 
 ### B.1 Expert Annotation Protocol {#sec-annotation-protocol .unnumbered}
 
@@ -3158,12 +2509,13 @@ Contents:
 
 <!-- [ ] IMPLEMENT: Additional extraction examples -->
 
-
+```
 Include:
 - Christiano's "What failure looks like"
 - Critch's ARCHES model
 - Additional policy evaluation scenarios
 - Comparative analysis across models
+```
 
 ### C.1 Christiano's "What Failure Looks Like" Extraction {#sec-christiano-extraction .unnumbered}
 
@@ -3181,12 +2533,14 @@ Include:
 
 <!-- [ ] CREATE: Complete formal specification -->
 
+```
 Contents:
 - Full syntax definition
 - Validation rules
 - Example transformations
 - Implementation notes
 - Extension possibilities
+```
 
 ## Appendix E: Prompt Engineering Details {#sec-appendix-prompts .unnumbered}
 
@@ -3272,7 +2626,3 @@ The complete implementation is available as an interactive Jupyter notebook demo
 <!-- [ ] TODO: Task management system fully implemented -->
 <!-- [ ] TODO: Quarto syntax validated -->
 <!-- [ ] TODO: Final review for consistency and completeness -->
-
-
-
-

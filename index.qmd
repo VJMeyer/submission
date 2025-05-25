@@ -505,6 +505,7 @@ markdown
 
 ### Callout Blocks
 
+! With Callout blocks it is crucial to always have a line break after the title and the `:::` in a new line after the note !
 markdown
 
 ```markdown
@@ -1634,7 +1635,7 @@ In markdown blocks or with `verbatim code` ticks:
 4. **Checklists rule every commit** – see § Rigorous Checklist.  
 5. **Footnotes galore** – default to footnotes for nuance, citations, side quests.  
 6. **Glossary, TOC, LOF, LOT, appendices, cross-refs** – keep fully synched; update on *every* save.  
-7. **One thought ≈ one line-break** – err on the side of whitespace.
+7. **One thought ≈ one line-break** – err on the side of whitespace also when formatting syntax.
 
 
 

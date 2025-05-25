@@ -1,4 +1,5 @@
 ---
+--> <!-----
 number-sections: true
 ---
 
@@ -31,8 +32,6 @@ Add a clear table distinguishing: (a) fully implemented features, (b) partially 
 Either provide supporting evidence for specific percentages (validation accuracy, bias effects, pilot study results) or reframe as estimates/illustrations. Consider adding confidence intervals or qualifying language to maintain scientific integrity while acknowledging prototype status.
 
 These changes would elevate an already strong thesis to exceptional, addressing the remaining gaps while maintaining the excellent narrative flow and intellectual contribution achieved in this revision.
-
-
 
 ## General Style
 
@@ -184,83 +183,61 @@ This chapter presents the complete computational implementation of the AMTAIR sy
 
 – pretty much determined by presentation & proposal but narrow down further (& choose supervisor?)
 
-
-
-
-
-
 ### Technical Review
 
-- [ ] All code blocks tested and working
-- [ ] Jupyter notebooks executing correctly
-- [ ] Interactive elements functioning
-- [ ] Mathematical notation rendering properly
-- [ ] All external links valid
-- [ ] File paths correct and relative
-
+-   [ ] All code blocks tested and working
+-   [ ] Jupyter notebooks executing correctly
+-   [ ] Interactive elements functioning
+-   [ ] Mathematical notation rendering properly
+-   [ ] All external links valid
+-   [ ] File paths correct and relative
 
 ### Pre-Submission Checklist
 
-- [ ] Word count within limits
-- [ ] All author information correct
-- [ ] Institutional affiliation accurate
-- [ ] Acknowledgments complete
-- [ ] Copyright/license information added
-- [ ] Declaration/affidavit signed
+-   [ ] Word count within limits
+-   [ ] All author information correct
+-   [ ] Institutional affiliation accurate
+-   [ ] Acknowledgments complete
+-   [ ] Copyright/license information added
+-   [ ] Declaration/affidavit signed
 
 ### Format-Specific Checks
 
 #### HTML Output
 
-- [ ] Navigation working correctly
-- [ ] Theme and styling consistent
-- [ ] Mobile responsive design verified
-- [ ] Search functionality working
-- [ ] All interactive elements functional
-- [ ] No JavaScript errors in console
+-   [ ] Navigation working correctly
+-   [ ] Theme and styling consistent
+-   [ ] Mobile responsive design verified
+-   [ ] Search functionality working
+-   [ ] All interactive elements functional
+-   [ ] No JavaScript errors in console
 
 #### PDF Output
 
-- [ ] Page numbering correct
-- [ ] Headers/footers properly formatted
-- [ ] Table of contents accurate
-- [ ] List of figures/tables complete
-- [ ] No overfull hboxes or layout issues
-- [ ] Fonts embedded correctly
-- [ ] Hyperlinks working (if enabled)
+-   [ ] Page numbering correct
+-   [ ] Headers/footers properly formatted
+-   [ ] Table of contents accurate
+-   [ ] List of figures/tables complete
+-   [ ] No overfull hboxes or layout issues
+-   [ ] Fonts embedded correctly
+-   [ ] Hyperlinks working (if enabled)
 
 #### LaTeX Output
 
-- [ ] Compiles without errors
-- [ ] Custom preamble applied correctly
-- [ ] Bibliography style correct
-- [ ] No undefined references
+-   [ ] Compiles without errors
+-   [ ] Custom preamble applied correctly
+-   [ ] Bibliography style correct
+-   [ ] No undefined references
 
 ### Final Quality Assurance
 
-- [ ] Spell check completed
-- [ ] Grammar check completed
-- [ ] Plagiarism check passed
-- [ ] All co-author contributions noted
-- [ ] Version control up to date
-- [ ] Backup copies created
-- [ ] Submission guidelines followed
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+-   [ ] Spell check completed
+-   [ ] Grammar check completed
+-   [ ] Plagiarism check passed
+-   [ ] All co-author contributions noted
+-   [ ] Version control up to date
+-   [ ] Backup copies created
+-   [ ] Submission guidelines followed
 
 ## Syntax for Tasks
 
