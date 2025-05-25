@@ -407,6 +407,9 @@ page 2
 #| eval: true
 #| label: fig-extraction-pipeline
 #| fig-cap: "AMTAIR extraction pipeline visualization"
+#| fig-subcap: 
+#|   - "Gentoo penguins tend to have thinner bills,"
+#|   - "and Adelie penguins tend to have shorter bills."
 #| fig-link: "https://colab.research.google.com/drive/your-notebook-id"
 #| fig-alt: "Detailed description for accessibility"
 
@@ -456,10 +459,10 @@ Full Notebooks are embedded in the Appendix through the \_quarto.yml file with:
 ### Html Graph by Notebook Cell Inclusion? - (from notebook local file)
 
 ``` markdown
-{{< embed /AMTAIR_Prototype/data/example_carlsmith/AMTAIR_Prototype_example_carlsmith.ipynb#html_graph_visualization echo=true >}}
+{{< embed /AMTAIR_Prototype/data/example_carlsmith/AMTAIR_Prototype_example_carlsmith.ipynb#file_import2 echo=true >}}
 ```
 
-{{< embed /AMTAIR_Prototype/data/example_carlsmith/AMTAIR_Prototype_example_carlsmith.ipynb#html_graph_visualization echo=true >}}
+{{< embed /AMTAIR_Prototype/data/example_carlsmith/AMTAIR_Prototype_example_carlsmith.ipynb#file_import2 echo=true >}}
 
 
 ### Html Graph by Notebook Cell Inclusion with Website Call?
@@ -468,22 +471,34 @@ label: online_model
 
 
 ``` markdown
-{{< embed /AMTAIR_Prototype/data/example_carlsmith/AMTAIR_Prototype_example_carlsmith.ipynb#online_model echo=true >}}
+{{< embed /AMTAIR_Prototype/data/example_carlsmith/AMTAIR_Prototype_example_carlsmith.ipynb#online_model  echo=true >}}
 ```
 
 {{< embed /AMTAIR_Prototype/data/example_carlsmith/AMTAIR_Prototype_example_carlsmith.ipynb#online_model echo=true >}}
 
+online_model
 
+file_import
+
+file_import2
+
+## More Tests
 ```{python}
 #| echo: true
 #| eval: true
 #| label: pull_html_graph_from_github
 #| fig-cap: "Graph Visualization for Carlsmith Model"
+#| fig-subcap: 
+#|   - "Gentoo penguins tend to have thinner bills,"
+#|   - "and Adelie penguins tend to have shorter bills."
 #| fig-link: "https://colab.research.google.com/drive/your-notebook-id"
 #| fig-alt: "Detailed description for accessibility"
 
 import pandas as pd
 print("AMTAIR is working!")
+
+
+
 ```
 
 

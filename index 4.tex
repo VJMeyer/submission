@@ -303,12 +303,12 @@
 \@ifpackageloaded{subcaption}{}{\usepackage{subcaption}}
 \makeatother
 \makeatletter
-\definecolor{QuartoInternalColor4}{rgb}{0.15,0.56,0.56}
 \definecolor{QuartoInternalColor1}{rgb}{0.70,0.17,0.19}
-\definecolor{QuartoInternalColor2}{rgb}{0,0,0}
-\definecolor{QuartoInternalColor3}{rgb}{0.00,0.45,0.15}
 \definecolor{QuartoInternalColor6}{rgb}{0.00,0.64,0.31}
+\definecolor{QuartoInternalColor3}{rgb}{0.00,0.45,0.15}
+\definecolor{QuartoInternalColor2}{rgb}{0,0,0}
 \definecolor{QuartoInternalColor5}{rgb}{0.00,0.40,0.79}
+\definecolor{QuartoInternalColor4}{rgb}{0.15,0.56,0.56}
 \makeatother
 \usepackage{bookmark}
 \IfFileExists{xurl.sty}{\usepackage{xurl}}{} % add URL line breaks if available
@@ -895,13 +895,13 @@ Quarto's native callouts work without additional packages:
 This is written in a `note' environment -- but it does not seem to
 produce any special rendering.
 
-\begin{tcolorbox}[enhanced jigsaw, colback=white, bottomrule=.15mm, rightrule=.15mm, breakable, title=\textcolor{quarto-callout-note-color}{\faInfo}\hspace{0.5em}{Optional Title}, colframe=quarto-callout-note-color-frame, coltitle=black, titlerule=0mm, toptitle=1mm, arc=.35mm, colbacktitle=quarto-callout-note-color!10!white, toprule=.15mm, bottomtitle=1mm, left=2mm, opacityback=0, opacitybacktitle=0.6, leftrule=.75mm]
+\begin{tcolorbox}[enhanced jigsaw, rightrule=.15mm, breakable, left=2mm, colbacktitle=quarto-callout-note-color!10!white, arc=.35mm, title=\textcolor{quarto-callout-note-color}{\faInfo}\hspace{0.5em}{Optional Title}, leftrule=.75mm, colback=white, toprule=.15mm, bottomtitle=1mm, toptitle=1mm, opacitybacktitle=0.6, titlerule=0mm, coltitle=black, colframe=quarto-callout-note-color-frame, opacityback=0, bottomrule=.15mm]
 
 Content here
 
 \end{tcolorbox}
 
-\begin{tcolorbox}[enhanced jigsaw, colback=white, bottomrule=.15mm, rightrule=.15mm, breakable, title=\textcolor{quarto-callout-note-color}{\faInfo}\hspace{0.5em}{Important Note2}, colframe=quarto-callout-note-color-frame, coltitle=black, titlerule=0mm, toptitle=1mm, arc=.35mm, colbacktitle=quarto-callout-note-color!10!white, toprule=.15mm, bottomtitle=1mm, left=2mm, opacityback=0, opacitybacktitle=0.6, leftrule=.75mm]
+\begin{tcolorbox}[enhanced jigsaw, rightrule=.15mm, breakable, left=2mm, colbacktitle=quarto-callout-note-color!10!white, arc=.35mm, title=\textcolor{quarto-callout-note-color}{\faInfo}\hspace{0.5em}{Important Note2}, leftrule=.75mm, colback=white, toprule=.15mm, bottomtitle=1mm, toptitle=1mm, opacitybacktitle=0.6, titlerule=0mm, coltitle=black, colframe=quarto-callout-note-color-frame, opacityback=0, bottomrule=.15mm]
 
 This renders perfectly in both HTML and PDF.
 
@@ -1349,30 +1349,66 @@ label: online\_model
 
 \begin{Shaded}
 \begin{Highlighting}[]
-\NormalTok{\{\{\textless{} embed /AMTAIR\_Prototype/data/example\_carlsmith/AMTAIR\_Prototype\_example\_carlsmith.ipynb\#online\_model  echo=true \textgreater{}\}\}}
+\NormalTok{\{\{\textless{} embed /AMTAIR\_Prototype/data/example\_carlsmith/AMTAIR\_Prototype\_example\_carlsmith.ipynb\#file\_import echo=true \textgreater{}\}\}}
 \end{Highlighting}
 \end{Shaded}
 
 \begin{Shaded}
 \begin{Highlighting}[]
-\CommentTok{\# @title 1.1.a) {-}{-}{-} MTAIR Online Model (Analytica) {-}{-}{-} [online\_model]}
+\CommentTok{\# @title 5.2 {-}{-}{-} File Import {-}{-}{-} Load Files [file\_import]}
 
-\ImportTok{from}\NormalTok{ IPython.display }\ImportTok{import}\NormalTok{ IFrame}
+\ImportTok{import}\NormalTok{ requests}
+\ImportTok{import}\NormalTok{ io}
+\ImportTok{from}\NormalTok{ IPython.display }\ImportTok{import}\NormalTok{ HTML, display}
 
-\NormalTok{IFrame(src}\OperatorTok{=}\StringTok{"https://acp.analytica.com/view0?invite=4560\&code=3000289064591444815"}\NormalTok{, width}\OperatorTok{=}\StringTok{"100\%"}\NormalTok{, height}\OperatorTok{=}\StringTok{"900px"}\NormalTok{)}
+\KeywordTok{def}\NormalTok{ load\_and\_display\_html\_from\_github(repo\_url, relative\_path):}
+    \CommentTok{"""}
+\CommentTok{    Loads an HTML file from a public GitHub repository and displays it.}
+
+\CommentTok{    Args:}
+\CommentTok{        repo\_url (str): The base URL of the GitHub repository (raw content).}
+\CommentTok{        relative\_path (str): The path to the HTML file relative to the repo\_url.}
+\CommentTok{    """}
+\NormalTok{    file\_url }\OperatorTok{=} \SpecialStringTok{f"}\SpecialCharTok{\{}\NormalTok{repo\_url}\SpecialCharTok{\}}\SpecialStringTok{/}\SpecialCharTok{\{}\NormalTok{relative\_path}\SpecialCharTok{\}}\SpecialStringTok{"}
+    \BuiltInTok{print}\NormalTok{(}\SpecialStringTok{f"Attempting to load HTML from: }\SpecialCharTok{\{}\NormalTok{file\_url}\SpecialCharTok{\}}\SpecialStringTok{"}\NormalTok{)}
+
+    \ControlFlowTok{try}\NormalTok{:}
+        \CommentTok{\# Fetch the file content from GitHub}
+\NormalTok{        response }\OperatorTok{=}\NormalTok{ requests.get(file\_url)}
+
+        \CommentTok{\# Check for successful response}
+\NormalTok{        response.raise\_for\_status()}
+
+        \CommentTok{\# Read the content}
+\NormalTok{        html\_content }\OperatorTok{=}\NormalTok{ io.StringIO(response.text).read()}
+
+        \BuiltInTok{print}\NormalTok{(}\SpecialStringTok{f"✅ Successfully loaded }\SpecialCharTok{\{}\NormalTok{relative\_path}\SpecialCharTok{\}}\SpecialStringTok{."}\NormalTok{)}
+
+        \CommentTok{\# Render the HTML content directly in the notebook}
+\NormalTok{        display(HTML(html\_content))}
+
+    \ControlFlowTok{except}\NormalTok{ requests.exceptions.RequestException }\ImportTok{as}\NormalTok{ e:}
+        \BuiltInTok{print}\NormalTok{(}\SpecialStringTok{f"❌ Error loading HTML file: }\SpecialCharTok{\{}\NormalTok{e}\SpecialCharTok{\}}\SpecialStringTok{"}\NormalTok{)}
+        \BuiltInTok{print}\NormalTok{(}\StringTok{"Please check the URL and your internet connection."}\NormalTok{)}
+    \ControlFlowTok{except} \PreprocessorTok{Exception} \ImportTok{as}\NormalTok{ e:}
+        \BuiltInTok{print}\NormalTok{(}\SpecialStringTok{f"❌ An unexpected error occurred: }\SpecialCharTok{\{}\NormalTok{e}\SpecialCharTok{\}}\SpecialStringTok{"}\NormalTok{)}
+
+\CommentTok{\# Specify the base repository URL and the relative path to the HTML file}
+\NormalTok{repo\_base\_url }\OperatorTok{=} \StringTok{"https://raw.githubusercontent.com/SingularitySmith/AMTAIR\_Prototype/main/data/example\_carlsmith"}
+\NormalTok{html\_relative\_path }\OperatorTok{=} \StringTok{"runtime\_created\_data/bayesian\_network.html"}
+
+\CommentTok{\# Load and display the HTML file}
+\NormalTok{load\_and\_display\_html\_from\_github(repo\_base\_url, html\_relative\_path)}
 \end{Highlighting}
 \end{Shaded}
 
-\phantomsection\label{online_model}
 \begin{verbatim}
-<IPython.lib.display.IFrame at 0x7b9cc9929f50>
+Attempting to load HTML from: https://raw.githubusercontent.com/SingularitySmith/AMTAIR_Prototype/main/data/example_carlsmith/runtime_created_data/bayesian_network.html
+✅ Successfully loaded runtime_created_data/bayesian_network.html.
 \end{verbatim}
 
-MTAIR Online Model (Analytica)
-
-online\_model
-
-file\_import
+\phantomsection\label{file_import}
+File Import
 
 \section*{More Tests}\label{more-tests}
 \addcontentsline{toc}{section}{More Tests}
@@ -2161,8 +2197,8 @@ Upscale Conditional Policy Assessments in Bayesian Networks on a Narrow
 Path towards Existential Safety
 \end{quote}
 
-\begin{tcolorbox}[enhanced jigsaw, colback=white, bottomrule=.15mm, rightrule=.15mm, breakable, title=\textcolor{quarto-callout-note-color}{\faInfo}\hspace{0.5em}{10\% of Grade: \textasciitilde{} 14\% of text \textasciitilde{} 4200
-words \textasciitilde{} 10 pages}, colframe=quarto-callout-note-color-frame, coltitle=black, titlerule=0mm, toptitle=1mm, arc=.35mm, colbacktitle=quarto-callout-note-color!10!white, toprule=.15mm, bottomtitle=1mm, left=2mm, opacityback=0, opacitybacktitle=0.6, leftrule=.75mm]
+\begin{tcolorbox}[enhanced jigsaw, rightrule=.15mm, breakable, left=2mm, colbacktitle=quarto-callout-note-color!10!white, arc=.35mm, title=\textcolor{quarto-callout-note-color}{\faInfo}\hspace{0.5em}{10\% of Grade: \textasciitilde{} 14\% of text \textasciitilde{} 4200
+words \textasciitilde{} 10 pages}, leftrule=.75mm, colback=white, toprule=.15mm, bottomtitle=1mm, toptitle=1mm, opacitybacktitle=0.6, titlerule=0mm, coltitle=black, colframe=quarto-callout-note-color-frame, opacityback=0, bottomrule=.15mm]
 
 \begin{itemize}
 \item
@@ -2438,8 +2474,8 @@ tools for improving coordination in AI governance.
 
 \chapter{Context \& Background}\label{sec-context}
 
-\begin{tcolorbox}[enhanced jigsaw, colback=white, bottomrule=.15mm, rightrule=.15mm, breakable, title=\textcolor{quarto-callout-note-color}{\faInfo}\hspace{0.5em}{20\% of Grade: \textasciitilde{} 29\% of text \textasciitilde{} 8700
-words \textasciitilde{} 20 pages}, colframe=quarto-callout-note-color-frame, coltitle=black, titlerule=0mm, toptitle=1mm, arc=.35mm, colbacktitle=quarto-callout-note-color!10!white, toprule=.15mm, bottomtitle=1mm, left=2mm, opacityback=0, opacitybacktitle=0.6, leftrule=.75mm]
+\begin{tcolorbox}[enhanced jigsaw, rightrule=.15mm, breakable, left=2mm, colbacktitle=quarto-callout-note-color!10!white, arc=.35mm, title=\textcolor{quarto-callout-note-color}{\faInfo}\hspace{0.5em}{20\% of Grade: \textasciitilde{} 29\% of text \textasciitilde{} 8700
+words \textasciitilde{} 20 pages}, leftrule=.75mm, colback=white, toprule=.15mm, bottomtitle=1mm, toptitle=1mm, opacitybacktitle=0.6, titlerule=0mm, coltitle=black, colframe=quarto-callout-note-color-frame, opacityback=0, bottomrule=.15mm]
 
 \begin{itemize}
 \item
@@ -3742,8 +3778,8 @@ Testing crossreferencing grapics Figure~\ref{fig-automation_pipeline}.
 
 \chapter{AMTAIR}\label{amtair}
 
-\begin{tcolorbox}[enhanced jigsaw, colback=white, bottomrule=.15mm, rightrule=.15mm, breakable, title=\textcolor{quarto-callout-note-color}{\faInfo}\hspace{0.5em}{20\% of Grade: \textasciitilde{} 29\% of text \textasciitilde{} 8700
-words \textasciitilde{} 20 pages}, colframe=quarto-callout-note-color-frame, coltitle=black, titlerule=0mm, toptitle=1mm, arc=.35mm, colbacktitle=quarto-callout-note-color!10!white, toprule=.15mm, bottomtitle=1mm, left=2mm, opacityback=0, opacitybacktitle=0.6, leftrule=.75mm]
+\begin{tcolorbox}[enhanced jigsaw, rightrule=.15mm, breakable, left=2mm, colbacktitle=quarto-callout-note-color!10!white, arc=.35mm, title=\textcolor{quarto-callout-note-color}{\faInfo}\hspace{0.5em}{20\% of Grade: \textasciitilde{} 29\% of text \textasciitilde{} 8700
+words \textasciitilde{} 20 pages}, leftrule=.75mm, colback=white, toprule=.15mm, bottomtitle=1mm, toptitle=1mm, opacitybacktitle=0.6, titlerule=0mm, coltitle=black, colframe=quarto-callout-note-color-frame, opacityback=0, bottomrule=.15mm]
 
 \begin{itemize}
 \item
@@ -5056,8 +5092,8 @@ Sensitivity analysis revealed:
 
 \chapter{Discussion}\label{discussion}
 
-\begin{tcolorbox}[enhanced jigsaw, colback=white, bottomrule=.15mm, rightrule=.15mm, breakable, title=\textcolor{quarto-callout-note-color}{\faInfo}\hspace{0.5em}{10\% of Grade: \textasciitilde{} 14\% of text \textasciitilde{} 4200
-words \textasciitilde{} 10 pages}, colframe=quarto-callout-note-color-frame, coltitle=black, titlerule=0mm, toptitle=1mm, arc=.35mm, colbacktitle=quarto-callout-note-color!10!white, toprule=.15mm, bottomtitle=1mm, left=2mm, opacityback=0, opacitybacktitle=0.6, leftrule=.75mm]
+\begin{tcolorbox}[enhanced jigsaw, rightrule=.15mm, breakable, left=2mm, colbacktitle=quarto-callout-note-color!10!white, arc=.35mm, title=\textcolor{quarto-callout-note-color}{\faInfo}\hspace{0.5em}{10\% of Grade: \textasciitilde{} 14\% of text \textasciitilde{} 4200
+words \textasciitilde{} 10 pages}, leftrule=.75mm, colback=white, toprule=.15mm, bottomtitle=1mm, toptitle=1mm, opacitybacktitle=0.6, titlerule=0mm, coltitle=black, colframe=quarto-callout-note-color-frame, opacityback=0, bottomrule=.15mm]
 
 \begin{itemize}
 \item
@@ -6151,8 +6187,8 @@ modeling
 
 \chapter{Conclusion}\label{conclusion}
 
-\begin{tcolorbox}[enhanced jigsaw, colback=white, bottomrule=.15mm, rightrule=.15mm, breakable, title=\textcolor{quarto-callout-note-color}{\faInfo}\hspace{0.5em}{10\% of Grade: \textasciitilde{} 14\% of text \textasciitilde{} 4200
-words \textasciitilde{} 10 pages}, colframe=quarto-callout-note-color-frame, coltitle=black, titlerule=0mm, toptitle=1mm, arc=.35mm, colbacktitle=quarto-callout-note-color!10!white, toprule=.15mm, bottomtitle=1mm, left=2mm, opacityback=0, opacitybacktitle=0.6, leftrule=.75mm]
+\begin{tcolorbox}[enhanced jigsaw, rightrule=.15mm, breakable, left=2mm, colbacktitle=quarto-callout-note-color!10!white, arc=.35mm, title=\textcolor{quarto-callout-note-color}{\faInfo}\hspace{0.5em}{10\% of Grade: \textasciitilde{} 14\% of text \textasciitilde{} 4200
+words \textasciitilde{} 10 pages}, leftrule=.75mm, colback=white, toprule=.15mm, bottomtitle=1mm, toptitle=1mm, opacitybacktitle=0.6, titlerule=0mm, coltitle=black, colframe=quarto-callout-note-color-frame, opacityback=0, bottomrule=.15mm]
 
 \begin{itemize}
 \item
