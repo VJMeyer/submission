@@ -321,6 +321,16 @@ To ground our discussion in concrete terms, I examine Joseph Carlsmith's "Is Pow
 
 <!-- [ ] VERIFY: @carlsmith2022: "Carlsmith, J. (2022). Is Power-Seeking AI an Existential Risk?" -->
 
+<!-- [ ] Explain - as a footnote somewhere in this section - that there are multiple versions of the Carlsmith paper: @carlsmith2024 , @carlsmith2021 , @carlsmith2022 @carlsmith2023 
+
+    - The versions come with slight updates and changes in the probability estimates
+    - We refer mainly to the version used by the original MTAIR team for their extraction
+    - Mention that there is also an extended discussion of the paper and the probabilities involved on LessWrong (including important methodological contributions w.r.t. )
+    - Explain that it contains data from experts who estimated probabilites
+-->
+
+
+
 ### 2.1.1 Six-Premise Decomposition {#sec-six-premise}
 
 ::: {.duplicate-content data-source="Outline_11.7#six-premise"} 
