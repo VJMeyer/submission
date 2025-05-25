@@ -163,13 +163,16 @@ quarto render
 
 ### Task Management
 
-markdown
+Write and track tasks with HTML comments in markdown blocks or with `verbatim code` ticks but ALWAYS add linke breaks between tasks:
 
 ```markdown
-<!-- [ ] TODO: Task description -->
-<!-- [ ] FIND: @missing-citation: "Description" -->
-<!-- [ ] VERIFY: @suggested-citation: "Source" -->
-<!-- [ ] CREATE: {#fig-name}: "Figure description" -->
+`<!-- [ ] TODO: Task description -->`
+
+`<!-- [ ] FIND: @missing-citation: "Description" -->`
+
+`<!-- [ ] VERIFY: @suggested-citation: "Source" -->`
+
+`<!-- [ ] CREATE: {#fig-name}: "Figure description" -->`
 ```
 
 ### Adding Content
@@ -907,7 +910,10 @@ In markdown blocks or with `verbatim code` ticks:
 
 ```markdown
 <!-- [ ] TODO: General task description -->
+
 <!-- [ ] TODO: High-priority task with deadline (2024-12-31) -->
+
+
 <!-- [ ] TODO: Task with subtasks
         - [ ] Subtask 1
         - [ ] Subtask 2
@@ -920,9 +926,13 @@ In markdown blocks or with `verbatim code` ticks:
 In markdown blocks or with `verbatim code` ticks:
 
 ```markdown
-<!-- [ ] FIND: @missing-citation-key: "Description of needed source, keywords, search terms" -->
-<!-- [ ] VERIFY: @suggested-citation: "Author (Year). Title. Journal." [Include BibTeX if available] -->
-<!-- [ ] UPDATE: @outdated-citation: "Check for newer edition or updated data" -->
+`<!-- [ ] FIND: @missing-citation-key: "Description of needed source, keywords, search terms" -->`
+
+`<!-- [ ] VERIFY: @suggested-citation: "Author (Year). Title. Journal." [Include BibTeX if available] -->`
+
+`<!-- [ ] UPDATE: @outdated-citation: "Check for newer edition or updated data" -->`
+
+`<!-- [ ] VERIFIED: @citation: "URL" -->`
 ```
 
 ### 3. Figure/Graphic Tasks
@@ -931,8 +941,11 @@ In markdown blocks or with `verbatim code` ticks:
 
 ```markdown
 <!-- [ ] CREATE: {#fig-diagram-name}: "Description of needed diagram, style, data to include" -->
+
 <!-- [ ] FIND: {#fig-example-image}: "Stock photo of X, preferably showing Y" -->
+
 <!-- [ ] UPDATE: {#fig-outdated-chart}: "Update with 2024 data" -->
+
 <!-- [ ] IMPROVE: {#fig-low-quality}: "Higher resolution version needed" -->
 ```
 
@@ -942,8 +955,11 @@ In markdown blocks or with `verbatim code` ticks:
 
 ```markdown
 <!-- [ ] WRITE: Section 3.2 - Methodology details -->
+
 <!-- [ ] EXPAND: Background section needs 500 more words -->
+
 <!-- [ ] REVISE: Introduction for clarity and flow -->
+
 <!-- [ ] REVIEW: Chapter 4 for consistency -->
 ```
 
@@ -953,8 +969,11 @@ In markdown blocks or with `verbatim code` ticks:
 
 ```markdown
 <!-- [ ] FIX: Code block in section 2.3 has syntax error -->
+
 <!-- [ ] TEST: Jupyter notebook embedding -->
+
 <!-- [ ] OPTIMIZE: Large figure file sizes -->
+
 <!-- [ ] IMPLEMENT: Cross-reference checking script -->
 ```
 
@@ -1060,9 +1079,13 @@ In markdown blocks or with `verbatim code` ticks:
 
 ```markdown
 <!-- [ ] URGENT: Task needing immediate attention -->
+
 <!-- [ ] HIGH: Task important for next milestone -->
+
 <!-- [ ] MEDIUM: Standard priority task -->
+
 <!-- [ ] LOW: Nice-to-have improvement -->
+
 ```
 
 ```markdown
@@ -1160,33 +1183,6 @@ In markdown blocks or with `verbatim code` ticks:
 -->
 ```
 
-## Reporting and Analytics
-
-### Task Summary Template
-
-In markdown blocks or with `verbatim code` ticks:
-
-```markdown
-<!-- TASK SUMMARY: Chapter 3
-  Total tasks: 45
-  Completed: 32 (71%)
-  In progress: 8 (18%)
-  Open: 5 (11%)
-  
-  By category:
-  - WRITE: 15 tasks (10 complete)
-  - FIND: 12 tasks (8 complete)
-  - VERIFY: 8 tasks (7 complete)
-  - CREATE: 10 tasks (7 complete)
-  
-  Critical path:
-  1. Complete methodology section
-  2. Verify statistical analysis
-  3. Create results visualizations
--->
-```
-
-
 
 
 ## Best Practices Summary --- ALWAYS CONSISTENTLY:
@@ -1199,6 +1195,7 @@ In markdown blocks or with `verbatim code` ticks:
 6. **Link Related**: Connect interdependent tasks
 7. **Maintain Consistency**: Use standard formatting throughout
 8. **Use correct formatting**: Deploy the correct formatting and fix any inconsistencies
+9. **Always add extra line breaks**: Add additional line breaks between and around tasks
 
 
 

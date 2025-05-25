@@ -50,7 +50,8 @@ I hope this work contributes to building the intellectual and technical infrastr
 
 ## Acknowledgments {.unnumbered}
 
-<!-- [ ] TODO: Add specific names and contributions --> <!-- [ ] VERIFY: Funding sources and institutional support -->
+<!-- [ ] TODO: Add specific names and contributions --> 
+<!-- [ ] VERIFY: Funding sources and institutional support -->
 
 I thank my supervisor Dr. Timo Speith for guidance throughout this project, the MTAIR team for pioneering the manual approach that inspired automation, and the AI safety community for creating the rich literature that made this work possible. Special recognition goes to technical advisors who provided implementation feedback and domain experts who validated extraction results.
 
@@ -1631,7 +1632,8 @@ deployment_policy_effects = {
 
 :::
 
-<!-- [ ] TODO: Complete policy evaluation for "A Narrow Path" --> <!-- [ ] TODO: Complete evaluation for SB 1047 provisions -->
+<!-- [ ] TODO: Complete policy evaluation for "A Narrow Path" --> 
+<!-- [ ] TODO: Complete evaluation for SB 1047 provisions -->
 
 ## 3.12 Summary of Technical Contributions {#sec-technical-summary}
 

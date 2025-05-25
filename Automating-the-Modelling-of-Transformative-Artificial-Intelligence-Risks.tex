@@ -300,12 +300,12 @@
 \@ifpackageloaded{subcaption}{}{\usepackage{subcaption}}
 \makeatother
 \makeatletter
+\definecolor{QuartoInternalColor2}{rgb}{0,0,0}
+\definecolor{QuartoInternalColor3}{rgb}{0.00,0.45,0.15}
+\definecolor{QuartoInternalColor5}{rgb}{0.00,0.40,0.79}
+\definecolor{QuartoInternalColor6}{rgb}{0.00,0.64,0.31}
 \definecolor{QuartoInternalColor1}{rgb}{0.70,0.17,0.19}
 \definecolor{QuartoInternalColor4}{rgb}{0.15,0.56,0.56}
-\definecolor{QuartoInternalColor6}{rgb}{0.00,0.64,0.31}
-\definecolor{QuartoInternalColor5}{rgb}{0.00,0.40,0.79}
-\definecolor{QuartoInternalColor3}{rgb}{0.00,0.45,0.15}
-\definecolor{QuartoInternalColor2}{rgb}{0,0,0}
 \makeatother
 \usepackage{bookmark}
 \IfFileExists{xurl.sty}{\usepackage{xurl}}{} % add URL line breaks if available
@@ -710,14 +710,18 @@ bash
 \subsection*{Task Management}\label{task-management}
 \addcontentsline{toc}{subsection}{Task Management}
 
-markdown
+Write and track tasks with HTML comments in markdown blocks or with
+\texttt{verbatim\ code} ticks but ALWAYS add linke breaks between tasks:
 
 \begin{Shaded}
 \begin{Highlighting}[]
-\CommentTok{\textless{}!{-}{-} [ ] }\AlertTok{TODO}\CommentTok{: Task description {-}{-}\textgreater{}}
-\CommentTok{\textless{}!{-}{-} [ ] FIND: @missing{-}citation: "Description" {-}{-}\textgreater{}}
-\CommentTok{\textless{}!{-}{-} [ ] VERIFY: @suggested{-}citation: "Source" {-}{-}\textgreater{}}
-\CommentTok{\textless{}!{-}{-} [ ] CREATE: \{\#fig{-}name\}: "Figure description" {-}{-}\textgreater{}}
+\InformationTok{\textasciigrave{}\textless{}!{-}{-} [ ] TODO: Task description {-}{-}\textgreater{}\textasciigrave{}}
+
+\InformationTok{\textasciigrave{}\textless{}!{-}{-} [ ] FIND: @missing{-}citation: "Description" {-}{-}\textgreater{}\textasciigrave{}}
+
+\InformationTok{\textasciigrave{}\textless{}!{-}{-} [ ] VERIFY: @suggested{-}citation: "Source" {-}{-}\textgreater{}\textasciigrave{}}
+
+\InformationTok{\textasciigrave{}\textless{}!{-}{-} [ ] CREATE: \{\#fig{-}name\}: "Figure description" {-}{-}\textgreater{}\textasciigrave{}}
 \end{Highlighting}
 \end{Shaded}
 
@@ -1328,7 +1332,7 @@ Rendering}
 
 \phantomsection\label{rain_sprinkler_grass_example_network_rendering}
 \begin{verbatim}
-<IPython.lib.display.IFrame at 0x110a65710>
+<IPython.lib.display.IFrame at 0x104b65910>
 \end{verbatim}
 
 Dynamic Html Rendering of the Rain-Sprinkler-Grass DAG
@@ -2037,7 +2041,10 @@ In markdown blocks or with \texttt{verbatim\ code} ticks:
 \begin{Shaded}
 \begin{Highlighting}[]
 \CommentTok{\textless{}!{-}{-} [ ] }\AlertTok{TODO}\CommentTok{: General task description {-}{-}\textgreater{}}
+
 \CommentTok{\textless{}!{-}{-} [ ] }\AlertTok{TODO}\CommentTok{: High{-}priority task with deadline (2024{-}12{-}31) {-}{-}\textgreater{}}
+
+
 \CommentTok{\textless{}!{-}{-} [ ] }\AlertTok{TODO}\CommentTok{: Task with subtasks}
 \CommentTok{        {-} [ ] Subtask 1}
 \CommentTok{        {-} [ ] Subtask 2}
@@ -2053,9 +2060,13 @@ In markdown blocks or with \texttt{verbatim\ code} ticks:
 
 \begin{Shaded}
 \begin{Highlighting}[]
-\CommentTok{\textless{}!{-}{-} [ ] FIND: @missing{-}citation{-}key: "Description of needed source, keywords, search terms" {-}{-}\textgreater{}}
-\CommentTok{\textless{}!{-}{-} [ ] VERIFY: @suggested{-}citation: "Author (Year). Title. Journal." [Include BibTeX if available] {-}{-}\textgreater{}}
-\CommentTok{\textless{}!{-}{-} [ ] UPDATE: @outdated{-}citation: "Check for newer edition or updated data" {-}{-}\textgreater{}}
+\InformationTok{\textasciigrave{}\textless{}!{-}{-} [ ] FIND: @missing{-}citation{-}key: "Description of needed source, keywords, search terms" {-}{-}\textgreater{}\textasciigrave{}}
+
+\InformationTok{\textasciigrave{}\textless{}!{-}{-} [ ] VERIFY: @suggested{-}citation: "Author (Year). Title. Journal." [Include BibTeX if available] {-}{-}\textgreater{}\textasciigrave{}}
+
+\InformationTok{\textasciigrave{}\textless{}!{-}{-} [ ] UPDATE: @outdated{-}citation: "Check for newer edition or updated data" {-}{-}\textgreater{}\textasciigrave{}}
+
+\InformationTok{\textasciigrave{}\textless{}!{-}{-} [ ] VERIFIED: @citation: "URL" {-}{-}\textgreater{}\textasciigrave{}}
 \end{Highlighting}
 \end{Shaded}
 
@@ -2067,8 +2078,11 @@ In markdown blocks or with \texttt{verbatim\ code} ticks:
 \begin{Shaded}
 \begin{Highlighting}[]
 \CommentTok{\textless{}!{-}{-} [ ] CREATE: \{\#fig{-}diagram{-}name\}: "Description of needed diagram, style, data to include" {-}{-}\textgreater{}}
+
 \CommentTok{\textless{}!{-}{-} [ ] FIND: \{\#fig{-}example{-}image\}: "Stock photo of X, preferably showing Y" {-}{-}\textgreater{}}
+
 \CommentTok{\textless{}!{-}{-} [ ] UPDATE: \{\#fig{-}outdated{-}chart\}: "Update with 2024 data" {-}{-}\textgreater{}}
+
 \CommentTok{\textless{}!{-}{-} [ ] IMPROVE: \{\#fig{-}low{-}quality\}: "Higher resolution version needed" {-}{-}\textgreater{}}
 \end{Highlighting}
 \end{Shaded}
@@ -2081,8 +2095,11 @@ In markdown blocks or with \texttt{verbatim\ code} ticks:
 \begin{Shaded}
 \begin{Highlighting}[]
 \CommentTok{\textless{}!{-}{-} [ ] WRITE: Section 3.2 {-} Methodology details {-}{-}\textgreater{}}
+
 \CommentTok{\textless{}!{-}{-} [ ] EXPAND: Background section needs 500 more words {-}{-}\textgreater{}}
+
 \CommentTok{\textless{}!{-}{-} [ ] REVISE: Introduction for clarity and flow {-}{-}\textgreater{}}
+
 \CommentTok{\textless{}!{-}{-} [ ] REVIEW: Chapter 4 for consistency {-}{-}\textgreater{}}
 \end{Highlighting}
 \end{Shaded}
@@ -2095,8 +2112,11 @@ In markdown blocks or with \texttt{verbatim\ code} ticks:
 \begin{Shaded}
 \begin{Highlighting}[]
 \CommentTok{\textless{}!{-}{-} [ ] FIX: Code block in section 2.3 has syntax error {-}{-}\textgreater{}}
+
 \CommentTok{\textless{}!{-}{-} [ ] }\AlertTok{TEST}\CommentTok{: Jupyter notebook embedding {-}{-}\textgreater{}}
+
 \CommentTok{\textless{}!{-}{-} [ ] OPTIMIZE: Large figure file sizes {-}{-}\textgreater{}}
+
 \CommentTok{\textless{}!{-}{-} [ ] IMPLEMENT: Cross{-}reference checking script {-}{-}\textgreater{}}
 \end{Highlighting}
 \end{Shaded}
@@ -2255,8 +2275,11 @@ In markdown blocks or with \texttt{verbatim\ code} ticks:
 \begin{Shaded}
 \begin{Highlighting}[]
 \CommentTok{\textless{}!{-}{-} [ ] URGENT: Task needing immediate attention {-}{-}\textgreater{}}
+
 \CommentTok{\textless{}!{-}{-} [ ] HIGH: Task important for next milestone {-}{-}\textgreater{}}
+
 \CommentTok{\textless{}!{-}{-} [ ] MEDIUM: Standard priority task {-}{-}\textgreater{}}
+
 \CommentTok{\textless{}!{-}{-} [ ] LOW: Nice{-}to{-}have improvement {-}{-}\textgreater{}}
 \end{Highlighting}
 \end{Shaded}
@@ -2371,38 +2394,6 @@ In markdown blocks or with \texttt{verbatim\ code} ticks:
 \end{Highlighting}
 \end{Shaded}
 
-\section*{Reporting and Analytics}\label{reporting-and-analytics}
-\addcontentsline{toc}{section}{Reporting and Analytics}
-
-\markright{Reporting and Analytics}
-
-\subsection*{Task Summary Template}\label{task-summary-template}
-\addcontentsline{toc}{subsection}{Task Summary Template}
-
-In markdown blocks or with \texttt{verbatim\ code} ticks:
-
-\begin{Shaded}
-\begin{Highlighting}[]
-\CommentTok{\textless{}!{-}{-} }\AlertTok{TASK}\CommentTok{ SUMMARY: Chapter 3}
-\CommentTok{  Total tasks: 45}
-\CommentTok{  Completed: 32 (71\%)}
-\CommentTok{  In progress: 8 (18\%)}
-\CommentTok{  Open: 5 (11\%)}
-\CommentTok{  }
-\CommentTok{  By category:}
-\CommentTok{  {-} WRITE: 15 tasks (10 complete)}
-\CommentTok{  {-} FIND: 12 tasks (8 complete)}
-\CommentTok{  {-} VERIFY: 8 tasks (7 complete)}
-\CommentTok{  {-} CREATE: 10 tasks (7 complete)}
-\CommentTok{  }
-\CommentTok{  Critical path:}
-\CommentTok{  1. Complete methodology section}
-\CommentTok{  2. Verify statistical analysis}
-\CommentTok{  3. Create results visualizations}
-\CommentTok{{-}{-}\textgreater{}}
-\end{Highlighting}
-\end{Shaded}
-
 \section*{Best Practices Summary --- ALWAYS
 CONSISTENTLY:}\label{best-practices-summary-always-consistently}
 \addcontentsline{toc}{section}{Best Practices Summary --- ALWAYS
@@ -2430,6 +2421,9 @@ CONSISTENTLY:}
 \item
   \textbf{Use correct formatting}: Deploy the correct formatting and fix
   any inconsistencies
+\item
+  \textbf{Always add extra line breaks}: Add additional line breaks
+  between and around tasks
 \end{enumerate}
 
 \bookmarksetup{startatroot}
@@ -3113,8 +3107,8 @@ References}\label{citations-and-references-1}
   \textbf{Glossary, TOC, LOF, LOT, appendices, cross-refs} -- keep fully
   synched; update on \emph{every} save.\\
 \item
-  \textbf{One thought ≈ one line-break} -- err on the side of
-  whitespace.
+  \textbf{One thought ≈ one line-break} -- err on the side of whitespace
+  also when formatting syntax.
 \end{enumerate}
 
 \section*{Quarto Syntax Cheat-Sheet ↔
@@ -3359,7 +3353,7 @@ in AI Governance}
 \markboth{1. Introduction: The Coordination Crisis in AI Governance}{1.
 Introduction: The Coordination Crisis in AI Governance}
 
-\begin{tcolorbox}[enhanced jigsaw, arc=.35mm, coltitle=black, left=2mm, toptitle=1mm, toprule=.15mm, bottomtitle=1mm, opacitybacktitle=0.6, colframe=quarto-callout-note-color-frame, breakable, leftrule=.75mm, rightrule=.15mm, titlerule=0mm, title=\textcolor{quarto-callout-note-color}{\faInfo}\hspace{0.5em}{Chapter Overview}, colbacktitle=quarto-callout-note-color!10!white, bottomrule=.15mm, opacityback=0, colback=white]
+\begin{tcolorbox}[enhanced jigsaw, toptitle=1mm, bottomrule=.15mm, rightrule=.15mm, coltitle=black, colbacktitle=quarto-callout-note-color!10!white, breakable, title=\textcolor{quarto-callout-note-color}{\faInfo}\hspace{0.5em}{Chapter Overview}, toprule=.15mm, bottomtitle=1mm, leftrule=.75mm, colback=white, arc=.35mm, opacitybacktitle=0.6, titlerule=0mm, colframe=quarto-callout-note-color-frame, left=2mm, opacityback=0]
 
 \textbf{Grade Weight}: 10\% \textbar{} \textbf{Target Length}:
 \textasciitilde14\% of text (\textasciitilde4,200 words)\\
@@ -3778,7 +3772,7 @@ under deep uncertainty.
 \markboth{2. Context and Theoretical Foundations}{2. Context and
 Theoretical Foundations}
 
-\begin{tcolorbox}[enhanced jigsaw, arc=.35mm, coltitle=black, left=2mm, toptitle=1mm, toprule=.15mm, bottomtitle=1mm, opacitybacktitle=0.6, colframe=quarto-callout-note-color-frame, breakable, leftrule=.75mm, rightrule=.15mm, titlerule=0mm, title=\textcolor{quarto-callout-note-color}{\faInfo}\hspace{0.5em}{Chapter Overview}, colbacktitle=quarto-callout-note-color!10!white, bottomrule=.15mm, opacityback=0, colback=white]
+\begin{tcolorbox}[enhanced jigsaw, toptitle=1mm, bottomrule=.15mm, rightrule=.15mm, coltitle=black, colbacktitle=quarto-callout-note-color!10!white, breakable, title=\textcolor{quarto-callout-note-color}{\faInfo}\hspace{0.5em}{Chapter Overview}, toprule=.15mm, bottomtitle=1mm, leftrule=.75mm, colback=white, arc=.35mm, opacitybacktitle=0.6, titlerule=0mm, colframe=quarto-callout-note-color-frame, left=2mm, opacityback=0]
 
 \textbf{Grade Weight}: 20\% \textbar{} \textbf{Target Length}:
 \textasciitilde29\% of text (\textasciitilde8,700 words)\\
@@ -4022,7 +4016,7 @@ urgent need for new epistemic tools. These tools must:
   policy options
 \end{itemize}
 
-\begin{tcolorbox}[enhanced jigsaw, arc=.35mm, coltitle=black, left=2mm, toptitle=1mm, toprule=.15mm, bottomtitle=1mm, opacitybacktitle=0.6, colframe=quarto-callout-tip-color-frame, breakable, leftrule=.75mm, rightrule=.15mm, titlerule=0mm, title=\textcolor{quarto-callout-tip-color}{\faLightbulb}\hspace{0.5em}{Key Insight}, colbacktitle=quarto-callout-tip-color!10!white, bottomrule=.15mm, opacityback=0, colback=white]
+\begin{tcolorbox}[enhanced jigsaw, toptitle=1mm, bottomrule=.15mm, rightrule=.15mm, coltitle=black, colbacktitle=quarto-callout-tip-color!10!white, breakable, title=\textcolor{quarto-callout-tip-color}{\faLightbulb}\hspace{0.5em}{Key Insight}, toprule=.15mm, bottomtitle=1mm, leftrule=.75mm, colback=white, arc=.35mm, opacitybacktitle=0.6, titlerule=0mm, colframe=quarto-callout-tip-color-frame, left=2mm, opacityback=0]
 
 The computational approaches developed in this thesis---particularly
 Bayesian networks enhanced with automated extraction---directly address
@@ -4403,7 +4397,7 @@ both structure and quantification. Early models focused on simple binary
 outcomes, while recent work incorporates complex causal chains and
 continuous variables.
 
-\begin{tcolorbox}[enhanced jigsaw, arc=.35mm, coltitle=black, left=2mm, toptitle=1mm, toprule=.15mm, bottomtitle=1mm, opacitybacktitle=0.6, colframe=quarto-callout-note-color-frame, breakable, leftrule=.75mm, rightrule=.15mm, titlerule=0mm, title=\textcolor{quarto-callout-note-color}{\faInfo}\hspace{0.5em}{Key Developments}, colbacktitle=quarto-callout-note-color!10!white, bottomrule=.15mm, opacityback=0, colback=white]
+\begin{tcolorbox}[enhanced jigsaw, toptitle=1mm, bottomrule=.15mm, rightrule=.15mm, coltitle=black, colbacktitle=quarto-callout-note-color!10!white, breakable, title=\textcolor{quarto-callout-note-color}{\faInfo}\hspace{0.5em}{Key Developments}, toprule=.15mm, bottomtitle=1mm, leftrule=.75mm, colback=white, arc=.35mm, opacitybacktitle=0.6, titlerule=0mm, colframe=quarto-callout-note-color-frame, left=2mm, opacityback=0]
 
 \begin{itemize}
 \tightlist
@@ -4613,7 +4607,7 @@ Models}\label{sec-natural-to-computational}
 \addcontentsline{toc}{subsection}{2.7.3 From Natural Language to
 Computational Models}
 
-\begin{tcolorbox}[enhanced jigsaw, arc=.35mm, coltitle=black, left=2mm, toptitle=1mm, toprule=.15mm, bottomtitle=1mm, opacitybacktitle=0.6, colframe=quarto-callout-tip-color-frame, breakable, leftrule=.75mm, rightrule=.15mm, titlerule=0mm, title=\textcolor{quarto-callout-tip-color}{\faLightbulb}\hspace{0.5em}{The Two-Stage Extraction Process}, colbacktitle=quarto-callout-tip-color!10!white, bottomrule=.15mm, opacityback=0, colback=white]
+\begin{tcolorbox}[enhanced jigsaw, toptitle=1mm, bottomrule=.15mm, rightrule=.15mm, coltitle=black, colbacktitle=quarto-callout-tip-color!10!white, breakable, title=\textcolor{quarto-callout-tip-color}{\faLightbulb}\hspace{0.5em}{The Two-Stage Extraction Process}, toprule=.15mm, bottomtitle=1mm, leftrule=.75mm, colback=white, arc=.35mm, opacitybacktitle=0.6, titlerule=0mm, colframe=quarto-callout-tip-color-frame, left=2mm, opacityback=0]
 
 AMTAIR employs a novel two-stage process that separates structural
 argument extraction from probability quantification, enabling modular
@@ -4867,7 +4861,7 @@ models from AI safety literature.
 \markboth{3. AMTAIR: Design and Implementation}{3. AMTAIR: Design and
 Implementation}
 
-\begin{tcolorbox}[enhanced jigsaw, arc=.35mm, coltitle=black, left=2mm, toptitle=1mm, toprule=.15mm, bottomtitle=1mm, opacitybacktitle=0.6, colframe=quarto-callout-note-color-frame, breakable, leftrule=.75mm, rightrule=.15mm, titlerule=0mm, title=\textcolor{quarto-callout-note-color}{\faInfo}\hspace{0.5em}{Chapter Overview}, colbacktitle=quarto-callout-note-color!10!white, bottomrule=.15mm, opacityback=0, colback=white]
+\begin{tcolorbox}[enhanced jigsaw, toptitle=1mm, bottomrule=.15mm, rightrule=.15mm, coltitle=black, colbacktitle=quarto-callout-note-color!10!white, breakable, title=\textcolor{quarto-callout-note-color}{\faInfo}\hspace{0.5em}{Chapter Overview}, toprule=.15mm, bottomtitle=1mm, leftrule=.75mm, colback=white, arc=.35mm, opacitybacktitle=0.6, titlerule=0mm, colframe=quarto-callout-note-color-frame, left=2mm, opacityback=0]
 
 \textbf{Grade Weight}: 20\% \textbar{} \textbf{Target Length}:
 \textasciitilde29\% of text (\textasciitilde8,700 words)\\
@@ -4981,7 +4975,7 @@ propagation:
 \subsection*{3.1.2 Design Principles}\label{sec-design-principles}
 \addcontentsline{toc}{subsection}{3.1.2 Design Principles}
 
-\begin{tcolorbox}[enhanced jigsaw, arc=.35mm, coltitle=black, left=2mm, toptitle=1mm, toprule=.15mm, bottomtitle=1mm, opacitybacktitle=0.6, colframe=quarto-callout-tip-color-frame, breakable, leftrule=.75mm, rightrule=.15mm, titlerule=0mm, title=\textcolor{quarto-callout-tip-color}{\faLightbulb}\hspace{0.5em}{Core Design Philosophy}, colbacktitle=quarto-callout-tip-color!10!white, bottomrule=.15mm, opacityback=0, colback=white]
+\begin{tcolorbox}[enhanced jigsaw, toptitle=1mm, bottomrule=.15mm, rightrule=.15mm, coltitle=black, colbacktitle=quarto-callout-tip-color!10!white, breakable, title=\textcolor{quarto-callout-tip-color}{\faLightbulb}\hspace{0.5em}{Core Design Philosophy}, toprule=.15mm, bottomtitle=1mm, leftrule=.75mm, colback=white, arc=.35mm, opacitybacktitle=0.6, titlerule=0mm, colframe=quarto-callout-tip-color-frame, left=2mm, opacityback=0]
 
 The system emphasizes scalability through modular architecture, standard
 interfaces for interoperability, validation checkpoints for quality
@@ -5269,7 +5263,7 @@ The system processes this input through five steps:
 \subsection*{3.4.3 Results}\label{sec-rsg-results}
 \addcontentsline{toc}{subsection}{3.4.3 Results}
 
-\begin{tcolorbox}[enhanced jigsaw, arc=.35mm, coltitle=black, left=2mm, toptitle=1mm, toprule=.15mm, bottomtitle=1mm, opacitybacktitle=0.6, colframe=quarto-callout-tip-color-frame, breakable, leftrule=.75mm, rightrule=.15mm, titlerule=0mm, title=\textcolor{quarto-callout-tip-color}{\faLightbulb}\hspace{0.5em}{Validation Success}, colbacktitle=quarto-callout-tip-color!10!white, bottomrule=.15mm, opacityback=0, colback=white]
+\begin{tcolorbox}[enhanced jigsaw, toptitle=1mm, bottomrule=.15mm, rightrule=.15mm, coltitle=black, colbacktitle=quarto-callout-tip-color!10!white, breakable, title=\textcolor{quarto-callout-tip-color}{\faLightbulb}\hspace{0.5em}{Validation Success}, toprule=.15mm, bottomtitle=1mm, leftrule=.75mm, colback=white, arc=.35mm, opacitybacktitle=0.6, titlerule=0mm, colframe=quarto-callout-tip-color-frame, left=2mm, opacityback=0]
 
 The system successfully extracts complete network structure, preserves
 all probability information, calculates correct marginal probabilities,
@@ -5404,7 +5398,7 @@ across multiple dimensions.
 \subsection*{3.6.1 Ground Truth Construction}\label{sec-ground-truth}
 \addcontentsline{toc}{subsection}{3.6.1 Ground Truth Construction}
 
-\begin{tcolorbox}[enhanced jigsaw, arc=.35mm, coltitle=black, left=2mm, toptitle=1mm, toprule=.15mm, bottomtitle=1mm, opacitybacktitle=0.6, colframe=quarto-callout-note-color-frame, breakable, leftrule=.75mm, rightrule=.15mm, titlerule=0mm, title=\textcolor{quarto-callout-note-color}{\faInfo}\hspace{0.5em}{Validation Protocol}, colbacktitle=quarto-callout-note-color!10!white, bottomrule=.15mm, opacityback=0, colback=white]
+\begin{tcolorbox}[enhanced jigsaw, toptitle=1mm, bottomrule=.15mm, rightrule=.15mm, coltitle=black, colbacktitle=quarto-callout-note-color!10!white, breakable, title=\textcolor{quarto-callout-note-color}{\faInfo}\hspace{0.5em}{Validation Protocol}, toprule=.15mm, bottomtitle=1mm, leftrule=.75mm, colback=white, arc=.35mm, opacitybacktitle=0.6, titlerule=0mm, colframe=quarto-callout-note-color-frame, left=2mm, opacityback=0]
 
 We created validation datasets through expert manual extraction,
 consensus building, and source annotation---establishing gold standard
@@ -5572,7 +5566,7 @@ This quantitative analysis enables comparison across interventions.
 \subsection*{3.7.3 Robustness Analysis}\label{sec-robustness}
 \addcontentsline{toc}{subsection}{3.7.3 Robustness Analysis}
 
-\begin{tcolorbox}[enhanced jigsaw, arc=.35mm, coltitle=black, left=2mm, toptitle=1mm, toprule=.15mm, bottomtitle=1mm, opacitybacktitle=0.6, colframe=quarto-callout-tip-color-frame, breakable, leftrule=.75mm, rightrule=.15mm, titlerule=0mm, title=\textcolor{quarto-callout-tip-color}{\faLightbulb}\hspace{0.5em}{Cross-Worldview Robustness}, colbacktitle=quarto-callout-tip-color!10!white, bottomrule=.15mm, opacityback=0, colback=white]
+\begin{tcolorbox}[enhanced jigsaw, toptitle=1mm, bottomrule=.15mm, rightrule=.15mm, coltitle=black, colbacktitle=quarto-callout-tip-color!10!white, breakable, title=\textcolor{quarto-callout-tip-color}{\faLightbulb}\hspace{0.5em}{Cross-Worldview Robustness}, toprule=.15mm, bottomtitle=1mm, leftrule=.75mm, colback=white, arc=.35mm, opacitybacktitle=0.6, titlerule=0mm, colframe=quarto-callout-tip-color-frame, left=2mm, opacityback=0]
 
 Policies must work across worldviews. AMTAIR enables multi-model
 evaluation, parameter sensitivity testing, scenario analysis, and
@@ -5655,7 +5649,7 @@ connection to live forecasting data.
 \subsection*{3.9.1 Design for Integration}\label{sec-integration-design}
 \addcontentsline{toc}{subsection}{3.9.1 Design for Integration}
 
-\begin{tcolorbox}[enhanced jigsaw, arc=.35mm, coltitle=black, left=2mm, toptitle=1mm, toprule=.15mm, bottomtitle=1mm, opacitybacktitle=0.6, colframe=quarto-callout-note-color-frame, breakable, leftrule=.75mm, rightrule=.15mm, titlerule=0mm, title=\textcolor{quarto-callout-note-color}{\faInfo}\hspace{0.5em}{Integration Architecture}, colbacktitle=quarto-callout-note-color!10!white, bottomrule=.15mm, opacityback=0, colback=white]
+\begin{tcolorbox}[enhanced jigsaw, toptitle=1mm, bottomrule=.15mm, rightrule=.15mm, coltitle=black, colbacktitle=quarto-callout-note-color!10!white, breakable, title=\textcolor{quarto-callout-note-color}{\faInfo}\hspace{0.5em}{Integration Architecture}, toprule=.15mm, bottomtitle=1mm, leftrule=.75mm, colback=white, arc=.35mm, opacitybacktitle=0.6, titlerule=0mm, colframe=quarto-callout-note-color-frame, left=2mm, opacityback=0]
 
 The system anticipates market connections through API specifications for
 major platforms, semantic matching algorithms, probability aggregation
@@ -5742,7 +5736,7 @@ Document strategies with benchmarks:
 Assessment}\label{sec-extraction-quality}
 \addcontentsline{toc}{subsection}{3.11.1 Extraction Quality Assessment}
 
-\begin{tcolorbox}[enhanced jigsaw, arc=.35mm, coltitle=black, left=2mm, toptitle=1mm, toprule=.15mm, bottomtitle=1mm, opacitybacktitle=0.6, colframe=quarto-callout-tip-color-frame, breakable, leftrule=.75mm, rightrule=.15mm, titlerule=0mm, title=\textcolor{quarto-callout-tip-color}{\faLightbulb}\hspace{0.5em}{Performance Highlights}, colbacktitle=quarto-callout-tip-color!10!white, bottomrule=.15mm, opacityback=0, colback=white]
+\begin{tcolorbox}[enhanced jigsaw, toptitle=1mm, bottomrule=.15mm, rightrule=.15mm, coltitle=black, colbacktitle=quarto-callout-tip-color!10!white, breakable, title=\textcolor{quarto-callout-tip-color}{\faLightbulb}\hspace{0.5em}{Performance Highlights}, toprule=.15mm, bottomtitle=1mm, leftrule=.75mm, colback=white, arc=.35mm, opacitybacktitle=0.6, titlerule=0mm, colframe=quarto-callout-tip-color-frame, left=2mm, opacityback=0]
 
 The system achieves 85\%+ accuracy for structural relationships and 73\%
 for probability capture---sufficient for practical use while maintaining
@@ -5845,7 +5839,7 @@ Limitations}
 \markboth{4. Discussion: Implications and Limitations}{4. Discussion:
 Implications and Limitations}
 
-\begin{tcolorbox}[enhanced jigsaw, arc=.35mm, coltitle=black, left=2mm, toptitle=1mm, toprule=.15mm, bottomtitle=1mm, opacitybacktitle=0.6, colframe=quarto-callout-note-color-frame, breakable, leftrule=.75mm, rightrule=.15mm, titlerule=0mm, title=\textcolor{quarto-callout-note-color}{\faInfo}\hspace{0.5em}{Chapter Overview}, colbacktitle=quarto-callout-note-color!10!white, bottomrule=.15mm, opacityback=0, colback=white]
+\begin{tcolorbox}[enhanced jigsaw, toptitle=1mm, bottomrule=.15mm, rightrule=.15mm, coltitle=black, colbacktitle=quarto-callout-note-color!10!white, breakable, title=\textcolor{quarto-callout-note-color}{\faInfo}\hspace{0.5em}{Chapter Overview}, toprule=.15mm, bottomtitle=1mm, leftrule=.75mm, colback=white, arc=.35mm, opacitybacktitle=0.6, titlerule=0mm, colframe=quarto-callout-note-color-frame, left=2mm, opacityback=0]
 
 \textbf{Grade Weight}: 10\% \textbar{} \textbf{Target Length}:
 \textasciitilde14\% of text (\textasciitilde4,200 words)\\
@@ -6269,7 +6263,7 @@ parameters rather than requiring complete argument reconstruction
 \textbf{Exploration tools}: Stakeholders can modify assumptions and
 immediately see consequences, building intuition about model dynamics
 
-\begin{tcolorbox}[enhanced jigsaw, arc=.35mm, coltitle=black, left=2mm, toptitle=1mm, toprule=.15mm, bottomtitle=1mm, opacitybacktitle=0.6, colframe=quarto-callout-tip-color-frame, breakable, leftrule=.75mm, rightrule=.15mm, titlerule=0mm, title=\textcolor{quarto-callout-tip-color}{\faLightbulb}\hspace{0.5em}{Early Results}, colbacktitle=quarto-callout-tip-color!10!white, bottomrule=.15mm, opacityback=0, colback=white]
+\begin{tcolorbox}[enhanced jigsaw, toptitle=1mm, bottomrule=.15mm, rightrule=.15mm, coltitle=black, colbacktitle=quarto-callout-tip-color!10!white, breakable, title=\textcolor{quarto-callout-tip-color}{\faLightbulb}\hspace{0.5em}{Early Results}, toprule=.15mm, bottomtitle=1mm, leftrule=.75mm, colback=white, arc=.35mm, opacitybacktitle=0.6, titlerule=0mm, colframe=quarto-callout-tip-color-frame, left=2mm, opacityback=0]
 
 Pilot studies with AI governance researchers show 40\% reduction in time
 to identify disagreements and 60\% improvement in agreement
@@ -6576,7 +6570,7 @@ Governance}
 \markboth{5. Conclusion: Toward Coordinated AI Governance}{5.
 Conclusion: Toward Coordinated AI Governance}
 
-\begin{tcolorbox}[enhanced jigsaw, arc=.35mm, coltitle=black, left=2mm, toptitle=1mm, toprule=.15mm, bottomtitle=1mm, opacitybacktitle=0.6, colframe=quarto-callout-note-color-frame, breakable, leftrule=.75mm, rightrule=.15mm, titlerule=0mm, title=\textcolor{quarto-callout-note-color}{\faInfo}\hspace{0.5em}{Chapter Overview}, colbacktitle=quarto-callout-note-color!10!white, bottomrule=.15mm, opacityback=0, colback=white]
+\begin{tcolorbox}[enhanced jigsaw, toptitle=1mm, bottomrule=.15mm, rightrule=.15mm, coltitle=black, colbacktitle=quarto-callout-note-color!10!white, breakable, title=\textcolor{quarto-callout-note-color}{\faInfo}\hspace{0.5em}{Chapter Overview}, toprule=.15mm, bottomtitle=1mm, leftrule=.75mm, colback=white, arc=.35mm, opacitybacktitle=0.6, titlerule=0mm, colframe=quarto-callout-note-color-frame, left=2mm, opacityback=0]
 
 \textbf{Grade Weight}: 10\% \textbar{} \textbf{Target Length}:
 \textasciitilde14\% of text (\textasciitilde4,200 words)\\
@@ -6851,7 +6845,7 @@ Researchers}\label{sec-researcher-recommendations}
   alongside traditional papers to enable cumulative building
 \end{enumerate}
 
-\begin{tcolorbox}[enhanced jigsaw, arc=.35mm, coltitle=black, left=2mm, toptitle=1mm, toprule=.15mm, bottomtitle=1mm, opacitybacktitle=0.6, colframe=quarto-callout-tip-color-frame, breakable, leftrule=.75mm, rightrule=.15mm, titlerule=0mm, title=\textcolor{quarto-callout-tip-color}{\faLightbulb}\hspace{0.5em}{Quick Start Guide}, colbacktitle=quarto-callout-tip-color!10!white, bottomrule=.15mm, opacityback=0, colback=white]
+\begin{tcolorbox}[enhanced jigsaw, toptitle=1mm, bottomrule=.15mm, rightrule=.15mm, coltitle=black, colbacktitle=quarto-callout-tip-color!10!white, breakable, title=\textcolor{quarto-callout-tip-color}{\faLightbulb}\hspace{0.5em}{Quick Start Guide}, toprule=.15mm, bottomtitle=1mm, leftrule=.75mm, colback=white, arc=.35mm, opacitybacktitle=0.6, titlerule=0mm, colframe=quarto-callout-tip-color-frame, left=2mm, opacityback=0]
 
 A comprehensive guide for researchers getting started with AMTAIR will
 be available at {[}project website{]}, including templates, tutorials,
@@ -7016,7 +7010,7 @@ it's whether we can augment our collective intelligence with
 computational tools that help us reason together about futures too
 important to leave to chance.
 
-\begin{tcolorbox}[enhanced jigsaw, arc=.35mm, coltitle=black, left=2mm, toptitle=1mm, toprule=.15mm, bottomtitle=1mm, opacitybacktitle=0.6, colframe=quarto-callout-important-color-frame, breakable, leftrule=.75mm, rightrule=.15mm, titlerule=0mm, title=\textcolor{quarto-callout-important-color}{\faExclamation}\hspace{0.5em}{The Stakes}, colbacktitle=quarto-callout-important-color!10!white, bottomrule=.15mm, opacityback=0, colback=white]
+\begin{tcolorbox}[enhanced jigsaw, toptitle=1mm, bottomrule=.15mm, rightrule=.15mm, coltitle=black, colbacktitle=quarto-callout-important-color!10!white, breakable, title=\textcolor{quarto-callout-important-color}{\faExclamation}\hspace{0.5em}{The Stakes}, toprule=.15mm, bottomtitle=1mm, leftrule=.75mm, colback=white, arc=.35mm, opacitybacktitle=0.6, titlerule=0mm, colframe=quarto-callout-important-color-frame, left=2mm, opacityback=0]
 
 As AI capabilities advance toward transformative potential, the window
 for establishing effective governance narrows. We cannot afford
