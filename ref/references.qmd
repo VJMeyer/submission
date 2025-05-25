@@ -2,6 +2,166 @@
 
 # References (.md)
 
+## Error Watch
+
+### Catch ALL Potential Hallucinations
+
+
+`<!-- [ ] Collect all errors and hallucinations here to be able to reference against them later and ensure none remain throught text -->`
+
+`<!-- [ ] Keep track of all hallucinations that have been found here: -->`
+
+1.  **Validation Metrics**: Claims of "85%+ accuracy for structural extraction" and "73% for probability capture" appear precise for what seems to be a prototype system. These need careful verification or qualification.
+
+2.  **Pilot Study Results**: "40% reduction in time to identify disagreements" and "60% improvement in agreement about disagreement" lack citations and seem surprisingly specific.
+
+3.  **Red-teaming Quantification**: "34% anchoring bias effect" and other precise percentages from adversarial testing need support or qualification as estimates.
+
+4.  **Prediction Market Integration**: Some passages imply deeper integration than the "future work" status indicated elsewhere.
+
+`<!-- [ ] Make sure all hallucinations have been removed -->`
+
+
+## Figure Inventory and Tracking
+
+
+
+```markdown
+## Master Figure Registry {.unnumbered .unlisted}
+
+<!-- FIGURE INVENTORY -->
+<!-- Last updated: 2024-02-15 -->
+
+## Implemented Figures
+
+
+## Section to keep track of all Figures
+
+`<!-- [ ] ALWAYS include the "inclusions" of all figures/graphics below -->`
+`<!-- [ ] ALWAYS keep the #fig-KEYS up-to-date -->`
+
+```markdown
+{{
+[![Example Caption/Title 4](/images/cover.png){
+    #fig-Unique_identifier_for_crossreferencing
+    fig-scap="Short caption 4 list of figures as seen in LoF"
+    fig-alt="Detailed alt text that describes the image content, type, purpose, and meaning.
+            [CHART TYPE]: [Short description].
+                DATA: [What data is shown, x/y axes].
+                PURPOSE: [Why it's included, what to look for].
+                DETAILS: [Longer description of patterns, anomalies, or key insights].
+                SOURCE: Data from [source name/year and url/link]
+            "
+    fig-align="left"
+    width="30%"
+    }](https://github.com/VJMeyer/submission)
+}}
+
+```
+
+### Chapter 1
+- [x] {#fig-overview}: System overview diagram
+  - File: images/system-overview.png
+  - Source: Created by author using Draw.io
+
+```markdown
+{{
+[![Example Caption/Title 4](/images/cover.png){
+    #fig-Unique_identifier_for_crossreferencing
+    fig-scap="Short caption 4 list of figures as seen in LoF"
+    fig-alt="Detailed alt text that describes the image content, type, purpose, and meaning.
+            [CHART TYPE]: [Short description].
+                DATA: [What data is shown, x/y axes].
+                PURPOSE: [Why it's included, what to look for].
+                DETAILS: [Longer description of patterns, anomalies, or key insights].
+                SOURCE: Data from [source name/year and url/link]
+            "
+    fig-align="left"
+    width="30%"
+    }](https://github.com/VJMeyer/submission)
+}}
+
+```
+
+### Chapter 2
+- [x] {#fig-methodology}: Research methodology flowchart
+  - File: images/methodology-flow.svg
+  - Source: Author original
+
+```markdown
+{{
+[![Example Caption/Title 4](/images/cover.png){
+    #fig-Unique_identifier_for_crossreferencing
+    fig-scap="Short caption 4 list of figures as seen in LoF"
+    fig-alt="Detailed alt text that describes the image content, type, purpose, and meaning.
+            [CHART TYPE]: [Short description].
+                DATA: [What data is shown, x/y axes].
+                PURPOSE: [Why it's included, what to look for].
+                DETAILS: [Longer description of patterns, anomalies, or key insights].
+                SOURCE: Data from [source name/year and url/link]
+            "
+    fig-align="left"
+    width="30%"
+    }](https://github.com/VJMeyer/submission)
+}}
+
+```
+
+## Pending Figures
+```markdown
+### High Priority
+- [ ] {#fig-results-chart}: Main results visualization
+  - Status: Data ready, needs visualization
+
+{{
+[![Example Caption/Title 4](/images/cover.png){
+    #fig-Unique_identifier_for_crossreferencing
+    fig-scap="Short caption 4 list of figures as seen in LoF"
+    fig-alt="Detailed alt text that describes the image content, type, purpose, and meaning.
+            [CHART TYPE]: [Short description].
+                DATA: [What data is shown, x/y axes].
+                PURPOSE: [Why it's included, what to look for].
+                DETAILS: [Longer description of patterns, anomalies, or key insights].
+                SOURCE: Data from [source name/year and url/link]
+            "
+    fig-align="left"
+    width="30%"
+    }](https://github.com/VJMeyer/submission)
+}}
+
+### Medium Priority
+- [ ] {#fig-architecture}: System architecture diagram
+  - Status: Sketch complete, needs professional rendering
+
+{{
+[![Example Caption/Title 4](/images/cover.png){
+    #fig-Unique_identifier_for_crossreferencing
+    fig-scap="Short caption 4 list of figures as seen in LoF"
+    fig-alt="Detailed alt text that describes the image content, type, purpose, and meaning.
+            [CHART TYPE]: [Short description].
+                DATA: [What data is shown, x/y axes].
+                PURPOSE: [Why it's included, what to look for].
+                DETAILS: [Longer description of patterns, anomalies, or key insights].
+                SOURCE: Data from [source name/year and url/link]
+            "
+    fig-align="left"
+    width="30%"
+    }](https://github.com/VJMeyer/submission)
+}}
+
+
+
+```
+
+
+
+### Master Citation Registry
+
+
+
+
+```markdown
+
 ## BibTeX of Main Citations Included
 
 <!-- [ ] Add all the main literature / citations / references here (makes it easy to verify correct key etc. while writing) -->
@@ -10,9 +170,23 @@
 
 <!-- [ ] Remove/hide 'References.md' before final publication -->
 
-```markdown
-
 ## Update in ref/MAref.bib
+
+
+## Core Citations (Must Have)
+
+### Foundational Works
+- [x] @carlsmith2021 - Power-seeking AI framework
+  - Chapter usage: 1, 2, 4
+  - Key concepts: Six premises, existential risk
+  - Notes: Central to thesis argument
+
+- [x] @bostrom2014 - Superintelligence paths
+  - Chapter usage: 1, 2, 3, 5
+  - Key concepts: Orthogonality, convergence
+  - Notes: Historical foundation
+
+
 
 @article{bostrom2012,
   title = {The {{Superintelligent Will}}: {{Motivation}} and {{Instrumental Rationality}} in {{Advanced Artificial Agents}}},
@@ -66,10 +240,30 @@
 
 
 
+## Pending Citations
+
+### Need to Find
+- [ ] FIND: @ai-governance-2024: "Recent survey on international AI governance frameworks"
+  - For: Chapter 3, Section 3.2
+  - Search terms: AI governance, international coordination, 2024
+  - Priority: High
+
+### Need to Verify
+- [ ] VERIFY: @prediction-markets-ai: "Tetlock et al on prediction markets for AI timelines"
+  - Current info: Possibly in Metaculus report 2023
+  - For: Chapter 4, Section 4.3
+  - Priority: Medium
+
+
+## Citation Health Check
+- [ ] All citations in .bib file
+- [ ] All .bib entries have DOIs/URLs
+- [ ] No duplicate entries
+- [ ] Consistent naming scheme
+- [ ] Recent sources included (2023-2024)
 
 
 ```
-
 
 
 

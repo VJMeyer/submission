@@ -279,7 +279,19 @@ div.csl-indent {
     <h2 id="toc-title">Table of contents</h2>
    
   <ul>
-  <li><a href="#bibtex-of-main-citations-included" id="toc-bibtex-of-main-citations-included" class="nav-link active" data-scroll-target="#bibtex-of-main-citations-included"><span class="header-section-number">7.1</span> BibTeX of Main Citations Included</a></li>
+  <li><a href="#error-watch" id="toc-error-watch" class="nav-link active" data-scroll-target="#error-watch"><span class="header-section-number">7.1</span> Error Watch</a>
+  <ul>
+  <li><a href="#catch-all-potential-hallucinations" id="toc-catch-all-potential-hallucinations" class="nav-link" data-scroll-target="#catch-all-potential-hallucinations"><span class="header-section-number">7.1.1</span> Catch ALL Potential Hallucinations</a></li>
+  </ul></li>
+  <li><a href="#figure-inventory-and-tracking" id="toc-figure-inventory-and-tracking" class="nav-link" data-scroll-target="#figure-inventory-and-tracking"><span class="header-section-number">7.2</span> Figure Inventory and Tracking</a>
+  <ul>
+  <li><a href="#chapter-1" id="toc-chapter-1" class="nav-link" data-scroll-target="#chapter-1"><span class="header-section-number">7.2.1</span> Chapter 1</a></li>
+  <li><a href="#chapter-2" id="toc-chapter-2" class="nav-link" data-scroll-target="#chapter-2"><span class="header-section-number">7.2.2</span> Chapter 2</a></li>
+  </ul></li>
+  <li><a href="#pending-figures" id="toc-pending-figures" class="nav-link" data-scroll-target="#pending-figures"><span class="header-section-number">7.3</span> Pending Figures</a>
+  <ul>
+  <li><a href="#master-citation-registry" id="toc-master-citation-registry" class="nav-link" data-scroll-target="#master-citation-registry"><span class="header-section-number">7.3.1</span> Master Citation Registry</a></li>
+  </ul></li>
   <li><a href="#bibliography" id="toc-bibliography" class="nav-link" data-scroll-target="#bibliography">Bibliography</a></li>
   </ul>
 <div class="toc-actions"><ul><li><a href="https://github.com/VJMeyer/submission/edit/main/ref/references.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li></ul></div><div class="quarto-code-links"><h2>Code Links</h2><ul><li><a href="https://colab.research.google.com/github/VJMeyer/submission/blob/main/AMTAIR_Prototype/data/example_carlsmith/AMTAIR_Prototype_example_carlsmith.ipynb"><i class="bi bi-file-code"></i>Colab Notebook (Manual Link in .yml)</a></li><li><a href="https://github.com/VJMeyer/submission"><i class="bi bi-github"></i>GitHub Repository</a></li></ul></div></nav>
@@ -306,67 +318,250 @@ div.csl-indent {
 </header>
 
 
-<section id="bibtex-of-main-citations-included" class="level2" data-number="7.1">
-<h2 data-number="7.1" class="anchored" data-anchor-id="bibtex-of-main-citations-included"><span class="header-section-number">7.1</span> BibTeX of Main Citations Included</h2>
-<!-- [ ] Add all the main literature / citations / references here (makes it easy to verify correct key etc. while writing) -->
-<!-- [ ] Keep 'References.md' updated with/from ref/MAref.bib -->
-<!-- [ ] Remove/hide 'References.md' before final publication -->
-<div class="sourceCode" id="cb1"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="fu">## Update in ref/MAref.bib</span></span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>@article{bostrom2012,</span>
-<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>  title = {The {{Superintelligent Will}}: {{Motivation}} and {{Instrumental Rationality}} in {{Advanced Artificial Agents}}},</span>
-<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>  author = {Bostrom, Nick},</span>
-<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>  date = {2012},</span>
-<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>  journaltitle = {Minds and Machines},</span>
-<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>  volume = {22},</span>
-<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a>  number = {2},</span>
-<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a>  pages = {71--85},</span>
-<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a>  publisher = {Kluwer Academic Publishers Norwell, MA, USA},</span>
-<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a>  doi = {10.1007/s11023-012-9281-3},</span>
-<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a>  url = {https://philpapers.org/rec/BOSTSW}</span>
-<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a>}</span>
-<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a>@book{bostrom2014,</span>
-<span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a>  title = {Superintelligence: {{Paths}}, Strategies, Dangers},</span>
-<span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a>  author = {Bostrom, Nick},</span>
-<span id="cb1-20"><a href="#cb1-20" aria-hidden="true" tabindex="-1"></a>  date = {2014},</span>
-<span id="cb1-21"><a href="#cb1-21" aria-hidden="true" tabindex="-1"></a>  publisher = {Oxford University Press},</span>
-<span id="cb1-22"><a href="#cb1-22" aria-hidden="true" tabindex="-1"></a>  location = {Oxford},</span>
-<span id="cb1-23"><a href="#cb1-23" aria-hidden="true" tabindex="-1"></a>  url = {https://scholar.dominican.edu/cynthia-stokes-brown-books-big-history/47},</span>
-<span id="cb1-24"><a href="#cb1-24" aria-hidden="true" tabindex="-1"></a>  abstract = {The human brain has some capabilities that the brains of other animals lack. It is to these distinctive capabilities that our species owes its dominant position. Other animals have stronger muscles or sharper claws, but we have cleverer brains. If machine brains one day come to surpass human brains in general intelligence, then this new superintelligence could become very powerful. As the fate of the gorillas now depends more on us humans than on the gorillas themselves, so the fate of our species then would come to depend on the actions of the machine superintelligence. But we have one advantage: we get to make the first move. Will it be possible to construct a seed AI or otherwise to engineer initial conditions so as to make an intelligence explosion survivable? How could one achieve a controlled detonation? To get closer to an answer to this question, we must make our way through a fascinating landscape of topics and considerations. Read the book and learn about oracles, genies, singletons; about boxing methods, tripwires, and mind crime; about humanity's cosmic endowment and differential technological development; indirect normativity, instrumental convergence, whole brain emulation and technology couplings; Malthusian economics and dystopian evolution; artificial intelligence, and biological cognitive enhancement, and collective intelligence.},</span>
-<span id="cb1-25"><a href="#cb1-25" aria-hidden="true" tabindex="-1"></a>  isbn = {978-0-19-967811-2}</span>
-<span id="cb1-26"><a href="#cb1-26" aria-hidden="true" tabindex="-1"></a>}</span>
-<span id="cb1-27"><a href="#cb1-27" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-28"><a href="#cb1-28" aria-hidden="true" tabindex="-1"></a>@article{bostrom2016,</span>
-<span id="cb1-29"><a href="#cb1-29" aria-hidden="true" tabindex="-1"></a>  title = {The {{Unilateralist}}’s {{Curse}} and the {{Case}} for a {{Principle}} of {{Conformity}}},</span>
-<span id="cb1-30"><a href="#cb1-30" aria-hidden="true" tabindex="-1"></a>  author = {Bostrom, Nick and Douglas, Thomas and Sandberg, Anders},</span>
-<span id="cb1-31"><a href="#cb1-31" aria-hidden="true" tabindex="-1"></a>  date = {2016},</span>
-<span id="cb1-32"><a href="#cb1-32" aria-hidden="true" tabindex="-1"></a>  journaltitle = {Social Epistemology},</span>
-<span id="cb1-33"><a href="#cb1-33" aria-hidden="true" tabindex="-1"></a>  volume = {30},</span>
-<span id="cb1-34"><a href="#cb1-34" aria-hidden="true" tabindex="-1"></a>  number = {4},</span>
-<span id="cb1-35"><a href="#cb1-35" aria-hidden="true" tabindex="-1"></a>  pages = {350--371},</span>
-<span id="cb1-36"><a href="#cb1-36" aria-hidden="true" tabindex="-1"></a>  publisher = {Routledge, part of the Taylor <span class="sc">\&amp;</span> Francis Group},</span>
-<span id="cb1-37"><a href="#cb1-37" aria-hidden="true" tabindex="-1"></a>  doi = {10.1080/02691728.2015.1108373},</span>
-<span id="cb1-38"><a href="#cb1-38" aria-hidden="true" tabindex="-1"></a>  url = {https://www.tandfonline.com/doi/full/10.1080/02691728.2015.1108373}</span>
-<span id="cb1-39"><a href="#cb1-39" aria-hidden="true" tabindex="-1"></a>}</span>
-<span id="cb1-40"><a href="#cb1-40" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-41"><a href="#cb1-41" aria-hidden="true" tabindex="-1"></a>@article{bostrom2019,</span>
-<span id="cb1-42"><a href="#cb1-42" aria-hidden="true" tabindex="-1"></a>  title = {The Vulnerable World Hypothesis},</span>
-<span id="cb1-43"><a href="#cb1-43" aria-hidden="true" tabindex="-1"></a>  author = {Bostrom, Nick},</span>
-<span id="cb1-44"><a href="#cb1-44" aria-hidden="true" tabindex="-1"></a>  date = {2019},</span>
-<span id="cb1-45"><a href="#cb1-45" aria-hidden="true" tabindex="-1"></a>  journaltitle = {Global Policy},</span>
-<span id="cb1-46"><a href="#cb1-46" aria-hidden="true" tabindex="-1"></a>  volume = {10},</span>
-<span id="cb1-47"><a href="#cb1-47" aria-hidden="true" tabindex="-1"></a>  number = {4},</span>
-<span id="cb1-48"><a href="#cb1-48" aria-hidden="true" tabindex="-1"></a>  pages = {455--476},</span>
-<span id="cb1-49"><a href="#cb1-49" aria-hidden="true" tabindex="-1"></a>  publisher = {Wiley Online Library},</span>
-<span id="cb1-50"><a href="#cb1-50" aria-hidden="true" tabindex="-1"></a>  doi = {10.1111/1758-5899.12718}</span>
-<span id="cb1-51"><a href="#cb1-51" aria-hidden="true" tabindex="-1"></a>}</span>
-<span id="cb1-52"><a href="#cb1-52" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-53"><a href="#cb1-53" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-54"><a href="#cb1-54" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-55"><a href="#cb1-55" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-56"><a href="#cb1-56" aria-hidden="true" tabindex="-1"></a></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<section id="error-watch" class="level2" data-number="7.1">
+<h2 data-number="7.1" class="anchored" data-anchor-id="error-watch"><span class="header-section-number">7.1</span> Error Watch</h2>
+<section id="catch-all-potential-hallucinations" class="level3" data-number="7.1.1">
+<h3 data-number="7.1.1" class="anchored" data-anchor-id="catch-all-potential-hallucinations"><span class="header-section-number">7.1.1</span> Catch ALL Potential Hallucinations</h3>
+<p><code>&lt;!-- [ ] Collect all errors and hallucinations here to be able to reference against them later and ensure none remain throught text --&gt;</code></p>
+<p><code>&lt;!-- [ ] Keep track of all hallucinations that have been found here: --&gt;</code></p>
+<ol type="1">
+<li><p><strong>Validation Metrics</strong>: Claims of “85%+ accuracy for structural extraction” and “73% for probability capture” appear precise for what seems to be a prototype system. These need careful verification or qualification.</p></li>
+<li><p><strong>Pilot Study Results</strong>: “40% reduction in time to identify disagreements” and “60% improvement in agreement about disagreement” lack citations and seem surprisingly specific.</p></li>
+<li><p><strong>Red-teaming Quantification</strong>: “34% anchoring bias effect” and other precise percentages from adversarial testing need support or qualification as estimates.</p></li>
+<li><p><strong>Prediction Market Integration</strong>: Some passages imply deeper integration than the “future work” status indicated elsewhere.</p></li>
+</ol>
+<p><code>&lt;!-- [ ] Make sure all hallucinations have been removed --&gt;</code></p>
+</section>
+</section>
+<section id="figure-inventory-and-tracking" class="level2" data-number="7.2">
+<h2 data-number="7.2" class="anchored" data-anchor-id="figure-inventory-and-tracking"><span class="header-section-number">7.2</span> Figure Inventory and Tracking</h2>
+<div class="sourceCode" id="cb1"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">## Master Figure Registry {.unnumbered .unlisted}</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="co">&lt;!-- FIGURE INVENTORY --&gt;</span></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="co">&lt;!-- Last updated: 2024-02-15 --&gt;</span></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="fu">## Implemented Figures</span></span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a><span class="fu">## Section to keep track of all Figures</span></span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a><span class="in">`&lt;!-- [ ] ALWAYS include the "inclusions" of all figures/graphics below --&gt;`</span></span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a><span class="in">`&lt;!-- [ ] ALWAYS keep the #fig-KEYS up-to-date --&gt;`</span></span>
+<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a><span class="in">```markdown</span></span>
+<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a>{{</span>
+<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">![Example Caption/Title 4</span><span class="co">](/images/cover.png)</span>{</span>
+<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a>    #fig-Unique_identifier_for_crossreferencing</span>
+<span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a>    fig-scap="Short caption 4 list of figures as seen in LoF"</span>
+<span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a>    fig-alt="Detailed alt text that describes the image content, type, purpose, and meaning.</span>
+<span id="cb1-20"><a href="#cb1-20" aria-hidden="true" tabindex="-1"></a>            <span class="ot">[CHART TYPE]: </span><span class="co">[</span><span class="ot">Short description</span><span class="co">]</span>.</span>
+<span id="cb1-21"><a href="#cb1-21" aria-hidden="true" tabindex="-1"></a>                DATA: <span class="co">[</span><span class="ot">What data is shown, x/y axes</span><span class="co">]</span>.</span>
+<span id="cb1-22"><a href="#cb1-22" aria-hidden="true" tabindex="-1"></a>                PURPOSE: <span class="co">[</span><span class="ot">Why it's included, what to look for</span><span class="co">]</span>.</span>
+<span id="cb1-23"><a href="#cb1-23" aria-hidden="true" tabindex="-1"></a>                DETAILS: <span class="co">[</span><span class="ot">Longer description of patterns, anomalies, or key insights</span><span class="co">]</span>.</span>
+<span id="cb1-24"><a href="#cb1-24" aria-hidden="true" tabindex="-1"></a>                SOURCE: Data from <span class="co">[</span><span class="ot">source name/year and url/link</span><span class="co">]</span></span>
+<span id="cb1-25"><a href="#cb1-25" aria-hidden="true" tabindex="-1"></a>            "</span>
+<span id="cb1-26"><a href="#cb1-26" aria-hidden="true" tabindex="-1"></a>    fig-align="left"</span>
+<span id="cb1-27"><a href="#cb1-27" aria-hidden="true" tabindex="-1"></a>    width="30%"</span>
+<span id="cb1-28"><a href="#cb1-28" aria-hidden="true" tabindex="-1"></a>    }](https://github.com/VJMeyer/submission)</span>
+<span id="cb1-29"><a href="#cb1-29" aria-hidden="true" tabindex="-1"></a>}}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<section id="chapter-1" class="level3" data-number="7.2.1">
+<h3 data-number="7.2.1" class="anchored" data-anchor-id="chapter-1"><span class="header-section-number">7.2.1</span> Chapter 1</h3>
+<ul class="task-list">
+<li><label><input type="checkbox" checked="">{#fig-overview}: System overview diagram</label>
+<ul>
+<li>File: images/system-overview.png</li>
+<li>Source: Created by author using Draw.io</li>
+</ul></li>
+</ul>
+<div class="sourceCode" id="cb2"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>{{</span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">![Example Caption/Title 4</span><span class="co">](/images/cover.png)</span>{</span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>    #fig-Unique_identifier_for_crossreferencing</span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>    fig-scap="Short caption 4 list of figures as seen in LoF"</span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>    fig-alt="Detailed alt text that describes the image content, type, purpose, and meaning.</span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a>            <span class="ot">[CHART TYPE]: </span><span class="co">[</span><span class="ot">Short description</span><span class="co">]</span>.</span>
+<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a>                DATA: <span class="co">[</span><span class="ot">What data is shown, x/y axes</span><span class="co">]</span>.</span>
+<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a>                PURPOSE: <span class="co">[</span><span class="ot">Why it's included, what to look for</span><span class="co">]</span>.</span>
+<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a>                DETAILS: <span class="co">[</span><span class="ot">Longer description of patterns, anomalies, or key insights</span><span class="co">]</span>.</span>
+<span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a>                SOURCE: Data from <span class="co">[</span><span class="ot">source name/year and url/link</span><span class="co">]</span></span>
+<span id="cb2-11"><a href="#cb2-11" aria-hidden="true" tabindex="-1"></a>            "</span>
+<span id="cb2-12"><a href="#cb2-12" aria-hidden="true" tabindex="-1"></a>    fig-align="left"</span>
+<span id="cb2-13"><a href="#cb2-13" aria-hidden="true" tabindex="-1"></a>    width="30%"</span>
+<span id="cb2-14"><a href="#cb2-14" aria-hidden="true" tabindex="-1"></a>    }](https://github.com/VJMeyer/submission)</span>
+<span id="cb2-15"><a href="#cb2-15" aria-hidden="true" tabindex="-1"></a>}}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section id="chapter-2" class="level3" data-number="7.2.2">
+<h3 data-number="7.2.2" class="anchored" data-anchor-id="chapter-2"><span class="header-section-number">7.2.2</span> Chapter 2</h3>
+<ul class="task-list">
+<li><label><input type="checkbox" checked="">{#fig-methodology}: Research methodology flowchart</label>
+<ul>
+<li>File: images/methodology-flow.svg</li>
+<li>Source: Author original</li>
+</ul></li>
+</ul>
+<div class="sourceCode" id="cb3"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>{{</span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">![Example Caption/Title 4</span><span class="co">](/images/cover.png)</span>{</span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>    #fig-Unique_identifier_for_crossreferencing</span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>    fig-scap="Short caption 4 list of figures as seen in LoF"</span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a>    fig-alt="Detailed alt text that describes the image content, type, purpose, and meaning.</span>
+<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a>            <span class="ot">[CHART TYPE]: </span><span class="co">[</span><span class="ot">Short description</span><span class="co">]</span>.</span>
+<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a>                DATA: <span class="co">[</span><span class="ot">What data is shown, x/y axes</span><span class="co">]</span>.</span>
+<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a>                PURPOSE: <span class="co">[</span><span class="ot">Why it's included, what to look for</span><span class="co">]</span>.</span>
+<span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a>                DETAILS: <span class="co">[</span><span class="ot">Longer description of patterns, anomalies, or key insights</span><span class="co">]</span>.</span>
+<span id="cb3-10"><a href="#cb3-10" aria-hidden="true" tabindex="-1"></a>                SOURCE: Data from <span class="co">[</span><span class="ot">source name/year and url/link</span><span class="co">]</span></span>
+<span id="cb3-11"><a href="#cb3-11" aria-hidden="true" tabindex="-1"></a>            "</span>
+<span id="cb3-12"><a href="#cb3-12" aria-hidden="true" tabindex="-1"></a>    fig-align="left"</span>
+<span id="cb3-13"><a href="#cb3-13" aria-hidden="true" tabindex="-1"></a>    width="30%"</span>
+<span id="cb3-14"><a href="#cb3-14" aria-hidden="true" tabindex="-1"></a>    }](https://github.com/VJMeyer/submission)</span>
+<span id="cb3-15"><a href="#cb3-15" aria-hidden="true" tabindex="-1"></a>}}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+</section>
+<section id="pending-figures" class="level2" data-number="7.3">
+<h2 data-number="7.3" class="anchored" data-anchor-id="pending-figures"><span class="header-section-number">7.3</span> Pending Figures</h2>
+<div class="sourceCode" id="cb4"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="fu">### High Priority</span></span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="va">[ ]</span> {#fig-results-chart}: Main results visualization</span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a><span class="ss">  - </span>Status: Data ready, needs visualization</span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a>{{</span>
+<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">![Example Caption/Title 4</span><span class="co">](/images/cover.png)</span>{</span>
+<span id="cb4-7"><a href="#cb4-7" aria-hidden="true" tabindex="-1"></a>    #fig-Unique_identifier_for_crossreferencing</span>
+<span id="cb4-8"><a href="#cb4-8" aria-hidden="true" tabindex="-1"></a>    fig-scap="Short caption 4 list of figures as seen in LoF"</span>
+<span id="cb4-9"><a href="#cb4-9" aria-hidden="true" tabindex="-1"></a>    fig-alt="Detailed alt text that describes the image content, type, purpose, and meaning.</span>
+<span id="cb4-10"><a href="#cb4-10" aria-hidden="true" tabindex="-1"></a>            <span class="ot">[CHART TYPE]: </span><span class="co">[</span><span class="ot">Short description</span><span class="co">]</span>.</span>
+<span id="cb4-11"><a href="#cb4-11" aria-hidden="true" tabindex="-1"></a>                DATA: <span class="co">[</span><span class="ot">What data is shown, x/y axes</span><span class="co">]</span>.</span>
+<span id="cb4-12"><a href="#cb4-12" aria-hidden="true" tabindex="-1"></a>                PURPOSE: <span class="co">[</span><span class="ot">Why it's included, what to look for</span><span class="co">]</span>.</span>
+<span id="cb4-13"><a href="#cb4-13" aria-hidden="true" tabindex="-1"></a>                DETAILS: <span class="co">[</span><span class="ot">Longer description of patterns, anomalies, or key insights</span><span class="co">]</span>.</span>
+<span id="cb4-14"><a href="#cb4-14" aria-hidden="true" tabindex="-1"></a>                SOURCE: Data from <span class="co">[</span><span class="ot">source name/year and url/link</span><span class="co">]</span></span>
+<span id="cb4-15"><a href="#cb4-15" aria-hidden="true" tabindex="-1"></a>            "</span>
+<span id="cb4-16"><a href="#cb4-16" aria-hidden="true" tabindex="-1"></a>    fig-align="left"</span>
+<span id="cb4-17"><a href="#cb4-17" aria-hidden="true" tabindex="-1"></a>    width="30%"</span>
+<span id="cb4-18"><a href="#cb4-18" aria-hidden="true" tabindex="-1"></a>    }](https://github.com/VJMeyer/submission)</span>
+<span id="cb4-19"><a href="#cb4-19" aria-hidden="true" tabindex="-1"></a>}}</span>
+<span id="cb4-20"><a href="#cb4-20" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-21"><a href="#cb4-21" aria-hidden="true" tabindex="-1"></a><span class="fu">### Medium Priority</span></span>
+<span id="cb4-22"><a href="#cb4-22" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="va">[ ]</span> {#fig-architecture}: System architecture diagram</span>
+<span id="cb4-23"><a href="#cb4-23" aria-hidden="true" tabindex="-1"></a><span class="ss">  - </span>Status: Sketch complete, needs professional rendering</span>
+<span id="cb4-24"><a href="#cb4-24" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-25"><a href="#cb4-25" aria-hidden="true" tabindex="-1"></a>{{</span>
+<span id="cb4-26"><a href="#cb4-26" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">![Example Caption/Title 4</span><span class="co">](/images/cover.png)</span>{</span>
+<span id="cb4-27"><a href="#cb4-27" aria-hidden="true" tabindex="-1"></a>    #fig-Unique_identifier_for_crossreferencing</span>
+<span id="cb4-28"><a href="#cb4-28" aria-hidden="true" tabindex="-1"></a>    fig-scap="Short caption 4 list of figures as seen in LoF"</span>
+<span id="cb4-29"><a href="#cb4-29" aria-hidden="true" tabindex="-1"></a>    fig-alt="Detailed alt text that describes the image content, type, purpose, and meaning.</span>
+<span id="cb4-30"><a href="#cb4-30" aria-hidden="true" tabindex="-1"></a>            <span class="ot">[CHART TYPE]: </span><span class="co">[</span><span class="ot">Short description</span><span class="co">]</span>.</span>
+<span id="cb4-31"><a href="#cb4-31" aria-hidden="true" tabindex="-1"></a>                DATA: <span class="co">[</span><span class="ot">What data is shown, x/y axes</span><span class="co">]</span>.</span>
+<span id="cb4-32"><a href="#cb4-32" aria-hidden="true" tabindex="-1"></a>                PURPOSE: <span class="co">[</span><span class="ot">Why it's included, what to look for</span><span class="co">]</span>.</span>
+<span id="cb4-33"><a href="#cb4-33" aria-hidden="true" tabindex="-1"></a>                DETAILS: <span class="co">[</span><span class="ot">Longer description of patterns, anomalies, or key insights</span><span class="co">]</span>.</span>
+<span id="cb4-34"><a href="#cb4-34" aria-hidden="true" tabindex="-1"></a>                SOURCE: Data from <span class="co">[</span><span class="ot">source name/year and url/link</span><span class="co">]</span></span>
+<span id="cb4-35"><a href="#cb4-35" aria-hidden="true" tabindex="-1"></a>            "</span>
+<span id="cb4-36"><a href="#cb4-36" aria-hidden="true" tabindex="-1"></a>    fig-align="left"</span>
+<span id="cb4-37"><a href="#cb4-37" aria-hidden="true" tabindex="-1"></a>    width="30%"</span>
+<span id="cb4-38"><a href="#cb4-38" aria-hidden="true" tabindex="-1"></a>    }](https://github.com/VJMeyer/submission)</span>
+<span id="cb4-39"><a href="#cb4-39" aria-hidden="true" tabindex="-1"></a>}}</span>
+<span id="cb4-40"><a href="#cb4-40" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-41"><a href="#cb4-41" aria-hidden="true" tabindex="-1"></a></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<section id="master-citation-registry" class="level3" data-number="7.3.1">
+<h3 data-number="7.3.1" class="anchored" data-anchor-id="master-citation-registry"><span class="header-section-number">7.3.1</span> Master Citation Registry</h3>
+<div class="sourceCode" id="cb5"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a><span class="fu">## BibTeX of Main Citations Included</span></span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a><span class="co">&lt;!-- [ ] Add all the main literature / citations / references here (makes it easy to verify correct key etc. while writing) --&gt;</span></span>
+<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a><span class="co">&lt;!-- [ ] Keep 'References.md' updated with/from ref/MAref.bib --&gt;</span></span>
+<span id="cb5-7"><a href="#cb5-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-8"><a href="#cb5-8" aria-hidden="true" tabindex="-1"></a><span class="co">&lt;!-- [ ] Remove/hide 'References.md' before final publication --&gt;</span></span>
+<span id="cb5-9"><a href="#cb5-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-10"><a href="#cb5-10" aria-hidden="true" tabindex="-1"></a><span class="fu">## Update in ref/MAref.bib</span></span>
+<span id="cb5-11"><a href="#cb5-11" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-12"><a href="#cb5-12" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-13"><a href="#cb5-13" aria-hidden="true" tabindex="-1"></a><span class="fu">## Core Citations (Must Have)</span></span>
+<span id="cb5-14"><a href="#cb5-14" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-15"><a href="#cb5-15" aria-hidden="true" tabindex="-1"></a><span class="fu">### Foundational Works</span></span>
+<span id="cb5-16"><a href="#cb5-16" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="va">[x]</span> @carlsmith2021 - Power-seeking AI framework</span>
+<span id="cb5-17"><a href="#cb5-17" aria-hidden="true" tabindex="-1"></a><span class="ss">  - </span>Chapter usage: 1, 2, 4</span>
+<span id="cb5-18"><a href="#cb5-18" aria-hidden="true" tabindex="-1"></a><span class="ss">  - </span>Key concepts: Six premises, existential risk</span>
+<span id="cb5-19"><a href="#cb5-19" aria-hidden="true" tabindex="-1"></a><span class="ss">  - </span>Notes: Central to thesis argument</span>
+<span id="cb5-20"><a href="#cb5-20" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-21"><a href="#cb5-21" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="va">[x]</span> @bostrom2014 - Superintelligence paths</span>
+<span id="cb5-22"><a href="#cb5-22" aria-hidden="true" tabindex="-1"></a><span class="ss">  - </span>Chapter usage: 1, 2, 3, 5</span>
+<span id="cb5-23"><a href="#cb5-23" aria-hidden="true" tabindex="-1"></a><span class="ss">  - </span>Key concepts: Orthogonality, convergence</span>
+<span id="cb5-24"><a href="#cb5-24" aria-hidden="true" tabindex="-1"></a><span class="ss">  - </span>Notes: Historical foundation</span>
+<span id="cb5-25"><a href="#cb5-25" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-26"><a href="#cb5-26" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-27"><a href="#cb5-27" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-28"><a href="#cb5-28" aria-hidden="true" tabindex="-1"></a>@article{bostrom2012,</span>
+<span id="cb5-29"><a href="#cb5-29" aria-hidden="true" tabindex="-1"></a>  title = {The {{Superintelligent Will}}: {{Motivation}} and {{Instrumental Rationality}} in {{Advanced Artificial Agents}}},</span>
+<span id="cb5-30"><a href="#cb5-30" aria-hidden="true" tabindex="-1"></a>  author = {Bostrom, Nick},</span>
+<span id="cb5-31"><a href="#cb5-31" aria-hidden="true" tabindex="-1"></a>  date = {2012},</span>
+<span id="cb5-32"><a href="#cb5-32" aria-hidden="true" tabindex="-1"></a>  journaltitle = {Minds and Machines},</span>
+<span id="cb5-33"><a href="#cb5-33" aria-hidden="true" tabindex="-1"></a>  volume = {22},</span>
+<span id="cb5-34"><a href="#cb5-34" aria-hidden="true" tabindex="-1"></a>  number = {2},</span>
+<span id="cb5-35"><a href="#cb5-35" aria-hidden="true" tabindex="-1"></a>  pages = {71--85},</span>
+<span id="cb5-36"><a href="#cb5-36" aria-hidden="true" tabindex="-1"></a>  publisher = {Kluwer Academic Publishers Norwell, MA, USA},</span>
+<span id="cb5-37"><a href="#cb5-37" aria-hidden="true" tabindex="-1"></a>  doi = {10.1007/s11023-012-9281-3},</span>
+<span id="cb5-38"><a href="#cb5-38" aria-hidden="true" tabindex="-1"></a>  url = {https://philpapers.org/rec/BOSTSW}</span>
+<span id="cb5-39"><a href="#cb5-39" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb5-40"><a href="#cb5-40" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-41"><a href="#cb5-41" aria-hidden="true" tabindex="-1"></a>@book{bostrom2014,</span>
+<span id="cb5-42"><a href="#cb5-42" aria-hidden="true" tabindex="-1"></a>  title = {Superintelligence: {{Paths}}, Strategies, Dangers},</span>
+<span id="cb5-43"><a href="#cb5-43" aria-hidden="true" tabindex="-1"></a>  author = {Bostrom, Nick},</span>
+<span id="cb5-44"><a href="#cb5-44" aria-hidden="true" tabindex="-1"></a>  date = {2014},</span>
+<span id="cb5-45"><a href="#cb5-45" aria-hidden="true" tabindex="-1"></a>  publisher = {Oxford University Press},</span>
+<span id="cb5-46"><a href="#cb5-46" aria-hidden="true" tabindex="-1"></a>  location = {Oxford},</span>
+<span id="cb5-47"><a href="#cb5-47" aria-hidden="true" tabindex="-1"></a>  url = {https://scholar.dominican.edu/cynthia-stokes-brown-books-big-history/47},</span>
+<span id="cb5-48"><a href="#cb5-48" aria-hidden="true" tabindex="-1"></a>  abstract = {The human brain has some capabilities that the brains of other animals lack. It is to these distinctive capabilities that our species owes its dominant position. Other animals have stronger muscles or sharper claws, but we have cleverer brains. If machine brains one day come to surpass human brains in general intelligence, then this new superintelligence could become very powerful. As the fate of the gorillas now depends more on us humans than on the gorillas themselves, so the fate of our species then would come to depend on the actions of the machine superintelligence. But we have one advantage: we get to make the first move. Will it be possible to construct a seed AI or otherwise to engineer initial conditions so as to make an intelligence explosion survivable? How could one achieve a controlled detonation? To get closer to an answer to this question, we must make our way through a fascinating landscape of topics and considerations. Read the book and learn about oracles, genies, singletons; about boxing methods, tripwires, and mind crime; about humanity's cosmic endowment and differential technological development; indirect normativity, instrumental convergence, whole brain emulation and technology couplings; Malthusian economics and dystopian evolution; artificial intelligence, and biological cognitive enhancement, and collective intelligence.},</span>
+<span id="cb5-49"><a href="#cb5-49" aria-hidden="true" tabindex="-1"></a>  isbn = {978-0-19-967811-2}</span>
+<span id="cb5-50"><a href="#cb5-50" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb5-51"><a href="#cb5-51" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-52"><a href="#cb5-52" aria-hidden="true" tabindex="-1"></a>@article{bostrom2016,</span>
+<span id="cb5-53"><a href="#cb5-53" aria-hidden="true" tabindex="-1"></a>  title = {The {{Unilateralist}}’s {{Curse}} and the {{Case}} for a {{Principle}} of {{Conformity}}},</span>
+<span id="cb5-54"><a href="#cb5-54" aria-hidden="true" tabindex="-1"></a>  author = {Bostrom, Nick and Douglas, Thomas and Sandberg, Anders},</span>
+<span id="cb5-55"><a href="#cb5-55" aria-hidden="true" tabindex="-1"></a>  date = {2016},</span>
+<span id="cb5-56"><a href="#cb5-56" aria-hidden="true" tabindex="-1"></a>  journaltitle = {Social Epistemology},</span>
+<span id="cb5-57"><a href="#cb5-57" aria-hidden="true" tabindex="-1"></a>  volume = {30},</span>
+<span id="cb5-58"><a href="#cb5-58" aria-hidden="true" tabindex="-1"></a>  number = {4},</span>
+<span id="cb5-59"><a href="#cb5-59" aria-hidden="true" tabindex="-1"></a>  pages = {350--371},</span>
+<span id="cb5-60"><a href="#cb5-60" aria-hidden="true" tabindex="-1"></a>  publisher = {Routledge, part of the Taylor <span class="sc">\&amp;</span> Francis Group},</span>
+<span id="cb5-61"><a href="#cb5-61" aria-hidden="true" tabindex="-1"></a>  doi = {10.1080/02691728.2015.1108373},</span>
+<span id="cb5-62"><a href="#cb5-62" aria-hidden="true" tabindex="-1"></a>  url = {https://www.tandfonline.com/doi/full/10.1080/02691728.2015.1108373}</span>
+<span id="cb5-63"><a href="#cb5-63" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb5-64"><a href="#cb5-64" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-65"><a href="#cb5-65" aria-hidden="true" tabindex="-1"></a>@article{bostrom2019,</span>
+<span id="cb5-66"><a href="#cb5-66" aria-hidden="true" tabindex="-1"></a>  title = {The Vulnerable World Hypothesis},</span>
+<span id="cb5-67"><a href="#cb5-67" aria-hidden="true" tabindex="-1"></a>  author = {Bostrom, Nick},</span>
+<span id="cb5-68"><a href="#cb5-68" aria-hidden="true" tabindex="-1"></a>  date = {2019},</span>
+<span id="cb5-69"><a href="#cb5-69" aria-hidden="true" tabindex="-1"></a>  journaltitle = {Global Policy},</span>
+<span id="cb5-70"><a href="#cb5-70" aria-hidden="true" tabindex="-1"></a>  volume = {10},</span>
+<span id="cb5-71"><a href="#cb5-71" aria-hidden="true" tabindex="-1"></a>  number = {4},</span>
+<span id="cb5-72"><a href="#cb5-72" aria-hidden="true" tabindex="-1"></a>  pages = {455--476},</span>
+<span id="cb5-73"><a href="#cb5-73" aria-hidden="true" tabindex="-1"></a>  publisher = {Wiley Online Library},</span>
+<span id="cb5-74"><a href="#cb5-74" aria-hidden="true" tabindex="-1"></a>  doi = {10.1111/1758-5899.12718}</span>
+<span id="cb5-75"><a href="#cb5-75" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb5-76"><a href="#cb5-76" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-77"><a href="#cb5-77" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-78"><a href="#cb5-78" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-79"><a href="#cb5-79" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-80"><a href="#cb5-80" aria-hidden="true" tabindex="-1"></a><span class="fu">## Pending Citations</span></span>
+<span id="cb5-81"><a href="#cb5-81" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-82"><a href="#cb5-82" aria-hidden="true" tabindex="-1"></a><span class="fu">### Need to Find</span></span>
+<span id="cb5-83"><a href="#cb5-83" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="va">[ ]</span> FIND: @ai-governance-2024: "Recent survey on international AI governance frameworks"</span>
+<span id="cb5-84"><a href="#cb5-84" aria-hidden="true" tabindex="-1"></a><span class="ss">  - </span>For: Chapter 3, Section 3.2</span>
+<span id="cb5-85"><a href="#cb5-85" aria-hidden="true" tabindex="-1"></a><span class="ss">  - </span>Search terms: AI governance, international coordination, 2024</span>
+<span id="cb5-86"><a href="#cb5-86" aria-hidden="true" tabindex="-1"></a><span class="ss">  - </span>Priority: High</span>
+<span id="cb5-87"><a href="#cb5-87" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-88"><a href="#cb5-88" aria-hidden="true" tabindex="-1"></a><span class="fu">### Need to Verify</span></span>
+<span id="cb5-89"><a href="#cb5-89" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="va">[ ]</span> VERIFY: @prediction-markets-ai: "Tetlock et al on prediction markets for AI timelines"</span>
+<span id="cb5-90"><a href="#cb5-90" aria-hidden="true" tabindex="-1"></a><span class="ss">  - </span>Current info: Possibly in Metaculus report 2023</span>
+<span id="cb5-91"><a href="#cb5-91" aria-hidden="true" tabindex="-1"></a><span class="ss">  - </span>For: Chapter 4, Section 4.3</span>
+<span id="cb5-92"><a href="#cb5-92" aria-hidden="true" tabindex="-1"></a><span class="ss">  - </span>Priority: Medium</span>
+<span id="cb5-93"><a href="#cb5-93" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-94"><a href="#cb5-94" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-95"><a href="#cb5-95" aria-hidden="true" tabindex="-1"></a><span class="fu">## Citation Health Check</span></span>
+<span id="cb5-96"><a href="#cb5-96" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="va">[ ]</span> All citations in .bib file</span>
+<span id="cb5-97"><a href="#cb5-97" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="va">[ ]</span> All .bib entries have DOIs/URLs</span>
+<span id="cb5-98"><a href="#cb5-98" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="va">[ ]</span> No duplicate entries</span>
+<span id="cb5-99"><a href="#cb5-99" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="va">[ ]</span> Consistent naming scheme</span>
+<span id="cb5-100"><a href="#cb5-100" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="va">[ ]</span> Recent sources included (2023-2024)</span>
+<span id="cb5-101"><a href="#cb5-101" aria-hidden="true" tabindex="-1"></a></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
 </section>
 <section id="bibliography" class="level1 unnumbered">
 <h1 class="unnumbered">Bibliography</h1>
@@ -383,15 +578,6 @@ United Kingdom: ACM. <a href="https://doi.org/10.1145/3514094.3534146">https://d
 Carlsmith, Joseph. 2021. <span>“Is <span>Power-Seeking AI</span> an
 <span>Existential Risk</span>?”</span> 2021. <a href="https://doi.org/10.48550/arXiv.2206.13353">https://doi.org/10.48550/arXiv.2206.13353</a>.
 </div>
-<div id="ref-growiec2024" class="csl-entry" role="listitem">
-Growiec, Jakub. 2024. <span>“Existential Risk from Transformative
-<span>AI</span>: An Economic Perspective.”</span> <em>Technological and
-Economic Development of Economy</em>, 1–27.
-</div>
-<div id="ref-knuth1984" class="csl-entry" role="listitem">
-Knuth, Donald E. 1984. <span>“Literate Programming.”</span> <em>Computer
-Journal</em> 27 (2): 97–111. <a href="https://doi.org/10.1093/comjnl/27.2.97">https://doi.org/10.1093/comjnl/27.2.97</a>.
-</div>
 <div id="ref-lempert2003" class="csl-entry" role="listitem">
 Lempert, Robert J, Steven W Popper, and Steven C Bankes. 2003.
 <em>Shaping the Next One Hundred Years: <span>New</span> Methods for
@@ -400,11 +586,6 @@ Quantitative, Long-Term Policy Analysis</em>. RAND Corporation.
 <div id="ref-pearl2009" class="csl-entry" role="listitem">
 Pearl, Judea. 2009. <em>Causality: <span>Models</span>, Reasoning and
 Inference</em>. 2nd ed. Cambridge University Press.
-</div>
-<div id="ref-soares2014" class="csl-entry" role="listitem">
-Soares, Nate, and Benja Fallenstein. 2014. <span>“Aligning
-Superintelligence with Human Interests: <span>A</span> Technical
-Research Agenda.”</span>
 </div>
 <div id="ref-taleb2007" class="csl-entry" role="listitem">
 Taleb, Nassim Nicholas. 2007. <em>The Black Swan: <span>The</span>

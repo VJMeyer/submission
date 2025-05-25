@@ -10,186 +10,6 @@
     ]
   },
   {
-    "objectID": "index.html#main-formatting",
-    "href": "index.html#main-formatting",
-    "title": "Automating the Modelling of Transformative Artificial Intelligence Risks",
-    "section": "Main Formatting",
-    "text": "Main Formatting\n\nHtml Comments",
-    "crumbs": [
-      "Preface"
-    ]
-  },
-  {
-    "objectID": "index.html#syntax-for-tasks",
-    "href": "index.html#syntax-for-tasks",
-    "title": "Automating the Modelling of Transformative Artificial Intelligence Risks",
-    "section": "Syntax for Tasks",
-    "text": "Syntax for Tasks\n\nTasks with ToDo Tree\n\nSimple “One-line tasks”\nUse Code ticks and html comment and task format for tasks distinctly visible across all formats including the ToDo-Tree overview:\n&lt;!-- [ ] ToDos for things to do / tasks / reminders (allows \"jump to with Taks Tree extension\") --&gt;\nUse html comment and task format for open or uncertain tasks, visible in the .qmd file:\n\n\n\nMore Complex Tasks with Notes\n&lt;!-- [ ] Task Title: short description--&gt;\n\n  More Information about task\n\n  Relevant notes\n\n  Step-by-step implementation Plan\n\n  Etc.\n\n\n\nCompleted Tasks\nRetain completed tasks in ToDo-Tree by adding an x in the brackets: [x] &lt;!-- [x] Tasks which have been finished but should remain for later verification --&gt;\n\nMark and remove completed tasks from ToDo-Tree by adding a minus in the brackets: [-]\n&lt;!-- [-] Tasks which have been finished but should remain visible for later verification --&gt;\n\n\n\nMissing Citations\n&lt;!-- [ ] FIND: @CITATION_KEY_PURPOSE: \"Description of the appropriate/idea source, including ideas /suggestions / search terms etc.\" --&gt;\n\n\nSuggested Citation\n&lt;!-- [ ] VERIFY: @CITATION_KEY_SUGGESTED: \"Description of the appropriate paper, book, source\" [Include BibTex if known] --&gt;\n\n\nMissing Graphic\n&lt;!-- [ ] FIND: {#fig-GRAPHIC_IDEA}]: \"Description of the appropriate/idea source, including ideas /suggestions / search terms etc.\" --&gt;\n\n\nSuggested Graphic\n&lt;!-- [ ] VERIFY: {#fig-GRAPHIC_IDEA}: \"Description of the appropriate paper, book, source\" [Include figure syntax if known] --&gt;\nMissing and/or suggested tables, concepts, explanations as well as other elements should be suggested similarily.\n\n\n\nTask Syntax Examples\n&lt;!-- [ ] (Example short: open and visible in text)   Find and list the names of the MTAIR team-members responsible for the Analytica Implementation --&gt;\n&lt;!-- [ ] (Example longer: open and visible in text)    Review/Plan/Discuss integrating Live Prediction Markets --&gt;\n\n  Live prediction market integration requires:\n    (1) API connections to platforms (Metaculus, Manifold),\n    (2) Question-to-variable mapping algorithms,\n    (3) Probability update mechanisms, \n    (4) Handling of market dynamics (thin markets, manipulation).\n    Current mentions may overstate readiness or underestimate complexity.\n    Need realistic assessment of what's achievable.\n\n  Implementation Steps:\n      0. List/mention all relevant platforms with a brief description each\n      1. Review all existing prediction market mentions for accuracy\n      2. Assess actual API availability and limitations\n      3. Describe/explain/discuss how to implement basic proof-of-concept with single platform\n      4. Document challenges: question mapping, market interpretation\n      5. Create realistic timeline for full implementation\n      6. Revise thesis claims to match reality\n      7. Add \"Future Work\" and/or extension section on complete integration\n      8. Include descriptions of mockups/designs even if not fully built \n      9. Highlight/discuss the advantages of such integrations\n      10. Quickly brainstorm for downsides worth mentioning\n\n\n\n\nVerbatim Code Formatting\nverbatim code formatting for notes and ideas to be included (here)\n\n\nCode Block formatting\nAlso code blocks for more extensive notes and ideas to be included and checklists\n- test 1. \n- test 2. \n- test 3.\n2. second\n3. third\ncode\nAdd a language to syntax highlight code blocks:\n1 + 1\n\n\nBlockquote Formatting\n\nBlockquote formatting for “Suggested Citations (e.g. carlsmith 2024 on …)” and/or claims which require a citation (e.g. claim x should be backed-up by a ciation from the literature)\n\n\n\nTables\n\n\n\nTable 1.1: Demonstration of pipe table syntax\n\n\n\n\n\nRight\nLeft\nDefault\nCenter\n\n\n\n\n12\n12\n12\n12\n\n\n123\n123\n123\n123\n\n\n1\n1\n1\n1\n\n\n\n\n\n\n\n\n\nTable 1.2: My Caption 1\n\n\n\n\n\nCol1\nCol2\nCol3\n\n\n\n\nA\nB\nC\n\n\nE\nF\nG\n\n\nA\nG\nG\n\n\n\n\n\n\nReferencing tables with @tbl-KEY: See Table 1.2.\n\n\n\nTable 1.3: Main Caption\n\n\n\n\n\n\n\n(a) First Table\n\n\n\n\n\nCol1\nCol2\nCol3\n\n\n\n\nA\nB\nC\n\n\nE\nF\nG\n\n\nA\nG\nG\n\n\n\n\n\n\n\n\n\n\n\n(b) Second Table\n\n\n\n\n\nCol1\nCol2\nCol3\n\n\n\n\nA\nB\nC\n\n\nE\nF\nG\n\n\nA\nG\nG\n\n\n\n\n\n\n\n\n\n\n\nSee Table 1.3 for details, especially Table 1.3 (b).\npython\n#| label: tbl-planets\n#| tbl-cap: Astronomical object\n\nfrom IPython.display import Markdown\nfrom tabulate import tabulate\ntable = [[\"Sun\",\"696,000\",1.989e30],\n         [\"Earth\",\"6,371\",5.972e24],\n         [\"Moon\",\"1,737\",7.34e22],\n         [\"Mars\",\"3,390\",6.39e23]]\nMarkdown(tabulate(\n  table, \n  headers=[\"Astronomical object\",\"R (km)\", \"mass (kg)\"]\n))\n\nSample grid table.\n\n\n\n\n\n\n\nFruit\nPrice\nAdvantages\n\n\n\n\nBananas\n$1.34\n\nbuilt-in wrapper\nbright color\n\n\n\nOranges\n$2.10\n\ncures scurvy\ntasty\n\n\n\n\nContent with HTML tables you don’t want processed.",
-    "crumbs": [
-      "Preface"
-    ]
-  },
-  {
-    "objectID": "index.html#sec-heading",
-    "href": "index.html#sec-heading",
-    "title": "Automating the Modelling of Transformative Artificial Intelligence Risks",
-    "section": "Headings & Potential Headings in Standard Markdown formatting (‘##’)",
-    "text": "Headings & Potential Headings in Standard Markdown formatting (‘##’)\n\nHeading 3\n\nHeading 4",
-    "crumbs": [
-      "Preface"
-    ]
-  },
-  {
-    "objectID": "index.html#text-formatting-options",
-    "href": "index.html#text-formatting-options",
-    "title": "Automating the Modelling of Transformative Artificial Intelligence Risks",
-    "section": "Text Formatting Options",
-    "text": "Text Formatting Options\nitalics, bold, bold italics\nsuperscript2 and subscript2\nstrikethrough\nThis text is highlighted\nThis text is underlined\nThis text is smallcaps",
-    "crumbs": [
-      "Preface"
-    ]
-  },
-  {
-    "objectID": "index.html#lists",
-    "href": "index.html#lists",
-    "title": "Automating the Modelling of Transformative Artificial Intelligence Risks",
-    "section": "Lists",
-    "text": "Lists\n\nunordered list\n\nsub-item 1\nsub-item 2\n\nsub-sub-item 1\n\n\nitem 2\nContinued (indent 4 spaces)\n\n\nordered list\nitem 2\n\nsub-item 1\n\nsub-sub-item 1",
-    "crumbs": [
-      "Preface"
-    ]
-  },
-  {
-    "objectID": "index.html#math",
-    "href": "index.html#math",
-    "title": "Automating the Modelling of Transformative Artificial Intelligence Risks",
-    "section": "Math",
-    "text": "Math\ninline math: \\(E = mc^{2}\\)\ndisplay math:\n\\[E = mc^{2}\\]\nIf you want to define custom TeX macros, include them within $$ delimiters enclosed in a .hidden block. For example:\n\n\\[\n\\def\\RR{{\\bf R}}\n\\def\\bold#1{{\\bf #1}}\n\\]\n\nFor HTML math processed using MathJax (the default) you can use the \\def, \\newcommand, \\renewcommand, \\newenvironment, \\renewenvironment, and \\let commands to create your own macros and environments.",
-    "crumbs": [
-      "Preface"
-    ]
-  },
-  {
-    "objectID": "index.html#footnotes",
-    "href": "index.html#footnotes",
-    "title": "Automating the Modelling of Transformative Artificial Intelligence Risks",
-    "section": "",
-    "text": "Inlines notes are easier to write, since you don’t have to pick an identifier and move down to type the note.↩︎\nHere is the footnote.↩︎\nHere’s one with multiple blocks.\nSubsequent paragraphs are indented to show that they belong to the previous footnote.\n{ some.code }\nThe whole paragraph can be indented, or just the first line. In this way, multi-paragraph footnotes work like multi-paragraph list items.↩︎",
-    "crumbs": [
-      "Preface"
-    ]
-  },
-  {
-    "objectID": "index.html#sec-callouts",
-    "href": "index.html#sec-callouts",
-    "title": "Automating the Modelling of Transformative Artificial Intelligence Risks",
-    "section": "Callouts",
-    "text": "Callouts\nQuarto’s native callouts work without additional packages:\n\nThis is written in a ‘note’ environment – but it does not seem to produce any special rendering.\n\n\n\n\n\n\n\nOptional Title\n\n\n\nContent here\n\n\n\n\n\n\n\n\nImportant Note2\n\n\n\nThis renders perfectly in both HTML and PDF.\n\n\nAlso for markdown:\n::: {.render_as_markdown_example}\n## Markdown Heading\nThis renders perfectly in both HTML and PDF but as markdown \"plain text\"\n:::",
-    "crumbs": [
-      "Preface"
-    ]
-  },
-  {
-    "objectID": "index.html#links",
-    "href": "index.html#links",
-    "title": "Automating the Modelling of Transformative Artificial Intelligence Risks",
-    "section": "Links",
-    "text": "Links\n&lt;https://quarto.org/docs/authoring/markdown-basics.html&gt; produces: https://quarto.org/docs/authoring/markdown-basics.html\n[Quarto Book Cross-References](https://quarto.org/docs/books/book-crossrefs.html) produces: Quarto Book Cross-References",
-    "crumbs": [
-      "Preface"
-    ]
-  },
-  {
-    "objectID": "index.html#sec-figures1",
-    "href": "index.html#sec-figures1",
-    "title": "Automating the Modelling of Transformative Artificial Intelligence Risks",
-    "section": "Images & Figures",
-    "text": "Images & Figures\n[![AMTAIR Automation Pipeline from @bucknall2022](/images/pipeline.png){\n  #fig-automation_pipeline\n  fig-scap=\"Five-step AMTAIR automation pipeline from PDFs to Bayesian networks\" \n  fig-alt=\"FLOWCHART: Five-step automation pipeline workflow for AMTAIR project.\n          DATA: The pipeline transforms PDFs through ArgDown, BayesDown, CSV, and HTML into Bayesian network visualizations.\n          PURPOSE: Illustrates the core technical process that enables automated extraction of probabilistic models from AI safety literature.\n          DETAILS: Five numbered green steps show: (1) LLM-based extraction from PDFs to ArgDown, (2) ArgDown to BayesDown completion with probabilities, (3) Extracting world-models as CSV data, (4) Software tools for data inference, and (5) Visualization of the resulting Bayesian network.\n          Each step includes example outputs, with the final visualization showing a Rain-Sprinkler-Grass Wet Bayesian network with probability tables.\n          SOURCE: Created by the author to explain the AMTAIR methodology\n          \"\n  fig-align=\"center\" \n  width=\"100%\"\n  }](https://github.com/VJMeyer/submission)\n\n\nTesting crossreferencing grapics @fig-automation_pipeline.\n\n![Caption/Title 2](/images/cover.png){#fig-testgraphic2 fig-scap=\"Short 2 caption\" fig-alt=\"2nd Alt Text / Description.\" fig-align=\"left\" width=\"30%\"}\n\nTesting crossreferencing grapics @fig-testgraphic2.\n\n\n\n\n\n\nFigure 1.1: AMTAIR Automation Pipeline from\n\n\n\nTesting crossreferencing grapics Figure 3.2. Note that the indentations of graphic inclusions get messed up by viewing them in “view mode” in VS code.\n\n\n\n\n\n\nFigure 1.2: Caption/Title 2\n\n\n\nTesting crossreferencing grapics Figure 1.2.",
-    "crumbs": [
-      "Preface"
-    ]
-  },
-  {
-    "objectID": "index.html#page-breaks",
-    "href": "index.html#page-breaks",
-    "title": "Automating the Modelling of Transformative Artificial Intelligence Risks",
-    "section": "Page Breaks",
-    "text": "Page Breaks\npage 1\n\n\n\npage 2\npage 1\n\npage 2",
-    "crumbs": [
-      "Preface"
-    ]
-  },
-  {
-    "objectID": "index.html#sec-code",
-    "href": "index.html#sec-code",
-    "title": "Automating the Modelling of Transformative Artificial Intelligence Risks",
-    "section": "Including Code",
-    "text": "Including Code\n\nCode\nimport pandas as pd\nprint(\"AMTAIR is working!\")\n\n\n\n\n\nAMTAIR is working!\n\n\n\nFigure 1.3: AMTAIR extraction pipeline visualization\n\n\n\n\nIn-Line LaTeX\n\n\n\nIn-Line HTML\nHere’s some raw inline HTML: html",
-    "crumbs": [
-      "Preface"
-    ]
-  },
-  {
-    "objectID": "index.html#reference-or-embed-code-from-.ipynb-files",
-    "href": "index.html#reference-or-embed-code-from-.ipynb-files",
-    "title": "Automating the Modelling of Transformative Artificial Intelligence Risks",
-    "section": "Reference or Embed Code from .ipynb files",
-    "text": "Reference or Embed Code from .ipynb files\n\nCode chunks from .ipynb notebooks can be embedded in the .qmd text with:\n{{&lt; embed /AMTAIR_Prototype/data/example_carlsmith/AMTAIR_Prototype_example_carlsmith.ipynb#connect_to_github_repository &gt;}}\n\n\nwhich produces the output of executing the code cell:\n\n\n\nCode\n# @title 0.2 --- Connect to GitHub Repository --- Load Files [connect_to_github_repository]\n\n\"\"\"\nBLOCK PURPOSE: Establishes connection to the AMTAIR GitHub repository and provides\nfunctions to load example data files for processing.\n\nThis block creates a reusable function for accessing files from the project's\nGitHub repository, enabling access to example files like the rain-sprinkler-lawn\nBayesian network that serves as our canonical test case.\n\nDEPENDENCIES: requests library, io library\nOUTPUTS: load_file_from_repo function and test file loads\n\"\"\"\n\nfrom requests.exceptions import HTTPError\n\n# Specify the base repository URL for the AMTAIR project\nrepo_url = \"https://raw.githubusercontent.com/SingularitySmith/AMTAIR_Prototype/main/data/example_carlsmith/\"\nprint(f\"Connecting to repository: {repo_url}\")\n\ndef load_file_from_repo(relative_path):\n    \"\"\"\n    Loads a file from the specified GitHub repository using a relative path.\n\n    Args:\n        relative_path (str): Path to the file relative to the repo_url\n\n    Returns:\n        For CSV/JSON: pandas DataFrame\n        For MD: string containing file contents\n\n    Raises:\n        HTTPError: If file not found or other HTTP error occurs\n        ValueError: If unsupported file type is requested\n    \"\"\"\n    file_url = repo_url + relative_path\n    print(f\"Attempting to load: {file_url}\")\n\n    # Fetch the file content from GitHub\n    response = requests.get(file_url)\n\n    # Check for bad status codes with enhanced error messages\n    if response.status_code == 404:\n        raise HTTPError(f\"File not found at URL: {file_url}. Check the file path/name and ensure the file is publicly accessible.\", response=response)\n    else:\n        response.raise_for_status()  # Raise for other error codes\n\n    # Convert response to file-like object\n    file_object = io.StringIO(response.text)\n\n    # Process different file types appropriately\n    if relative_path.endswith(\".csv\"):\n        return pd.read_csv(file_object)  # Return DataFrame for CSV\n    elif relative_path.endswith(\".json\"):\n        return pd.read_json(file_object)  # Return DataFrame for JSON\n    elif relative_path.endswith(\".md\"):\n        return file_object.read()  # Return raw content for MD files\n    else:\n        raise ValueError(f\"Unsupported file type: {relative_path.split('.')[-1]}. Add support in the GitHub Connection section of this notebook.\")\n\n# Load example files to test connection\ntry:\n    # Load the extracted data CSV file\n#    df = load_file_from_repo(\"extracted_data.csv\")\n\n    # Load the ArgDown test text\n    md_content = load_file_from_repo(\"ArgDown.md\")\n\n    print(\"✅ Successfully connected to repository and loaded test files.\")\nexcept Exception as e:\n    print(f\"❌ Error loading files: {str(e)}\")\n    print(\"Please check your internet connection and the repository URL.\")\n\n# Display preview of loaded content (commented out to avoid cluttering output)\nprint(md_content)\n\n\nConnecting to repository: https://raw.githubusercontent.com/SingularitySmith/AMTAIR_Prototype/main/data/example_carlsmith/\nAttempting to load: https://raw.githubusercontent.com/SingularitySmith/AMTAIR_Prototype/main/data/example_carlsmith/ArgDown.md\n✅ Successfully connected to repository and loaded test files.\n[Existential_Catastrophe]: The destruction of humanity's long-term potential due to AI systems we've lost control over. {\"instantiations\": [\"existential_catastrophe_TRUE\", \"existential_catastrophe_FALSE\"]}\n- [Human_Disempowerment]: Permanent and collective disempowerment of humanity relative to AI systems. {\"instantiations\": [\"human_disempowerment_TRUE\", \"human_disempowerment_FALSE\"]}\n    - [Scale_Of_Power_Seeking]: Power-seeking by AI systems scaling to the point of permanently disempowering all of humanity. {\"instantiations\": [\"scale_of_power_seeking_TRUE\", \"scale_of_power_seeking_FALSE\"]}\n        - [Misaligned_Power_Seeking]: Deployed AI systems seeking power in unintended and high-impact ways due to problems with their objectives. {\"instantiations\": [\"misaligned_power_seeking_TRUE\", \"misaligned_power_seeking_FALSE\"]}\n            - [APS_Systems]: AI systems with advanced capabilities, agentic planning, and strategic awareness. {\"instantiations\": [\"aps_systems_TRUE\", \"aps_systems_FALSE\"]}\n                - [Advanced_AI_Capability]: AI systems that outperform humans on tasks that grant significant power in the world. {\"instantiations\": [\"advanced_ai_capability_TRUE\", \"advanced_ai_capability_FALSE\"]}\n                - [Agentic_Planning]: AI systems making and executing plans based on world models to achieve objectives. {\"instantiations\": [\"agentic_planning_TRUE\", \"agentic_planning_FALSE\"]}\n                - [Strategic_Awareness]: AI systems with models accurately representing power dynamics with humans. {\"instantiations\": [\"strategic_awareness_TRUE\", \"strategic_awareness_FALSE\"]}\n            - [Difficulty_Of_Alignment]: It is harder to build aligned systems than misaligned systems that are attractive to deploy. {\"instantiations\": [\"difficulty_of_alignment_TRUE\", \"difficulty_of_alignment_FALSE\"]}\n                - [Instrumental_Convergence]: AI systems with misaligned objectives tend to seek power as an instrumental goal. {\"instantiations\": [\"instrumental_convergence_TRUE\", \"instrumental_convergence_FALSE\"]}\n                - [Problems_With_Proxies]: Optimizing for proxy objectives breaks correlations with intended goals. {\"instantiations\": [\"problems_with_proxies_TRUE\", \"problems_with_proxies_FALSE\"]}\n                - [Problems_With_Search]: Search processes can yield systems pursuing different objectives than intended. {\"instantiations\": [\"problems_with_search_TRUE\", \"problems_with_search_FALSE\"]}\n            - [Deployment_Decisions]: Decisions to deploy potentially misaligned AI systems. {\"instantiations\": [\"deployment_decisions_DEPLOY\", \"deployment_decisions_WITHHOLD\"]}\n                - [Incentives_To_Build_APS]: Strong incentives to build and deploy APS systems. {\"instantiations\": [\"incentives_to_build_aps_STRONG\", \"incentives_to_build_aps_WEAK\"]}\n                    - [Usefulness_Of_APS]: APS systems are very useful for many valuable tasks. {\"instantiations\": [\"usefulness_of_aps_HIGH\", \"usefulness_of_aps_LOW\"]}\n                    - [Competitive_Dynamics]: Competitive pressures between AI developers. {\"instantiations\": [\"competitive_dynamics_STRONG\", \"competitive_dynamics_WEAK\"]}\n                - [Deception_By_AI]: AI systems deceiving humans about their true objectives. {\"instantiations\": [\"deception_by_ai_TRUE\", \"deception_by_ai_FALSE\"]}\n        - [Corrective_Feedback]: Human society implementing corrections after observing problems. {\"instantiations\": [\"corrective_feedback_EFFECTIVE\", \"corrective_feedback_INEFFECTIVE\"]}\n            - [Warning_Shots]: Observable failures in weaker systems before catastrophic risks. {\"instantiations\": [\"warning_shots_OBSERVED\", \"warning_shots_UNOBSERVED\"]}\n            - [Rapid_Capability_Escalation]: AI capabilities escalating very rapidly, allowing little time for correction. {\"instantiations\": [\"rapid_capability_escalation_TRUE\", \"rapid_capability_escalation_FALSE\"]}\n[Barriers_To_Understanding]: Difficulty in understanding the internal workings of advanced AI systems. {\"instantiations\": [\"barriers_to_understanding_HIGH\", \"barriers_to_understanding_LOW\"]}\n- [Misaligned_Power_Seeking]: Deployed AI systems seeking power in unintended and high-impact ways due to problems with their objectives. {\"instantiations\": [\"misaligned_power_seeking_TRUE\", \"misaligned_power_seeking_FALSE\"]}\n[Adversarial_Dynamics]: Potentially adversarial relationships between humans and power-seeking AI. {\"instantiations\": [\"adversarial_dynamics_TRUE\", \"adversarial_dynamics_FALSE\"]}\n- [Misaligned_Power_Seeking]: Deployed AI systems seeking power in unintended and high-impact ways due to problems with their objectives. {\"instantiations\": [\"misaligned_power_seeking_TRUE\", \"misaligned_power_seeking_FALSE\"]}\n[Stakes_Of_Error]: The escalating impact of mistakes with power-seeking AI systems. {\"instantiations\": [\"stakes_of_error_HIGH\", \"stakes_of_error_LOW\"]}\n- [Misaligned_Power_Seeking]: Deployed AI systems seeking power in unintended and high-impact ways due to problems with their objectives. {\"instantiations\": [\"misaligned_power_seeking_TRUE\", \"misaligned_power_seeking_FALSE\"]}\n\n\n\n\n\n\nincluding ‘echo=true’ renders the code of the cell:\n{{&lt; embed /AMTAIR_Prototype/data/example_carlsmith/AMTAIR_Prototype_example_carlsmith.ipynb#connect_to_github_repository echo=true &gt;}}\n\n\n\nCode\n# @title 0.2 --- Connect to GitHub Repository --- Load Files [connect_to_github_repository]\n\n\"\"\"\nBLOCK PURPOSE: Establishes connection to the AMTAIR GitHub repository and provides\nfunctions to load example data files for processing.\n\nThis block creates a reusable function for accessing files from the project's\nGitHub repository, enabling access to example files like the rain-sprinkler-lawn\nBayesian network that serves as our canonical test case.\n\nDEPENDENCIES: requests library, io library\nOUTPUTS: load_file_from_repo function and test file loads\n\"\"\"\n\nfrom requests.exceptions import HTTPError\n\n# Specify the base repository URL for the AMTAIR project\nrepo_url = \"https://raw.githubusercontent.com/SingularitySmith/AMTAIR_Prototype/main/data/example_carlsmith/\"\nprint(f\"Connecting to repository: {repo_url}\")\n\ndef load_file_from_repo(relative_path):\n    \"\"\"\n    Loads a file from the specified GitHub repository using a relative path.\n\n    Args:\n        relative_path (str): Path to the file relative to the repo_url\n\n    Returns:\n        For CSV/JSON: pandas DataFrame\n        For MD: string containing file contents\n\n    Raises:\n        HTTPError: If file not found or other HTTP error occurs\n        ValueError: If unsupported file type is requested\n    \"\"\"\n    file_url = repo_url + relative_path\n    print(f\"Attempting to load: {file_url}\")\n\n    # Fetch the file content from GitHub\n    response = requests.get(file_url)\n\n    # Check for bad status codes with enhanced error messages\n    if response.status_code == 404:\n        raise HTTPError(f\"File not found at URL: {file_url}. Check the file path/name and ensure the file is publicly accessible.\", response=response)\n    else:\n        response.raise_for_status()  # Raise for other error codes\n\n    # Convert response to file-like object\n    file_object = io.StringIO(response.text)\n\n    # Process different file types appropriately\n    if relative_path.endswith(\".csv\"):\n        return pd.read_csv(file_object)  # Return DataFrame for CSV\n    elif relative_path.endswith(\".json\"):\n        return pd.read_json(file_object)  # Return DataFrame for JSON\n    elif relative_path.endswith(\".md\"):\n        return file_object.read()  # Return raw content for MD files\n    else:\n        raise ValueError(f\"Unsupported file type: {relative_path.split('.')[-1]}. Add support in the GitHub Connection section of this notebook.\")\n\n# Load example files to test connection\ntry:\n    # Load the extracted data CSV file\n#    df = load_file_from_repo(\"extracted_data.csv\")\n\n    # Load the ArgDown test text\n    md_content = load_file_from_repo(\"ArgDown.md\")\n\n    print(\"✅ Successfully connected to repository and loaded test files.\")\nexcept Exception as e:\n    print(f\"❌ Error loading files: {str(e)}\")\n    print(\"Please check your internet connection and the repository URL.\")\n\n# Display preview of loaded content (commented out to avoid cluttering output)\nprint(md_content)\n\n\nConnecting to repository: https://raw.githubusercontent.com/SingularitySmith/AMTAIR_Prototype/main/data/example_carlsmith/\nAttempting to load: https://raw.githubusercontent.com/SingularitySmith/AMTAIR_Prototype/main/data/example_carlsmith/ArgDown.md\n✅ Successfully connected to repository and loaded test files.\n[Existential_Catastrophe]: The destruction of humanity's long-term potential due to AI systems we've lost control over. {\"instantiations\": [\"existential_catastrophe_TRUE\", \"existential_catastrophe_FALSE\"]}\n- [Human_Disempowerment]: Permanent and collective disempowerment of humanity relative to AI systems. {\"instantiations\": [\"human_disempowerment_TRUE\", \"human_disempowerment_FALSE\"]}\n    - [Scale_Of_Power_Seeking]: Power-seeking by AI systems scaling to the point of permanently disempowering all of humanity. {\"instantiations\": [\"scale_of_power_seeking_TRUE\", \"scale_of_power_seeking_FALSE\"]}\n        - [Misaligned_Power_Seeking]: Deployed AI systems seeking power in unintended and high-impact ways due to problems with their objectives. {\"instantiations\": [\"misaligned_power_seeking_TRUE\", \"misaligned_power_seeking_FALSE\"]}\n            - [APS_Systems]: AI systems with advanced capabilities, agentic planning, and strategic awareness. {\"instantiations\": [\"aps_systems_TRUE\", \"aps_systems_FALSE\"]}\n                - [Advanced_AI_Capability]: AI systems that outperform humans on tasks that grant significant power in the world. {\"instantiations\": [\"advanced_ai_capability_TRUE\", \"advanced_ai_capability_FALSE\"]}\n                - [Agentic_Planning]: AI systems making and executing plans based on world models to achieve objectives. {\"instantiations\": [\"agentic_planning_TRUE\", \"agentic_planning_FALSE\"]}\n                - [Strategic_Awareness]: AI systems with models accurately representing power dynamics with humans. {\"instantiations\": [\"strategic_awareness_TRUE\", \"strategic_awareness_FALSE\"]}\n            - [Difficulty_Of_Alignment]: It is harder to build aligned systems than misaligned systems that are attractive to deploy. {\"instantiations\": [\"difficulty_of_alignment_TRUE\", \"difficulty_of_alignment_FALSE\"]}\n                - [Instrumental_Convergence]: AI systems with misaligned objectives tend to seek power as an instrumental goal. {\"instantiations\": [\"instrumental_convergence_TRUE\", \"instrumental_convergence_FALSE\"]}\n                - [Problems_With_Proxies]: Optimizing for proxy objectives breaks correlations with intended goals. {\"instantiations\": [\"problems_with_proxies_TRUE\", \"problems_with_proxies_FALSE\"]}\n                - [Problems_With_Search]: Search processes can yield systems pursuing different objectives than intended. {\"instantiations\": [\"problems_with_search_TRUE\", \"problems_with_search_FALSE\"]}\n            - [Deployment_Decisions]: Decisions to deploy potentially misaligned AI systems. {\"instantiations\": [\"deployment_decisions_DEPLOY\", \"deployment_decisions_WITHHOLD\"]}\n                - [Incentives_To_Build_APS]: Strong incentives to build and deploy APS systems. {\"instantiations\": [\"incentives_to_build_aps_STRONG\", \"incentives_to_build_aps_WEAK\"]}\n                    - [Usefulness_Of_APS]: APS systems are very useful for many valuable tasks. {\"instantiations\": [\"usefulness_of_aps_HIGH\", \"usefulness_of_aps_LOW\"]}\n                    - [Competitive_Dynamics]: Competitive pressures between AI developers. {\"instantiations\": [\"competitive_dynamics_STRONG\", \"competitive_dynamics_WEAK\"]}\n                - [Deception_By_AI]: AI systems deceiving humans about their true objectives. {\"instantiations\": [\"deception_by_ai_TRUE\", \"deception_by_ai_FALSE\"]}\n        - [Corrective_Feedback]: Human society implementing corrections after observing problems. {\"instantiations\": [\"corrective_feedback_EFFECTIVE\", \"corrective_feedback_INEFFECTIVE\"]}\n            - [Warning_Shots]: Observable failures in weaker systems before catastrophic risks. {\"instantiations\": [\"warning_shots_OBSERVED\", \"warning_shots_UNOBSERVED\"]}\n            - [Rapid_Capability_Escalation]: AI capabilities escalating very rapidly, allowing little time for correction. {\"instantiations\": [\"rapid_capability_escalation_TRUE\", \"rapid_capability_escalation_FALSE\"]}\n[Barriers_To_Understanding]: Difficulty in understanding the internal workings of advanced AI systems. {\"instantiations\": [\"barriers_to_understanding_HIGH\", \"barriers_to_understanding_LOW\"]}\n- [Misaligned_Power_Seeking]: Deployed AI systems seeking power in unintended and high-impact ways due to problems with their objectives. {\"instantiations\": [\"misaligned_power_seeking_TRUE\", \"misaligned_power_seeking_FALSE\"]}\n[Adversarial_Dynamics]: Potentially adversarial relationships between humans and power-seeking AI. {\"instantiations\": [\"adversarial_dynamics_TRUE\", \"adversarial_dynamics_FALSE\"]}\n- [Misaligned_Power_Seeking]: Deployed AI systems seeking power in unintended and high-impact ways due to problems with their objectives. {\"instantiations\": [\"misaligned_power_seeking_TRUE\", \"misaligned_power_seeking_FALSE\"]}\n[Stakes_Of_Error]: The escalating impact of mistakes with power-seeking AI systems. {\"instantiations\": [\"stakes_of_error_HIGH\", \"stakes_of_error_LOW\"]}\n- [Misaligned_Power_Seeking]: Deployed AI systems seeking power in unintended and high-impact ways due to problems with their objectives. {\"instantiations\": [\"misaligned_power_seeking_TRUE\", \"misaligned_power_seeking_FALSE\"]}\n\n\n\n\nLink:\nFull Notebooks are embedded in the Appendix through the _quarto.yml file with:",
-    "crumbs": [
-      "Preface"
-    ]
-  },
-  {
-    "objectID": "index.html#embed-.html-resultrendering-from-.ipynb-notebook",
-    "href": "index.html#embed-.html-resultrendering-from-.ipynb-notebook",
-    "title": "Automating the Modelling of Transformative Artificial Intelligence Risks",
-    "section": "Embed .html result/rendering from .ipynb Notebook",
-    "text": "Embed .html result/rendering from .ipynb Notebook\n\nHtml Graph by Notebook Cell Inclusion - (from github-pages)\n{{&lt; embed /AMTAIR_Prototype/data/example_carlsmith/AMTAIR_Prototype_example_carlsmith.ipynb#html_graph_visualization_from_githubpage echo=true &gt;}}\n\n\n\nCode\nfrom IPython.display import IFrame\n\nIFrame(src=\"https://singularitysmith.github.io/AMTAIR_Prototype/bayesian_network_carlsmith.html\", width=\"100%\", height=\"600px\")\n\n\n\n        \n        \nDynamic Html Rendering of the Carlsmith Bayesian Network/DAG Visualization\n\n\n\n\n\nHtml Graph by Notebook Cell Inclusion with Website Call?\nhttps://singularitysmith.github.io/AMTAIR_Prototype/bayesian_network_carlsmith.html\n\n\nFull Bayesian Network Rendering\n{{&lt; embed /AMTAIR_Prototype/data/example_carlsmith/AMTAIR_Prototype_example_carlsmith.ipynb#html_graph_visualization_from_githubpage  echo=true &gt;}}\n\n\nRain-Sprinkler-Grass Network Rendering\n\n\nCode\nfrom IPython.display import IFrame\n\nIFrame(src=\"https://singularitysmith.github.io/AMTAIR_Prototype/bayesian_network.html\", width=\"100%\", height=\"600px\")\n\n\n\n        \n        \nDynamic Html Rendering of the Rain-Sprinkler-Grass DAG",
-    "crumbs": [
-      "Preface"
-    ]
-  },
-  {
-    "objectID": "index.html#diagrams",
-    "href": "index.html#diagrams",
-    "title": "Automating the Modelling of Transformative Artificial Intelligence Risks",
-    "section": "Diagrams",
-    "text": "Diagrams\nQuarto has native support for embedding Mermaid and Graphviz diagrams. This enables you to create flowcharts, sequence diagrams, state diagrams, Gantt charts, and more using a plain text syntax inspired by markdown.\nFor example, here we embed a flowchart created using Mermaid:\n\n\nCode\nflowchart LR\n  A[Hard edge] --&gt; B(Round edge)\n  B --&gt; C{Decision}\n  C --&gt; D[Result one]\n  C --&gt; E[Result two]\n\n\n\n\n\nflowchart LR\n  A[Hard edge] --&gt; B(Round edge)\n  B --&gt; C{Decision}\n  C --&gt; D[Result one]\n  C --&gt; E[Result two]",
-    "crumbs": [
-      "Preface"
-    ]
-  },
-  {
-    "objectID": "index.html#sec-citations",
-    "href": "index.html#sec-citations",
-    "title": "Automating the Modelling of Transformative Artificial Intelligence Risks",
-    "section": "Citations",
-    "text": "Citations\nSoares and Fallenstein (2014) \n(Soares and Fallenstein 2014) and (Knuth 1984)\nBlah Blah (see Knuth 1984, 33–35; also Growiec 2024, chap. 1)\nBlah Blah (Knuth 1984, 33–35, 38–39 and passim)\nBlah Blah (Growiec 2024; Knuth 1984).\nGrowiec says blah (2024)\n\nNarrative citations (author as subject)\nSoares and Fallenstein (2014) argues that AI alignment requires…\n\n\nParenthetical citations (supporting reference)\nRecent work supports this view (Soares and Fallenstein 2014; Knuth 1984).\n\n\nAuthor-only citation (when discussing the person)\nAs (2014) demonstrates in their analysis…\n\n\nYear-only citation (when author already mentioned)\nSoares (2014) later revised this position.\n\n\nPage-specific references\nThe key insight appears in (Soares and Fallenstein 2014, 45–67).\n\n\nMultiple works, different pages\nThis view is supported (Soares and Fallenstein 2014, 23; Knuth 1984, 156–59).",
-    "crumbs": [
-      "Preface"
-    ]
-  },
-  {
-    "objectID": "index.html#sec-crossref",
-    "href": "index.html#sec-crossref",
-    "title": "Automating the Modelling of Transformative Artificial Intelligence Risks",
-    "section": "Section Cross-References",
-    "text": "Section Cross-References\nRefer to sections like: Toward Adaptive Governance and Section Cross-References \nCaveat: refering to sections with @sec-HEADINGS works only for sections with:\n## Heading {#sec-HEADINGS}\nIt does not work for sections with \".unnumbered and/or .unlisted\":\n## Heading {#sec-HEADINGS .unnumbered .unlisted}\nFurthermore the .qmd and/or .md yml settings (~ numbering have to be just right)\n\nSection Numbers\nBy default, all headings in your document create a numbered section. You customize numbering depth using the number-depth option. For example, to only number sections immediately below the chapter level, use this:\nnumber-depth: 2\nNote that toc-depth is independent of number-depth (i.e. you can have unnumbered entries in the TOC if they are masked out from numbering by number-depth).\nTesting crossreferencing grapics Figure 3.2. See Chapter Quarto Syntax for more details on visualizing model diagnostics.\nTesting crossreferencing headings AI Existential Risk: The Carlsmith Model\nTesting crossreferencing headings @sec-rain-sprinkler-grass which does not work yet. \nChapter Cross-Reference Section Cross-References",
-    "crumbs": [
-      "Preface"
-    ]
-  },
-  {
-    "objectID": "index.html#pages-in-landscape",
-    "href": "index.html#pages-in-landscape",
-    "title": "Automating the Modelling of Transformative Artificial Intelligence Risks",
-    "section": "Pages in Landscape",
-    "text": "Pages in Landscape\n\nThis will appear in landscape but only in PDF format. Testing crossreferencing headings AI Existential Risk: The Carlsmith Model",
-    "crumbs": [
-      "Preface"
-    ]
-  },
-  {
     "objectID": "index.html#illustrations-and-terminology-quick-references",
     "href": "index.html#illustrations-and-terminology-quick-references",
     "title": "Automating the Modelling of Transformative Artificial Intelligence Risks",
@@ -224,7 +44,507 @@
     "href": "index.html#glossary",
     "title": "Automating the Modelling of Transformative Artificial Intelligence Risks",
     "section": "Glossary",
-    "text": "Glossary\n\n\n\nArgument mapping: A method for visually representing the structure of arguments\n\nBayesDown: An extension of ArgDown that incorporates probabilistic information\n\nBayesian network: A probabilistic graphical model representing variables and their dependencies\n\nConditional probability: The probability of an event given that another event has occurred\n\nDirected Acyclic Graph (DAG): A graph with directed edges and no cycles\n\nExistential risk: Risk of permanent curtailment of humanity’s potential\n\nPower-seeking AI: AI systems with instrumental incentives to acquire resources and power\n\nPrediction market: A market where participants trade contracts that resolve based on future events\n\nd-separation: A criterion for identifying conditional independence relationships in Bayesian networks\n\nMonte Carlo sampling: A computational technique using random sampling to obtain numerical results\n\n\n\n\nQuarto Features Previously Incompatible with LaTeX (Below)\n\n\n\n\n\n\n\n\n\nGrowiec, Jakub. 2024. “Existential Risk from Transformative AI: An Economic Perspective.” Technological and Economic Development of Economy, 1–27.\n\n\nKnuth, Donald E. 1984. “Literate Programming.” Computer Journal 27 (2): 97–111. https://doi.org/10.1093/comjnl/27.2.97.\n\n\nSoares, Nate, and Benja Fallenstein. 2014. “Aligning Superintelligence with Human Interests: A Technical Research Agenda.”",
+    "text": "Glossary\n\n\n\nArgument mapping: A method for visually representing the structure of arguments\n\nBayesDown: An extension of ArgDown that incorporates probabilistic information\n\nBayesian network: A probabilistic graphical model representing variables and their dependencies\n\nConditional probability: The probability of an event given that another event has occurred\n\nDirected Acyclic Graph (DAG): A graph with directed edges and no cycles\n\nExistential risk: Risk of permanent curtailment of humanity’s potential\n\nPower-seeking AI: AI systems with instrumental incentives to acquire resources and power\n\nPrediction market: A market where participants trade contracts that resolve based on future events\n\nd-separation: A criterion for identifying conditional independence relationships in Bayesian networks\n\nMonte Carlo sampling: A computational technique using random sampling to obtain numerical results",
+    "crumbs": [
+      "Preface"
+    ]
+  },
+  {
+    "objectID": "index.html#key-features",
+    "href": "index.html#key-features",
+    "title": "Automating the Modelling of Transformative Artificial Intelligence Risks",
+    "section": "Key Features",
+    "text": "Key Features\n\n1. Task Management System\n\nHTML comments with [ ] for tasks visible in ToDo-Tree\nCategories: FIND, VERIFY, CREATE, TODO\nProgress tracking with [x] (done) and [-] (verified)\n\n\n\n2. Multi-Format Output\n\nHTML: Interactive web version with navigation\nPDF: Professional academic document\nLaTeX: Source for further customization\nDOCX: For collaboration\n\n\n\n3. Cross-Referencing\n\nSections: @sec-section-name\nFigures: @fig-figure-name\nTables: @tbl-table-name\nCitations: @citation-key\n\n\n\n4. Advanced Features\n\nInteractive Jupyter notebooks\nMermaid diagrams\nMath equations (LaTeX)\nCallout blocks\nExtensive footnotes\nGlossary and abbreviations",
+    "crumbs": [
+      "Preface"
+    ]
+  },
+  {
+    "objectID": "index.html#quick-start",
+    "href": "index.html#quick-start",
+    "title": "Automating the Modelling of Transformative Artificial Intelligence Risks",
+    "section": "Quick Start",
+    "text": "Quick Start\n\nBuilding the Thesis\nbash\n# HTML output\nquarto render --to html\n\n# PDF output\nquarto render --to pdf\n\n# All formats\nquarto render\n\n\nTask Management\nmarkdown\n&lt;!-- [ ] TODO: Task description --&gt;\n&lt;!-- [ ] FIND: @missing-citation: \"Description\" --&gt;\n&lt;!-- [ ] VERIFY: @suggested-citation: \"Source\" --&gt;\n&lt;!-- [ ] CREATE: {#fig-name}: \"Figure description\" --&gt;\n\n\nAdding Content\n\nCreate/edit .qmd files in chapters/\nUpdate _quarto.yml if adding new chapters\nAdd citations to ref/MAref.bib\nPlace images in images/",
+    "crumbs": [
+      "Preface"
+    ]
+  },
+  {
+    "objectID": "index.html#best-practices",
+    "href": "index.html#best-practices",
+    "title": "Automating the Modelling of Transformative Artificial Intelligence Risks",
+    "section": "Best Practices",
+    "text": "Best Practices\n\n1. Consistent Formatting\n\nUse American spelling throughout\nFollow heading hierarchy (##, ###, ####)\nMaintain consistent citation style\nUse semantic line breaks\n\n\n\n2. Task Tracking\n\nCreate tasks as you write\nUpdate task status regularly\nUse categories for clarity\nInclude implementation details\n\n\n\n3. Version Control\n\nCommit frequently with descriptive messages\nUse branches for major revisions\nTag releases (draft versions)\n\n\n\n4. Documentation\n\nComment complex code blocks\nProvide alt text for all figures\nKeep this README updated\nDocument any custom scripts",
+    "crumbs": [
+      "Preface"
+    ]
+  },
+  {
+    "objectID": "index.html#troubleshooting",
+    "href": "index.html#troubleshooting",
+    "title": "Automating the Modelling of Transformative Artificial Intelligence Risks",
+    "section": "Troubleshooting",
+    "text": "Troubleshooting\n\nCommon Issues\n\nLaTeX errors: Check _quarto.yml for LaTeX settings\nMissing references: Ensure citations are in MAref.bib\nBroken links: Use relative paths for internal links\nTask visibility: Install ToDo-Tree extension in VS Code\n\n\n\nGetting Help\n\nQuarto documentation: https://quarto.org\nProject repository: https://github.com/VJMeyer/submission\nContact: Valentin2meyer@gmail.com",
+    "crumbs": [
+      "Preface"
+    ]
+  },
+  {
+    "objectID": "index.html#license",
+    "href": "index.html#license",
+    "title": "Automating the Modelling of Transformative Artificial Intelligence Risks",
+    "section": "License",
+    "text": "License\nMIT License - See LICENSE file for details",
+    "crumbs": [
+      "Preface"
+    ]
+  },
+  {
+    "objectID": "index.html#document-structure-and-headings",
+    "href": "index.html#document-structure-and-headings",
+    "title": "Automating the Modelling of Transformative Artificial Intelligence Risks",
+    "section": "Document Structure and Headings",
+    "text": "Document Structure and Headings\n\nHeading Hierarchy\nAlways use the full heading hierarchy for maximum organization:\nmarkdown\n# Chapter Title {#sec-chapter}\n## Major Section {#sec-major-section}\n### Subsection {#sec-subsection}\n#### Sub-subsection {#sec-subsubsection}\n`##### Sub-subsubsection {#sec-subsubsubsection}`\n`###### Sub-subsubsubsection {#sec-subsubsubsection}`\nBest Practices:\n\nAlways include {#sec-label} for cross-referencing\nUse descriptive, concise heading names\nMaintain consistent capitalization (Title Case for chapters, Sentence case for sections)\nAdd .unnumbered for sections without numbers (e.g., References)\nAdd .unlisted to exclude from TOC\nDo not manually number headings",
+    "crumbs": [
+      "Preface"
+    ]
+  },
+  {
+    "objectID": "index.html#text-formatting",
+    "href": "index.html#text-formatting",
+    "title": "Automating the Modelling of Transformative Artificial Intelligence Risks",
+    "section": "Text Formatting",
+    "text": "Text Formatting\n\nBasic Formatting\nmarkdown\n*italics* for emphasis\n**bold** for strong emphasis\n***bold italics*** for very strong emphasis\n~~strikethrough~~ for deleted text\n[highlighted text]{.mark}\n[underlined text]{.underline}\n[small caps]{.smallcaps}\n`inline code` in numerous applications\n\n\nAdvanced Formatting\nmarkdown\nsuperscript^2^ for exponents\nsubscript~2~ for chemical formulas",
+    "crumbs": [
+      "Preface"
+    ]
+  },
+  {
+    "objectID": "index.html#links",
+    "href": "index.html#links",
+    "title": "Automating the Modelling of Transformative Artificial Intelligence Risks",
+    "section": "Links",
+    "text": "Links\n&lt;https://quarto.org/docs/authoring/markdown-basics.html&gt; produces: https://quarto.org/docs/authoring/markdown-basics.html\n[Quarto Book Cross-References](https://quarto.org/docs/books/book-crossrefs.html) produces: Quarto Book Cross-References",
+    "crumbs": [
+      "Preface"
+    ]
+  },
+  {
+    "objectID": "index.html#sec-code",
+    "href": "index.html#sec-code",
+    "title": "Automating the Modelling of Transformative Artificial Intelligence Risks",
+    "section": "Including Code",
+    "text": "Including Code\n\nCode\nimport pandas as pd\nprint(\"AMTAIR is working!\")\n\n\n\n\n\nAMTAIR is working!\n\n\n\nFigure 2.1: AMTAIR extraction pipeline visualization",
+    "crumbs": [
+      "Preface"
+    ]
+  },
+  {
+    "objectID": "index.html#diagrams",
+    "href": "index.html#diagrams",
+    "title": "Automating the Modelling of Transformative Artificial Intelligence Risks",
+    "section": "Diagrams",
+    "text": "Diagrams\nQuarto has native support for embedding Mermaid and Graphviz diagrams. This enables you to create flowcharts, sequence diagrams, state diagrams, Gantt charts, and more using a plain text syntax inspired by markdown.\nFor example, here we embed a flowchart created using Mermaid:\n\n\nCode\nflowchart LR\n  A[Hard edge] --&gt; B(Round edge)\n  B --&gt; C{Decision}\n  C --&gt; D[Result one]\n  C --&gt; E[Result two]\n\n\n\n\n\nflowchart LR\n  A[Hard edge] --&gt; B(Round edge)\n  B --&gt; C{Decision}\n  C --&gt; D[Result one]\n  C --&gt; E[Result two]\n\n\n\n\n\n\n\nIn-Line LaTeX\n\n\n\nIn-Line HTML\nHere’s some raw inline HTML: html",
+    "crumbs": [
+      "Preface"
+    ]
+  },
+  {
+    "objectID": "index.html#reference-or-embed-code-from-.ipynb-files",
+    "href": "index.html#reference-or-embed-code-from-.ipynb-files",
+    "title": "Automating the Modelling of Transformative Artificial Intelligence Risks",
+    "section": "Reference or Embed Code from .ipynb files",
+    "text": "Reference or Embed Code from .ipynb files\n\nCode chunks from .ipynb notebooks can be embedded in the .qmd text with:\n{{&lt; embed /AMTAIR_Prototype/data/example_carlsmith/AMTAIR_Prototype_example_carlsmith.ipynb#connect_to_github_repository &gt;}}\n\n\nwhich produces the output of executing the code cell:\n\n\n\nCode\n# @title 0.2 --- Connect to GitHub Repository --- Load Files [connect_to_github_repository]\n\n\"\"\"\nBLOCK PURPOSE: Establishes connection to the AMTAIR GitHub repository and provides\nfunctions to load example data files for processing.\n\nThis block creates a reusable function for accessing files from the project's\nGitHub repository, enabling access to example files like the rain-sprinkler-lawn\nBayesian network that serves as our canonical test case.\n\nDEPENDENCIES: requests library, io library\nOUTPUTS: load_file_from_repo function and test file loads\n\"\"\"\n\nfrom requests.exceptions import HTTPError\n\n# Specify the base repository URL for the AMTAIR project\nrepo_url = \"https://raw.githubusercontent.com/SingularitySmith/AMTAIR_Prototype/main/data/example_carlsmith/\"\nprint(f\"Connecting to repository: {repo_url}\")\n\ndef load_file_from_repo(relative_path):\n    \"\"\"\n    Loads a file from the specified GitHub repository using a relative path.\n\n    Args:\n        relative_path (str): Path to the file relative to the repo_url\n\n    Returns:\n        For CSV/JSON: pandas DataFrame\n        For MD: string containing file contents\n\n    Raises:\n        HTTPError: If file not found or other HTTP error occurs\n        ValueError: If unsupported file type is requested\n    \"\"\"\n    file_url = repo_url + relative_path\n    print(f\"Attempting to load: {file_url}\")\n\n    # Fetch the file content from GitHub\n    response = requests.get(file_url)\n\n    # Check for bad status codes with enhanced error messages\n    if response.status_code == 404:\n        raise HTTPError(f\"File not found at URL: {file_url}. Check the file path/name and ensure the file is publicly accessible.\", response=response)\n    else:\n        response.raise_for_status()  # Raise for other error codes\n\n    # Convert response to file-like object\n    file_object = io.StringIO(response.text)\n\n    # Process different file types appropriately\n    if relative_path.endswith(\".csv\"):\n        return pd.read_csv(file_object)  # Return DataFrame for CSV\n    elif relative_path.endswith(\".json\"):\n        return pd.read_json(file_object)  # Return DataFrame for JSON\n    elif relative_path.endswith(\".md\"):\n        return file_object.read()  # Return raw content for MD files\n    else:\n        raise ValueError(f\"Unsupported file type: {relative_path.split('.')[-1]}. Add support in the GitHub Connection section of this notebook.\")\n\n# Load example files to test connection\ntry:\n    # Load the extracted data CSV file\n#    df = load_file_from_repo(\"extracted_data.csv\")\n\n    # Load the ArgDown test text\n    md_content = load_file_from_repo(\"ArgDown.md\")\n\n    print(\"✅ Successfully connected to repository and loaded test files.\")\nexcept Exception as e:\n    print(f\"❌ Error loading files: {str(e)}\")\n    print(\"Please check your internet connection and the repository URL.\")\n\n# Display preview of loaded content (commented out to avoid cluttering output)\nprint(md_content)\n\n\nConnecting to repository: https://raw.githubusercontent.com/SingularitySmith/AMTAIR_Prototype/main/data/example_carlsmith/\nAttempting to load: https://raw.githubusercontent.com/SingularitySmith/AMTAIR_Prototype/main/data/example_carlsmith/ArgDown.md\n✅ Successfully connected to repository and loaded test files.\n[Existential_Catastrophe]: The destruction of humanity's long-term potential due to AI systems we've lost control over. {\"instantiations\": [\"existential_catastrophe_TRUE\", \"existential_catastrophe_FALSE\"]}\n- [Human_Disempowerment]: Permanent and collective disempowerment of humanity relative to AI systems. {\"instantiations\": [\"human_disempowerment_TRUE\", \"human_disempowerment_FALSE\"]}\n    - [Scale_Of_Power_Seeking]: Power-seeking by AI systems scaling to the point of permanently disempowering all of humanity. {\"instantiations\": [\"scale_of_power_seeking_TRUE\", \"scale_of_power_seeking_FALSE\"]}\n        - [Misaligned_Power_Seeking]: Deployed AI systems seeking power in unintended and high-impact ways due to problems with their objectives. {\"instantiations\": [\"misaligned_power_seeking_TRUE\", \"misaligned_power_seeking_FALSE\"]}\n            - [APS_Systems]: AI systems with advanced capabilities, agentic planning, and strategic awareness. {\"instantiations\": [\"aps_systems_TRUE\", \"aps_systems_FALSE\"]}\n                - [Advanced_AI_Capability]: AI systems that outperform humans on tasks that grant significant power in the world. {\"instantiations\": [\"advanced_ai_capability_TRUE\", \"advanced_ai_capability_FALSE\"]}\n                - [Agentic_Planning]: AI systems making and executing plans based on world models to achieve objectives. {\"instantiations\": [\"agentic_planning_TRUE\", \"agentic_planning_FALSE\"]}\n                - [Strategic_Awareness]: AI systems with models accurately representing power dynamics with humans. {\"instantiations\": [\"strategic_awareness_TRUE\", \"strategic_awareness_FALSE\"]}\n            - [Difficulty_Of_Alignment]: It is harder to build aligned systems than misaligned systems that are attractive to deploy. {\"instantiations\": [\"difficulty_of_alignment_TRUE\", \"difficulty_of_alignment_FALSE\"]}\n                - [Instrumental_Convergence]: AI systems with misaligned objectives tend to seek power as an instrumental goal. {\"instantiations\": [\"instrumental_convergence_TRUE\", \"instrumental_convergence_FALSE\"]}\n                - [Problems_With_Proxies]: Optimizing for proxy objectives breaks correlations with intended goals. {\"instantiations\": [\"problems_with_proxies_TRUE\", \"problems_with_proxies_FALSE\"]}\n                - [Problems_With_Search]: Search processes can yield systems pursuing different objectives than intended. {\"instantiations\": [\"problems_with_search_TRUE\", \"problems_with_search_FALSE\"]}\n            - [Deployment_Decisions]: Decisions to deploy potentially misaligned AI systems. {\"instantiations\": [\"deployment_decisions_DEPLOY\", \"deployment_decisions_WITHHOLD\"]}\n                - [Incentives_To_Build_APS]: Strong incentives to build and deploy APS systems. {\"instantiations\": [\"incentives_to_build_aps_STRONG\", \"incentives_to_build_aps_WEAK\"]}\n                    - [Usefulness_Of_APS]: APS systems are very useful for many valuable tasks. {\"instantiations\": [\"usefulness_of_aps_HIGH\", \"usefulness_of_aps_LOW\"]}\n                    - [Competitive_Dynamics]: Competitive pressures between AI developers. {\"instantiations\": [\"competitive_dynamics_STRONG\", \"competitive_dynamics_WEAK\"]}\n                - [Deception_By_AI]: AI systems deceiving humans about their true objectives. {\"instantiations\": [\"deception_by_ai_TRUE\", \"deception_by_ai_FALSE\"]}\n        - [Corrective_Feedback]: Human society implementing corrections after observing problems. {\"instantiations\": [\"corrective_feedback_EFFECTIVE\", \"corrective_feedback_INEFFECTIVE\"]}\n            - [Warning_Shots]: Observable failures in weaker systems before catastrophic risks. {\"instantiations\": [\"warning_shots_OBSERVED\", \"warning_shots_UNOBSERVED\"]}\n            - [Rapid_Capability_Escalation]: AI capabilities escalating very rapidly, allowing little time for correction. {\"instantiations\": [\"rapid_capability_escalation_TRUE\", \"rapid_capability_escalation_FALSE\"]}\n[Barriers_To_Understanding]: Difficulty in understanding the internal workings of advanced AI systems. {\"instantiations\": [\"barriers_to_understanding_HIGH\", \"barriers_to_understanding_LOW\"]}\n- [Misaligned_Power_Seeking]: Deployed AI systems seeking power in unintended and high-impact ways due to problems with their objectives. {\"instantiations\": [\"misaligned_power_seeking_TRUE\", \"misaligned_power_seeking_FALSE\"]}\n[Adversarial_Dynamics]: Potentially adversarial relationships between humans and power-seeking AI. {\"instantiations\": [\"adversarial_dynamics_TRUE\", \"adversarial_dynamics_FALSE\"]}\n- [Misaligned_Power_Seeking]: Deployed AI systems seeking power in unintended and high-impact ways due to problems with their objectives. {\"instantiations\": [\"misaligned_power_seeking_TRUE\", \"misaligned_power_seeking_FALSE\"]}\n[Stakes_Of_Error]: The escalating impact of mistakes with power-seeking AI systems. {\"instantiations\": [\"stakes_of_error_HIGH\", \"stakes_of_error_LOW\"]}\n- [Misaligned_Power_Seeking]: Deployed AI systems seeking power in unintended and high-impact ways due to problems with their objectives. {\"instantiations\": [\"misaligned_power_seeking_TRUE\", \"misaligned_power_seeking_FALSE\"]}\n\n\n\n\n\n\nincluding ‘echo=true’ renders the code of the cell:\n{{&lt; embed /AMTAIR_Prototype/data/example_carlsmith/AMTAIR_Prototype_example_carlsmith.ipynb#connect_to_github_repository echo=true &gt;}}\n\n\n\nCode\n# @title 0.2 --- Connect to GitHub Repository --- Load Files [connect_to_github_repository]\n\n\"\"\"\nBLOCK PURPOSE: Establishes connection to the AMTAIR GitHub repository and provides\nfunctions to load example data files for processing.\n\nThis block creates a reusable function for accessing files from the project's\nGitHub repository, enabling access to example files like the rain-sprinkler-lawn\nBayesian network that serves as our canonical test case.\n\nDEPENDENCIES: requests library, io library\nOUTPUTS: load_file_from_repo function and test file loads\n\"\"\"\n\nfrom requests.exceptions import HTTPError\n\n# Specify the base repository URL for the AMTAIR project\nrepo_url = \"https://raw.githubusercontent.com/SingularitySmith/AMTAIR_Prototype/main/data/example_carlsmith/\"\nprint(f\"Connecting to repository: {repo_url}\")\n\ndef load_file_from_repo(relative_path):\n    \"\"\"\n    Loads a file from the specified GitHub repository using a relative path.\n\n    Args:\n        relative_path (str): Path to the file relative to the repo_url\n\n    Returns:\n        For CSV/JSON: pandas DataFrame\n        For MD: string containing file contents\n\n    Raises:\n        HTTPError: If file not found or other HTTP error occurs\n        ValueError: If unsupported file type is requested\n    \"\"\"\n    file_url = repo_url + relative_path\n    print(f\"Attempting to load: {file_url}\")\n\n    # Fetch the file content from GitHub\n    response = requests.get(file_url)\n\n    # Check for bad status codes with enhanced error messages\n    if response.status_code == 404:\n        raise HTTPError(f\"File not found at URL: {file_url}. Check the file path/name and ensure the file is publicly accessible.\", response=response)\n    else:\n        response.raise_for_status()  # Raise for other error codes\n\n    # Convert response to file-like object\n    file_object = io.StringIO(response.text)\n\n    # Process different file types appropriately\n    if relative_path.endswith(\".csv\"):\n        return pd.read_csv(file_object)  # Return DataFrame for CSV\n    elif relative_path.endswith(\".json\"):\n        return pd.read_json(file_object)  # Return DataFrame for JSON\n    elif relative_path.endswith(\".md\"):\n        return file_object.read()  # Return raw content for MD files\n    else:\n        raise ValueError(f\"Unsupported file type: {relative_path.split('.')[-1]}. Add support in the GitHub Connection section of this notebook.\")\n\n# Load example files to test connection\ntry:\n    # Load the extracted data CSV file\n#    df = load_file_from_repo(\"extracted_data.csv\")\n\n    # Load the ArgDown test text\n    md_content = load_file_from_repo(\"ArgDown.md\")\n\n    print(\"✅ Successfully connected to repository and loaded test files.\")\nexcept Exception as e:\n    print(f\"❌ Error loading files: {str(e)}\")\n    print(\"Please check your internet connection and the repository URL.\")\n\n# Display preview of loaded content (commented out to avoid cluttering output)\nprint(md_content)\n\n\nConnecting to repository: https://raw.githubusercontent.com/SingularitySmith/AMTAIR_Prototype/main/data/example_carlsmith/\nAttempting to load: https://raw.githubusercontent.com/SingularitySmith/AMTAIR_Prototype/main/data/example_carlsmith/ArgDown.md\n✅ Successfully connected to repository and loaded test files.\n[Existential_Catastrophe]: The destruction of humanity's long-term potential due to AI systems we've lost control over. {\"instantiations\": [\"existential_catastrophe_TRUE\", \"existential_catastrophe_FALSE\"]}\n- [Human_Disempowerment]: Permanent and collective disempowerment of humanity relative to AI systems. {\"instantiations\": [\"human_disempowerment_TRUE\", \"human_disempowerment_FALSE\"]}\n    - [Scale_Of_Power_Seeking]: Power-seeking by AI systems scaling to the point of permanently disempowering all of humanity. {\"instantiations\": [\"scale_of_power_seeking_TRUE\", \"scale_of_power_seeking_FALSE\"]}\n        - [Misaligned_Power_Seeking]: Deployed AI systems seeking power in unintended and high-impact ways due to problems with their objectives. {\"instantiations\": [\"misaligned_power_seeking_TRUE\", \"misaligned_power_seeking_FALSE\"]}\n            - [APS_Systems]: AI systems with advanced capabilities, agentic planning, and strategic awareness. {\"instantiations\": [\"aps_systems_TRUE\", \"aps_systems_FALSE\"]}\n                - [Advanced_AI_Capability]: AI systems that outperform humans on tasks that grant significant power in the world. {\"instantiations\": [\"advanced_ai_capability_TRUE\", \"advanced_ai_capability_FALSE\"]}\n                - [Agentic_Planning]: AI systems making and executing plans based on world models to achieve objectives. {\"instantiations\": [\"agentic_planning_TRUE\", \"agentic_planning_FALSE\"]}\n                - [Strategic_Awareness]: AI systems with models accurately representing power dynamics with humans. {\"instantiations\": [\"strategic_awareness_TRUE\", \"strategic_awareness_FALSE\"]}\n            - [Difficulty_Of_Alignment]: It is harder to build aligned systems than misaligned systems that are attractive to deploy. {\"instantiations\": [\"difficulty_of_alignment_TRUE\", \"difficulty_of_alignment_FALSE\"]}\n                - [Instrumental_Convergence]: AI systems with misaligned objectives tend to seek power as an instrumental goal. {\"instantiations\": [\"instrumental_convergence_TRUE\", \"instrumental_convergence_FALSE\"]}\n                - [Problems_With_Proxies]: Optimizing for proxy objectives breaks correlations with intended goals. {\"instantiations\": [\"problems_with_proxies_TRUE\", \"problems_with_proxies_FALSE\"]}\n                - [Problems_With_Search]: Search processes can yield systems pursuing different objectives than intended. {\"instantiations\": [\"problems_with_search_TRUE\", \"problems_with_search_FALSE\"]}\n            - [Deployment_Decisions]: Decisions to deploy potentially misaligned AI systems. {\"instantiations\": [\"deployment_decisions_DEPLOY\", \"deployment_decisions_WITHHOLD\"]}\n                - [Incentives_To_Build_APS]: Strong incentives to build and deploy APS systems. {\"instantiations\": [\"incentives_to_build_aps_STRONG\", \"incentives_to_build_aps_WEAK\"]}\n                    - [Usefulness_Of_APS]: APS systems are very useful for many valuable tasks. {\"instantiations\": [\"usefulness_of_aps_HIGH\", \"usefulness_of_aps_LOW\"]}\n                    - [Competitive_Dynamics]: Competitive pressures between AI developers. {\"instantiations\": [\"competitive_dynamics_STRONG\", \"competitive_dynamics_WEAK\"]}\n                - [Deception_By_AI]: AI systems deceiving humans about their true objectives. {\"instantiations\": [\"deception_by_ai_TRUE\", \"deception_by_ai_FALSE\"]}\n        - [Corrective_Feedback]: Human society implementing corrections after observing problems. {\"instantiations\": [\"corrective_feedback_EFFECTIVE\", \"corrective_feedback_INEFFECTIVE\"]}\n            - [Warning_Shots]: Observable failures in weaker systems before catastrophic risks. {\"instantiations\": [\"warning_shots_OBSERVED\", \"warning_shots_UNOBSERVED\"]}\n            - [Rapid_Capability_Escalation]: AI capabilities escalating very rapidly, allowing little time for correction. {\"instantiations\": [\"rapid_capability_escalation_TRUE\", \"rapid_capability_escalation_FALSE\"]}\n[Barriers_To_Understanding]: Difficulty in understanding the internal workings of advanced AI systems. {\"instantiations\": [\"barriers_to_understanding_HIGH\", \"barriers_to_understanding_LOW\"]}\n- [Misaligned_Power_Seeking]: Deployed AI systems seeking power in unintended and high-impact ways due to problems with their objectives. {\"instantiations\": [\"misaligned_power_seeking_TRUE\", \"misaligned_power_seeking_FALSE\"]}\n[Adversarial_Dynamics]: Potentially adversarial relationships between humans and power-seeking AI. {\"instantiations\": [\"adversarial_dynamics_TRUE\", \"adversarial_dynamics_FALSE\"]}\n- [Misaligned_Power_Seeking]: Deployed AI systems seeking power in unintended and high-impact ways due to problems with their objectives. {\"instantiations\": [\"misaligned_power_seeking_TRUE\", \"misaligned_power_seeking_FALSE\"]}\n[Stakes_Of_Error]: The escalating impact of mistakes with power-seeking AI systems. {\"instantiations\": [\"stakes_of_error_HIGH\", \"stakes_of_error_LOW\"]}\n- [Misaligned_Power_Seeking]: Deployed AI systems seeking power in unintended and high-impact ways due to problems with their objectives. {\"instantiations\": [\"misaligned_power_seeking_TRUE\", \"misaligned_power_seeking_FALSE\"]}\n\n\n\n\nLink:\nFull Notebooks are embedded in the Appendix through the _quarto.yml file with:",
+    "crumbs": [
+      "Preface"
+    ]
+  },
+  {
+    "objectID": "index.html#embed-.html-resultrendering-from-.ipynb-notebook",
+    "href": "index.html#embed-.html-resultrendering-from-.ipynb-notebook",
+    "title": "Automating the Modelling of Transformative Artificial Intelligence Risks",
+    "section": "Embed .html result/rendering from .ipynb Notebook",
+    "text": "Embed .html result/rendering from .ipynb Notebook\n\nHtml Graph by Notebook Cell Inclusion - (from github-pages)\n{{&lt; embed /AMTAIR_Prototype/data/example_carlsmith/AMTAIR_Prototype_example_carlsmith.ipynb#html_graph_visualization_from_githubpage echo=true &gt;}}\n\n\n\nCode\nfrom IPython.display import IFrame\n\nIFrame(src=\"https://singularitysmith.github.io/AMTAIR_Prototype/bayesian_network_carlsmith.html\", width=\"100%\", height=\"600px\")\n\n\n\n        \n        \nDynamic Html Rendering of the Carlsmith Bayesian Network/DAG Visualization\n\n\n\n\n\nHtml Graph by Notebook Cell Inclusion with Website Call?\nhttps://singularitysmith.github.io/AMTAIR_Prototype/bayesian_network_carlsmith.html\n\n\nFull Bayesian Network Rendering\n{{&lt; embed /AMTAIR_Prototype/data/example_carlsmith/AMTAIR_Prototype_example_carlsmith.ipynb#html_graph_visualization_from_githubpage  echo=true &gt;}}\n\n\nRain-Sprinkler-Grass Network Rendering\n\n\nCode\nfrom IPython.display import IFrame\n\nIFrame(src=\"https://singularitysmith.github.io/AMTAIR_Prototype/bayesian_network.html\", width=\"100%\", height=\"600px\")\n\n\n\n        \n        \nDynamic Html Rendering of the Rain-Sprinkler-Grass DAG",
+    "crumbs": [
+      "Preface"
+    ]
+  },
+  {
+    "objectID": "index.html#lists-and-enumerations",
+    "href": "index.html#lists-and-enumerations",
+    "title": "Automating the Modelling of Transformative Artificial Intelligence Risks",
+    "section": "Lists and Enumerations",
+    "text": "Lists and Enumerations\n\nUnordered Lists\nmarkdown\n- First level item\n  - Second level item (2 spaces)\n    - Third level item (4 spaces)\n- Another first level item\n  with continuation (2 spaces for alignment)\n\n\nOrdered Lists\nmarkdown\n1. First item\n2. Second item\n   a) Sub-item (3 spaces)\n      i. Sub-sub-item (6 spaces)\n   b) Another sub-item\n3. Third item\n\n\nDefinition Lists\nmarkdown\nTerm One\n: Definition of term one with detailed explanation\n  that can span multiple lines\n\nTerm Two\n: Brief definition\n\nTerm Three\n: Another definition with multiple paragraphs\n\n  Additional paragraph for term three",
+    "crumbs": [
+      "Preface"
+    ]
+  },
+  {
+    "objectID": "index.html#code-blocks-and-verbatim-text",
+    "href": "index.html#code-blocks-and-verbatim-text",
+    "title": "Automating the Modelling of Transformative Artificial Intelligence Risks",
+    "section": "Code Blocks and Verbatim Text",
+    "text": "Code Blocks and Verbatim Text\n\nInline Code\nmarkdown\nUse `print(\"Hello\")` for inline code\n\n\nCode Blocks with Syntax Highlighting\nmarkdown\n```python\ndef calculate_risk(probability, impact):\n    \"\"\"Calculate risk score from probability and impact.\"\"\"\n    return probability * impact\n```\n\n\nVerbatim Text\nmarkdown\nThis is verbatim text that preserves all spacing and formatting exactly as typed",
+    "crumbs": [
+      "Preface"
+    ]
+  },
+  {
+    "objectID": "index.html#blockquotes-and-callouts",
+    "href": "index.html#blockquotes-and-callouts",
+    "title": "Automating the Modelling of Transformative Artificial Intelligence Risks",
+    "section": "Blockquotes and Callouts",
+    "text": "Blockquotes and Callouts\n\nSimple Blockquote\nmarkdown\n&gt; This is a blockquote for citations or important quotes.\n&gt; It can span multiple lines.\n&gt;\n&gt; And include multiple paragraphs.\n\n\nCallout Blocks\nmarkdown\n::: {.callout-note}\n## Note Title\nThis is a note callout with important information.\n:::\n\n::: {.callout-warning}\n## Warning\nThis warns about potential issues.\n:::\n\n::: {.callout-tip}\n## Pro Tip\nHelpful suggestions go here.\n:::\n\n::: {.callout-important}\n## Important\nCritical information that must not be missed.\n:::\n\n::: {.callout-caution}\n## Caution\nUse with care in specific situations.\n:::",
+    "crumbs": [
+      "Preface"
+    ]
+  },
+  {
+    "objectID": "index.html#figures-and-images",
+    "href": "index.html#figures-and-images",
+    "title": "Automating the Modelling of Transformative Artificial Intelligence Risks",
+    "section": "Figures and Images",
+    "text": "Figures and Images\n\nComplete Figure Syntax\nmarkdown\n[![Figure Caption for Display](/path/to/image.png){\n  #fig-unique-identifier\n  fig-scap=\"Short caption for list of figures\"\n  fig-alt=\"Detailed description for accessibility.\n          TYPE: [Chart/Diagram/Photo/etc.]\n          DATA: [What data is shown, axes, units]\n          PURPOSE: [Why included, what to observe]\n          DETAILS: [Key patterns, insights, anomalies]\n          SOURCE: [Citation or data source]\"\n  fig-align=\"center\"\n  width=\"80%\"\n}](https://optional-link-url.com)\n\n\nFigure Best Practices\n\nAlways include comprehensive alt text\nUse descriptive filenames\nOptimize image sizes for web/PDF\nMaintain consistent styling\nReference all figures in text: See @fig-identifier",
+    "crumbs": [
+      "Preface"
+    ]
+  },
+  {
+    "objectID": "index.html#tables",
+    "href": "index.html#tables",
+    "title": "Automating the Modelling of Transformative Artificial Intelligence Risks",
+    "section": "Tables",
+    "text": "Tables\n\nMarkdown Tables\nmarkdown\n| Column 1 | Column 2 | Column 3 |\n|----------|:--------:|--------:|\n| Left     | Center   | Right   |\n| Data     | Data     | Data    |\n\n: Table caption {#tbl-identifier}\n\n\nGrid Tables\nmarkdown\n+----------+----------+----------+\n| Header 1 | Header 2 | Header 3 |\n+==========+==========+==========+\n| Cell 1   | Cell 2   | Cell 3   |\n|          |          |          |\n| Multi-   | Multi-   | Multi-   |\n| line     | line     | line     |\n+----------+----------+----------+\n\n: Complex table with multiple lines {#tbl-complex}\n\n\n\nTable 2.1: Demonstration of pipe table syntax\n\n\n\n\n\nRight\nLeft\nDefault\nCenter\n\n\n\n\n12\n12\n12\n12\n\n\n123\n123\n123\n123\n\n\n1\n1\n1\n1\n\n\n\n\n\n\n\n\n\nTable 2.2: My Caption 1\n\n\n\n\n\nCol1\nCol2\nCol3\n\n\n\n\nA\nB\nC\n\n\nE\nF\nG\n\n\nA\nG\nG\n\n\n\n\n\n\nReferencing tables with @tbl-KEY: See Table 2.2.\n\n\n\nTable 2.3: Main Caption\n\n\n\n\n\n\n\n(a) First Table\n\n\n\n\n\nCol1\nCol2\nCol3\n\n\n\n\nA\nB\nC\n\n\nE\nF\nG\n\n\nA\nG\nG\n\n\n\n\n\n\n\n\n\n\n\n(b) Second Table\n\n\n\n\n\nCol1\nCol2\nCol3\n\n\n\n\nA\nB\nC\n\n\nE\nF\nG\n\n\nA\nG\nG\n\n\n\n\n\n\n\n\n\n\n\nSee Table 2.3 for details, especially Table 2.3 (b).",
+    "crumbs": [
+      "Preface"
+    ]
+  },
+  {
+    "objectID": "index.html#citations-and-references",
+    "href": "index.html#citations-and-references",
+    "title": "Automating the Modelling of Transformative Artificial Intelligence Risks",
+    "section": "Citations and References",
+    "text": "Citations and References\n\nCitation Styles\nmarkdown\nNarrative: @author2024 argues that...\nParenthetical: This is supported by evidence [@author2024].\nMultiple: Several studies confirm this [@author2024; @other2023].\nPage specific: See discussion in [@author2024, pp. 45-67].\nAuthor only: As [-@author2024] demonstrates...\n\n\nBibliography Entry\nbibtex\n@article{author2024,\n  title = {Article Title},\n  author = {Author, First and Other, Second},\n  date = {2024},\n  journaltitle = {Journal Name},\n  volume = {10},\n  number = {2},\n  pages = {45--67},\n  doi = {10.1234/example},\n  url = {https://example.com}\n}",
+    "crumbs": [
+      "Preface"
+    ]
+  },
+  {
+    "objectID": "index.html#cross-references",
+    "href": "index.html#cross-references",
+    "title": "Automating the Modelling of Transformative Artificial Intelligence Risks",
+    "section": "Cross-References",
+    "text": "Cross-References\n\nSection References\nmarkdown\nSee @sec-introduction for background.\nAs discussed in @sec-methodology...\n\n\nFigure and Table References\nmarkdown\n@fig-pipeline shows the workflow.\nResults are summarized in @tbl-results.\n\n\nEquation References\nmarkdown\n$$\nE = mc^2\n$$ {#eq-einstein}\n\nEinstein's equation (@eq-einstein) shows...",
+    "crumbs": [
+      "Preface"
+    ]
+  },
+  {
+    "objectID": "index.html#mathematics",
+    "href": "index.html#mathematics",
+    "title": "Automating the Modelling of Transformative Artificial Intelligence Risks",
+    "section": "Mathematics",
+    "text": "Mathematics\n\nInline Math\nmarkdown\nThe probability $P(A|B) = \\frac{P(B|A)P(A)}{P(B)}$\n\n\nDisplay Math\nmarkdown\n$$\n\\begin{align}\n\\nabla \\times \\vec{\\mathbf{B}} -\\, \\frac1c\\, \\frac{\\partial\\vec{\\mathbf{E}}}{\\partial t} &= \\frac{4\\pi}{c}\\vec{\\mathbf{j}} \\\\\n\\nabla \\cdot \\vec{\\mathbf{E}} &= 4 \\pi \\rho \\\\\n\\nabla \\times \\vec{\\mathbf{E}}\\, +\\, \\frac1c\\, \\frac{\\partial\\vec{\\mathbf{B}}}{\\partial t} &= \\vec{\\mathbf{0}} \\\\\n\\nabla \\cdot \\vec{\\mathbf{B}} &= 0\n\\end{align}\n$$\ninline math: \\(E = mc^{2}\\)\ndisplay math:\n\\[E = mc^{2}\\]\nIf you want to define custom TeX macros, include them within $$ delimiters enclosed in a .hidden block. For example:\n\n\\[\n\\def\\RR{{\\bf R}}\n\\def\\bold#1{{\\bf #1}}\n\\]\n\nFor HTML math processed using MathJax (the default) you can use the \\def, \\newcommand, \\renewcommand, \\newenvironment, \\renewenvironment, and \\let commands to create your own macros and environments.",
+    "crumbs": [
+      "Preface"
+    ]
+  },
+  {
+    "objectID": "index.html#footnotes",
+    "href": "index.html#footnotes",
+    "title": "Automating the Modelling of Transformative Artificial Intelligence Risks",
+    "section": "",
+    "text": "Inlines notes are easier to write, since you don’t have to pick an identifier and move down to type the note.↩︎\nHere is the footnote.↩︎\nHere’s one with multiple blocks.\nSubsequent paragraphs are indented to show that they belong to the previous footnote.\n{ some.code }\nThe whole paragraph can be indented, or just the first line. In this way, multi-paragraph footnotes work like multi-paragraph list items.↩︎",
+    "crumbs": [
+      "Preface"
+    ]
+  },
+  {
+    "objectID": "index.html#appendices",
+    "href": "index.html#appendices",
+    "title": "Automating the Modelling of Transformative Artificial Intelligence Risks",
+    "section": "Appendices",
+    "text": "Appendices\n\nStructure\nmarkdown\n# Appendices {.unnumbered}\n\n## Appendix A: Technical Details {#sec-appendix-a .unnumbered}\n\n### A.1 Implementation {.unnumbered}\n\n## Appendix B: Additional Results {#sec-appendix-b .unnumbered}\n\n\nBest Practices for Appendices\n\nInclude all supplementary material\nReference from main text\nNumber consistently\nProvide clear descriptions\nMaintain same formatting standards",
+    "crumbs": [
+      "Preface"
+    ]
+  },
+  {
+    "objectID": "index.html#glossary-and-abbreviations",
+    "href": "index.html#glossary-and-abbreviations",
+    "title": "Automating the Modelling of Transformative Artificial Intelligence Risks",
+    "section": "Glossary and Abbreviations",
+    "text": "Glossary and Abbreviations\n\nGlossary Format\nmarkdown\n# Glossary {.unnumbered}\nTerm\n: Definition\n\n\nAI\n: Artificial Intelligence - Computer systems performing tasks requiring human intelligence\n\nML\n: Machine Learning - Algorithms that improve through experience\n\nDL\n: Deep Learning - Neural networks with multiple layers",
+    "crumbs": [
+      "Preface"
+    ]
+  },
+  {
+    "objectID": "index.html#interactive-elements",
+    "href": "index.html#interactive-elements",
+    "title": "Automating the Modelling of Transformative Artificial Intelligence Risks",
+    "section": "Interactive Elements",
+    "text": "Interactive Elements\n\nJupyter Notebook Embedding\n{{&lt; embed notebook.ipynb#cell-label &gt;}}\n\n\nMermaid Diagrams\n```{mermaid}\ngraph TD\n    A[Start] --&gt; B{Decision}\n    B --&gt;|Yes| C[Action 1]\n    B --&gt;|No| D[Action 2]\n    C --&gt; E[End]\n    D --&gt; E",
+    "crumbs": [
+      "Preface"
+    ]
+  },
+  {
+    "objectID": "index.html#line-breaks-and-spacing",
+    "href": "index.html#line-breaks-and-spacing",
+    "title": "Automating the Modelling of Transformative Artificial Intelligence Risks",
+    "section": "Line Breaks and Spacing",
+    "text": "Line Breaks and Spacing\n\nSpacing Rules\n\nBetween sections: 2 blank lines\nBetween paragraphs: 1 blank line\nAround code blocks: 1 blank line before and after\nAround figures/tables: 1 blank line before and after\nAfter headings: 1 blank line\nBetween list items: No blank lines unless containing multiple paragraphs\n\n\n\nPage Breaks",
+    "crumbs": [
+      "Preface"
+    ]
+  },
+  {
+    "objectID": "index.html#comments-and-metadata",
+    "href": "index.html#comments-and-metadata",
+    "title": "Automating the Modelling of Transformative Artificial Intelligence Risks",
+    "section": "Comments and Metadata",
+    "text": "Comments and Metadata\n\nHTML Comments\n&lt;!-- This is a comment not shown in output --&gt;",
+    "crumbs": [
+      "Preface"
+    ]
+  },
+  {
+    "objectID": "index.html#overview",
+    "href": "index.html#overview",
+    "title": "Automating the Modelling of Transformative Artificial Intelligence Risks",
+    "section": "Overview",
+    "text": "Overview\nThis task management system uses HTML comments with specific formatting to create trackable, categorized tasks that integrate with VS Code’s ToDo-Tree extension while remaining invisible or visible depending on the status in rendered output.",
+    "crumbs": [
+      "Preface"
+    ]
+  },
+  {
+    "objectID": "index.html#task-categories-and-syntax",
+    "href": "index.html#task-categories-and-syntax",
+    "title": "Automating the Modelling of Transformative Artificial Intelligence Risks",
+    "section": "Task Categories and Syntax",
+    "text": "Task Categories and Syntax\n\n1. General Tasks\nIn markdown blocks or with verbatim code ticks:\n&lt;!-- [ ] TODO: General task description --&gt;\n&lt;!-- [ ] TODO: High-priority task with deadline (2024-12-31) --&gt;\n&lt;!-- [ ] TODO: Task with subtasks\n        - [ ] Subtask 1\n        - [ ] Subtask 2\n        - [ ] Subtask 3\n--&gt;\n\n\n2. Citation Tasks\nIn markdown blocks or with verbatim code ticks:\n&lt;!-- [ ] FIND: @missing-citation-key: \"Description of needed source, keywords, search terms\" --&gt;\n&lt;!-- [ ] VERIFY: @suggested-citation: \"Author (Year). Title. Journal.\" [Include BibTeX if available] --&gt;\n&lt;!-- [ ] UPDATE: @outdated-citation: \"Check for newer edition or updated data\" --&gt;\n\n\n3. Figure/Graphic Tasks\nIn markdown blocks or with verbatim code ticks:\n&lt;!-- [ ] CREATE: {#fig-diagram-name}: \"Description of needed diagram, style, data to include\" --&gt;\n&lt;!-- [ ] FIND: {#fig-example-image}: \"Stock photo of X, preferably showing Y\" --&gt;\n&lt;!-- [ ] UPDATE: {#fig-outdated-chart}: \"Update with 2024 data\" --&gt;\n&lt;!-- [ ] IMPROVE: {#fig-low-quality}: \"Higher resolution version needed\" --&gt;\n\n\n4. Content Tasks\nIn markdown blocks or with verbatim code ticks:\n&lt;!-- [ ] WRITE: Section 3.2 - Methodology details --&gt;\n&lt;!-- [ ] EXPAND: Background section needs 500 more words --&gt;\n&lt;!-- [ ] REVISE: Introduction for clarity and flow --&gt;\n&lt;!-- [ ] REVIEW: Chapter 4 for consistency --&gt;\n\n\n5. Technical Tasks\nIn markdown blocks or with verbatim code ticks:\n&lt;!-- [ ] FIX: Code block in section 2.3 has syntax error --&gt;\n&lt;!-- [ ] TEST: Jupyter notebook embedding --&gt;\n&lt;!-- [ ] OPTIMIZE: Large figure file sizes --&gt;\n&lt;!-- [ ] IMPLEMENT: Cross-reference checking script --&gt;",
+    "crumbs": [
+      "Preface"
+    ]
+  },
+  {
+    "objectID": "index.html#task-states",
+    "href": "index.html#task-states",
+    "title": "Automating the Modelling of Transformative Artificial Intelligence Risks",
+    "section": "Task States",
+    "text": "Task States\n\nOpen or In-ProgressTasks\nIn markdown blocks or with verbatim code ticks:\n&lt;!-- [ ] Task description --&gt;\n\n\nCompleted Tasks (Visible in ToDo-Tree)\nEither markdown blocks or verbatim code ticks or without (to remain hidden in output):\n&lt;!-- [x] Task description (completed 2024-01-20) --&gt;\n\n\nVerified/Archived Tasks (Hidden from ToDo-Tree)\nmarkdown\n&lt;!-- [-] Task description (verified and archived) --&gt;",
+    "crumbs": [
+      "Preface"
+    ]
+  },
+  {
+    "objectID": "index.html#advanced-task-formatting",
+    "href": "index.html#advanced-task-formatting",
+    "title": "Automating the Modelling of Transformative Artificial Intelligence Risks",
+    "section": "Advanced Task Formatting",
+    "text": "Advanced Task Formatting\n\nMulti-line Tasks with Details\nmarkdown\n&lt;!-- [ ] Major task with extensive details\n  \n  Background:\n  - Context for why this task exists\n  - Related issues or dependencies\n  \n  Requirements:\n  1. Specific requirement one\n  2. Specific requirement two\n  3. Specific requirement three\n  \n  Implementation Plan:\n  - [ ] Step 1: Initial research\n  - [ ] Step 2: Draft content\n  - [ ] Step 3: Review and revise\n  \n  Resources:\n  - Reference document: path/to/doc\n  - Example: url-to-example\n  \n--&gt;\n\n\nLinked Tasks\nmarkdown\n&lt;!-- [ ] PRIMARY: Main task description\n  Related tasks:\n  - See also: Task in Chapter 2\n  - Depends on: Task in Appendix A\n  - Blocks: Task in Chapter 5\n--&gt;\n\n\nConditional Tasks\nmarkdown\n&lt;!-- [ ] IF: Hypothesis confirmed in Chapter 3\n     THEN: Add supporting evidence section\n     ELSE: Revise theoretical framework --&gt;",
+    "crumbs": [
+      "Preface"
+    ]
+  },
+  {
+    "objectID": "index.html#task-tracking-best-practices",
+    "href": "index.html#task-tracking-best-practices",
+    "title": "Automating the Modelling of Transformative Artificial Intelligence Risks",
+    "section": "Task Tracking Best Practices",
+    "text": "Task Tracking Best Practices\n\n1. Task Creation Guidelines\n\nCreate tasks immediately when identified\nBe specific and actionable\nInclude context and success criteria\nLink related tasks\n\n\n\n2. Task Organization\n\nGroup related tasks together\nPlace tasks near or inside relevant content\nUse consistent formatting\nMaintain task hierarchy\n\n\n\n3. Priority System\nIn markdown blocks or with verbatim code ticks:\n&lt;!-- [ ] URGENT: Task needing immediate attention --&gt;\n&lt;!-- [ ] HIGH: Task important for next milestone --&gt;\n&lt;!-- [ ] MEDIUM: Standard priority task --&gt;\n&lt;!-- [ ] LOW: Nice-to-have improvement --&gt;\n#### Simple \"One-line tasks\"\n\nUse Code ticks and html comment and task format for tasks distinctly visible across all formats including the ToDo-Tree overview:\n\n`&lt;!-- [ ] ToDos for things to do / tasks / reminders (allows \"jump to with Taks Tree extension\") --&gt;`\n\nUse html comment and task format for open or uncertain tasks, visible in the .qmd file:\n\n&lt;!-- [ ] ToDos for things to do / tasks / reminders (allows \"jump to with Taks Tree extension\") --&gt;\n\n\n\n#### More Complex Tasks with Notes\n\nMore Information about task\nRelevant notes\nStep-by-step implementation Plan\nEtc.\n\n#### Completed Tasks\n\nRetain completed tasks in ToDo-Tree by adding an x in the brackets: `[x]`\n`&lt;!-- [x] Tasks which have been finished but should remain for later verification --&gt;`\n\n&lt;!-- [x] Tasks which have been finished but should remain for later verification --&gt;\n\n\nMark and remove completed tasks from ToDo-Tree by adding a minus in the brackets: `[-]`\n\n`&lt;!-- [-] Tasks which have been finished but should remain visible for later verification --&gt;`\n\n&lt;!-- [-] Tasks which have been finished but should remain for later verification (only in .qmd) --&gt;",
+    "crumbs": [
+      "Preface"
+    ]
+  },
+  {
+    "objectID": "index.html#task-management-workflow",
+    "href": "index.html#task-management-workflow",
+    "title": "Automating the Modelling of Transformative Artificial Intelligence Risks",
+    "section": "Task Management Workflow",
+    "text": "Task Management Workflow\n\n1. Task Creation\nIn markdown blocks or with verbatim code ticks:\n&lt;!-- [ ] TODO: Write introduction paragraph\n  Context: Need to introduce the concept of X\n  Requirements: \n  - Define key terms\n  - Provide historical context\n  - Connect to thesis argument\n  Deadline: 2024-02-15\n--&gt;\n\n\n2. Task Execution\nIn markdown blocks or with verbatim code ticks:\n&lt;!-- [ ] TODO: Write introduction paragraph\n  Progress:\n  - [x] Defined key terms\n  - [-] Not Working on historical context\n  - [ ] Connection to thesis argument\n--&gt;\n\n\n3. Task Completion\nIn markdown blocks or with verbatim code ticks:\n&lt;!-- [x] TODO: Write introduction paragraph (completed 2024-02-14)\n  Final version includes all requirements\n  Word count: 523\n  Review status: Approved by advisor\n--&gt;\n\n\n4. Task Archival\nIn markdown blocks or with verbatim code ticks:\n&lt;!-- [-] TODO: Write introduction paragraph (archived 2024-02-20)\n  Moved to version control history\n--&gt;",
+    "crumbs": [
+      "Preface"
+    ]
+  },
+  {
+    "objectID": "index.html#reporting-and-analytics",
+    "href": "index.html#reporting-and-analytics",
+    "title": "Automating the Modelling of Transformative Artificial Intelligence Risks",
+    "section": "Reporting and Analytics",
+    "text": "Reporting and Analytics\n\nTask Summary Template\nIn markdown blocks or with verbatim code ticks:\n&lt;!-- TASK SUMMARY: Chapter 3\n  Total tasks: 45\n  Completed: 32 (71%)\n  In progress: 8 (18%)\n  Open: 5 (11%)\n  \n  By category:\n  - WRITE: 15 tasks (10 complete)\n  - FIND: 12 tasks (8 complete)\n  - VERIFY: 8 tasks (7 complete)\n  - CREATE: 10 tasks (7 complete)\n  \n  Critical path:\n  1. Complete methodology section\n  2. Verify statistical analysis\n  3. Create results visualizations\n--&gt;",
+    "crumbs": [
+      "Preface"
+    ]
+  },
+  {
+    "objectID": "index.html#best-practices-summary-always-consistently",
+    "href": "index.html#best-practices-summary-always-consistently",
+    "title": "Automating the Modelling of Transformative Artificial Intelligence Risks",
+    "section": "Best Practices Summary — ALWAYS CONSISTENTLY:",
+    "text": "Best Practices Summary — ALWAYS CONSISTENTLY:\n\nBe Specific: Tasks should be actionable and measurable\nStay Organized: Group related tasks and maintain hierarchy\nArchive Completed: Keep task list manageable\nUse Categories: Leverage task types for better organization\nAdd Context: Include enough detail for future reference\nLink Related: Connect interdependent tasks\nMaintain Consistency: Use standard formatting throughout\nUse correct formatting: Deploy the correct formatting and fix any inconsistencies",
+    "crumbs": [
+      "Preface"
+    ]
+  },
+  {
+    "objectID": "index.html#overview-1",
+    "href": "index.html#overview-1",
+    "title": "Automating the Modelling of Transformative Artificial Intelligence Risks",
+    "section": "Overview",
+    "text": "Overview\nWhen merging content from multiple sources, it’s crucial to identify and manage duplicate, redundant, or overlapping material. This system uses Quarto formatting features to clearly mark such content for review and consolidation.",
+    "crumbs": [
+      "Preface"
+    ]
+  },
+  {
+    "objectID": "index.html#tagging-categories",
+    "href": "index.html#tagging-categories",
+    "title": "Automating the Modelling of Transformative Artificial Intelligence Risks",
+    "section": "Tagging Categories",
+    "text": "Tagging Categories\n\nA. Duplicate Content Marking\nIn markdown blocks or with verbatim code ticks:\n::: {.duplicate-content data-source=\"Chapter2.qmd\" data-section=\"2.3\"}\nThis paragraph appears to be duplicated from Chapter 2, Section 2.3.\nConsider consolidating or removing.\n:::\n\n`&lt;!-- DUPLICATE: This content also appears in Section 2.3 --&gt;`\n\n\nB. Redundant Content Highlighting\nIn markdown blocks or with verbatim code ticks:\n::: {.redundant-content}\n[This section covers similar ground to Section 3.2 but with less detail]{.mark style=\"background-color: #ffeb3b\"}\n:::\n\n&lt;!-- REDUNDANT: Similar content in Section 3.2 with more comprehensive coverage --&gt;\n\n\nC. Better Version Available\nIn markdown blocks or with verbatim code ticks:\n::: {.superseded-content data-better-version=\"Chapter4.qmd#sec-4-5\"}\nThis explanation is superseded by a more comprehensive version in Chapter 4, Section 4.5\n:::\n\n&lt;!-- SUPERSEDED: See Chapter 4.5 for improved version --&gt;\n\n\nD. Merge Candidate\nIn markdown blocks or with verbatim code ticks:\n::: {.merge-candidate data-merge-with=\"Section 5.2\"}\n**MERGE CANDIDATE**: This content could be combined with Section 5.2 for better flow.\n\nOriginal content here...\n:::\n\n&lt;!-- MERGE: Consider combining with Section 5.2 --&gt;",
+    "crumbs": [
+      "Preface"
+    ]
+  },
+  {
+    "objectID": "index.html#visual-marking-system",
+    "href": "index.html#visual-marking-system",
+    "title": "Automating the Modelling of Transformative Artificial Intelligence Risks",
+    "section": "Visual Marking System",
+    "text": "Visual Marking System\n\nColor-Coded Highlighting\nIn markdown blocks or with verbatim code ticks:\n[Duplicate content - exact match]{style=\"background-color: #ff6b6b; color: white\"}\n[Redundant content - similar coverage]{style=\"background-color: #ffeb3b\"}\n[Better version exists elsewhere]{style=\"background-color: #4ecdc4\"}\n[Merge candidate]{style=\"background-color: #45b7d1\"}\n[Review needed]{style=\"background-color: #fa8231\"}\n\n\nBorder Marking\nIn markdown blocks or with verbatim code ticks:\n::: {style=\"border-left: 5px solid #ff6b6b; padding-left: 10px\"}\nThis entire section is duplicated elsewhere.\n:::\n\n\nInline Marking\nIn markdown blocks or with verbatim code ticks:\nThis paragraph contains [duplicate phrase]{.duplicate} that appears \nin multiple locations.",
+    "crumbs": [
+      "Preface"
+    ]
+  },
+  {
+    "objectID": "index.html#metadata-tracking",
+    "href": "index.html#metadata-tracking",
+    "title": "Automating the Modelling of Transformative Artificial Intelligence Risks",
+    "section": "Metadata Tracking",
+    "text": "Metadata Tracking\n\nComprehensive Metadata\nIn markdown blocks or with verbatim code ticks:\n::: {.content-status \n     data-status=\"duplicate\"\n     data-original-source=\"intro.qmd#para-3\"\n     data-other-locations=\"chapter2.qmd#para-15, chapter5.qmd#para-8\"\n     data-recommendation=\"keep-original\"\n     data-reviewed-by=\"VM\"\n     data-review-date=\"2024-02-15\"}\nThis content appears in multiple locations.\nThe original in intro.qmd is most comprehensive.\n:::\n\n\nQuick Reference Tags\nIn markdown blocks or with verbatim code ticks:\n&lt;!-- \n  STATUS: Duplicate\n  ORIGINAL: intro.qmd#para-3\n  ALSO IN: ch2#para-15, ch5#para-8\n  ACTION: Remove this version\n--&gt;",
+    "crumbs": [
+      "Preface"
+    ]
+  },
+  {
+    "objectID": "index.html#workflow-for-content-merging",
+    "href": "index.html#workflow-for-content-merging",
+    "title": "Automating the Modelling of Transformative Artificial Intelligence Risks",
+    "section": "Workflow for Content Merging",
+    "text": "Workflow for Content Merging\n\n1. Initial Marking Phase\nIn markdown blocks or with verbatim code ticks:\n&lt;!-- PHASE 1: Initial marking --&gt;\n&lt;!-- [ ] TODO: Mark all duplicate content in Chapter 1 --&gt;\n&lt;!-- [ ] TODO: Identify redundant sections in Chapter 2 --&gt;\n&lt;!-- [ ] TODO: Tag better versions throughout document --&gt;\n\n\n2. Review and Comparison\nIn markdown blocks or with verbatim code ticks:\n&lt;!-- COMPARISON NEEDED --&gt;\n::: {.comparison-block}\n**Version A (Current)**: \nBrief explanation of concept X.\n\n**Version B (Chapter 3.2)**:\nMore detailed explanation of concept X with examples.\n\n**Recommendation**: Keep Version B, update cross-references.\n:::\n\n\n3. Consolidation Actions\nIn markdown blocks or with verbatim code ticks:\n&lt;!-- CONSOLIDATION PLAN --&gt;\n::: {.consolidation-plan}\n1. Keep primary version in Section 2.3\n2. Remove duplicate from Section 4.1\n3. Add cross-reference from Section 4.1 to Section 2.3\n4. Merge unique insights from Section 4.1 into Section 2.3\n:::",
+    "crumbs": [
+      "Preface"
+    ]
+  },
+  {
+    "objectID": "index.html#automated-detection-helpers",
+    "href": "index.html#automated-detection-helpers",
+    "title": "Automating the Modelling of Transformative Artificial Intelligence Risks",
+    "section": "Automated Detection Helpers",
+    "text": "Automated Detection Helpers\n\nSearch Patterns\nmarkdown\n&lt;!-- Common duplicate indicators --&gt;\n- \"As mentioned earlier\"\n- \"As discussed in\"\n- \"Similar to\"\n- \"Like we saw in\"\n- \"Returning to\"\n\n\nDuplicate Detection Checklist\nIn markdown blocks or with verbatim code ticks:\n&lt;!-- [ ] Check for repeated definitions --&gt;\n&lt;!-- [ ] Identify similar examples --&gt;\n&lt;!-- [ ] Find redundant explanations --&gt;\n&lt;!-- [ ] Locate repeated figures/tables --&gt;\n&lt;!-- [ ] Search for similar section headings --&gt;",
+    "crumbs": [
+      "Preface"
+    ]
+  },
+  {
+    "objectID": "index.html#best-practices-for-merging",
+    "href": "index.html#best-practices-for-merging",
+    "title": "Automating the Modelling of Transformative Artificial Intelligence Risks",
+    "section": "Best Practices for Merging",
+    "text": "Best Practices for Merging\n\n1. Pre-Merge Preparation\n\nMark all content systematically\nCreate comparison documents\nTrack all locations of similar content\nDocument rationale for decisions\n\n\n\n2. During Merge Process\n\nKeep best version based on:\n\nCompleteness\nClarity\nPlacement in document flow\nCitation quality\nFigure/table quality\n\n\n\n\n3. Post-Merge Cleanup\n\nUpdate all cross-references\nRemove duplicate citations\nConsolidate figures/tables\nHarmonize terminology\nVerify logical flow",
+    "crumbs": [
+      "Preface"
+    ]
+  },
+  {
+    "objectID": "index.html#templates-for-common-scenarios",
+    "href": "index.html#templates-for-common-scenarios",
+    "title": "Automating the Modelling of Transformative Artificial Intelligence Risks",
+    "section": "Templates for Common Scenarios",
+    "text": "Templates for Common Scenarios\n\nDuplicate Definition\nmarkdown\n::: {.duplicate-definition data-term=\"Bayesian Network\"}\n**DUPLICATE DEFINITION**: \"Bayesian Network\" is defined in:\n- Section 2.1 (basic definition)\n- Section 3.3 (technical definition) ← **KEEP THIS**\n- Glossary (summary definition)\n\nAction: Keep technical definition in 3.3, reference from 2.1\n:::\n\n\nRedundant Example\nmarkdown\n::: {.redundant-example}\n**REDUNDANT EXAMPLE**: Rain-Sprinkler-Lawn appears in:\n1. Introduction (brief mention)\n2. Chapter 2 (detailed walkthrough) ← **PRIMARY**\n3. Chapter 4 (reference only)\n\nAction: Keep detailed version, add cross-references from others\n:::\n\n\nOverlapping Sections\nmarkdown\n::: {.section-overlap}\n**SECTION OVERLAP**: \n- Section 3.2 \"Methodology Overview\" \n- Section 4.1 \"Methods Used\"\n\nContent comparison:\n- 70% overlap in general approach\n- 3.2 has better technical detail\n- 4.1 has better practical examples\n\nRecommendation: Merge into 3.2, incorporate examples from 4.1\n:::",
+    "crumbs": [
+      "Preface"
+    ]
+  },
+  {
+    "objectID": "index.html#visual-summary-blocks",
+    "href": "index.html#visual-summary-blocks",
+    "title": "Automating the Modelling of Transformative Artificial Intelligence Risks",
+    "section": "Visual Summary Blocks",
+    "text": "Visual Summary Blocks\n\nMerge Status Dashboard\nmarkdown\n::: {.merge-status-dashboard}\n**Chapter 2 Merge Status**\n- Total sections: 15\n- Duplicates found: 4\n- Redundant content: 7\n- Unique content: 4\n- Merge complete: 2/11\n- Pending review: 9\n:::\n\n\nDecision Log\nmarkdown\n::: {.merge-decision-log}\n**Merge Decisions - 2024-02-15**\n1. **Section 2.3 vs 4.1**: Kept 2.3, removed 4.1\n2. **Definition of AI**: Consolidated in Glossary\n3. **Example set A vs B**: Merged best of both into new set\n4. **Figure 2.1 vs 3.2**: Kept 3.2 (higher quality)\n:::",
+    "crumbs": [
+      "Preface"
+    ]
+  },
+  {
+    "objectID": "index.html#quality-assurance",
+    "href": "index.html#quality-assurance",
+    "title": "Automating the Modelling of Transformative Artificial Intelligence Risks",
+    "section": "Quality Assurance",
+    "text": "Quality Assurance\n\nPre-Publication Checklist\nIn markdown blocks or with verbatim code ticks:\n&lt;!-- [ ] All duplicate markers removed --&gt;\n&lt;!-- [ ] All merge decisions documented --&gt;\n&lt;!-- [ ] Cross-references updated --&gt;\n&lt;!-- [ ] No broken links from removed content --&gt;\n&lt;!-- [ ] Terminology harmonized --&gt;\n&lt;!-- [ ] Flow tested after merging --&gt;\n\n\nFinal Verification\nIn markdown blocks or with verbatim code ticks:\n&lt;!-- FINAL CHECK: Content Merging --&gt;\n- [ ] No duplicate content remains untagged\n- [ ] All redundancies resolved\n- [ ] Best versions retained\n- [ ] Smooth transitions between merged sections\n- [ ] Complete citation consolidation\n- [ ] Figure/table deduplication",
+    "crumbs": [
+      "Preface"
+    ]
+  },
+  {
+    "objectID": "index.html#revision-phase",
+    "href": "index.html#revision-phase",
+    "title": "Automating the Modelling of Transformative Artificial Intelligence Risks",
+    "section": "Revision Phase",
+    "text": "Revision Phase\n\nContent Review\n\nArgument flow logical and clear\nEvidence supports all claims\nCounterarguments addressed\nConclusions follow from evidence\nNo redundant content (check merge tags)\nAll promises in introduction fulfilled\n\n\n\nTask Completion\n\nAll TODO items addressed or documented\nAll FIND items researched\nAll VERIFY items confirmed\nAll CREATE items completed\nTask status updated ([], [x], [-])\nProgress summaries updated",
+    "crumbs": [
+      "Preface"
+    ]
+  },
+  {
+    "objectID": "index.html#prime-directives",
+    "href": "index.html#prime-directives",
+    "title": "Automating the Modelling of Transformative Artificial Intelligence Risks",
+    "section": "⚡ Prime Directives",
+    "text": "⚡ Prime Directives\n\nQuarto supremacy – exploit every reliable feature Quarto offers.\n\nFour-level heading discipline – never skip a level.\n\nRedundancy tagged, not deleted – see § Tagging System.\n\nChecklists rule every commit – see § Rigorous Checklist.\n\nFootnotes galore – default to footnotes for nuance, citations, side quests.\n\nGlossary, TOC, LOF, LOT, appendices, cross-refs – keep fully synched; update on every save.\n\nOne thought ≈ one line-break – err on the side of whitespace.",
+    "crumbs": [
+      "Preface"
+    ]
+  },
+  {
+    "objectID": "index.html#quarto-syntax-cheat-sheet-best-practice",
+    "href": "index.html#quarto-syntax-cheat-sheet-best-practice",
+    "title": "Automating the Modelling of Transformative Artificial Intelligence Risks",
+    "section": "Quarto Syntax Cheat-Sheet ↔︎ Best-Practice",
+    "text": "Quarto Syntax Cheat-Sheet ↔︎ Best-Practice\n\n\n\n\n\n\n\n\nFeature\nMinimal Syntax\nBest-Practice Guidance\n\n\n\n\nHeadings (h1–h4)\n#, ##, ###, ####\nUse all four levels; propose deeper sub-heads via &lt;!-- SUGGEST-H5: … --&gt;.\n\n\nParagraph breaks\nblank line\nGenerally wrap at 80 chars ⇢ git-diff clarity.\n\n\nBold / Italic / Both** / Strike**\n**b**, *i*, ***bi***, ~~del~~\nReserve bold for semantic emphasis, italics for titles & meta.\n\n\nLists\n-, *, 1.\nRarely nest &gt; 3 levels; indent 2 spaces per level.\n\n\nCallouts\n::: {.callout-note}\nUse .tip, .warning, .important, .duplicate (custom) for tagging; close with :::.\n\n\nBlockquotes\n&gt;\nIdeal for verbatim interview excerpts; cite speaker.\n\n\nCode blocks\n```r\nAlways declare language; add caption: ````{python} fig.cap=\"…\".\n\n\nFigures & Tables\n![](fig.png){#fig-id}\nAlways add {#fig-id fig-cap=\"…\"}; etc. cross-ref with @fig-id.\n\n\nCross-refs\n@sec-intro, @tbl-results\nPrefix: sec-, fig-, tbl-, eq-.\n\n\nCitations\n[@smith2024]\nMaintain .bib via Zotero; nightly quarto check.\n\n\nFootnotes\n[^1]\nOveruse for tangents, mini-proofs, data caveats.\n\n\nGlossary\nterm: Definition\nAppend glossary: true in task; link in-text {@term}.\n\n\nComments\n&lt;!-- [ ] TODO: … --&gt;\nUse for tasks; parse with Todo Tree VS Code plugin.",
+    "crumbs": [
+      "Preface"
+    ]
+  },
+  {
+    "objectID": "index.html#tagging-highlighting-system",
+    "href": "index.html#tagging-highlighting-system",
+    "title": "Automating the Modelling of Transformative Artificial Intelligence Risks",
+    "section": "Tagging / Highlighting System 🔖",
+    "text": "Tagging / Highlighting System 🔖\nUse the custom tagging and highlighting system for all materials",
+    "crumbs": [
+      "Preface"
+    ]
+  },
+  {
+    "objectID": "index.html#workflow-rules-apply-every-session",
+    "href": "index.html#workflow-rules-apply-every-session",
+    "title": "Automating the Modelling of Transformative Artificial Intelligence Risks",
+    "section": "Workflow Rules (apply every session)",
+    "text": "Workflow Rules (apply every session)\n\nBefore writing\n\nImport this prompt; restate the specific task in one sentence.\n\nLoad latest YAML (project, format, bibliography).\n\nDuring writing\n\nEvery new idea: decide body, footnote, or appendix and place instantly.\n\nAdd glossary entries as soon as a term of art appears.\n\nInsert provisional graphics with stub {#fig-TBD} and create a TODO comment.\n\nAfter writing\n\nRun quarto render --to html locally; resolve warnings.\n\nTick off § Rigorous Checklist; commit with message “feat(section): x – refs/glossary/figs updated”.",
+    "crumbs": [
+      "Preface"
+    ]
+  },
+  {
+    "objectID": "index.html#rigorous-checklist",
+    "href": "index.html#rigorous-checklist",
+    "title": "Automating the Modelling of Transformative Artificial Intelligence Risks",
+    "section": "Rigorous Checklist ✅",
+    "text": "Rigorous Checklist ✅\n\nUse the full hierarchy of headings\nAll figures/tables have IDs, captions, and are referenced in text.\n\nGlossary updated; new {@term} links render without warnings.\n\nCitation list reflects every [@] callout.\n\nFootnotes compile and are sorted numerically.\n\nAppendices contain overflow material only; each referenced at least once.\n\nduplicate callouts reviewed; none accidentally removed.\n\n“Outstanding graphics” & “Outstanding citations” subsections updated.",
     "crumbs": [
       "Preface"
     ]
@@ -250,21 +570,11 @@
     ]
   },
   {
-    "objectID": "chapters/0.Frontmatter.html#error-watch",
-    "href": "chapters/0.Frontmatter.html#error-watch",
-    "title": "1  Remaining Edits",
-    "section": "1.2 Error Watch",
-    "text": "1.2 Error Watch\n\n1.2.1 Catch all Potential Hallucinations\n&lt;!-- [ ] Keep track of all hallucinations that have been found here: --&gt;\n\nValidation Metrics: Claims of “85%+ accuracy for structural extraction” and “73% for probability capture” appear precise for what seems to be a prototype system. These need careful verification or qualification.\nPilot Study Results: “40% reduction in time to identify disagreements” and “60% improvement in agreement about disagreement” lack citations and seem surprisingly specific.\nRed-teaming Quantification: “34% anchoring bias effect” and other precise percentages from adversarial testing need support or qualification as estimates.\nPrediction Market Integration: Some passages imply deeper integration than the “future work” status indicated elsewhere.\n\n&lt;!-- [ ] Make sure all hallucinations have been removed --&gt;",
-    "crumbs": [
-      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Remaining Edits</span>"
-    ]
-  },
-  {
     "objectID": "chapters/0.Frontmatter.html#general-style",
     "href": "chapters/0.Frontmatter.html#general-style",
     "title": "1  Remaining Edits",
-    "section": "1.3 General Style",
-    "text": "1.3 General Style\n&lt;!-- [ ] Add Smooth transitions between chapters: Each chapter ends with preview of next, maintaining narrative flow --&gt;\n&lt;!-- [ ] Improve Style/prose: Fewer lists, more prose. Lists converted to flowing paragraphs with transitional phrases. Bullet points reserved for true enumerations --&gt;",
+    "section": "1.2 General Style",
+    "text": "1.2 General Style\n&lt;!-- [ ] Add Smooth transitions between chapters: Each chapter ends with preview of next, maintaining narrative flow --&gt;\n&lt;!-- [ ] Improve Style/prose: Fewer lists, more prose. Lists converted to flowing paragraphs with transitional phrases. Bullet points reserved for true enumerations --&gt;",
     "crumbs": [
       "<span class='chapter-number'>1</span>  <span class='chapter-title'>Remaining Edits</span>"
     ]
@@ -273,8 +583,8 @@
     "objectID": "chapters/0.Frontmatter.html#general-formatting",
     "href": "chapters/0.Frontmatter.html#general-formatting",
     "title": "1  Remaining Edits",
-    "section": "1.4 General Formatting",
-    "text": "1.4 General Formatting\n&lt;!-- [ ] Fix the Overlapping between Section Heading and Sub-Heading --&gt;\n&lt;!-- [ ] Fix Formatting of Headings in Affidavit --&gt;\n&lt;!-- [ ] Implement a \"jump to ToC\" functionality (also in PDF) --&gt;\n&lt;!-- [ ] Determine whether section title yml head or # (first-level-Heading) is better--&gt;\n&lt;!-- [ ] Consider adding an index: https://quarto.org/docs/books/book-structure.html#creating-an-index --&gt;",
+    "section": "1.3 General Formatting",
+    "text": "1.3 General Formatting\n&lt;!-- [ ] Fix the Overlapping between Section Heading and Sub-Heading --&gt;\n&lt;!-- [ ] Fix Formatting of Headings in Affidavit --&gt;\n&lt;!-- [ ] Implement a \"jump to ToC\" functionality (also in PDF) --&gt;\n&lt;!-- [ ] Determine whether section title yml head or # (first-level-Heading) is better--&gt;\n&lt;!-- [ ] Consider adding an index: https://quarto.org/docs/books/book-structure.html#creating-an-index --&gt;",
     "crumbs": [
       "<span class='chapter-number'>1</span>  <span class='chapter-title'>Remaining Edits</span>"
     ]
@@ -283,8 +593,8 @@
     "objectID": "chapters/0.Frontmatter.html#commentary-feedback",
     "href": "chapters/0.Frontmatter.html#commentary-feedback",
     "title": "1  Remaining Edits",
-    "section": "1.5 Commentary / Feedback",
-    "text": "1.5 Commentary / Feedback\n\n1.5.1 Areas Needing Work\n\nVisual Communication: While visualization is discussed extensively, the document lacks actual diagrams and figures that would enhance understanding.\nPolicy Specifics: Named policies (Narrow Path, SB 1047) are mentioned but not analyzed in detail, missing an opportunity for concrete demonstration.\nMultiple Model Extraction: Only Carlsmith is deeply analyzed; adding 2-3 more models would strengthen empirical claims.\nImplementation Clarity: Some features (prediction markets, probability distributions) are discussed ambiguously regarding current vs. future capabilities.",
+    "section": "1.4 Commentary / Feedback",
+    "text": "1.4 Commentary / Feedback\n\n1.4.1 Areas Needing Work\n\nVisual Communication: While visualization is discussed extensively, the document lacks actual diagrams and figures that would enhance understanding.\nPolicy Specifics: Named policies (Narrow Path, SB 1047) are mentioned but not analyzed in detail, missing an opportunity for concrete demonstration.\nMultiple Model Extraction: Only Carlsmith is deeply analyzed; adding 2-3 more models would strengthen empirical claims.\nImplementation Clarity: Some features (prediction markets, probability distributions) are discussed ambiguously regarding current vs. future capabilities.",
     "crumbs": [
       "<span class='chapter-number'>1</span>  <span class='chapter-title'>Remaining Edits</span>"
     ]
@@ -293,8 +603,8 @@
     "objectID": "chapters/0.Frontmatter.html#general-edits",
     "href": "chapters/0.Frontmatter.html#general-edits",
     "title": "1  Remaining Edits",
-    "section": "1.6 General Edits",
-    "text": "1.6 General Edits\n\n\n\n\n\n\n\n\n\n\n\n\n\nSection\nSuggested Change\nImplemented - Status\nAnalysis\nEvaluation\nImprovement Suggestions\nPotential Hallucinations\n\n\n\n\nGeneral Formatting\nUse American spelling consistently\n\nYes\nDocument uses “modeling” not “modelling”, “analyze” not “analyse”, “formalization” not “formalisation” throughout\nExcellent consistency - creates professional impression for international audience\nNone needed\nNone detected\n\n\nGeneral Style\nFewer lists, more prose\nYes\nLists converted to flowing paragraphs with transitional phrases. Bullet points reserved for true enumerations\nSignificantly improves academic tone and readability\nCould further reduce lists in technical sections\nNone\n\n\nAbstract\nClearer thesis statement\nYes\n“This thesis introduces AMTAIR…computational approach that addresses coordination failure by automating extraction”\nClear and specific, balances technical precision with strategic vision\nCould be slightly more concise\nNone\n\n\nIntroduction\nOpening scenario with policymaker\nYes\nVivid scenario of senior policy advisor reviewing conflicting AI safety reports\nHighly effective - immediately grounds abstract concepts in concrete dilemma\nCould add specific policy examples (e.g., compute thresholds)\nNone\n\n\nIntroduction\nCoordination crisis framing\nYes\nExtensive discussion of fragmentation, safety gaps, resource misallocation, negative-sum dynamics\nCompelling diagnosis that motivates the solution\nCould quantify coordination failures with specific examples\nNone\n\n\nIntroduction\nMultiplicative benefits framework\nYes\nFull section explaining how extraction + markets + evaluation create synergistic value\nNovel contribution clearly articulated\nCould use visual diagram to illustrate synergies\nNone\n\n\nContext\nCarlsmith model as exemplar\nYes\nDetailed six-premise decomposition with probabilities and explanation of formalizability\nExcellent concrete grounding for abstract concepts\nCould add comparison table with other models\nNone\n\n\nContext\nEpistemic challenges section\nYes\nComprehensive discussion of deep uncertainty, multi-level causation, irreversibility\nThoughtful analysis of unique AI governance challenges\nCould add more policy-specific examples\nNone\n\n\nContext\nBayesian networks explanation\nYes\nMathematical foundations, rain-sprinkler example, advantages for risk modeling\nGood balance of technical depth and accessibility\nVisual representation of rain-sprinkler network would help\nNone\n\n\nContext\nMTAIR framework analysis\nYes\nAchievements, limitations, and automation opportunity clearly presented\nFair assessment that positions AMTAIR as evolution not revolution\nCould include specific timing/cost comparisons\nNone\n\n\nAMTAIR\nTwo-stage extraction process\nYes\nArgDown → BayesDown separation with clear rationale and benefits\nCore technical innovation well explained\nCould add flowchart of extraction pipeline\nNone\n\n\nAMTAIR\nLess code, more description\nYes\nMinimal code snippets, focus on conceptual explanation and architecture\nMuch more accessible to non-technical readers\nGood balance achieved\nNone\n\n\nAMTAIR\nCase studies (simple to complex)\nYes\nRain-sprinkler-grass followed by Carlsmith model\nExcellent pedagogical progression\nCould add intermediate complexity example\nNone\n\n\nAMTAIR\nValidation methodology\nYes\nGround truth construction, metrics, results summary, error analysis\nRigorous scientific approach builds credibility\nCould expand on inter-rater reliability process\nClaimed “85%+ accuracy” needs careful verification\n\n\nAMTAIR\nPolicy evaluation capabilities\nYes\nIntervention representation, deployment governance example, robustness analysis\nPractical value clearly demonstrated\nCould add more policy examples\nNone\n\n\nDiscussion\nObjection-response format\nYes\nFive major objections with detailed responses\nIntellectually honest engagement with limitations\nCould add objection about scalability to global governance\nNone\n\n\nDiscussion\nRed-teaming results\nYes\nAdversarial testing with specific failure modes and robustness findings\nTransparent about system limitations\nCould quantify performance degradation curves\n“34% anchoring bias effect” seems precise for a prototype\n\n\nDiscussion\nEpistemic security benefits\nYes\nModel inspectability, convergence patterns, collective reasoning improvements\nCompelling case for practical benefits\nCould add metrics from pilot studies\n“40% reduction in disagreement identification time” needs citation\n\n\nConclusion\nSummary of contributions\nYes\nTheoretical, methodological, technical, and empirical contributions clearly listed\nComprehensive without overstating claims\nWell balanced\nNone\n\n\nConclusion\nStakeholder recommendations\nYes\nSpecific actionable steps for researchers, policymakers, technologists, funders\nHighly practical and actionable\nCould prioritize recommendations\nNone\n\n\nConclusion\nFuture research agenda\nYes\nTechnical priorities, methodological development, application expansion\nComprehensive research program outlined\nCould add timeline estimates\nNone\n\n\nReferences\nAmerican citation style\nYes\nConsistent (Author, Year) format throughout\nProfessional formatting\nNone needed\nNone\n\n\nManual extraction examples\n2-3 “inside view” models\nPartial\nCarlsmith extensively analyzed, but only one model deeply examined\nGood depth on one model, missing breadth\nAdd 2 more models (e.g., Christiano, Critch)\nNone\n\n\nPolicy candidates\nNarrow Path, SB 1047\nPartial\nDeployment governance discussed but specific policies not analyzed\nGeneric policy analysis provided\nAdd concrete analysis of named policies\nNone\n\n\nCorrelation handling\nWorkarounds for correlations\nYes\nExplicit correlation nodes, copulas, sensitivity bounds discussed\nHonest about limitations with practical solutions\nCould add worked example\nNone\n\n\nPrediction market integration\nLive data integration\nPartial\nArchitecture designed for integration but not implemented\nHonest about implementation status\nBe clearer this is future work throughout\nSome sections imply fuller integration than exists\n\n\nExpert feedback system\nVariable validation by experts\nPartial\nValidation methodology includes experts but ongoing feedback system not detailed\nGood for initial validation\nDevelop continuous expert input mechanism\nNone\n\n\nProbability distributions\nFull distribution support\nPartial\nConceptually addressed but implementation seems limited to point estimates\nTheory explained well\nClarify implementation status\n“Beta distributions for probabilities” may overstate current capabilities\n\n\nGraphics and visualizations\nStrategic graphics throughout\nPartial\nVisualization design discussed but few actual graphics in document\nText descriptions good but visuals needed\nCreate and embed key diagrams\nNone\n\n\nSection transitions\nSmooth transitions between chapters\nYes\nEach chapter ends with preview of next, maintaining narrative flow\nExcellent narrative coherence\nNone needed\nNone",
+    "section": "1.5 General Edits",
+    "text": "1.5 General Edits\n\n\n\n\n\n\n\n\n\n\n\n\n\nSection\nSuggested Change\nImplemented - Status\nAnalysis\nEvaluation\nImprovement Suggestions\nPotential Hallucinations\n\n\n\n\nGeneral Formatting\nUse American spelling consistently\n\nYes\nDocument uses “modeling” not “modelling”, “analyze” not “analyse”, “formalization” not “formalisation” throughout\nExcellent consistency - creates professional impression for international audience\nNone needed\nNone detected\n\n\nGeneral Style\nFewer lists, more prose\nYes\nLists converted to flowing paragraphs with transitional phrases. Bullet points reserved for true enumerations\nSignificantly improves academic tone and readability\nCould further reduce lists in technical sections\nNone\n\n\nAbstract\nClearer thesis statement\nYes\n“This thesis introduces AMTAIR…computational approach that addresses coordination failure by automating extraction”\nClear and specific, balances technical precision with strategic vision\nCould be slightly more concise\nNone\n\n\nIntroduction\nOpening scenario with policymaker\nYes\nVivid scenario of senior policy advisor reviewing conflicting AI safety reports\nHighly effective - immediately grounds abstract concepts in concrete dilemma\nCould add specific policy examples (e.g., compute thresholds)\nNone\n\n\nIntroduction\nCoordination crisis framing\nYes\nExtensive discussion of fragmentation, safety gaps, resource misallocation, negative-sum dynamics\nCompelling diagnosis that motivates the solution\nCould quantify coordination failures with specific examples\nNone\n\n\nIntroduction\nMultiplicative benefits framework\nYes\nFull section explaining how extraction + markets + evaluation create synergistic value\nNovel contribution clearly articulated\nCould use visual diagram to illustrate synergies\nNone\n\n\nContext\nCarlsmith model as exemplar\nYes\nDetailed six-premise decomposition with probabilities and explanation of formalizability\nExcellent concrete grounding for abstract concepts\nCould add comparison table with other models\nNone\n\n\nContext\nEpistemic challenges section\nYes\nComprehensive discussion of deep uncertainty, multi-level causation, irreversibility\nThoughtful analysis of unique AI governance challenges\nCould add more policy-specific examples\nNone\n\n\nContext\nBayesian networks explanation\nYes\nMathematical foundations, rain-sprinkler example, advantages for risk modeling\nGood balance of technical depth and accessibility\nVisual representation of rain-sprinkler network would help\nNone\n\n\nContext\nMTAIR framework analysis\nYes\nAchievements, limitations, and automation opportunity clearly presented\nFair assessment that positions AMTAIR as evolution not revolution\nCould include specific timing/cost comparisons\nNone\n\n\nAMTAIR\nTwo-stage extraction process\nYes\nArgDown → BayesDown separation with clear rationale and benefits\nCore technical innovation well explained\nCould add flowchart of extraction pipeline\nNone\n\n\nAMTAIR\nLess code, more description\nYes\nMinimal code snippets, focus on conceptual explanation and architecture\nMuch more accessible to non-technical readers\nGood balance achieved\nNone\n\n\nAMTAIR\nCase studies (simple to complex)\nYes\nRain-sprinkler-grass followed by Carlsmith model\nExcellent pedagogical progression\nCould add intermediate complexity example\nNone\n\n\nAMTAIR\nValidation methodology\nYes\nGround truth construction, metrics, results summary, error analysis\nRigorous scientific approach builds credibility\nCould expand on inter-rater reliability process\nClaimed “85%+ accuracy” needs careful verification\n\n\nAMTAIR\nPolicy evaluation capabilities\nYes\nIntervention representation, deployment governance example, robustness analysis\nPractical value clearly demonstrated\nCould add more policy examples\nNone\n\n\nDiscussion\nObjection-response format\nYes\nFive major objections with detailed responses\nIntellectually honest engagement with limitations\nCould add objection about scalability to global governance\nNone\n\n\nDiscussion\nRed-teaming results\nYes\nAdversarial testing with specific failure modes and robustness findings\nTransparent about system limitations\nCould quantify performance degradation curves\n“34% anchoring bias effect” seems precise for a prototype\n\n\nDiscussion\nEpistemic security benefits\nYes\nModel inspectability, convergence patterns, collective reasoning improvements\nCompelling case for practical benefits\nCould add metrics from pilot studies\n“40% reduction in disagreement identification time” needs citation\n\n\nConclusion\nSummary of contributions\nYes\nTheoretical, methodological, technical, and empirical contributions clearly listed\nComprehensive without overstating claims\nWell balanced\nNone\n\n\nConclusion\nStakeholder recommendations\nYes\nSpecific actionable steps for researchers, policymakers, technologists, funders\nHighly practical and actionable\nCould prioritize recommendations\nNone\n\n\nConclusion\nFuture research agenda\nYes\nTechnical priorities, methodological development, application expansion\nComprehensive research program outlined\nCould add timeline estimates\nNone\n\n\nReferences\nAmerican citation style\nYes\nConsistent (Author, Year) format throughout\nProfessional formatting\nNone needed\nNone\n\n\nManual extraction examples\n2-3 “inside view” models\nPartial\nCarlsmith extensively analyzed, but only one model deeply examined\nGood depth on one model, missing breadth\nAdd 2 more models (e.g., Christiano, Critch)\nNone\n\n\nPolicy candidates\nNarrow Path, SB 1047\nPartial\nDeployment governance discussed but specific policies not analyzed\nGeneric policy analysis provided\nAdd concrete analysis of named policies\nNone\n\n\nCorrelation handling\nWorkarounds for correlations\nYes\nExplicit correlation nodes, copulas, sensitivity bounds discussed\nHonest about limitations with practical solutions\nCould add worked example\nNone\n\n\nPrediction market integration\nLive data integration\nPartial\nArchitecture designed for integration but not implemented\nHonest about implementation status\nBe clearer this is future work throughout\nSome sections imply fuller integration than exists\n\n\nExpert feedback system\nVariable validation by experts\nPartial\nValidation methodology includes experts but ongoing feedback system not detailed\nGood for initial validation\nDevelop continuous expert input mechanism\nNone\n\n\nProbability distributions\nFull distribution support\nPartial\nConceptually addressed but implementation seems limited to point estimates\nTheory explained well\nClarify implementation status\n“Beta distributions for probabilities” may overstate current capabilities\n\n\nGraphics and visualizations\nStrategic graphics throughout\nPartial\nVisualization design discussed but few actual graphics in document\nText descriptions good but visuals needed\nCreate and embed key diagrams\nNone\n\n\nSection transitions\nSmooth transitions between chapters\nYes\nEach chapter ends with preview of next, maintaining narrative flow\nExcellent narrative coherence\nNone needed\nNone",
     "crumbs": [
       "<span class='chapter-number'>1</span>  <span class='chapter-title'>Remaining Edits</span>"
     ]
@@ -303,8 +613,8 @@
     "objectID": "chapters/0.Frontmatter.html#old-checklists",
     "href": "chapters/0.Frontmatter.html#old-checklists",
     "title": "1  Remaining Edits",
-    "section": "1.7 Old Checklists",
-    "text": "1.7 Old Checklists",
+    "section": "1.6 Old Checklists",
+    "text": "1.6 Old Checklists",
     "crumbs": [
       "<span class='chapter-number'>1</span>  <span class='chapter-title'>Remaining Edits</span>"
     ]
@@ -313,8 +623,8 @@
     "objectID": "chapters/0.Frontmatter.html#usual-paper-requirements",
     "href": "chapters/0.Frontmatter.html#usual-paper-requirements",
     "title": "1  Remaining Edits",
-    "section": "1.8 “Usual paper requirements”",
-    "text": "1.8 “Usual paper requirements”\n\nintroduce all terminology\n\ngo through text, make sure all terms are defined, explained (and added to the list of Abbr.) when first mentioned\n\n\nreadership is intelligent and interested but has no prior knowledge\n\nThis chapter presents the complete computational implementation of the AMTAIR system, demonstrating the end-to-end pipeline from document processing through interactive visualization.",
+    "section": "1.7 “Usual paper requirements”",
+    "text": "1.7 “Usual paper requirements”\n\nintroduce all terminology\n\ngo through text, make sure all terms are defined, explained (and added to the list of Abbr.) when first mentioned\n\n\nreadership is intelligent and interested but has no prior knowledge\n\nThis chapter presents the complete computational implementation of the AMTAIR system, demonstrating the end-to-end pipeline from document processing through interactive visualization.",
     "crumbs": [
       "<span class='chapter-number'>1</span>  <span class='chapter-title'>Remaining Edits</span>"
     ]
@@ -323,8 +633,8 @@
     "objectID": "chapters/0.Frontmatter.html#format-anything-that-makes-it-easier-to-understand",
     "href": "chapters/0.Frontmatter.html#format-anything-that-makes-it-easier-to-understand",
     "title": "1  Remaining Edits",
-    "section": "1.9 (Format:) ~ Anything that makes it easier to understand",
-    "text": "1.9 (Format:) ~ Anything that makes it easier to understand\n\nshort sentences\n\nparagraphs (one idea per paragraph)\n\nsimplicity\n\n!limit use of passive voice!\n\nuse active voice, even prefer I over we!\n\nminimise use of “zombi nouns” (don’t turn verbs/adjectives to nouns!)\n\n“find words that can be cut”\n\n– the paper can focus on one aspect of the presentation\n~ demonstrate ability for novel research\n– “solve research question with the tools accessible to you”\n– “show something that has not been shown before / should be publishable in principle”\n– new idea (or criticism) “in this field”\n– Outline idea THEN reading with a purpose (answering concrete questions)\n– “Only” confirm that nobody has published the exact same idea on the same topic\n– pretty much determined by presentation & proposal but narrow down further (& choose supervisor?)",
+    "section": "1.8 (Format:) ~ Anything that makes it easier to understand",
+    "text": "1.8 (Format:) ~ Anything that makes it easier to understand\n\nshort sentences\n\nparagraphs (one idea per paragraph)\n\nsimplicity\n\n!limit use of passive voice!\n\nuse active voice, even prefer I over we!\n\nminimise use of “zombi nouns” (don’t turn verbs/adjectives to nouns!)\n\n“find words that can be cut”\n\n– the paper can focus on one aspect of the presentation\n~ demonstrate ability for novel research\n– “solve research question with the tools accessible to you”\n– “show something that has not been shown before / should be publishable in principle”\n– new idea (or criticism) “in this field”\n– Outline idea THEN reading with a purpose (answering concrete questions)\n– “Only” confirm that nobody has published the exact same idea on the same topic\n– pretty much determined by presentation & proposal but narrow down further (& choose supervisor?)\n\n1.8.1 Technical Review\n\nAll code blocks tested and working\nJupyter notebooks executing correctly\nInteractive elements functioning\nMathematical notation rendering properly\nAll external links valid\nFile paths correct and relative\n\n\n\n1.8.2 Pre-Submission Checklist\n\nWord count within limits\nAll author information correct\nInstitutional affiliation accurate\nAcknowledgments complete\nCopyright/license information added\nDeclaration/affidavit signed\n\n\n\n1.8.3 Format-Specific Checks\n\n1.8.3.1 HTML Output\n\nNavigation working correctly\nTheme and styling consistent\nMobile responsive design verified\nSearch functionality working\nAll interactive elements functional\nNo JavaScript errors in console\n\n\n\n1.8.3.2 PDF Output\n\nPage numbering correct\nHeaders/footers properly formatted\nTable of contents accurate\nList of figures/tables complete\nNo overfull hboxes or layout issues\nFonts embedded correctly\nHyperlinks working (if enabled)\n\n\n\n1.8.3.3 LaTeX Output\n\nCompiles without errors\nCustom preamble applied correctly\nBibliography style correct\nNo undefined references\n\n\n\n\n1.8.4 Final Quality Assurance\n\nSpell check completed\nGrammar check completed\nPlagiarism check passed\nAll co-author contributions noted\nVersion control up to date\nBackup copies created\nSubmission guidelines followed",
     "crumbs": [
       "<span class='chapter-number'>1</span>  <span class='chapter-title'>Remaining Edits</span>"
     ]
@@ -333,8 +643,8 @@
     "objectID": "chapters/0.Frontmatter.html#syntax-for-tasks",
     "href": "chapters/0.Frontmatter.html#syntax-for-tasks",
     "title": "1  Remaining Edits",
-    "section": "1.10 Syntax for Tasks",
-    "text": "1.10 Syntax for Tasks\n\n1.10.1 Tasks with ToDo Tree\n\n1.10.1.1 Simple “One-line tasks”\nUse Code ticks and html comment and task format for tasks distinctly visible across all formats including the ToDo-Tree overview:\n&lt;!-- [ ] ToDos for things to do / tasks / reminders (allows \"jump to with Taks Tree extension\") --&gt;\nUse html comment and task format for open or uncertain tasks, visible in the .qmd file:\n\n\n\n1.10.1.2 More Complex Tasks with Notes\n&lt;!-- [ ] Task Title: short description--&gt;\n\n  More Information about task\n\n  Relevant notes\n\n  Step-by-step implementation Plan\n\n  Etc.\n\n\n\n1.10.1.3 Completed Tasks\nRetain completed tasks in ToDo-Tree by adding an x in the brackets: [x] &lt;!-- [x] Tasks which have been finished but should remain for later verification --&gt;\n\nMark and remove completed tasks from ToDo-Tree by adding a minus in the brackets: [-]\n&lt;!-- [-] Tasks which have been finished but should remain visible for later verification --&gt;\n\n\n\n1.10.1.4 Missing Citations\n&lt;!-- [ ] FIND: @CITATION_KEY_PURPOSE: \"Description of the appropriate/idea source, including ideas /suggestions / search terms etc.\" --&gt;\n\n\n1.10.1.5 Suggested Citation\n&lt;!-- [ ] VERIFY: @CITATION_KEY_SUGGESTED: \"Description of the appropriate paper, book, source\" [Include BibTex if known] --&gt;\n\n\n1.10.1.6 Missing Graphic\n&lt;!-- [ ] FIND: {#fig-GRAPHIC_IDEA}]: \"Description of the appropriate/idea source, including ideas /suggestions / search terms etc.\" --&gt;\n\n\n1.10.1.7 Suggested Graphic\n&lt;!-- [ ] VERIFY: {#fig-GRAPHIC_IDEA}: \"Description of the appropriate paper, book, source\" [Include figure syntax if known] --&gt;\nMissing and/or suggested tables, concepts, explanations as well as other elements should be suggested similarily.\n\n\n\n1.10.2 Examples\n&lt;!-- [ ] (Example short: open and visible in text)   Find and list the names of the MTAIR team-members responsible for the Analytica Implementation --&gt;\n&lt;!-- [ ] (Example longer: open and visible in text)    Review/Plan/Discuss integrating Live Prediction Markets --&gt;\n\n  Live prediction market integration requires:\n    (1) API connections to platforms (Metaculus, Manifold),\n    (2) Question-to-variable mapping algorithms,\n    (3) Probability update mechanisms, \n    (4) Handling of market dynamics (thin markets, manipulation).\n    Current mentions may overstate readiness or underestimate complexity.\n    Need realistic assessment of what's achievable.\n\n  Implementation Steps:\n      0. List/mention all relevant platforms with a brief description each\n      1. Review all existing prediction market mentions for accuracy\n      2. Assess actual API availability and limitations\n      3. Describe/explain/discuss how to implement basic proof-of-concept with single platform\n      4. Document challenges: question mapping, market interpretation\n      5. Create realistic timeline for full implementation\n      6. Revise thesis claims to match reality\n      7. Add \"Future Work\" and/or extension section on complete integration\n      8. Include descriptions of mockups/designs even if not fully built \n      9. Highlight/discuss the advantages of such integrations\n      10. Quickly brainstorm for downsides worth mentioning",
+    "section": "1.9 Syntax for Tasks",
+    "text": "1.9 Syntax for Tasks\n\n1.9.1 Tasks with ToDo Tree\n\n1.9.1.1 Simple “One-line tasks”\nUse Code ticks and html comment and task format for tasks distinctly visible across all formats including the ToDo-Tree overview:\n&lt;!-- [ ] ToDos for things to do / tasks / reminders (allows \"jump to with Taks Tree extension\") --&gt;\nUse html comment and task format for open or uncertain tasks, visible in the .qmd file:\n\n\n\n1.9.1.2 More Complex Tasks with Notes\n&lt;!-- [ ] Task Title: short description--&gt;\n\n  More Information about task\n\n  Relevant notes\n\n  Step-by-step implementation Plan\n\n  Etc.\n\n\n1.9.1.3 Completed Tasks\nRetain completed tasks in ToDo-Tree by adding an x in the brackets: [x] &lt;!-- [x] Tasks which have been finished but should remain for later verification --&gt;\n\nMark and remove completed tasks from ToDo-Tree by adding a minus in the brackets: [-]\n&lt;!-- [-] Tasks which have been finished but should remain visible for later verification --&gt;\n\n\n\n1.9.1.4 Missing Citations\n&lt;!-- [ ] FIND: @CITATION_KEY_PURPOSE: \"Description of the appropriate/idea source, including ideas /suggestions / search terms etc.\" --&gt;\n\n\n1.9.1.5 Suggested Citation\n&lt;!-- [ ] VERIFY: @CITATION_KEY_SUGGESTED: \"Description of the appropriate paper, book, source\" [Include BibTex if known] --&gt;\n\n\n1.9.1.6 Missing Graphic\n&lt;!-- [ ] FIND: {#fig-GRAPHIC_IDEA}]: \"Description of the appropriate/idea source, including ideas /suggestions / search terms etc.\" --&gt;\n\n\n1.9.1.7 Suggested Graphic\n&lt;!-- [ ] VERIFY: {#fig-GRAPHIC_IDEA}: \"Description of the appropriate paper, book, source\" [Include figure syntax if known] --&gt;\nMissing and/or suggested tables, concepts, explanations as well as other elements should be suggested similarily.\n\n\n\n1.9.2 Examples\n&lt;!-- [ ] (Example short: open and visible in text)   Find and list the names of the MTAIR team-members responsible for the Analytica Implementation --&gt;\n&lt;!-- [ ] (Example longer: open and visible in text)    Review/Plan/Discuss integrating Live Prediction Markets --&gt;\n\n  Live prediction market integration requires:\n    (1) API connections to platforms (Metaculus, Manifold),\n    (2) Question-to-variable mapping algorithms,\n    (3) Probability update mechanisms, \n    (4) Handling of market dynamics (thin markets, manipulation).\n    Current mentions may overstate readiness or underestimate complexity.\n    Need realistic assessment of what's achievable.\n\n  Implementation Steps:\n      0. List/mention all relevant platforms with a brief description each\n      1. Review all existing prediction market mentions for accuracy\n      2. Assess actual API availability and limitations\n      3. Describe/explain/discuss how to implement basic proof-of-concept with single platform\n      4. Document challenges: question mapping, market interpretation\n      5. Create realistic timeline for full implementation\n      6. Revise thesis claims to match reality\n      7. Add \"Future Work\" and/or extension section on complete integration\n      8. Include descriptions of mockups/designs even if not fully built \n      9. Highlight/discuss the advantages of such integrations\n      10. Quickly brainstorm for downsides worth mentioning",
     "crumbs": [
       "<span class='chapter-number'>1</span>  <span class='chapter-title'>Remaining Edits</span>"
     ]
@@ -624,17 +934,37 @@
     "href": "ref/references.html",
     "title": "7  References (.md)",
     "section": "",
-    "text": "7.1 BibTeX of Main Citations Included",
+    "text": "7.1 Error Watch",
     "crumbs": [
       "<span class='chapter-number'>7</span>  <span class='chapter-title'>References (.md)</span>"
     ]
   },
   {
-    "objectID": "ref/references.html#bibtex-of-main-citations-included",
-    "href": "ref/references.html#bibtex-of-main-citations-included",
+    "objectID": "ref/references.html#error-watch",
+    "href": "ref/references.html#error-watch",
     "title": "7  References (.md)",
     "section": "",
-    "text": "## Update in ref/MAref.bib\n\n@article{bostrom2012,\n  title = {The {{Superintelligent Will}}: {{Motivation}} and {{Instrumental Rationality}} in {{Advanced Artificial Agents}}},\n  author = {Bostrom, Nick},\n  date = {2012},\n  journaltitle = {Minds and Machines},\n  volume = {22},\n  number = {2},\n  pages = {71--85},\n  publisher = {Kluwer Academic Publishers Norwell, MA, USA},\n  doi = {10.1007/s11023-012-9281-3},\n  url = {https://philpapers.org/rec/BOSTSW}\n}\n\n@book{bostrom2014,\n  title = {Superintelligence: {{Paths}}, Strategies, Dangers},\n  author = {Bostrom, Nick},\n  date = {2014},\n  publisher = {Oxford University Press},\n  location = {Oxford},\n  url = {https://scholar.dominican.edu/cynthia-stokes-brown-books-big-history/47},\n  abstract = {The human brain has some capabilities that the brains of other animals lack. It is to these distinctive capabilities that our species owes its dominant position. Other animals have stronger muscles or sharper claws, but we have cleverer brains. If machine brains one day come to surpass human brains in general intelligence, then this new superintelligence could become very powerful. As the fate of the gorillas now depends more on us humans than on the gorillas themselves, so the fate of our species then would come to depend on the actions of the machine superintelligence. But we have one advantage: we get to make the first move. Will it be possible to construct a seed AI or otherwise to engineer initial conditions so as to make an intelligence explosion survivable? How could one achieve a controlled detonation? To get closer to an answer to this question, we must make our way through a fascinating landscape of topics and considerations. Read the book and learn about oracles, genies, singletons; about boxing methods, tripwires, and mind crime; about humanity's cosmic endowment and differential technological development; indirect normativity, instrumental convergence, whole brain emulation and technology couplings; Malthusian economics and dystopian evolution; artificial intelligence, and biological cognitive enhancement, and collective intelligence.},\n  isbn = {978-0-19-967811-2}\n}\n\n@article{bostrom2016,\n  title = {The {{Unilateralist}}’s {{Curse}} and the {{Case}} for a {{Principle}} of {{Conformity}}},\n  author = {Bostrom, Nick and Douglas, Thomas and Sandberg, Anders},\n  date = {2016},\n  journaltitle = {Social Epistemology},\n  volume = {30},\n  number = {4},\n  pages = {350--371},\n  publisher = {Routledge, part of the Taylor \\& Francis Group},\n  doi = {10.1080/02691728.2015.1108373},\n  url = {https://www.tandfonline.com/doi/full/10.1080/02691728.2015.1108373}\n}\n\n@article{bostrom2019,\n  title = {The Vulnerable World Hypothesis},\n  author = {Bostrom, Nick},\n  date = {2019},\n  journaltitle = {Global Policy},\n  volume = {10},\n  number = {4},\n  pages = {455--476},\n  publisher = {Wiley Online Library},\n  doi = {10.1111/1758-5899.12718}\n}",
+    "text": "7.1.1 Catch ALL Potential Hallucinations\n&lt;!-- [ ] Collect all errors and hallucinations here to be able to reference against them later and ensure none remain throught text --&gt;\n&lt;!-- [ ] Keep track of all hallucinations that have been found here: --&gt;\n\nValidation Metrics: Claims of “85%+ accuracy for structural extraction” and “73% for probability capture” appear precise for what seems to be a prototype system. These need careful verification or qualification.\nPilot Study Results: “40% reduction in time to identify disagreements” and “60% improvement in agreement about disagreement” lack citations and seem surprisingly specific.\nRed-teaming Quantification: “34% anchoring bias effect” and other precise percentages from adversarial testing need support or qualification as estimates.\nPrediction Market Integration: Some passages imply deeper integration than the “future work” status indicated elsewhere.\n\n&lt;!-- [ ] Make sure all hallucinations have been removed --&gt;",
+    "crumbs": [
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>References (.md)</span>"
+    ]
+  },
+  {
+    "objectID": "ref/references.html#figure-inventory-and-tracking",
+    "href": "ref/references.html#figure-inventory-and-tracking",
+    "title": "7  References (.md)",
+    "section": "7.2 Figure Inventory and Tracking",
+    "text": "7.2 Figure Inventory and Tracking\n## Master Figure Registry {.unnumbered .unlisted}\n\n&lt;!-- FIGURE INVENTORY --&gt;\n&lt;!-- Last updated: 2024-02-15 --&gt;\n\n## Implemented Figures\n\n\n## Section to keep track of all Figures\n\n`&lt;!-- [ ] ALWAYS include the \"inclusions\" of all figures/graphics below --&gt;`\n`&lt;!-- [ ] ALWAYS keep the #fig-KEYS up-to-date --&gt;`\n\n```markdown\n{{\n[![Example Caption/Title 4](/images/cover.png){\n    #fig-Unique_identifier_for_crossreferencing\n    fig-scap=\"Short caption 4 list of figures as seen in LoF\"\n    fig-alt=\"Detailed alt text that describes the image content, type, purpose, and meaning.\n            [CHART TYPE]: [Short description].\n                DATA: [What data is shown, x/y axes].\n                PURPOSE: [Why it's included, what to look for].\n                DETAILS: [Longer description of patterns, anomalies, or key insights].\n                SOURCE: Data from [source name/year and url/link]\n            \"\n    fig-align=\"left\"\n    width=\"30%\"\n    }](https://github.com/VJMeyer/submission)\n}}\n\n7.2.1 Chapter 1\n\n{#fig-overview}: System overview diagram\n\nFile: images/system-overview.png\nSource: Created by author using Draw.io\n\n\n{{\n[![Example Caption/Title 4](/images/cover.png){\n    #fig-Unique_identifier_for_crossreferencing\n    fig-scap=\"Short caption 4 list of figures as seen in LoF\"\n    fig-alt=\"Detailed alt text that describes the image content, type, purpose, and meaning.\n            [CHART TYPE]: [Short description].\n                DATA: [What data is shown, x/y axes].\n                PURPOSE: [Why it's included, what to look for].\n                DETAILS: [Longer description of patterns, anomalies, or key insights].\n                SOURCE: Data from [source name/year and url/link]\n            \"\n    fig-align=\"left\"\n    width=\"30%\"\n    }](https://github.com/VJMeyer/submission)\n}}\n\n\n7.2.2 Chapter 2\n\n{#fig-methodology}: Research methodology flowchart\n\nFile: images/methodology-flow.svg\nSource: Author original\n\n\n{{\n[![Example Caption/Title 4](/images/cover.png){\n    #fig-Unique_identifier_for_crossreferencing\n    fig-scap=\"Short caption 4 list of figures as seen in LoF\"\n    fig-alt=\"Detailed alt text that describes the image content, type, purpose, and meaning.\n            [CHART TYPE]: [Short description].\n                DATA: [What data is shown, x/y axes].\n                PURPOSE: [Why it's included, what to look for].\n                DETAILS: [Longer description of patterns, anomalies, or key insights].\n                SOURCE: Data from [source name/year and url/link]\n            \"\n    fig-align=\"left\"\n    width=\"30%\"\n    }](https://github.com/VJMeyer/submission)\n}}",
+    "crumbs": [
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>References (.md)</span>"
+    ]
+  },
+  {
+    "objectID": "ref/references.html#pending-figures",
+    "href": "ref/references.html#pending-figures",
+    "title": "7  References (.md)",
+    "section": "7.3 Pending Figures",
+    "text": "7.3 Pending Figures\n### High Priority\n- [ ] {#fig-results-chart}: Main results visualization\n  - Status: Data ready, needs visualization\n\n{{\n[![Example Caption/Title 4](/images/cover.png){\n    #fig-Unique_identifier_for_crossreferencing\n    fig-scap=\"Short caption 4 list of figures as seen in LoF\"\n    fig-alt=\"Detailed alt text that describes the image content, type, purpose, and meaning.\n            [CHART TYPE]: [Short description].\n                DATA: [What data is shown, x/y axes].\n                PURPOSE: [Why it's included, what to look for].\n                DETAILS: [Longer description of patterns, anomalies, or key insights].\n                SOURCE: Data from [source name/year and url/link]\n            \"\n    fig-align=\"left\"\n    width=\"30%\"\n    }](https://github.com/VJMeyer/submission)\n}}\n\n### Medium Priority\n- [ ] {#fig-architecture}: System architecture diagram\n  - Status: Sketch complete, needs professional rendering\n\n{{\n[![Example Caption/Title 4](/images/cover.png){\n    #fig-Unique_identifier_for_crossreferencing\n    fig-scap=\"Short caption 4 list of figures as seen in LoF\"\n    fig-alt=\"Detailed alt text that describes the image content, type, purpose, and meaning.\n            [CHART TYPE]: [Short description].\n                DATA: [What data is shown, x/y axes].\n                PURPOSE: [Why it's included, what to look for].\n                DETAILS: [Longer description of patterns, anomalies, or key insights].\n                SOURCE: Data from [source name/year and url/link]\n            \"\n    fig-align=\"left\"\n    width=\"30%\"\n    }](https://github.com/VJMeyer/submission)\n}}\n\n\n\n7.3.1 Master Citation Registry\n\n## BibTeX of Main Citations Included\n\n&lt;!-- [ ] Add all the main literature / citations / references here (makes it easy to verify correct key etc. while writing) --&gt;\n\n&lt;!-- [ ] Keep 'References.md' updated with/from ref/MAref.bib --&gt;\n\n&lt;!-- [ ] Remove/hide 'References.md' before final publication --&gt;\n\n## Update in ref/MAref.bib\n\n\n## Core Citations (Must Have)\n\n### Foundational Works\n- [x] @carlsmith2021 - Power-seeking AI framework\n  - Chapter usage: 1, 2, 4\n  - Key concepts: Six premises, existential risk\n  - Notes: Central to thesis argument\n\n- [x] @bostrom2014 - Superintelligence paths\n  - Chapter usage: 1, 2, 3, 5\n  - Key concepts: Orthogonality, convergence\n  - Notes: Historical foundation\n\n\n\n@article{bostrom2012,\n  title = {The {{Superintelligent Will}}: {{Motivation}} and {{Instrumental Rationality}} in {{Advanced Artificial Agents}}},\n  author = {Bostrom, Nick},\n  date = {2012},\n  journaltitle = {Minds and Machines},\n  volume = {22},\n  number = {2},\n  pages = {71--85},\n  publisher = {Kluwer Academic Publishers Norwell, MA, USA},\n  doi = {10.1007/s11023-012-9281-3},\n  url = {https://philpapers.org/rec/BOSTSW}\n}\n\n@book{bostrom2014,\n  title = {Superintelligence: {{Paths}}, Strategies, Dangers},\n  author = {Bostrom, Nick},\n  date = {2014},\n  publisher = {Oxford University Press},\n  location = {Oxford},\n  url = {https://scholar.dominican.edu/cynthia-stokes-brown-books-big-history/47},\n  abstract = {The human brain has some capabilities that the brains of other animals lack. It is to these distinctive capabilities that our species owes its dominant position. Other animals have stronger muscles or sharper claws, but we have cleverer brains. If machine brains one day come to surpass human brains in general intelligence, then this new superintelligence could become very powerful. As the fate of the gorillas now depends more on us humans than on the gorillas themselves, so the fate of our species then would come to depend on the actions of the machine superintelligence. But we have one advantage: we get to make the first move. Will it be possible to construct a seed AI or otherwise to engineer initial conditions so as to make an intelligence explosion survivable? How could one achieve a controlled detonation? To get closer to an answer to this question, we must make our way through a fascinating landscape of topics and considerations. Read the book and learn about oracles, genies, singletons; about boxing methods, tripwires, and mind crime; about humanity's cosmic endowment and differential technological development; indirect normativity, instrumental convergence, whole brain emulation and technology couplings; Malthusian economics and dystopian evolution; artificial intelligence, and biological cognitive enhancement, and collective intelligence.},\n  isbn = {978-0-19-967811-2}\n}\n\n@article{bostrom2016,\n  title = {The {{Unilateralist}}’s {{Curse}} and the {{Case}} for a {{Principle}} of {{Conformity}}},\n  author = {Bostrom, Nick and Douglas, Thomas and Sandberg, Anders},\n  date = {2016},\n  journaltitle = {Social Epistemology},\n  volume = {30},\n  number = {4},\n  pages = {350--371},\n  publisher = {Routledge, part of the Taylor \\& Francis Group},\n  doi = {10.1080/02691728.2015.1108373},\n  url = {https://www.tandfonline.com/doi/full/10.1080/02691728.2015.1108373}\n}\n\n@article{bostrom2019,\n  title = {The Vulnerable World Hypothesis},\n  author = {Bostrom, Nick},\n  date = {2019},\n  journaltitle = {Global Policy},\n  volume = {10},\n  number = {4},\n  pages = {455--476},\n  publisher = {Wiley Online Library},\n  doi = {10.1111/1758-5899.12718}\n}\n\n\n\n\n## Pending Citations\n\n### Need to Find\n- [ ] FIND: @ai-governance-2024: \"Recent survey on international AI governance frameworks\"\n  - For: Chapter 3, Section 3.2\n  - Search terms: AI governance, international coordination, 2024\n  - Priority: High\n\n### Need to Verify\n- [ ] VERIFY: @prediction-markets-ai: \"Tetlock et al on prediction markets for AI timelines\"\n  - Current info: Possibly in Metaculus report 2023\n  - For: Chapter 4, Section 4.3\n  - Priority: Medium\n\n\n## Citation Health Check\n- [ ] All citations in .bib file\n- [ ] All .bib entries have DOIs/URLs\n- [ ] No duplicate entries\n- [ ] Consistent naming scheme\n- [ ] Recent sources included (2023-2024)",
     "crumbs": [
       "<span class='chapter-number'>7</span>  <span class='chapter-title'>References (.md)</span>"
     ]

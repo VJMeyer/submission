@@ -31,6 +31,7 @@ book:
   #       href: https://twitter.com/ 
   chapters:
     - index.qmd
+    # - backup_index.qmd
     # - chapters/Outlines/Outline_12.2.qmd
     # - chapters/Outlines/Outline_11.7.qmd
     # - chapters/code_improve/Code-Improvement-Plan_12.2.qmd

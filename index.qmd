@@ -15,594 +15,6 @@ numbering:
 <!-- [ ] Verify American spelling throughout document using US English spell checker --> 
 <!-- [ ] Create style guide document listing preferred American English spellings for technical terms -->
 
-# Quarto Syntax {#sec-syntax}
-
-## Main Formatting
-
-### Html Comments
-
-<!-- Comments for comments -->
-
-
-## Syntax for Tasks
-
-
-### Tasks with ToDo Tree
-
-
-#### Simple "One-line tasks"
-
-Use Code ticks and html comment and task format for tasks distinctly visible across all formats including the ToDo-Tree overview:
-
-`<!-- [ ] ToDos for things to do / tasks / reminders (allows "jump to with Taks Tree extension") -->`
-
-Use html comment and task format for open or uncertain tasks, visible in the .qmd file:
-
-<!-- [ ] ToDos for things to do / tasks / reminders (allows "jump to with Taks Tree extension") -->
-
-
-
-#### More Complex Tasks with Notes
-
-```         
-<!-- [ ] Task Title: short description-->
-
-  More Information about task
-
-  Relevant notes
-
-  Step-by-step implementation Plan
-
-  Etc.
-
-```
-
-#### Completed Tasks
-
-Retain completed tasks in ToDo-Tree by adding an x in the brackets: `[x]`
-`<!-- [x] Tasks which have been finished but should remain for later verification -->`
-
-<!-- [x] Tasks which have been finished but should remain for later verification -->
-
-
-Mark and remove completed tasks from ToDo-Tree by adding a minus in the brackets: `[-]`
-
-`<!-- [-] Tasks which have been finished but should remain visible for later verification -->`
-
-<!-- [-] Tasks which have been finished but should remain for later verification (only in .qmd) -->
-
-#### Missing Citations
-
-`<!-- [ ] FIND: @CITATION_KEY_PURPOSE: "Description of the appropriate/idea source, including ideas /suggestions / search terms etc." -->`
-
-#### Suggested Citation
-
-`<!-- [ ] VERIFY: @CITATION_KEY_SUGGESTED: "Description of the appropriate paper, book, source" [Include BibTex if known] -->`
-
-#### Missing Graphic
-
-`<!-- [ ] FIND: {#fig-GRAPHIC_IDEA}]: "Description of the appropriate/idea source, including ideas /suggestions / search terms etc." -->`
-
-#### Suggested Graphic
-
-`<!-- [ ] VERIFY: {#fig-GRAPHIC_IDEA}: "Description of the appropriate paper, book, source" [Include figure syntax if known] -->`
-
-Missing and/or suggested tables, concepts, explanations as well as other elements should be suggested similarily.
-
-### Task Syntax Examples
-
-`<!-- [ ] (Example short: open and visible in text)   Find and list the names of the MTAIR team-members responsible for the Analytica Implementation -->`
-
-
-
-```
-<!-- [ ] (Example longer: open and visible in text)    Review/Plan/Discuss integrating Live Prediction Markets -->
-
-  Live prediction market integration requires:
-    (1) API connections to platforms (Metaculus, Manifold),
-    (2) Question-to-variable mapping algorithms,
-    (3) Probability update mechanisms, 
-    (4) Handling of market dynamics (thin markets, manipulation).
-    Current mentions may overstate readiness or underestimate complexity.
-    Need realistic assessment of what's achievable.
-
-  Implementation Steps:
-      0. List/mention all relevant platforms with a brief description each
-      1. Review all existing prediction market mentions for accuracy
-      2. Assess actual API availability and limitations
-      3. Describe/explain/discuss how to implement basic proof-of-concept with single platform
-      4. Document challenges: question mapping, market interpretation
-      5. Create realistic timeline for full implementation
-      6. Revise thesis claims to match reality
-      7. Add "Future Work" and/or extension section on complete integration
-      8. Include descriptions of mockups/designs even if not fully built 
-      9. Highlight/discuss the advantages of such integrations
-      10. Quickly brainstorm for downsides worth mentioning
-```
-
-<!-- [x] (Example: done but remaining as a reminder in .qmd and visible in ToDo Tree until verified)   Verify that the Orcid IDs are correct -->
-
-<!-- [-] (Example: done and verified but remaining as a peristent reminder)  Test and verify correct inclusion and formatting of .md files  -->
-
-### Verbatim Code Formatting
-
-`verbatim code formatting for notes and ideas to be included (here)`
-
-### Code Block formatting
-
-```         
-Also code blocks for more extensive notes and ideas to be included and checklists
-- test 1. 
-- test 2. 
-- test 3.
-2. second
-3. third
-```
-
-```         
-code
-```
-
-Add a language to syntax highlight code blocks:
-
-``` python
-1 + 1
-```
-
-### Blockquote Formatting
-
-> Blockquote formatting for "Suggested Citations (e.g. carlsmith 2024 on ...)" and/or claims which require a citation (e.g. claim x should be backed-up by a ciation from the literature)
-
-### Tables
-
-| Right | Left | Default | Center |
-|------:|:-----|---------|:------:|
-|    12 | 12   | 12      |   12   |
-|   123 | 123  | 123     |  123   |
-|     1 | 1    | 1       |   1    |
-
-: Demonstration of pipe table syntax {#tbl-letters}
-
-| Col1 | Col2 | Col3 |
-|------|------|------|
-| A    | B    | C    |
-| E    | F    | G    |
-| A    | G    | G    |
-
-: My Caption 1 {#tbl-letters}
-
-Referencing tables with `@tbl-KEY`: See @tbl-letters.
-
-::: {#tbl-panel layout-ncol="2"}
-| Col1 | Col2 | Col3 |
-|------|------|------|
-| A    | B    | C    |
-| E    | F    | G    |
-| A    | G    | G    |
-
-: First Table {#tbl-first}
-
-| Col1 | Col2 | Col3 |
-|------|------|------|
-| A    | B    | C    |
-| E    | F    | G    |
-| A    | G    | G    |
-
-: Second Table {#tbl-second}
-
-Main Caption
-:::
-
-See @tbl-panel for details, especially @tbl-second.
-
-``` markdown
-python
-#| label: tbl-planets
-#| tbl-cap: Astronomical object
-
-from IPython.display import Markdown
-from tabulate import tabulate
-table = [["Sun","696,000",1.989e30],
-         ["Earth","6,371",5.972e24],
-         ["Moon","1,737",7.34e22],
-         ["Mars","3,390",6.39e23]]
-Markdown(tabulate(
-  table, 
-  headers=["Astronomical object","R (km)", "mass (kg)"]
-))
-```
-
-+------------+------------+----------------------+
-| Fruit      | Price      | Advantages           |
-+============+============+======================+
-| Bananas    | \$1.34     | -   built-in wrapper |
-|            |            | -   bright color     |
-+------------+------------+----------------------+
-| Oranges    | \$2.10     | -   cures scurvy     |
-|            |            | -   tasty            |
-+------------+------------+----------------------+
-
-: Sample grid table.
-
-::: {html-table-processing="none"}
-Content with HTML tables you don't want processed.
-:::
-
-## Headings & Potential Headings in Standard Markdown formatting ('\##') {#sec-heading}
-
-### Heading 3
-
-#### Heading 4
-
-<!-- Using Headings deeper than 4 requires some LaTeX fix -->
-
-<!-- [ ] Enable Headings 5 & 6 -->
-
-<!-- ##### Heading 5 -->
-
-<!-- ###### Heading 6 -->
-
-## Text Formatting Options
-
-*italics*, **bold**, ***bold italics***
-
-superscript^2^ and subscript~2~
-
-~~strikethrough~~
-
-[This text is highlighted]{.mark}
-
-[This text is underlined]{.underline}
-
-[This text is smallcaps]{.smallcaps}
-
-## Lists
-
--   unordered list
-
-    -   sub-item 1
-    -   sub-item 2
-        -   sub-sub-item 1
-
--   item 2
-
-    Continued (indent 4 spaces)
-
-1.  ordered list
-2.  item 2
-    i)  sub-item 1
-        A.  sub-sub-item 1
-
-## Math
-
-inline math: $E = mc^{2}$
-
-display math:
-
-$$E = mc^{2}$$
-
-If you want to define custom TeX macros, include them within \$\$ delimiters enclosed in a .hidden block. For example:
-
-::: hidden
-$$
- \def\RR{{\bf R}}
- \def\bold#1{{\bf #1}}
-$$
-:::
-
-For HTML math processed using MathJax (the default) you can use the \\def, \\newcommand, \\renewcommand, \\newenvironment, \\renewenvironment, and \\let commands to create your own macros and environments.
-
-## Footnotes
-
-Here is an inline note.[^index-1]
-
-[^index-1]: Inlines notes are easier to write, since you don't have to pick an identifier and move down to type the note.
-
-Here is a footnote reference,[^index-2]
-
-[^index-2]: Here is the footnote.
-
-Another Text with a footnote[^index-3] but this time a "longnote".
-
-[^index-3]: Here's one with multiple blocks.
-
-    Subsequent paragraphs are indented to show that they belong to the previous footnote.
-
-    ```         
-    { some.code }
-    ```
-
-    The whole paragraph can be indented, or just the first line. In this way, multi-paragraph footnotes work like multi-paragraph list items.
-
-This paragraph won't be part of the note, because it isn't indented.
-
-## Callouts {#sec-callouts}
-
-Quarto's native callouts work without additional packages:
-
-::: note
-This is written in a 'note' environment -- but it does not seem to produce any special rendering.
-:::
-
-::: callout-note
-### Optional Title
-
-Content here
-:::
-
-::: callout-note
-### Important Note2
-
-This renders perfectly in both HTML and PDF.
-:::
-
-Also for markdown:
-
-``` markdown
-::: {.render_as_markdown_example}
-## Markdown Heading
-This renders perfectly in both HTML and PDF but as markdown "plain text"
-:::
-```
-
-## Links
-
-`<https://quarto.org/docs/authoring/markdown-basics.html>` produces: <https://quarto.org/docs/authoring/markdown-basics.html>
-
-`[Quarto Book Cross-References](https://quarto.org/docs/books/book-crossrefs.html)` produces: [Quarto Book Cross-References](https://quarto.org/docs/books/book-crossrefs.html)
-
-## Images & Figures {#sec-figures1 .unnumbered .unlisted}
-
-```         
-[![AMTAIR Automation Pipeline from @bucknall2022](/images/pipeline.png){
-  #fig-automation_pipeline
-  fig-scap="Five-step AMTAIR automation pipeline from PDFs to Bayesian networks" 
-  fig-alt="FLOWCHART: Five-step automation pipeline workflow for AMTAIR project.
-          DATA: The pipeline transforms PDFs through ArgDown, BayesDown, CSV, and HTML into Bayesian network visualizations.
-          PURPOSE: Illustrates the core technical process that enables automated extraction of probabilistic models from AI safety literature.
-          DETAILS: Five numbered green steps show: (1) LLM-based extraction from PDFs to ArgDown, (2) ArgDown to BayesDown completion with probabilities, (3) Extracting world-models as CSV data, (4) Software tools for data inference, and (5) Visualization of the resulting Bayesian network.
-          Each step includes example outputs, with the final visualization showing a Rain-Sprinkler-Grass Wet Bayesian network with probability tables.
-          SOURCE: Created by the author to explain the AMTAIR methodology
-          "
-  fig-align="center" 
-  width="100%"
-  }](https://github.com/VJMeyer/submission)
-
-
-Testing crossreferencing grapics @fig-automation_pipeline.
-
-![Caption/Title 2](/images/cover.png){#fig-testgraphic2 fig-scap="Short 2 caption" fig-alt="2nd Alt Text / Description." fig-align="left" width="30%"}
-
-Testing crossreferencing grapics @fig-testgraphic2.
-```
-
-[![AMTAIR Automation Pipeline from](/images/pipeline.png){#fig-automation_pipeline fig-scap="Five-step AMTAIR automation pipeline from PDFs to Bayesian networks" fig-alt="FLOWCHART: Five-step automation pipeline workflow for AMTAIR project.           DATA: The pipeline transforms PDFs through ArgDown, BayesDown, CSV, and HTML into Bayesian network visualizations.           PURPOSE: Illustrates the core technical process that enables automated extraction of probabilistic models from AI safety literature.           DETAILS: Five numbered green steps show: (1) LLM-based extraction from PDFs to ArgDown, (2) ArgDown to BayesDown completion with probabilities, (3) Extracting world-models as CSV data, (4) Software tools for data inference, and (5) Visualization of the resulting Bayesian network.           Each step includes example outputs, with the final visualization showing a Rain-Sprinkler-Grass Wet Bayesian network with probability tables.           SOURCE: Created by the author to explain the AMTAIR methodology           " fig-align="center" width="100%"}](https://github.com/VJMeyer/submission)
-
-Testing crossreferencing grapics @fig-automation_pipeline. Note that the indentations of graphic inclusions get messed up by viewing them in "view mode" in VS code.
-
-![Caption/Title 2](/images/cover.png){#fig-testgraphic2 fig-scap="Short 2 caption" fig-alt="2nd Alt Text / Description." fig-align="left" width="30%"}
-
-Testing crossreferencing grapics @fig-testgraphic2.
-
-## Page Breaks
-
-``` markdown
-page 1
-
-{{< pagebreak >}}
-
-page 2
-```
-
-page 1
-
-{{< pagebreak >}}
-
-page 2
-
-## Including Code {#sec-code}
-
-```{python}
-#| echo: true
-#| eval: true
-#| label: fig-extraction-pipeline
-#| fig-cap: "AMTAIR extraction pipeline visualization"
-#| fig-subcap: 
-#|   - "Gentoo penguins tend to have thinner bills,"
-#|   - "and Adelie penguins tend to have shorter bills."
-#| fig-link: "https://colab.research.google.com/drive/your-notebook-id"
-#| fig-alt: "Detailed description for accessibility"
-
-import pandas as pd
-print("AMTAIR is working!")
-```
-
-### In-Line LaTeX
-
-```{=latex}
-\renewcommand*{\labelitemi}{\textgreater}
-```
-<!-- The benefits and use of in-line LaTeX and HTML are unclear to me. I am not even sure if they work properly. -->
-### In-Line HTML
-
-Here's some raw inline HTML: <a>html</a>
-
-## Reference or Embed Code from .ipynb files
-
-#### Code chunks from .ipynb notebooks can be embedded in the .qmd text with:
-
-``` markdown
-{{< embed /AMTAIR_Prototype/data/example_carlsmith/AMTAIR_Prototype_example_carlsmith.ipynb#connect_to_github_repository >}}
-```
-
-#### which produces the output of executing the code cell:
-
-{{< embed /AMTAIR_Prototype/data/example_carlsmith/AMTAIR_Prototype_example_carlsmith.ipynb#connect_to_github_repository >}}
-
-#### including 'echo=true' renders the code of the cell:
-
-``` markdown
-{{< embed /AMTAIR_Prototype/data/example_carlsmith/AMTAIR_Prototype_example_carlsmith.ipynb#connect_to_github_repository echo=true >}}
-```
-
-{{< embed /AMTAIR_Prototype/data/example_carlsmith/AMTAIR_Prototype_example_carlsmith.ipynb#connect_to_github_repository echo=true >}}
-
-Link:
-
-Full Notebooks are embedded in the Appendix through the \_quarto.yml file with:
-
-
-
-
-## Embed .html result/rendering from .ipynb Notebook
-
-### Html Graph by Notebook Cell Inclusion - (from github-pages)
-
-``` markdown
-{{< embed /AMTAIR_Prototype/data/example_carlsmith/AMTAIR_Prototype_example_carlsmith.ipynb#html_graph_visualization_from_githubpage echo=true >}}
-```
-
-{{< embed /AMTAIR_Prototype/data/example_carlsmith/AMTAIR_Prototype_example_carlsmith.ipynb#html_graph_visualization_from_githubpage echo=true >}}
-
-
-### Html Graph by Notebook Cell Inclusion with Website Call?
-
-https://singularitysmith.github.io/AMTAIR_Prototype/bayesian_network_carlsmith.html
-
-### Full Bayesian Network Rendering
-
-``` markdown
-{{< embed /AMTAIR_Prototype/data/example_carlsmith/AMTAIR_Prototype_example_carlsmith.ipynb#html_graph_visualization_from_githubpage  echo=true >}}
-```
-
-
-
-### Rain-Sprinkler-Grass Network Rendering
-```{python}
-#| label: rain_sprinkler_grass_example_network_rendering
-#| echo: true
-#| eval: true
-#| fig-cap: "Dynamic Html Rendering of the Rain-Sprinkler-Grass DAG"
-#| fig-link: "https://singularitysmith.github.io/AMTAIR_Prototype/bayesian_network.html"
-#| fig-alt: "Dynamic Html Renderin of the Rain-Sprinkler-Grass DAG"
-
-
-from IPython.display import IFrame
-
-IFrame(src="https://singularitysmith.github.io/AMTAIR_Prototype/bayesian_network.html", width="100%", height="600px")
-```
-
-
-
-
-
-
-
-
-
-
-
-
-
-## Diagrams
-
-Quarto has native support for embedding Mermaid and Graphviz diagrams. This enables you to create flowcharts, sequence diagrams, state diagrams, Gantt charts, and more using a plain text syntax inspired by markdown.
-
-For example, here we embed a flowchart created using Mermaid:
-
-```{mermaid}
-flowchart LR
-  A[Hard edge] --> B(Round edge)
-  B --> C{Decision}
-  C --> D[Result one]
-  C --> E[Result two]
-```
-
-## Citations {#sec-citations .unnumbered .unlisted}
-
-@soares2014 <!-- preferred because it works with both html, latex and pdf -->
-
-[@soares2014] and [@knuth1984]
-
-Blah Blah [see @knuth1984, pp. 33-35; also @growiec2024, chap. 1]
-
-Blah Blah [@knuth1984, pp. 33-35, 38-39 and passim]
-
-Blah Blah [@growiec2024; @knuth1984].
-
-Growiec says blah [-@growiec2024]
-
-### Narrative citations (author as subject)
-
-@soares2014 argues that AI alignment requires...
-
-### Parenthetical citations (supporting reference)
-
-Recent work supports this view [@soares2014; @knuth1984].
-
-### Author-only citation (when discussing the person)
-
-As [-@soares2014] demonstrates in their analysis...
-
-### Year-only citation (when author already mentioned)
-
-Soares [-@soares2014] later revised this position.
-
-### Page-specific references
-
-The key insight appears in [@soares2014, pp. 45-67].
-
-### Multiple works, different pages
-
-This view is supported [@soares2014, p. 23; @knuth1984, pp. 156-159].
-
-## Section Cross-References {#sec-crossref}
-
-Refer to sections like: @sec-adaptive-governance and @sec-crossref <!-- Using @-sec-REFERENCE_HEADING requires that the .qmd file contains a yml section which details the "numbering" -->
-
-``` markdown
-Caveat: refering to sections with @sec-HEADINGS works only for sections with:
-## Heading {#sec-HEADINGS}
-It does not work for sections with ".unnumbered and/or .unlisted":
-## Heading {#sec-HEADINGS .unnumbered .unlisted}
-Furthermore the .qmd and/or .md yml settings (~ numbering have to be just right)
-```
-
-### Section Numbers
-
-By default, all headings in your document create a numbered section. You customize numbering depth using the number-depth option. For example, to only number sections immediately below the chapter level, use this:
-
-`number-depth: 2`
-
-Note that toc-depth is independent of number-depth (i.e. you can have unnumbered entries in the TOC if they are masked out from numbering by number-depth).
-
-Testing crossreferencing grapics @fig-automation_pipeline. See [Chapter @sec-syntax] for more details on visualizing model diagnostics.
-
-Testing crossreferencing headings @sec-carlsmith-model
-
-`Testing crossreferencing headings @sec-rain-sprinkler-grass` which does not work yet. <!-- [ ] Fix cross-chapter heading referencing -->
-
-Chapter Cross-Reference @sec-crossref
-
-## Pages in Landscape
-
-::: landscape
-This will appear in landscape but only in PDF format. Testing crossreferencing headings @sec-carlsmith-model
-:::
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 # Abstract {#sec-abstract}
 
@@ -693,49 +105,1588 @@ MAD Mutually Assured Destruction
 -   **d-separation**: A criterion for identifying conditional independence relationships in Bayesian networks\
 -   **Monte Carlo sampling**: A computational technique using random sampling to obtain numerical results
 
-<!-- {{< include chapters/Outlining-Workflow.md >}} -->
 
-<!-- \listoffigures -->
 
-### Quarto Features Previously Incompatible with LaTeX (Below) {.unnumbered .unlisted}
 
-```{=html}
-<!-- 
-::: {.hidden}
+
+
+
+# Quarto Syntax and Best Practices Guide
+
+## Key Features
+
+### 1. Task Management System
+
+- HTML comments with `[ ]` for tasks visible in ToDo-Tree
+- Categories: FIND, VERIFY, CREATE, TODO
+- Progress tracking with `[x]` (done) and `[-]` (verified)
+
+### 2. Multi-Format Output
+
+- HTML: Interactive web version with navigation
+- PDF: Professional academic document
+- LaTeX: Source for further customization
+- DOCX: For collaboration
+
+### 3. Cross-Referencing
+
+- Sections: `@sec-section-name`
+- Figures: `@fig-figure-name`
+- Tables: `@tbl-table-name`
+- Citations: `@citation-key`
+
+### 4. Advanced Features
+
+- Interactive Jupyter notebooks
+- Mermaid diagrams
+- Math equations (LaTeX)
+- Callout blocks
+- Extensive footnotes
+- Glossary and abbreviations
+
+## Quick Start
+
+### Building the Thesis
+
+bash
+
+```bash
+# HTML output
+quarto render --to html
+
+# PDF output
+quarto render --to pdf
+
+# All formats
+quarto render
+```
+
+### Task Management
+
+markdown
+
+```markdown
+<!-- [ ] TODO: Task description -->
+<!-- [ ] FIND: @missing-citation: "Description" -->
+<!-- [ ] VERIFY: @suggested-citation: "Source" -->
+<!-- [ ] CREATE: {#fig-name}: "Figure description" -->
+```
+
+### Adding Content
+1. Create/edit `.qmd` files in chapters/
+2. Update `_quarto.yml` if adding new chapters
+3. Add citations to `ref/MAref.bib`
+4. Place images in `images/`
+
+## Best Practices
+
+### 1. Consistent Formatting
+
+- Use American spelling throughout
+- Follow heading hierarchy (##, ###, ####)
+- Maintain consistent citation style
+- Use semantic line breaks
+
+### 2. Task Tracking
+
+- Create tasks as you write
+- Update task status regularly
+- Use categories for clarity
+- Include implementation details
+
+### 3. Version Control
+
+- Commit frequently with descriptive messages
+- Use branches for major revisions
+- Tag releases (draft versions)
+
+### 4. Documentation
+
+- Comment complex code blocks
+- Provide alt text for all figures
+- Keep this README updated
+- Document any custom scripts
+
+## Troubleshooting
+
+### Common Issues
+
+1. **LaTeX errors**: Check `_quarto.yml` for LaTeX settings
+2. **Missing references**: Ensure citations are in `MAref.bib`
+3. **Broken links**: Use relative paths for internal links
+4. **Task visibility**: Install ToDo-Tree extension in VS Code
+
+### Getting Help
+
+- Quarto documentation: [https://quarto.org](https://quarto.org)
+- Project repository: [https://github.com/VJMeyer/submission](https://github.com/VJMeyer/submission)
+- Contact: [Valentin2meyer@gmail.com](mailto:Valentin2meyer@gmail.com)
+
+## License
+
+MIT License - See LICENSE file for details
+
+## Document Structure and Headings
+
+### Heading Hierarchy
+
+Always use the full heading hierarchy for maximum organization:
+
+markdown
+
+```markdown
+# Chapter Title {#sec-chapter}
+## Major Section {#sec-major-section}
+### Subsection {#sec-subsection}
+#### Sub-subsection {#sec-subsubsection}
+`##### Sub-subsubsection {#sec-subsubsubsection}`
+`###### Sub-subsubsubsection {#sec-subsubsubsection}`
+```
+
+**Best Practices:**
+
+- Always include `{#sec-label}` for cross-referencing
+- Use descriptive, concise heading names
+- Maintain consistent capitalization (Title Case for chapters, Sentence case for sections)
+- Add `.unnumbered` for sections without numbers (e.g., References)
+- Add `.unlisted` to exclude from TOC
+- Do not manually number headings
+
+
+## Text Formatting
+
+### Basic Formatting
+
+markdown
+
+```markdown
+*italics* for emphasis
+**bold** for strong emphasis
+***bold italics*** for very strong emphasis
+~~strikethrough~~ for deleted text
+[highlighted text]{.mark}
+[underlined text]{.underline}
+[small caps]{.smallcaps}
+`inline code` in numerous applications
+```
+
+### Advanced Formatting
+
+markdown
+
+```markdown
+superscript^2^ for exponents
+subscript~2~ for chemical formulas
+```
+
+## Links
+
+`<https://quarto.org/docs/authoring/markdown-basics.html>` produces: <https://quarto.org/docs/authoring/markdown-basics.html>
+
+`[Quarto Book Cross-References](https://quarto.org/docs/books/book-crossrefs.html)` produces: [Quarto Book Cross-References](https://quarto.org/docs/books/book-crossrefs.html)
+
+
+
+## Including Code {#sec-code}
+
+```{python}
+#| echo: true
+#| eval: true
+#| label: fig-extraction-pipeline
+#| fig-cap: "AMTAIR extraction pipeline visualization"
+#| fig-subcap: 
+#|   - "Gentoo penguins tend to have thinner bills,"
+#|   - "and Adelie penguins tend to have shorter bills."
+#| fig-link: "https://colab.research.google.com/drive/your-notebook-id"
+#| fig-alt: "Detailed description for accessibility"
+
+import pandas as pd
+print("AMTAIR is working!")
+```
+
+
+
+
+## Diagrams
+
+Quarto has native support for embedding Mermaid and Graphviz diagrams. This enables you to create flowcharts, sequence diagrams, state diagrams, Gantt charts, and more using a plain text syntax inspired by markdown.
+
+For example, here we embed a flowchart created using Mermaid:
+
+```{mermaid}
+flowchart LR
+  A[Hard edge] --> B(Round edge)
+  B --> C{Decision}
+  C --> D[Result one]
+  C --> E[Result two]
+```
+
+
+
+
+
+
+### In-Line LaTeX
+
+```{=latex}
+\renewcommand*{\labelitemi}{\textgreater}
+```
+<!-- The benefits and use of in-line LaTeX and HTML are unclear to me. I am not even sure if they work properly. -->
+### In-Line HTML
+
+Here's some raw inline HTML: <a>html</a>
+
+## Reference or Embed Code from .ipynb files
+
+#### Code chunks from .ipynb notebooks can be embedded in the .qmd text with:
+
+``` markdown
+{{< embed /AMTAIR_Prototype/data/example_carlsmith/AMTAIR_Prototype_example_carlsmith.ipynb#connect_to_github_repository >}}
+```
+
+#### which produces the output of executing the code cell:
+
+{{< embed /AMTAIR_Prototype/data/example_carlsmith/AMTAIR_Prototype_example_carlsmith.ipynb#connect_to_github_repository >}}
+
+#### including 'echo=true' renders the code of the cell:
+
+``` markdown
+{{< embed /AMTAIR_Prototype/data/example_carlsmith/AMTAIR_Prototype_example_carlsmith.ipynb#connect_to_github_repository echo=true >}}
+```
+
+{{< embed /AMTAIR_Prototype/data/example_carlsmith/AMTAIR_Prototype_example_carlsmith.ipynb#connect_to_github_repository echo=true >}}
+
+Link:
+
+Full Notebooks are embedded in the Appendix through the \_quarto.yml file with:
+
+
+
+
+## Embed .html result/rendering from .ipynb Notebook
+
+### Html Graph by Notebook Cell Inclusion - (from github-pages)
+
+``` markdown
+{{< embed /AMTAIR_Prototype/data/example_carlsmith/AMTAIR_Prototype_example_carlsmith.ipynb#html_graph_visualization_from_githubpage echo=true >}}
+```
+
+{{< embed /AMTAIR_Prototype/data/example_carlsmith/AMTAIR_Prototype_example_carlsmith.ipynb#html_graph_visualization_from_githubpage echo=true >}}
+
+
+### Html Graph by Notebook Cell Inclusion with Website Call?
+
+https://singularitysmith.github.io/AMTAIR_Prototype/bayesian_network_carlsmith.html
+
+### Full Bayesian Network Rendering
+
+``` markdown
+{{< embed /AMTAIR_Prototype/data/example_carlsmith/AMTAIR_Prototype_example_carlsmith.ipynb#html_graph_visualization_from_githubpage  echo=true >}}
+```
+
+
+
+### Rain-Sprinkler-Grass Network Rendering
+```{python}
+#| label: rain_sprinkler_grass_example_network_rendering
+#| echo: true
+#| eval: true
+#| fig-cap: "Dynamic Html Rendering of the Rain-Sprinkler-Grass DAG"
+#| fig-link: "https://singularitysmith.github.io/AMTAIR_Prototype/bayesian_network.html"
+#| fig-alt: "Dynamic Html Renderin of the Rain-Sprinkler-Grass DAG"
+
+
+from IPython.display import IFrame
+
+IFrame(src="https://singularitysmith.github.io/AMTAIR_Prototype/bayesian_network.html", width="100%", height="600px")
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+## Lists and Enumerations
+
+### Unordered Lists
+
+markdown
+
+```markdown
+- First level item
+  - Second level item (2 spaces)
+    - Third level item (4 spaces)
+- Another first level item
+  with continuation (2 spaces for alignment)
+```
+
+### Ordered Lists
+
+markdown
+
+```markdown
+1. First item
+2. Second item
+   a) Sub-item (3 spaces)
+      i. Sub-sub-item (6 spaces)
+   b) Another sub-item
+3. Third item
+```
+
+### Definition Lists
+
+markdown
+
+```markdown
+Term One
+: Definition of term one with detailed explanation
+  that can span multiple lines
+
+Term Two
+: Brief definition
+
+Term Three
+: Another definition with multiple paragraphs
+
+  Additional paragraph for term three
+```
+
+## Code Blocks and Verbatim Text
+
+### Inline Code
+
+markdown
+
+```markdown
+Use `print("Hello")` for inline code
+```
+
+### Code Blocks with Syntax Highlighting
+
+markdown
+
+````markdown
+```python
+def calculate_risk(probability, impact):
+    """Calculate risk score from probability and impact."""
+    return probability * impact
+```
+````
+
+### Verbatim Text
+
+markdown
+
+This is verbatim text that preserves all spacing and formatting exactly as typed
+
+## Blockquotes and Callouts
+
+### Simple Blockquote
+
+markdown
+
+```markdown
+> This is a blockquote for citations or important quotes.
+> It can span multiple lines.
+>
+> And include multiple paragraphs.
+```
+
+### Callout Blocks
+
+markdown
+
+```markdown
+::: {.callout-note}
+## Note Title
+This is a note callout with important information.
+:::
+
+::: {.callout-warning}
+## Warning
+This warns about potential issues.
+:::
+
+::: {.callout-tip}
+## Pro Tip
+Helpful suggestions go here.
+:::
+
+::: {.callout-important}
+## Important
+Critical information that must not be missed.
+:::
+
+::: {.callout-caution}
+## Caution
+Use with care in specific situations.
+:::
+```
+
+## Figures and Images
+
+### Complete Figure Syntax
+
+markdown
+
+```markdown
+[![Figure Caption for Display](/path/to/image.png){
+  #fig-unique-identifier
+  fig-scap="Short caption for list of figures"
+  fig-alt="Detailed description for accessibility.
+          TYPE: [Chart/Diagram/Photo/etc.]
+          DATA: [What data is shown, axes, units]
+          PURPOSE: [Why included, what to observe]
+          DETAILS: [Key patterns, insights, anomalies]
+          SOURCE: [Citation or data source]"
+  fig-align="center"
+  width="80%"
+}](https://optional-link-url.com)
+```
+
+### Figure Best Practices
+
+1. Always include comprehensive alt text
+2. Use descriptive filenames
+3. Optimize image sizes for web/PDF
+4. Maintain consistent styling
+5. Reference all figures in text: `See @fig-identifier`
+
+## Tables
+
+### Markdown Tables
+
+markdown
+
+```markdown
+| Column 1 | Column 2 | Column 3 |
+|----------|:--------:|--------:|
+| Left     | Center   | Right   |
+| Data     | Data     | Data    |
+
+: Table caption {#tbl-identifier}
+```
+
+### Grid Tables
+
+markdown
+
+```markdown
++----------+----------+----------+
+| Header 1 | Header 2 | Header 3 |
++==========+==========+==========+
+| Cell 1   | Cell 2   | Cell 3   |
+|          |          |          |
+| Multi-   | Multi-   | Multi-   |
+| line     | line     | line     |
++----------+----------+----------+
+
+: Complex table with multiple lines {#tbl-complex}
+```
+
+
+| Right | Left | Default | Center |
+|------:|:-----|---------|:------:|
+|    12 | 12   | 12      |   12   |
+|   123 | 123  | 123     |  123   |
+|     1 | 1    | 1       |   1    |
+
+: Demonstration of pipe table syntax {#tbl-letters}
+
+| Col1 | Col2 | Col3 |
+|------|------|------|
+| A    | B    | C    |
+| E    | F    | G    |
+| A    | G    | G    |
+
+: My Caption 1 {#tbl-letters}
+
+Referencing tables with `@tbl-KEY`: See @tbl-letters.
+
+::: {#tbl-panel layout-ncol="2"}
+| Col1 | Col2 | Col3 |
+|------|------|------|
+| A    | B    | C    |
+| E    | F    | G    |
+| A    | G    | G    |
+
+: First Table {#tbl-first}
+
+| Col1 | Col2 | Col3 |
+|------|------|------|
+| A    | B    | C    |
+| E    | F    | G    |
+| A    | G    | G    |
+
+: Second Table {#tbl-second}
+
+Main Caption
+:::
+
+See @tbl-panel for details, especially @tbl-second.
+
+## Citations and References
+
+### Citation Styles
+
+markdown
+
+```markdown
+Narrative: @author2024 argues that...
+Parenthetical: This is supported by evidence [@author2024].
+Multiple: Several studies confirm this [@author2024; @other2023].
+Page specific: See discussion in [@author2024, pp. 45-67].
+Author only: As [-@author2024] demonstrates...
+```
+
+### Bibliography Entry
+
+bibtex
+
+```bibtex
+@article{author2024,
+  title = {Article Title},
+  author = {Author, First and Other, Second},
+  date = {2024},
+  journaltitle = {Journal Name},
+  volume = {10},
+  number = {2},
+  pages = {45--67},
+  doi = {10.1234/example},
+  url = {https://example.com}
+}
+```
+
+## Cross-References
+
+### Section References
+
+markdown
+
+```markdown
+See @sec-introduction for background.
+As discussed in @sec-methodology...
+```
+
+### Figure and Table References
+
+markdown
+
+```markdown
+@fig-pipeline shows the workflow.
+Results are summarized in @tbl-results.
+```
+
+### Equation References
+
+markdown
+
+```markdown
+$$
+E = mc^2
+$$ {#eq-einstein}
+
+Einstein's equation (@eq-einstein) shows...
+```
+
+## Mathematics
+
+### Inline Math
+
+markdown
+
+```markdown
+The probability $P(A|B) = \frac{P(B|A)P(A)}{P(B)}$
+```
+
+### Display Math
+
+markdown
+
+```markdown
+$$
+\begin{align}
+\nabla \times \vec{\mathbf{B}} -\, \frac1c\, \frac{\partial\vec{\mathbf{E}}}{\partial t} &= \frac{4\pi}{c}\vec{\mathbf{j}} \\
+\nabla \cdot \vec{\mathbf{E}} &= 4 \pi \rho \\
+\nabla \times \vec{\mathbf{E}}\, +\, \frac1c\, \frac{\partial\vec{\mathbf{B}}}{\partial t} &= \vec{\mathbf{0}} \\
+\nabla \cdot \vec{\mathbf{B}} &= 0
+\end{align}
+$$
+```
+
+inline math: $E = mc^{2}$
+
+display math:
+
+$$E = mc^{2}$$
+
+If you want to define custom TeX macros, include them within \$\$ delimiters enclosed in a .hidden block. For example:
+
+::: hidden
 $$
  \def\RR{{\bf R}}
  \def\bold#1{{\bf #1}}
 $$
-::: -->
-```
-
-```{=html}
-<!-- :::note
-Remember to connect this back to the research question
-::: -->
-```
-
-```{=html}
-<!-- ::: {.callout-note}
-## Optional Title
-Content here
-::: -->
-```
-
-```{=html}
-<!-- (@)  A list whose numbering
-
-continues after
-
-(@)  an interruption -->
-```
-
-```{=html}
-<!-- ::: {}
-1. A list
 :::
 
-::: {}
-1. Followed by another list
-:::  -->
+For HTML math processed using MathJax (the default) you can use the \\def, \\newcommand, \\renewcommand, \\newenvironment, \\renewenvironment, and \\let commands to create your own macros and environments.
+
+## Footnotes
+
+Footnotes are to be used as much as possible!
+
+### Simple Footnote
+
+markdown
+
+```markdown
+This needs clarification.^[This is an inline footnote.]
 ```
+
+### Referenced Footnote
+
+markdown
+
+```markdown
+This is important.[^1]
+
+[^1]: This is a longer footnote with multiple paragraphs.
+
+    Second paragraph of the footnote.
+    
+    Even code blocks are possible:
+    ```python
+    print("In footnote")
+    ```
+```
+
+Here is an inline note.[^index-1]
+
+[^index-1]: Inlines notes are easier to write, since you don't have to pick an identifier and move down to type the note.
+
+Here is a footnote reference,[^index-2]
+
+[^index-2]: Here is the footnote.
+
+Another Text with a footnote[^index-3] but this time a "longnote".
+
+[^index-3]: Here's one with multiple blocks.
+
+    Subsequent paragraphs are indented to show that they belong to the previous footnote.
+
+    ```         
+    { some.code }
+    ```
+
+    The whole paragraph can be indented, or just the first line. In this way, multi-paragraph footnotes work like multi-paragraph list items.
+
+This paragraph won't be part of the note, because it isn't indented.
+
+
+## Appendices
+
+### Structure
+
+markdown
+
+```markdown
+# Appendices {.unnumbered}
+
+## Appendix A: Technical Details {#sec-appendix-a .unnumbered}
+
+### A.1 Implementation {.unnumbered}
+
+## Appendix B: Additional Results {#sec-appendix-b .unnumbered}
+```
+
+### Best Practices for Appendices
+
+1. Include all supplementary material
+2. Reference from main text
+3. Number consistently
+4. Provide clear descriptions
+5. Maintain same formatting standards
+
+## Glossary and Abbreviations
+
+### Glossary Format
+
+markdown
+
+```markdown
+# Glossary {.unnumbered}
+Term
+: Definition
+
+
+AI
+: Artificial Intelligence - Computer systems performing tasks requiring human intelligence
+
+ML
+: Machine Learning - Algorithms that improve through experience
+
+DL
+: Deep Learning - Neural networks with multiple layers
+```
+
+## Interactive Elements
+
+### Jupyter Notebook Embedding
+
+
+
+```markdown
+{{< embed notebook.ipynb#cell-label >}}
+```
+
+### Mermaid Diagrams
+
+
+
+````markdown
+```{mermaid}
+graph TD
+    A[Start] --> B{Decision}
+    B -->|Yes| C[Action 1]
+    B -->|No| D[Action 2]
+    C --> E[End]
+    D --> E
+````
+
+
+
+## Line Breaks and Spacing
+
+### Spacing Rules
+1. **Between sections**: 2 blank lines
+2. **Between paragraphs**: 1 blank line
+3. **Around code blocks**: 1 blank line before and after
+4. **Around figures/tables**: 1 blank line before and after
+5. **After headings**: 1 blank line
+6. **Between list items**: No blank lines unless containing multiple paragraphs
+
+### Page Breaks
+```markdown
+{{< pagebreak >}}
+````
+
+## Comments and Metadata
+
+### HTML Comments
+
+
+```markdown
+<!-- This is a comment not shown in output -->
+```
+
+
+
+# Comprehensive Task Management System for Quarto Thesis
+
+## Overview
+
+This task management system uses HTML comments with specific formatting to create trackable, categorized tasks that integrate with VS Code's ToDo-Tree extension while remaining invisible or visible depending on the status in rendered output.
+
+## Task Categories and Syntax
+
+### 1. General Tasks
+
+In markdown blocks or with `verbatim code` ticks:
+
+```markdown
+<!-- [ ] TODO: General task description -->
+<!-- [ ] TODO: High-priority task with deadline (2024-12-31) -->
+<!-- [ ] TODO: Task with subtasks
+        - [ ] Subtask 1
+        - [ ] Subtask 2
+        - [ ] Subtask 3
+-->
+```
+
+### 2. Citation Tasks
+
+In markdown blocks or with `verbatim code` ticks:
+
+```markdown
+<!-- [ ] FIND: @missing-citation-key: "Description of needed source, keywords, search terms" -->
+<!-- [ ] VERIFY: @suggested-citation: "Author (Year). Title. Journal." [Include BibTeX if available] -->
+<!-- [ ] UPDATE: @outdated-citation: "Check for newer edition or updated data" -->
+```
+
+### 3. Figure/Graphic Tasks
+
+In markdown blocks or with `verbatim code` ticks:
+
+```markdown
+<!-- [ ] CREATE: {#fig-diagram-name}: "Description of needed diagram, style, data to include" -->
+<!-- [ ] FIND: {#fig-example-image}: "Stock photo of X, preferably showing Y" -->
+<!-- [ ] UPDATE: {#fig-outdated-chart}: "Update with 2024 data" -->
+<!-- [ ] IMPROVE: {#fig-low-quality}: "Higher resolution version needed" -->
+```
+
+### 4. Content Tasks
+
+In markdown blocks or with `verbatim code` ticks:
+
+```markdown
+<!-- [ ] WRITE: Section 3.2 - Methodology details -->
+<!-- [ ] EXPAND: Background section needs 500 more words -->
+<!-- [ ] REVISE: Introduction for clarity and flow -->
+<!-- [ ] REVIEW: Chapter 4 for consistency -->
+```
+
+### 5. Technical Tasks
+
+In markdown blocks or with `verbatim code` ticks:
+
+```markdown
+<!-- [ ] FIX: Code block in section 2.3 has syntax error -->
+<!-- [ ] TEST: Jupyter notebook embedding -->
+<!-- [ ] OPTIMIZE: Large figure file sizes -->
+<!-- [ ] IMPLEMENT: Cross-reference checking script -->
+```
+
+## Task States
+
+### Open or In-ProgressTasks
+
+In markdown blocks or with `verbatim code` ticks:
+
+```markdown
+<!-- [ ] Task description -->
+```
+
+### Completed Tasks (Visible in ToDo-Tree)
+
+Either markdown blocks or `verbatim code` ticks or without (to remain hidden in output):
+
+```markdown
+<!-- [x] Task description (completed 2024-01-20) -->
+```
+
+### Verified/Archived Tasks (Hidden from ToDo-Tree)
+
+markdown
+
+```markdown
+<!-- [-] Task description (verified and archived) -->
+```
+
+## Advanced Task Formatting
+
+### Multi-line Tasks with Details
+
+markdown
+
+```markdown
+<!-- [ ] Major task with extensive details
+  
+  Background:
+  - Context for why this task exists
+  - Related issues or dependencies
+  
+  Requirements:
+  1. Specific requirement one
+  2. Specific requirement two
+  3. Specific requirement three
+  
+  Implementation Plan:
+  - [ ] Step 1: Initial research
+  - [ ] Step 2: Draft content
+  - [ ] Step 3: Review and revise
+  
+  Resources:
+  - Reference document: path/to/doc
+  - Example: url-to-example
+  
+-->
+```
+
+### Linked Tasks
+
+markdown
+
+```markdown
+<!-- [ ] PRIMARY: Main task description
+  Related tasks:
+  - See also: Task in Chapter 2
+  - Depends on: Task in Appendix A
+  - Blocks: Task in Chapter 5
+-->
+```
+
+### Conditional Tasks
+
+markdown
+
+```markdown
+<!-- [ ] IF: Hypothesis confirmed in Chapter 3
+     THEN: Add supporting evidence section
+     ELSE: Revise theoretical framework -->
+```
+
+## Task Tracking Best Practices
+
+### 1. Task Creation Guidelines
+
+- Create tasks immediately when identified
+- Be specific and actionable
+- Include context and success criteria
+- Link related tasks
+
+### 2. Task Organization
+
+- Group related tasks together
+- Place tasks near or inside relevant content
+- Use consistent formatting
+- Maintain task hierarchy
+
+
+### 3. Priority System
+
+In markdown blocks or with `verbatim code` ticks:
+
+```markdown
+<!-- [ ] URGENT: Task needing immediate attention -->
+<!-- [ ] HIGH: Task important for next milestone -->
+<!-- [ ] MEDIUM: Standard priority task -->
+<!-- [ ] LOW: Nice-to-have improvement -->
+```
+
+```markdown
+#### Simple "One-line tasks"
+
+Use Code ticks and html comment and task format for tasks distinctly visible across all formats including the ToDo-Tree overview:
+
+`<!-- [ ] ToDos for things to do / tasks / reminders (allows "jump to with Taks Tree extension") -->`
+
+Use html comment and task format for open or uncertain tasks, visible in the .qmd file:
+
+<!-- [ ] ToDos for things to do / tasks / reminders (allows "jump to with Taks Tree extension") -->
+
+
+
+#### More Complex Tasks with Notes
+
+```         
+<!-- [ ] Task Title: short description-->
+
+  More Information about task
+
+  Relevant notes
+
+  Step-by-step implementation Plan
+
+  Etc.
+
+```
+
+#### Completed Tasks
+
+Retain completed tasks in ToDo-Tree by adding an x in the brackets: `[x]`
+`<!-- [x] Tasks which have been finished but should remain for later verification -->`
+
+<!-- [x] Tasks which have been finished but should remain for later verification -->
+
+
+Mark and remove completed tasks from ToDo-Tree by adding a minus in the brackets: `[-]`
+
+`<!-- [-] Tasks which have been finished but should remain visible for later verification -->`
+
+<!-- [-] Tasks which have been finished but should remain for later verification (only in .qmd) -->
+```
+
+## Task Management Workflow
+
+### 1. Task Creation
+
+In markdown blocks or with `verbatim code` ticks:
+
+```markdown
+<!-- [ ] TODO: Write introduction paragraph
+  Context: Need to introduce the concept of X
+  Requirements: 
+  - Define key terms
+  - Provide historical context
+  - Connect to thesis argument
+  Deadline: 2024-02-15
+-->
+```
+
+### 2. Task Execution
+
+In markdown blocks or with `verbatim code` ticks:
+
+```markdown
+<!-- [ ] TODO: Write introduction paragraph
+  Progress:
+  - [x] Defined key terms
+  - [-] Not Working on historical context
+  - [ ] Connection to thesis argument
+-->
+```
+
+### 3. Task Completion
+
+In markdown blocks or with `verbatim code` ticks:
+
+```markdown
+<!-- [x] TODO: Write introduction paragraph (completed 2024-02-14)
+  Final version includes all requirements
+  Word count: 523
+  Review status: Approved by advisor
+-->
+```
+
+### 4. Task Archival
+
+In markdown blocks or with `verbatim code` ticks:
+
+```markdown
+<!-- [-] TODO: Write introduction paragraph (archived 2024-02-20)
+  Moved to version control history
+-->
+```
+
+## Reporting and Analytics
+
+### Task Summary Template
+
+In markdown blocks or with `verbatim code` ticks:
+
+```markdown
+<!-- TASK SUMMARY: Chapter 3
+  Total tasks: 45
+  Completed: 32 (71%)
+  In progress: 8 (18%)
+  Open: 5 (11%)
+  
+  By category:
+  - WRITE: 15 tasks (10 complete)
+  - FIND: 12 tasks (8 complete)
+  - VERIFY: 8 tasks (7 complete)
+  - CREATE: 10 tasks (7 complete)
+  
+  Critical path:
+  1. Complete methodology section
+  2. Verify statistical analysis
+  3. Create results visualizations
+-->
+```
+
+
+
+
+## Best Practices Summary --- ALWAYS CONSISTENTLY:
+
+1. **Be Specific**: Tasks should be actionable and measurable
+2. **Stay Organized**: Group related tasks and maintain hierarchy
+3. **Archive Completed**: Keep task list manageable
+4. **Use Categories**: Leverage task types for better organization
+5. **Add Context**: Include enough detail for future reference
+6. **Link Related**: Connect interdependent tasks
+7. **Maintain Consistency**: Use standard formatting throughout
+8. **Use correct formatting**: Deploy the correct formatting and fix any inconsistencies
+
+
+
+
+
+
+
+
+# Tagging and Highlighting System for Content Merging
+
+## Overview
+
+When merging content from multiple sources, it's crucial to identify and manage duplicate, redundant, or overlapping material. This system uses Quarto formatting features to clearly mark such content for review and consolidation.
+
+## Tagging Categories
+
+### A. Duplicate Content Marking
+
+In markdown blocks or with `verbatim code` ticks:
+
+```markdown
+::: {.duplicate-content data-source="Chapter2.qmd" data-section="2.3"}
+This paragraph appears to be duplicated from Chapter 2, Section 2.3.
+Consider consolidating or removing.
+:::
+
+`<!-- DUPLICATE: This content also appears in Section 2.3 -->`
+```
+
+### B. Redundant Content Highlighting
+
+In markdown blocks or with `verbatim code` ticks:
+
+```markdown
+::: {.redundant-content}
+[This section covers similar ground to Section 3.2 but with less detail]{.mark style="background-color: #ffeb3b"}
+:::
+
+<!-- REDUNDANT: Similar content in Section 3.2 with more comprehensive coverage -->
+```
+
+### C. Better Version Available
+
+In markdown blocks or with `verbatim code` ticks:
+
+```markdown
+::: {.superseded-content data-better-version="Chapter4.qmd#sec-4-5"}
+This explanation is superseded by a more comprehensive version in Chapter 4, Section 4.5
+:::
+
+<!-- SUPERSEDED: See Chapter 4.5 for improved version -->
+```
+
+### D. Merge Candidate
+
+In markdown blocks or with `verbatim code` ticks:
+
+```markdown
+::: {.merge-candidate data-merge-with="Section 5.2"}
+**MERGE CANDIDATE**: This content could be combined with Section 5.2 for better flow.
+
+Original content here...
+:::
+
+<!-- MERGE: Consider combining with Section 5.2 -->
+```
+
+## Visual Marking System
+
+### Color-Coded Highlighting
+
+In markdown blocks or with `verbatim code` ticks:
+
+```markdown
+[Duplicate content - exact match]{style="background-color: #ff6b6b; color: white"}
+[Redundant content - similar coverage]{style="background-color: #ffeb3b"}
+[Better version exists elsewhere]{style="background-color: #4ecdc4"}
+[Merge candidate]{style="background-color: #45b7d1"}
+[Review needed]{style="background-color: #fa8231"}
+```
+
+### Border Marking
+
+In markdown blocks or with `verbatim code` ticks:
+
+```markdown
+::: {style="border-left: 5px solid #ff6b6b; padding-left: 10px"}
+This entire section is duplicated elsewhere.
+:::
+```
+
+### Inline Marking
+
+In markdown blocks or with `verbatim code` ticks:
+
+```markdown
+This paragraph contains [duplicate phrase]{.duplicate} that appears 
+in multiple locations.
+```
+
+## Metadata Tracking
+
+### Comprehensive Metadata
+
+In markdown blocks or with `verbatim code` ticks:
+
+```markdown
+::: {.content-status 
+     data-status="duplicate"
+     data-original-source="intro.qmd#para-3"
+     data-other-locations="chapter2.qmd#para-15, chapter5.qmd#para-8"
+     data-recommendation="keep-original"
+     data-reviewed-by="VM"
+     data-review-date="2024-02-15"}
+This content appears in multiple locations.
+The original in intro.qmd is most comprehensive.
+:::
+```
+
+### Quick Reference Tags
+
+In markdown blocks or with `verbatim code` ticks:
+
+```markdown
+<!-- 
+  STATUS: Duplicate
+  ORIGINAL: intro.qmd#para-3
+  ALSO IN: ch2#para-15, ch5#para-8
+  ACTION: Remove this version
+-->
+```
+
+## Workflow for Content Merging
+
+### 1. Initial Marking Phase
+
+In markdown blocks or with `verbatim code` ticks:
+
+```markdown
+<!-- PHASE 1: Initial marking -->
+<!-- [ ] TODO: Mark all duplicate content in Chapter 1 -->
+<!-- [ ] TODO: Identify redundant sections in Chapter 2 -->
+<!-- [ ] TODO: Tag better versions throughout document -->
+```
+
+### 2. Review and Comparison
+
+In markdown blocks or with `verbatim code` ticks:
+
+```markdown
+<!-- COMPARISON NEEDED -->
+::: {.comparison-block}
+**Version A (Current)**: 
+Brief explanation of concept X.
+
+**Version B (Chapter 3.2)**:
+More detailed explanation of concept X with examples.
+
+**Recommendation**: Keep Version B, update cross-references.
+:::
+```
+
+### 3. Consolidation Actions
+
+In markdown blocks or with `verbatim code` ticks:
+
+```markdown
+<!-- CONSOLIDATION PLAN -->
+::: {.consolidation-plan}
+1. Keep primary version in Section 2.3
+2. Remove duplicate from Section 4.1
+3. Add cross-reference from Section 4.1 to Section 2.3
+4. Merge unique insights from Section 4.1 into Section 2.3
+:::
+```
+
+## Automated Detection Helpers
+
+### Search Patterns
+
+markdown
+
+```markdown
+<!-- Common duplicate indicators -->
+- "As mentioned earlier"
+- "As discussed in"
+- "Similar to"
+- "Like we saw in"
+- "Returning to"
+```
+
+### Duplicate Detection Checklist
+
+In markdown blocks or with `verbatim code` ticks:
+
+```markdown
+<!-- [ ] Check for repeated definitions -->
+<!-- [ ] Identify similar examples -->
+<!-- [ ] Find redundant explanations -->
+<!-- [ ] Locate repeated figures/tables -->
+<!-- [ ] Search for similar section headings -->
+```
+
+## Best Practices for Merging
+
+### 1. Pre-Merge Preparation
+
+- Mark all content systematically
+- Create comparison documents
+- Track all locations of similar content
+- Document rationale for decisions
+
+### 2. During Merge Process
+
+- Keep best version based on:
+    - Completeness
+    - Clarity
+    - Placement in document flow
+    - Citation quality
+    - Figure/table quality
+
+### 3. Post-Merge Cleanup
+
+- Update all cross-references
+- Remove duplicate citations
+- Consolidate figures/tables
+- Harmonize terminology
+- Verify logical flow
+
+## Templates for Common Scenarios
+
+### Duplicate Definition
+
+markdown
+
+```markdown
+::: {.duplicate-definition data-term="Bayesian Network"}
+**DUPLICATE DEFINITION**: "Bayesian Network" is defined in:
+- Section 2.1 (basic definition)
+- Section 3.3 (technical definition) ← **KEEP THIS**
+- Glossary (summary definition)
+
+Action: Keep technical definition in 3.3, reference from 2.1
+:::
+```
+
+### Redundant Example
+
+markdown
+
+```markdown
+::: {.redundant-example}
+**REDUNDANT EXAMPLE**: Rain-Sprinkler-Lawn appears in:
+1. Introduction (brief mention)
+2. Chapter 2 (detailed walkthrough) ← **PRIMARY**
+3. Chapter 4 (reference only)
+
+Action: Keep detailed version, add cross-references from others
+:::
+```
+
+### Overlapping Sections
+
+markdown
+
+```markdown
+::: {.section-overlap}
+**SECTION OVERLAP**: 
+- Section 3.2 "Methodology Overview" 
+- Section 4.1 "Methods Used"
+
+Content comparison:
+- 70% overlap in general approach
+- 3.2 has better technical detail
+- 4.1 has better practical examples
+
+Recommendation: Merge into 3.2, incorporate examples from 4.1
+:::
+```
+
+## Visual Summary Blocks
+
+### Merge Status Dashboard
+
+markdown
+
+```markdown
+::: {.merge-status-dashboard}
+**Chapter 2 Merge Status**
+- Total sections: 15
+- Duplicates found: 4
+- Redundant content: 7
+- Unique content: 4
+- Merge complete: 2/11
+- Pending review: 9
+:::
+```
+
+### Decision Log
+
+markdown
+
+```markdown
+::: {.merge-decision-log}
+**Merge Decisions - 2024-02-15**
+1. **Section 2.3 vs 4.1**: Kept 2.3, removed 4.1
+2. **Definition of AI**: Consolidated in Glossary
+3. **Example set A vs B**: Merged best of both into new set
+4. **Figure 2.1 vs 3.2**: Kept 3.2 (higher quality)
+:::
+```
+
+## Quality Assurance
+
+### Pre-Publication Checklist
+
+In markdown blocks or with `verbatim code` ticks:
+
+```markdown
+<!-- [ ] All duplicate markers removed -->
+<!-- [ ] All merge decisions documented -->
+<!-- [ ] Cross-references updated -->
+<!-- [ ] No broken links from removed content -->
+<!-- [ ] Terminology harmonized -->
+<!-- [ ] Flow tested after merging -->
+```
+
+### Final Verification
+
+In markdown blocks or with `verbatim code` ticks:
+
+```markdown
+<!-- FINAL CHECK: Content Merging -->
+- [ ] No duplicate content remains untagged
+- [ ] All redundancies resolved
+- [ ] Best versions retained
+- [ ] Smooth transitions between merged sections
+- [ ] Complete citation consolidation
+- [ ] Figure/table deduplication
+```
+
+# Master Thesis Checklist for Quarto Projects
+
+
+### Content Creation Checklist
+
+#### Document Structure
+
+- [ ] All chapters following consistent structure
+- [ ] Proper heading hierarchy (##, ###, ####)
+- [ ] Section labels added ({#sec-label})
+
+#### Text Quality
+
+- [ ] American spelling throughout (run spell check)
+- [ ] Consistent terminology (maintain glossary, add entries)
+- [ ] Active voice preferred
+- [ ] Sentences clear and concise
+- [ ] Paragraphs focused on single ideas
+- [ ] Transitions between sections smooth
+- [ ] No widows or orphans in paragraphs
+
+#### Formatting Elements
+
+- [ ] Lists properly formatted and consistent
+- [ ] Code blocks with appropriate syntax highlighting
+- [ ] Blockquotes used for citations
+- [ ] Callout boxes for important information
+- [ ] Mathematical equations properly formatted
+- [ ] Footnotes used wherever possible
+- [ ] Page breaks inserted where needed
+
+#### Figures and Tables
+
+- [ ] All figures have unique identifiers (#fig-name)
+- [ ] Comprehensive alt text for accessibility
+- [ ] Short captions for list of figures
+- [ ] Full captions explaining content
+- [ ] Consistent sizing and alignment
+- [ ] All figures referenced in text
+- [ ] Source attribution included
+- [ ] File formats optimized (PNG/SVG for web, PDF for print)
+- [ ] Tables have proper headers
+- [ ] Table captions descriptive
+- [ ] All tables referenced in text
+
+#### Citations and References
+
+- [ ] All claims supported by citations
+- [ ] Citation style consistent throughout
+- [ ] Page numbers included where appropriate
+- [ ] Bibliography entries complete
+- [ ] No missing citations (check FIND tasks)
+- [ ] No duplicate citations
+- [ ] Citations verified (check VERIFY tasks)
+- [ ] DOIs/URLs included and working
+
+#### Cross-References
+
+- [ ] All sections labeled for referencing
+- [ ] Figure references working (`@fig-name`)
+- [ ] Table references working (`@tbl-name`)
+- [ ] Section references working (`@sec-name`)
+- [ ] No broken cross-references
+
+## Revision Phase
+
+### Content Review
+
+- [ ] Argument flow logical and clear
+- [ ] Evidence supports all claims
+- [ ] Counterarguments addressed
+- [ ] Conclusions follow from evidence
+- [ ] No redundant content (check merge tags)
+- [ ] All promises in introduction fulfilled
+
+
+### Task Completion
+
+- [ ] All TODO items addressed or documented
+- [ ] All FIND items researched
+- [ ] All VERIFY items confirmed
+- [ ] All CREATE items completed
+- [ ] Task status updated ([], [x], [-])
+- [ ] Progress summaries updated
+
+
+
+
+## ⚡ Prime Directives
+1. **Quarto supremacy** – exploit *every* reliable feature Quarto offers.  
+2. **Four-level heading discipline** – never skip a level.  
+3. **Redundancy tagged, not deleted** – see § Tagging System.  
+4. **Checklists rule every commit** – see § Rigorous Checklist.  
+5. **Footnotes galore** – default to footnotes for nuance, citations, side quests.  
+6. **Glossary, TOC, LOF, LOT, appendices, cross-refs** – keep fully synched; update on *every* save.  
+7. **One thought ≈ one line-break** – err on the side of whitespace.
+
+
+
+## Quarto Syntax Cheat-Sheet ↔ Best-Practice
+
+| Feature | Minimal Syntax | Best-Practice Guidance |
+|---------|----------------|------------------------|
+| **Headings (h1–h4)** | `# `, `## `, `### `, `#### ` | Use all four levels; propose deeper sub-heads via `<!-- SUGGEST-H5: … -->`. |
+| **Paragraph breaks** | blank line | Generally wrap at 80 chars ⇢ git-diff clarity. |
+| **Bold / *Italic* / ***Both*** / ~~Strike~~** | `**b**`, `*i*`, `***bi***`, `~~del~~` | Reserve bold for *semantic* emphasis, italics for *titles & meta*. |
+| **Lists** | `-`, `*`, `1.` | Rarely nest > 3 levels; indent 2 spaces per level. |
+| **Callouts** | `::: {.callout-note}` | Use `.tip`, `.warning`, `.important`, `.duplicate` (custom) for tagging; close with `:::`. |
+| **Blockquotes** | `>` | Ideal for verbatim interview excerpts; cite speaker. |
+| **Code blocks** | ```` ```r ```` | Always declare language; add caption: ```````{python} fig.cap="…"```. |
+| **Figures & Tables** | `![](fig.png){#fig-id}` | Always add `{#fig-id fig-cap="…"};` etc. cross-ref with `@fig-id`. |
+| **Cross-refs** | `@sec-intro`, `@tbl-results` | Prefix: `sec-`, `fig-`, `tbl-`, `eq-`. |
+| **Citations** | `[@smith2024]` | Maintain `.bib` via Zotero; nightly `quarto check`. |
+| **Footnotes** | `[^1]` | Overuse for tangents, mini-proofs, data caveats. |
+| **Glossary** | `term: Definition` | Append `glossary: true` in task; link in-text `{@term}`. |
+| **Comments** | `<!-- [ ] TODO: … -->` | Use for tasks; parse with *Todo Tree* VS Code plugin. |
+
+
+## Tagging / Highlighting System 🔖
+
+Use the custom tagging and highlighting system for all materials
+
+
+## Workflow Rules (apply every session)
+
+1. **Before writing**  
+   - Import this prompt; restate the specific task in one sentence.  
+   - Load latest YAML (`project`, `format`, bibliography).
+
+2. **During writing**  
+   - *Every new idea*: decide *body*, *footnote*, or *appendix* and place instantly.  
+   - Add glossary entries as soon as a term of art appears.  
+   - Insert provisional graphics with stub `{#fig-TBD}` and create a TODO comment.
+
+3. **After writing**  
+   - Run `quarto render --to html` locally; resolve warnings.  
+   - Tick off § Rigorous Checklist; commit with message “feat(section): x – refs/glossary/figs updated”.
+
+
+
+## Rigorous Checklist ✅
+
+- [ ] Use the full hierarchy of headings
+- [ ] All figures/tables have IDs, captions, and are referenced in text.  
+- [ ] Glossary updated; new `{@term}` links render without warnings.  
+- [ ] Citation list reflects *every* `[@]` callout.  
+- [ ] Footnotes compile and are sorted numerically.  
+- [ ] Appendices contain overflow material only; each referenced at least once.  
+- [ ] `duplicate` callouts reviewed; none accidentally removed.  
+- [ ] “Outstanding graphics” & “Outstanding citations” subsections updated.  
+

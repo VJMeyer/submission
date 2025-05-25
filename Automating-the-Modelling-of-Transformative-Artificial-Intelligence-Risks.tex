@@ -303,12 +303,12 @@
 \@ifpackageloaded{subcaption}{}{\usepackage{subcaption}}
 \makeatother
 \makeatletter
-\definecolor{QuartoInternalColor1}{rgb}{0.70,0.17,0.19}
-\definecolor{QuartoInternalColor6}{rgb}{0.00,0.64,0.31}
-\definecolor{QuartoInternalColor5}{rgb}{0.00,0.40,0.79}
-\definecolor{QuartoInternalColor4}{rgb}{0.15,0.56,0.56}
 \definecolor{QuartoInternalColor2}{rgb}{0,0,0}
 \definecolor{QuartoInternalColor3}{rgb}{0.00,0.45,0.15}
+\definecolor{QuartoInternalColor6}{rgb}{0.00,0.64,0.31}
+\definecolor{QuartoInternalColor4}{rgb}{0.15,0.56,0.56}
+\definecolor{QuartoInternalColor5}{rgb}{0.00,0.40,0.79}
+\definecolor{QuartoInternalColor1}{rgb}{0.70,0.17,0.19}
 \makeatother
 \usepackage{bookmark}
 \IfFileExists{xurl.sty}{\usepackage{xurl}}{} % add URL line breaks if available
@@ -444,477 +444,484 @@ to Upscale Conditional Policy Assessments in Bayesian Networks on a Narrow Path 
 
 \bookmarksetup{startatroot}
 
-\chapter*{Quarto Syntax}\label{sec-syntax}
-\addcontentsline{toc}{chapter}{Quarto Syntax}
+\chapter*{Abstract}\label{sec-abstract}
+\addcontentsline{toc}{chapter}{Abstract}
 
-\markboth{Quarto Syntax}{Quarto Syntax}
-
-\section*{Main Formatting}\label{main-formatting}
-\addcontentsline{toc}{section}{Main Formatting}
-
-\markright{Main Formatting}
-
-\subsection*{Html Comments}\label{html-comments}
-\addcontentsline{toc}{subsection}{Html Comments}
-
-\section*{Syntax for Tasks}\label{syntax-for-tasks}
-\addcontentsline{toc}{section}{Syntax for Tasks}
-
-\markright{Syntax for Tasks}
-
-\subsection*{Tasks with ToDo Tree}\label{tasks-with-todo-tree}
-\addcontentsline{toc}{subsection}{Tasks with ToDo Tree}
-
-\subsubsection*{Simple ``One-line tasks''}\label{simple-one-line-tasks}
-\addcontentsline{toc}{subsubsection}{Simple ``One-line tasks''}
-
-Use Code ticks and html comment and task format for tasks distinctly
-visible across all formats including the ToDo-Tree overview:
-
-\texttt{\textless{}!-\/-\ {[}\ {]}\ ToDos\ for\ things\ to\ do\ /\ tasks\ /\ reminders\ (allows\ "jump\ to\ with\ Taks\ Tree\ extension")\ -\/-\textgreater{}}
-
-Use html comment and task format for open or uncertain tasks, visible in
-the .qmd file:
-
-\subsubsection*{More Complex Tasks with
-Notes}\label{more-complex-tasks-with-notes}
-\addcontentsline{toc}{subsubsection}{More Complex Tasks with Notes}
-
-\begin{verbatim}
-<!-- [ ] Task Title: short description-->
-
-  More Information about task
-
-  Relevant notes
-
-  Step-by-step implementation Plan
-
-  Etc.
-\end{verbatim}
-
-\subsubsection*{Completed Tasks}\label{completed-tasks}
-\addcontentsline{toc}{subsubsection}{Completed Tasks}
-
-Retain completed tasks in ToDo-Tree by adding an x in the brackets:
-\texttt{{[}x{]}}
-\texttt{\textless{}!-\/-\ {[}x{]}\ Tasks\ which\ have\ been\ finished\ but\ should\ remain\ for\ later\ verification\ -\/-\textgreater{}}
-
-Mark and remove completed tasks from ToDo-Tree by adding a minus in the
-brackets: \texttt{{[}-{]}}
-
-\texttt{\textless{}!-\/-\ {[}-{]}\ Tasks\ which\ have\ been\ finished\ but\ should\ remain\ visible\ for\ later\ verification\ -\/-\textgreater{}}
-
-\subsubsection*{Missing Citations}\label{missing-citations}
-\addcontentsline{toc}{subsubsection}{Missing Citations}
-
-\texttt{\textless{}!-\/-\ {[}\ {]}\ FIND:\ @CITATION\_KEY\_PURPOSE:\ "Description\ of\ the\ appropriate/idea\ source,\ including\ ideas\ /suggestions\ /\ search\ terms\ etc."\ -\/-\textgreater{}}
-
-\subsubsection*{Suggested Citation}\label{suggested-citation}
-\addcontentsline{toc}{subsubsection}{Suggested Citation}
-
-\texttt{\textless{}!-\/-\ {[}\ {]}\ VERIFY:\ @CITATION\_KEY\_SUGGESTED:\ "Description\ of\ the\ appropriate\ paper,\ book,\ source"\ {[}Include\ BibTex\ if\ known{]}\ -\/-\textgreater{}}
-
-\subsubsection*{Missing Graphic}\label{missing-graphic}
-\addcontentsline{toc}{subsubsection}{Missing Graphic}
-
-\texttt{\textless{}!-\/-\ {[}\ {]}\ FIND:\ \{\#fig-GRAPHIC\_IDEA\}{]}:\ "Description\ of\ the\ appropriate/idea\ source,\ including\ ideas\ /suggestions\ /\ search\ terms\ etc."\ -\/-\textgreater{}}
-
-\subsubsection*{Suggested Graphic}\label{suggested-graphic}
-\addcontentsline{toc}{subsubsection}{Suggested Graphic}
-
-\texttt{\textless{}!-\/-\ {[}\ {]}\ VERIFY:\ \{\#fig-GRAPHIC\_IDEA\}:\ "Description\ of\ the\ appropriate\ paper,\ book,\ source"\ {[}Include\ figure\ syntax\ if\ known{]}\ -\/-\textgreater{}}
-
-Missing and/or suggested tables, concepts, explanations as well as other
-elements should be suggested similarily.
-
-\subsection*{Task Syntax Examples}\label{task-syntax-examples}
-\addcontentsline{toc}{subsection}{Task Syntax Examples}
-
-\texttt{\textless{}!-\/-\ {[}\ {]}\ (Example\ short:\ open\ and\ visible\ in\ text)\ \ \ Find\ and\ list\ the\ names\ of\ the\ MTAIR\ team-members\ responsible\ for\ the\ Analytica\ Implementation\ -\/-\textgreater{}}
-
-\begin{verbatim}
-<!-- [ ] (Example longer: open and visible in text)    Review/Plan/Discuss integrating Live Prediction Markets -->
-
-  Live prediction market integration requires:
-    (1) API connections to platforms (Metaculus, Manifold),
-    (2) Question-to-variable mapping algorithms,
-    (3) Probability update mechanisms, 
-    (4) Handling of market dynamics (thin markets, manipulation).
-    Current mentions may overstate readiness or underestimate complexity.
-    Need realistic assessment of what's achievable.
-
-  Implementation Steps:
-      0. List/mention all relevant platforms with a brief description each
-      1. Review all existing prediction market mentions for accuracy
-      2. Assess actual API availability and limitations
-      3. Describe/explain/discuss how to implement basic proof-of-concept with single platform
-      4. Document challenges: question mapping, market interpretation
-      5. Create realistic timeline for full implementation
-      6. Revise thesis claims to match reality
-      7. Add "Future Work" and/or extension section on complete integration
-      8. Include descriptions of mockups/designs even if not fully built 
-      9. Highlight/discuss the advantages of such integrations
-      10. Quickly brainstorm for downsides worth mentioning
-\end{verbatim}
-
-\subsection*{Verbatim Code Formatting}\label{verbatim-code-formatting}
-\addcontentsline{toc}{subsection}{Verbatim Code Formatting}
-
-\texttt{verbatim\ code\ formatting\ for\ notes\ and\ ideas\ to\ be\ included\ (here)}
-
-\subsection*{Code Block formatting}\label{code-block-formatting}
-\addcontentsline{toc}{subsection}{Code Block formatting}
-
-\begin{verbatim}
-Also code blocks for more extensive notes and ideas to be included and checklists
-- test 1. 
-- test 2. 
-- test 3.
-2. second
-3. third
-\end{verbatim}
-
-\begin{verbatim}
-code
-\end{verbatim}
-
-Add a language to syntax highlight code blocks:
-
-\begin{Shaded}
-\begin{Highlighting}[]
-\DecValTok{1} \OperatorTok{+} \DecValTok{1}
-\end{Highlighting}
-\end{Shaded}
-
-\subsection*{Blockquote Formatting}\label{blockquote-formatting}
-\addcontentsline{toc}{subsection}{Blockquote Formatting}
+\markboth{Abstract}{Abstract}
 
 \begin{quote}
-Blockquote formatting for ``Suggested Citations (e.g.~carlsmith 2024 on
-\ldots)'' and/or claims which require a citation (e.g.~claim x should be
-backed-up by a ciation from the literature)
+The coordination crisis in AI governance presents a paradoxical
+challenge: unprecedented investment in AI safety coexists alongside
+fundamental coordination failures across technical, policy, and ethical
+domains. These divisions systematically increase existential risk. This
+thesis introduces AMTAIR (Automating Transformative AI Risk Modeling), a
+computational approach addressing this coordination failure by
+automating the extraction of probabilistic world models from AI safety
+literature using frontier language models. The system implements an
+end-to-end pipeline transforming unstructured text into interactive
+Bayesian networks through a novel two-stage extraction process that
+bridges communication gaps between stakeholders.
 \end{quote}
 
-\subsection*{Tables}\label{tables}
-\addcontentsline{toc}{subsection}{Tables}
+\texttt{The\ coordination\ crisis\ in\ AI\ governance\ presents\ a\ paradoxical\ challenge:\ unprecedented\ investment\ in\ AI\ safety\ coexists\ alongside\ fundamental\ coordination\ failures\ across\ technical,\ policy,\ and\ ethical\ domains.\ These\ divisions\ systematically\ increase\ existential\ risk\ by\ creating\ safety\ gaps,\ misallocating\ resources,\ and\ fostering\ inconsistent\ approaches\ to\ interdependent\ problems.}
 
-\begin{longtable}[]{@{}rllc@{}}
-\caption{Demonstration of pipe table
-syntax}\label{tbl-letters}\tabularnewline
-\toprule\noalign{}
-Right & Left & Default & Center \\
-\midrule\noalign{}
-\endfirsthead
-\toprule\noalign{}
-Right & Left & Default & Center \\
-\midrule\noalign{}
-\endhead
-\bottomrule\noalign{}
-\endlastfoot
-12 & 12 & 12 & 12 \\
-123 & 123 & 123 & 123 \\
-1 & 1 & 1 & 1 \\
-\end{longtable}
+\begin{quote}
+This thesis introduces AMTAIR (Automating Transformative AI Risk
+Modeling), a computational approach that addresses this coordination
+failure by automating the extraction of probabilistic world models from
+AI safety literature using frontier language models.
+\end{quote}
 
-\begin{longtable}[]{@{}lll@{}}
-\caption{My Caption 1}\label{tbl-letters}\tabularnewline
-\toprule\noalign{}
-Col1 & Col2 & Col3 \\
-\midrule\noalign{}
-\endfirsthead
-\toprule\noalign{}
-Col1 & Col2 & Col3 \\
-\midrule\noalign{}
-\endhead
-\bottomrule\noalign{}
-\endlastfoot
-A & B & C \\
-E & F & G \\
-A & G & G \\
-\end{longtable}
+\texttt{The\ AMTAIR\ system\ implements\ an\ end-to-end\ pipeline\ that\ transforms\ unstructured\ text\ into\ interactive\ Bayesian\ networks\ through\ a\ novel\ two-stage\ extraction\ process:\ first\ capturing\ argument\ structure\ in\ ArgDown\ format,\ then\ enhancing\ it\ with\ probability\ information\ in\ BayesDown.\ This\ approach\ bridges\ communication\ gaps\ between\ stakeholders\ by\ making\ implicit\ models\ explicit,\ enabling\ comparison\ across\ different\ worldviews,\ providing\ a\ common\ language\ for\ discussing\ probabilistic\ relationships,\ and\ supporting\ policy\ evaluation\ across\ diverse\ scenarios.}
 
-Referencing tables with \texttt{@tbl-KEY}: See Table~\ref{tbl-letters}.
+\bookmarksetup{startatroot}
 
-\begin{table}
+\chapter*{Prefatory Apparatus:
+Frontmatter}\label{prefatory-apparatus-frontmatter}
+\addcontentsline{toc}{chapter}{Prefatory Apparatus: Frontmatter}
 
-\caption{\label{tbl-panel}Main Caption}
+\markboth{Prefatory Apparatus: Frontmatter}{Prefatory Apparatus:
+Frontmatter}
 
-\begin{minipage}{0.50\linewidth}
+\section*{Illustrations and Terminology --- Quick
+References}\label{illustrations-and-terminology-quick-references}
+\addcontentsline{toc}{section}{Illustrations and Terminology --- Quick
+References}
 
-\subcaption{\label{tbl-first}First Table}
+\markright{Illustrations and Terminology --- Quick References}
 
-\centering{
+\subsection*{\texorpdfstring{\textbf{Acknowledgments}}{Acknowledgments}}\label{acknowledgments}
+\addcontentsline{toc}{subsection}{\textbf{Acknowledgments}}
 
-\begin{tabular}{lll}
-\toprule
-Col1 & Col2 & Col3\\
-\midrule
-A & B & C\\
-E & F & G\\
-A & G & G\\
-\bottomrule
-\end{tabular}
+\begin{itemize}
+\tightlist
+\item
+  Academic supervisor (Prof.~Timo Speith) and institution (University of
+  Bayreuth)\\
+\item
+  Research collaborators, especially those connected to the original
+  MTAIR project\\
+\item
+  Technical advisors who provided feedback on implementation aspects\\
+\item
+  Personal supporters who enabled the research through encouragement and
+  feedback
+\end{itemize}
 
-}
+\section*{List of Graphics \& Figures}\label{list-of-graphics-figures}
+\addcontentsline{toc}{section}{List of Graphics \& Figures}
 
-\end{minipage}%
-%
-\begin{minipage}{0.50\linewidth}
+\markright{List of Graphics \& Figures}
 
-\subcaption{\label{tbl-second}Second Table}
+\begin{itemize}
+\tightlist
+\item
+  Figure 1.1: The coordination crisis in AI governance - visualization
+  of fragmentation\\
+\item
+  Figure 2.1: The Carlsmith model - DAG representation\\
+\item
+  Figure 3.1: Research design overview - workflow diagram\\
+\item
+  Figure 3.2: From natural language to BayesDown - transformation
+  process\\
+\item
+  Figure 4.1: ARPA system architecture - component diagram\\
+\item
+  Figure 4.2: Visualization of Rain-Sprinkler-Grass\_Wet Bayesian
+  network - screenshot\\
+\item
+  Figure 5.1: Extraction quality metrics - comparative chart\\
+\item
+  Figure 5.2: Comparative analysis of AI governance worldviews - network
+  visualization
+\end{itemize}
 
-\centering{
+\section*{List of Abbreviations}\label{list-of-abbreviations}
+\addcontentsline{toc}{section}{List of Abbreviations}
 
-\begin{tabular}{lll}
-\toprule
-Col1 & Col2 & Col3\\
-\midrule
-A & B & C\\
-E & F & G\\
-A & G & G\\
-\bottomrule
-\end{tabular}
+\markright{List of Abbreviations}
 
-}
+esp.~especially
 
-\end{minipage}%
+f., ff.~following
 
-\end{table}%
+incl.~including
 
-See Table~\ref{tbl-panel} for details, especially
-Table~\ref{tbl-second}.
+p., pp.~page(s)
+
+MAD Mutually Assured Destruction
+
+\begin{itemize}
+\tightlist
+\item
+  AI - Artificial Intelligence\\
+\item
+  AGI - Artificial General Intelligence\\
+\item
+  ARPA - AI Risk Pathway Analyzer\\
+\item
+  DAG - Directed Acyclic Graph\\
+\item
+  LLM - Large Language Model\\
+\item
+  MTAIR - Modeling Transformative AI Risks\\
+\item
+  P(Doom) - Probability of existential catastrophe from misaligned AI\\
+\item
+  CPT - Conditional Probability Table
+\end{itemize}
+
+\section*{Glossary}\label{glossary}
+
+\markright{Glossary}
+
+\begin{itemize}
+\tightlist
+\item
+  \textbf{Argument mapping}: A method for visually representing the
+  structure of arguments\\
+\item
+  \textbf{BayesDown}: An extension of ArgDown that incorporates
+  probabilistic information\\
+\item
+  \textbf{Bayesian network}: A probabilistic graphical model
+  representing variables and their dependencies\\
+\item
+  \textbf{Conditional probability}: The probability of an event given
+  that another event has occurred\\
+\item
+  \textbf{Directed Acyclic Graph (DAG)}: A graph with directed edges and
+  no cycles\\
+\item
+  \textbf{Existential risk}: Risk of permanent curtailment of humanity's
+  potential\\
+\item
+  \textbf{Power-seeking AI}: AI systems with instrumental incentives to
+  acquire resources and power\\
+\item
+  \textbf{Prediction market}: A market where participants trade
+  contracts that resolve based on future events\\
+\item
+  \textbf{d-separation}: A criterion for identifying conditional
+  independence relationships in Bayesian networks\\
+\item
+  \textbf{Monte Carlo sampling}: A computational technique using random
+  sampling to obtain numerical results
+\end{itemize}
+
+\bookmarksetup{startatroot}
+
+\chapter*{Quarto Syntax and Best Practices
+Guide}\label{quarto-syntax-and-best-practices-guide}
+\addcontentsline{toc}{chapter}{Quarto Syntax and Best Practices Guide}
+
+\markboth{Quarto Syntax and Best Practices Guide}{Quarto Syntax and Best
+Practices Guide}
+
+\section*{Key Features}\label{key-features}
+\addcontentsline{toc}{section}{Key Features}
+
+\markright{Key Features}
+
+\subsection*{1. Task Management System}\label{task-management-system}
+\addcontentsline{toc}{subsection}{1. Task Management System}
+
+\begin{itemize}
+\tightlist
+\item
+  HTML comments with \texttt{{[}\ {]}} for tasks visible in ToDo-Tree
+\item
+  Categories: FIND, VERIFY, CREATE, TODO
+\item
+  Progress tracking with \texttt{{[}x{]}} (done) and \texttt{{[}-{]}}
+  (verified)
+\end{itemize}
+
+\subsection*{2. Multi-Format Output}\label{multi-format-output}
+\addcontentsline{toc}{subsection}{2. Multi-Format Output}
+
+\begin{itemize}
+\tightlist
+\item
+  HTML: Interactive web version with navigation
+\item
+  PDF: Professional academic document
+\item
+  LaTeX: Source for further customization
+\item
+  DOCX: For collaboration
+\end{itemize}
+
+\subsection*{3. Cross-Referencing}\label{cross-referencing}
+\addcontentsline{toc}{subsection}{3. Cross-Referencing}
+
+\begin{itemize}
+\tightlist
+\item
+  Sections: \texttt{@sec-section-name}
+\item
+  Figures: \texttt{@fig-figure-name}
+\item
+  Tables: \texttt{@tbl-table-name}
+\item
+  Citations: \texttt{@citation-key}
+\end{itemize}
+
+\subsection*{4. Advanced Features}\label{advanced-features}
+\addcontentsline{toc}{subsection}{4. Advanced Features}
+
+\begin{itemize}
+\tightlist
+\item
+  Interactive Jupyter notebooks
+\item
+  Mermaid diagrams
+\item
+  Math equations (LaTeX)
+\item
+  Callout blocks
+\item
+  Extensive footnotes
+\item
+  Glossary and abbreviations
+\end{itemize}
+
+\section*{Quick Start}\label{quick-start}
+\addcontentsline{toc}{section}{Quick Start}
+
+\markright{Quick Start}
+
+\subsection*{Building the Thesis}\label{building-the-thesis}
+\addcontentsline{toc}{subsection}{Building the Thesis}
+
+bash
 
 \begin{Shaded}
 \begin{Highlighting}[]
-\NormalTok{python}
-\NormalTok{\#| label: tbl{-}planets}
-\NormalTok{\#| tbl{-}cap: Astronomical object}
+\CommentTok{\# HTML output}
+\ExtensionTok{quarto}\NormalTok{ render }\AttributeTok{{-}{-}to}\NormalTok{ html}
 
-\NormalTok{from IPython.display import Markdown}
-\NormalTok{from tabulate import tabulate}
-\NormalTok{table = [}\CommentTok{[}\OtherTok{"Sun","696,000",1.989e30}\CommentTok{]}\NormalTok{,}
-         \CommentTok{[}\OtherTok{"Earth","6,371",5.972e24}\CommentTok{]}\NormalTok{,}
-         \CommentTok{[}\OtherTok{"Moon","1,737",7.34e22}\CommentTok{]}\NormalTok{,}
-         \CommentTok{[}\OtherTok{"Mars","3,390",6.39e23}\CommentTok{]}\NormalTok{]}
-\NormalTok{Markdown(tabulate(}
-\NormalTok{  table, }
-\NormalTok{  headers=}\CommentTok{[}\OtherTok{"Astronomical object","R (km)", "mass (kg)"}\CommentTok{]}
-\NormalTok{))}
+\CommentTok{\# PDF output}
+\ExtensionTok{quarto}\NormalTok{ render }\AttributeTok{{-}{-}to}\NormalTok{ pdf}
+
+\CommentTok{\# All formats}
+\ExtensionTok{quarto}\NormalTok{ render}
 \end{Highlighting}
 \end{Shaded}
 
-\begin{longtable}[]{@{}
-  >{\raggedright\arraybackslash}p{(\linewidth - 4\tabcolsep) * \real{0.1806}}
-  >{\raggedright\arraybackslash}p{(\linewidth - 4\tabcolsep) * \real{0.1806}}
-  >{\raggedright\arraybackslash}p{(\linewidth - 4\tabcolsep) * \real{0.3194}}@{}}
-\caption{Sample grid table.}\tabularnewline
-\toprule\noalign{}
-\begin{minipage}[b]{\linewidth}\raggedright
-Fruit
-\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
-Price
-\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
-Advantages
-\end{minipage} \\
-\midrule\noalign{}
-\endfirsthead
-\toprule\noalign{}
-\begin{minipage}[b]{\linewidth}\raggedright
-Fruit
-\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
-Price
-\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
-Advantages
-\end{minipage} \\
-\midrule\noalign{}
-\endhead
-\bottomrule\noalign{}
-\endlastfoot
-Bananas & \$1.34 & \begin{minipage}[t]{\linewidth}\raggedright
-\begin{itemize}
-\tightlist
-\item
-  built-in wrapper
-\item
-  bright color
-\end{itemize}
-\end{minipage} \\
-Oranges & \$2.10 & \begin{minipage}[t]{\linewidth}\raggedright
-\begin{itemize}
-\tightlist
-\item
-  cures scurvy
-\item
-  tasty
-\end{itemize}
-\end{minipage} \\
-\end{longtable}
+\subsection*{Task Management}\label{task-management}
+\addcontentsline{toc}{subsection}{Task Management}
 
-Content with HTML tables you don't want processed.
+markdown
 
-\section*{Headings \& Potential Headings in Standard Markdown formatting
-(`\#\#')}\label{sec-heading}
-\addcontentsline{toc}{section}{Headings \& Potential Headings in
-Standard Markdown formatting (`\#\#')}
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{\textless{}!{-}{-} [ ] }\AlertTok{TODO}\CommentTok{: Task description {-}{-}\textgreater{}}
+\CommentTok{\textless{}!{-}{-} [ ] FIND: @missing{-}citation: "Description" {-}{-}\textgreater{}}
+\CommentTok{\textless{}!{-}{-} [ ] VERIFY: @suggested{-}citation: "Source" {-}{-}\textgreater{}}
+\CommentTok{\textless{}!{-}{-} [ ] CREATE: \{\#fig{-}name\}: "Figure description" {-}{-}\textgreater{}}
+\end{Highlighting}
+\end{Shaded}
 
-\markright{Headings \& Potential Headings in Standard Markdown
-formatting (`\#\#')}
-
-\subsection*{Heading 3}\label{heading-3}
-\addcontentsline{toc}{subsection}{Heading 3}
-
-\subsubsection*{Heading 4}\label{heading-4}
-\addcontentsline{toc}{subsubsection}{Heading 4}
-
-\section*{Text Formatting Options}\label{text-formatting-options}
-\addcontentsline{toc}{section}{Text Formatting Options}
-
-\markright{Text Formatting Options}
-
-\emph{italics}, \textbf{bold}, \textbf{\emph{bold italics}}
-
-superscript\textsuperscript{2} and subscript\textsubscript{2}
-
-\st{strikethrough}
-
-\hl{This text is highlighted}
-
-\ul{This text is underlined}
-
-\textsc{This text is smallcaps}
-
-\section*{Lists}\label{lists}
-\addcontentsline{toc}{section}{Lists}
-
-\markright{Lists}
-
-\begin{itemize}
-\item
-  unordered list
-
-  \begin{itemize}
-  \tightlist
-  \item
-    sub-item 1
-  \item
-    sub-item 2
-
-    \begin{itemize}
-    \tightlist
-    \item
-      sub-sub-item 1
-    \end{itemize}
-  \end{itemize}
-\item
-  item 2
-
-  Continued (indent 4 spaces)
-\end{itemize}
+\subsection*{Adding Content}\label{adding-content}
+\addcontentsline{toc}{subsection}{Adding Content}
 
 \begin{enumerate}
 \def\labelenumi{\arabic{enumi}.}
 \tightlist
 \item
-  ordered list
+  Create/edit \texttt{.qmd} files in chapters/
 \item
-  item 2
-
-  \begin{enumerate}
-  \def\labelenumii{\roman{enumii})}
-  \tightlist
-  \item
-    sub-item 1
-
-    \begin{enumerate}
-    \def\labelenumiii{\Alph{enumiii}.}
-    \tightlist
-    \item
-      sub-sub-item 1
-    \end{enumerate}
-  \end{enumerate}
+  Update \texttt{\_quarto.yml} if adding new chapters
+\item
+  Add citations to \texttt{ref/MAref.bib}
+\item
+  Place images in \texttt{images/}
 \end{enumerate}
 
-\section*{Math}\label{math}
-\addcontentsline{toc}{section}{Math}
+\section*{Best Practices}\label{best-practices}
+\addcontentsline{toc}{section}{Best Practices}
 
-\markright{Math}
+\markright{Best Practices}
 
-inline math: \(E = mc^{2}\)
+\subsection*{1. Consistent Formatting}\label{consistent-formatting}
+\addcontentsline{toc}{subsection}{1. Consistent Formatting}
 
-display math:
+\begin{itemize}
+\tightlist
+\item
+  Use American spelling throughout
+\item
+  Follow heading hierarchy (\#\#, \#\#\#, \#\#\#\#)
+\item
+  Maintain consistent citation style
+\item
+  Use semantic line breaks
+\end{itemize}
 
-\[E = mc^{2}\]
+\subsection*{2. Task Tracking}\label{task-tracking}
+\addcontentsline{toc}{subsection}{2. Task Tracking}
 
-If you want to define custom TeX macros, include them within \$\$
-delimiters enclosed in a .hidden block. For example:
+\begin{itemize}
+\tightlist
+\item
+  Create tasks as you write
+\item
+  Update task status regularly
+\item
+  Use categories for clarity
+\item
+  Include implementation details
+\end{itemize}
 
-\[
- \def\RR{{\bf R}}
- \def\bold#1{{\bf #1}}
-\]
+\subsection*{3. Version Control}\label{version-control}
+\addcontentsline{toc}{subsection}{3. Version Control}
 
-For HTML math processed using MathJax (the default) you can use the
-\textbackslash def, \textbackslash newcommand,
-\textbackslash renewcommand, \textbackslash newenvironment,
-\textbackslash renewenvironment, and \textbackslash let commands to
-create your own macros and environments.
+\begin{itemize}
+\tightlist
+\item
+  Commit frequently with descriptive messages
+\item
+  Use branches for major revisions
+\item
+  Tag releases (draft versions)
+\end{itemize}
 
-\section*{Footnotes}\label{footnotes}
-\addcontentsline{toc}{section}{Footnotes}
+\subsection*{4. Documentation}\label{documentation}
+\addcontentsline{toc}{subsection}{4. Documentation}
 
-\markright{Footnotes}
+\begin{itemize}
+\tightlist
+\item
+  Comment complex code blocks
+\item
+  Provide alt text for all figures
+\item
+  Keep this README updated
+\item
+  Document any custom scripts
+\end{itemize}
 
-Here is an inline note.\footnote{Inlines notes are easier to write,
-  since you don't have to pick an identifier and move down to type the
-  note.}
+\section*{Troubleshooting}\label{troubleshooting}
+\addcontentsline{toc}{section}{Troubleshooting}
 
-Here is a footnote reference,\footnote{Here is the footnote.}
+\markright{Troubleshooting}
 
-Another Text with a footnote\footnote{Here's one with multiple blocks.
+\subsection*{Common Issues}\label{common-issues}
+\addcontentsline{toc}{subsection}{Common Issues}
 
-  Subsequent paragraphs are indented to show that they belong to the
-  previous footnote.
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  \textbf{LaTeX errors}: Check \texttt{\_quarto.yml} for LaTeX settings
+\item
+  \textbf{Missing references}: Ensure citations are in
+  \texttt{MAref.bib}
+\item
+  \textbf{Broken links}: Use relative paths for internal links
+\item
+  \textbf{Task visibility}: Install ToDo-Tree extension in VS Code
+\end{enumerate}
 
-\begin{Verbatim}
-{ some.code }
-\end{Verbatim}
+\subsection*{Getting Help}\label{getting-help}
+\addcontentsline{toc}{subsection}{Getting Help}
 
-  The whole paragraph can be indented, or just the first line. In this
-  way, multi-paragraph footnotes work like multi-paragraph list items.}
-but this time a ``longnote''.
+\begin{itemize}
+\tightlist
+\item
+  Quarto documentation: \url{https://quarto.org}
+\item
+  Project repository: \url{https://github.com/VJMeyer/submission}
+\item
+  Contact:
+  \href{mailto:Valentin2meyer@gmail.com}{\nolinkurl{Valentin2meyer@gmail.com}}
+\end{itemize}
 
-This paragraph won't be part of the note, because it isn't indented.
+\section*{License}\label{license}
+\addcontentsline{toc}{section}{License}
 
-\section*{Callouts}\label{sec-callouts}
-\addcontentsline{toc}{section}{Callouts}
+\markright{License}
 
-\markright{Callouts}
+MIT License - See LICENSE file for details
 
-Quarto's native callouts work without additional packages:
+\section*{Document Structure and
+Headings}\label{document-structure-and-headings}
+\addcontentsline{toc}{section}{Document Structure and Headings}
 
-This is written in a `note' environment -- but it does not seem to
-produce any special rendering.
+\markright{Document Structure and Headings}
 
-\begin{tcolorbox}[enhanced jigsaw, rightrule=.15mm, colbacktitle=quarto-callout-note-color!10!white, colback=white, bottomtitle=1mm, leftrule=.75mm, opacitybacktitle=0.6, arc=.35mm, opacityback=0, coltitle=black, toprule=.15mm, colframe=quarto-callout-note-color-frame, breakable, title=\textcolor{quarto-callout-note-color}{\faInfo}\hspace{0.5em}{Optional Title}, toptitle=1mm, titlerule=0mm, bottomrule=.15mm, left=2mm]
+\subsection*{Heading Hierarchy}\label{heading-hierarchy}
+\addcontentsline{toc}{subsection}{Heading Hierarchy}
 
-Content here
+Always use the full heading hierarchy for maximum organization:
 
-\end{tcolorbox}
-
-\begin{tcolorbox}[enhanced jigsaw, rightrule=.15mm, colbacktitle=quarto-callout-note-color!10!white, colback=white, bottomtitle=1mm, leftrule=.75mm, opacitybacktitle=0.6, arc=.35mm, opacityback=0, coltitle=black, toprule=.15mm, colframe=quarto-callout-note-color-frame, breakable, title=\textcolor{quarto-callout-note-color}{\faInfo}\hspace{0.5em}{Important Note2}, toptitle=1mm, titlerule=0mm, bottomrule=.15mm, left=2mm]
-
-This renders perfectly in both HTML and PDF.
-
-\end{tcolorbox}
-
-Also for markdown:
+markdown
 
 \begin{Shaded}
 \begin{Highlighting}[]
-\NormalTok{::: \{.render\_as\_markdown\_example\}}
-\FunctionTok{\#\# Markdown Heading}
-\NormalTok{This renders perfectly in both HTML and PDF but as markdown "plain text"}
-\NormalTok{:::}
+\FunctionTok{\# Chapter Title \{\#sec{-}chapter\}}
+\FunctionTok{\#\# Major Section \{\#sec{-}major{-}section\}}
+\FunctionTok{\#\#\# Subsection \{\#sec{-}subsection\}}
+\FunctionTok{\#\#\#\# Sub{-}subsection \{\#sec{-}subsubsection\}}
+\InformationTok{\textasciigrave{}\#\#\#\#\# Sub{-}subsubsection \{\#sec{-}subsubsubsection\}\textasciigrave{}}
+\InformationTok{\textasciigrave{}\#\#\#\#\#\# Sub{-}subsubsubsection \{\#sec{-}subsubsubsection\}\textasciigrave{}}
+\end{Highlighting}
+\end{Shaded}
+
+\textbf{Best Practices:}
+
+\begin{itemize}
+\tightlist
+\item
+  Always include \texttt{\{\#sec-label\}} for cross-referencing
+\item
+  Use descriptive, concise heading names
+\item
+  Maintain consistent capitalization (Title Case for chapters, Sentence
+  case for sections)
+\item
+  Add \texttt{.unnumbered} for sections without numbers (e.g.,
+  References)
+\item
+  Add \texttt{.unlisted} to exclude from TOC
+\item
+  Do not manually number headings
+\end{itemize}
+
+\section*{Text Formatting}\label{text-formatting}
+\addcontentsline{toc}{section}{Text Formatting}
+
+\markright{Text Formatting}
+
+\subsection*{Basic Formatting}\label{basic-formatting}
+\addcontentsline{toc}{subsection}{Basic Formatting}
+
+markdown
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{*italics* for emphasis}
+\NormalTok{**bold** for strong emphasis}
+\NormalTok{***bold italics*** for very strong emphasis}
+\NormalTok{\textasciitilde{}\textasciitilde{}strikethrough\textasciitilde{}\textasciitilde{} for deleted text}
+\CommentTok{[}\OtherTok{highlighted text}\CommentTok{]}\NormalTok{\{.mark\}}
+\CommentTok{[}\OtherTok{underlined text}\CommentTok{]}\NormalTok{\{.underline\}}
+\CommentTok{[}\OtherTok{small caps}\CommentTok{]}\NormalTok{\{.smallcaps\}}
+\InformationTok{\textasciigrave{}inline code\textasciigrave{}}\NormalTok{ in numerous applications}
+\end{Highlighting}
+\end{Shaded}
+
+\subsection*{Advanced Formatting}\label{advanced-formatting}
+\addcontentsline{toc}{subsection}{Advanced Formatting}
+
+markdown
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{superscript\^{}2\^{} for exponents}
+\NormalTok{subscript\textasciitilde{}2\textasciitilde{} for chemical formulas}
 \end{Highlighting}
 \end{Shaded}
 
@@ -930,82 +937,6 @@ produces: \url{https://quarto.org/docs/authoring/markdown-basics.html}
 produces:
 \href{https://quarto.org/docs/books/book-crossrefs.html}{Quarto Book
 Cross-References}
-
-\section*{Images \& Figures}\label{sec-figures1}
-
-\markright{Images \& Figures}
-
-\begin{verbatim}
-[![AMTAIR Automation Pipeline from @bucknall2022](/images/pipeline.png){
-  #fig-automation_pipeline
-  fig-scap="Five-step AMTAIR automation pipeline from PDFs to Bayesian networks" 
-  fig-alt="FLOWCHART: Five-step automation pipeline workflow for AMTAIR project.
-          DATA: The pipeline transforms PDFs through ArgDown, BayesDown, CSV, and HTML into Bayesian network visualizations.
-          PURPOSE: Illustrates the core technical process that enables automated extraction of probabilistic models from AI safety literature.
-          DETAILS: Five numbered green steps show: (1) LLM-based extraction from PDFs to ArgDown, (2) ArgDown to BayesDown completion with probabilities, (3) Extracting world-models as CSV data, (4) Software tools for data inference, and (5) Visualization of the resulting Bayesian network.
-          Each step includes example outputs, with the final visualization showing a Rain-Sprinkler-Grass Wet Bayesian network with probability tables.
-          SOURCE: Created by the author to explain the AMTAIR methodology
-          "
-  fig-align="center" 
-  width="100%"
-  }](https://github.com/VJMeyer/submission)
-
-
-Testing crossreferencing grapics @fig-automation_pipeline.
-
-![Caption/Title 2](/images/cover.png){#fig-testgraphic2 fig-scap="Short 2 caption" fig-alt="2nd Alt Text / Description." fig-align="left" width="30%"}
-
-Testing crossreferencing grapics @fig-testgraphic2.
-\end{verbatim}
-
-\begin{figure}
-
-\centering{
-
-\href{https://github.com/VJMeyer/submission}{\includegraphics[width=1\linewidth,height=\textheight,keepaspectratio]{images/pipeline.png}}
-
-}
-
-\caption[Five-step AMTAIR automation pipeline from PDFs to Bayesian
-networks]{\label{fig-automation_pipeline}AMTAIR Automation Pipeline
-from}
-
-\end{figure}%
-
-Testing crossreferencing grapics Figure~\ref{fig-automation_pipeline}.
-Note that the indentations of graphic inclusions get messed up by
-viewing them in ``view mode'' in VS code.
-
-\begin{figure}
-
-\includegraphics[width=0.3\linewidth,height=\textheight,keepaspectratio]{images/cover.png}
-
-\caption[Short 2 caption]{\label{fig-testgraphic2}Caption/Title 2}
-
-\end{figure}%
-
-Testing crossreferencing grapics Figure~\ref{fig-testgraphic2}.
-
-\section*{Page Breaks}\label{page-breaks}
-\addcontentsline{toc}{section}{Page Breaks}
-
-\markright{Page Breaks}
-
-\begin{Shaded}
-\begin{Highlighting}[]
-\NormalTok{page 1}
-
-
-
-\NormalTok{page 2}
-\end{Highlighting}
-\end{Shaded}
-
-page 1
-
-\newpage{}
-
-page 2
 
 \section*{Including Code}\label{sec-code}
 \addcontentsline{toc}{section}{Including Code}
@@ -1033,6 +964,30 @@ AMTAIR is working!
 visualization}
 
 \end{figure}%
+
+\section*{Diagrams}\label{diagrams}
+\addcontentsline{toc}{section}{Diagrams}
+
+\markright{Diagrams}
+
+Quarto has native support for embedding Mermaid and Graphviz diagrams.
+This enables you to create flowcharts, sequence diagrams, state
+diagrams, Gantt charts, and more using a plain text syntax inspired by
+markdown.
+
+For example, here we embed a flowchart created using Mermaid:
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{flowchart LR}
+\NormalTok{  A[Hard edge] {-}{-}\textgreater{} B(Round edge)}
+\NormalTok{  B {-}{-}\textgreater{} C\{Decision\}}
+\NormalTok{  C {-}{-}\textgreater{} D[Result one]}
+\NormalTok{  C {-}{-}\textgreater{} E[Result two]}
+\end{Highlighting}
+\end{Shaded}
+
+\includegraphics[width=6.88in,height=1.81in]{index_files/figure-latex/mermaid-figure-1.png}
 
 \subsection*{In-Line LaTeX}\label{in-line-latex}
 \addcontentsline{toc}{subsection}{In-Line LaTeX}
@@ -1376,314 +1331,1936 @@ Rendering}
 
 \phantomsection\label{rain_sprinkler_grass_example_network_rendering}
 \begin{verbatim}
-<IPython.lib.display.IFrame at 0x10862af90>
+<IPython.lib.display.IFrame at 0x1360198d0>
 \end{verbatim}
 
 Dynamic Html Rendering of the Rain-Sprinkler-Grass DAG
 
-\section*{Diagrams}\label{diagrams}
-\addcontentsline{toc}{section}{Diagrams}
+\section*{Lists and Enumerations}\label{lists-and-enumerations}
+\addcontentsline{toc}{section}{Lists and Enumerations}
 
-\markright{Diagrams}
+\markright{Lists and Enumerations}
 
-Quarto has native support for embedding Mermaid and Graphviz diagrams.
-This enables you to create flowcharts, sequence diagrams, state
-diagrams, Gantt charts, and more using a plain text syntax inspired by
-markdown.
+\subsection*{Unordered Lists}\label{unordered-lists}
+\addcontentsline{toc}{subsection}{Unordered Lists}
 
-For example, here we embed a flowchart created using Mermaid:
+markdown
 
 \begin{Shaded}
 \begin{Highlighting}[]
-\NormalTok{flowchart LR}
-\NormalTok{  A[Hard edge] {-}{-}\textgreater{} B(Round edge)}
-\NormalTok{  B {-}{-}\textgreater{} C\{Decision\}}
-\NormalTok{  C {-}{-}\textgreater{} D[Result one]}
-\NormalTok{  C {-}{-}\textgreater{} E[Result two]}
+\SpecialStringTok{{-} }\NormalTok{First level item}
+\SpecialStringTok{  {-} }\NormalTok{Second level item (2 spaces)}
+\SpecialStringTok{    {-} }\NormalTok{Third level item (4 spaces)}
+\SpecialStringTok{{-} }\NormalTok{Another first level item}
+\NormalTok{  with continuation (2 spaces for alignment)}
 \end{Highlighting}
 \end{Shaded}
 
-\includegraphics[width=6.88in,height=1.81in]{index_files/figure-latex/mermaid-figure-1.png}
+\subsection*{Ordered Lists}\label{ordered-lists}
+\addcontentsline{toc}{subsection}{Ordered Lists}
 
-\section*{Citations}\label{sec-citations}
-
-\markright{Citations}
-
-\textcite{soares2014}
-
-\autocite{soares2014} and \autocite{knuth1984}
-
-Blah Blah \autocites[see][33-35]{knuth1984}[also][chap.~1]{growiec2024}
-
-Blah Blah \autocite[33-35, 38-39 and passim]{knuth1984}
-
-Blah Blah \autocite{growiec2024,knuth1984}.
-
-Growiec says blah \autocite*{growiec2024}
-
-\subsection*{Narrative citations (author as
-subject)}\label{narrative-citations-author-as-subject}
-\addcontentsline{toc}{subsection}{Narrative citations (author as
-subject)}
-
-\textcite{soares2014} argues that AI alignment requires\ldots{}
-
-\subsection*{Parenthetical citations (supporting
-reference)}\label{parenthetical-citations-supporting-reference}
-\addcontentsline{toc}{subsection}{Parenthetical citations (supporting
-reference)}
-
-Recent work supports this view \autocite{soares2014,knuth1984}.
-
-\subsection*{Author-only citation (when discussing the
-person)}\label{author-only-citation-when-discussing-the-person}
-\addcontentsline{toc}{subsection}{Author-only citation (when discussing
-the person)}
-
-As \autocite*{soares2014} demonstrates in their analysis\ldots{}
-
-\subsection*{Year-only citation (when author already
-mentioned)}\label{year-only-citation-when-author-already-mentioned}
-\addcontentsline{toc}{subsection}{Year-only citation (when author
-already mentioned)}
-
-Soares \autocite*{soares2014} later revised this position.
-
-\subsection*{Page-specific references}\label{page-specific-references}
-\addcontentsline{toc}{subsection}{Page-specific references}
-
-The key insight appears in \autocite[45-67]{soares2014}.
-
-\subsection*{Multiple works, different
-pages}\label{multiple-works-different-pages}
-\addcontentsline{toc}{subsection}{Multiple works, different pages}
-
-This view is supported \autocites[23]{soares2014}[156-159]{knuth1984}.
-
-\section*{Section Cross-References}\label{sec-crossref}
-\addcontentsline{toc}{section}{Section Cross-References}
-
-\markright{Section Cross-References}
-
-Refer to sections like: Section~\ref{sec-adaptive-governance} and
-\textbf{?@sec-crossref}
+markdown
 
 \begin{Shaded}
 \begin{Highlighting}[]
-\AnnotationTok{Caveat:}\CommentTok{ refering to sections with @sec{-}HEADINGS works only for sections with:}
-\FunctionTok{\#\# Heading \{\#sec{-}HEADINGS\}}
-\NormalTok{It does not work for sections with ".unnumbered and/or .unlisted":}
-\FunctionTok{\#\# Heading \{\#sec{-}HEADINGS .unnumbered .unlisted\}}
-\NormalTok{Furthermore the .qmd and/or .md yml settings (\textasciitilde{} numbering have to be just right)}
+\SpecialStringTok{1. }\NormalTok{First item}
+\SpecialStringTok{2. }\NormalTok{Second item}
+\NormalTok{   a) Sub{-}item (3 spaces)}
+\NormalTok{      i. Sub{-}sub{-}item (6 spaces)}
+\NormalTok{   b) Another sub{-}item}
+\SpecialStringTok{3. }\NormalTok{Third item}
 \end{Highlighting}
 \end{Shaded}
 
-\subsection*{Section Numbers}\label{section-numbers}
-\addcontentsline{toc}{subsection}{Section Numbers}
+\subsection*{Definition Lists}\label{definition-lists}
+\addcontentsline{toc}{subsection}{Definition Lists}
 
-By default, all headings in your document create a numbered section. You
-customize numbering depth using the number-depth option. For example, to
-only number sections immediately below the chapter level, use this:
+markdown
 
-\texttt{number-depth:\ 2}
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{Term One}
+\NormalTok{: Definition of term one with detailed explanation}
+\NormalTok{  that can span multiple lines}
 
-Note that toc-depth is independent of number-depth (i.e.~you can have
-unnumbered entries in the TOC if they are masked out from numbering by
-number-depth).
+\NormalTok{Term Two}
+\NormalTok{: Brief definition}
 
-Testing crossreferencing grapics Figure~\ref{fig-automation_pipeline}.
-See \textbf{?@sec-syntax} for more details on visualizing model
-diagnostics.
+\NormalTok{Term Three}
+\NormalTok{: Another definition with multiple paragraphs}
 
-Testing crossreferencing headings Section~\ref{sec-carlsmith-model}
+\NormalTok{  Additional paragraph for term three}
+\end{Highlighting}
+\end{Shaded}
 
-\texttt{Testing\ crossreferencing\ headings\ @sec-rain-sprinkler-grass}
-which does not work yet.
+\section*{Code Blocks and Verbatim
+Text}\label{code-blocks-and-verbatim-text}
+\addcontentsline{toc}{section}{Code Blocks and Verbatim Text}
 
-Chapter Cross-Reference \textbf{?@sec-crossref}
+\markright{Code Blocks and Verbatim Text}
 
-\section*{Pages in Landscape}\label{pages-in-landscape}
-\addcontentsline{toc}{section}{Pages in Landscape}
+\subsection*{Inline Code}\label{inline-code}
+\addcontentsline{toc}{subsection}{Inline Code}
 
-\markright{Pages in Landscape}
+markdown
 
-\begin{landscape}
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{Use }\InformationTok{\textasciigrave{}print("Hello")\textasciigrave{}}\NormalTok{ for inline code}
+\end{Highlighting}
+\end{Shaded}
 
-This will appear in landscape but only in PDF format. Testing
-crossreferencing headings Section~\ref{sec-carlsmith-model}
+\subsection*{Code Blocks with Syntax
+Highlighting}\label{code-blocks-with-syntax-highlighting}
+\addcontentsline{toc}{subsection}{Code Blocks with Syntax Highlighting}
 
-\end{landscape}
+markdown
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\InformationTok{\textasciigrave{}\textasciigrave{}\textasciigrave{}python}
+\KeywordTok{def}\NormalTok{ calculate\_risk(probability, impact):}
+    \CommentTok{"""Calculate risk score from probability and impact."""}
+    \ControlFlowTok{return}\NormalTok{ probability }\OperatorTok{*}\NormalTok{ impact}
+\InformationTok{\textasciigrave{}\textasciigrave{}\textasciigrave{}}
+\end{Highlighting}
+\end{Shaded}
+
+\subsection*{Verbatim Text}\label{verbatim-text}
+\addcontentsline{toc}{subsection}{Verbatim Text}
+
+markdown
+
+This is verbatim text that preserves all spacing and formatting exactly
+as typed
+
+\section*{Blockquotes and Callouts}\label{blockquotes-and-callouts}
+\addcontentsline{toc}{section}{Blockquotes and Callouts}
+
+\markright{Blockquotes and Callouts}
+
+\subsection*{Simple Blockquote}\label{simple-blockquote}
+\addcontentsline{toc}{subsection}{Simple Blockquote}
+
+markdown
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\AttributeTok{\textgreater{} This is a blockquote for citations or important quotes.}
+\AttributeTok{\textgreater{} It can span multiple lines.}
+\AttributeTok{\textgreater{}}
+\AttributeTok{\textgreater{} And include multiple paragraphs.}
+\end{Highlighting}
+\end{Shaded}
+
+\subsection*{Callout Blocks}\label{callout-blocks}
+\addcontentsline{toc}{subsection}{Callout Blocks}
+
+markdown
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{::: \{.callout{-}note\}}
+\FunctionTok{\#\# Note Title}
+\NormalTok{This is a note callout with important information.}
+\NormalTok{:::}
+
+\NormalTok{::: \{.callout{-}warning\}}
+\FunctionTok{\#\# Warning}
+\NormalTok{This warns about potential issues.}
+\NormalTok{:::}
+
+\NormalTok{::: \{.callout{-}tip\}}
+\FunctionTok{\#\# Pro Tip}
+\NormalTok{Helpful suggestions go here.}
+\NormalTok{:::}
+
+\NormalTok{::: \{.callout{-}important\}}
+\FunctionTok{\#\# Important}
+\NormalTok{Critical information that must not be missed.}
+\NormalTok{:::}
+
+\NormalTok{::: \{.callout{-}caution\}}
+\FunctionTok{\#\# Caution}
+\NormalTok{Use with care in specific situations.}
+\NormalTok{:::}
+\end{Highlighting}
+\end{Shaded}
+
+\section*{Figures and Images}\label{figures-and-images}
+\addcontentsline{toc}{section}{Figures and Images}
+
+\markright{Figures and Images}
+
+\subsection*{Complete Figure Syntax}\label{complete-figure-syntax}
+\addcontentsline{toc}{subsection}{Complete Figure Syntax}
+
+markdown
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{[}\OtherTok{![Figure Caption for Display}\CommentTok{](/path/to/image.png)}\NormalTok{\{}
+\NormalTok{  \#fig{-}unique{-}identifier}
+\NormalTok{  fig{-}scap="Short caption for list of figures"}
+\NormalTok{  fig{-}alt="Detailed description for accessibility.}
+\NormalTok{          TYPE: }\CommentTok{[}\OtherTok{Chart/Diagram/Photo/etc.}\CommentTok{]}
+\NormalTok{          DATA: }\CommentTok{[}\OtherTok{What data is shown, axes, units}\CommentTok{]}
+\NormalTok{          PURPOSE: }\CommentTok{[}\OtherTok{Why included, what to observe}\CommentTok{]}
+\NormalTok{          DETAILS: }\CommentTok{[}\OtherTok{Key patterns, insights, anomalies}\CommentTok{]}
+\NormalTok{          SOURCE: }\CommentTok{[}\OtherTok{Citation or data source}\CommentTok{]}\NormalTok{"}
+\NormalTok{  fig{-}align="center"}
+\NormalTok{  width="80\%"}
+\NormalTok{\}](https://optional{-}link{-}url.com)}
+\end{Highlighting}
+\end{Shaded}
+
+\subsection*{Figure Best Practices}\label{figure-best-practices}
+\addcontentsline{toc}{subsection}{Figure Best Practices}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  Always include comprehensive alt text
+\item
+  Use descriptive filenames
+\item
+  Optimize image sizes for web/PDF
+\item
+  Maintain consistent styling
+\item
+  Reference all figures in text: \texttt{See\ @fig-identifier}
+\end{enumerate}
+
+\section*{Tables}\label{tables}
+\addcontentsline{toc}{section}{Tables}
+
+\markright{Tables}
+
+\subsection*{Markdown Tables}\label{markdown-tables}
+\addcontentsline{toc}{subsection}{Markdown Tables}
+
+markdown
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\PreprocessorTok{|}\NormalTok{ Column 1 }\PreprocessorTok{|}\NormalTok{ Column 2 }\PreprocessorTok{|}\NormalTok{ Column 3 }\PreprocessorTok{|}
+\PreprocessorTok{|{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}|:{-}{-}{-}{-}{-}{-}{-}{-}:|{-}{-}{-}{-}{-}{-}{-}{-}:|}
+\PreprocessorTok{|}\NormalTok{ Left     }\PreprocessorTok{|}\NormalTok{ Center   }\PreprocessorTok{|}\NormalTok{ Right   }\PreprocessorTok{|}
+\PreprocessorTok{|}\NormalTok{ Data     }\PreprocessorTok{|}\NormalTok{ Data     }\PreprocessorTok{|}\NormalTok{ Data    }\PreprocessorTok{|}
+
+\NormalTok{: Table caption \{\#tbl{-}identifier\}}
+\end{Highlighting}
+\end{Shaded}
+
+\subsection*{Grid Tables}\label{grid-tables}
+\addcontentsline{toc}{subsection}{Grid Tables}
+
+markdown
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{+{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}+{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}+{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}+}
+\PreprocessorTok{|}\NormalTok{ Header 1 }\PreprocessorTok{|}\NormalTok{ Header 2 }\PreprocessorTok{|}\NormalTok{ Header 3 }\PreprocessorTok{|}
+\NormalTok{+========}\AlertTok{==+==========+==}\NormalTok{========+}
+\PreprocessorTok{|}\NormalTok{ Cell 1   }\PreprocessorTok{|}\NormalTok{ Cell 2   }\PreprocessorTok{|}\NormalTok{ Cell 3   }\PreprocessorTok{|}
+\PreprocessorTok{|}          \PreprocessorTok{|}          \PreprocessorTok{|}          \PreprocessorTok{|}
+\PreprocessorTok{|}\NormalTok{ Multi{-}   }\PreprocessorTok{|}\NormalTok{ Multi{-}   }\PreprocessorTok{|}\NormalTok{ Multi{-}   }\PreprocessorTok{|}
+\PreprocessorTok{|}\NormalTok{ line     }\PreprocessorTok{|}\NormalTok{ line     }\PreprocessorTok{|}\NormalTok{ line     }\PreprocessorTok{|}
+\NormalTok{+{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}+{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}+{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}+}
+
+\NormalTok{: Complex table with multiple lines \{\#tbl{-}complex\}}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{longtable}[]{@{}rllc@{}}
+\caption{Demonstration of pipe table
+syntax}\label{tbl-letters}\tabularnewline
+\toprule\noalign{}
+Right & Left & Default & Center \\
+\midrule\noalign{}
+\endfirsthead
+\toprule\noalign{}
+Right & Left & Default & Center \\
+\midrule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+12 & 12 & 12 & 12 \\
+123 & 123 & 123 & 123 \\
+1 & 1 & 1 & 1 \\
+\end{longtable}
+
+\begin{longtable}[]{@{}lll@{}}
+\caption{My Caption 1}\label{tbl-letters}\tabularnewline
+\toprule\noalign{}
+Col1 & Col2 & Col3 \\
+\midrule\noalign{}
+\endfirsthead
+\toprule\noalign{}
+Col1 & Col2 & Col3 \\
+\midrule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+A & B & C \\
+E & F & G \\
+A & G & G \\
+\end{longtable}
+
+Referencing tables with \texttt{@tbl-KEY}: See Table~\ref{tbl-letters}.
+
+\begin{table}
+
+\caption{\label{tbl-panel}Main Caption}
+
+\begin{minipage}{0.50\linewidth}
+
+\subcaption{\label{tbl-first}First Table}
+
+\centering{
+
+\begin{tabular}{lll}
+\toprule
+Col1 & Col2 & Col3\\
+\midrule
+A & B & C\\
+E & F & G\\
+A & G & G\\
+\bottomrule
+\end{tabular}
+
+}
+
+\end{minipage}%
+%
+\begin{minipage}{0.50\linewidth}
+
+\subcaption{\label{tbl-second}Second Table}
+
+\centering{
+
+\begin{tabular}{lll}
+\toprule
+Col1 & Col2 & Col3\\
+\midrule
+A & B & C\\
+E & F & G\\
+A & G & G\\
+\bottomrule
+\end{tabular}
+
+}
+
+\end{minipage}%
+
+\end{table}%
+
+See Table~\ref{tbl-panel} for details, especially
+Table~\ref{tbl-second}.
+
+\section*{Citations and References}\label{citations-and-references}
+\addcontentsline{toc}{section}{Citations and References}
+
+\markright{Citations and References}
+
+\subsection*{Citation Styles}\label{citation-styles}
+\addcontentsline{toc}{subsection}{Citation Styles}
+
+markdown
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\AnnotationTok{Narrative:}\CommentTok{ @author2024 argues that...}
+\AnnotationTok{Parenthetical:}\CommentTok{ This is supported by evidence [@author2024].}
+\AnnotationTok{Multiple:}\CommentTok{ Several studies confirm this [@author2024; @other2023].}
+\AnnotationTok{Page specific:}\CommentTok{ See discussion in [@author2024, pp. 45{-}67].}
+\AnnotationTok{Author only:}\CommentTok{ As [{-}@author2024] demonstrates...}
+\end{Highlighting}
+\end{Shaded}
+
+\subsection*{Bibliography Entry}\label{bibliography-entry}
+\addcontentsline{toc}{subsection}{Bibliography Entry}
+
+bibtex
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\VariableTok{@article}\NormalTok{\{}\OtherTok{author2024}\NormalTok{,}
+  \DataTypeTok{title}\NormalTok{ = \{Article Title\},}
+  \DataTypeTok{author}\NormalTok{ = \{Author, First and Other, Second\},}
+  \DataTypeTok{date}\NormalTok{ = \{2024\},}
+  \DataTypeTok{journaltitle}\NormalTok{ = \{Journal Name\},}
+  \DataTypeTok{volume}\NormalTok{ = \{10\},}
+  \DataTypeTok{number}\NormalTok{ = \{2\},}
+  \DataTypeTok{pages}\NormalTok{ = \{45{-}{-}67\},}
+  \DataTypeTok{doi}\NormalTok{ = \{10.1234/example\},}
+  \DataTypeTok{url}\NormalTok{ = \{https://example.com\}}
+\NormalTok{\}}
+\end{Highlighting}
+\end{Shaded}
+
+\section*{Cross-References}\label{cross-references}
+\addcontentsline{toc}{section}{Cross-References}
+
+\markright{Cross-References}
+
+\subsection*{Section References}\label{section-references}
+\addcontentsline{toc}{subsection}{Section References}
+
+markdown
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{See @sec{-}introduction for background.}
+\NormalTok{As discussed in @sec{-}methodology...}
+\end{Highlighting}
+\end{Shaded}
+
+\subsection*{Figure and Table
+References}\label{figure-and-table-references}
+\addcontentsline{toc}{subsection}{Figure and Table References}
+
+markdown
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{@fig{-}pipeline shows the workflow.}
+\NormalTok{Results are summarized in @tbl{-}results.}
+\end{Highlighting}
+\end{Shaded}
+
+\subsection*{Equation References}\label{equation-references}
+\addcontentsline{toc}{subsection}{Equation References}
+
+markdown
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{$$}
+\NormalTok{E = mc\^{}2}
+\NormalTok{$$ \{\#eq{-}einstein\}}
+
+\NormalTok{Einstein\textquotesingle{}s equation (@eq{-}einstein) shows...}
+\end{Highlighting}
+\end{Shaded}
+
+\section*{Mathematics}\label{mathematics}
+\addcontentsline{toc}{section}{Mathematics}
+
+\markright{Mathematics}
+
+\subsection*{Inline Math}\label{inline-math}
+\addcontentsline{toc}{subsection}{Inline Math}
+
+markdown
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{The probability $P(A|B) = \textbackslash{}frac\{P(B|A)P(A)\}\{P(B)\}$}
+\end{Highlighting}
+\end{Shaded}
+
+\subsection*{Display Math}\label{display-math}
+\addcontentsline{toc}{subsection}{Display Math}
+
+markdown
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{$$}
+\NormalTok{\textbackslash{}begin\{align\}}
+\NormalTok{\textbackslash{}nabla \textbackslash{}times \textbackslash{}vec\{\textbackslash{}mathbf\{B\}\} {-}\textbackslash{}, \textbackslash{}frac1c\textbackslash{}, \textbackslash{}frac\{\textbackslash{}partial\textbackslash{}vec\{\textbackslash{}mathbf\{E\}\}\}\{\textbackslash{}partial t\} \&= \textbackslash{}frac\{4\textbackslash{}pi\}\{c\}\textbackslash{}vec\{\textbackslash{}mathbf\{j\}\} }\SpecialCharTok{\textbackslash{}\textbackslash{}}
+\NormalTok{\textbackslash{}nabla \textbackslash{}cdot \textbackslash{}vec\{\textbackslash{}mathbf\{E\}\} \&= 4 \textbackslash{}pi \textbackslash{}rho }\SpecialCharTok{\textbackslash{}\textbackslash{}}
+\NormalTok{\textbackslash{}nabla \textbackslash{}times \textbackslash{}vec\{\textbackslash{}mathbf\{E\}\}\textbackslash{}, +\textbackslash{}, \textbackslash{}frac1c\textbackslash{}, \textbackslash{}frac\{\textbackslash{}partial\textbackslash{}vec\{\textbackslash{}mathbf\{B\}\}\}\{\textbackslash{}partial t\} \&= \textbackslash{}vec\{\textbackslash{}mathbf\{0\}\} }\SpecialCharTok{\textbackslash{}\textbackslash{}}
+\NormalTok{\textbackslash{}nabla \textbackslash{}cdot \textbackslash{}vec\{\textbackslash{}mathbf\{B\}\} \&= 0}
+\NormalTok{\textbackslash{}end\{align\}}
+\NormalTok{$$}
+\end{Highlighting}
+\end{Shaded}
+
+inline math: \(E = mc^{2}\)
+
+display math:
+
+\[E = mc^{2}\]
+
+If you want to define custom TeX macros, include them within \$\$
+delimiters enclosed in a .hidden block. For example:
+
+\[
+ \def\RR{{\bf R}}
+ \def\bold#1{{\bf #1}}
+\]
+
+For HTML math processed using MathJax (the default) you can use the
+\textbackslash def, \textbackslash newcommand,
+\textbackslash renewcommand, \textbackslash newenvironment,
+\textbackslash renewenvironment, and \textbackslash let commands to
+create your own macros and environments.
+
+\section*{Footnotes}\label{footnotes}
+\addcontentsline{toc}{section}{Footnotes}
+
+\markright{Footnotes}
+
+Footnotes are to be used as much as possible!
+
+\subsection*{Simple Footnote}\label{simple-footnote}
+\addcontentsline{toc}{subsection}{Simple Footnote}
+
+markdown
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{This needs clarification.\^{}}\CommentTok{[}\OtherTok{This is an inline footnote.}\CommentTok{]}
+\end{Highlighting}
+\end{Shaded}
+
+\subsection*{Referenced Footnote}\label{referenced-footnote}
+\addcontentsline{toc}{subsection}{Referenced Footnote}
+
+markdown
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{This is important.}\OtherTok{[\^{}1]}
+
+\OtherTok{[\^{}1]: }\NormalTok{This is a longer footnote with multiple paragraphs.}
+
+\InformationTok{    Second paragraph of the footnote.}
+\InformationTok{    }
+\InformationTok{    Even code blocks are possible:}
+\InformationTok{    \textasciigrave{}\textasciigrave{}\textasciigrave{}python}
+\InformationTok{    print("In footnote")}
+\InformationTok{    \textasciigrave{}\textasciigrave{}\textasciigrave{}}
+\end{Highlighting}
+\end{Shaded}
+
+Here is an inline note.\footnote{Inlines notes are easier to write,
+  since you don't have to pick an identifier and move down to type the
+  note.}
+
+Here is a footnote reference,\footnote{Here is the footnote.}
+
+Another Text with a footnote\footnote{Here's one with multiple blocks.
+
+  Subsequent paragraphs are indented to show that they belong to the
+  previous footnote.
+
+\begin{Verbatim}
+{ some.code }
+\end{Verbatim}
+
+  The whole paragraph can be indented, or just the first line. In this
+  way, multi-paragraph footnotes work like multi-paragraph list items.}
+but this time a ``longnote''.
+
+This paragraph won't be part of the note, because it isn't indented.
+
+\section*{Appendices}\label{appendices}
+\addcontentsline{toc}{section}{Appendices}
+
+\markright{Appendices}
+
+\subsection*{Structure}\label{structure}
+\addcontentsline{toc}{subsection}{Structure}
+
+markdown
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{\# Appendices \{.unnumbered\}}
+
+\FunctionTok{\#\# Appendix A: Technical Details \{\#sec{-}appendix{-}a .unnumbered\}}
+
+\FunctionTok{\#\#\# A.1 Implementation \{.unnumbered\}}
+
+\FunctionTok{\#\# Appendix B: Additional Results \{\#sec{-}appendix{-}b .unnumbered\}}
+\end{Highlighting}
+\end{Shaded}
+
+\subsection*{Best Practices for
+Appendices}\label{best-practices-for-appendices}
+\addcontentsline{toc}{subsection}{Best Practices for Appendices}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  Include all supplementary material
+\item
+  Reference from main text
+\item
+  Number consistently
+\item
+  Provide clear descriptions
+\item
+  Maintain same formatting standards
+\end{enumerate}
+
+\section*{Glossary and Abbreviations}\label{glossary-and-abbreviations}
+\addcontentsline{toc}{section}{Glossary and Abbreviations}
+
+\markright{Glossary and Abbreviations}
+
+\subsection*{Glossary Format}\label{glossary-format}
+\addcontentsline{toc}{subsection}{Glossary Format}
+
+markdown
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{\# Glossary \{.unnumbered\}}
+\NormalTok{Term}
+\NormalTok{: Definition}
+
+
+\NormalTok{AI}
+\NormalTok{: Artificial Intelligence {-} Computer systems performing tasks requiring human intelligence}
+
+\NormalTok{ML}
+\NormalTok{: Machine Learning {-} Algorithms that improve through experience}
+
+\NormalTok{DL}
+\NormalTok{: Deep Learning {-} Neural networks with multiple layers}
+\end{Highlighting}
+\end{Shaded}
+
+\section*{Interactive Elements}\label{interactive-elements}
+\addcontentsline{toc}{section}{Interactive Elements}
+
+\markright{Interactive Elements}
+
+\subsection*{Jupyter Notebook
+Embedding}\label{jupyter-notebook-embedding}
+\addcontentsline{toc}{subsection}{Jupyter Notebook Embedding}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{\{\{\textless{} embed notebook.ipynb\#cell{-}label \textgreater{}\}\}}
+\end{Highlighting}
+\end{Shaded}
+
+\subsection*{Mermaid Diagrams}\label{mermaid-diagrams}
+\addcontentsline{toc}{subsection}{Mermaid Diagrams}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\InformationTok{\textasciigrave{}\textasciigrave{}\textasciigrave{}\{mermaid\}}
+\NormalTok{graph TD}
+\NormalTok{    A[Start] {-}{-}\textgreater{} B\{Decision\}}
+\NormalTok{    B {-}{-}\textgreater{}|Yes| C[Action }\DecValTok{1}\NormalTok{]}
+\NormalTok{    B {-}{-}\textgreater{}|No| D[Action }\DecValTok{2}\NormalTok{]}
+\NormalTok{    C {-}{-}\textgreater{} E[End]}
+\NormalTok{    D {-}{-}\textgreater{} E}
+\end{Highlighting}
+\end{Shaded}
+
+\section*{Line Breaks and Spacing}\label{line-breaks-and-spacing}
+\addcontentsline{toc}{section}{Line Breaks and Spacing}
+
+\markright{Line Breaks and Spacing}
+
+\subsection*{Spacing Rules}\label{spacing-rules}
+\addcontentsline{toc}{subsection}{Spacing Rules}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  \textbf{Between sections}: 2 blank lines
+\item
+  \textbf{Between paragraphs}: 1 blank line
+\item
+  \textbf{Around code blocks}: 1 blank line before and after
+\item
+  \textbf{Around figures/tables}: 1 blank line before and after
+\item
+  \textbf{After headings}: 1 blank line
+\item
+  \textbf{Between list items}: No blank lines unless containing multiple
+  paragraphs
+\end{enumerate}
+
+\subsection*{Page Breaks}\label{page-breaks}
+\addcontentsline{toc}{subsection}{Page Breaks}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+
+\end{Highlighting}
+\end{Shaded}
+
+\section*{Comments and Metadata}\label{comments-and-metadata}
+\addcontentsline{toc}{section}{Comments and Metadata}
+
+\markright{Comments and Metadata}
+
+\subsection*{HTML Comments}\label{html-comments}
+\addcontentsline{toc}{subsection}{HTML Comments}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{\textless{}!{-}{-} This is a comment not shown in output {-}{-}\textgreater{}}
+\end{Highlighting}
+\end{Shaded}
 
 \bookmarksetup{startatroot}
 
-\chapter*{Abstract}\label{sec-abstract}
-\addcontentsline{toc}{chapter}{Abstract}
+\chapter*{Comprehensive Task Management System for Quarto
+Thesis}\label{comprehensive-task-management-system-for-quarto-thesis}
+\addcontentsline{toc}{chapter}{Comprehensive Task Management System for
+Quarto Thesis}
 
-\markboth{Abstract}{Abstract}
+\markboth{Comprehensive Task Management System for Quarto
+Thesis}{Comprehensive Task Management System for Quarto Thesis}
 
-\begin{quote}
-The coordination crisis in AI governance presents a paradoxical
-challenge: unprecedented investment in AI safety coexists alongside
-fundamental coordination failures across technical, policy, and ethical
-domains. These divisions systematically increase existential risk. This
-thesis introduces AMTAIR (Automating Transformative AI Risk Modeling), a
-computational approach addressing this coordination failure by
-automating the extraction of probabilistic world models from AI safety
-literature using frontier language models. The system implements an
-end-to-end pipeline transforming unstructured text into interactive
-Bayesian networks through a novel two-stage extraction process that
-bridges communication gaps between stakeholders.
-\end{quote}
+\section*{Overview}\label{overview}
+\addcontentsline{toc}{section}{Overview}
 
-\texttt{The\ coordination\ crisis\ in\ AI\ governance\ presents\ a\ paradoxical\ challenge:\ unprecedented\ investment\ in\ AI\ safety\ coexists\ alongside\ fundamental\ coordination\ failures\ across\ technical,\ policy,\ and\ ethical\ domains.\ These\ divisions\ systematically\ increase\ existential\ risk\ by\ creating\ safety\ gaps,\ misallocating\ resources,\ and\ fostering\ inconsistent\ approaches\ to\ interdependent\ problems.}
+\markright{Overview}
 
-\begin{quote}
-This thesis introduces AMTAIR (Automating Transformative AI Risk
-Modeling), a computational approach that addresses this coordination
-failure by automating the extraction of probabilistic world models from
-AI safety literature using frontier language models.
-\end{quote}
+This task management system uses HTML comments with specific formatting
+to create trackable, categorized tasks that integrate with VS Code's
+ToDo-Tree extension while remaining invisible or visible depending on
+the status in rendered output.
 
-\texttt{The\ AMTAIR\ system\ implements\ an\ end-to-end\ pipeline\ that\ transforms\ unstructured\ text\ into\ interactive\ Bayesian\ networks\ through\ a\ novel\ two-stage\ extraction\ process:\ first\ capturing\ argument\ structure\ in\ ArgDown\ format,\ then\ enhancing\ it\ with\ probability\ information\ in\ BayesDown.\ This\ approach\ bridges\ communication\ gaps\ between\ stakeholders\ by\ making\ implicit\ models\ explicit,\ enabling\ comparison\ across\ different\ worldviews,\ providing\ a\ common\ language\ for\ discussing\ probabilistic\ relationships,\ and\ supporting\ policy\ evaluation\ across\ diverse\ scenarios.}
+\section*{Task Categories and Syntax}\label{task-categories-and-syntax}
+\addcontentsline{toc}{section}{Task Categories and Syntax}
+
+\markright{Task Categories and Syntax}
+
+\subsection*{1. General Tasks}\label{general-tasks}
+\addcontentsline{toc}{subsection}{1. General Tasks}
+
+In markdown blocks or with \texttt{verbatim\ code} ticks:
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{\textless{}!{-}{-} [ ] }\AlertTok{TODO}\CommentTok{: General task description {-}{-}\textgreater{}}
+\CommentTok{\textless{}!{-}{-} [ ] }\AlertTok{TODO}\CommentTok{: High{-}priority task with deadline (2024{-}12{-}31) {-}{-}\textgreater{}}
+\CommentTok{\textless{}!{-}{-} [ ] }\AlertTok{TODO}\CommentTok{: Task with subtasks}
+\CommentTok{        {-} [ ] Subtask 1}
+\CommentTok{        {-} [ ] Subtask 2}
+\CommentTok{        {-} [ ] Subtask 3}
+\CommentTok{{-}{-}\textgreater{}}
+\end{Highlighting}
+\end{Shaded}
+
+\subsection*{2. Citation Tasks}\label{citation-tasks}
+\addcontentsline{toc}{subsection}{2. Citation Tasks}
+
+In markdown blocks or with \texttt{verbatim\ code} ticks:
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{\textless{}!{-}{-} [ ] FIND: @missing{-}citation{-}key: "Description of needed source, keywords, search terms" {-}{-}\textgreater{}}
+\CommentTok{\textless{}!{-}{-} [ ] VERIFY: @suggested{-}citation: "Author (Year). Title. Journal." [Include BibTeX if available] {-}{-}\textgreater{}}
+\CommentTok{\textless{}!{-}{-} [ ] UPDATE: @outdated{-}citation: "Check for newer edition or updated data" {-}{-}\textgreater{}}
+\end{Highlighting}
+\end{Shaded}
+
+\subsection*{3. Figure/Graphic Tasks}\label{figuregraphic-tasks}
+\addcontentsline{toc}{subsection}{3. Figure/Graphic Tasks}
+
+In markdown blocks or with \texttt{verbatim\ code} ticks:
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{\textless{}!{-}{-} [ ] CREATE: \{\#fig{-}diagram{-}name\}: "Description of needed diagram, style, data to include" {-}{-}\textgreater{}}
+\CommentTok{\textless{}!{-}{-} [ ] FIND: \{\#fig{-}example{-}image\}: "Stock photo of X, preferably showing Y" {-}{-}\textgreater{}}
+\CommentTok{\textless{}!{-}{-} [ ] UPDATE: \{\#fig{-}outdated{-}chart\}: "Update with 2024 data" {-}{-}\textgreater{}}
+\CommentTok{\textless{}!{-}{-} [ ] IMPROVE: \{\#fig{-}low{-}quality\}: "Higher resolution version needed" {-}{-}\textgreater{}}
+\end{Highlighting}
+\end{Shaded}
+
+\subsection*{4. Content Tasks}\label{content-tasks}
+\addcontentsline{toc}{subsection}{4. Content Tasks}
+
+In markdown blocks or with \texttt{verbatim\ code} ticks:
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{\textless{}!{-}{-} [ ] WRITE: Section 3.2 {-} Methodology details {-}{-}\textgreater{}}
+\CommentTok{\textless{}!{-}{-} [ ] EXPAND: Background section needs 500 more words {-}{-}\textgreater{}}
+\CommentTok{\textless{}!{-}{-} [ ] REVISE: Introduction for clarity and flow {-}{-}\textgreater{}}
+\CommentTok{\textless{}!{-}{-} [ ] REVIEW: Chapter 4 for consistency {-}{-}\textgreater{}}
+\end{Highlighting}
+\end{Shaded}
+
+\subsection*{5. Technical Tasks}\label{technical-tasks}
+\addcontentsline{toc}{subsection}{5. Technical Tasks}
+
+In markdown blocks or with \texttt{verbatim\ code} ticks:
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{\textless{}!{-}{-} [ ] FIX: Code block in section 2.3 has syntax error {-}{-}\textgreater{}}
+\CommentTok{\textless{}!{-}{-} [ ] }\AlertTok{TEST}\CommentTok{: Jupyter notebook embedding {-}{-}\textgreater{}}
+\CommentTok{\textless{}!{-}{-} [ ] OPTIMIZE: Large figure file sizes {-}{-}\textgreater{}}
+\CommentTok{\textless{}!{-}{-} [ ] IMPLEMENT: Cross{-}reference checking script {-}{-}\textgreater{}}
+\end{Highlighting}
+\end{Shaded}
+
+\section*{Task States}\label{task-states}
+\addcontentsline{toc}{section}{Task States}
+
+\markright{Task States}
+
+\subsection*{Open or In-ProgressTasks}\label{open-or-in-progresstasks}
+\addcontentsline{toc}{subsection}{Open or In-ProgressTasks}
+
+In markdown blocks or with \texttt{verbatim\ code} ticks:
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{\textless{}!{-}{-} [ ] Task description {-}{-}\textgreater{}}
+\end{Highlighting}
+\end{Shaded}
+
+\subsection*{Completed Tasks (Visible in
+ToDo-Tree)}\label{completed-tasks-visible-in-todo-tree}
+\addcontentsline{toc}{subsection}{Completed Tasks (Visible in
+ToDo-Tree)}
+
+Either markdown blocks or \texttt{verbatim\ code} ticks or without (to
+remain hidden in output):
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{\textless{}!{-}{-} [x] Task description (completed 2024{-}01{-}20) {-}{-}\textgreater{}}
+\end{Highlighting}
+\end{Shaded}
+
+\subsection*{Verified/Archived Tasks (Hidden from
+ToDo-Tree)}\label{verifiedarchived-tasks-hidden-from-todo-tree}
+\addcontentsline{toc}{subsection}{Verified/Archived Tasks (Hidden from
+ToDo-Tree)}
+
+markdown
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{\textless{}!{-}{-} [{-}] Task description (verified and archived) {-}{-}\textgreater{}}
+\end{Highlighting}
+\end{Shaded}
+
+\section*{Advanced Task Formatting}\label{advanced-task-formatting}
+\addcontentsline{toc}{section}{Advanced Task Formatting}
+
+\markright{Advanced Task Formatting}
+
+\subsection*{Multi-line Tasks with
+Details}\label{multi-line-tasks-with-details}
+\addcontentsline{toc}{subsection}{Multi-line Tasks with Details}
+
+markdown
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{\textless{}!{-}{-} [ ] Major task with extensive details}
+\CommentTok{  }
+\CommentTok{  Background:}
+\CommentTok{  {-} Context for why this task exists}
+\CommentTok{  {-} Related issues or dependencies}
+\CommentTok{  }
+\CommentTok{  Requirements:}
+\CommentTok{  1. Specific requirement one}
+\CommentTok{  2. Specific requirement two}
+\CommentTok{  3. Specific requirement three}
+\CommentTok{  }
+\CommentTok{  Implementation Plan:}
+\CommentTok{  {-} [ ] Step 1: Initial research}
+\CommentTok{  {-} [ ] Step 2: Draft content}
+\CommentTok{  {-} [ ] Step 3: Review and revise}
+\CommentTok{  }
+\CommentTok{  Resources:}
+\CommentTok{  {-} Reference document: path/to/doc}
+\CommentTok{  {-} Example: url{-}to{-}example}
+\CommentTok{  }
+\CommentTok{{-}{-}\textgreater{}}
+\end{Highlighting}
+\end{Shaded}
+
+\subsection*{Linked Tasks}\label{linked-tasks}
+\addcontentsline{toc}{subsection}{Linked Tasks}
+
+markdown
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{\textless{}!{-}{-} [ ] PRIMARY: Main task description}
+\CommentTok{  Related tasks:}
+\CommentTok{  {-} See also: Task in Chapter 2}
+\CommentTok{  {-} Depends on: Task in Appendix A}
+\CommentTok{  {-} Blocks: Task in Chapter 5}
+\CommentTok{{-}{-}\textgreater{}}
+\end{Highlighting}
+\end{Shaded}
+
+\subsection*{Conditional Tasks}\label{conditional-tasks}
+\addcontentsline{toc}{subsection}{Conditional Tasks}
+
+markdown
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{\textless{}!{-}{-} [ ] IF: Hypothesis confirmed in Chapter 3}
+\CommentTok{     THEN: Add supporting evidence section}
+\CommentTok{     ELSE: Revise theoretical framework {-}{-}\textgreater{}}
+\end{Highlighting}
+\end{Shaded}
+
+\section*{Task Tracking Best
+Practices}\label{task-tracking-best-practices}
+\addcontentsline{toc}{section}{Task Tracking Best Practices}
+
+\markright{Task Tracking Best Practices}
+
+\subsection*{1. Task Creation
+Guidelines}\label{task-creation-guidelines}
+\addcontentsline{toc}{subsection}{1. Task Creation Guidelines}
+
+\begin{itemize}
+\tightlist
+\item
+  Create tasks immediately when identified
+\item
+  Be specific and actionable
+\item
+  Include context and success criteria
+\item
+  Link related tasks
+\end{itemize}
+
+\subsection*{2. Task Organization}\label{task-organization}
+\addcontentsline{toc}{subsection}{2. Task Organization}
+
+\begin{itemize}
+\tightlist
+\item
+  Group related tasks together
+\item
+  Place tasks near or inside relevant content
+\item
+  Use consistent formatting
+\item
+  Maintain task hierarchy
+\end{itemize}
+
+\subsection*{3. Priority System}\label{priority-system}
+\addcontentsline{toc}{subsection}{3. Priority System}
+
+In markdown blocks or with \texttt{verbatim\ code} ticks:
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{\textless{}!{-}{-} [ ] URGENT: Task needing immediate attention {-}{-}\textgreater{}}
+\CommentTok{\textless{}!{-}{-} [ ] HIGH: Task important for next milestone {-}{-}\textgreater{}}
+\CommentTok{\textless{}!{-}{-} [ ] MEDIUM: Standard priority task {-}{-}\textgreater{}}
+\CommentTok{\textless{}!{-}{-} [ ] LOW: Nice{-}to{-}have improvement {-}{-}\textgreater{}}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{\#\#\#\# Simple "One{-}line tasks"}
+
+\NormalTok{Use Code ticks and html comment and task format for tasks distinctly visible across all formats including the ToDo{-}Tree overview:}
+
+\InformationTok{\textasciigrave{}\textless{}!{-}{-} [ ] ToDos for things to do / tasks / reminders (allows "jump to with Taks Tree extension") {-}{-}\textgreater{}\textasciigrave{}}
+
+\NormalTok{Use html comment and task format for open or uncertain tasks, visible in the .qmd file:}
+
+\CommentTok{\textless{}!{-}{-} [ ] ToDos for things to do / tasks / reminders (allows "jump to with Taks Tree extension") {-}{-}\textgreater{}}
+
+
+
+\FunctionTok{\#\#\#\# More Complex Tasks with Notes}
+\end{Highlighting}
+\end{Shaded}
+
+More Information about task
+
+Relevant notes
+
+Step-by-step implementation Plan
+
+Etc.
+
+\begin{verbatim}
+
+#### Completed Tasks
+
+Retain completed tasks in ToDo-Tree by adding an x in the brackets: `[x]`
+`<!-- [x] Tasks which have been finished but should remain for later verification -->`
+
+<!-- [x] Tasks which have been finished but should remain for later verification -->
+
+
+Mark and remove completed tasks from ToDo-Tree by adding a minus in the brackets: `[-]`
+
+`<!-- [-] Tasks which have been finished but should remain visible for later verification -->`
+
+<!-- [-] Tasks which have been finished but should remain for later verification (only in .qmd) -->
+\end{verbatim}
+
+\section*{Task Management Workflow}\label{task-management-workflow}
+\addcontentsline{toc}{section}{Task Management Workflow}
+
+\markright{Task Management Workflow}
+
+\subsection*{1. Task Creation}\label{task-creation}
+\addcontentsline{toc}{subsection}{1. Task Creation}
+
+In markdown blocks or with \texttt{verbatim\ code} ticks:
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{\textless{}!{-}{-} [ ] }\AlertTok{TODO}\CommentTok{: Write introduction paragraph}
+\CommentTok{  Context: Need to introduce the concept of X}
+\CommentTok{  Requirements: }
+\CommentTok{  {-} Define key terms}
+\CommentTok{  {-} Provide historical context}
+\CommentTok{  {-} Connect to thesis argument}
+\CommentTok{  Deadline: 2024{-}02{-}15}
+\CommentTok{{-}{-}\textgreater{}}
+\end{Highlighting}
+\end{Shaded}
+
+\subsection*{2. Task Execution}\label{task-execution}
+\addcontentsline{toc}{subsection}{2. Task Execution}
+
+In markdown blocks or with \texttt{verbatim\ code} ticks:
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{\textless{}!{-}{-} [ ] }\AlertTok{TODO}\CommentTok{: Write introduction paragraph}
+\CommentTok{  Progress:}
+\CommentTok{  {-} [x] Defined key terms}
+\CommentTok{  {-} [{-}] Not Working on historical context}
+\CommentTok{  {-} [ ] Connection to thesis argument}
+\CommentTok{{-}{-}\textgreater{}}
+\end{Highlighting}
+\end{Shaded}
+
+\subsection*{3. Task Completion}\label{task-completion}
+\addcontentsline{toc}{subsection}{3. Task Completion}
+
+In markdown blocks or with \texttt{verbatim\ code} ticks:
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{\textless{}!{-}{-} [x] }\AlertTok{TODO}\CommentTok{: Write introduction paragraph (completed 2024{-}02{-}14)}
+\CommentTok{  Final version includes all requirements}
+\CommentTok{  Word count: 523}
+\CommentTok{  Review status: Approved by advisor}
+\CommentTok{{-}{-}\textgreater{}}
+\end{Highlighting}
+\end{Shaded}
+
+\subsection*{4. Task Archival}\label{task-archival}
+\addcontentsline{toc}{subsection}{4. Task Archival}
+
+In markdown blocks or with \texttt{verbatim\ code} ticks:
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{\textless{}!{-}{-} [{-}] }\AlertTok{TODO}\CommentTok{: Write introduction paragraph (archived 2024{-}02{-}20)}
+\CommentTok{  Moved to version control history}
+\CommentTok{{-}{-}\textgreater{}}
+\end{Highlighting}
+\end{Shaded}
+
+\section*{Reporting and Analytics}\label{reporting-and-analytics}
+\addcontentsline{toc}{section}{Reporting and Analytics}
+
+\markright{Reporting and Analytics}
+
+\subsection*{Task Summary Template}\label{task-summary-template}
+\addcontentsline{toc}{subsection}{Task Summary Template}
+
+In markdown blocks or with \texttt{verbatim\ code} ticks:
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{\textless{}!{-}{-} }\AlertTok{TASK}\CommentTok{ SUMMARY: Chapter 3}
+\CommentTok{  Total tasks: 45}
+\CommentTok{  Completed: 32 (71\%)}
+\CommentTok{  In progress: 8 (18\%)}
+\CommentTok{  Open: 5 (11\%)}
+\CommentTok{  }
+\CommentTok{  By category:}
+\CommentTok{  {-} WRITE: 15 tasks (10 complete)}
+\CommentTok{  {-} FIND: 12 tasks (8 complete)}
+\CommentTok{  {-} VERIFY: 8 tasks (7 complete)}
+\CommentTok{  {-} CREATE: 10 tasks (7 complete)}
+\CommentTok{  }
+\CommentTok{  Critical path:}
+\CommentTok{  1. Complete methodology section}
+\CommentTok{  2. Verify statistical analysis}
+\CommentTok{  3. Create results visualizations}
+\CommentTok{{-}{-}\textgreater{}}
+\end{Highlighting}
+\end{Shaded}
+
+\section*{Best Practices Summary --- ALWAYS
+CONSISTENTLY:}\label{best-practices-summary-always-consistently}
+\addcontentsline{toc}{section}{Best Practices Summary --- ALWAYS
+CONSISTENTLY:}
+
+\markright{Best Practices Summary --- ALWAYS CONSISTENTLY:}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  \textbf{Be Specific}: Tasks should be actionable and measurable
+\item
+  \textbf{Stay Organized}: Group related tasks and maintain hierarchy
+\item
+  \textbf{Archive Completed}: Keep task list manageable
+\item
+  \textbf{Use Categories}: Leverage task types for better organization
+\item
+  \textbf{Add Context}: Include enough detail for future reference
+\item
+  \textbf{Link Related}: Connect interdependent tasks
+\item
+  \textbf{Maintain Consistency}: Use standard formatting throughout
+\item
+  \textbf{Use correct formatting}: Deploy the correct formatting and fix
+  any inconsistencies
+\end{enumerate}
 
 \bookmarksetup{startatroot}
 
-\chapter*{Prefatory Apparatus:
-Frontmatter}\label{prefatory-apparatus-frontmatter}
-\addcontentsline{toc}{chapter}{Prefatory Apparatus: Frontmatter}
+\chapter*{Tagging and Highlighting System for Content
+Merging}\label{tagging-and-highlighting-system-for-content-merging}
+\addcontentsline{toc}{chapter}{Tagging and Highlighting System for
+Content Merging}
 
-\markboth{Prefatory Apparatus: Frontmatter}{Prefatory Apparatus:
-Frontmatter}
+\markboth{Tagging and Highlighting System for Content Merging}{Tagging
+and Highlighting System for Content Merging}
 
-\section*{Illustrations and Terminology --- Quick
-References}\label{illustrations-and-terminology-quick-references}
-\addcontentsline{toc}{section}{Illustrations and Terminology --- Quick
-References}
+\section*{Overview}\label{overview-1}
+\addcontentsline{toc}{section}{Overview}
 
-\markright{Illustrations and Terminology --- Quick References}
+\markright{Overview}
 
-\subsection*{\texorpdfstring{\textbf{Acknowledgments}}{Acknowledgments}}\label{acknowledgments}
-\addcontentsline{toc}{subsection}{\textbf{Acknowledgments}}
+When merging content from multiple sources, it's crucial to identify and
+manage duplicate, redundant, or overlapping material. This system uses
+Quarto formatting features to clearly mark such content for review and
+consolidation.
+
+\section*{Tagging Categories}\label{tagging-categories}
+\addcontentsline{toc}{section}{Tagging Categories}
+
+\markright{Tagging Categories}
+
+\subsection*{A. Duplicate Content
+Marking}\label{a.-duplicate-content-marking}
+\addcontentsline{toc}{subsection}{A. Duplicate Content Marking}
+
+In markdown blocks or with \texttt{verbatim\ code} ticks:
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{::: \{.duplicate{-}content data{-}source="Chapter2.qmd" data{-}section="2.3"\}}
+\NormalTok{This paragraph appears to be duplicated from Chapter 2, Section 2.3.}
+\NormalTok{Consider consolidating or removing.}
+\NormalTok{:::}
+
+\InformationTok{\textasciigrave{}\textless{}!{-}{-} DUPLICATE: This content also appears in Section 2.3 {-}{-}\textgreater{}\textasciigrave{}}
+\end{Highlighting}
+\end{Shaded}
+
+\subsection*{B. Redundant Content
+Highlighting}\label{b.-redundant-content-highlighting}
+\addcontentsline{toc}{subsection}{B. Redundant Content Highlighting}
+
+In markdown blocks or with \texttt{verbatim\ code} ticks:
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{::: \{.redundant{-}content\}}
+\CommentTok{[}\OtherTok{This section covers similar ground to Section 3.2 but with less detail}\CommentTok{]}\NormalTok{\{.mark style="background{-}color: \#ffeb3b"\}}
+\NormalTok{:::}
+
+\CommentTok{\textless{}!{-}{-} REDUNDANT: Similar content in Section 3.2 with more comprehensive coverage {-}{-}\textgreater{}}
+\end{Highlighting}
+\end{Shaded}
+
+\subsection*{C. Better Version
+Available}\label{c.-better-version-available}
+\addcontentsline{toc}{subsection}{C. Better Version Available}
+
+In markdown blocks or with \texttt{verbatim\ code} ticks:
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{::: \{.superseded{-}content data{-}better{-}version="Chapter4.qmd\#sec{-}4{-}5"\}}
+\NormalTok{This explanation is superseded by a more comprehensive version in Chapter 4, Section 4.5}
+\NormalTok{:::}
+
+\CommentTok{\textless{}!{-}{-} SUPERSEDED: See Chapter 4.5 for improved version {-}{-}\textgreater{}}
+\end{Highlighting}
+\end{Shaded}
+
+\subsection*{D. Merge Candidate}\label{d.-merge-candidate}
+\addcontentsline{toc}{subsection}{D. Merge Candidate}
+
+In markdown blocks or with \texttt{verbatim\ code} ticks:
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{::: \{.merge{-}candidate data{-}merge{-}with="Section 5.2"\}}
+\NormalTok{**MERGE CANDIDATE**: This content could be combined with Section 5.2 for better flow.}
+
+\NormalTok{Original content here...}
+\NormalTok{:::}
+
+\CommentTok{\textless{}!{-}{-} MERGE: Consider combining with Section 5.2 {-}{-}\textgreater{}}
+\end{Highlighting}
+\end{Shaded}
+
+\section*{Visual Marking System}\label{visual-marking-system}
+\addcontentsline{toc}{section}{Visual Marking System}
+
+\markright{Visual Marking System}
+
+\subsection*{Color-Coded Highlighting}\label{color-coded-highlighting}
+\addcontentsline{toc}{subsection}{Color-Coded Highlighting}
+
+In markdown blocks or with \texttt{verbatim\ code} ticks:
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{[}\OtherTok{Duplicate content {-} exact match}\CommentTok{]}\NormalTok{\{style="background{-}color: \#ff6b6b; color: white"\}}
+\CommentTok{[}\OtherTok{Redundant content {-} similar coverage}\CommentTok{]}\NormalTok{\{style="background{-}color: \#ffeb3b"\}}
+\CommentTok{[}\OtherTok{Better version exists elsewhere}\CommentTok{]}\NormalTok{\{style="background{-}color: \#4ecdc4"\}}
+\CommentTok{[}\OtherTok{Merge candidate}\CommentTok{]}\NormalTok{\{style="background{-}color: \#45b7d1"\}}
+\CommentTok{[}\OtherTok{Review needed}\CommentTok{]}\NormalTok{\{style="background{-}color: \#fa8231"\}}
+\end{Highlighting}
+\end{Shaded}
+
+\subsection*{Border Marking}\label{border-marking}
+\addcontentsline{toc}{subsection}{Border Marking}
+
+In markdown blocks or with \texttt{verbatim\ code} ticks:
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{::: \{style="border{-}left: 5px solid \#ff6b6b; padding{-}left: 10px"\}}
+\NormalTok{This entire section is duplicated elsewhere.}
+\NormalTok{:::}
+\end{Highlighting}
+\end{Shaded}
+
+\subsection*{Inline Marking}\label{inline-marking}
+\addcontentsline{toc}{subsection}{Inline Marking}
+
+In markdown blocks or with \texttt{verbatim\ code} ticks:
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{This paragraph contains }\CommentTok{[}\OtherTok{duplicate phrase}\CommentTok{]}\NormalTok{\{.duplicate\} that appears }
+\NormalTok{in multiple locations.}
+\end{Highlighting}
+\end{Shaded}
+
+\section*{Metadata Tracking}\label{metadata-tracking}
+\addcontentsline{toc}{section}{Metadata Tracking}
+
+\markright{Metadata Tracking}
+
+\subsection*{Comprehensive Metadata}\label{comprehensive-metadata}
+\addcontentsline{toc}{subsection}{Comprehensive Metadata}
+
+In markdown blocks or with \texttt{verbatim\ code} ticks:
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{::: \{.content{-}status }
+\NormalTok{     data{-}status="duplicate"}
+\NormalTok{     data{-}original{-}source="intro.qmd\#para{-}3"}
+\NormalTok{     data{-}other{-}locations="chapter2.qmd\#para{-}15, chapter5.qmd\#para{-}8"}
+\NormalTok{     data{-}recommendation="keep{-}original"}
+\NormalTok{     data{-}reviewed{-}by="VM"}
+\NormalTok{     data{-}review{-}date="2024{-}02{-}15"\}}
+\NormalTok{This content appears in multiple locations.}
+\NormalTok{The original in intro.qmd is most comprehensive.}
+\NormalTok{:::}
+\end{Highlighting}
+\end{Shaded}
+
+\subsection*{Quick Reference Tags}\label{quick-reference-tags}
+\addcontentsline{toc}{subsection}{Quick Reference Tags}
+
+In markdown blocks or with \texttt{verbatim\ code} ticks:
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{\textless{}!{-}{-} }
+\CommentTok{  STATUS: Duplicate}
+\CommentTok{  ORIGINAL: intro.qmd\#para{-}3}
+\CommentTok{  ALSO IN: ch2\#para{-}15, ch5\#para{-}8}
+\CommentTok{  ACTION: Remove this version}
+\CommentTok{{-}{-}\textgreater{}}
+\end{Highlighting}
+\end{Shaded}
+
+\section*{Workflow for Content
+Merging}\label{workflow-for-content-merging}
+\addcontentsline{toc}{section}{Workflow for Content Merging}
+
+\markright{Workflow for Content Merging}
+
+\subsection*{1. Initial Marking Phase}\label{initial-marking-phase}
+\addcontentsline{toc}{subsection}{1. Initial Marking Phase}
+
+In markdown blocks or with \texttt{verbatim\ code} ticks:
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{\textless{}!{-}{-} PHASE 1: Initial marking {-}{-}\textgreater{}}
+\CommentTok{\textless{}!{-}{-} [ ] }\AlertTok{TODO}\CommentTok{: Mark all duplicate content in Chapter 1 {-}{-}\textgreater{}}
+\CommentTok{\textless{}!{-}{-} [ ] }\AlertTok{TODO}\CommentTok{: Identify redundant sections in Chapter 2 {-}{-}\textgreater{}}
+\CommentTok{\textless{}!{-}{-} [ ] }\AlertTok{TODO}\CommentTok{: Tag better versions throughout document {-}{-}\textgreater{}}
+\end{Highlighting}
+\end{Shaded}
+
+\subsection*{2. Review and Comparison}\label{review-and-comparison}
+\addcontentsline{toc}{subsection}{2. Review and Comparison}
+
+In markdown blocks or with \texttt{verbatim\ code} ticks:
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{\textless{}!{-}{-} COMPARISON NEEDED {-}{-}\textgreater{}}
+\NormalTok{::: \{.comparison{-}block\}}
+\NormalTok{**Version A (Current)**: }
+\NormalTok{Brief explanation of concept X.}
+
+\NormalTok{**Version B (Chapter 3.2)**:}
+\NormalTok{More detailed explanation of concept X with examples.}
+
+\NormalTok{**Recommendation**: Keep Version B, update cross{-}references.}
+\NormalTok{:::}
+\end{Highlighting}
+\end{Shaded}
+
+\subsection*{3. Consolidation Actions}\label{consolidation-actions}
+\addcontentsline{toc}{subsection}{3. Consolidation Actions}
+
+In markdown blocks or with \texttt{verbatim\ code} ticks:
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{\textless{}!{-}{-} CONSOLIDATION PLAN {-}{-}\textgreater{}}
+\NormalTok{::: \{.consolidation{-}plan\}}
+\SpecialStringTok{1. }\NormalTok{Keep primary version in Section 2.3}
+\SpecialStringTok{2. }\NormalTok{Remove duplicate from Section 4.1}
+\SpecialStringTok{3. }\NormalTok{Add cross{-}reference from Section 4.1 to Section 2.3}
+\SpecialStringTok{4. }\NormalTok{Merge unique insights from Section 4.1 into Section 2.3}
+\NormalTok{:::}
+\end{Highlighting}
+\end{Shaded}
+
+\section*{Automated Detection
+Helpers}\label{automated-detection-helpers}
+\addcontentsline{toc}{section}{Automated Detection Helpers}
+
+\markright{Automated Detection Helpers}
+
+\subsection*{Search Patterns}\label{search-patterns}
+\addcontentsline{toc}{subsection}{Search Patterns}
+
+markdown
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{\textless{}!{-}{-} Common duplicate indicators {-}{-}\textgreater{}}
+\SpecialStringTok{{-} }\NormalTok{"As mentioned earlier"}
+\SpecialStringTok{{-} }\NormalTok{"As discussed in"}
+\SpecialStringTok{{-} }\NormalTok{"Similar to"}
+\SpecialStringTok{{-} }\NormalTok{"Like we saw in"}
+\SpecialStringTok{{-} }\NormalTok{"Returning to"}
+\end{Highlighting}
+\end{Shaded}
+
+\subsection*{Duplicate Detection
+Checklist}\label{duplicate-detection-checklist}
+\addcontentsline{toc}{subsection}{Duplicate Detection Checklist}
+
+In markdown blocks or with \texttt{verbatim\ code} ticks:
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{\textless{}!{-}{-} [ ] Check for repeated definitions {-}{-}\textgreater{}}
+\CommentTok{\textless{}!{-}{-} [ ] Identify similar examples {-}{-}\textgreater{}}
+\CommentTok{\textless{}!{-}{-} [ ] Find redundant explanations {-}{-}\textgreater{}}
+\CommentTok{\textless{}!{-}{-} [ ] Locate repeated figures/tables {-}{-}\textgreater{}}
+\CommentTok{\textless{}!{-}{-} [ ] Search for similar section headings {-}{-}\textgreater{}}
+\end{Highlighting}
+\end{Shaded}
+
+\section*{Best Practices for Merging}\label{best-practices-for-merging}
+\addcontentsline{toc}{section}{Best Practices for Merging}
+
+\markright{Best Practices for Merging}
+
+\subsection*{1. Pre-Merge Preparation}\label{pre-merge-preparation}
+\addcontentsline{toc}{subsection}{1. Pre-Merge Preparation}
 
 \begin{itemize}
 \tightlist
 \item
-  Academic supervisor (Prof.~Timo Speith) and institution (University of
-  Bayreuth)\\
+  Mark all content systematically
 \item
-  Research collaborators, especially those connected to the original
-  MTAIR project\\
+  Create comparison documents
 \item
-  Technical advisors who provided feedback on implementation aspects\\
+  Track all locations of similar content
 \item
-  Personal supporters who enabled the research through encouragement and
-  feedback
+  Document rationale for decisions
 \end{itemize}
 
-\section*{List of Graphics \& Figures}\label{list-of-graphics-figures}
-\addcontentsline{toc}{section}{List of Graphics \& Figures}
-
-\markright{List of Graphics \& Figures}
+\subsection*{2. During Merge Process}\label{during-merge-process}
+\addcontentsline{toc}{subsection}{2. During Merge Process}
 
 \begin{itemize}
 \tightlist
 \item
-  Figure 1.1: The coordination crisis in AI governance - visualization
-  of fragmentation\\
-\item
-  Figure 2.1: The Carlsmith model - DAG representation\\
-\item
-  Figure 3.1: Research design overview - workflow diagram\\
-\item
-  Figure 3.2: From natural language to BayesDown - transformation
-  process\\
-\item
-  Figure 4.1: ARPA system architecture - component diagram\\
-\item
-  Figure 4.2: Visualization of Rain-Sprinkler-Grass\_Wet Bayesian
-  network - screenshot\\
-\item
-  Figure 5.1: Extraction quality metrics - comparative chart\\
-\item
-  Figure 5.2: Comparative analysis of AI governance worldviews - network
-  visualization
+  Keep best version based on:
+
+  \begin{itemize}
+  \tightlist
+  \item
+    Completeness
+  \item
+    Clarity
+  \item
+    Placement in document flow
+  \item
+    Citation quality
+  \item
+    Figure/table quality
+  \end{itemize}
 \end{itemize}
 
-\section*{List of Abbreviations}\label{list-of-abbreviations}
-\addcontentsline{toc}{section}{List of Abbreviations}
-
-\markright{List of Abbreviations}
-
-esp.~especially
-
-f., ff.~following
-
-incl.~including
-
-p., pp.~page(s)
-
-MAD Mutually Assured Destruction
+\subsection*{3. Post-Merge Cleanup}\label{post-merge-cleanup}
+\addcontentsline{toc}{subsection}{3. Post-Merge Cleanup}
 
 \begin{itemize}
 \tightlist
 \item
-  AI - Artificial Intelligence\\
+  Update all cross-references
 \item
-  AGI - Artificial General Intelligence\\
+  Remove duplicate citations
 \item
-  ARPA - AI Risk Pathway Analyzer\\
+  Consolidate figures/tables
 \item
-  DAG - Directed Acyclic Graph\\
+  Harmonize terminology
 \item
-  LLM - Large Language Model\\
-\item
-  MTAIR - Modeling Transformative AI Risks\\
-\item
-  P(Doom) - Probability of existential catastrophe from misaligned AI\\
-\item
-  CPT - Conditional Probability Table
+  Verify logical flow
 \end{itemize}
 
-\section*{Glossary}\label{glossary}
+\section*{Templates for Common
+Scenarios}\label{templates-for-common-scenarios}
+\addcontentsline{toc}{section}{Templates for Common Scenarios}
 
-\markright{Glossary}
+\markright{Templates for Common Scenarios}
+
+\subsection*{Duplicate Definition}\label{duplicate-definition}
+\addcontentsline{toc}{subsection}{Duplicate Definition}
+
+markdown
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{::: \{.duplicate{-}definition data{-}term="Bayesian Network"\}}
+\NormalTok{**DUPLICATE DEFINITION**: "Bayesian Network" is defined in:}
+\SpecialStringTok{{-} }\NormalTok{Section 2.1 (basic definition)}
+\SpecialStringTok{{-} }\NormalTok{Section 3.3 (technical definition) ← **KEEP THIS**}
+\SpecialStringTok{{-} }\NormalTok{Glossary (summary definition)}
+
+\NormalTok{Action: Keep technical definition in 3.3, reference from 2.1}
+\NormalTok{:::}
+\end{Highlighting}
+\end{Shaded}
+
+\subsection*{Redundant Example}\label{redundant-example}
+\addcontentsline{toc}{subsection}{Redundant Example}
+
+markdown
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{::: \{.redundant{-}example\}}
+\NormalTok{**REDUNDANT EXAMPLE**: Rain{-}Sprinkler{-}Lawn appears in:}
+\SpecialStringTok{1. }\NormalTok{Introduction (brief mention)}
+\SpecialStringTok{2. }\NormalTok{Chapter 2 (detailed walkthrough) ← **PRIMARY**}
+\SpecialStringTok{3. }\NormalTok{Chapter 4 (reference only)}
+
+\NormalTok{Action: Keep detailed version, add cross{-}references from others}
+\NormalTok{:::}
+\end{Highlighting}
+\end{Shaded}
+
+\subsection*{Overlapping Sections}\label{overlapping-sections}
+\addcontentsline{toc}{subsection}{Overlapping Sections}
+
+markdown
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{::: \{.section{-}overlap\}}
+\NormalTok{**SECTION OVERLAP**: }
+\SpecialStringTok{{-} }\NormalTok{Section 3.2 "Methodology Overview" }
+\SpecialStringTok{{-} }\NormalTok{Section 4.1 "Methods Used"}
+
+\NormalTok{Content comparison:}
+\SpecialStringTok{{-} }\NormalTok{70\% overlap in general approach}
+\SpecialStringTok{{-} }\NormalTok{3.2 has better technical detail}
+\SpecialStringTok{{-} }\NormalTok{4.1 has better practical examples}
+
+\NormalTok{Recommendation: Merge into 3.2, incorporate examples from 4.1}
+\NormalTok{:::}
+\end{Highlighting}
+\end{Shaded}
+
+\section*{Visual Summary Blocks}\label{visual-summary-blocks}
+\addcontentsline{toc}{section}{Visual Summary Blocks}
+
+\markright{Visual Summary Blocks}
+
+\subsection*{Merge Status Dashboard}\label{merge-status-dashboard}
+\addcontentsline{toc}{subsection}{Merge Status Dashboard}
+
+markdown
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{::: \{.merge{-}status{-}dashboard\}}
+\NormalTok{**Chapter 2 Merge Status**}
+\SpecialStringTok{{-} }\NormalTok{Total sections: 15}
+\SpecialStringTok{{-} }\NormalTok{Duplicates found: 4}
+\SpecialStringTok{{-} }\NormalTok{Redundant content: 7}
+\SpecialStringTok{{-} }\NormalTok{Unique content: 4}
+\SpecialStringTok{{-} }\NormalTok{Merge complete: 2/11}
+\SpecialStringTok{{-} }\NormalTok{Pending review: 9}
+\NormalTok{:::}
+\end{Highlighting}
+\end{Shaded}
+
+\subsection*{Decision Log}\label{decision-log}
+\addcontentsline{toc}{subsection}{Decision Log}
+
+markdown
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{::: \{.merge{-}decision{-}log\}}
+\NormalTok{**Merge Decisions {-} 2024{-}02{-}15**}
+\SpecialStringTok{1. }\NormalTok{**Section 2.3 vs 4.1**: Kept 2.3, removed 4.1}
+\SpecialStringTok{2. }\NormalTok{**Definition of AI**: Consolidated in Glossary}
+\SpecialStringTok{3. }\NormalTok{**Example set A vs B**: Merged best of both into new set}
+\SpecialStringTok{4. }\NormalTok{**Figure 2.1 vs 3.2**: Kept 3.2 (higher quality)}
+\NormalTok{:::}
+\end{Highlighting}
+\end{Shaded}
+
+\section*{Quality Assurance}\label{quality-assurance}
+\addcontentsline{toc}{section}{Quality Assurance}
+
+\markright{Quality Assurance}
+
+\subsection*{Pre-Publication Checklist}\label{pre-publication-checklist}
+\addcontentsline{toc}{subsection}{Pre-Publication Checklist}
+
+In markdown blocks or with \texttt{verbatim\ code} ticks:
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{\textless{}!{-}{-} [ ] All duplicate markers removed {-}{-}\textgreater{}}
+\CommentTok{\textless{}!{-}{-} [ ] All merge decisions documented {-}{-}\textgreater{}}
+\CommentTok{\textless{}!{-}{-} [ ] Cross{-}references updated {-}{-}\textgreater{}}
+\CommentTok{\textless{}!{-}{-} [ ] No broken links from removed content {-}{-}\textgreater{}}
+\CommentTok{\textless{}!{-}{-} [ ] Terminology harmonized {-}{-}\textgreater{}}
+\CommentTok{\textless{}!{-}{-} [ ] Flow tested after merging {-}{-}\textgreater{}}
+\end{Highlighting}
+\end{Shaded}
+
+\subsection*{Final Verification}\label{final-verification}
+\addcontentsline{toc}{subsection}{Final Verification}
+
+In markdown blocks or with \texttt{verbatim\ code} ticks:
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{\textless{}!{-}{-} FINAL CHECK: Content Merging {-}{-}\textgreater{}}
+\SpecialStringTok{{-} }\VariableTok{[ ]}\NormalTok{ No duplicate content remains untagged}
+\SpecialStringTok{{-} }\VariableTok{[ ]}\NormalTok{ All redundancies resolved}
+\SpecialStringTok{{-} }\VariableTok{[ ]}\NormalTok{ Best versions retained}
+\SpecialStringTok{{-} }\VariableTok{[ ]}\NormalTok{ Smooth transitions between merged sections}
+\SpecialStringTok{{-} }\VariableTok{[ ]}\NormalTok{ Complete citation consolidation}
+\SpecialStringTok{{-} }\VariableTok{[ ]}\NormalTok{ Figure/table deduplication}
+\end{Highlighting}
+\end{Shaded}
+
+\bookmarksetup{startatroot}
+
+\chapter*{Master Thesis Checklist for Quarto
+Projects}\label{master-thesis-checklist-for-quarto-projects}
+\addcontentsline{toc}{chapter}{Master Thesis Checklist for Quarto
+Projects}
+
+\markboth{Master Thesis Checklist for Quarto Projects}{Master Thesis
+Checklist for Quarto Projects}
+
+\subsection*{Content Creation
+Checklist}\label{content-creation-checklist}
+\addcontentsline{toc}{subsection}{Content Creation Checklist}
+
+\subsubsection*{Document Structure}\label{document-structure}
+\addcontentsline{toc}{subsubsection}{Document Structure}
 
 \begin{itemize}
 \tightlist
-\item
-  \textbf{Argument mapping}: A method for visually representing the
-  structure of arguments\\
-\item
-  \textbf{BayesDown}: An extension of ArgDown that incorporates
-  probabilistic information\\
-\item
-  \textbf{Bayesian network}: A probabilistic graphical model
-  representing variables and their dependencies\\
-\item
-  \textbf{Conditional probability}: The probability of an event given
-  that another event has occurred\\
-\item
-  \textbf{Directed Acyclic Graph (DAG)}: A graph with directed edges and
-  no cycles\\
-\item
-  \textbf{Existential risk}: Risk of permanent curtailment of humanity's
-  potential\\
-\item
-  \textbf{Power-seeking AI}: AI systems with instrumental incentives to
-  acquire resources and power\\
-\item
-  \textbf{Prediction market}: A market where participants trade
-  contracts that resolve based on future events\\
-\item
-  \textbf{d-separation}: A criterion for identifying conditional
-  independence relationships in Bayesian networks\\
-\item
-  \textbf{Monte Carlo sampling}: A computational technique using random
-  sampling to obtain numerical results
+\item[$\square$]
+  All chapters following consistent structure
+\item[$\square$]
+  Proper heading hierarchy (\#\#, \#\#\#, \#\#\#\#)
+\item[$\square$]
+  Section labels added (\{\#sec-label\})
 \end{itemize}
 
-\subsection*{Quarto Features Previously Incompatible with LaTeX
-(Below)}\label{quarto-features-previously-incompatible-with-latex-below}
+\subsubsection*{Text Quality}\label{text-quality}
+\addcontentsline{toc}{subsubsection}{Text Quality}
+
+\begin{itemize}
+\tightlist
+\item[$\square$]
+  American spelling throughout (run spell check)
+\item[$\square$]
+  Consistent terminology (maintain glossary, add entries)
+\item[$\square$]
+  Active voice preferred
+\item[$\square$]
+  Sentences clear and concise
+\item[$\square$]
+  Paragraphs focused on single ideas
+\item[$\square$]
+  Transitions between sections smooth
+\item[$\square$]
+  No widows or orphans in paragraphs
+\end{itemize}
+
+\subsubsection*{Formatting Elements}\label{formatting-elements}
+\addcontentsline{toc}{subsubsection}{Formatting Elements}
+
+\begin{itemize}
+\tightlist
+\item[$\square$]
+  Lists properly formatted and consistent
+\item[$\square$]
+  Code blocks with appropriate syntax highlighting
+\item[$\square$]
+  Blockquotes used for citations
+\item[$\square$]
+  Callout boxes for important information
+\item[$\square$]
+  Mathematical equations properly formatted
+\item[$\square$]
+  Footnotes used wherever possible
+\item[$\square$]
+  Page breaks inserted where needed
+\end{itemize}
+
+\subsubsection*{Figures and Tables}\label{figures-and-tables}
+\addcontentsline{toc}{subsubsection}{Figures and Tables}
+
+\begin{itemize}
+\tightlist
+\item[$\square$]
+  All figures have unique identifiers (\#fig-name)
+\item[$\square$]
+  Comprehensive alt text for accessibility
+\item[$\square$]
+  Short captions for list of figures
+\item[$\square$]
+  Full captions explaining content
+\item[$\square$]
+  Consistent sizing and alignment
+\item[$\square$]
+  All figures referenced in text
+\item[$\square$]
+  Source attribution included
+\item[$\square$]
+  File formats optimized (PNG/SVG for web, PDF for print)
+\item[$\square$]
+  Tables have proper headers
+\item[$\square$]
+  Table captions descriptive
+\item[$\square$]
+  All tables referenced in text
+\end{itemize}
+
+\subsubsection*{Citations and
+References}\label{citations-and-references-1}
+\addcontentsline{toc}{subsubsection}{Citations and References}
+
+\begin{itemize}
+\tightlist
+\item[$\square$]
+  All claims supported by citations
+\item[$\square$]
+  Citation style consistent throughout
+\item[$\square$]
+  Page numbers included where appropriate
+\item[$\square$]
+  Bibliography entries complete
+\item[$\square$]
+  No missing citations (check FIND tasks)
+\item[$\square$]
+  No duplicate citations
+\item[$\square$]
+  Citations verified (check VERIFY tasks)
+\item[$\square$]
+  DOIs/URLs included and working
+\end{itemize}
+
+\subsubsection*{Cross-References}\label{cross-references-1}
+\addcontentsline{toc}{subsubsection}{Cross-References}
+
+\begin{itemize}
+\tightlist
+\item[$\square$]
+  All sections labeled for referencing
+\item[$\square$]
+  Figure references working (\texttt{@fig-name})
+\item[$\square$]
+  Table references working (\texttt{@tbl-name})
+\item[$\square$]
+  Section references working (\texttt{@sec-name})
+\item[$\square$]
+  No broken cross-references
+\end{itemize}
+
+\section*{Revision Phase}\label{revision-phase}
+\addcontentsline{toc}{section}{Revision Phase}
+
+\markright{Revision Phase}
+
+\subsection*{Content Review}\label{content-review}
+\addcontentsline{toc}{subsection}{Content Review}
+
+\begin{itemize}
+\tightlist
+\item[$\square$]
+  Argument flow logical and clear
+\item[$\square$]
+  Evidence supports all claims
+\item[$\square$]
+  Counterarguments addressed
+\item[$\square$]
+  Conclusions follow from evidence
+\item[$\square$]
+  No redundant content (check merge tags)
+\item[$\square$]
+  All promises in introduction fulfilled
+\end{itemize}
+
+\subsection*{Task Completion}\label{task-completion-1}
+\addcontentsline{toc}{subsection}{Task Completion}
+
+\begin{itemize}
+\tightlist
+\item[$\square$]
+  All TODO items addressed or documented
+\item[$\square$]
+  All FIND items researched
+\item[$\square$]
+  All VERIFY items confirmed
+\item[$\square$]
+  All CREATE items completed
+\item[$\square$]
+  Task status updated ({[}{]}, {[}x{]}, {[}-{]})
+\item[$\square$]
+  Progress summaries updated
+\end{itemize}
+
+\section*{⚡ Prime Directives}\label{prime-directives}
+\addcontentsline{toc}{section}{⚡ Prime Directives}
+
+\markright{⚡ Prime Directives}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  \textbf{Quarto supremacy} -- exploit \emph{every} reliable feature
+  Quarto offers.\\
+\item
+  \textbf{Four-level heading discipline} -- never skip a level.\\
+\item
+  \textbf{Redundancy tagged, not deleted} -- see § Tagging System.\\
+\item
+  \textbf{Checklists rule every commit} -- see § Rigorous Checklist.\\
+\item
+  \textbf{Footnotes galore} -- default to footnotes for nuance,
+  citations, side quests.\\
+\item
+  \textbf{Glossary, TOC, LOF, LOT, appendices, cross-refs} -- keep fully
+  synched; update on \emph{every} save.\\
+\item
+  \textbf{One thought ≈ one line-break} -- err on the side of
+  whitespace.
+\end{enumerate}
+
+\section*{Quarto Syntax Cheat-Sheet ↔
+Best-Practice}\label{quarto-syntax-cheat-sheet-best-practice}
+\addcontentsline{toc}{section}{Quarto Syntax Cheat-Sheet ↔
+Best-Practice}
+
+\markright{Quarto Syntax Cheat-Sheet ↔ Best-Practice}
+
+\begin{longtable}[]{@{}
+  >{\raggedright\arraybackslash}p{(\linewidth - 4\tabcolsep) * \real{0.1837}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 4\tabcolsep) * \real{0.3265}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 4\tabcolsep) * \real{0.4898}}@{}}
+\toprule\noalign{}
+\begin{minipage}[b]{\linewidth}\raggedright
+Feature
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+Minimal Syntax
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+Best-Practice Guidance
+\end{minipage} \\
+\midrule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+\textbf{Headings (h1--h4)} & \texttt{\#}, \texttt{\#\#},
+\texttt{\#\#\#}, \texttt{\#\#\#\#} & Use all four levels; propose deeper
+sub-heads via
+\texttt{\textless{}!-\/-\ SUGGEST-H5:\ …\ -\/-\textgreater{}}. \\
+\textbf{Paragraph breaks} & blank line & Generally wrap at 80 chars ⇢
+git-diff clarity. \\
+\textbf{Bold / \emph{Italic} / }\emph{Both}** / \st{Strike}** &
+\texttt{**b**}, \texttt{*i*}, \texttt{***bi***},
+\texttt{\textasciitilde{}\textasciitilde{}del\textasciitilde{}\textasciitilde{}}
+& Reserve bold for \emph{semantic} emphasis, italics for \emph{titles \&
+meta}. \\
+\textbf{Lists} & \texttt{-}, \texttt{*}, \texttt{1.} & Rarely nest
+\textgreater{} 3 levels; indent 2 spaces per level. \\
+\textbf{Callouts} & \texttt{:::\ \{.callout-note\}} & Use \texttt{.tip},
+\texttt{.warning}, \texttt{.important}, \texttt{.duplicate} (custom) for
+tagging; close with \texttt{:::}. \\
+\textbf{Blockquotes} & \texttt{\textgreater{}} & Ideal for verbatim
+interview excerpts; cite speaker. \\
+\textbf{Code blocks} &
+\texttt{\textasciigrave{}\textasciigrave{}\textasciigrave{}r} & Always
+declare language; add caption: ````\texttt{\{python\}\ fig.cap="…"}. \\
+\textbf{Figures \& Tables} & \texttt{!{[}{]}(fig.png)\{\#fig-id\}} &
+Always add \texttt{\{\#fig-id\ fig-cap="…"\};} etc. cross-ref with
+\texttt{@fig-id}. \\
+\textbf{Cross-refs} & \texttt{@sec-intro}, \texttt{@tbl-results} &
+Prefix: \texttt{sec-}, \texttt{fig-}, \texttt{tbl-}, \texttt{eq-}. \\
+\textbf{Citations} & \texttt{{[}@smith2024{]}} & Maintain \texttt{.bib}
+via Zotero; nightly \texttt{quarto\ check}. \\
+\textbf{Footnotes} & \texttt{{[}\^{}1{]}} & Overuse for tangents,
+mini-proofs, data caveats. \\
+\textbf{Glossary} & \texttt{term:\ Definition} & Append
+\texttt{glossary:\ true} in task; link in-text \texttt{\{@term\}}. \\
+\textbf{Comments} &
+\texttt{\textless{}!-\/-\ {[}\ {]}\ TODO:\ …\ -\/-\textgreater{}} & Use
+for tasks; parse with \emph{Todo Tree} VS Code plugin. \\
+\end{longtable}
+
+\section*{Tagging / Highlighting System
+🔖}\label{tagging-highlighting-system}
+\addcontentsline{toc}{section}{Tagging / Highlighting System 🔖}
+
+\markright{Tagging / Highlighting System 🔖}
+
+Use the custom tagging and highlighting system for all materials
+
+\section*{Workflow Rules (apply every
+session)}\label{workflow-rules-apply-every-session}
+\addcontentsline{toc}{section}{Workflow Rules (apply every session)}
+
+\markright{Workflow Rules (apply every session)}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  \textbf{Before writing}
+
+  \begin{itemize}
+  \tightlist
+  \item
+    Import this prompt; restate the specific task in one sentence.\\
+  \item
+    Load latest YAML (\texttt{project}, \texttt{format}, bibliography).
+  \end{itemize}
+\item
+  \textbf{During writing}
+
+  \begin{itemize}
+  \tightlist
+  \item
+    \emph{Every new idea}: decide \emph{body}, \emph{footnote}, or
+    \emph{appendix} and place instantly.\\
+  \item
+    Add glossary entries as soon as a term of art appears.\\
+  \item
+    Insert provisional graphics with stub \texttt{\{\#fig-TBD\}} and
+    create a TODO comment.
+  \end{itemize}
+\item
+  \textbf{After writing}
+
+  \begin{itemize}
+  \tightlist
+  \item
+    Run \texttt{quarto\ render\ -\/-to\ html} locally; resolve
+    warnings.\\
+  \item
+    Tick off § Rigorous Checklist; commit with message ``feat(section):
+    x -- refs/glossary/figs updated''.
+  \end{itemize}
+\end{enumerate}
+
+\section*{Rigorous Checklist ✅}\label{rigorous-checklist}
+\addcontentsline{toc}{section}{Rigorous Checklist ✅}
+
+\markright{Rigorous Checklist ✅}
+
+\begin{itemize}
+\tightlist
+\item[$\square$]
+  Use the full hierarchy of headings
+\item[$\square$]
+  All figures/tables have IDs, captions, and are referenced in text.\\
+\item[$\square$]
+  Glossary updated; new \texttt{\{@term\}} links render without
+  warnings.\\
+\item[$\square$]
+  Citation list reflects \emph{every} \texttt{{[}@{]}} callout.\\
+\item[$\square$]
+  Footnotes compile and are sorted numerically.\\
+\item[$\square$]
+  Appendices contain overflow material only; each referenced at least
+  once.\\
+\item[$\square$]
+  \texttt{duplicate} callouts reviewed; none accidentally removed.\\
+\item[$\square$]
+  ``Outstanding graphics'' \& ``Outstanding citations'' subsections
+  updated.
+\end{itemize}
 
 \bookmarksetup{startatroot}
 
@@ -1732,35 +3309,6 @@ prototype status.
 These changes would elevate an already strong thesis to exceptional,
 addressing the remaining gaps while maintaining the excellent narrative
 flow and intellectual contribution achieved in this revision.
-
-\section{Error Watch}\label{error-watch}
-
-\subsection{Catch all Potential
-Hallucinations}\label{catch-all-potential-hallucinations}
-
-\texttt{\textless{}!-\/-\ {[}\ {]}\ Keep\ track\ of\ all\ hallucinations\ that\ have\ been\ found\ here:\ -\/-\textgreater{}}
-
-\begin{enumerate}
-\def\labelenumi{\arabic{enumi}.}
-\item
-  \textbf{Validation Metrics}: Claims of ``85\%+ accuracy for structural
-  extraction'' and ``73\% for probability capture'' appear precise for
-  what seems to be a prototype system. These need careful verification
-  or qualification.
-\item
-  \textbf{Pilot Study Results}: ``40\% reduction in time to identify
-  disagreements'' and ``60\% improvement in agreement about
-  disagreement'' lack citations and seem surprisingly specific.
-\item
-  \textbf{Red-teaming Quantification}: ``34\% anchoring bias effect''
-  and other precise percentages from adversarial testing need support or
-  qualification as estimates.
-\item
-  \textbf{Prediction Market Integration}: Some passages imply deeper
-  integration than the ``future work'' status indicated elsewhere.
-\end{enumerate}
-
-\texttt{\textless{}!-\/-\ {[}\ {]}\ Make\ sure\ all\ hallucinations\ have\ been\ removed\ -\/-\textgreater{}}
 
 \section{General Style}\label{general-style}
 
@@ -2051,11 +3599,121 @@ same topic
 -- pretty much determined by presentation \& proposal but narrow down
 further (\& choose supervisor?)
 
-\section{Syntax for Tasks}\label{syntax-for-tasks-1}
+\subsection{Technical Review}\label{technical-review}
 
-\subsection{Tasks with ToDo Tree}\label{tasks-with-todo-tree-1}
+\begin{itemize}
+\tightlist
+\item[$\square$]
+  All code blocks tested and working
+\item[$\square$]
+  Jupyter notebooks executing correctly
+\item[$\square$]
+  Interactive elements functioning
+\item[$\square$]
+  Mathematical notation rendering properly
+\item[$\square$]
+  All external links valid
+\item[$\square$]
+  File paths correct and relative
+\end{itemize}
 
-\subsubsection{Simple ``One-line tasks''}\label{simple-one-line-tasks-1}
+\subsection{Pre-Submission Checklist}\label{pre-submission-checklist}
+
+\begin{itemize}
+\tightlist
+\item[$\square$]
+  Word count within limits
+\item[$\square$]
+  All author information correct
+\item[$\square$]
+  Institutional affiliation accurate
+\item[$\square$]
+  Acknowledgments complete
+\item[$\square$]
+  Copyright/license information added
+\item[$\square$]
+  Declaration/affidavit signed
+\end{itemize}
+
+\subsection{Format-Specific Checks}\label{format-specific-checks}
+
+\subsubsection{HTML Output}\label{html-output}
+
+\begin{itemize}
+\tightlist
+\item[$\square$]
+  Navigation working correctly
+\item[$\square$]
+  Theme and styling consistent
+\item[$\square$]
+  Mobile responsive design verified
+\item[$\square$]
+  Search functionality working
+\item[$\square$]
+  All interactive elements functional
+\item[$\square$]
+  No JavaScript errors in console
+\end{itemize}
+
+\subsubsection{PDF Output}\label{pdf-output}
+
+\begin{itemize}
+\tightlist
+\item[$\square$]
+  Page numbering correct
+\item[$\square$]
+  Headers/footers properly formatted
+\item[$\square$]
+  Table of contents accurate
+\item[$\square$]
+  List of figures/tables complete
+\item[$\square$]
+  No overfull hboxes or layout issues
+\item[$\square$]
+  Fonts embedded correctly
+\item[$\square$]
+  Hyperlinks working (if enabled)
+\end{itemize}
+
+\subsubsection{LaTeX Output}\label{latex-output}
+
+\begin{itemize}
+\tightlist
+\item[$\square$]
+  Compiles without errors
+\item[$\square$]
+  Custom preamble applied correctly
+\item[$\square$]
+  Bibliography style correct
+\item[$\square$]
+  No undefined references
+\end{itemize}
+
+\subsection{Final Quality Assurance}\label{final-quality-assurance}
+
+\begin{itemize}
+\tightlist
+\item[$\square$]
+  Spell check completed
+\item[$\square$]
+  Grammar check completed
+\item[$\square$]
+  Plagiarism check passed
+\item[$\square$]
+  All co-author contributions noted
+\item[$\square$]
+  Version control up to date
+\item[$\square$]
+  Backup copies created
+\item[$\square$]
+  Submission guidelines followed
+\end{itemize}
+
+\section{Syntax for Tasks}\label{syntax-for-tasks}
+
+\subsection{Tasks with ToDo Tree}\label{tasks-with-todo-tree}
+
+\subsubsection{Simple ``One-line tasks''}\label{simple-one-line-tasks}
 
 Use Code ticks and html comment and task format for tasks distinctly
 visible across all formats including the ToDo-Tree overview:
@@ -2066,7 +3724,7 @@ Use html comment and task format for open or uncertain tasks, visible in
 the .qmd file:
 
 \subsubsection{More Complex Tasks with
-Notes}\label{more-complex-tasks-with-notes-1}
+Notes}\label{more-complex-tasks-with-notes}
 
 \begin{verbatim}
 <!-- [ ] Task Title: short description-->
@@ -2080,7 +3738,7 @@ Notes}\label{more-complex-tasks-with-notes-1}
   Etc.
 \end{verbatim}
 
-\subsubsection{Completed Tasks}\label{completed-tasks-1}
+\subsubsection{Completed Tasks}\label{completed-tasks}
 
 Retain completed tasks in ToDo-Tree by adding an x in the brackets:
 \texttt{{[}x{]}}
@@ -2091,19 +3749,19 @@ brackets: \texttt{{[}-{]}}
 
 \texttt{\textless{}!-\/-\ {[}-{]}\ Tasks\ which\ have\ been\ finished\ but\ should\ remain\ visible\ for\ later\ verification\ -\/-\textgreater{}}
 
-\subsubsection{Missing Citations}\label{missing-citations-1}
+\subsubsection{Missing Citations}\label{missing-citations}
 
 \texttt{\textless{}!-\/-\ {[}\ {]}\ FIND:\ @CITATION\_KEY\_PURPOSE:\ "Description\ of\ the\ appropriate/idea\ source,\ including\ ideas\ /suggestions\ /\ search\ terms\ etc."\ -\/-\textgreater{}}
 
-\subsubsection{Suggested Citation}\label{suggested-citation-1}
+\subsubsection{Suggested Citation}\label{suggested-citation}
 
 \texttt{\textless{}!-\/-\ {[}\ {]}\ VERIFY:\ @CITATION\_KEY\_SUGGESTED:\ "Description\ of\ the\ appropriate\ paper,\ book,\ source"\ {[}Include\ BibTex\ if\ known{]}\ -\/-\textgreater{}}
 
-\subsubsection{Missing Graphic}\label{missing-graphic-1}
+\subsubsection{Missing Graphic}\label{missing-graphic}
 
 \texttt{\textless{}!-\/-\ {[}\ {]}\ FIND:\ \{\#fig-GRAPHIC\_IDEA\}{]}:\ "Description\ of\ the\ appropriate/idea\ source,\ including\ ideas\ /suggestions\ /\ search\ terms\ etc."\ -\/-\textgreater{}}
 
-\subsubsection{Suggested Graphic}\label{suggested-graphic-1}
+\subsubsection{Suggested Graphic}\label{suggested-graphic}
 
 \texttt{\textless{}!-\/-\ {[}\ {]}\ VERIFY:\ \{\#fig-GRAPHIC\_IDEA\}:\ "Description\ of\ the\ appropriate\ paper,\ book,\ source"\ {[}Include\ figure\ syntax\ if\ known{]}\ -\/-\textgreater{}}
 
@@ -2149,8 +3807,8 @@ Upscale Conditional Policy Assessments in Bayesian Networks on a Narrow
 Path towards Existential Safety
 \end{quote}
 
-\begin{tcolorbox}[enhanced jigsaw, rightrule=.15mm, colbacktitle=quarto-callout-note-color!10!white, colback=white, bottomtitle=1mm, leftrule=.75mm, opacitybacktitle=0.6, arc=.35mm, opacityback=0, coltitle=black, toprule=.15mm, colframe=quarto-callout-note-color-frame, breakable, title=\textcolor{quarto-callout-note-color}{\faInfo}\hspace{0.5em}{10\% of Grade: \textasciitilde{} 14\% of text \textasciitilde{} 4200
-words \textasciitilde{} 10 pages}, toptitle=1mm, titlerule=0mm, bottomrule=.15mm, left=2mm]
+\begin{tcolorbox}[enhanced jigsaw, rightrule=.15mm, colbacktitle=quarto-callout-note-color!10!white, arc=.35mm, titlerule=0mm, opacityback=0, toptitle=1mm, colback=white, breakable, opacitybacktitle=0.6, colframe=quarto-callout-note-color-frame, toprule=.15mm, coltitle=black, left=2mm, bottomtitle=1mm, title=\textcolor{quarto-callout-note-color}{\faInfo}\hspace{0.5em}{10\% of Grade: \textasciitilde{} 14\% of text \textasciitilde{} 4200
+words \textasciitilde{} 10 pages}, bottomrule=.15mm, leftrule=.75mm]
 
 \begin{itemize}
 \item
@@ -2426,8 +4084,8 @@ tools for improving coordination in AI governance.
 
 \chapter{Context \& Background}\label{sec-context}
 
-\begin{tcolorbox}[enhanced jigsaw, rightrule=.15mm, colbacktitle=quarto-callout-note-color!10!white, colback=white, bottomtitle=1mm, leftrule=.75mm, opacitybacktitle=0.6, arc=.35mm, opacityback=0, coltitle=black, toprule=.15mm, colframe=quarto-callout-note-color-frame, breakable, title=\textcolor{quarto-callout-note-color}{\faInfo}\hspace{0.5em}{20\% of Grade: \textasciitilde{} 29\% of text \textasciitilde{} 8700
-words \textasciitilde{} 20 pages}, toptitle=1mm, titlerule=0mm, bottomrule=.15mm, left=2mm]
+\begin{tcolorbox}[enhanced jigsaw, rightrule=.15mm, colbacktitle=quarto-callout-note-color!10!white, arc=.35mm, titlerule=0mm, opacityback=0, toptitle=1mm, colback=white, breakable, opacitybacktitle=0.6, colframe=quarto-callout-note-color-frame, toprule=.15mm, coltitle=black, left=2mm, bottomtitle=1mm, title=\textcolor{quarto-callout-note-color}{\faInfo}\hspace{0.5em}{20\% of Grade: \textasciitilde{} 29\% of text \textasciitilde{} 8700
+words \textasciitilde{} 20 pages}, bottomrule=.15mm, leftrule=.75mm]
 
 \begin{itemize}
 \item
@@ -3730,8 +5388,8 @@ Testing crossreferencing grapics Figure~\ref{fig-automation_pipeline}.
 
 \chapter{AMTAIR}\label{amtair}
 
-\begin{tcolorbox}[enhanced jigsaw, rightrule=.15mm, colbacktitle=quarto-callout-note-color!10!white, colback=white, bottomtitle=1mm, leftrule=.75mm, opacitybacktitle=0.6, arc=.35mm, opacityback=0, coltitle=black, toprule=.15mm, colframe=quarto-callout-note-color-frame, breakable, title=\textcolor{quarto-callout-note-color}{\faInfo}\hspace{0.5em}{20\% of Grade: \textasciitilde{} 29\% of text \textasciitilde{} 8700
-words \textasciitilde{} 20 pages}, toptitle=1mm, titlerule=0mm, bottomrule=.15mm, left=2mm]
+\begin{tcolorbox}[enhanced jigsaw, rightrule=.15mm, colbacktitle=quarto-callout-note-color!10!white, arc=.35mm, titlerule=0mm, opacityback=0, toptitle=1mm, colback=white, breakable, opacitybacktitle=0.6, colframe=quarto-callout-note-color-frame, toprule=.15mm, coltitle=black, left=2mm, bottomtitle=1mm, title=\textcolor{quarto-callout-note-color}{\faInfo}\hspace{0.5em}{20\% of Grade: \textasciitilde{} 29\% of text \textasciitilde{} 8700
+words \textasciitilde{} 20 pages}, bottomrule=.15mm, leftrule=.75mm]
 
 \begin{itemize}
 \item
@@ -5044,8 +6702,8 @@ Sensitivity analysis revealed:
 
 \chapter{Discussion}\label{discussion}
 
-\begin{tcolorbox}[enhanced jigsaw, rightrule=.15mm, colbacktitle=quarto-callout-note-color!10!white, colback=white, bottomtitle=1mm, leftrule=.75mm, opacitybacktitle=0.6, arc=.35mm, opacityback=0, coltitle=black, toprule=.15mm, colframe=quarto-callout-note-color-frame, breakable, title=\textcolor{quarto-callout-note-color}{\faInfo}\hspace{0.5em}{10\% of Grade: \textasciitilde{} 14\% of text \textasciitilde{} 4200
-words \textasciitilde{} 10 pages}, toptitle=1mm, titlerule=0mm, bottomrule=.15mm, left=2mm]
+\begin{tcolorbox}[enhanced jigsaw, rightrule=.15mm, colbacktitle=quarto-callout-note-color!10!white, arc=.35mm, titlerule=0mm, opacityback=0, toptitle=1mm, colback=white, breakable, opacitybacktitle=0.6, colframe=quarto-callout-note-color-frame, toprule=.15mm, coltitle=black, left=2mm, bottomtitle=1mm, title=\textcolor{quarto-callout-note-color}{\faInfo}\hspace{0.5em}{10\% of Grade: \textasciitilde{} 14\% of text \textasciitilde{} 4200
+words \textasciitilde{} 10 pages}, bottomrule=.15mm, leftrule=.75mm]
 
 \begin{itemize}
 \item
@@ -6139,8 +7797,8 @@ modeling
 
 \chapter{Conclusion}\label{conclusion}
 
-\begin{tcolorbox}[enhanced jigsaw, rightrule=.15mm, colbacktitle=quarto-callout-note-color!10!white, colback=white, bottomtitle=1mm, leftrule=.75mm, opacitybacktitle=0.6, arc=.35mm, opacityback=0, coltitle=black, toprule=.15mm, colframe=quarto-callout-note-color-frame, breakable, title=\textcolor{quarto-callout-note-color}{\faInfo}\hspace{0.5em}{10\% of Grade: \textasciitilde{} 14\% of text \textasciitilde{} 4200
-words \textasciitilde{} 10 pages}, toptitle=1mm, titlerule=0mm, bottomrule=.15mm, left=2mm]
+\begin{tcolorbox}[enhanced jigsaw, rightrule=.15mm, colbacktitle=quarto-callout-note-color!10!white, arc=.35mm, titlerule=0mm, opacityback=0, toptitle=1mm, colback=white, breakable, opacitybacktitle=0.6, colframe=quarto-callout-note-color-frame, toprule=.15mm, coltitle=black, left=2mm, bottomtitle=1mm, title=\textcolor{quarto-callout-note-color}{\faInfo}\hspace{0.5em}{10\% of Grade: \textasciitilde{} 14\% of text \textasciitilde{} 4200
+words \textasciitilde{} 10 pages}, bottomrule=.15mm, leftrule=.75mm]
 
 \begin{itemize}
 \item
@@ -6811,13 +8469,224 @@ indefinitely.
 
 \chapter{References (.md)}\label{references-.md}
 
-\section{BibTeX of Main Citations
-Included}\label{bibtex-of-main-citations-included}
+\section{Error Watch}\label{error-watch}
+
+\subsection{Catch ALL Potential
+Hallucinations}\label{catch-all-potential-hallucinations}
+
+\texttt{\textless{}!-\/-\ {[}\ {]}\ Collect\ all\ errors\ and\ hallucinations\ here\ to\ be\ able\ to\ reference\ against\ them\ later\ and\ ensure\ none\ remain\ throught\ text\ -\/-\textgreater{}}
+
+\texttt{\textless{}!-\/-\ {[}\ {]}\ Keep\ track\ of\ all\ hallucinations\ that\ have\ been\ found\ here:\ -\/-\textgreater{}}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\item
+  \textbf{Validation Metrics}: Claims of ``85\%+ accuracy for structural
+  extraction'' and ``73\% for probability capture'' appear precise for
+  what seems to be a prototype system. These need careful verification
+  or qualification.
+\item
+  \textbf{Pilot Study Results}: ``40\% reduction in time to identify
+  disagreements'' and ``60\% improvement in agreement about
+  disagreement'' lack citations and seem surprisingly specific.
+\item
+  \textbf{Red-teaming Quantification}: ``34\% anchoring bias effect''
+  and other precise percentages from adversarial testing need support or
+  qualification as estimates.
+\item
+  \textbf{Prediction Market Integration}: Some passages imply deeper
+  integration than the ``future work'' status indicated elsewhere.
+\end{enumerate}
+
+\texttt{\textless{}!-\/-\ {[}\ {]}\ Make\ sure\ all\ hallucinations\ have\ been\ removed\ -\/-\textgreater{}}
+
+\section{Figure Inventory and
+Tracking}\label{figure-inventory-and-tracking}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{\#\# Master Figure Registry \{.unnumbered .unlisted\}}
+
+\CommentTok{\textless{}!{-}{-} FIGURE INVENTORY {-}{-}\textgreater{}}
+\CommentTok{\textless{}!{-}{-} Last updated: 2024{-}02{-}15 {-}{-}\textgreater{}}
+
+\FunctionTok{\#\# Implemented Figures}
+
+
+\FunctionTok{\#\# Section to keep track of all Figures}
+
+\InformationTok{\textasciigrave{}\textless{}!{-}{-} [ ] ALWAYS include the "inclusions" of all figures/graphics below {-}{-}\textgreater{}\textasciigrave{}}
+\InformationTok{\textasciigrave{}\textless{}!{-}{-} [ ] ALWAYS keep the \#fig{-}KEYS up{-}to{-}date {-}{-}\textgreater{}\textasciigrave{}}
+
+\InformationTok{\textasciigrave{}\textasciigrave{}\textasciigrave{}markdown}
+\NormalTok{\{\{}
+\CommentTok{[}\OtherTok{![Example Caption/Title 4}\CommentTok{](/images/cover.png)}\NormalTok{\{}
+\NormalTok{    \#fig{-}Unique\_identifier\_for\_crossreferencing}
+\NormalTok{    fig{-}scap="Short caption 4 list of figures as seen in LoF"}
+\NormalTok{    fig{-}alt="Detailed alt text that describes the image content, type, purpose, and meaning.}
+            \OtherTok{[CHART TYPE]: }\CommentTok{[}\OtherTok{Short description}\CommentTok{]}\NormalTok{.}
+\NormalTok{                DATA: }\CommentTok{[}\OtherTok{What data is shown, x/y axes}\CommentTok{]}\NormalTok{.}
+\NormalTok{                PURPOSE: }\CommentTok{[}\OtherTok{Why it\textquotesingle{}s included, what to look for}\CommentTok{]}\NormalTok{.}
+\NormalTok{                DETAILS: }\CommentTok{[}\OtherTok{Longer description of patterns, anomalies, or key insights}\CommentTok{]}\NormalTok{.}
+\NormalTok{                SOURCE: Data from }\CommentTok{[}\OtherTok{source name/year and url/link}\CommentTok{]}
+\NormalTok{            "}
+\NormalTok{    fig{-}align="left"}
+\NormalTok{    width="30\%"}
+\NormalTok{    \}](https://github.com/VJMeyer/submission)}
+\NormalTok{\}\}}
+\end{Highlighting}
+\end{Shaded}
+
+\subsection{Chapter 1}\label{chapter-1}
+
+\begin{itemize}
+\tightlist
+\item[$\boxtimes$]
+  \{\#fig-overview\}: System overview diagram
+
+  \begin{itemize}
+  \tightlist
+  \item
+    File: images/system-overview.png
+  \item
+    Source: Created by author using Draw.io
+  \end{itemize}
+\end{itemize}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{\{\{}
+\CommentTok{[}\OtherTok{![Example Caption/Title 4}\CommentTok{](/images/cover.png)}\NormalTok{\{}
+\NormalTok{    \#fig{-}Unique\_identifier\_for\_crossreferencing}
+\NormalTok{    fig{-}scap="Short caption 4 list of figures as seen in LoF"}
+\NormalTok{    fig{-}alt="Detailed alt text that describes the image content, type, purpose, and meaning.}
+            \OtherTok{[CHART TYPE]: }\CommentTok{[}\OtherTok{Short description}\CommentTok{]}\NormalTok{.}
+\NormalTok{                DATA: }\CommentTok{[}\OtherTok{What data is shown, x/y axes}\CommentTok{]}\NormalTok{.}
+\NormalTok{                PURPOSE: }\CommentTok{[}\OtherTok{Why it\textquotesingle{}s included, what to look for}\CommentTok{]}\NormalTok{.}
+\NormalTok{                DETAILS: }\CommentTok{[}\OtherTok{Longer description of patterns, anomalies, or key insights}\CommentTok{]}\NormalTok{.}
+\NormalTok{                SOURCE: Data from }\CommentTok{[}\OtherTok{source name/year and url/link}\CommentTok{]}
+\NormalTok{            "}
+\NormalTok{    fig{-}align="left"}
+\NormalTok{    width="30\%"}
+\NormalTok{    \}](https://github.com/VJMeyer/submission)}
+\NormalTok{\}\}}
+\end{Highlighting}
+\end{Shaded}
+
+\subsection{Chapter 2}\label{chapter-2}
+
+\begin{itemize}
+\tightlist
+\item[$\boxtimes$]
+  \{\#fig-methodology\}: Research methodology flowchart
+
+  \begin{itemize}
+  \tightlist
+  \item
+    File: images/methodology-flow.svg
+  \item
+    Source: Author original
+  \end{itemize}
+\end{itemize}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{\{\{}
+\CommentTok{[}\OtherTok{![Example Caption/Title 4}\CommentTok{](/images/cover.png)}\NormalTok{\{}
+\NormalTok{    \#fig{-}Unique\_identifier\_for\_crossreferencing}
+\NormalTok{    fig{-}scap="Short caption 4 list of figures as seen in LoF"}
+\NormalTok{    fig{-}alt="Detailed alt text that describes the image content, type, purpose, and meaning.}
+            \OtherTok{[CHART TYPE]: }\CommentTok{[}\OtherTok{Short description}\CommentTok{]}\NormalTok{.}
+\NormalTok{                DATA: }\CommentTok{[}\OtherTok{What data is shown, x/y axes}\CommentTok{]}\NormalTok{.}
+\NormalTok{                PURPOSE: }\CommentTok{[}\OtherTok{Why it\textquotesingle{}s included, what to look for}\CommentTok{]}\NormalTok{.}
+\NormalTok{                DETAILS: }\CommentTok{[}\OtherTok{Longer description of patterns, anomalies, or key insights}\CommentTok{]}\NormalTok{.}
+\NormalTok{                SOURCE: Data from }\CommentTok{[}\OtherTok{source name/year and url/link}\CommentTok{]}
+\NormalTok{            "}
+\NormalTok{    fig{-}align="left"}
+\NormalTok{    width="30\%"}
+\NormalTok{    \}](https://github.com/VJMeyer/submission)}
+\NormalTok{\}\}}
+\end{Highlighting}
+\end{Shaded}
+
+\section{Pending Figures}\label{pending-figures}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{\#\#\# High Priority}
+\SpecialStringTok{{-} }\VariableTok{[ ]}\NormalTok{ \{\#fig{-}results{-}chart\}: Main results visualization}
+\SpecialStringTok{  {-} }\NormalTok{Status: Data ready, needs visualization}
+
+\NormalTok{\{\{}
+\CommentTok{[}\OtherTok{![Example Caption/Title 4}\CommentTok{](/images/cover.png)}\NormalTok{\{}
+\NormalTok{    \#fig{-}Unique\_identifier\_for\_crossreferencing}
+\NormalTok{    fig{-}scap="Short caption 4 list of figures as seen in LoF"}
+\NormalTok{    fig{-}alt="Detailed alt text that describes the image content, type, purpose, and meaning.}
+            \OtherTok{[CHART TYPE]: }\CommentTok{[}\OtherTok{Short description}\CommentTok{]}\NormalTok{.}
+\NormalTok{                DATA: }\CommentTok{[}\OtherTok{What data is shown, x/y axes}\CommentTok{]}\NormalTok{.}
+\NormalTok{                PURPOSE: }\CommentTok{[}\OtherTok{Why it\textquotesingle{}s included, what to look for}\CommentTok{]}\NormalTok{.}
+\NormalTok{                DETAILS: }\CommentTok{[}\OtherTok{Longer description of patterns, anomalies, or key insights}\CommentTok{]}\NormalTok{.}
+\NormalTok{                SOURCE: Data from }\CommentTok{[}\OtherTok{source name/year and url/link}\CommentTok{]}
+\NormalTok{            "}
+\NormalTok{    fig{-}align="left"}
+\NormalTok{    width="30\%"}
+\NormalTok{    \}](https://github.com/VJMeyer/submission)}
+\NormalTok{\}\}}
+
+\FunctionTok{\#\#\# Medium Priority}
+\SpecialStringTok{{-} }\VariableTok{[ ]}\NormalTok{ \{\#fig{-}architecture\}: System architecture diagram}
+\SpecialStringTok{  {-} }\NormalTok{Status: Sketch complete, needs professional rendering}
+
+\NormalTok{\{\{}
+\CommentTok{[}\OtherTok{![Example Caption/Title 4}\CommentTok{](/images/cover.png)}\NormalTok{\{}
+\NormalTok{    \#fig{-}Unique\_identifier\_for\_crossreferencing}
+\NormalTok{    fig{-}scap="Short caption 4 list of figures as seen in LoF"}
+\NormalTok{    fig{-}alt="Detailed alt text that describes the image content, type, purpose, and meaning.}
+            \OtherTok{[CHART TYPE]: }\CommentTok{[}\OtherTok{Short description}\CommentTok{]}\NormalTok{.}
+\NormalTok{                DATA: }\CommentTok{[}\OtherTok{What data is shown, x/y axes}\CommentTok{]}\NormalTok{.}
+\NormalTok{                PURPOSE: }\CommentTok{[}\OtherTok{Why it\textquotesingle{}s included, what to look for}\CommentTok{]}\NormalTok{.}
+\NormalTok{                DETAILS: }\CommentTok{[}\OtherTok{Longer description of patterns, anomalies, or key insights}\CommentTok{]}\NormalTok{.}
+\NormalTok{                SOURCE: Data from }\CommentTok{[}\OtherTok{source name/year and url/link}\CommentTok{]}
+\NormalTok{            "}
+\NormalTok{    fig{-}align="left"}
+\NormalTok{    width="30\%"}
+\NormalTok{    \}](https://github.com/VJMeyer/submission)}
+\NormalTok{\}\}}
+
+
+\end{Highlighting}
+\end{Shaded}
+
+\subsection{Master Citation Registry}\label{master-citation-registry}
 
 \begin{Shaded}
 \begin{Highlighting}[]
 
+\FunctionTok{\#\# BibTeX of Main Citations Included}
+
+\CommentTok{\textless{}!{-}{-} [ ] Add all the main literature / citations / references here (makes it easy to verify correct key etc. while writing) {-}{-}\textgreater{}}
+
+\CommentTok{\textless{}!{-}{-} [ ] Keep \textquotesingle{}References.md\textquotesingle{} updated with/from ref/MAref.bib {-}{-}\textgreater{}}
+
+\CommentTok{\textless{}!{-}{-} [ ] Remove/hide \textquotesingle{}References.md\textquotesingle{} before final publication {-}{-}\textgreater{}}
+
 \FunctionTok{\#\# Update in ref/MAref.bib}
+
+
+\FunctionTok{\#\# Core Citations (Must Have)}
+
+\FunctionTok{\#\#\# Foundational Works}
+\SpecialStringTok{{-} }\VariableTok{[x]}\NormalTok{ @carlsmith2021 {-} Power{-}seeking AI framework}
+\SpecialStringTok{  {-} }\NormalTok{Chapter usage: 1, 2, 4}
+\SpecialStringTok{  {-} }\NormalTok{Key concepts: Six premises, existential risk}
+\SpecialStringTok{  {-} }\NormalTok{Notes: Central to thesis argument}
+
+\SpecialStringTok{{-} }\VariableTok{[x]}\NormalTok{ @bostrom2014 {-} Superintelligence paths}
+\SpecialStringTok{  {-} }\NormalTok{Chapter usage: 1, 2, 3, 5}
+\SpecialStringTok{  {-} }\NormalTok{Key concepts: Orthogonality, convergence}
+\SpecialStringTok{  {-} }\NormalTok{Notes: Historical foundation}
+
+
 
 \NormalTok{@article\{bostrom2012,}
 \NormalTok{  title = \{The \{\{Superintelligent Will\}\}: \{\{Motivation\}\} and \{\{Instrumental Rationality\}\} in \{\{Advanced Artificial Agents\}\}\},}
@@ -6871,6 +8740,27 @@ Included}\label{bibtex-of-main-citations-included}
 
 
 
+\FunctionTok{\#\# Pending Citations}
+
+\FunctionTok{\#\#\# Need to Find}
+\SpecialStringTok{{-} }\VariableTok{[ ]}\NormalTok{ FIND: @ai{-}governance{-}2024: "Recent survey on international AI governance frameworks"}
+\SpecialStringTok{  {-} }\NormalTok{For: Chapter 3, Section 3.2}
+\SpecialStringTok{  {-} }\NormalTok{Search terms: AI governance, international coordination, 2024}
+\SpecialStringTok{  {-} }\NormalTok{Priority: High}
+
+\FunctionTok{\#\#\# Need to Verify}
+\SpecialStringTok{{-} }\VariableTok{[ ]}\NormalTok{ VERIFY: @prediction{-}markets{-}ai: "Tetlock et al on prediction markets for AI timelines"}
+\SpecialStringTok{  {-} }\NormalTok{Current info: Possibly in Metaculus report 2023}
+\SpecialStringTok{  {-} }\NormalTok{For: Chapter 4, Section 4.3}
+\SpecialStringTok{  {-} }\NormalTok{Priority: Medium}
+
+
+\FunctionTok{\#\# Citation Health Check}
+\SpecialStringTok{{-} }\VariableTok{[ ]}\NormalTok{ All citations in .bib file}
+\SpecialStringTok{{-} }\VariableTok{[ ]}\NormalTok{ All .bib entries have DOIs/URLs}
+\SpecialStringTok{{-} }\VariableTok{[ ]}\NormalTok{ No duplicate entries}
+\SpecialStringTok{{-} }\VariableTok{[ ]}\NormalTok{ Consistent naming scheme}
+\SpecialStringTok{{-} }\VariableTok{[ ]}\NormalTok{ Recent sources included (2023{-}2024)}
 
 \end{Highlighting}
 \end{Shaded}
@@ -6889,7 +8779,7 @@ Included}\label{bibtex-of-main-citations-included}
 \addcontentsline{toc}{part}{Appendices}
 \appendix
 
-\chapter{Appendices}\label{appendices-1}
+\chapter{Appendices}\label{appendices-2}
 
 \chapter*{Appendices}\label{sec-appendices}
 \addcontentsline{toc}{chapter}{Appendices}
@@ -7598,7 +9488,7 @@ Production}
   Analyze conditional probabilities and risk pathways
 \end{enumerate}
 
-\section{Troubleshooting:}\label{troubleshooting}
+\section{Troubleshooting:}\label{troubleshooting-1}
 
 \begin{itemize}
 \tightlist

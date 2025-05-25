@@ -39,3 +39,59 @@ Es ist wirklich gut, es ist nicht entscheidend welche Variante du jetzt übernim
 Am Ende von Kapitel 4 sind noch viele "Bulletpoints", die werden noch ausformuliert, oder?  
   
 Ich glaube in Kapitel 5 sind auch noch welche (bin mir nicht sicher).
+
+
+
+## LLM Prompting Checklist
+
+  
+
+### When Working with AI Assistants
+
+  
+
+- [ ] Provide clear context about Quarto environment
+
+- [ ] Specify exact formatting requirements
+
+- [ ] Include examples of desired output
+
+- [ ] Request American spelling
+
+- [ ] Ask for proper citation format
+
+- [ ] Verify all suggested citations
+
+- [ ] Check code blocks for accuracy
+
+- [ ] Validate technical explanations
+
+- [ ] Ensure consistency with existing content
+
+  
+
+### Prompt Template Structure
+
+  
+
+```
+
+Thesis Quarto
+
+Requirements:
+
+- American spelling
+
+- Academic tone
+
+- Proper citations in [@author2024] format
+
+- Code blocks with syntax highlighting
+
+- Cross-references using @sec-/@fig-/@tbl- format
+
+Task: [Specific request]
+
+Constraints: [Word limits, technical requirements]
+
+```
