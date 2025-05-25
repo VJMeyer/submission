@@ -602,7 +602,39 @@ Create Sidebars by applying the .sidebar attribute to a level 1 heading (for glo
 
 ## Further Citations to Integrate:
 
-<!-- [ ] ADD: INTEGRATE ALL THE CITATIONS FROM BELOW AT THE CORRESPONDING / BEST (MULTIPLE) SECTIONS OF THE THESIS -->
+<!-- [ ] ADD: INTEGRATE ALL THE CITATIONS FROM BELOW AT THE CORRESPONDING / BEST (MULTIPLE) SECTIONS OF THE THESIS: -->
+
+  @growiec2024
+
+
+  @clark2022
+
+  @drexler2019 and @drexler2019a
+
+
+  @brundage2018 and @brundage2018a 
+
+
+
+  @kumar2019 and @kumar2019a
+
+
+
+
+
+  @carlsmith2021 and @carlsmith2022 and @carlsmith2024
+
+
+  @hendrycks2021 and @hendrycks2021a
+
+
+  @wilson2023
+
+
+
+
+
+
 
 
 

@@ -51,11 +51,9 @@ I hope this work contributes to building the intellectual and technical infrastr
 ## Acknowledgments {.unnumbered}
 
 <!-- [ ] TODO: Add specific names and contributions --> 
-<!-- [ ] VERIFY: Funding sources and institutional support -->
+<!-- [ ] ADD: Mention/Acknowledgement of Johannes Meyer and Jelena Meyer -->
 
-I thank my supervisor Dr. Timo Speith for guidance throughout this project, the MTAIR team for pioneering the manual approach that inspired automation, and the AI safety community for creating the rich literature that made this work possible. Special recognition goes to technical advisors who provided implementation feedback and domain experts who validated extraction results.
-
-This research was conducted with support from [funding sources] and benefited from computational resources provided by [institutions]. Any errors or limitations remain my own responsibility.
+I thank my supervisor Dr. Timo Speith for guidance throughout this project, the MTAIR team for pioneering the manual approach that inspired automation, and the AI safety community for creating the rich literature that made this work possible. Special recognition goes to technical advisors who provided invaluable feedback and Coleman Snell. Any errors or limitations remain my own responsibility.
 
 # Table of Contents {.unnumbered}
 
