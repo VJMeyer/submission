@@ -315,7 +315,7 @@ The GitHub repository contains a comprehensive Quarto-based MA thesis project on
 - **ArgDown/BayesDown syntax**: Novel intermediate representations for argument structure
 - **Visualization components**: PyVis-based interactive Bayesian network rendering
 
----
+
 
 ## AMTAIR Thesis Relevant Literature & Citations
 
@@ -517,7 +517,7 @@ The GitHub repository contains a comprehensive Quarto-based MA thesis project on
     - "AI safety has gained mainstream research attention" (95%)
     - "Technical and governance challenges are interrelated" (90%)
 
----
+
 ```markdown
 ## New Suggested Citations
 
