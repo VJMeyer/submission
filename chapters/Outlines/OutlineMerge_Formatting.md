@@ -3,7 +3,7 @@
 
 # PromptGeneration
 
-First, comprehensive review of ALL files (as much of this in reasoning space / thinking tokens as possible but key insights printed as overview). 
+First, comprehensive review of ALL files (its important to do as much of this in reasoning space / thinking tokens as possible but that key insights are printed as overview). 
 From github repository, context window and prompt.
 Explain each file, it's structure, contents and relation and relevance to the AMTAIR MA-Thesis etc..
 Extra detailed analysis of outlines, syntax instructions (task handling/handling) and colab notebook(.md).
