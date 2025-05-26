@@ -6,7 +6,7 @@ numbering:
   level: 1         # Chapter level
 ---
 
-# Preface {.unnumbered}
+<!-- # Preface {.unnumbered} -->
 
 <!-- [ ] Add personal motivation and journey to AI governance research --> 
 <!-- [ ] Include acknowledgments of MTAIR team and advisors --> 
@@ -27,19 +27,14 @@ Emphasize both technical contributions and policy relevance. -->
 
 <!-- [ ] Write comprehensive abstract capturing coordination crisis, technical contribution, and policy implications -->
 
-`The coordination crisis in AI governance presents a paradoxical challenge: unprecedented investment in AI safety coexists alongside fundamental coordination failures across technical, policy, and ethical domains. These divisions systematically increase existential risk by creating safety gaps, misallocating resources, and fostering inconsistent approaches to interdependent problems.`
-
-> This thesis introduces AMTAIR (Automating Transformative AI Risk Modeling), a computational approach that addresses this coordination failure by automating the extraction of probabilistic world models from AI safety literature using frontier language models.
-
-`The AMTAIR system implements an end-to-end pipeline that transforms unstructured text into interactive Bayesian networks through a novel two-stage extraction process: first capturing argument structure in ArgDown format, then enhancing it with probability information in BayesDown. This approach bridges communication gaps between stakeholders by making implicit models explicit, enabling comparison across different worldviews, providing a common language for discussing probabilistic relationships, and supporting policy evaluation across diverse scenarios.`
 
 <!-- [ ] Add key quantitative results and validation findings to Abstract-->
 
-# Prefatory Apparatus: Frontmatter {.unnumbered}
+<!-- # Prefatory Apparatus: Frontmatter {.unnumbered} -->
 
-## Illustrations and Terminology --- Quick References {.unnumbered}
+<!-- ## Illustrations and Terminology --- Quick References {.unnumbered} -->
 
-### **Acknowledgments**
+## **Acknowledgments**
 
 -   Academic supervisor (Prof. Timo Speith) and institution (University of Bayreuth)\
 -   Research collaborators, especially those connected to the original MTAIR project\
@@ -48,7 +43,7 @@ Emphasize both technical contributions and policy relevance. -->
 
 <!-- [ ] Ensure List of Tables is up-to-date -->
 
-## List of Graphics & Figures {.unnumbered}
+<!-- ## List of Graphics & Figures {.unnumbered} -->
 
 <!-- [ ] Replace Placeholder List of Graphics & Figures with native Quarto LoF -->
 
@@ -66,7 +61,7 @@ Emphasize both technical contributions and policy relevance. -->
 - AGI - Artificial General Intelligence
 - AMTAIR - Automating Modeling of Transformative AI Risks
 - API - Application Programming Interface
-- APS - Advanced, Planning, Strategic (AI systems per @carlsmith2021)
+- APS - Advanced, Planning, Strategic 
 - BN - Bayesian Network
 - CPT - Conditional Probability Table
 - DAG - Directed Acyclic Graph

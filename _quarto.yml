@@ -99,7 +99,7 @@ format:
     output-file: thesis-book.pdf
     cite-method: biblatex
     biblio-title: Bibliography
-    latex-max-runs: 8
+    latex-max-runs: 6
     geometry:
       - margin=2.5cm
       - paper=a4paper

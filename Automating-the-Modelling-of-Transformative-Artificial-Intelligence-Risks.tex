@@ -402,17 +402,7 @@ to Upscale Conditional Policy Assessments in Bayesian Networks on a Narrow Path 
 \mainmatter
 \bookmarksetup{startatroot}
 
-\chapter*{Preface}\label{preface}
-\addcontentsline{toc}{chapter}{Preface}
-
-\markboth{Preface}{Preface}
-
-\bookmarksetup{startatroot}
-
-\chapter*{Abstract}\label{sec-abstract}
-\addcontentsline{toc}{chapter}{Abstract}
-
-\markboth{Abstract}{Abstract}
+\chapter{Abstract}\label{sec-abstract}
 
 \begin{quote}
 The coordination crisis in AI governance presents a paradoxical
@@ -428,35 +418,7 @@ Bayesian networks through a novel two-stage extraction process that
 bridges communication gaps between stakeholders.
 \end{quote}
 
-\texttt{The\ coordination\ crisis\ in\ AI\ governance\ presents\ a\ paradoxical\ challenge:\ unprecedented\ investment\ in\ AI\ safety\ coexists\ alongside\ fundamental\ coordination\ failures\ across\ technical,\ policy,\ and\ ethical\ domains.\ These\ divisions\ systematically\ increase\ existential\ risk\ by\ creating\ safety\ gaps,\ misallocating\ resources,\ and\ fostering\ inconsistent\ approaches\ to\ interdependent\ problems.}
-
-\begin{quote}
-This thesis introduces AMTAIR (Automating Transformative AI Risk
-Modeling), a computational approach that addresses this coordination
-failure by automating the extraction of probabilistic world models from
-AI safety literature using frontier language models.
-\end{quote}
-
-\texttt{The\ AMTAIR\ system\ implements\ an\ end-to-end\ pipeline\ that\ transforms\ unstructured\ text\ into\ interactive\ Bayesian\ networks\ through\ a\ novel\ two-stage\ extraction\ process:\ first\ capturing\ argument\ structure\ in\ ArgDown\ format,\ then\ enhancing\ it\ with\ probability\ information\ in\ BayesDown.\ This\ approach\ bridges\ communication\ gaps\ between\ stakeholders\ by\ making\ implicit\ models\ explicit,\ enabling\ comparison\ across\ different\ worldviews,\ providing\ a\ common\ language\ for\ discussing\ probabilistic\ relationships,\ and\ supporting\ policy\ evaluation\ across\ diverse\ scenarios.}
-
-\bookmarksetup{startatroot}
-
-\chapter*{Prefatory Apparatus:
-Frontmatter}\label{prefatory-apparatus-frontmatter}
-\addcontentsline{toc}{chapter}{Prefatory Apparatus: Frontmatter}
-
-\markboth{Prefatory Apparatus: Frontmatter}{Prefatory Apparatus:
-Frontmatter}
-
-\section*{Illustrations and Terminology --- Quick
-References}\label{illustrations-and-terminology-quick-references}
-\addcontentsline{toc}{section}{Illustrations and Terminology --- Quick
-References}
-
-\markright{Illustrations and Terminology --- Quick References}
-
-\subsection*{\texorpdfstring{\textbf{Acknowledgments}}{Acknowledgments}}\label{acknowledgments}
-\addcontentsline{toc}{subsection}{\textbf{Acknowledgments}}
+\section{\texorpdfstring{\textbf{Acknowledgments}}{Acknowledgments}}\label{acknowledgments}
 
 \begin{itemize}
 \tightlist
@@ -473,11 +435,6 @@ References}
   feedback
 \end{itemize}
 
-\section*{List of Graphics \& Figures}\label{list-of-graphics-figures}
-\addcontentsline{toc}{section}{List of Graphics \& Figures}
-
-\markright{List of Graphics \& Figures}
-
 \section*{List of Abbreviations}\label{list-of-abbreviations}
 \addcontentsline{toc}{section}{List of Abbreviations}
 
@@ -492,8 +449,7 @@ References}
 \item
   API - Application Programming Interface
 \item
-  APS - Advanced, Planning, Strategic (AI systems per
-  \textcite{carlsmith2021})
+  APS - Advanced, Planning, Strategic
 \item
   BN - Bayesian Network
 \item
@@ -5075,540 +5031,6 @@ broader implications. The next chapter undertakes this essential
 reflection, ensuring we neither oversell the approach nor undervalue its
 contributions.
 
-\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
-
-\newpage{}
-
-\subsection{3.5.6 Validation Against Original (From the MTAIR
-Project)}\label{sec-carlsmith-validation}
-
-To validate the AMTAIR extraction quality, an ideal approach would
-involve systematic comparison with expert manual extractions. The
-validation methodology would follow these steps:
-
-\textbf{Expert Baseline Creation}: Multiple domain experts independently
-extract ArgDown and BayesDown representations from the same source
-documents. This creates a ground truth dataset accounting for legitimate
-variation in expert interpretation.
-
-\textbf{Structural Comparison}: Compare the extracted causal structures,
-examining:
-
-\begin{itemize}
-\tightlist
-\item
-  Node identification completeness
-\item
-  Relationship preservation accuracy
-\item
-  Hierarchical organization fidelity
-\item
-  Handling of repeated or complex dependencies
-\end{itemize}
-
-\textbf{Probability Assessment}: Evaluate probability extraction by:
-
-\begin{itemize}
-\tightlist
-\item
-  Comparing explicit probability captures
-\item
-  Assessing interpretation of qualitative expressions
-\item
-  Measuring consistency across related probabilities
-\item
-  Identifying systematic biases or tendencies
-\end{itemize}
-
-\textbf{Semantic Preservation}: Expert review would assess whether the
-formal representation maintains the essential meaning and nuance of the
-original arguments.
-
-For the Carlsmith model specifically, preliminary manual extractions by
-domain experts (including Johannes Meyer and Jelena Meyer) suggest that
-automated extraction achieves high structural fidelity---capturing the
-key variables and their relationships---while probability estimates show
-greater variation, reflecting the inherent ambiguity in translating
-qualitative language to quantitative values.
-
-\section{3.6 Validation Methodology}\label{sec-validation-methodology}
-
-Establishing trust in automated extraction requires rigorous validation
-across multiple dimensions.
-
-\subsection{3.6.1 Ground Truth Construction}\label{sec-ground-truth}
-
-An ideal validation protocol would establish ground truth through:
-
-\textbf{Expert Selection}: Recruit domain experts with both AI safety
-knowledge and experience in formal modeling. Experts should represent
-diverse perspectives within the field to capture legitimate interpretive
-variation.
-
-\textbf{Standardized Training}: Provide consistent training on
-ArgDown/BayesDown syntax and extraction principles. This ensures
-methodological alignment while preserving substantive differences in
-interpretation.
-
-\textbf{Independent Extraction}: Have experts work independently on the
-same source documents, preventing anchoring bias and capturing the
-natural range of valid interpretations.
-
-\textbf{Consensus Building}: Through structured discussion, identify
-areas of convergence and legitimate disagreement. This distinguishes
-extraction errors from genuine ambiguity in source materials.
-
-\textbf{Documentation}: Record not just final extractions but the
-reasoning process, creating rich data for understanding extraction
-challenges and improving automated approaches.
-
-\subsection{3.6.2 Evaluation Metrics}\label{sec-evaluation-metrics}
-
-A comprehensive evaluation framework would assess multiple dimensions:
-
-\textbf{Structural Metrics}:
-
-\begin{itemize}
-\tightlist
-\item
-  Node identification precision and recall
-\item
-  Edge extraction accuracy
-\item
-  Preservation of hierarchical relationships
-\item
-  Handling of complex dependencies
-\end{itemize}
-
-\textbf{Probability Metrics}:
-
-\begin{itemize}
-\tightlist
-\item
-  Accuracy of explicit probability extraction
-\item
-  Consistency in interpreting qualitative expressions
-\item
-  Preservation of conditional relationships
-\item
-  Handling of uncertainty about uncertainty
-\end{itemize}
-
-\textbf{Semantic Metrics}:
-
-\begin{itemize}
-\tightlist
-\item
-  Expert ratings of meaning preservation
-\item
-  Functional equivalence for key inferences
-\item
-  Preservation of author's argumentative intent
-\item
-  Appropriate simplification choices
-\end{itemize}
-
-\textbf{Pragmatic Metrics}:
-
-\begin{itemize}
-\tightlist
-\item
-  Usefulness for downstream analysis
-\item
-  Time savings versus manual extraction
-\item
-  Error patterns and failure modes
-\item
-  Robustness across document types
-\end{itemize}
-
-\subsection{3.6.3 Results Summary}\label{sec-validation-results}
-
-While comprehensive validation remains future work, preliminary
-assessments suggest:
-
-\textbf{Structural Extraction}: The two-stage approach successfully
-identifies major causal relationships and preserves hierarchical
-structure. The explicit ArgDown intermediate representation allows
-verification of structural accuracy before probability quantification.
-
-\textbf{Probability Challenges}: Converting qualitative expressions to
-numerical probabilities remains the primary challenge. Different experts
-interpret phrases like ``likely'' or ``significant risk'' differently,
-and automated extraction inherits this ambiguity.
-
-\textbf{Practical Utility}: Despite imperfections, automated extraction
-provides sufficient quality for many practical applications, especially
-when combined with human review at critical points.
-
-The validation framework itself represents a contribution, providing
-systematic methods for assessing automated argument formalization tools
-as this area develops.
-
-\subsection{3.6.4 Error Analysis}\label{sec-error-analysis}
-
-Common failure modes to avoid:
-
-\textbf{Implicit Assumptions}: Unstated background assumptions that
-experts infer but system misses. These often involve domain-specific
-common knowledge that remains unspoken in expert discourse.
-
-\textbf{Complex Conditionals}: Nested conditionals with multiple
-antecedents challenge current parsing. Statements like ``If A and B,
-then probably C, unless D'' require sophisticated logical analysis.
-
-\textbf{Ambiguous Quantifiers}: Terms like ``significant'' lack clear
-probability mapping without context. The same word may imply different
-probabilities in different domains or even different parts of the same
-argument.
-
-\textbf{Coreference Resolution}: Pronouns and indirect references create
-attribution challenges. When authors use ``this risk'' or ``that
-assumption,'' identifying the correct referent requires deep contextual
-understanding.
-
-Understanding these limitations guides both current usage and future
-improvements.
-
-\section{3.7 Policy Evaluation
-Capabilities}\label{sec-policy-evaluation}
-
-Beyond extraction and visualization, AMTAIR enables systematic policy
-analysis through formal intervention modeling.
-
-\subsection{3.7.1 Intervention
-Representation}\label{sec-intervention-representation}
-
-Policy interventions can be modeled as modifications to network
-parameters, following Pearl's do-calculus framework. An ideal
-implementation would:
-
-\textbf{Parameter Modification}: Represent policies as changes to
-specific probability values. For instance, safety requirements might
-reduce P(deployment\textbar misaligned) by making unsafe deployment less
-likely.
-
-\textbf{Structural Interventions}: Some policies add or remove causal
-pathways. Regulatory oversight might introduce new nodes representing
-approval processes.
-
-\textbf{Uncertainty Propagation}: Model uncertainty about policy
-effectiveness. Rather than assuming perfect implementation, represent
-ranges of possible effects.
-
-\textbf{Multi-Level Effects}: Capture how policies influence multiple
-levels simultaneously---technical development, corporate behavior, and
-international dynamics.
-
-The formal framework enables rigorous counterfactual reasoning: ``What
-would happen to existential risk if this policy were implemented?''
-
-\subsection{3.7.2 Example: Deployment
-Governance}\label{sec-deployment-example}
-
-Consider a hypothetical policy requiring safety certification before
-deployment:
-
-\textbf{Baseline Scenario}: Without intervention, the model might show
-P(deployment\textbar misaligned) = 0.7, reflecting competitive pressures
-to deploy despite risks.
-
-\textbf{Policy Intervention}: Safety certification requirements could
-reduce this to P(deployment\textbar misaligned) = 0.1, assuming
-effective enforcement.
-
-\textbf{Downstream Effects}: This change propagates through the network:
-
-\begin{itemize}
-\tightlist
-\item
-  Reduced deployment of misaligned systems
-\item
-  Lower probability of power-seeking behavior manifestation
-\item
-  Decreased existential risk
-\end{itemize}
-
-\textbf{Quantitative Assessment}: The formal model enables precise
-calculation of risk reduction, helping prioritize among possible
-interventions.
-
-This example illustrates how formal models transform vague policy
-discussions into concrete quantitative analyses, though the specific
-numbers depend on model assumptions and parameter estimates.
-
-\subsection{3.7.3 Robustness Analysis}\label{sec-robustness}
-
-Policies must work across worldviews. AMTAIR enables multi-model
-evaluation, parameter sensitivity testing, scenario analysis, and
-confidence bound computation---ensuring interventions remain effective
-despite uncertainty.
-
-\textbf{Cross-Model Testing}: Evaluate policies across different
-extracted worldviews to identify robust strategies that work regardless
-of which expert's model proves correct.
-
-\textbf{Sensitivity Analysis}: Identify which parameters most affect
-policy effectiveness, focusing implementation efforts on critical
-factors.
-
-\textbf{Scenario Planning}: Test policies under different future
-scenarios---slow versus fast takeoff, unipolar versus multipolar
-development, cooperative versus adversarial dynamics.
-
-\textbf{Confidence Bounds}: Rather than point estimates, compute ranges
-of possible effects accounting for parameter uncertainty.
-
-\section{3.8 Interactive Visualization
-Design}\label{sec-visualization-design}
-
-Making Bayesian networks accessible to diverse stakeholders requires
-careful visualization design.
-
-\subsection{3.8.1 Visual Encoding Strategy}\label{sec-visual-encoding}
-
-The system uses multiple visual channels:
-
-\textbf{Color}: Probability magnitude (green=high, red=low) provides
-immediate visual indication of likelihood, leveraging intuitive color
-associations.
-
-\textbf{Borders}: Node type (blue=root, purple=intermediate,
-magenta=effect) helps users understand causal flow through the network
-structure.
-
-\textbf{Size}: Centrality in network (larger=more influential) draws
-attention to critical nodes that affect many other variables.
-
-\textbf{Layout}: Force-directed positioning reveals clusters of related
-variables, helping users identify cohesive sub-arguments within larger
-models.
-
-\subsection{3.8.2 Progressive
-Disclosure}\label{sec-progressive-disclosure}
-
-Information appears at appropriate levels:
-
-\begin{enumerate}
-\def\labelenumi{\arabic{enumi}.}
-\tightlist
-\item
-  \textbf{Overview}: Network structure and color coding provide
-  immediate understanding of key relationships and probability
-  distributions.
-\item
-  \textbf{Hover}: Node description and prior probability offer
-  additional context without cluttering the main view.
-\item
-  \textbf{Click}: Full probability tables and details enable deep
-  investigation of specific variables and their relationships.
-\item
-  \textbf{Interaction}: Drag to rearrange, zoom to explore---users can
-  customize views for their specific interests and questions.
-\end{enumerate}
-
-This layered approach serves both quick assessment and deep analysis
-needs.
-
-\subsection{3.8.3 User Interface Elements}\label{sec-ui-elements}
-
-Effective interface design would incorporate:
-
-\textbf{Physics Controls}: Allow users to adjust layout dynamics,
-finding arrangements that best reveal patterns of interest.
-
-\textbf{Filter Options}: Enable focusing on specific node types or
-probability ranges, reducing complexity for targeted analysis.
-
-\textbf{Export Functions}: Support saving visualizations and data in
-formats suitable for reports, presentations, and further analysis.
-
-\textbf{Comparison Mode}: Facilitate side-by-side viewing of different
-models or the same model under different policy interventions.
-
-These features should emerge from iterative design with actual
-users---researchers needing detailed analysis, policymakers seeking key
-insights, and public stakeholders requiring accessible overviews.
-
-\section{3.9 Integration with Prediction
-Markets}\label{sec-market-integration}
-
-While full integration remains future work, the architecture supports
-connection to live forecasting data.
-
-\subsection{3.9.1 Design for Integration}\label{sec-integration-design}
-
-The system anticipates market connections through:
-
-\textbf{API Specifications}: Standardized interfaces for major
-forecasting platforms like Metaculus, Good Judgment Open, and Manifold
-Markets.
-
-\textbf{Semantic Matching}: Algorithms to connect model variables with
-related forecast questions, handling differences in phrasing and scope.
-
-\textbf{Aggregation Methods}: Principled approaches for combining
-multiple forecast sources, accounting for track records and expertise.
-
-\textbf{Update Scheduling}: Efficient caching and refresh strategies to
-balance currency with computational cost.
-
-\subsection{3.9.2 Challenges and
-Opportunities}\label{sec-market-challenges}
-
-Key integration challenges:
-
-\textbf{Question Mapping}: Model variables rarely match market questions
-exactly. ``AI causes existential catastrophe'' might map to multiple
-specific forecast questions about AI capabilities, deployment, and
-impacts.
-
-\textbf{Temporal Alignment}: Markets forecast specific dates while
-models consider scenarios. Bridging these requires careful
-interpretation and uncertainty propagation.
-
-\textbf{Quality Variation}: Market depth and participation vary
-significantly. Some questions attract expert forecasters while others
-rely on casual participants.
-
-Despite challenges, even partial integration provides value through
-external validation of probability estimates and dynamic updating as new
-information emerges.
-
-\section{3.10 Computational Performance
-Analysis}\label{sec-computational-performance}
-
-As networks grow large, computational challenges emerge requiring
-sophisticated approaches.
-
-\subsection{3.10.1 Exact vs.~Approximate
-Inference}\label{sec-exact-approximate}
-
-Small networks enable exact inference through variable elimination.
-Larger networks require approximation:
-
-\textbf{Monte Carlo Methods}: Sample from probability distributions to
-estimate queries. While approximate, these methods scale to arbitrary
-network sizes.
-
-\textbf{Variational Inference}: Optimize simpler distributions to
-approximate true posteriors. These methods trade some accuracy for
-guaranteed convergence.
-
-\textbf{Belief Propagation}: Pass messages between nodes to converge on
-beliefs. Particularly effective for tree-structured or sparse networks.
-
-The system automatically selects appropriate methods based on network
-properties.
-
-\subsection{3.10.2 Scaling Strategies}\label{sec-scaling-strategies}
-
-For very large networks, several strategies enable practical analysis:
-
-\textbf{Hierarchical Decomposition}: Break large networks into
-manageable sub-networks, compute locally, then integrate results.
-
-\textbf{Relevance Pruning}: For specific queries, identify and focus on
-relevant subgraphs, ignoring distant unconnected nodes.
-
-\textbf{Caching Architecture}: Store computed results for common
-queries, dramatically improving response time for interactive use.
-
-\textbf{Parallel Processing}: Distribute computation across multiple
-cores or machines for large-scale analysis.
-
-\section{3.11 Results and Achievements}\label{sec-results-achievements}
-
-\subsection{3.11.1 Extraction Quality
-Assessment}\label{sec-extraction-quality}
-
-An ideal assessment methodology would systematically evaluate:
-
-\textbf{Coverage Metrics}: What proportion of arguments in source texts
-are successfully captured in formal models?
-
-\textbf{Accuracy Metrics}: How closely do automated extractions match
-expert consensus?
-
-\textbf{Robustness Metrics}: How well does the system handle different
-writing styles, argument structures, and domains?
-
-\textbf{Utility Metrics}: Do the extracted models enable meaningful
-analysis and decision support?
-
-Preliminary applications suggest the approach achieves practical utility
-while highlighting areas for improvement, particularly in handling
-implicit reasoning and converting qualitative uncertainty expressions.
-
-\subsection{3.11.2 Computational
-Performance}\label{sec-computational-performance}
-
-Performance analysis would examine:
-
-\textbf{Scaling Characteristics}: How processing time grows with network
-size and complexity.
-
-\textbf{Bottleneck Identification}: Whether limitations arise from
-extraction, inference, or visualization.
-
-\textbf{Optimization Opportunities}: Where algorithmic improvements or
-engineering enhancements could improve performance.
-
-\textbf{Resource Requirements}: Memory, processing, and storage needs
-for realistic applications.
-
-The modular architecture enables targeted optimization of bottleneck
-components while maintaining system coherence.
-
-\subsection{3.11.3 Policy Impact Evaluation}\label{sec-policy-impact}
-
-A comprehensive evaluation framework would assess:
-
-\textbf{Intervention Modeling}: How effectively can policies be
-represented as network modifications?
-
-\textbf{Robustness Testing}: Do policy recommendations remain stable
-across model variations?
-
-\textbf{Comparative Analysis}: How do different policy options compare
-in effectiveness?
-
-\textbf{Implementation Guidance}: Does the analysis provide actionable
-insights for policymakers?
-
-The ability to formally model policy interventions and trace their
-effects through complex causal networks represents a significant advance
-in systematic governance analysis.
-
-\section{3.12 Summary of Technical
-Contributions}\label{sec-technical-summary}
-
-AMTAIR successfully demonstrates:
-
-\begin{itemize}
-\tightlist
-\item
-  \textbf{Automated extraction} from natural language to formal models
-\item
-  \textbf{Two-stage architecture} separating structure from
-  quantification
-\item
-  \textbf{High fidelity} preservation of complex arguments
-\item
-  \textbf{Interactive visualization} accessible to diverse users
-\item
-  \textbf{Scalable implementation} handling realistic network sizes
-\end{itemize}
-
-These achievements validate the feasibility of computational
-coordination infrastructure for AI governance.
-
-The implementation shows that formal modeling of AI risk arguments is
-not only theoretically possible but practically achievable. While
-challenges remain---particularly in handling implicit reasoning and
-diverse uncertainty expressions---the system provides a foundation for
-enhanced coordination in AI governance.
-
 \bookmarksetup{startatroot}
 
 \chapter{4. Discussion: Implications and
@@ -6754,6 +6176,198 @@ Technologists}\label{sec-technologist-recommendations}
   \textbf{Scale infrastructure}: Address computational challenges for
   larger models and broader deployment
 \end{enumerate}
+
+\section{5.5 Future Research Agenda}\label{sec-future-research-agenda}
+
+Looking ahead, the landscape of possibilities stretches toward the
+horizon, each path promising its own rewards and challenges. Let me map
+the territory worth exploring.
+
+\subsection{5.5.1 Technical Priorities}\label{sec-technical-priorities}
+
+The technical frontier advances on multiple fronts, each offering
+multiplicative improvements when combined:
+
+\textbf{Extraction Enhancement}: The current system, while functional,
+merely scratches the surface of what's possible. Fine-tuning language
+models specifically on argument extraction tasks could dramatically
+improve accuracy. Imagine models trained not just on general text but on
+thousands of examples of arguments transformed into formal
+representations.
+
+\textbf{Handling Implicit Reasoning}: So much of expert argumentation
+relies on unstated background knowledge. When an AI safety researcher
+mentions ``mesa-optimization,'' they assume familiarity with complex
+concepts about learned optimization occurring within larger optimization
+processes. Future systems need to bridge these inferential gaps, perhaps
+by maintaining explicit knowledge bases of domain concepts or by
+training models to recognize and fill common argumentative ellipses.
+
+\textbf{Cross-Document Synthesis}: Real understanding emerges not from
+single papers but from conversations across documents. Authors respond
+to each other, build on previous work, refine arguments over time.
+Future systems should trace these intellectual lineages, building
+composite models that capture evolving community understanding rather
+than static snapshots.
+
+\textbf{Representation Extensions}: Current Bayesian networks, while
+powerful, make limiting assumptions. Temporal dynamics matter---AI
+development unfolds over time, with early decisions constraining later
+options. Multi-agent representations could capture strategic
+interactions between actors. Continuous variables better represent
+quantities like ``capability level'' than binary approximations. Each
+extension opens new analytical possibilities.
+
+\subsection{5.5.2 Methodological
+Development}\label{sec-methodological-development}
+
+Beyond technical improvements lie deeper methodological questions about
+how we validate, use, and improve these systems:
+
+\textbf{Validation Science}: We need not just ad hoc evaluation but a
+science of argument extraction assessment. This means building benchmark
+datasets capturing diverse argument types, developing metrics that go
+beyond surface accuracy to semantic fidelity, creating adversarial test
+suites that probe system limitations, and establishing longitudinal
+studies tracking how extracted models evolve with updating source
+documents.
+
+\textbf{Hybrid Intelligence}: The future isn't human or AI but human and
+AI. Optimal collaboration patterns remain unexplored. Should humans
+verify structure while AI handles probabilities? Should AI propose
+multiple extractions for human selection? How do we combine formal
+models with scenario narratives, quantitative forecasts with qualitative
+insights? The design space for human-AI collaboration in argument
+formalization remains largely uncharted.
+
+\textbf{Social Methods}: Technology embedded in social contexts requires
+social science. How do organizations actually use these models? What
+changes when formal representations replace informal discussions?
+Ethnographic studies of model use, measurement of coordination
+improvements, identification of adoption barriers---all essential for
+real-world impact.
+
+\subsection{5.5.3 Application
+Expansion}\label{sec-application-expansion}
+
+The principles underlying AMTAIR apply far beyond AI risk:
+
+\textbf{Domain Extensions}: Every field grappling with complex risks
+could benefit. Biosecurity faces similar challenges---technical
+complexity, value-laden choices, deep uncertainty. Climate policy
+involves multi-level causation across physical, economic, and social
+systems. Nuclear policy, despite decades of study, still struggles with
+coordination across technical and strategic communities. Each domain
+would require specialized extraction approaches but could leverage the
+same fundamental architecture.
+
+\textbf{Institutional Integration}: Moving from research prototype to
+institutional tool requires thoughtful embedding. Regulatory impact
+assessment could incorporate formal modeling to make assumptions
+explicit. Corporate strategic planning, especially for companies
+developing advanced technologies, needs tools for reasoning about
+unprecedented risks. Academic peer review might benefit from formal
+representation of complex arguments.
+
+\textbf{Global Deployment}: AI governance is inherently international,
+but different regions have different governance cultures, risk
+tolerances, and institutional structures. Adapting AMTAIR for different
+contexts---from Silicon Valley's move-fast culture to the EU's
+precautionary approach to China's state-led development---requires both
+technical and cultural translation.
+
+\section{5.6 Closing Reflections}\label{sec-closing-reflections}
+
+As I write these final words, I'm struck by the peculiar position we
+find ourselves in. We are arguably the first generation that must govern
+technologies that could fundamentally transform or terminate our
+species' story. The margin for error shrinks as capabilities grow. The
+cost of coordination failure rises toward infinity.
+
+The AMTAIR project emerged from a simple observation paired with an
+ambitious hope. The observation: while humanity mobilizes unprecedented
+resources to address AI risks, our efforts remain tragically
+uncoordinated. Different communities work with incompatible frameworks,
+duplicate efforts, and sometimes actively undermine each other's work.
+The hope: that computational tools might help us build the epistemic
+infrastructure necessary for coordination.
+
+What we've accomplished here is both less and more than originally
+envisioned. Less, because the challenges proved deeper than anticipated.
+Natural language resists formalization. Probabilities remain stubbornly
+subjective. Coordination failures have roots beyond mere communication
+difficulties. More, because the journey revealed unexpected
+possibilities. Intermediate representations became valuable in
+themselves. The extraction process surfaced insights about argument
+structure. The visualization work demonstrated how thoughtful design can
+democratize access to formal tools.
+
+Perhaps most importantly, this work demonstrates that perfect solutions
+need not be the enemy of meaningful progress. AMTAIR doesn't solve the
+coordination crisis---no single tool could. But it offers genuine
+assistance: making implicit models explicit, enabling systematic
+comparison across worldviews, supporting evidence-based policy
+evaluation, and creating common ground for productive disagreement.
+
+\textbf{The Stakes}: Let me be plain about what's at risk. The
+development of artificial general intelligence represents a
+discontinuity in human history comparable to the emergence of life or
+the evolution of consciousness. Get it right, and we might solve
+problems that have plagued humanity since our beginning---disease,
+poverty, ignorance, perhaps even death itself. Get it wrong, and we
+might extinguish not just ourselves but all the potential futures we
+might have created.
+
+This isn't science fiction or academic speculation. The capabilities
+advancing in labs today point toward systems that could, within decades
+or less, exceed human cognitive abilities across all domains. What
+happens when we create minds greater than our own? How do we ensure they
+remain aligned with human values and flourishing? These questions demand
+our best collective wisdom.
+
+Yet we approach this challenge fragmented. Technical researchers develop
+alignment techniques without clear paths to implementation. Policymakers
+craft governance frameworks without deep technical understanding.
+Ethicists articulate values without operational specificity.
+International bodies convene without shared models of the risks they're
+addressing. This fragmentation isn't just inefficient---it's
+existentially dangerous.
+
+AMTAIR represents one attempt to build bridges. By automating the
+extraction of worldviews, integrating live forecasts, and enabling
+systematic policy evaluation, we create infrastructure for enhanced
+coordination. Not coordination itself---that requires human wisdom,
+institutional change, and political will. But infrastructure that makes
+coordination more feasible.
+
+The path forward demands both ambition and humility. Ambition to build
+the tools, institutions, and practices necessary for navigating
+unprecedented risks. Humility to recognize that our tools are imperfect,
+our understanding incomplete, and our time limited. We must act despite
+uncertainty, coordinate despite disagreement, and hope despite the
+magnitude of the challenge.
+
+As I close this thesis, I think of future readers---perhaps humans
+living in a world made wonderful by aligned AI, perhaps historians
+studying how we navigated this crucial transition, perhaps no one at all
+if we fail. To those readers, know that we tried. We saw the challenge,
+recognized our limitations, and attempted to build what tools we could.
+
+The coordination crisis in AI governance represents both existential
+risk and existential opportunity. Risk, if we fail to align our efforts
+before it's too late. Opportunity, if we succeed in creating
+unprecedented cooperation around humanity's most important challenge.
+AMTAIR offers one piece of the puzzle---computational infrastructure
+that enhances our collective ability to reason about complex risks.
+
+May we prove worthy of the challenge before us. May our tools amplify
+our wisdom rather than our folly. And may future generations look back
+on this time not as when humanity failed to coordinate, but as when we
+rose to meet our greatest test.
+
+The work continues. The stakes could not be higher. The time grows
+short. Let us build what we can, while we can, for all our futures
+depend on it.
 
 \bookmarksetup{startatroot}
 
