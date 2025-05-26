@@ -2129,24 +2129,69 @@ The high fidelity demonstrates AMTAIR's capability for complex real-world argume
 
 
 
-### 3.5.4 Insights from Formalization {#sec-carlsmith-insights}
-
-Formal representation reveals several insights:
-
-**Critical Path Analysis**: The pathway through APS development and deployment decisions carries the highest risk contribution.
-
-**Sensitivity Points**: Small changes in deployment probability create large changes in overall risk.
-
-**Intervention Opportunities**: Improving alignment difficulty or deployment governance show highest impact potential.
-
-These insights emerge naturally from formal analysis but remain implicit in textual arguments.
-
-<!-- [ ] CREATE: {#fig-sensitivity-analysis}: "Tornado diagram of parameter sensitivity" -->
 
 
+### 3.5.4 Meaningful BayesDown
+Bridging Qualitative and Quantitative Representation
+
+If the coordination crisis in AI governance stems partly from incompatible languages across domains—technical researchers speaking in mathematical formalisms, policy specialists in institutional frameworks, and ethicists in normative concepts—then effective coordination requires bridges between these domains. BayesDown serves as such a bridge, combining the narrative richness of qualitative argumentation with the precision of quantitative probability judgments.
+
+Traditional formal representations face a fundamental tradeoff: increase precision and you sacrifice accessibility; enhance accessibility and you lose precision. Mathematical notations offer exactness but exclude many stakeholders. Natural language provides accessibility but permits ambiguity and vagueness. This tradeoff creates communication barriers between technical and policy domains, limiting coordination on complex challenges like AI governance.
+
+BayesDown disrupts this tradeoff by creating a hybrid representation that preserves strengths from both worlds. Its design follows three key principles:
+
+First, **human readability** ensures the representation remains interpretable without specialized training. The syntax builds on familiar conventions from markdown and JSON, maintaining hierarchical relationships through indentation and encapsulating technical details within structured metadata. Unlike purely mathematical notations, the format preserves natural language descriptions alongside formal elements.
+
+Second, **machine processability** enables computational analysis and transformation. The consistent syntax permits automated parsing, formal verification, and conversion to computational models like Bayesian networks. The structured JSON metadata provides clear paths for extracting probability information and mapping it to conditional probability tables.
+
+Third, **contextual preservation** maintains the connection to original arguments. By including descriptive text alongside formal structure, BayesDown retains the narrative context and qualitative considerations that inform probability judgments. This contextual information helps users interpret the model in light of the original arguments.
+
+Consider how these principles manifest in the BayesDown syntax. Each node begins with a bracketed title followed by a natural language description, preserving the core statement being formalized. The JSON metadata contains technical information like instantiations, priors, and posteriors, but keeps this information clearly separated from the narrative content. Hierarchical relationships use indentation and plus symbols, creating a visual structure that mirrors causal influence.
+
+```json
+[Existential_Catastrophe]: The destruction of humanity's long-term potential due to AI systems we've lost control over. {
+  "instantiations": ["existential_catastrophe_TRUE", "existential_catastrophe_FALSE"],
+  "priors": {"p(existential_catastrophe_TRUE)": "0.05", "p(existential_catastrophe_FALSE)": "0.95"},
+  "posteriors": {
+    "p(existential_catastrophe_TRUE|human_disempowerment_TRUE)": "0.95",
+    "p(existential_catastrophe_TRUE|human_disempowerment_FALSE)": "0.0"
+  }
+}
+ + [Human_Disempowerment]: Permanent and collective disempowerment of humanity relative to AI systems. {
+   "instantiations": ["human_disempowerment_TRUE", "human_disempowerment_FALSE"],
+   "priors": {"p(human_disempowerment_TRUE)": "0.208", "p(human_disempowerment_FALSE)": "0.792"},
+   "posteriors": {
+     "p(human_disempowerment_TRUE|scale_of_power_seeking_TRUE)": "1.0",
+     "p(human_disempowerment_TRUE|scale_of_power_seeking_FALSE)": "0.0"
+   }
+ }
+```
+
+This excerpt from the Carlsmith model representation illustrates how BayesDown preserves both the narrative description ("The destruction of humanity's long-term potential...") and the precise probability judgments. Someone without technical background can still understand the core claims and their relationships, while someone seeking quantitative precision can find exact probability values.
+
+The format supports multiple levels of engagement. At the most basic level, readers can follow the hierarchical structure to understand causal relationships between factors. At an intermediate level, they can examine probability judgments to assess the strength of different influences. At the most technical level, they can analyze the complete probabilistic model to perform inference and sensitivity analysis.
+
+This multi-level accessibility creates important advantages for coordination across domains:
+
+1. **Technical-policy translation:** BayesDown provides a common reference point for technical researchers explaining safety concerns and policy specialists evaluating governance options, reducing communication barriers.
+    
+2. **Argumentation transparency:** The format makes assumptions explicit, helping identify genuine disagreements versus terminological confusion or unstated premises.
+    
+3. **Incremental formalization:** BayesDown supports varying levels of formality, from qualitative structure to complete probability specifications, allowing gradual progression from informal to formal representations.
+    
+4. **Verification flexibility:** Human experts can verify extracted representations at different levels—checking structural correctness without assessing probabilities, or focusing on critical probability judgments without reviewing the entire model.
+    
+
+The hybrid nature of BayesDown aligns with how experts typically communicate complex ideas: combining qualitative explanations with quantitative judgments, using natural language to provide context for formal claims, and adjusting precision based on audience needs. By mirroring these natural communication patterns, BayesDown makes formalization more intuitive and accessible.
+
+This bridging function extends beyond representation to influence the entire extraction and analysis workflow. When extracting from text, the two-stage process preserves narrative context alongside formal structure. When visualizing models, interactive interfaces provide both qualitative descriptions and quantitative details. When evaluating policies, counterfactual analysis incorporates both mathematical precision and contextual interpretation.
+
+In the broader context of the coordination crisis, BayesDown demonstrates how thoughtfully designed intermediate representations can overcome communication barriers between domains. Rather than forcing all stakeholders to adopt a single specialized language, it creates a flexible format that accommodates different perspectives while enabling precise analysis—precisely the kind of bridge needed for effective coordination on complex governance challenges.
 
 
 ### 3.5.5 Interactive Visualization and Exploration
+
+<!-- [ ] REVIEW -->
 
 Complex probabilistic models like Bayesian networks contain rich information, but they often remain inaccessible to many stakeholders. A conditional probability table with dozens of values conveys precise relationships, but few can intuitively grasp its implications. This accessibility gap limits the potential for coordinated action on AI governance challenges—what good is formalization if the resulting models remain opaque to most decision-makers?
 
@@ -2168,83 +2213,19 @@ Figure 6 shows the interactive visualization of Carlsmith's model, highlighting 
 
 The visualization system implements these principles through a combination of NetworkX for graph representation and PyVis for interactive display, with custom HTML generation for tooltips and modals:
 
-```python
-def create_bayesian_network_with_probabilities(df):
-    """
-    Create an interactive Bayesian network visualization with enhanced probability visualization
-    and node classification based on network structure.
-    """
-    # Create network structure
-    G = nx.DiGraph()
-    
-    # Add nodes with attributes
-    for idx, row in df.iterrows():
-        title = row['Title']
-        description = row['Description']
-        priors = get_priors(row)
-        instantiations = get_instantiations(row)
-        
-        G.add_node(title, description=description, priors=priors, 
-                  instantiations=instantiations, posteriors=get_posteriors(row))
-    
-    # Add edges based on parent-child relationships
-    for idx, row in df.iterrows():
-        child = row['Title']
-        parents = get_parents(row)
-        
-        for parent in parents:
-            if parent in G.nodes():
-                G.add_edge(parent, child)
-    
-    # Classify nodes based on network structure
-    classify_nodes(G)
-    
-    # Create visualization network
-    net = Network(notebook=True, directed=True, cdn_resources="in_line", 
-                 height="600px", width="100%")
-    
-    # Configure physics for better layout
-    net.force_atlas_2based(gravity=-50, spring_length=100, spring_strength=0.02)
-    net.show_buttons(filter_=['physics'])
-    
-    # Add graph to network
-    net.from_nx(G)
-    
-    # Enhance node appearance
-    for node in net.nodes:
-        node_id = node['id']
-        node_data = G.nodes[node_id]
-        
-        # Set border color based on node type
-        node_type = node_data.get('node_type', 'unknown')
-        border_color = get_border_color(node_type)
-        
-        # Set background color based on probability
-        priors = node_data.get('priors', {})
-        background_color = get_probability_color(priors)
-        
-        # Create tooltip and expanded content
-        tooltip = create_tooltip(node_id, node_data)
-        node_data['expanded_content'] = create_expanded_content(node_id, node_data)
-        
-        # Set node attributes
-        node['title'] = tooltip
-        node['label'] = f"{node_id}\np={priors.get('true_prob', 0.5):.2f}"
-        node['shape'] = 'box'
-        node['color'] = {
-            'background': background_color,
-            'border': border_color,
-            'highlight': {
-                'background': background_color,
-                'border': border_color
-            }
-        }
-    
-    # Setup click handling for detailed information
-    # [Click handling JavaScript code omitted for brevity]
-    
-    return net.show('bayesian_network.html')
-```
+
+
+{{< embed /AMTAIR_Prototype/data/example_carlsmith/AMTAIR_Prototype_example_carlsmith.ipynb#main_visualization_function echo=true >}}
+<!-- 
+#| label: main_visualization_function
+#| echo: true
+#| eval: true
+#| fig-cap: "Main Visualization Function"
+#| fig-link: "https://colab.research.google.com/github/VJMeyer/submission/blob/main/AMTAIR_Prototype/data/example_carlsmith/AMTAIR_Prototype_example_carlsmith.ipynb#scrollTo=7UkPk-bm5_fm&line=8&uniqifier=1"
+#| fig-alt: "Main Visualization Function"
+-->
+
+
 
 Beyond the core visualization, the system includes specialized components that enhance understanding of probabilistic relationships:
 
@@ -2274,6 +2255,20 @@ This approach reflects a broader principle: formalization is most valuable when 
 
 
 
+
+#### **Insights from Formalization** 
+
+Formal representation reveals several insights:
+
+**Critical Path Analysis**: The pathway through APS development and deployment decisions carries the highest risk contribution.
+
+**Sensitivity Points**: Small changes in deployment probability create large changes in overall risk.
+
+**Intervention Opportunities**: Improving alignment difficulty or deployment governance show highest impact potential.
+
+These insights emerge naturally from formal analysis but remain implicit in textual arguments.
+
+<!-- [ ] CREATE: {#fig-sensitivity-analysis}: "Tornado diagram of parameter sensitivity" -->
 
 
 
