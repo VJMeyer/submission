@@ -34,7 +34,7 @@ The thesis contributes both theoretical foundations and practical implementation
 - The approach addresses coordination failures by creating a common language for AI risk assessment date: "2025-05-26" bibliography: ref/MAref.bib citation: container-title: University of Bayreuth Master's Thesis number-sections: true toc: true toc-depth: 4 lof: true lot: true
 ```
 
-
+# Outline_13
 # Automating the Modeling of Transformative Artificial Intelligence Risks (AMTAIR) {.unnumbered}
 
 

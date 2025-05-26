@@ -285,50 +285,38 @@ This chapter presents the complete computational implementation of the AMTAIR sy
 -   [ ] Backup copies created
 -   [ ] Submission guidelines followed
 
-
-
-
-
-
-
-
-
-
-
-
-
 # Quarto Syntax and Best Practices Guide
 
 ## Key Features
 
 ### 1. Task Management System
 
-- HTML comments with `[ ]` for tasks visible in ToDo-Tree
-- Categories: FIND, VERIFY, CREATE, TODO
-- Progress tracking with `[x]` (done) and `[-]` (verified)
+-   HTML comments with `[ ]` for tasks visible in ToDo-Tree
+-   Categories: FIND, VERIFY, CREATE, TODO
+-   Progress tracking with `[x]` (done) and `[-]` (verified)
 
 ### 2. Multi-Format Output
 
-- HTML: Interactive web version with navigation
-- PDF: Professional academic document
-- LaTeX: Source for further customization
-- DOCX: For collaboration
+-   HTML: Interactive web version with navigation
+-   PDF: Professional academic document
+-   LaTeX: Source for further customization
+-   DOCX: For collaboration
 
 ### 3. Cross-Referencing
 
-- Sections: `@sec-section-name`
-- Figures: `@fig-figure-name`
-- Tables: `@tbl-table-name`
-- Citations: `@citation-key`
+-   Sections: `@sec-section-name`
+-   Figures: `@fig-figure-name`
+-   Tables: `@tbl-table-name`
+-   Citations: `@citation-key`
 
 ### 4. Advanced Features
 
-- Interactive Jupyter notebooks
-- Mermaid diagrams
-- Math equations (LaTeX)
-- Callout blocks
-- Extensive footnotes
-- Glossary and abbreviations
+-   Interactive Jupyter notebooks
+-   Mermaid diagrams
+-   Math equations (LaTeX)
+-   Callout blocks
+-   Extensive footnotes
+-   Glossary and abbreviations
 
 ## Quick Start
 
@@ -336,7 +324,7 @@ This chapter presents the complete computational implementation of the AMTAIR sy
 
 Write and track tasks with HTML comments in markdown blocks or with `verbatim code` ticks but ALWAYS add linke breaks between tasks:
 
-```markdown
+``` markdown
 `<!-- [ ] TODO: Task description -->`
 
 `<!-- [ ] FIND: @missing-citation: "Description" -->`
@@ -347,54 +335,55 @@ Write and track tasks with HTML comments in markdown blocks or with `verbatim co
 ```
 
 ### Adding Content
-1. Create/edit `.qmd` files in chapters/
-2. Update `_quarto.yml` if adding new chapters
-3. Add citations to `ref/MAref.bib`
-4. Place images in `images/`
+
+1.  Create/edit `.qmd` files in chapters/
+2.  Update `_quarto.yml` if adding new chapters
+3.  Add citations to `ref/MAref.bib`
+4.  Place images in `images/`
 
 ## Best Practices
 
 ### 1. Consistent Formatting
 
-- Use American spelling throughout
-- Follow heading hierarchy (##, ###, ####)
-- Maintain consistent citation style
-- Use semantic line breaks
+-   Use American spelling throughout
+-   Follow heading hierarchy (##, ###, ####)
+-   Maintain consistent citation style
+-   Use semantic line breaks
 
 ### 2. Task Tracking
 
-- Create tasks as you write
-- Update task status regularly
-- Use categories for clarity
-- Include implementation details
+-   Create tasks as you write
+-   Update task status regularly
+-   Use categories for clarity
+-   Include implementation details
 
 ### 3. Version Control
 
-- Commit frequently with descriptive messages
-- Use branches for major revisions
-- Tag releases (draft versions)
+-   Commit frequently with descriptive messages
+-   Use branches for major revisions
+-   Tag releases (draft versions)
 
 ### 4. Documentation
 
-- Comment complex code blocks
-- Provide alt text for all figures
-- Keep this README updated
-- Document any custom scripts
+-   Comment complex code blocks
+-   Provide alt text for all figures
+-   Keep this README updated
+-   Document any custom scripts
 
 ## Troubleshooting
 
 ### Common Issues
 
-1. **LaTeX errors**: Check `_quarto.yml` for LaTeX settings
-2. **Missing references**: Ensure citations are in `MAref.bib`
-3. **Broken links**: Use relative paths for internal links
-4. **Task visibility**: Install ToDo-Tree extension in VS Code
+1.  **LaTeX errors**: Check `_quarto.yml` for LaTeX settings
+2.  **Missing references**: Ensure citations are in `MAref.bib`
+3.  **Broken links**: Use relative paths for internal links
+4.  **Task visibility**: Install ToDo-Tree extension in VS Code
 
 ### Getting Help
 
-- Quarto documentation: [https://quarto.org](https://quarto.org)
-- Project repository: [https://github.com/VJMeyer/submission](https://github.com/VJMeyer/submission)
-- Contact: [Valentin2meyer@gmail.com](mailto:Valentin2meyer@gmail.com)
+-   Quarto documentation: <https://quarto.org>
+-   Project repository: <https://github.com/VJMeyer/submission>
+-   Contact: [Valentin2meyer\@gmail.com](mailto:Valentin2meyer@gmail.com)
 
 ## License
 
@@ -408,7 +397,7 @@ Always use the full heading hierarchy for maximum organization:
 
 markdown
 
-```markdown
+``` markdown
 # Chapter Title {#sec-chapter}
 ## Major Section {#sec-major-section}
 ### Subsection {#sec-subsection}
@@ -419,13 +408,12 @@ markdown
 
 **Best Practices:**
 
-- Always include `{#sec-label}` for cross-referencing
-- Use descriptive, concise heading names
-- Maintain consistent capitalization (Title Case for chapters, Sentence case for sections)
-- Add `.unnumbered` for sections without numbers (e.g., References)
-- Add `.unlisted` to exclude from TOC
-- Do not manually number headings
-
+-   Always include `{#sec-label}` for cross-referencing
+-   Use descriptive, concise heading names
+-   Maintain consistent capitalization (Title Case for chapters, Sentence case for sections)
+-   Add `.unnumbered` for sections without numbers (e.g., References)
+-   Add `.unlisted` to exclude from TOC
+-   Do not manually number headings
 
 ## Text Formatting
 
@@ -433,7 +421,7 @@ markdown
 
 markdown
 
-```markdown
+``` markdown
 *italics* for emphasis
 **bold** for strong emphasis
 ***bold italics*** for very strong emphasis
@@ -448,7 +436,7 @@ markdown
 
 markdown
 
-```markdown
+``` markdown
 superscript^2^ for exponents
 subscript~2~ for chemical formulas
 ```
@@ -458,8 +446,6 @@ subscript~2~ for chemical formulas
 `<https://quarto.org/docs/authoring/markdown-basics.html>` produces: <https://quarto.org/docs/authoring/markdown-basics.html>
 
 `[Quarto Book Cross-References](https://quarto.org/docs/books/book-crossrefs.html)` produces: [Quarto Book Cross-References](https://quarto.org/docs/books/book-crossrefs.html)
-
-
 
 ## Including Code {#sec-code}
 
@@ -478,9 +464,6 @@ import pandas as pd
 print("AMTAIR is working!")
 ```
 
-
-
-
 ## Diagrams
 
 Quarto has native support for embedding Mermaid and Graphviz diagrams. This enables you to create flowcharts, sequence diagrams, state diagrams, Gantt charts, and more using a plain text syntax inspired by markdown.
@@ -495,17 +478,14 @@ flowchart LR
   C --> E[Result two]
 ```
 
-
-
-
-
-
 ### In-Line LaTeX
 
 ```{=latex}
 \renewcommand*{\labelitemi}{\textgreater}
 ```
+
 <!-- The benefits and use of in-line LaTeX and HTML are unclear to me. I am not even sure if they work properly. -->
+
 ### In-Line HTML
 
 Here's some raw inline HTML: <a>html</a>
@@ -534,9 +514,6 @@ Link:
 
 Full Notebooks are embedded in the Appendix through the \_quarto.yml file with:
 
-
-
-
 ## Embed .html result/rendering from .ipynb Notebook
 
 ### Html Graph by Notebook Cell Inclusion - (from github-pages)
@@ -546,7 +523,6 @@ Full Notebooks are embedded in the Appendix through the \_quarto.yml file with:
 ```
 
 {{< embed /AMTAIR_Prototype/data/example_carlsmith/AMTAIR_Prototype_example_carlsmith.ipynb#html_graph_visualization_from_githubpage echo=true >}}
-
 
 ### Html Graph by Notebook Cell Inclusion with Website Call?
 
@@ -558,9 +534,8 @@ https://singularitysmith.github.io/AMTAIR_Prototype/bayesian_network_carlsmith.h
 {{< embed /AMTAIR_Prototype/data/example_carlsmith/AMTAIR_Prototype_example_carlsmith.ipynb#html_graph_visualization_from_githubpage  echo=true >}}
 ```
 
-
-
 ### Rain-Sprinkler-Grass Network Rendering
+
 ```{python}
 #| label: rain_sprinkler_grass_example_network_rendering
 #| echo: true
@@ -575,29 +550,13 @@ from IPython.display import IFrame
 IFrame(src="https://singularitysmith.github.io/AMTAIR_Prototype/bayesian_network.html", width="100%", height="600px")
 ```
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 ## Lists and Enumerations
 
 ### Unordered Lists
 
 markdown
 
-```markdown
+``` markdown
 - First level item
   - Second level item (2 spaces)
     - Third level item (4 spaces)
@@ -609,7 +568,7 @@ markdown
 
 markdown
 
-```markdown
+``` markdown
 1. First item
 2. Second item
    a) Sub-item (3 spaces)
@@ -622,7 +581,7 @@ markdown
 
 markdown
 
-```markdown
+``` markdown
 Term One
 : Definition of term one with detailed explanation
   that can span multiple lines
@@ -642,7 +601,7 @@ Term Three
 
 markdown
 
-```markdown
+``` markdown
 Use `print("Hello")` for inline code
 ```
 
@@ -650,7 +609,7 @@ Use `print("Hello")` for inline code
 
 markdown
 
-````markdown
+```` markdown
 ```python
 def calculate_risk(probability, impact):
     """Calculate risk score from probability and impact."""
@@ -670,7 +629,7 @@ This is verbatim text that preserves all spacing and formatting exactly as typed
 
 markdown
 
-```markdown
+``` markdown
 > This is a blockquote for citations or important quotes.
 > It can span multiple lines.
 >
@@ -679,10 +638,9 @@ markdown
 
 ### Callout Blocks
 
-! With Callout blocks it is crucial to always have a line break after the title and the `:::` in a new line after the note !
-markdown
+! With Callout blocks it is crucial to always have a line break after the title and the `:::` in a new line after the note ! markdown
 
-```markdown
+``` markdown
 ::: {.callout-note}
 ## Note Title
 This is a note callout with important information.
@@ -715,7 +673,7 @@ Use with care in specific situations.
 
 markdown
 
-```markdown
+``` markdown
 [![Figure Caption for Display](/path/to/image.png){
   #fig-unique-identifier
   fig-scap="Short caption for list of figures"
@@ -732,11 +690,11 @@ markdown
 
 ### Figure Best Practices
 
-1. Always include comprehensive alt text
-2. Use descriptive filenames
-3. Optimize image sizes for web/PDF
-4. Maintain consistent styling
-5. Reference all figures in text: `See @fig-identifier`
+1.  Always include comprehensive alt text
+2.  Use descriptive filenames
+3.  Optimize image sizes for web/PDF
+4.  Maintain consistent styling
+5.  Reference all figures in text: `See @fig-identifier`
 
 ## Tables
 
@@ -744,7 +702,7 @@ markdown
 
 markdown
 
-```markdown
+``` markdown
 | Column 1 | Column 2 | Column 3 |
 |----------|:--------:|--------:|
 | Left     | Center   | Right   |
@@ -757,7 +715,7 @@ markdown
 
 markdown
 
-```markdown
+``` markdown
 +----------+----------+----------+
 | Header 1 | Header 2 | Header 3 |
 +==========+==========+==========+
@@ -769,7 +727,6 @@ markdown
 
 : Complex table with multiple lines {#tbl-complex}
 ```
-
 
 | Right | Left | Default | Center |
 |------:|:-----|---------|:------:|
@@ -817,7 +774,7 @@ See @tbl-panel for details, especially @tbl-second.
 
 markdown
 
-```markdown
+``` markdown
 Narrative: @author2024 argues that...
 Parenthetical: This is supported by evidence [@author2024].
 Multiple: Several studies confirm this [@author2024; @other2023].
@@ -829,7 +786,7 @@ Author only: As [-@author2024] demonstrates...
 
 bibtex
 
-```bibtex
+``` bibtex
 @article{author2024,
   title = {Article Title},
   author = {Author, First and Other, Second},
@@ -849,7 +806,7 @@ bibtex
 
 markdown
 
-```markdown
+``` markdown
 See @sec-introduction for background.
 As discussed in @sec-methodology...
 ```
@@ -858,7 +815,7 @@ As discussed in @sec-methodology...
 
 markdown
 
-```markdown
+``` markdown
 @fig-pipeline shows the workflow.
 Results are summarized in @tbl-results.
 ```
@@ -867,7 +824,7 @@ Results are summarized in @tbl-results.
 
 markdown
 
-```markdown
+``` markdown
 $$
 E = mc^2
 $$ {#eq-einstein}
@@ -881,7 +838,7 @@ Einstein's equation (@eq-einstein) shows...
 
 markdown
 
-```markdown
+``` markdown
 The probability $P(A|B) = \frac{P(B|A)P(A)}{P(B)}$
 ```
 
@@ -889,7 +846,7 @@ The probability $P(A|B) = \frac{P(B|A)P(A)}{P(B)}$
 
 markdown
 
-```markdown
+``` markdown
 $$
 \begin{align}
 \nabla \times \vec{\mathbf{B}} -\, \frac1c\, \frac{\partial\vec{\mathbf{E}}}{\partial t} &= \frac{4\pi}{c}\vec{\mathbf{j}} \\
@@ -925,7 +882,7 @@ Footnotes are to be used as much as possible!
 
 markdown
 
-```markdown
+``` markdown
 This needs clarification.^[This is an inline footnote.]
 ```
 
@@ -933,7 +890,7 @@ This needs clarification.^[This is an inline footnote.]
 
 markdown
 
-```markdown
+```` markdown
 This is important.[^1]
 
 [^1]: This is a longer footnote with multiple paragraphs.
@@ -944,19 +901,19 @@ This is important.[^1]
     ```python
     print("In footnote")
     ```
-```
+````
 
-Here is an inline note.[^index-1]
+Here is an inline note.[^1]
 
-[^index-1]: Inlines notes are easier to write, since you don't have to pick an identifier and move down to type the note.
+[^1]: Inlines notes are easier to write, since you don't have to pick an identifier and move down to type the note.
 
-Here is a footnote reference,[^index-2]
+Here is a footnote reference,[^2]
 
-[^index-2]: Here is the footnote.
+[^2]: Here is the footnote.
 
-Another Text with a footnote[^index-3] but this time a "longnote".
+Another Text with a footnote[^3] but this time a "longnote".
 
-[^index-3]: Here's one with multiple blocks.
+[^3]: Here's one with multiple blocks.
 
     Subsequent paragraphs are indented to show that they belong to the previous footnote.
 
@@ -968,14 +925,13 @@ Another Text with a footnote[^index-3] but this time a "longnote".
 
 This paragraph won't be part of the note, because it isn't indented.
 
-
 ## Appendices
 
 ### Structure
 
 markdown
 
-```markdown
+``` markdown
 # Appendices {.unnumbered}
 
 ## Appendix A: Technical Details {#sec-appendix-a .unnumbered}
@@ -987,11 +943,11 @@ markdown
 
 ### Best Practices for Appendices
 
-1. Include all supplementary material
-2. Reference from main text
-3. Number consistently
-4. Provide clear descriptions
-5. Maintain same formatting standards
+1.  Include all supplementary material
+2.  Reference from main text
+3.  Number consistently
+4.  Provide clear descriptions
+5.  Maintain same formatting standards
 
 ## Glossary and Abbreviations
 
@@ -999,7 +955,7 @@ markdown
 
 markdown
 
-```markdown
+``` markdown
 # Glossary {.unnumbered}
 Term
 : Definition
@@ -1019,51 +975,15 @@ DL
 
 ### Jupyter Notebook Embedding
 
-
-
-```markdown
+``` markdown
 {{< embed notebook.ipynb#cell-label >}}
 ```
 
 ### Mermaid Diagrams
 
+\``markdown`f3175f2a-e8a0-4436-be12-b33925b6d220 31b8e172-b470-440e-83d8-e6b185028602:dAB5AHAAZQA6AFoAZwBBAHoAQQBEAEUAQQBOAHcAQQAxAEEARwBZAEEATQBnAEIAaABBAEMAMABBAFoAUQBBADQAQQBHAEUAQQBNAEEAQQB0AEEARABRAEEATgBBAEEAegBBAEQAWQBBAEwAUQBCAGkAQQBHAFUAQQBNAFEAQQB5AEEAQwAwAEEAWQBnAEEAegBBAEQATQBBAE8AUQBBAHkAQQBEAFUAQQBZAGcAQQAyAEEARwBRAEEATQBnAEEAeQBBAEQAQQBBAAoAcABvAHMAaQB0AGkAbwBuADoATgBRAEEAMABBAEQAWQBBAE0AQQBBAHcAQQBBAD0APQAKAHAAcgBlAGYAaQB4ADoACgBzAG8AdQByAGMAZQA6AFkAQQBCAGcAQQBHAEEAQQBlAHcAQgB0AEEARwBVAEEAYwBnAEIAdABBAEcARQBBAGEAUQBCAGsAQQBIADAAQQBDAGcAQgBuAEEASABJAEEAWQBRAEIAdwBBAEcAZwBBAEkAQQBCAFUAQQBFAFEAQQBDAGcAQQBnAEEAQwBBAEEASQBBAEEAZwBBAEUARQBBAFcAdwBCAFQAQQBIAFEAQQBZAFEAQgB5AEEASABRAEEAWABRAEEAZwBBAEMAMABBAEwAUQBBACsAQQBDAEEAQQBRAGcAQgA3AEEARQBRAEEAWgBRAEIAagBBAEcAawBBAGMAdwBCAHAAQQBHADgAQQBiAGcAQgA5AEEAQQBvAEEASQBBAEEAZwBBAEMAQQBBAEkAQQBCAEMAQQBDAEEAQQBMAFEAQQB0AEEARAA0AEEAZgBBAEIAWgBBAEcAVQBBAGMAdwBCADgAQQBDAEEAQQBRAHcAQgBiAEEARQBFAEEAWQB3AEIAMABBAEcAawBBAGIAdwBCAHUAQQBDAEEAQQBNAFEAQgBkAEEAQQBvAEEASQBBAEEAZwBBAEMAQQBBAEkAQQBCAEMAQQBDAEEAQQBMAFEAQQB0AEEARAA0AEEAZgBBAEIATwBBAEcAOABBAGYAQQBBAGcAQQBFAFEAQQBXAHcAQgBCAEEARwBNAEEAZABBAEIAcABBAEcAOABBAGIAZwBBAGcAQQBEAEkAQQBYAFEAQQBLAEEAQwBBAEEASQBBAEEAZwBBAEMAQQBBAFEAdwBBAGcAQQBDADAAQQBMAFEAQQArAEEAQwBBAEEAUgBRAEIAYgBBAEUAVQBBAGIAZwBCAGsAQQBGADAAQQBDAGcAQQBnAEEAQwBBAEEASQBBAEEAZwBBAEUAUQBBAEkAQQBBAHQAQQBDADAAQQBQAGcAQQBnAEEARQBVAEEAQwBnAEIAZwBBAEcAQQBBAFkAQQBCAGcAQQBBAG8AQQBDAGcAQQBLAEEAQQBvAEEASQB3AEEAagBBAEMAQQBBAFQAQQBCAHAAQQBHADQAQQBaAFEAQQBnAEEARQBJAEEAYwBnAEIAbABBAEcARQBBAGEAdwBCAHoAQQBDAEEAQQBZAFEAQgB1AEEARwBRAEEASQBBAEIAVABBAEgAQQBBAFkAUQBCAGoAQQBHAGsAQQBiAGcAQgBuAEEAQQBvAEEAQwBnAEEAagBBAEMATQBBAEkAdwBBAGcAQQBGAE0AQQBjAEEAQgBoAEEARwBNAEEAYQBRAEIAdQBBAEcAYwBBAEkAQQBCAFMAQQBIAFUAQQBiAEEAQgBsAEEASABNAEEAQwBnAEEAeABBAEMANABBAEkAQQBBAHEAQQBDAG8AQQBRAGcAQgBsAEEASABRAEEAZAB3AEIAbABBAEcAVQBBAGIAZwBBAGcAQQBIAE0AQQBaAFEAQgBqAEEASABRAEEAYQBRAEIAdgBBAEcANABBAGMAdwBBAHEAQQBDAG8AQQBPAGcAQQBnAEEARABJAEEASQBBAEIAaQBBAEcAdwBBAFkAUQBCAHUAQQBHAHMAQQBJAEEAQgBzAEEARwBrAEEAYgBnAEIAbABBAEgATQBBAEMAZwBBAHkAQQBDADQAQQBJAEEAQQBxAEEAQwBvAEEAUQBnAEIAbABBAEgAUQBBAGQAdwBCAGwAQQBHAFUAQQBiAGcAQQBnAEEASABBAEEAWQBRAEIAeQBBAEcARQBBAFoAdwBCAHkAQQBHAEUAQQBjAEEAQgBvAEEASABNAEEASwBnAEEAcQBBAEQAbwBBAEkAQQBBAHgAQQBDAEEAQQBZAGcAQgBzAEEARwBFAEEAYgBnAEIAcgBBAEMAQQBBAGIAQQBCAHAAQQBHADQAQQBaAFEAQQBLAEEARABNAEEATABnAEEAZwBBAEMAbwBBAEsAZwBCAEIAQQBIAEkAQQBiAHcAQgAxAEEARwA0AEEAWgBBAEEAZwBBAEcATQBBAGIAdwBCAGsAQQBHAFUAQQBJAEEAQgBpAEEARwB3AEEAYgB3AEIAagBBAEcAcwBBAGMAdwBBAHEAQQBDAG8AQQBPAGcAQQBnAEEARABFAEEASQBBAEIAaQBBAEcAdwBBAFkAUQBCAHUAQQBHAHMAQQBJAEEAQgBzAEEARwBrAEEAYgBnAEIAbABBAEMAQQBBAFkAZwBCAGwAQQBHAFkAQQBiAHcAQgB5AEEARwBVAEEASQBBAEIAaABBAEcANABBAFoAQQBBAGcAQQBHAEUAQQBaAGcAQgAwAEEARwBVAEEAYwBnAEEASwBBAEQAUQBBAEwAZwBBAGcAQQBDAG8AQQBLAGcAQgBCAEEASABJAEEAYgB3AEIAMQBBAEcANABBAFoAQQBBAGcAQQBHAFkAQQBhAFEAQgBuAEEASABVAEEAYwBnAEIAbABBAEgATQBBAEwAdwBCADAAQQBHAEUAQQBZAGcAQgBzAEEARwBVAEEAYwB3AEEAcQBBAEMAbwBBAE8AZwBBAGcAQQBEAEUAQQBJAEEAQgBpAEEARwB3AEEAWQBRAEIAdQBBAEcAcwBBAEkAQQBCAHMAQQBHAGsAQQBiAGcAQgBsAEEAQwBBAEEAWQBnAEIAbABBAEcAWQBBAGIAdwBCAHkAQQBHAFUAQQBJAEEAQgBoAEEARwA0AEEAWgBBAEEAZwBBAEcARQBBAFoAZwBCADAAQQBHAFUAQQBjAGcAQQBLAEEARABVAEEATABnAEEAZwBBAEMAbwBBAEsAZwBCAEIAQQBHAFkAQQBkAEEAQgBsAEEASABJAEEASQBBAEIAbwBBAEcAVQBBAFkAUQBCAGsAQQBHAGsAQQBiAGcAQgBuAEEASABNAEEASwBnAEEAcQBBAEQAbwBBAEkAQQBBAHgAQQBDAEEAQQBZAGcAQgBzAEEARwBFAEEAYgBnAEIAcgBBAEMAQQBBAGIAQQBCAHAAQQBHADQAQQBaAFEAQQBLAEEARABZAEEATABnAEEAZwBBAEMAbwBBAEsAZwBCAEMAQQBHAFUAQQBkAEEAQgAzAEEARwBVAEEAWgBRAEIAdQBBAEMAQQBBAGIAQQBCAHAAQQBIAE0AQQBkAEEAQQBnAEEARwBrAEEAZABBAEIAbABBAEcAMABBAGMAdwBBAHEAQQBDAG8AQQBPAGcAQQBnAEEARQA0AEEAYgB3AEEAZwBBAEcASQBBAGIAQQBCAGgAQQBHADQAQQBhAHcAQQBnAEEARwB3AEEAYQBRAEIAdQBBAEcAVQBBAGMAdwBBAGcAQQBIAFUAQQBiAGcAQgBzAEEARwBVAEEAYwB3AEIAegBBAEMAQQBBAFkAdwBCAHYAQQBHADQAQQBkAEEAQgBoAEEARwBrAEEAYgBnAEIAcABBAEcANABBAFoAdwBBAGcAQQBHADAAQQBkAFEAQgBzAEEASABRAEEAYQBRAEIAdwBBAEcAdwBBAFoAUQBBAGcAQQBIAEEAQQBZAFEAQgB5AEEARwBFAEEAWgB3AEIAeQBBAEcARQBBAGMAQQBCAG8AQQBIAE0AQQBDAGcAQQBLAEEAQwBNAEEASQB3AEEAagBBAEMAQQBBAFUAQQBCAGgAQQBHAGMAQQBaAFEAQQBnAEEARQBJAEEAYwBnAEIAbABBAEcARQBBAGEAdwBCAHoAQQBBAG8AQQBZAEEAQgBnAEEARwBBAEEAYgBRAEIAaABBAEgASQBBAGEAdwBCAGsAQQBHADgAQQBkAHcAQgB1AEEAQQBvAEEAZQB3AEIANwBBAEQAdwBBAEkAQQBCAHcAQQBHAEUAQQBaAHcAQgBsAEEARwBJAEEAYwBnAEIAbABBAEcARQBBAGEAdwBBAGcAQQBEADQAQQBmAFEAQgA5AEEAQQBvAEEAWQBBAEIAZwBBAEcAQQBBAFkAQQBBAEsAQQBBAG8AQQBJAHcAQQBqAEEAQwBBAEEAUQB3AEIAdgBBAEcAMABBAGIAUQBCAGwAQQBHADQAQQBkAEEAQgB6AEEAQwBBAEEAWQBRAEIAdQBBAEcAUQBBAEkAQQBCAE4AQQBHAFUAQQBkAEEAQgBoAEEARwBRAEEAWQBRAEIAMABBAEcARQBBAEMAZwBBAEsAQQBDAE0AQQBJAHcAQQBqAEEAQwBBAEEAUwBBAEIAVQBBAEUAMABBAFQAQQBBAGcAQQBFAE0AQQBiAHcAQgB0AEEARwAwAEEAWgBRAEIAdQBBAEgAUQBBAGMAdwBBAEsAQQBBAG8AQQBDAGcAQgBnAEEARwBBAEEAWQBBAEIAdABBAEcARQBBAGMAZwBCAHIAQQBHAFEAQQBiAHcAQgAzAEEARwA0AEEAQwBnAEEAOABBAEMARQBBAEwAUQBBAHQAQQBDAEEAQQBWAEEAQgBvAEEARwBrAEEAYwB3AEEAZwBBAEcAawBBAGMAdwBBAGcAQQBHAEUAQQBJAEEAQgBqAEEARwA4AEEAYgBRAEIAdABBAEcAVQBBAGIAZwBCADAAQQBDAEEAQQBiAGcAQgB2AEEASABRAEEASQBBAEIAegBBAEcAZwBBAGIAdwBCADMAQQBHADQAQQBJAEEAQgBwAEEARwA0AEEASQBBAEIAdgBBAEgAVQBBAGQAQQBCAHcAQQBIAFUAQQBkAEEAQQBnAEEAQwAwAEEATABRAEEAKwBBAEEAbwBBAFkAQQBCAGcAQQBHAEEAQQAKAHMAdQBmAGYAaQB4ADoA:31b8e172-b470-440e-83d8-e6b185028602
 
-
-````markdown
-```{mermaid}
-graph TD
-    A[Start] --> B{Decision}
-    B -->|Yes| C[Action 1]
-    B -->|No| D[Action 2]
-    C --> E[End]
-    D --> E
-````
-
-
-
-## Line Breaks and Spacing
-
-### Spacing Rules
-1. **Between sections**: 2 blank lines
-2. **Between paragraphs**: 1 blank line
-3. **Around code blocks**: 1 blank line before and after
-4. **Around figures/tables**: 1 blank line before and after
-5. **After headings**: 1 blank line
-6. **Between list items**: No blank lines unless containing multiple paragraphs
-
-### Page Breaks
-```markdown
-{{< pagebreak >}}
-````
-
-## Comments and Metadata
-
-### HTML Comments
-
-
-```markdown
-<!-- This is a comment not shown in output -->
-```
+```         
 
 
 
@@ -1087,12 +1007,11 @@ Write and track tasks with HTML comments in markdown blocks or with `verbatim co
 `<!-- [ ] CREATE: {#fig-name}: "Figure description" -->`
 ```
 
-
 ### 1. General Tasks
 
 In markdown blocks or with `verbatim code` ticks:
 
-```markdown
+``` markdown
 <!-- [ ] TODO: General task description -->
 
 <!-- [ ] TODO: High-priority task with deadline (2024-12-31) -->
@@ -1109,7 +1028,7 @@ In markdown blocks or with `verbatim code` ticks:
 
 In markdown blocks or with `verbatim code` ticks:
 
-```markdown
+``` markdown
 `<!-- [ ] FIND: @missing-citation-key: "Description of needed source, keywords, search terms" -->`
 
 `<!-- [ ] VERIFY: @suggested-citation: "Author (Year). Title. Journal." [Include BibTeX if available] -->`
@@ -1123,7 +1042,7 @@ In markdown blocks or with `verbatim code` ticks:
 
 In markdown blocks or with `verbatim code` ticks:
 
-```markdown
+``` markdown
 <!-- [ ] CREATE: {#fig-diagram-name}: "Description of needed diagram, style, data to include" -->
 
 <!-- [ ] FIND: {#fig-example-image}: "Stock photo of X, preferably showing Y" -->
@@ -1137,7 +1056,7 @@ In markdown blocks or with `verbatim code` ticks:
 
 In markdown blocks or with `verbatim code` ticks:
 
-```markdown
+``` markdown
 <!-- [ ] WRITE: Section 3.2 - Methodology details -->
 
 <!-- [ ] EXPAND: Background section needs 500 more words -->
@@ -1151,7 +1070,7 @@ In markdown blocks or with `verbatim code` ticks:
 
 In markdown blocks or with `verbatim code` ticks:
 
-```markdown
+``` markdown
 <!-- [ ] FIX: Code block in section 2.3 has syntax error -->
 
 <!-- [ ] TEST: Jupyter notebook embedding -->
@@ -1167,7 +1086,7 @@ In markdown blocks or with `verbatim code` ticks:
 
 In markdown blocks or with `verbatim code` ticks:
 
-```markdown
+``` markdown
 <!-- [ ] Task description -->
 ```
 
@@ -1175,7 +1094,7 @@ In markdown blocks or with `verbatim code` ticks:
 
 Either markdown blocks or `verbatim code` ticks or without (to remain hidden in output):
 
-```markdown
+``` markdown
 <!-- [x] Task description (completed 2024-01-20) -->
 ```
 
@@ -1183,7 +1102,7 @@ Either markdown blocks or `verbatim code` ticks or without (to remain hidden in 
 
 markdown
 
-```markdown
+``` markdown
 <!-- [-] Task description (verified and archived) -->
 ```
 
@@ -1193,7 +1112,7 @@ markdown
 
 markdown
 
-```markdown
+``` markdown
 <!-- [ ] Major task with extensive details
   
   Background:
@@ -1221,7 +1140,7 @@ markdown
 
 markdown
 
-```markdown
+``` markdown
 <!-- [ ] PRIMARY: Main task description
   Related tasks:
   - See also: Task in Chapter 2
@@ -1234,7 +1153,7 @@ markdown
 
 markdown
 
-```markdown
+``` markdown
 <!-- [ ] IF: Hypothesis confirmed in Chapter 3
      THEN: Add supporting evidence section
      ELSE: Revise theoretical framework -->
@@ -1244,24 +1163,23 @@ markdown
 
 ### 1. Task Creation Guidelines
 
-- Create tasks immediately when identified
-- Be specific and actionable
-- Include context and success criteria
-- Link related tasks
+-   Create tasks immediately when identified
+-   Be specific and actionable
+-   Include context and success criteria
+-   Link related tasks
 
 ### 2. Task Organization
 
-- Group related tasks together
-- Place tasks near or inside relevant content
-- Use consistent formatting
-- Maintain task hierarchy
-
+-   Group related tasks together
+-   Place tasks near or inside relevant content
+-   Use consistent formatting
+-   Maintain task hierarchy
 
 ### 3. Priority System
 
 In markdown blocks or with `verbatim code` ticks:
 
-```markdown
+``` markdown
 <!-- [ ] URGENT: Task needing immediate attention -->
 
 <!-- [ ] HIGH: Task important for next milestone -->
@@ -1269,10 +1187,9 @@ In markdown blocks or with `verbatim code` ticks:
 <!-- [ ] MEDIUM: Standard priority task -->
 
 <!-- [ ] LOW: Nice-to-have improvement -->
-
 ```
 
-```markdown
+``` markdown
 #### Simple "One-line tasks"
 
 Use Code ticks and html comment and task format for tasks distinctly visible across all formats including the ToDo-Tree overview:
@@ -1286,19 +1203,19 @@ Use html comment and task format for open or uncertain tasks, visible in the .qm
 
 
 #### More Complex Tasks with Notes
+```
 
-```         
 <!-- [ ] Task Title: short description-->
 
-  More Information about task
+More Information about task
 
-  Relevant notes
+Relevant notes
 
-  Step-by-step implementation Plan
+Step-by-step implementation Plan
 
-  Etc.
+Etc.
 
-```
+```         
 
 #### Completed Tasks
 
@@ -1321,7 +1238,7 @@ Mark and remove completed tasks from ToDo-Tree by adding a minus in the brackets
 
 In markdown blocks or with `verbatim code` ticks:
 
-```markdown
+``` markdown
 <!-- [ ] TODO: Write introduction paragraph
   Context: Need to introduce the concept of X
   Requirements: 
@@ -1336,7 +1253,7 @@ In markdown blocks or with `verbatim code` ticks:
 
 In markdown blocks or with `verbatim code` ticks:
 
-```markdown
+``` markdown
 <!-- [ ] TODO: Write introduction paragraph
   Progress:
   - [x] Defined key terms
@@ -1349,7 +1266,7 @@ In markdown blocks or with `verbatim code` ticks:
 
 In markdown blocks or with `verbatim code` ticks:
 
-```markdown
+``` markdown
 <!-- [x] TODO: Write introduction paragraph (completed 2024-02-14)
   Final version includes all requirements
   Word count: 523
@@ -1361,32 +1278,23 @@ In markdown blocks or with `verbatim code` ticks:
 
 In markdown blocks or with `verbatim code` ticks:
 
-```markdown
+``` markdown
 <!-- [-] TODO: Write introduction paragraph (archived 2024-02-20)
   Moved to version control history
 -->
 ```
 
-
-
 ## Best Practices Summary --- ALWAYS CONSISTENTLY:
 
-1. **Be Specific**: Tasks should be actionable and measurable
-2. **Stay Organized**: Group related tasks and maintain hierarchy
-3. **Archive Completed**: Keep task list manageable
-4. **Use Categories**: Leverage task types for better organization
-5. **Add Context**: Include enough detail for future reference
-6. **Link Related**: Connect interdependent tasks
-7. **Maintain Consistency**: Use standard formatting throughout
-8. **Use correct formatting**: Deploy the correct formatting and fix any inconsistencies
-9. **Always add extra line breaks**: Add additional line breaks between and around tasks
-
-
-
-
-
-
-
+1.  **Be Specific**: Tasks should be actionable and measurable
+2.  **Stay Organized**: Group related tasks and maintain hierarchy
+3.  **Archive Completed**: Keep task list manageable
+4.  **Use Categories**: Leverage task types for better organization
+5.  **Add Context**: Include enough detail for future reference
+6.  **Link Related**: Connect interdependent tasks
+7.  **Maintain Consistency**: Use standard formatting throughout
+8.  **Use correct formatting**: Deploy the correct formatting and fix any inconsistencies
+9.  **Always add extra line breaks**: Add additional line breaks between and around tasks
 
 # Tagging and Highlighting System for Content Merging
 
@@ -1400,7 +1308,7 @@ When merging content from multiple sources, it's crucial to identify and manage 
 
 In markdown blocks or with `verbatim code` ticks:
 
-```markdown
+``` markdown
 ::: {.duplicate-content data-source="Chapter2.qmd" data-section="2.3"}
 This paragraph appears to be duplicated from Chapter 2, Section 2.3.
 Consider consolidating or removing.
@@ -1413,7 +1321,7 @@ Consider consolidating or removing.
 
 In markdown blocks or with `verbatim code` ticks:
 
-```markdown
+``` markdown
 ::: {.redundant-content}
 [This section covers similar ground to Section 3.2 but with less detail]{.mark style="background-color: #ffeb3b"}
 :::
@@ -1425,7 +1333,7 @@ In markdown blocks or with `verbatim code` ticks:
 
 In markdown blocks or with `verbatim code` ticks:
 
-```markdown
+``` markdown
 ::: {.superseded-content data-better-version="Chapter4.qmd#sec-4-5"}
 This explanation is superseded by a more comprehensive version in Chapter 4, Section 4.5
 :::
@@ -1437,7 +1345,7 @@ This explanation is superseded by a more comprehensive version in Chapter 4, Sec
 
 In markdown blocks or with `verbatim code` ticks:
 
-```markdown
+``` markdown
 ::: {.merge-candidate data-merge-with="Section 5.2"}
 **MERGE CANDIDATE**: This content could be combined with Section 5.2 for better flow.
 
@@ -1453,7 +1361,7 @@ Original content here...
 
 In markdown blocks or with `verbatim code` ticks:
 
-```markdown
+``` markdown
 [Duplicate content - exact match]{style="background-color: #ff6b6b; color: white"}
 [Redundant content - similar coverage]{style="background-color: #ffeb3b"}
 [Better version exists elsewhere]{style="background-color: #4ecdc4"}
@@ -1465,7 +1373,7 @@ In markdown blocks or with `verbatim code` ticks:
 
 In markdown blocks or with `verbatim code` ticks:
 
-```markdown
+``` markdown
 ::: {style="border-left: 5px solid #ff6b6b; padding-left: 10px"}
 This entire section is duplicated elsewhere.
 :::
@@ -1475,7 +1383,7 @@ This entire section is duplicated elsewhere.
 
 In markdown blocks or with `verbatim code` ticks:
 
-```markdown
+``` markdown
 This paragraph contains [duplicate phrase]{.duplicate} that appears 
 in multiple locations.
 ```
@@ -1486,7 +1394,7 @@ in multiple locations.
 
 In markdown blocks or with `verbatim code` ticks:
 
-```markdown
+``` markdown
 ::: {.content-status 
      data-status="duplicate"
      data-original-source="intro.qmd#para-3"
@@ -1503,7 +1411,7 @@ The original in intro.qmd is most comprehensive.
 
 In markdown blocks or with `verbatim code` ticks:
 
-```markdown
+``` markdown
 <!-- 
   STATUS: Duplicate
   ORIGINAL: intro.qmd#para-3
@@ -1518,7 +1426,7 @@ In markdown blocks or with `verbatim code` ticks:
 
 In markdown blocks or with `verbatim code` ticks:
 
-```markdown
+``` markdown
 <!-- PHASE 1: Initial marking -->
 <!-- [ ] TODO: Mark all duplicate content in Chapter 1 -->
 <!-- [ ] TODO: Identify redundant sections in Chapter 2 -->
@@ -1529,7 +1437,7 @@ In markdown blocks or with `verbatim code` ticks:
 
 In markdown blocks or with `verbatim code` ticks:
 
-```markdown
+``` markdown
 <!-- COMPARISON NEEDED -->
 ::: {.comparison-block}
 **Version A (Current)**: 
@@ -1546,7 +1454,7 @@ More detailed explanation of concept X with examples.
 
 In markdown blocks or with `verbatim code` ticks:
 
-```markdown
+``` markdown
 <!-- CONSOLIDATION PLAN -->
 ::: {.consolidation-plan}
 1. Keep primary version in Section 2.3
@@ -1562,7 +1470,7 @@ In markdown blocks or with `verbatim code` ticks:
 
 markdown
 
-```markdown
+``` markdown
 <!-- Common duplicate indicators -->
 - "As mentioned earlier"
 - "As discussed in"
@@ -1575,7 +1483,7 @@ markdown
 
 In markdown blocks or with `verbatim code` ticks:
 
-```markdown
+``` markdown
 <!-- [ ] Check for repeated definitions -->
 <!-- [ ] Identify similar examples -->
 <!-- [ ] Find redundant explanations -->
@@ -1587,27 +1495,27 @@ In markdown blocks or with `verbatim code` ticks:
 
 ### 1. Pre-Merge Preparation
 
-- Mark all content systematically
-- Create comparison documents
-- Track all locations of similar content
-- Document rationale for decisions
+-   Mark all content systematically
+-   Create comparison documents
+-   Track all locations of similar content
+-   Document rationale for decisions
 
 ### 2. During Merge Process
 
-- Keep best version based on:
-    - Completeness
-    - Clarity
-    - Placement in document flow
-    - Citation quality
-    - Figure/table quality
+-   Keep best version based on:
+    -   Completeness
+    -   Clarity
+    -   Placement in document flow
+    -   Citation quality
+    -   Figure/table quality
 
 ### 3. Post-Merge Cleanup
 
-- Update all cross-references
-- Remove duplicate citations
-- Consolidate figures/tables
-- Harmonize terminology
-- Verify logical flow
+-   Update all cross-references
+-   Remove duplicate citations
+-   Consolidate figures/tables
+-   Harmonize terminology
+-   Verify logical flow
 
 ## Templates for Common Scenarios
 
@@ -1615,7 +1523,7 @@ In markdown blocks or with `verbatim code` ticks:
 
 markdown
 
-```markdown
+``` markdown
 ::: {.duplicate-definition data-term="Bayesian Network"}
 **DUPLICATE DEFINITION**: "Bayesian Network" is defined in:
 - Section 2.1 (basic definition)
@@ -1630,7 +1538,7 @@ Action: Keep technical definition in 3.3, reference from 2.1
 
 markdown
 
-```markdown
+``` markdown
 ::: {.redundant-example}
 **REDUNDANT EXAMPLE**: Rain-Sprinkler-Lawn appears in:
 1. Introduction (brief mention)
@@ -1645,7 +1553,7 @@ Action: Keep detailed version, add cross-references from others
 
 markdown
 
-```markdown
+``` markdown
 ::: {.section-overlap}
 **SECTION OVERLAP**: 
 - Section 3.2 "Methodology Overview" 
@@ -1666,7 +1574,7 @@ Recommendation: Merge into 3.2, incorporate examples from 4.1
 
 markdown
 
-```markdown
+``` markdown
 ::: {.merge-status-dashboard}
 **Chapter 2 Merge Status**
 - Total sections: 15
@@ -1682,7 +1590,7 @@ markdown
 
 markdown
 
-```markdown
+``` markdown
 ::: {.merge-decision-log}
 **Merge Decisions - 2024-02-15**
 1. **Section 2.3 vs 4.1**: Kept 2.3, removed 4.1
@@ -1698,7 +1606,7 @@ markdown
 
 In markdown blocks or with `verbatim code` ticks:
 
-```markdown
+``` markdown
 <!-- [ ] All duplicate markers removed -->
 <!-- [ ] All merge decisions documented -->
 <!-- [ ] Cross-references updated -->
@@ -1711,7 +1619,7 @@ In markdown blocks or with `verbatim code` ticks:
 
 In markdown blocks or with `verbatim code` ticks:
 
-```markdown
+``` markdown
 <!-- FINAL CHECK: Content Merging -->
 - [ ] No duplicate content remains untagged
 - [ ] All redundancies resolved
@@ -1723,145 +1631,147 @@ In markdown blocks or with `verbatim code` ticks:
 
 # Master Thesis Checklist for Quarto Projects
 
-
 ### Content Creation Checklist
 
 #### Document Structure
 
-- [ ] All chapters following consistent structure
-- [ ] Proper heading hierarchy (##, ###, ####)
-- [ ] Section labels added ({#sec-label})
+-   [ ] All chapters following consistent structure
+-   [ ] Proper heading hierarchy (##, ###, ####)
+-   [ ] Section labels added ({#sec-label})
 
 #### Text Quality
 
-- [ ] American spelling throughout (run spell check)
-- [ ] Consistent terminology (maintain glossary, add entries)
-- [ ] Active voice preferred
-- [ ] Sentences clear and concise
-- [ ] Paragraphs focused on single ideas
-- [ ] Transitions between sections smooth
-- [ ] No widows or orphans in paragraphs
+-   [ ] American spelling throughout (run spell check)
+-   [ ] Consistent terminology (maintain glossary, add entries)
+-   [ ] Active voice preferred
+-   [ ] Sentences clear and concise
+-   [ ] Paragraphs focused on single ideas
+-   [ ] Transitions between sections smooth
+-   [ ] No widows or orphans in paragraphs
 
 #### Formatting Elements
 
-- [ ] Lists properly formatted and consistent
-- [ ] Code blocks with appropriate syntax highlighting
-- [ ] Blockquotes used for citations
-- [ ] Callout boxes for important information
-- [ ] Mathematical equations properly formatted
-- [ ] Footnotes used wherever possible
-- [ ] Page breaks inserted where needed
+-   [ ] Lists properly formatted and consistent
+-   [ ] Code blocks with appropriate syntax highlighting
+-   [ ] Blockquotes used for citations
+-   [ ] Callout boxes for important information
+-   [ ] Mathematical equations properly formatted
+-   [ ] Footnotes used wherever possible
+-   [ ] Page breaks inserted where needed
 
 #### Figures and Tables
 
-- [ ] All figures have unique identifiers (#fig-name)
-- [ ] Comprehensive alt text for accessibility
-- [ ] Short captions for list of figures
-- [ ] Full captions explaining content
-- [ ] Consistent sizing and alignment
-- [ ] All figures referenced in text
-- [ ] Source attribution included
-- [ ] File formats optimized (PNG/SVG for web, PDF for print)
-- [ ] Tables have proper headers
-- [ ] Table captions descriptive
-- [ ] All tables referenced in text
+-   [ ] All figures have unique identifiers (#fig-name)
+-   [ ] Comprehensive alt text for accessibility
+-   [ ] Short captions for list of figures
+-   [ ] Full captions explaining content
+-   [ ] Consistent sizing and alignment
+-   [ ] All figures referenced in text
+-   [ ] Source attribution included
+-   [ ] File formats optimized (PNG/SVG for web, PDF for print)
+-   [ ] Tables have proper headers
+-   [ ] Table captions descriptive
+-   [ ] All tables referenced in text
 
 #### Citations and References
 
-- [ ] All claims supported by citations
-- [ ] Citation style consistent throughout
-- [ ] Page numbers included where appropriate
-- [ ] Bibliography entries complete
-- [ ] No missing citations (check FIND tasks)
-- [ ] No duplicate citations
-- [ ] Citations verified (check VERIFY tasks)
-- [ ] DOIs/URLs included and working
+-   [ ] All claims supported by citations
+-   [ ] Citation style consistent throughout
+-   [ ] Page numbers included where appropriate
+-   [ ] Bibliography entries complete
+-   [ ] No missing citations (check FIND tasks)
+-   [ ] No duplicate citations
+-   [ ] Citations verified (check VERIFY tasks)
+-   [ ] DOIs/URLs included and working
 
 #### Cross-References
 
-- [ ] All sections labeled for referencing
-- [ ] Figure references working (`@fig-name`)
-- [ ] Table references working (`@tbl-name`)
-- [ ] Section references working (`@sec-name`)
-- [ ] No broken cross-references
+-   [ ] All sections labeled for referencing
+-   [ ] Figure references working (`@fig-name`)
+-   [ ] Table references working (`@tbl-name`)
+-   [ ] Section references working (`@sec-name`)
+-   [ ] No broken cross-references
 
 ## Revision Phase
 
 ### Content Review
 
-- [ ] Argument flow logical and clear
-- [ ] Evidence supports all claims
-- [ ] Counterarguments addressed
-- [ ] Conclusions follow from evidence
-- [ ] No redundant content (check merge tags)
-- [ ] All promises in introduction fulfilled
-
+-   [ ] Argument flow logical and clear
+-   [ ] Evidence supports all claims
+-   [ ] Counterarguments addressed
+-   [ ] Conclusions follow from evidence
+-   [ ] No redundant content (check merge tags)
+-   [ ] All promises in introduction fulfilled
 
 ### Task Completion
 
-- [ ] All TODO items addressed or documented
-- [ ] All FIND items researched
-- [ ] All VERIFY items confirmed
-- [ ] All CREATE items completed
-- [ ] Task status updated ([], [x], [-])
-- [ ] Progress summaries updated
-
-
-
+-   [ ] All TODO items addressed or documented
+-   [ ] All FIND items researched
+-   [ ] All VERIFY items confirmed
+-   [ ] All CREATE items completed
+-   [ ] Task status updated (\[\], \[x\], \[-\])
+-   [ ] Progress summaries updated
 
 ## ⚡ Prime Directives
-1. **Quarto supremacy** – exploit *every* reliable feature Quarto offers.  
-2. **Four-level heading discipline** – never skip a level.  
-3. **Redundancy tagged, not deleted** – see § Tagging System.  
-4. **Checklists rule every commit** – see § Rigorous Checklist.  
-5. **Footnotes galore** – default to footnotes for nuance, citations, side quests.  
-6. **Glossary, TOC, LOF, LOT, appendices, cross-refs** – keep fully synched; update on *every* save.  
-7. **One thought ≈ one line-break** – err on the side of whitespace also when formatting syntax.
 
-
+1.  **Quarto supremacy** – exploit *every* reliable feature Quarto offers.\
+2.  **Four-level heading discipline** – never skip a level.\
+3.  **Redundancy tagged, not deleted** – see § Tagging System.\
+4.  **Checklists rule every commit** – see § Rigorous Checklist.\
+5.  **Footnotes galore** – default to footnotes for nuance, citations, side quests.\
+6.  **Glossary, TOC, LOF, LOT, appendices, cross-refs** – keep fully synched; update on *every* save.\
+7.  **One thought ≈ one line-break** – err on the side of whitespace also when formatting syntax.
 
 ## Quarto Syntax Cheat-Sheet ↔ Best-Practice
 
-| Feature | Minimal Syntax | Best-Practice Guidance |
-|---------|----------------|------------------------|
-| **Headings (h1–h4)** | `# `, `## `, `### `, `#### ` | Use all four levels; propose deeper sub-heads via `<!-- SUGGEST-H5: … -->`. |
-| **Paragraph breaks** | blank line | Generally wrap at 80 chars ⇢ git-diff clarity. |
-| **Bold / *Italic* / ***Both*** / ~~Strike~~** | `**b**`, `*i*`, `***bi***`, `~~del~~` | Reserve bold for *semantic* emphasis, italics for *titles & meta*. |
-| **Lists** | `-`, `*`, `1.` | Rarely nest > 3 levels; indent 2 spaces per level. |
-| **Callouts** | `::: {.callout-note}` | Use `.tip`, `.warning`, `.important`, `.duplicate` (custom) for tagging; close with `:::`. |
-| **Blockquotes** | `>` | Ideal for verbatim interview excerpts; cite speaker. |
-| **Code blocks** | ```` ```r ```` | Always declare language; add caption: ```````{python} fig.cap="…"```. |
-| **Figures & Tables** | `![](fig.png){#fig-id}` | Always add `{#fig-id fig-cap="…"};` etc. cross-ref with `@fig-id`. |
-| **Cross-refs** | `@sec-intro`, `@tbl-results` | Prefix: `sec-`, `fig-`, `tbl-`, `eq-`. |
-| **Citations** | `[@smith2024]` | Maintain `.bib` via Zotero; nightly `quarto check`. |
-| **Footnotes** | `[^1]` | Overuse for tangents, mini-proofs, data caveats. |
-| **Glossary** | `term: Definition` | Append `glossary: true` in task; link in-text `{@term}`. |
-| **Comments** | `<!-- [ ] TODO: … -->` | Use for tasks; parse with *Todo Tree* VS Code plugin. |
-
++---------------------------------------------------+---------------------------------------+--------------------------------------------------------------------------------------------+
+| Feature                                           | Minimal Syntax                        | Best-Practice Guidance                                                                     |
++===================================================+=======================================+============================================================================================+
+| **Headings (h1–h4)**                              | `#`, `##`, `###`, `####`              | Use all four levels; propose deeper sub-heads via `<!-- SUGGEST-H5: … -->`.                |
++---------------------------------------------------+---------------------------------------+--------------------------------------------------------------------------------------------+
+| **Paragraph breaks**                              | blank line                            | Generally wrap at 80 chars ⇢ git-diff clarity.                                             |
++---------------------------------------------------+---------------------------------------+--------------------------------------------------------------------------------------------+
+| **Bold / *Italic* /** *Both*\*\* / ~~Strike~~\*\* | `**b**`, `*i*`, `***bi***`, `~~del~~` | Reserve bold for *semantic* emphasis, italics for *titles & meta*.                         |
++---------------------------------------------------+---------------------------------------+--------------------------------------------------------------------------------------------+
+| **Lists**                                         | `-`, `*`, `1.`                        | Rarely nest \> 3 levels; indent 2 spaces per level.                                        |
++---------------------------------------------------+---------------------------------------+--------------------------------------------------------------------------------------------+
+| **Callouts**                                      | `::: {.callout-note}`                 | Use `.tip`, `.warning`, `.important`, `.duplicate` (custom) for tagging; close with `:::`. |
++---------------------------------------------------+---------------------------------------+--------------------------------------------------------------------------------------------+
+| **Blockquotes**                                   | `>`                                   | Ideal for verbatim interview excerpts; cite speaker.                                       |
++---------------------------------------------------+---------------------------------------+--------------------------------------------------------------------------------------------+
+| **Code blocks**                                   | ```` ```r ````                        | Always declare language; add caption: \`\`\`\``{python} fig.cap="…"`.                      |
++---------------------------------------------------+---------------------------------------+--------------------------------------------------------------------------------------------+
+| **Figures & Tables**                              | `![](fig.png){#fig-id}`               | Always add `{#fig-id fig-cap="…"};` etc. cross-ref with `@fig-id`.                         |
++---------------------------------------------------+---------------------------------------+--------------------------------------------------------------------------------------------+
+| **Cross-refs**                                    | `@sec-intro`, `@tbl-results`          | Prefix: `sec-`, `fig-`, `tbl-`, `eq-`.                                                     |
++---------------------------------------------------+---------------------------------------+--------------------------------------------------------------------------------------------+
+| **Citations**                                     | `[@smith2024]`                        | Maintain `.bib` via Zotero; nightly `quarto check`.                                        |
++---------------------------------------------------+---------------------------------------+--------------------------------------------------------------------------------------------+
+| **Footnotes**                                     | `[^1]`                                | Overuse for tangents, mini-proofs, data caveats.                                           |
++---------------------------------------------------+---------------------------------------+--------------------------------------------------------------------------------------------+
+| **Glossary**                                      | `term: Definition`                    | Append `glossary: true` in task; link in-text `{@term}`.                                   |
++---------------------------------------------------+---------------------------------------+--------------------------------------------------------------------------------------------+
+| **Comments**                                      | `<!-- [ ] TODO: … -->`                | Use for tasks; parse with *Todo Tree* VS Code plugin.                                      |
++---------------------------------------------------+---------------------------------------+--------------------------------------------------------------------------------------------+
 
 ## Tagging / Highlighting System 🔖
 
 Use the custom tagging and highlighting system for all materials
 
+## Workflow Rules
 
-## Workflow Rules 
-
-**During writing**  
-   - *Every new idea*: decide *body*, *footnote*, or *appendix* and place instantly.  
-   - Add glossary entries as soon as a term of art appears.  
-   - Insert provisional graphics with stub `{#fig-TBD}` and create a TODO comment.
-
-
-
+**During writing**\
+- *Every new idea*: decide *body*, *footnote*, or *appendix* and place instantly.\
+- Add glossary entries as soon as a term of art appears.\
+- Insert provisional graphics with stub `{#fig-TBD}` and create a TODO comment.
 
 ## Rigorous Checklist ✅
 
-- [ ] Use the full hierarchy of headings
-- [ ] All figures/tables have IDs, captions, and are referenced in text.  
-- [ ] Glossary updated; new `{@term}` links render without warnings.  
-- [ ] Citation list reflects *every* `[@]` callout.  
-- [ ] Footnotes compile and are sorted numerically.  
-- [ ] Appendices contain overflow material only; each referenced at least once.  
-- [ ] `duplicate` callouts reviewed; none accidentally removed.  
-- [ ] “Outstanding graphics” & “Outstanding citations” subsections updated.  
-
+-   [ ] Use the full hierarchy of headings
+-   [ ] All figures/tables have IDs, captions, and are referenced in text.\
+-   [ ] Glossary updated; new `{@term}` links render without warnings.\
+-   [ ] Citation list reflects *every* `[@]` callout.\
+-   [ ] Footnotes compile and are sorted numerically.\
+-   [ ] Appendices contain overflow material only; each referenced at least once.\
+-   [ ] `duplicate` callouts reviewed; none accidentally removed.\
+-   [ ] “Outstanding graphics” & “Outstanding citations” subsections updated.
