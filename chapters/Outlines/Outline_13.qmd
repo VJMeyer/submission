@@ -119,7 +119,14 @@ TAI - Transformative Artificial Intelligence
 @todd2024
 
 Imagine a senior policy advisor preparing recommendations for AI governance legislation. On her desk lie a dozen reports from leading AI safety researchers, each painting a different picture of the risks ahead. One argues that misaligned AI could pose existential risks within the decade, citing complex technical arguments about instrumental convergence and orthogonality. Another suggests these concerns are overblown, emphasizing uncertainty and the strength of existing institutions. A third proposes specific technical standards but acknowledges deep uncertainty about their effectiveness.
+<!-- [ ] EXPLAIN: in footnotes: 
+a) Orthogonality Thesis:
+        Intelligence and goals are independent; an AI can have any set of objectives regardless of its intelligence level.
 
+b) Instrumental Convergence Thesis:
+        Different AI systems may adopt similar instrumental goals (e.g., self-preservation, resource acquisition) to achieve their objectives.
+
+-->
 ::: {.redundant-content data-better-version="Outline_12.2#sec-opening"}
 Each report seems compelling in isolation, written by credentialed experts with sophisticated arguments. Yet they reach dramatically different conclusions about both the magnitude of risk and appropriate interventions. The technical arguments involve unfamiliar concepts—mesa-optimization, corrigibility, capability amplification—expressed through different frameworks and implicit assumptions. Time is limited, stakes are high, and the legislation could shape humanity's trajectory for decades.
 :::
@@ -2585,10 +2592,11 @@ Understanding these limitations guides both current usage and future improvement
 
 
 
-## 3.7 Extensions & Opportunities
+## 3.7 Extensions & Opportunities: Inference & Analysis
 
 <!-- [ ] OUTLINE AND WRITE: new, complete section with a collection of all the possible future implementations enabled by the AMTAIR methodology -->
 
+Quantification & Formal Approximation	—	Inference:	Monte Carlo Sampling over Probability Distributions
 
 ### 3.7.1 Overview of Practical Software Implementations
 
@@ -2608,12 +2616,10 @@ Understanding these limitations guides both current usage and future improvement
 
 
 
-### 3.7.4
+### 3.7.4 Prediction Market Integration
 
+	—	Live Data Updating:	Crowdsourcing Collective Intelligence Via API Integrations
 
-
-
-### 3.7.5
 
 
 
@@ -2625,6 +2631,22 @@ Understanding these limitations guides both current usage and future improvement
 
 Beyond extraction and visualization, AMTAIR enables systematic policy analysis through formal intervention modeling.
 
+<!-- [ ] UNDERSTAND & INTEGRATE: understand what the notes below are trying to get at / capture / express (under the most favourable interpretation) and write a section which integrates those thoughts in the best possible way:
+
+Assessing Policy Effects:
+-Evaluating how different policies alter P(Doom).
+
+Conditional Probability:
+-Calculating P(Doom | Policy Alpha).
+
+Methodology:
+-Update model parameters based on successful policy implementation.
+-Recompute probabilities accordingly.
+
+Purpose:
+-Inform policymakers of potential policy effectiveness.
+-Prioritize interventions that significantly reduce risks.
+-->
 
 
 ### 3.7.1 Intervention Representation {#sec-intervention-representation}
@@ -3167,6 +3189,48 @@ The goal isn't creating perfect representations but useful ones. By making simpl
 
 <!-- [ ] ADD: @box1976: "Box, G.E.P. (1976). Science and statistics" -->
 @box1976
+
+
+
+
+
+
+
+
+
+### 4.2.4 Objection 6: Idosyncratic Implementation and Modeling Choices {sec-idosyncratic}
+
+
+<!-- [ ] UNDERSTAND & FORMULATE: strong critique based around all the choices made during the AMTAIR implementation and the concern that the results therefore dont generalize and would be very different if another team set out with the same mission -->
+
+<!-- [ ] UNDERSTAND & INTEGRATE: understand what the notes below are trying to get at / capture / express (under the most favourable interpretation) and write a section which integrates those thoughts in the best possible way:
+
+Consistently trying to make the most reasonable  choices -- hoping other would make similar calls
+
+Explain that/how there are “different ways” of extracting probabilities
+~ multiple paths leading to / trying to get at the “same implicit” joint probability distribution
+
+
+Explain “scientific approach” to isolating relevant variables and the implications for the prototype implementation
+~ A system to get feedback from experts
+
+
+State implementation choices, list possible alternatives / extensions / “correct/comprehensive implementation”
+	How / in what way can/should this be included in the thesis?
+
+
+Explain possible levels/perspectives at which convergence or divergence could (theoretically) be observed
+	E.g.: 
+		- structure of the network/representation
+		- probabilities
+		- …
+and how this is epistemically related to the “information” contained in sources [Note:needing to explain my conception of knowledge/understanding / information representation suggests that is implicit for AMTAIR]
+	(in the extreme:)
+	If sources“dont narrow down the ~ knowledge/understanding/information representation space (at least relative to some baseline),
+	they do not contain actual information.
+
+-->
+
 
 
 
@@ -4230,31 +4294,50 @@ This thesis contributes technical foundations and demonstrates feasibility. The 
 
 <!-- [ ] ADD: INTEGRATE ALL THE CITATIONS FROM BELOW AT THE CORRESPONDING / BEST (MULTIPLE) SECTIONS OF THE THESIS: -->
 
-  @growiec2024
+### @growiec2024
 
 
-  @clarke2022
+@clarke2022
 
-  @drexler2019 and @drexler2019a
-
-
-  @brundage2018 and @brundage2018a 
+@drexler2019 and @drexler2019a
 
 
-
-  @kumar2019 and @kumar2019a
+@brundage2018 and @brundage2018a 
 
 
 
+@kumar2019 and @kumar2019a
 
 
-  @carlsmith2021 and @carlsmith2022 and @carlsmith2024
 
 
-  @hendrycks2021 and @hendrycks2021a
+
+@carlsmith2021 and @carlsmith2022 and @carlsmith2024
 
 
-  @wilson2023
+@hendrycks2021 and @hendrycks2021a
+
+
+@wilson2023
+
+
+
+
+
+@kilian2023
+
+
+
+@kulveit2025
+
+
+@hadshar2023
+
+
+@kasirzadeh2024
+
+
+@sotala2018
 
 
 
