@@ -267,13 +267,6 @@
 
 
 
-# Bibliography {.unnumbered}
-
-
-::: {#refs}
-:::
-
-
 <!-- If you want to include items in the bibliography without actually citing them in the body text, you can define a dummy nocite metadata field and put the citations there:
 ---
 nocite: |
@@ -632,3 +625,11 @@ from @cottier2019
 
 
 
+
+
+
+# Bibliography {.unnumbered}
+
+
+::: {#refs}
+:::

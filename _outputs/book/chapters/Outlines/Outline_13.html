@@ -375,9 +375,21 @@ window.Quarto = {
   <li><a href="#extensions-opportunities-inference-analysis" id="toc-extensions-opportunities-inference-analysis" class="nav-link" data-scroll-target="#extensions-opportunities-inference-analysis">3.7 Extensions &amp; Opportunities: Inference &amp; Analysis</a>
   <ul>
   <li><a href="#overview-of-practical-software-implementations" id="toc-overview-of-practical-software-implementations" class="nav-link" data-scroll-target="#overview-of-practical-software-implementations">3.7.1 Overview of Practical Software Implementations</a></li>
-  <li><a href="#section" id="toc-section" class="nav-link" data-scroll-target="#section">3.7.2</a></li>
+  <li><a href="#ai-risk-pathway-analyzer-arpa" id="toc-ai-risk-pathway-analyzer-arpa" class="nav-link" data-scroll-target="#ai-risk-pathway-analyzer-arpa">3.7.2 <strong>AI Risk Pathway Analyzer (ARPA)</strong></a>
+  <ul>
+  <li><a href="#section" id="toc-section" class="nav-link" data-scroll-target="#section"></a></li>
+  </ul></li>
   <li><a href="#pdoom-calculator" id="toc-pdoom-calculator" class="nav-link" data-scroll-target="#pdoom-calculator">3.7.3 P(Doom) Calculator</a></li>
-  <li><a href="#prediction-market-integration" id="toc-prediction-market-integration" class="nav-link" data-scroll-target="#prediction-market-integration">3.7.4 Prediction Market Integration</a></li>
+  <li><a href="#worldview-comparator" id="toc-worldview-comparator" class="nav-link" data-scroll-target="#worldview-comparator">3.7.4 <strong>Worldview Comparator</strong></a></li>
+  <li><a href="#policy-impact-evaluator" id="toc-policy-impact-evaluator" class="nav-link" data-scroll-target="#policy-impact-evaluator">3.7.5 <strong>Policy Impact Evaluator</strong></a></li>
+  <li><a href="#ai-risk-pathway-visualizer" id="toc-ai-risk-pathway-visualizer" class="nav-link" data-scroll-target="#ai-risk-pathway-visualizer">3.7.6 <strong>AI Risk Pathway Visualizer</strong></a></li>
+  <li><a href="#strategic-intervention-generator" id="toc-strategic-intervention-generator" class="nav-link" data-scroll-target="#strategic-intervention-generator">3.7.7 Strategic Intervention Generator</a></li>
+  <li><a href="#cross-domain-understanding-communicator" id="toc-cross-domain-understanding-communicator" class="nav-link" data-scroll-target="#cross-domain-understanding-communicator">3.7.8 <strong>Cross-Domain Understanding Communicator</strong></a></li>
+  <li><a href="#policy-brief-communicator" id="toc-policy-brief-communicator" class="nav-link" data-scroll-target="#policy-brief-communicator">3.7.9 <strong>Policy Brief Communicator</strong></a></li>
+  <li><a href="#prediction-market-integration" id="toc-prediction-market-integration" class="nav-link" data-scroll-target="#prediction-market-integration">3.7.10 Prediction Market Integration</a>
+  <ul>
+  <li><a href="#forecast-integration-dashboard" id="toc-forecast-integration-dashboard" class="nav-link" data-scroll-target="#forecast-integration-dashboard"><strong>Forecast Integration Dashboard</strong></a></li>
+  </ul></li>
   </ul></li>
   <li><a href="#sec-policy-evaluation" id="toc-sec-policy-evaluation" class="nav-link" data-scroll-target="#sec-policy-evaluation">3.7 Policy Evaluation Capabilities</a>
   <ul>
@@ -653,7 +665,7 @@ Chapter Overview
 <h2 class="anchored" data-anchor-id="sec-opening-scenario">1.1 Opening Scenario: The Policymaker’s Dilemma</h2>
 <!-- [ ] TODO: Polish opening scenario for maximum impact -->
 <!-- [ ] ADD: @todd2024 add as reference for more resources towards AI safety -->
-<p><span class="citation" data-cites="todd2024">Todd (<a href="Outline_13.html#ref-todd2024" role="doc-biblioref">2024</a>)</span></p>
+<p><span class="citation" data-cites="todd2024">Todd (<a href="../../ref/references.html#ref-todd2024" role="doc-biblioref">2024</a>)</span></p>
 <p>Imagine a senior policy advisor preparing recommendations for AI governance legislation. On her desk lie a dozen reports from leading AI safety researchers, each painting a different picture of the risks ahead. One argues that misaligned AI could pose existential risks within the decade, citing complex technical arguments about instrumental convergence and orthogonality. Another suggests these concerns are overblown, emphasizing uncertainty and the strength of existing institutions. A third proposes specific technical standards but acknowledges deep uncertainty about their effectiveness. <!-- [ ] EXPLAIN: in footnotes: 
 a) Orthogonality Thesis:
         Intelligence and goals are independent; an AI can have any set of objectives regardless of its intelligence level.
@@ -669,18 +681,18 @@ b) Instrumental Convergence Thesis:
 <h2 class="anchored" data-anchor-id="sec-coordination-crisis">1.2 The Coordination Crisis in AI Governance</h2>
 <!-- [ ] TODO: Frame the problem as coordination failure rather than merely technical challenge -->
 <!-- [ ] ADD: @maslej2025  Add citation for page 85 as evidence for accelerating capabilities -->
-<p><span class="citation" data-cites="maslej2025">Maslej (<a href="Outline_13.html#ref-maslej2025" role="doc-biblioref">2025</a>)</span></p>
+<p><span class="citation" data-cites="maslej2025">Maslej (<a href="../../ref/references.html#ref-maslej2025" role="doc-biblioref">2025</a>)</span></p>
 <!-- [ ] ADD: @samborska2025  Add as citation for accelerating capabilities -->
-<p><span class="citation" data-cites="samborska2025">Samborska (<a href="Outline_13.html#ref-samborska2025" role="doc-biblioref">2025</a>)</span></p>
+<p><span class="citation" data-cites="samborska2025">Samborska (<a href="../../ref/references.html#ref-samborska2025" role="doc-biblioref">2025</a>)</span></p>
 <p>As AI capabilities advance at an accelerating pace—demonstrated by the rapid progression from GPT-3 to GPT-4, Claude, and emerging multimodal systems—humanity faces a governance challenge unlike any in history. The task of ensuring increasingly powerful AI systems remain aligned with human values and beneficial to our long-term flourishing grows more urgent with each capability breakthrough. This challenge becomes particularly acute when considering transformative AI systems that could drastically alter civilization’s trajectory, potentially including existential risks from misaligned systems pursuing objectives counter to human welfare.</p>
 <blockquote class="blockquote">
 <p>Despite unprecedented investment in AI safety research, rapidly growing awareness among key stakeholders, and proliferating frameworks for responsible AI development, we face what I’ll term the “coordination crisis” in AI governance—a systemic failure to align diverse efforts across technical, policy, and strategic domains into a coherent response proportionate to the risks we face.</p>
 </blockquote>
 <p>The current state of AI governance presents a striking paradox. On one hand, we witness extraordinary mobilization: billions in research funding, proliferating safety initiatives, major tech companies establishing alignment teams, and governments worldwide developing AI strategies. The <a href="https://futureoflife.org/open-letter/ai-principles/">Asilomar AI Principles</a> garnered thousands of signatures, the EU advances <a href="https://artificialintelligenceact.eu/the-act/">comprehensive AI regulation</a> , and technical researchers produce increasingly sophisticated work on alignment, interpretability, and robustness.</p>
 <!-- [ ] ADD: @tegmark2024  add citation for the Asilomar Principles Open Letter (as footnote?) -->
-<p><span class="citation" data-cites="tegmark2024">Tegmark (<a href="Outline_13.html#ref-tegmark2024" role="doc-biblioref">2024</a>)</span></p>
+<p><span class="citation" data-cites="tegmark2024">Tegmark (<a href="../../ref/references.html#ref-tegmark2024" role="doc-biblioref">2024</a>)</span></p>
 <!-- [ ] ADD: @european2024    add citation for the EU AI (as footnote) -->
-<p><span class="citation" data-cites="european2024">European (<a href="Outline_13.html#ref-european2024" role="doc-biblioref">2024</a>)</span></p>
+<p><span class="citation" data-cites="european2024">European (<a href="../../ref/references.html#ref-european2024" role="doc-biblioref">2024</a>)</span></p>
 <div class="duplicate-content" data-source="Outline_11.7#sec-coordination-crisis">
 <p>Yet alongside this activity, we observe systematic coordination failures that may prove catastrophic. Technical safety researchers develop sophisticated alignment techniques without clear implementation pathways. Policy specialists craft regulatory frameworks lacking technical grounding to ensure practical efficacy. Ethicists articulate normative principles that lack operational specificity. Strategy researchers identify critical uncertainties but struggle to translate these into actionable guidance. International bodies convene without shared frameworks for assessing interventions.</p>
 </div>
@@ -692,7 +704,7 @@ b) Instrumental Convergence Thesis:
 <p>When different communities operate with incompatible frameworks, critical risks fall through the cracks. Technical researchers may solve alignment problems under assumptions that policymakers’ decisions invalidate. Regulations optimized for current systems may inadvertently incentivize dangerous development patterns. Without shared models of the risk landscape, our collective efforts resemble the parable of blind men describing an elephant—each accurate within their domain but missing the complete picture.</p>
 <!-- [ ] FIND: @coordination-failure-examples: "Specific historical examples of coordination failures in technology governance" -- arms races to nobodies benefit -- technological race to ?? -->
 <!-- [ ] ADD: @paul2023 from Url: https://www.prismaguard.com/the-elephaint-are-we-all-like-the-six-blind-men-when-it-comes-to-ai/ for blind men elephant vs ai risk analogy-->
-<p><span class="citation" data-cites="paul2023">Paul (<a href="Outline_13.html#ref-paul2023" role="doc-biblioref">2023</a>)</span></p>
+<p><span class="citation" data-cites="paul2023">Paul (<a href="../../ref/references.html#ref-paul2023" role="doc-biblioref">2023</a>)</span></p>
 </section>
 <section id="sec-resource-misallocation" class="level3">
 <h3 class="anchored" data-anchor-id="sec-resource-misallocation">1.2.2 Resource Misallocation</h3>
@@ -712,11 +724,11 @@ b) Instrumental Convergence Thesis:
 
 
 -->
-<p><span class="citation" data-cites="armstrong2016">Armstrong, Bostrom, and Shulman (<a href="Outline_13.html#ref-armstrong2016" role="doc-biblioref">2016</a>)</span></p>
+<p><span class="citation" data-cites="armstrong2016">Armstrong, Bostrom, and Shulman (<a href="../../ref/references.html#ref-armstrong2016" role="doc-biblioref">2016</a>)</span></p>
 <!-- [ ] ADD: @samuel2023, @hunt2025, @trager2025, 
     Cite all and explain in detail: -- prisoners dilemma vs. stag hunt -- anbody builds it everyone dies
 -->
-<p><span class="citation" data-cites="samuel2023">Samuel (<a href="Outline_13.html#ref-samuel2023" role="doc-biblioref">2023</a>)</span>, <span class="citation" data-cites="hunt2025">Hunt (<a href="Outline_13.html#ref-hunt2025" role="doc-biblioref">2025</a>)</span></p>
+<p><span class="citation" data-cites="samuel2023">Samuel (<a href="../../ref/references.html#ref-samuel2023" role="doc-biblioref">2023</a>)</span>, <span class="citation" data-cites="hunt2025">Hunt (<a href="../../ref/references.html#ref-hunt2025" role="doc-biblioref">2025</a>)</span></p>
 <!-- [ ] LATER ADD: Citation for unpublished "anbody builds it everyone dies (soares & yudkowsky)" -->
 </section>
 </section>
@@ -725,9 +737,9 @@ b) Instrumental Convergence Thesis:
 <!-- [ ] TODO: Draw connections to nuclear governance, climate change, and biosecurity -->
 <p>History offers instructive parallels. The nuclear age began with scientists racing to understand and control forces that could destroy civilization. Early coordination failures—competing national programs, scientist-military tensions, public-expert divides—nearly led to catastrophe multiple times. Only through developing shared frameworks (deterrence theory), institutions (IAEA), and communication channels (hotlines, treaties) did humanity navigate the nuclear precipice.</p>
 <!-- [ ] ADD: @schelling1960: "Schelling, T. (1960). The Strategy of Conflict" -->
-<p><span class="citation" data-cites="schelling1960">Schelling (<a href="Outline_13.html#ref-schelling1960" role="doc-biblioref">1960</a>)</span></p>
+<p><span class="citation" data-cites="schelling1960">Schelling (<a href="../../ref/references.html#ref-schelling1960" role="doc-biblioref">1960</a>)</span></p>
 <!-- [ ] ADD: @rehman2025 from: https://warontherocks.com/2025/01/the-battle-for-brilliant-minds-from-the-nuclear-age-to-ai/ -->
-<p><span class="citation" data-cites="rehman2025">Rehman (<a href="Outline_13.html#ref-rehman2025" role="doc-biblioref">2025</a>)</span></p>
+<p><span class="citation" data-cites="rehman2025">Rehman (<a href="../../ref/references.html#ref-rehman2025" role="doc-biblioref">2025</a>)</span></p>
 <div class="redundant-content" data-better-version="Outline_12.2#temporal-urgency">
 <p>Yet AI presents unique coordination challenges that compress our response timeline:</p>
 <p><strong>Accelerating Development</strong>: Unlike nuclear weapons requiring massive infrastructure, AI development proceeds in corporate labs and academic departments worldwide. Capability improvements come through algorithmic insights and computational scale, both advancing exponentially.</p>
@@ -793,7 +805,7 @@ b) Instrumental Convergence Thesis:
 <li>Generating new questions for forecasting communities</li>
 </ul>
 <!-- [ ] ADD: @tetlock2015 and introduce prediction markets for a general audience, explain how they can be used in forecasting technological developments and impacts -->
-<p><span class="citation" data-cites="tetlock2015">P. E. Tetlock and Gardner (<a href="Outline_13.html#ref-tetlock2015" role="doc-biblioref">2015</a>)</span></p>
+<p><span class="citation" data-cites="tetlock2015">P. E. Tetlock and Gardner (<a href="../../ref/references.html#ref-tetlock2015" role="doc-biblioref">2015</a>)</span></p>
 </section>
 <section id="sec-policy-evaluation" class="level3">
 <h3 class="anchored" data-anchor-id="sec-policy-evaluation">1.5.3 Formal Policy Evaluation</h3>
@@ -806,7 +818,7 @@ b) Instrumental Convergence Thesis:
 <li>Prioritizing research to reduce decision-relevant uncertainty</li>
 </ul>
 <!-- [ ] ADD: @pearl2000 and @pearl2009: "Pearl, J. (2009). Causality: Models, Reasoning, and Inference"  add as reference and improve overview/introduction of causal inference based on bayesan networks -->
-<p><span class="citation" data-cites="pearl2000">Pearl (<a href="Outline_13.html#ref-pearl2000" role="doc-biblioref">2000</a>)</span> and <span class="citation" data-cites="pearl2009">Pearl (<a href="Outline_13.html#ref-pearl2009" role="doc-biblioref">2009</a>)</span></p>
+<p><span class="citation" data-cites="pearl2000">Pearl (<a href="../../ref/references.html#ref-pearl2000" role="doc-biblioref">2000</a>)</span> and <span class="citation" data-cites="pearl2009">Pearl (<a href="../../ref/references.html#ref-pearl2009" role="doc-biblioref">2009</a>)</span></p>
 </section>
 <section id="sec-synergy" class="level3">
 <h3 class="anchored" data-anchor-id="sec-synergy">1.5.4 The Synergy</h3>
@@ -872,7 +884,7 @@ Chapter Overview
     - Mention that there is also an extended discussion of the paper and the probabilities involved on LessWrong (including important methodological contributions w.r.t. )
     - Explain that it contains data from experts who estimated probabilites
 -->
-<p><span class="citation" data-cites="carlsmith2024">Carlsmith (<a href="Outline_13.html#ref-carlsmith2024" role="doc-biblioref">2024</a>)</span>, <span class="citation" data-cites="carlsmith2021">Carlsmith (<a href="Outline_13.html#ref-carlsmith2021" role="doc-biblioref">2021</a>)</span> and <span class="citation" data-cites="carlsmith2022">Carlsmith (<a href="Outline_13.html#ref-carlsmith2022" role="doc-biblioref">2022</a>)</span></p>
+<p><span class="citation" data-cites="carlsmith2024">Carlsmith (<a href="../../ref/references.html#ref-carlsmith2024" role="doc-biblioref">2024</a>)</span>, <span class="citation" data-cites="carlsmith2021">Carlsmith (<a href="../../ref/references.html#ref-carlsmith2021" role="doc-biblioref">2021</a>)</span> and <span class="citation" data-cites="carlsmith2022">Carlsmith (<a href="../../ref/references.html#ref-carlsmith2022" role="doc-biblioref">2022</a>)</span></p>
 <section id="sec-six-premise" class="level3">
 <h3 class="anchored" data-anchor-id="sec-six-premise">2.1.1 Six-Premise Decomposition</h3>
 <!-- [ ] ADD: @clarke2022 citation -->
@@ -913,7 +925,7 @@ Chapter Overview
 <!-- [ ] ADD: "foreshadowing" of how/why we will pick up with carlsmith model later-->
 <!-- [ ] LATER TODO: Extract two additional "inside view" world models for comparison -->
 <!-- [ ] ADD: @christiano2019: "Christiano, P. (2019). What failure looks like. AI Alignment Forum." -->
-<p><span class="citation" data-cites="christiano2019">Christiano (<a href="Outline_13.html#ref-christiano2019" role="doc-biblioref">2019</a>)</span></p>
+<p><span class="citation" data-cites="christiano2019">Christiano (<a href="../../ref/references.html#ref-christiano2019" role="doc-biblioref">2019</a>)</span></p>
 </section>
 </section>
 <section id="sec-epistemic-challenge" class="level2">
@@ -945,7 +957,7 @@ Chapter Overview
 <!-- [ ] ADD: @hallegatte2012: "Hallegatte et al. on robust decision-making under deep uncertainty" for "INTRODUCTION deep uncertainty na situation in which analysts do not know or cannot agree on (1) models that relate key forces that shape the future,(2) probability distributions of key variables and parameters in these models, and/or (3) the value of alternative outcomes."
     their application is climate change though
 -->
-<p><span class="citation" data-cites="hallegatte2012">Hallegatte et al. (<a href="Outline_13.html#ref-hallegatte2012" role="doc-biblioref">2012</a>)</span></p>
+<p><span class="citation" data-cites="hallegatte2012">Hallegatte et al. (<a href="../../ref/references.html#ref-hallegatte2012" role="doc-biblioref">2012</a>)</span></p>
 </section>
 <section id="the-underlying-epistemic-framework" class="level3">
 <h3 class="anchored" data-anchor-id="the-underlying-epistemic-framework">2.2.3 The Underlying Epistemic Framework</h3>
@@ -984,8 +996,8 @@ Key Insight
 <p>The computational approaches developed in this thesis—particularly Bayesian networks enhanced with automated extraction—directly address each of these requirements by providing formal frameworks for reasoning under uncertainty.</p>
 </div>
 </div>
-<p>from <span class="citation" data-cites="tetlock2022">P. Tetlock (<a href="Outline_13.html#ref-tetlock2022" role="doc-biblioref">2022</a>)</span></p>
-<div id="fig-conditional_metaculus" class="quarto-float quarto-figure quarto-figure-center anchored" data-fig-scap="Conditional-tree AI-risk forecasts" data-fig-align="center" alt="SCREENSHOT of a forecasting-platform interface titled ‘Series Contents’. A search bar and filter chips sit above five forecast cards: 1) ‘If, before 2050, AI kills more than 1 million people, will the policy response be insufficient?’ with a 75 percent gauge (green, arrow up 8 percent). 2) ‘Before 2050, will an AI system be shut down due to exhibiting power-seeking behavior?’ at 95 percent (arrow down 2 percent). 3) ‘Before 2100, will AI cause the human population to fall below 5000 individuals?’ at 4 percent. 4) ‘Before 2030, will there be an AI-caused administrative disempowerment?’ at 20 percent. 5) ‘Between 2023 and 2030, will revenue from deep learning double every two years?’ at 80 percent. Beneath several cards, grey CONDITION boxes branch to green bars labelled ‘CTs AI Extinction Before 2100’ with different probabilities for IF YES and IF NO scenarios (e.g. 26 % vs 37 %). Each question lists forecaster counts, closing dates (2030 or 2050), and the tag ‘Conditional Trees: AI Risk’. A footer card introduces the series report. CHART TYPE: mixed UI elements—gauge dials and horizontal bars—displaying probabilities and conditional probabilities. DATA: probabilities (% chances) for base and conditional events; no axes. PURPOSE: demonstrates how crowd-forecasting encodes marginal and counterfactual probabilities suitable as inputs for AMTAIR Bayesian-network nodes. DETAILS: notable high probability for power-seeking AI shutdown, low probability for population collapse, and large shifts in extinction risk under certain conditions. SOURCE: Forecasting Research Institute conditional-tree series, @tetlock2022." width="100%">
+<p>from <span class="citation" data-cites="tetlock2022">P. Tetlock (<a href="../../ref/references.html#ref-tetlock2022" role="doc-biblioref">2022</a>)</span></p>
+<div id="fig-conditional_metaculus" class="quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center" alt="SCREENSHOT of a forecasting-platform interface titled ‘Series Contents’. A search bar and filter chips sit above five forecast cards: 1) ‘If, before 2050, AI kills more than 1 million people, will the policy response be insufficient?’ with a 75 percent gauge (green, arrow up 8 percent). 2) ‘Before 2050, will an AI system be shut down due to exhibiting power-seeking behavior?’ at 95 percent (arrow down 2 percent). 3) ‘Before 2100, will AI cause the human population to fall below 5000 individuals?’ at 4 percent. 4) ‘Before 2030, will there be an AI-caused administrative disempowerment?’ at 20 percent. 5) ‘Between 2023 and 2030, will revenue from deep learning double every two years?’ at 80 percent. Beneath several cards, grey CONDITION boxes branch to green bars labelled ‘CTs AI Extinction Before 2100’ with different probabilities for IF YES and IF NO scenarios (e.g. 26 % vs 37 %). Each question lists forecaster counts, closing dates (2030 or 2050), and the tag ‘Conditional Trees: AI Risk’. A footer card introduces the series report. CHART TYPE: mixed UI elements—gauge dials and horizontal bars—displaying probabilities and conditional probabilities. DATA: probabilities (% chances) for base and conditional events; no axes. PURPOSE: demonstrates how crowd-forecasting encodes marginal and counterfactual probabilities suitable as inputs for AMTAIR Bayesian-network nodes. DETAILS: notable high probability for power-seeking AI shutdown, low probability for population collapse, and large shifts in extinction risk under certain conditions. SOURCE: Forecasting Research Institute conditional-tree series, @tetlock2022." width="100%" data-fig-scap="Conditional-tree AI-risk forecasts">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-conditional_metaculus-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <a href="https://www.metaculus.com/tournament/3508/"><img src="../../images/conditional_metaculus.jpg" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:100.0%" data-fig-scap="Conditional-tree AI-risk forecasts" alt="SCREENSHOT of a forecasting-platform interface titled ‘Series Contents’. A search bar and filter chips sit above five forecast cards: 1) ‘If, before 2050, AI kills more than 1 million people, will the policy response be insufficient?’ with a 75 percent gauge (green, arrow up 8 percent). 2) ‘Before 2050, will an AI system be shut down due to exhibiting power-seeking behavior?’ at 95 percent (arrow down 2 percent). 3) ‘Before 2100, will AI cause the human population to fall below 5000 individuals?’ at 4 percent. 4) ‘Before 2030, will there be an AI-caused administrative disempowerment?’ at 20 percent. 5) ‘Between 2023 and 2030, will revenue from deep learning double every two years?’ at 80 percent. Beneath several cards, grey CONDITION boxes branch to green bars labelled ‘CTs AI Extinction Before 2100’ with different probabilities for IF YES and IF NO scenarios (e.g. 26 % vs 37 %). Each question lists forecaster counts, closing dates (2030 or 2050), and the tag ‘Conditional Trees: AI Risk’. A footer card introduces the series report. CHART TYPE: mixed UI elements—gauge dials and horizontal bars—displaying probabilities and conditional probabilities. DATA: probabilities (% chances) for base and conditional events; no axes. PURPOSE: demonstrates how crowd-forecasting encodes marginal and counterfactual probabilities suitable as inputs for AMTAIR Bayesian-network nodes. DETAILS: notable high probability for power-seeking AI shutdown, low probability for population collapse, and large shifts in extinction risk under certain conditions. SOURCE: Forecasting Research Institute conditional-tree series, @tetlock2022."></a>
@@ -995,8 +1007,8 @@ Figure&nbsp;2.1: Conditional-tree AI-risk forecasts
 </figcaption>
 </figure>
 </div>
-<p>from <span class="citation" data-cites="gruetzemacher2022">Gruetzemacher (<a href="Outline_13.html#ref-gruetzemacher2022" role="doc-biblioref">2022</a>)</span></p>
-<div id="fig-bayesnet-crux-flow" class="quarto-float quarto-figure quarto-figure-center anchored" data-fig-scap="Bayes-net pruning → crux extraction → re-expansion" data-fig-align="center" alt="THREE-PANEL DIAGRAM. Panel A (upper left) titled ‘Initial Bayes Net—Pruning Least Relevant Nodes’ shows eleven circular nodes connected by arrows inside a rounded rectangle. Solid circles remain; dashed or dotted ones are pruned. Arrows converge on a solid node labelled ‘AI causes human extinction’. Panel B (upper right) titled ‘Two Sets of Crux Events from Bayes Nets Isolated as Conditional Trees’ shows two short vertical chains of dotted or dashed circles. Chain 1: ‘AI alignment problem is solved’ → ‘China and the US cooperate on AI alignment’ → ‘Discontinuous progress in computational costs’. Chain 2: ‘Intergovernmental treaty on AI alignment’ ← ‘Robust AI-driven economic growth’ ← ‘Continual learning integrated with foundation models’. Panel C (bottom) titled ‘Top Set of Crux Events as Conditional Tree Decomposed to Bayes Net’ depicts a new Bayes net where context nodes such as ‘Photonic computing is used for CPU’, ‘US/China trade increases’, and ‘US grows increasingly authoritarian’ feed into ‘China and the US cooperate on AI alignment’, then into ‘AI alignment problem is solved’, and finally ‘AI causes human extinction’. Arrows between panels illustrate the workflow sequence. CHART TYPE: conceptual flow diagram with two Bayes nets and intermediate conditional trees. DATA: relationships among qualitative variables—no numeric axes. PURPOSE: illustrates AMTAIR’s iterative refinement pipeline from full Bayes net to crux-tree extraction and back. DETAILS: emphasises node styles (solid, dashed, dotted) for relevance; shows convergence toward the extinction outcome. SOURCE: @gruetzemacher2022, May 2025." width="100%">
+<p>from <span class="citation" data-cites="gruetzemacher2022">Gruetzemacher (<a href="../../ref/references.html#ref-gruetzemacher2022" role="doc-biblioref">2022</a>)</span></p>
+<div id="fig-bayesnet-crux-flow" class="quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center" alt="THREE-PANEL DIAGRAM. Panel A (upper left) titled ‘Initial Bayes Net—Pruning Least Relevant Nodes’ shows eleven circular nodes connected by arrows inside a rounded rectangle. Solid circles remain; dashed or dotted ones are pruned. Arrows converge on a solid node labelled ‘AI causes human extinction’. Panel B (upper right) titled ‘Two Sets of Crux Events from Bayes Nets Isolated as Conditional Trees’ shows two short vertical chains of dotted or dashed circles. Chain 1: ‘AI alignment problem is solved’ → ‘China and the US cooperate on AI alignment’ → ‘Discontinuous progress in computational costs’. Chain 2: ‘Intergovernmental treaty on AI alignment’ ← ‘Robust AI-driven economic growth’ ← ‘Continual learning integrated with foundation models’. Panel C (bottom) titled ‘Top Set of Crux Events as Conditional Tree Decomposed to Bayes Net’ depicts a new Bayes net where context nodes such as ‘Photonic computing is used for CPU’, ‘US/China trade increases’, and ‘US grows increasingly authoritarian’ feed into ‘China and the US cooperate on AI alignment’, then into ‘AI alignment problem is solved’, and finally ‘AI causes human extinction’. Arrows between panels illustrate the workflow sequence. CHART TYPE: conceptual flow diagram with two Bayes nets and intermediate conditional trees. DATA: relationships among qualitative variables—no numeric axes. PURPOSE: illustrates AMTAIR’s iterative refinement pipeline from full Bayes net to crux-tree extraction and back. DETAILS: emphasises node styles (solid, dashed, dotted) for relevance; shows convergence toward the extinction outcome. SOURCE: @gruetzemacher2022, May 2025." width="100%" data-fig-scap="Bayes-net pruning → crux extraction → re-expansion">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-bayesnet-crux-flow-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <a href="https://bnma.co/uai2022-apps-workshop/papers/S5.pdf"><img src="../../images/bns_and_conditional_trees.jpg" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:100.0%" data-fig-scap="Bayes-net pruning → crux extraction → re-expansion" alt="THREE-PANEL DIAGRAM. Panel A (upper left) titled ‘Initial Bayes Net—Pruning Least Relevant Nodes’ shows eleven circular nodes connected by arrows inside a rounded rectangle. Solid circles remain; dashed or dotted ones are pruned. Arrows converge on a solid node labelled ‘AI causes human extinction’. Panel B (upper right) titled ‘Two Sets of Crux Events from Bayes Nets Isolated as Conditional Trees’ shows two short vertical chains of dotted or dashed circles. Chain 1: ‘AI alignment problem is solved’ → ‘China and the US cooperate on AI alignment’ → ‘Discontinuous progress in computational costs’. Chain 2: ‘Intergovernmental treaty on AI alignment’ ← ‘Robust AI-driven economic growth’ ← ‘Continual learning integrated with foundation models’. Panel C (bottom) titled ‘Top Set of Crux Events as Conditional Tree Decomposed to Bayes Net’ depicts a new Bayes net where context nodes such as ‘Photonic computing is used for CPU’, ‘US/China trade increases’, and ‘US grows increasingly authoritarian’ feed into ‘China and the US cooperate on AI alignment’, then into ‘AI alignment problem is solved’, and finally ‘AI causes human extinction’. Arrows between panels illustrate the workflow sequence. CHART TYPE: conceptual flow diagram with two Bayes nets and intermediate conditional trees. DATA: relationships among qualitative variables—no numeric axes. PURPOSE: illustrates AMTAIR’s iterative refinement pipeline from full Bayes net to crux-tree extraction and back. DETAILS: emphasises node styles (solid, dashed, dotted) for relevance; shows convergence toward the extinction outcome. SOURCE: @gruetzemacher2022, May 2025."></a>
@@ -1006,8 +1018,8 @@ Figure&nbsp;2.2: Bayes-net pruning → crux extraction → re-expansion
 </figcaption>
 </figure>
 </div>
-<p>from <span class="citation" data-cites="mccaslin2024">McCaslin et al. (<a href="Outline_13.html#ref-mccaslin2024" role="doc-biblioref">2024</a>)</span></p>
-<div id="fig-conditional_tree" class="quarto-float quarto-figure quarto-figure-center anchored" data-fig-scap="Conditional-tree Guide" data-fig-align="center" alt="CHART TYPE: annotated schematic of a three-level conditional tree. DATA: placeholders XX %, AA %, BB %, VV %, WW %, etc. PURPOSE: illustrates colour and label conventions—green for ultimate question, blue/purple for indicator questions, grey/red for branch probabilities, red for updated extinction probabilities and relative-risk factors. DETAILS: shows how each indicator’s TRUE or FALSE branch feeds probabilistically into the ultimate extinction outcome. SOURCE: McCaslin et al. 2024 @mccaslin2024, FRI Working Paper #3." width="100%">
+<p>from <span class="citation" data-cites="mccaslin2024">McCaslin et al. (<a href="../../ref/references.html#ref-mccaslin2024" role="doc-biblioref">2024</a>)</span></p>
+<div id="fig-conditional_tree" class="quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center" alt="CHART TYPE: annotated schematic of a three-level conditional tree. DATA: placeholders XX %, AA %, BB %, VV %, WW %, etc. PURPOSE: illustrates colour and label conventions—green for ultimate question, blue/purple for indicator questions, grey/red for branch probabilities, red for updated extinction probabilities and relative-risk factors. DETAILS: shows how each indicator’s TRUE or FALSE branch feeds probabilistically into the ultimate extinction outcome. SOURCE: McCaslin et al. 2024 @mccaslin2024, FRI Working Paper #3." width="100%" data-fig-scap="Conditional-tree Guide">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-conditional_tree-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <a href="https://static1.squarespace.com/static/635693acf15a3e2a14a56a4a/t/66ba37a144f1d6095de467df/1723479995772/AIConditionalTrees.pdf#page=5.78"><img src="../../images/conditional_tree.jpg" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:100.0%" data-fig-scap="Conditional-tree Guide" alt="CHART TYPE: annotated schematic of a three-level conditional tree. DATA: placeholders XX %, AA %, BB %, VV %, WW %, etc. PURPOSE: illustrates colour and label conventions—green for ultimate question, blue/purple for indicator questions, grey/red for branch probabilities, red for updated extinction probabilities and relative-risk factors. DETAILS: shows how each indicator’s TRUE or FALSE branch feeds probabilistically into the ultimate extinction outcome. SOURCE: McCaslin et al. 2024 @mccaslin2024, FRI Working Paper #3."></a>
@@ -1017,8 +1029,8 @@ Figure&nbsp;2.3: Conditional-tree Guide
 </figcaption>
 </figure>
 </div>
-<p>from <span class="citation" data-cites="mccaslin2024">McCaslin et al. (<a href="Outline_13.html#ref-mccaslin2024" role="doc-biblioref">2024</a>)</span></p>
-<div id="fig-concerned_experts" class="quarto-float quarto-figure quarto-figure-center anchored" data-fig-scap="Experts’ conditional-tree updates (2030-2070)" data-fig-align="center" alt="CHART TYPE: conditional-probability tree with three sequential indicator nodes. DATA: baseline AI-extinction probability 17 % in 2023; indicator 1 (2030 administrative disempowerment warning shot) TRUE=37 %, FALSE=63 %; two conditional probabilities for extinction in 2100: 31.6 % (relative-risk 1.9×) if TRUE, 14.3 % (0.9×) if FALSE. Indicator 2 (2050 power-seeking warning shot) TRUE=54 %, FALSE=46 %; corresponding extinction probabilities 23.4 % (1.4×) and 10.5 % (0.6×). Indicator 3 (2070 no aligned AGI) TRUE=46 %, FALSE=54 %; extinction probabilities 25.0 % (1.5×) and 13.7 % (0.8×). PURPOSE: quantifies how confirmation or disconfirmation of warning-shot events would shift expert-assessed AI-extinction risk. DETAILS: experts are most alarmed by earlier administrative disempowerment (1.9× increase) and least by absence of power-seeking shot (0.6×). SOURCE: McCaslin et al. 2024 @mccaslin2024, FRI Working Paper #3." width="100%">
+<p>from <span class="citation" data-cites="mccaslin2024">McCaslin et al. (<a href="../../ref/references.html#ref-mccaslin2024" role="doc-biblioref">2024</a>)</span></p>
+<div id="fig-concerned_experts" class="quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center" alt="CHART TYPE: conditional-probability tree with three sequential indicator nodes. DATA: baseline AI-extinction probability 17 % in 2023; indicator 1 (2030 administrative disempowerment warning shot) TRUE=37 %, FALSE=63 %; two conditional probabilities for extinction in 2100: 31.6 % (relative-risk 1.9×) if TRUE, 14.3 % (0.9×) if FALSE. Indicator 2 (2050 power-seeking warning shot) TRUE=54 %, FALSE=46 %; corresponding extinction probabilities 23.4 % (1.4×) and 10.5 % (0.6×). Indicator 3 (2070 no aligned AGI) TRUE=46 %, FALSE=54 %; extinction probabilities 25.0 % (1.5×) and 13.7 % (0.8×). PURPOSE: quantifies how confirmation or disconfirmation of warning-shot events would shift expert-assessed AI-extinction risk. DETAILS: experts are most alarmed by earlier administrative disempowerment (1.9× increase) and least by absence of power-seeking shot (0.6×). SOURCE: McCaslin et al. 2024 @mccaslin2024, FRI Working Paper #3." width="100%" data-fig-scap="Experts’ conditional-tree updates (2030-2070)">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-concerned_experts-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <a href="https://static1.squarespace.com/static/635693acf15a3e2a14a56a4a/t/66ba37a144f1d6095de467df/1723479995772/AIConditionalTrees.pdf#page=5.78"><img src="../../images/concerned_experts.jpg" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:100.0%" data-fig-scap="Experts’ conditional-tree updates (2030-2070)" alt="CHART TYPE: conditional-probability tree with three sequential indicator nodes. DATA: baseline AI-extinction probability 17 % in 2023; indicator 1 (2030 administrative disempowerment warning shot) TRUE=37 %, FALSE=63 %; two conditional probabilities for extinction in 2100: 31.6 % (relative-risk 1.9×) if TRUE, 14.3 % (0.9×) if FALSE. Indicator 2 (2050 power-seeking warning shot) TRUE=54 %, FALSE=46 %; corresponding extinction probabilities 23.4 % (1.4×) and 10.5 % (0.6×). Indicator 3 (2070 no aligned AGI) TRUE=46 %, FALSE=54 %; extinction probabilities 25.0 % (1.5×) and 13.7 % (0.8×). PURPOSE: quantifies how confirmation or disconfirmation of warning-shot events would shift expert-assessed AI-extinction risk. DETAILS: experts are most alarmed by earlier administrative disempowerment (1.9× increase) and least by absence of power-seeking shot (0.6×). SOURCE: McCaslin et al. 2024 @mccaslin2024, FRI Working Paper #3."></a>
@@ -1035,7 +1047,7 @@ Abstract:
 
 
 -->
-<p><span class="citation" data-cites="mccaslin2024">McCaslin et al. (<a href="Outline_13.html#ref-mccaslin2024" role="doc-biblioref">2024</a>)</span></p>
+<p><span class="citation" data-cites="mccaslin2024">McCaslin et al. (<a href="../../ref/references.html#ref-mccaslin2024" role="doc-biblioref">2024</a>)</span></p>
 <!-- [ ] ADD: @tetlock2022 cite and explain their use of metaculus prediction markets, infered from his description:
 
 > From May 2022 to October 2023, the Forecasting Research Institute (FRI) experimented with a new method of question generation (“conditional trees”) in a study involving 21 AI experts and a group of highly skilled generalist forecasters. In this question series, FRI invites you to forecast on the case study's "ultimate question" (Before 2100, will AI cause the human population to fall below 5000 individuals?) along with four questions that were found to be most informative nearer-term indicators of the ultimate question. Then, you can forecast four conditional pairs that combine the ultimate question with each of the four indicator questions. We're excited to see how the forecasts of the Metaculus community compare to those in the study.
@@ -1044,7 +1056,7 @@ Abstract:
 
 
 -->
-<p><span class="citation" data-cites="tetlock2022">P. Tetlock (<a href="Outline_13.html#ref-tetlock2022" role="doc-biblioref">2022</a>)</span></p>
+<p><span class="citation" data-cites="tetlock2022">P. Tetlock (<a href="../../ref/references.html#ref-tetlock2022" role="doc-biblioref">2022</a>)</span></p>
 <!-- [ ] ADD @gruetzemacher2022 cite and summarize the relevant aspects, infered from his abstract:
 ::: {.callout-tip}
     We evaluate the strengths and weaknesses of
@@ -1066,7 +1078,7 @@ Abstract:
 :::
 
 -->
-<p><span class="citation" data-cites="gruetzemacher2022">Gruetzemacher (<a href="Outline_13.html#ref-gruetzemacher2022" role="doc-biblioref">2022</a>)</span></p>
+<p><span class="citation" data-cites="gruetzemacher2022">Gruetzemacher (<a href="../../ref/references.html#ref-gruetzemacher2022" role="doc-biblioref">2022</a>)</span></p>
 <!-- [ ] -->
 </section>
 </section>
@@ -1088,7 +1100,7 @@ P(X1,X2,...,Xn)=∏i=1nP(Xi∣Parents(Xi))P(X_1, X_2, ..., X_n) = \prod_{i=1}^{n
 <p>This factorization enables efficient inference and embodies causal assumptions explicitly.</p>
 </div>
 <!-- [ ] ADD: @pearl2014: "Pearl, J. (2014). Probabilistic Reasoning in Intelligent Systems: Networks of plausible Inference" -->
-<p><span class="citation" data-cites="pearl2014">Pearl (<a href="Outline_13.html#ref-pearl2014" role="doc-biblioref">2014</a>)</span></p>
+<p><span class="citation" data-cites="pearl2014">Pearl (<a href="../../ref/references.html#ref-pearl2014" role="doc-biblioref">2014</a>)</span></p>
 </section>
 <section id="sec-rain-sprinkler-example" class="level3">
 <h3 class="anchored" data-anchor-id="sec-rain-sprinkler-example">2.3.2 The Rain-Sprinkler-Grass Example</h3>
@@ -1179,8 +1191,8 @@ P(X1,X2,...,Xn)=∏i=1nP(Xi∣Parents(Xi))P(X_1, X_2, ..., X_n) = \prod_{i=1}^{n
 <li><strong>Uncertainty qualifications</strong></li>
 </ul>
 </div>
-<p>from <span class="citation" data-cites="metropolitansky2025">Metropolitansky and Larson (<a href="Outline_13.html#ref-metropolitansky2025" role="doc-biblioref">2025</a>)</span></p>
-<div id="fig-claimify-stages" class="quarto-float quarto-figure quarto-figure-center anchored" data-fig-scap="Claimify claim-extraction stages" data-fig-align="center" alt="COMPOSITE FIGURE: table and process flow. TABLE: four-row, two-column table enumerates stages 1–4 of Claimify’s pipeline—Sentence splitting and context creation, Selection, Disambiguation, Decomposition—each with a plain-language description. FLOW-CHART: sequence of rectangles and diamond decision nodes shows per-sentence logic. Start node ‘Input question &amp; answer’ feeds into ‘Split into sentences &amp; create context’. Decision 1 asks if the sentence contains verifiable content; ‘No’ exits with red X ‘No verifiable claims’, ‘Yes’ advances. Decision 2 checks for irresolvable ambiguity; ‘Yes’ exits with red X ‘Cannot be disambiguated’, ‘No’ advances. Decision 3 asks if at least one claim is produced; ‘No’ exits with red X ‘No verifiable claims’, ‘Yes’ ends with green check ‘Extracted claims’. A dashed bracket labelled ‘Per sentence’ spans the decision chain. PURPOSE: illustrates Claimify’s staged filtering that aligns with AMTAIR’s need for clean, disambiguated claims before formal modelling. DATA: categorical process flow—no numeric axes. SOURCE: Adapted from Claimify documentation (2024, https://www.microsoft.com/en-us/research/blog/claimify-extracting-high-quality-claims-from-language-model-outputs/)." width="100%">
+<p>from <span class="citation" data-cites="metropolitansky2025">Metropolitansky and Larson (<a href="../../ref/references.html#ref-metropolitansky2025" role="doc-biblioref">2025</a>)</span></p>
+<div id="fig-claimify-stages" class="quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center" alt="COMPOSITE FIGURE: table and process flow. TABLE: four-row, two-column table enumerates stages 1–4 of Claimify’s pipeline—Sentence splitting and context creation, Selection, Disambiguation, Decomposition—each with a plain-language description. FLOW-CHART: sequence of rectangles and diamond decision nodes shows per-sentence logic. Start node ‘Input question &amp; answer’ feeds into ‘Split into sentences &amp; create context’. Decision 1 asks if the sentence contains verifiable content; ‘No’ exits with red X ‘No verifiable claims’, ‘Yes’ advances. Decision 2 checks for irresolvable ambiguity; ‘Yes’ exits with red X ‘Cannot be disambiguated’, ‘No’ advances. Decision 3 asks if at least one claim is produced; ‘No’ exits with red X ‘No verifiable claims’, ‘Yes’ ends with green check ‘Extracted claims’. A dashed bracket labelled ‘Per sentence’ spans the decision chain. PURPOSE: illustrates Claimify’s staged filtering that aligns with AMTAIR’s need for clean, disambiguated claims before formal modelling. DATA: categorical process flow—no numeric axes. SOURCE: Adapted from Claimify documentation (2024, https://www.microsoft.com/en-us/research/blog/claimify-extracting-high-quality-claims-from-language-model-outputs/)." width="100%" data-fig-scap="Claimify claim-extraction stages">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-claimify-stages-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <a href="https://www.microsoft.com/en-us/research/blog/claimify-extracting-high-quality-claims-from-language-model-outputs/"><img src="../../images/claimify-stages.jpg" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:100.0%" data-fig-scap="Claimify claim-extraction stages" alt="COMPOSITE FIGURE: table and process flow. TABLE: four-row, two-column table enumerates stages 1–4 of Claimify’s pipeline—Sentence splitting and context creation, Selection, Disambiguation, Decomposition—each with a plain-language description. FLOW-CHART: sequence of rectangles and diamond decision nodes shows per-sentence logic. Start node ‘Input question &amp; answer’ feeds into ‘Split into sentences &amp; create context’. Decision 1 asks if the sentence contains verifiable content; ‘No’ exits with red X ‘No verifiable claims’, ‘Yes’ advances. Decision 2 checks for irresolvable ambiguity; ‘Yes’ exits with red X ‘Cannot be disambiguated’, ‘No’ advances. Decision 3 asks if at least one claim is produced; ‘No’ exits with red X ‘No verifiable claims’, ‘Yes’ ends with green check ‘Extracted claims’. A dashed bracket labelled ‘Per sentence’ spans the decision chain. PURPOSE: illustrates Claimify’s staged filtering that aligns with AMTAIR’s need for clean, disambiguated claims before formal modelling. DATA: categorical process flow—no numeric axes. SOURCE: Adapted from Claimify documentation (2024, https://www.microsoft.com/en-us/research/blog/claimify-extracting-high-quality-claims-from-language-model-outputs/)."></a>
@@ -1195,21 +1207,21 @@ Figure&nbsp;2.5: Claimify claim-extraction stages
     - adapt the surrounding text as necessary
     - also reference "Claimify"
 -->
-<p><span class="citation" data-cites="anderson2007">Anderson (<a href="Outline_13.html#ref-anderson2007" role="doc-biblioref">2007</a>)</span></p>
-<p><span class="citation" data-cites="benn2011">Benn and Macintosh (<a href="Outline_13.html#ref-benn2011" role="doc-biblioref">2011</a>)</span></p>
-<p><span class="citation" data-cites="khartabil2021">D. Khartabil et al. (<a href="Outline_13.html#ref-khartabil2021" role="doc-biblioref">2021</a>)</span></p>
-<p><span class="citation" data-cites="khartabil2020">Dana Khartabil (<a href="Outline_13.html#ref-khartabil2020" role="doc-biblioref">2020</a>)</span></p>
-<p><span class="citation" data-cites="ngajie2020">Ngajie et al. (<a href="Outline_13.html#ref-ngajie2020" role="doc-biblioref">2020</a>)</span></p>
-<p><span class="citation" data-cites="prokudin2024">Prokudin, Lisanyuk, and Baymuratov (<a href="Outline_13.html#ref-prokudin2024" role="doc-biblioref">2024</a>)</span></p>
-<p><span class="citation" data-cites="scheuer2010">Scheuer et al. (<a href="Outline_13.html#ref-scheuer2010" role="doc-biblioref">2010</a>)</span></p>
-<p><span class="citation" data-cites="thomas1962">(<a href="Outline_13.html#ref-thomas1962" role="doc-biblioref"><strong>thomas1962?</strong></a>)</span></p>
-<p><span class="citation" data-cites="walton2009">Walton (<a href="Outline_13.html#ref-walton2009" role="doc-biblioref">2009</a>)</span></p>
+<p><span class="citation" data-cites="anderson2007">Anderson (<a href="../../ref/references.html#ref-anderson2007" role="doc-biblioref">2007</a>)</span></p>
+<p><span class="citation" data-cites="benn2011">Benn and Macintosh (<a href="../../ref/references.html#ref-benn2011" role="doc-biblioref">2011</a>)</span></p>
+<p><span class="citation" data-cites="khartabil2021">D. Khartabil et al. (<a href="../../ref/references.html#ref-khartabil2021" role="doc-biblioref">2021</a>)</span></p>
+<p><span class="citation" data-cites="khartabil2020">Dana Khartabil (<a href="../../ref/references.html#ref-khartabil2020" role="doc-biblioref">2020</a>)</span></p>
+<p><span class="citation" data-cites="ngajie2020">Ngajie et al. (<a href="../../ref/references.html#ref-ngajie2020" role="doc-biblioref">2020</a>)</span></p>
+<p><span class="citation" data-cites="prokudin2024">Prokudin, Lisanyuk, and Baymuratov (<a href="../../ref/references.html#ref-prokudin2024" role="doc-biblioref">2024</a>)</span></p>
+<p><span class="citation" data-cites="scheuer2010">Scheuer et al. (<a href="../../ref/references.html#ref-scheuer2010" role="doc-biblioref">2010</a>)</span></p>
+<p><span class="citation" data-cites="thomas1962">(<a href="../../ref/references.html#ref-thomas1962" role="doc-biblioref"><strong>thomas1962?</strong></a>)</span></p>
+<p><span class="citation" data-cites="walton2009">Walton (<a href="../../ref/references.html#ref-walton2009" role="doc-biblioref">2009</a>)</span></p>
 </section>
 <section id="sec-argdown-notation" class="level3">
 <h3 class="anchored" data-anchor-id="sec-argdown-notation">2.4.2 ArgDown: Structured Argument Notation</h3>
 <!-- [ ] ADD: @voigt2025 from url: https://argdown.org/ and https://github.com/christianvoigt/argdown add as reference for argdown 
 -->
-<p><span class="citation" data-cites="voigt2025">Voigt (<a href="Outline_13.html#ref-voigt2025" role="doc-biblioref">[2014] 2025</a>)</span></p>
+<p><span class="citation" data-cites="voigt2025">Voigt (<a href="../../ref/references.html#ref-voigt2025" role="doc-biblioref">[2014] 2025</a>)</span></p>
 <p>ArgDown provides a markdown-like syntax for hierarchical argument representation:</p>
 <pre><code>[MainClaim]: Description of primary conclusion.
  + [SupportingEvidence]: Evidence supporting the claim.
@@ -1321,7 +1333,7 @@ Figure&nbsp;2.5: Claimify claim-extraction stages
 <p><strong>Sensitivity Analysis</strong>: Identifying which parameters most influence conclusions about AI risk levels.</p>
 <p><strong>Visual Communication</strong>: Creating interactive models that stakeholders could explore and modify.</p>
 <!-- [ ] ADD: @clarke2022: "Modeling Transformative AI Risks (MTAIR) Project -- Summary Report" -->
-<p><span class="citation" data-cites="clarke2022">Clarke et al. (<a href="Outline_13.html#ref-clarke2022" role="doc-biblioref">2022</a>)</span></p>
+<p><span class="citation" data-cites="clarke2022">Clarke et al. (<a href="../../ref/references.html#ref-clarke2022" role="doc-biblioref">2022</a>)</span></p>
 </section>
 <section id="sec-mtair-achievements" class="level3">
 <h3 class="anchored" data-anchor-id="sec-mtair-achievements">2.5.2 Key Achievements</h3>
@@ -1354,8 +1366,8 @@ Total per model: ~200-400 hours
 <p><strong>Limited Accessibility</strong>: Using the models requires Analytica software and significant technical sophistication.</p>
 <p><strong>Single Perspective</strong>: Each model represents one worldview, making comparison across perspectives difficult.</p>
 <p>These limitations prevent MTAIR’s approach from scaling to meet AI governance needs. As the pace of AI development accelerates and arguments proliferate, manual modeling cannot keep pace.</p>
-<p>from <span class="citation" data-cites="clarke2022">Clarke et al. (<a href="Outline_13.html#ref-clarke2022" role="doc-biblioref">2022</a>)</span></p>
-<div id="fig-mtair-qual-map" class="quarto-float quarto-figure quarto-figure-center anchored" data-fig-scap="MTAIR Qualitative map structure" data-fig-align="center" alt="NODE-LINK DIAGRAM titled ‘Qualitative Map’. Blue rectangles ‘Hypothesis 1’ and ‘Hypothesis 2’, cyan rectangles ‘Debated propositions 1 &amp; 2’, green rectangles ‘Proposed agendas 1 &amp; 2’, red rectangles ‘Catastrophe scenarios 1 &amp; 2’. Arrows show causal influence path from hypotheses through debated propositions and agendas to catastrophes. No probability icons, no analysis panel. PURPOSE: foundational structure before numerical parametrisation, illustrating argumentative flow in MTAIR. SOURCE: David Manheim et. al, Modeling Transformative AI Risks (MTAIR) Project -- Summary Report, 2021." width="100%">
+<p>from <span class="citation" data-cites="clarke2022">Clarke et al. (<a href="../../ref/references.html#ref-clarke2022" role="doc-biblioref">2022</a>)</span></p>
+<div id="fig-mtair-qual-map" class="quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center" alt="NODE-LINK DIAGRAM titled ‘Qualitative Map’. Blue rectangles ‘Hypothesis 1’ and ‘Hypothesis 2’, cyan rectangles ‘Debated propositions 1 &amp; 2’, green rectangles ‘Proposed agendas 1 &amp; 2’, red rectangles ‘Catastrophe scenarios 1 &amp; 2’. Arrows show causal influence path from hypotheses through debated propositions and agendas to catastrophes. No probability icons, no analysis panel. PURPOSE: foundational structure before numerical parametrisation, illustrating argumentative flow in MTAIR. SOURCE: David Manheim et. al, Modeling Transformative AI Risks (MTAIR) Project -- Summary Report, 2021." width="100%" data-fig-scap="MTAIR Qualitative map structure">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-mtair-qual-map-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <a href="https://arxiv.org/pdf/2206.09360#page=10.75"><img src="../../images/mtair-qual-map.jpg" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:100.0%" data-fig-scap="MTAIR Qualitative map structure" alt="NODE-LINK DIAGRAM titled ‘Qualitative Map’. Blue rectangles ‘Hypothesis 1’ and ‘Hypothesis 2’, cyan rectangles ‘Debated propositions 1 &amp; 2’, green rectangles ‘Proposed agendas 1 &amp; 2’, red rectangles ‘Catastrophe scenarios 1 &amp; 2’. Arrows show causal influence path from hypotheses through debated propositions and agendas to catastrophes. No probability icons, no analysis panel. PURPOSE: foundational structure before numerical parametrisation, illustrating argumentative flow in MTAIR. SOURCE: David Manheim et. al, Modeling Transformative AI Risks (MTAIR) Project -- Summary Report, 2021."></a>
@@ -1365,8 +1377,8 @@ Figure&nbsp;2.6: MTAIR Qualitative map structure
 </figcaption>
 </figure>
 </div>
-<p>from <span class="citation" data-cites="clarke2022">Clarke et al. (<a href="Outline_13.html#ref-clarke2022" role="doc-biblioref">2022</a>)</span></p>
-<div id="fig-mtair-quant-map" class="quarto-float quarto-figure quarto-figure-center anchored" data-fig-scap="MTAIR Quantitative map structure" data-fig-align="center" alt="FLOW DIAGRAM titled ‘Quantitative Model’. Blue and cyan rectangles (Hypotheses and Debated propositions) feed green ‘Proposed agenda’ boxes and a rose ‘Meta-uncertainty’ box, which all point to red ‘Catastrophe scenario’ boxes. Tiny mini-PDF icons depict probability distributions beside each variable. Right-hand analysis panel lists Effects of investment, Sensitivity analysis, What-if questions, Decision approaches, Analysis tools. PURPOSE: show how MTAIR converts a qualitative causal map into a quantified Bayesian network that supports downstream scenario and decision analysis. OURCE: David Manheim et. al, Modeling Transformative AI Risks (MTAIR) Project -- Summary Report, 2021." width="100%">
+<p>from <span class="citation" data-cites="clarke2022">Clarke et al. (<a href="../../ref/references.html#ref-clarke2022" role="doc-biblioref">2022</a>)</span></p>
+<div id="fig-mtair-quant-map" class="quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center" alt="FLOW DIAGRAM titled ‘Quantitative Model’. Blue and cyan rectangles (Hypotheses and Debated propositions) feed green ‘Proposed agenda’ boxes and a rose ‘Meta-uncertainty’ box, which all point to red ‘Catastrophe scenario’ boxes. Tiny mini-PDF icons depict probability distributions beside each variable. Right-hand analysis panel lists Effects of investment, Sensitivity analysis, What-if questions, Decision approaches, Analysis tools. PURPOSE: show how MTAIR converts a qualitative causal map into a quantified Bayesian network that supports downstream scenario and decision analysis. OURCE: David Manheim et. al, Modeling Transformative AI Risks (MTAIR) Project -- Summary Report, 2021." width="100%" data-fig-scap="MTAIR Quantitative map structure">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-mtair-quant-map-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <a href="https://arxiv.org/pdf/2206.09360#page=10.75"><img src="../../images/mtair-quant-map.jpg" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:100.0%" data-fig-scap="MTAIR Quantitative map structure" alt="FLOW DIAGRAM titled ‘Quantitative Model’. Blue and cyan rectangles (Hypotheses and Debated propositions) feed green ‘Proposed agenda’ boxes and a rose ‘Meta-uncertainty’ box, which all point to red ‘Catastrophe scenario’ boxes. Tiny mini-PDF icons depict probability distributions beside each variable. Right-hand analysis panel lists Effects of investment, Sensitivity analysis, What-if questions, Decision approaches, Analysis tools. PURPOSE: show how MTAIR converts a qualitative causal map into a quantified Bayesian network that supports downstream scenario and decision analysis. OURCE: David Manheim et. al, Modeling Transformative AI Risks (MTAIR) Project -- Summary Report, 2021."></a>
@@ -1376,8 +1388,8 @@ Figure&nbsp;2.7: MTAIR Quantitative map structure
 </figcaption>
 </figure>
 </div>
-<p>from <span class="citation" data-cites="manheim2021">Manheim (<a href="Outline_13.html#ref-manheim2021" role="doc-biblioref">2021</a>)</span></p>
-<div id="fig-mtair-insideoutside-base" class="quarto-float quarto-figure quarto-figure-center anchored" data-fig-scap="Base APS causal map (clean)" data-fig-align="center" alt="Same node-and-arrow causal graph as the overlay figure but without the purple, violet, and red guiding circles. Blue bullet premises feed ‘Collection of inputs’ rectangle, cascading turquoise probability ovals lead to ‘Cr existential catastrophe | world model’. Lower left shows outside-view priors, right shows weighting logic, centre red oval ‘Cr existential catastrophe’. Provides uncluttered view of the structural model prior to explanatory overlay. SOURCE: David Manheim @manheim2021, MTAIR sequence, 2021." width="100%">
+<p>from <span class="citation" data-cites="manheim2021">Manheim (<a href="../../ref/references.html#ref-manheim2021" role="doc-biblioref">2021</a>)</span></p>
+<div id="fig-mtair-insideoutside-base" class="quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center" alt="Same node-and-arrow causal graph as the overlay figure but without the purple, violet, and red guiding circles. Blue bullet premises feed ‘Collection of inputs’ rectangle, cascading turquoise probability ovals lead to ‘Cr existential catastrophe | world model’. Lower left shows outside-view priors, right shows weighting logic, centre red oval ‘Cr existential catastrophe’. Provides uncluttered view of the structural model prior to explanatory overlay. SOURCE: David Manheim @manheim2021, MTAIR sequence, 2021." width="100%" data-fig-scap="Base APS causal map (clean)">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-mtair-insideoutside-base-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <a href="https://www.lesswrong.com/posts/sGkRDrpphsu6Jhega/a-model-based-approach-to-ai-existential-risk"><img src="../../images/mtair-insideoutside-base.jpg" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:100.0%" data-fig-scap="Base APS causal map (clean)" alt="Same node-and-arrow causal graph as the overlay figure but without the purple, violet, and red guiding circles. Blue bullet premises feed ‘Collection of inputs’ rectangle, cascading turquoise probability ovals lead to ‘Cr existential catastrophe | world model’. Lower left shows outside-view priors, right shows weighting logic, centre red oval ‘Cr existential catastrophe’. Provides uncluttered view of the structural model prior to explanatory overlay. SOURCE: David Manheim @manheim2021, MTAIR sequence, 2021."></a>
@@ -1387,8 +1399,8 @@ Figure&nbsp;2.8: Base APS causal map
 </figcaption>
 </figure>
 </div>
-<p>from <span class="citation" data-cites="manheim2021">Manheim (<a href="Outline_13.html#ref-manheim2021" role="doc-biblioref">2021</a>)</span></p>
-<div id="fig-mtair-insideoutside-overlay" class="quarto-float quarto-figure quarto-figure-center anchored" data-fig-scap="Overlay of inside/outside/assimilation views" data-fig-align="center" alt="CONCEPT MAP overlaid by three translucent circles captioned Inside view, Outside views, and Assimilation logic. Left bullet list of six APS assumptions feeds a central causal chain of probabilities (timeline, incentive, alignment, failure, disempowerment, catastrophe) leading to a node titled ‘Cr existential catastrophe | world model’. Lower-left cluster of rectangles represents outside-view priors (Second Species Argument, transformative-tech base rate, AGI timeline forecasts, etc.). Right-hand cluster shows weighting and integration logic combining world-model estimate with outside-view priors into a final existential-catastrophe credence. No numerical axes—pure structural relationships. PURPOSE: illustrate how MTAIR reconciles inside-view technical reasoning with outside-view priors using an assimilation weighting scheme. SOURCE: David Manheim @manheim2021, MTAIR sequence post #3, Jul 2021." width="100%">
+<p>from <span class="citation" data-cites="manheim2021">Manheim (<a href="../../ref/references.html#ref-manheim2021" role="doc-biblioref">2021</a>)</span></p>
+<div id="fig-mtair-insideoutside-overlay" class="quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center" alt="CONCEPT MAP overlaid by three translucent circles captioned Inside view, Outside views, and Assimilation logic. Left bullet list of six APS assumptions feeds a central causal chain of probabilities (timeline, incentive, alignment, failure, disempowerment, catastrophe) leading to a node titled ‘Cr existential catastrophe | world model’. Lower-left cluster of rectangles represents outside-view priors (Second Species Argument, transformative-tech base rate, AGI timeline forecasts, etc.). Right-hand cluster shows weighting and integration logic combining world-model estimate with outside-view priors into a final existential-catastrophe credence. No numerical axes—pure structural relationships. PURPOSE: illustrate how MTAIR reconciles inside-view technical reasoning with outside-view priors using an assimilation weighting scheme. SOURCE: David Manheim @manheim2021, MTAIR sequence post #3, Jul 2021." width="100%" data-fig-scap="Overlay of inside/outside/assimilation views">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-mtair-insideoutside-overlay-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <a href="https://www.lesswrong.com/posts/sGkRDrpphsu6Jhega/a-model-based-approach-to-ai-existential-risk"><img src="../../images/mtair-insideoutside-overlay.jpg" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:100.0%" data-fig-scap="Overlay of inside/outside/assimilation views" alt="CONCEPT MAP overlaid by three translucent circles captioned Inside view, Outside views, and Assimilation logic. Left bullet list of six APS assumptions feeds a central causal chain of probabilities (timeline, incentive, alignment, failure, disempowerment, catastrophe) leading to a node titled ‘Cr existential catastrophe | world model’. Lower-left cluster of rectangles represents outside-view priors (Second Species Argument, transformative-tech base rate, AGI timeline forecasts, etc.). Right-hand cluster shows weighting and integration logic combining world-model estimate with outside-view priors into a final existential-catastrophe credence. No numerical axes—pure structural relationships. PURPOSE: illustrate how MTAIR reconciles inside-view technical reasoning with outside-view priors using an assimilation weighting scheme. SOURCE: David Manheim @manheim2021, MTAIR sequence post #3, Jul 2021."></a>
@@ -1417,8 +1429,8 @@ Figure&nbsp;2.9: Overlay of inside/outside/assimilation views
 <section id="sec-literature-review" class="level2">
 <h2 class="anchored" data-anchor-id="sec-literature-review">2.6 Literature Review: Content and Technical Levels</h2>
 <!-- [ ] TODO: Provide an overview of the key / most important existing AI risk models, governance proposals, and technical approaches -->
-<p>from <span class="citation" data-cites="cottier2019">Cottier and Shah (<a href="Outline_13.html#ref-cottier2019" role="doc-biblioref">2019</a>)</span></p>
-<div id="fig-ai-hypotheses-map" class="quarto-float quarto-figure quarto-figure-center anchored" data-fig-scap="Key hypotheses in AI alignment" data-fig-align="center" alt="LARGE CONCEPT MAP. Nodes are colour-coded: red for problems that could lead to catastrophe, green for solutions or agendas, blue for scenarios or conceptual models. Bold-border nodes denote primary hypotheses such as ‘Discontinuity to AGI’, ‘Agentive AGI’, ‘Broad basin for corrigibility’, and ‘Mesa-optimisation’. Directed arrows link questions to hypotheses, questions to questions, and scenarios to hypotheses. Arrow labels (Yes, No, Defer, brief rationales) indicate how answering the tail node influences credence in the head node. A legend at the bottom explains colour categories and arrow semantics. Source: Ben Cottier &amp; Rohin Shah (2019) @cottier2019 “Clarifying Some Key Hypotheses in AI Alignment”, AI Alignment Forum." width="100%">
+<p>from <span class="citation" data-cites="cottier2019">Cottier and Shah (<a href="../../ref/references.html#ref-cottier2019" role="doc-biblioref">2019</a>)</span></p>
+<div id="fig-ai-hypotheses-map" class="quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center" alt="LARGE CONCEPT MAP. Nodes are colour-coded: red for problems that could lead to catastrophe, green for solutions or agendas, blue for scenarios or conceptual models. Bold-border nodes denote primary hypotheses such as ‘Discontinuity to AGI’, ‘Agentive AGI’, ‘Broad basin for corrigibility’, and ‘Mesa-optimisation’. Directed arrows link questions to hypotheses, questions to questions, and scenarios to hypotheses. Arrow labels (Yes, No, Defer, brief rationales) indicate how answering the tail node influences credence in the head node. A legend at the bottom explains colour categories and arrow semantics. Source: Ben Cottier &amp; Rohin Shah (2019) @cottier2019 “Clarifying Some Key Hypotheses in AI Alignment”, AI Alignment Forum." width="100%" data-fig-scap="Key hypotheses in AI alignment">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-ai-hypotheses-map-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <a href="https://www.lesswrong.com/posts/mJ5oNYnkYrd4sD5uE/clarifying-some-key-hypotheses-in-ai-alignment#Agentive_AGI_"><embed src="../../images/hypotheses_diagram.pdf" class="img-fluid quarto-figure quarto-figure-center" style="width:100.0%" data-fig-scap="Key hypotheses in AI alignment" alt="LARGE CONCEPT MAP. Nodes are colour-coded: red for problems that could lead to catastrophe, green for solutions or agendas, blue for scenarios or conceptual models. Bold-border nodes denote primary hypotheses such as ‘Discontinuity to AGI’, ‘Agentive AGI’, ‘Broad basin for corrigibility’, and ‘Mesa-optimisation’. Directed arrows link questions to hypotheses, questions to questions, and scenarios to hypotheses. Arrow labels (Yes, No, Defer, brief rationales) indicate how answering the tail node influences credence in the head node. A legend at the bottom explains colour categories and arrow semantics. Source: Ben Cottier &amp; Rohin Shah (2019) @cottier2019 “Clarifying Some Key Hypotheses in AI Alignment”, AI Alignment Forum."></a>
@@ -1447,11 +1459,11 @@ Figure&nbsp;2.10: Key hypotheses in AI alignment
 </div>
 </div>
 <!-- [ ] ADD: @yudkowsky2008: "Yudkowsky, E. (2008). Artificial Intelligence as a Positive and Negative Factor in Global Risk" -->
-<p><span class="citation" data-cites="yudkowsky2008">Yudkowsky (<a href="Outline_13.html#ref-yudkowsky2008" role="doc-biblioref">2008</a>)</span></p>
+<p><span class="citation" data-cites="yudkowsky2008">Yudkowsky (<a href="../../ref/references.html#ref-yudkowsky2008" role="doc-biblioref">2008</a>)</span></p>
 <!-- [ ] ADD: @bostrom2014: "Bostrom, N. (2014). Superintelligence: Paths, Dangers, Strategies" -->
-<p><span class="citation" data-cites="bostrom2014">Bostrom (<a href="Outline_13.html#ref-bostrom2014" role="doc-biblioref">2014</a>)</span></p>
+<p><span class="citation" data-cites="bostrom2014">Bostrom (<a href="../../ref/references.html#ref-bostrom2014" role="doc-biblioref">2014</a>)</span></p>
 <!-- [ ] ADD: @amodei2016: "Amodei, D., et al. (2016). Concrete Problems in AI Safety" -->
-<p><span class="citation" data-cites="amodei2016">Amodei et al. (<a href="Outline_13.html#ref-amodei2016" role="doc-biblioref">2016</a>)</span></p>
+<p><span class="citation" data-cites="amodei2016">Amodei et al. (<a href="../../ref/references.html#ref-amodei2016" role="doc-biblioref">2016</a>)</span></p>
 <p>The progression from qualitative arguments to structured probabilistic models demonstrates the field’s maturation and the increasing recognition that rigorous quantitative analysis is essential for policy evaluation.</p>
 </section>
 <section id="sec-governance-taxonomy" class="level3">
@@ -1464,10 +1476,10 @@ Figure&nbsp;2.10: Key hypotheses in AI alignment
 <li><strong>Research Priorities</strong>: Funding allocation, talent development, knowledge sharing</li>
 </ul>
 <!-- [ ] ADD: @dafoe2021: "Dafoe, A. (2021) and (2018). AI Governance: A Research Agenda" -->
-<p><span class="citation" data-cites="dafoe2021">Dafoe (<a href="Outline_13.html#ref-dafoe2021" role="doc-biblioref">2021</a>)</span> and <span class="citation" data-cites="dafoe2018">Dafoe (<a href="Outline_13.html#ref-dafoe2018" role="doc-biblioref">2018</a>)</span></p>
+<p><span class="citation" data-cites="dafoe2021">Dafoe (<a href="../../ref/references.html#ref-dafoe2021" role="doc-biblioref">2021</a>)</span> and <span class="citation" data-cites="dafoe2018">Dafoe (<a href="../../ref/references.html#ref-dafoe2018" role="doc-biblioref">2018</a>)</span></p>
 <!-- [ ] TODO: Add analysis of "A Narrow Path" as case study -->
 <!-- [ ] ADD: @miotti2024 cite and write a fantastic sub-section "Conditional Policy Proposal Example: A Narrow Path" -->
-<p><span class="citation" data-cites="miotti2024">Miotti et al. (<a href="Outline_13.html#ref-miotti2024" role="doc-biblioref">2024</a>)</span></p>
+<p><span class="citation" data-cites="miotti2024">Miotti et al. (<a href="../../ref/references.html#ref-miotti2024" role="doc-biblioref">2024</a>)</span></p>
 <!-- [ ] FULLY REFORMULATE TO AVOID PLAGIARISM OR QUOTE PARTS DIRECTLY:
         
         There is a simple truth - humanityʼs extinction is possible. Recent history has also
@@ -1521,7 +1533,7 @@ Figure&nbsp;2.10: Key hypotheses in AI alignment
 <li><strong>Inference Algorithms</strong>: From exact methods to approximation approaches</li>
 </ul>
 <!-- [ ] ADD: @koller2009: "Koller, D., & Friedman, N. (2009). Probabilistic Graphical Models: Principles and Techniques" -->
-<p><span class="citation" data-cites="koller2009">Koller and Friedman (<a href="Outline_13.html#ref-koller2009" role="doc-biblioref">2009</a>)</span></p>
+<p><span class="citation" data-cites="koller2009">Koller and Friedman (<a href="../../ref/references.html#ref-koller2009" role="doc-biblioref">2009</a>)</span></p>
 </section>
 <section id="sec-software-tools" class="level3">
 <h3 class="anchored" data-anchor-id="sec-software-tools">2.6.4 Software Tools Landscape</h3>
@@ -1545,7 +1557,7 @@ Figure&nbsp;2.10: Key hypotheses in AI alignment
 <li><strong>Uncertainty Quantification</strong>: Mapping qualitative to quantitative expressions</li>
 </ul>
 <!-- [ ] ADD: @pollock1995: "Pollock, J. (1995). Cognitive Carpentry" -->
-<p><span class="citation" data-cites="pollock1995">Pollock (<a href="Outline_13.html#ref-pollock1995" role="doc-biblioref">1995</a>)</span></p>
+<p><span class="citation" data-cites="pollock1995">Pollock (<a href="../../ref/references.html#ref-pollock1995" role="doc-biblioref">1995</a>)</span></p>
 </section>
 <section id="sec-correlation-methods" class="level3">
 <h3 class="anchored" data-anchor-id="sec-correlation-methods">2.6.6 Correlation Accounting Methods</h3>
@@ -1559,7 +1571,7 @@ Figure&nbsp;2.10: Key hypotheses in AI alignment
 </ul>
 </div>
 <!-- [ ] ADD: @nelsen2006: "Nelsen, R. B. (2006). An Introduction to Copulas" -->
-<p><span class="citation" data-cites="nelson2006">Nelson (<a href="Outline_13.html#ref-nelson2006" role="doc-biblioref">2006</a>)</span></p>
+<p><span class="citation" data-cites="nelson2006">Nelson (<a href="../../ref/references.html#ref-nelson2006" role="doc-biblioref">2006</a>)</span></p>
 <!-- [ ] TODO: Add specific example of correlation impact on risk estimates -->
 </section>
 </section>
@@ -4098,16 +4110,56 @@ Across 20 test documents:
 <!-- [ ] INTRODUCE: some of the key Practical Software Implementation enabled by AMTAIR -->
 <!-- [ ] EXPLAIN: how the automated extraction pipeline and the resulting data(format) enable so many new, powerful usecases-->
 </section>
-<section id="section" class="level3">
-<h3 class="anchored" data-anchor-id="section">3.7.2</h3>
+<section id="ai-risk-pathway-analyzer-arpa" class="level3">
+<h3 class="anchored" data-anchor-id="ai-risk-pathway-analyzer-arpa">3.7.2 <strong>AI Risk Pathway Analyzer (ARPA)</strong></h3>
+<p>1. Document Ingestion System: Handles format normalization, metadata extraction, and citation tracking for diverse input formats. 2. LLM-Powered Extraction Pipeline: Uses two-stage prompting to identify variables, claims, and causal relationships from text. 3. ArgDown Representation Generator: Creates structured intermediate representation of arguments with formal syntax. 4. Bayesian Network Constructor: Transforms ArgDown into formal Bayesian networks with nodes and edges. 5. Probability Quantification Module: Populates conditional probability tables from extracted judgments. 6. Interactive Visualization Interface: Provides intuitive visual access to network structure and probabilities. 7. Sensitivity Analysis Engine: Identifies critical variables and tests robustness of conclusions.</p>
+<p>The cornerstone system that transforms unstructured AI safety literature into formal, analyzable models. Like a Rosetta Stone for AI governance, ARPA creates a common language for discourse by extracting the implicit causal models embedded in research papers and converting them into explicit Bayesian networks. Its strategic value lies in overcoming the fundamental information processing bottleneck in AI governance—making the invisible visible by revealing the assumptions, relationships, and probability judgments that drive different conclusions about AI risk.</p>
+<section id="section" class="level4">
+<h4 class="anchored" data-anchor-id="section"></h4>
+</section>
 </section>
 <section id="pdoom-calculator" class="level3">
 <h3 class="anchored" data-anchor-id="pdoom-calculator">3.7.3 P(Doom) Calculator</h3>
 </section>
+<section id="worldview-comparator" class="level3">
+<h3 class="anchored" data-anchor-id="worldview-comparator">3.7.4 <strong>Worldview Comparator</strong></h3>
+<p>A “gifted, diplomatic translator” that helps to reveal the hidden landscape of agreement and disagreement across different perspectives on AI risk. This system provides the cartography of ideas—mapping where different worldviews converge, diverge, and where crucial disagreements (“cruxes”) significantly affect conclusions. Its strategic value lies in focusing discourse on substantive disagreements rather than terminological differences, enabling more productive collaboration across philosophical and methodological divides within the AI safety community.</p>
+<p>1. Structural Comparison Engine: Identifies isomorphic subgraphs between different models and maps shared causal pathways. 2. Parameter Difference Analyzer: Quantifies differences in probability distributions across models. 3. Crux Identification System: Detects critical disagreements that significantly affect conclusions. 4. Worldview Explainer: Provides conversational interface for exploring different perspectives. 5. Worldview Communicator: Translates concepts between different terminological frameworks. 6. Consensus Model Builder: Identifies shared structures and constructs hybrid models representing areas of agreement.</p>
+</section>
+<section id="policy-impact-evaluator" class="level3">
+<h3 class="anchored" data-anchor-id="policy-impact-evaluator">3.7.5 <strong>Policy Impact Evaluator</strong></h3>
+<p>1. Policy Representation System: Translates governance proposals into formal intervention parameters. 2. Counterfactual Analysis Engine: Implements Pearl’s do-calculus for simulating intervention effects. 3. Multi-Worldview Evaluator: Tests policy effects across different extracted models. 4. Intervention Portfolio Analyzer: Assesses combinations of policies for synergies and conflicts. 5. Policy Effectiveness Dashboard: Visualizes impact assessments with uncertainty representation.</p>
+<p>A policy simulator that functions like a governance wind tunnel—testing how specific interventions might perform across different possible futures. By representing policies as modifications to causal networks, this system enables rigorous counterfactual analysis of intervention effects. Its strategic value lies in transforming abstract policy discussions into concrete, quantifiable assessments of expected impact, helping governance stakeholders allocate resources to the most effective interventions.</p>
+</section>
+<section id="ai-risk-pathway-visualizer" class="level3">
+<h3 class="anchored" data-anchor-id="ai-risk-pathway-visualizer">3.7.6 <strong>AI Risk Pathway Visualizer</strong></h3>
+<p>1. Risk Level Aggregation System: Combines multiple factors into summary risk metrics. 2. Temporal Tracking Interface: Records and displays changes in assessments over time. 3. Component Breakdown Visualizer: Separates overall risk into constituent factors. 4. Interactive Educational Components: Provides background on key concepts and methodologies. 5. Explanation Generator: Creates natural language interpretations of current status.</p>
+<p>A public-facing translation layer that converts complex probabilistic models into intuitive visual representations accessible to broader audiences. Like the Doomsday Clock for nuclear risk, this system creates focal points for public discourse about AI safety. Its strategic value lies in making technical risk assessments comprehensible to policymakers, journalists, and the public, expanding the reach and impact of AI safety research beyond technical communities.</p>
+</section>
+<section id="strategic-intervention-generator" class="level3">
+<h3 class="anchored" data-anchor-id="strategic-intervention-generator">3.7.7 Strategic Intervention Generator</h3>
+<p>1. Robust Strategy Identification System: Finds strategies that perform well across multiple scenarios. 2. Minimax Regret Calculator: Identifies strategies that minimize worst-case disappointment. 3. Option Value Analyzer: Evaluates strategies that preserve future flexibility and choices. 4. Intervention Portfolio Builder: Constructs complementary bundles of policy interventions. 5. Dependency Mapping Visualizer: Shows relationships and prerequisites between interventions.</p>
+<p>An advanced decision support system that identifies robust governance strategies across multiple possible futures. Operating like a strategic chess engine, this system evaluates intervention portfolios under deep uncertainty to find approaches that preserve options and minimize maximum regret. Its strategic value lies in shifting governance planning from optimizing for specific scenarios to developing adaptive strategies that remain valuable despite fundamental uncertainty about AI development trajectories.</p>
+</section>
+<section id="cross-domain-understanding-communicator" class="level3">
+<h3 class="anchored" data-anchor-id="cross-domain-understanding-communicator">3.7.8 <strong>Cross-Domain Understanding Communicator</strong></h3>
+<p>1. Concept Mapping System: Identifies equivalent concepts across different domain languages. 2. Terminology Translation Engine: Converts specialized terms between different disciplines. 3. Implication Surfacing Tool: Highlights relevant cross-domain considerations for specific questions. 4. Background Knowledge Provider: Supplies necessary context for understanding concepts. 5. Cross-Domain Recommendation Engine: Suggests relevant resources across disciplinary boundaries.</p>
+<p>An interdisciplinary bridge-builder that connects specialists across technical alignment, governance, and forecasting domains. This system functions as a universal translator for AI safety, identifying equivalent concepts across different disciplinary languages and surfacing relevant cross-domain insights. Its strategic value lies in breaking down the knowledge silos that impede comprehensive strategy development, enabling researchers from different backgrounds to build on each other’s work more effectively.</p>
+</section>
+<section id="policy-brief-communicator" class="level3">
+<h3 class="anchored" data-anchor-id="policy-brief-communicator">3.7.9 <strong>Policy Brief Communicator</strong></h3>
+<p>1. Audience Analysis System: Determines appropriate framing and detail level for target readers. 2. Jurisdictional Context Adapter: Tailors content to relevant legal and institutional frameworks. 3. Recommendation Formulator: Generates actionable governance suggestions from technical insights. 4. Format Template Library: Applies appropriate structure for different policy contexts. 5. Evidence Contextualization Engine: Presents technical evidence in accessible and persuasive ways.</p>
+<p>A specialized translation system that converts technical risk analyses into actionable policy documents tailored to specific governance contexts. This system bridges the gap between technical understanding and practical implementation by packaging complex insights into formats familiar to policymakers. Its strategic value lies in increasing the policy impact of technical research by making insights accessible and actionable for decision-makers in government, industry, and civil society.</p>
+</section>
 <section id="prediction-market-integration" class="level3">
-<h3 class="anchored" data-anchor-id="prediction-market-integration">3.7.4 Prediction Market Integration</h3>
+<h3 class="anchored" data-anchor-id="prediction-market-integration">3.7.10 Prediction Market Integration</h3>
 <pre><code>—   Live Data Updating: Crowdsourcing Collective Intelligence Via API Integrations</code></pre>
+<section id="forecast-integration-dashboard" class="level4">
+<h4 class="anchored" data-anchor-id="forecast-integration-dashboard"><strong>Forecast Integration Dashboard</strong></h4>
+<p>1. Forecasting Platform API Connectors: Establishes connections with prediction markets and forecasting platforms. 2. Semantic Question Mapper: Links forecast questions to corresponding model variables. 3. Forecast Weighting System: Determines influence of different forecast sources based on track record. 4. Dynamic Update Engine: Manages synchronization between forecasts and model parameters. 5. Forecast Relevance Calculator: Identifies which forecasts would most reduce uncertainty in the model.</p>
+<p>A living nervous system that connects formal models to real-time data streams from forecasting platforms. This system ensures that risk assessments remain current as new information emerges, creating dynamic models that evolve with the rapidly changing AI landscape. Its strategic value lies in bridging the gap between static theoretical models and emerging empirical evidence, leveraging collective intelligence from prediction markets to continuously refine probability estimates.</p>
 <!-- [ ] UPDATE: the heading numbering below -->
+</section>
 </section>
 </section>
 <section id="sec-policy-evaluation" class="level2">
@@ -4432,7 +4484,7 @@ Technical requirements:
 <p>Third, sensitivity analysis reveals which probabilities actually matter. Often, precise values are unnecessary—knowing whether a parameter is closer to 0.1 or 0.9 suffices for decision-making. The formalization helps identify where precision matters and where it doesn’t.</p>
 <p>Finally, the alternative to quantification isn’t avoiding the problem but making it worse. When experts say “highly likely” or “significant risk,” they implicitly reason with probabilities. Formalization simply makes these implicit quantities explicit and subject to scrutiny. As Dennis Lindley noted, “Uncertainty is not in the events, but in our knowledge about them.”</p>
 <!-- [ ] ADD: @lindley2013: "Lindley, D. (2013). Understanding Uncertainty" -->
-<p>@<span class="citation" data-cites="lindley2013">Lindley (<a href="Outline_13.html#ref-lindley2013" role="doc-biblioref">2013</a>)</span></p>
+<p>@<span class="citation" data-cites="lindley2013">Lindley (<a href="../../ref/references.html#ref-lindley2013" role="doc-biblioref">2013</a>)</span></p>
 </section>
 <section id="sec-correlation-complexity" class="level3">
 <h3 class="anchored" data-anchor-id="sec-correlation-complexity">4.1.3 Objection 3: Correlation Complexity</h3>
@@ -4442,7 +4494,7 @@ Technical requirements:
 <!-- [ ] CREATE: {#fig-correlation-nodes}: "Example of explicit correlation modeling" -->
 <p><strong>Copula methods</strong>: For known correlation structures, copula functions can model dependencies while preserving marginal distributions. This extends standard Bayesian networks significantly.<a href="#fn4" class="footnote-ref" id="fnref4" role="doc-noteref"><sup>4</sup></a></p>
 <!-- [ ] ADD: @nelson2006: "An Introduction to Copulas" -->
-<p><span class="citation" data-cites="nelson2006">Nelson (<a href="Outline_13.html#ref-nelson2006" role="doc-biblioref">2006</a>)</span></p>
+<p><span class="citation" data-cites="nelson2006">Nelson (<a href="../../ref/references.html#ref-nelson2006" role="doc-biblioref">2006</a>)</span></p>
 <p><strong>Sensitivity bounds</strong>: When correlations remain uncertain, we can compute bounds on outcomes under different correlation assumptions. This reveals when correlations critically affect conclusions.</p>
 <p><strong>Model ensembles</strong>: Different correlation structures can be modeled separately and results aggregated, similar to climate modeling approaches.</p>
 <p>More fundamentally, the question is whether imperfect independence assumptions invalidate the approach. In practice, explicitly modeling first-order effects with known limitations often proves more valuable than attempting to capture all dependencies informally. The framework makes assumptions transparent, enabling targeted improvements where correlations matter most.</p>
@@ -4472,7 +4524,7 @@ Technical requirements:
 <p><strong>Empirical adequacy</strong> ultimately judges models. If simplified representations enable better predictions and decisions than informal alternatives, their abstractions are justified. Early results suggest formal models, despite simplifications, outperform intuitive reasoning for complex risk assessment.</p>
 <p>The goal isn’t creating perfect representations but useful ones. By making simplifications explicit and modifiable, formal models enable systematic improvement in ways mental models cannot.</p>
 <!-- [ ] ADD: @box1976: "Box, G.E.P. (1976). Science and statistics" -->
-<p><span class="citation" data-cites="box1976">Box (<a href="Outline_13.html#ref-box1976" role="doc-biblioref">1976</a>)</span></p>
+<p><span class="citation" data-cites="box1976">Box (<a href="../../ref/references.html#ref-box1976" role="doc-biblioref">1976</a>)</span></p>
 </section>
 <section id="objection-6-idosyncratic-implementation-and-modeling-choices-sec-idosyncratic" class="level3">
 <h3 class="anchored" data-anchor-id="objection-6-idosyncratic-implementation-and-modeling-choices-sec-idosyncratic">4.2.4 Objection 6: Idosyncratic Implementation and Modeling Choices {sec-idosyncratic}</h3>
@@ -4667,7 +4719,7 @@ Pilot studies with AI governance researchers show 40% reduction in time to ident
     - based on the insights of these authors, explain and discuss the potential impacts of a fully resourced AMTAIR on the AI safety and governance ecosystem
 
 review of the effects of liability frameworks on corporate governance -->
-<p><span class="citation" data-cites="cuomo2016">Cuomo, Mallin, and Zattoni (<a href="Outline_13.html#ref-cuomo2016" role="doc-biblioref">2016</a>)</span>, <span class="citation" data-cites="demirag2000">Demirag, Sudarsanam, and WRIGHT (<a href="Outline_13.html#ref-demirag2000" role="doc-biblioref">2000</a>)</span>, <span class="citation" data-cites="devilliers2021">De Villiers and Dimes (<a href="Outline_13.html#ref-devilliers2021" role="doc-biblioref">2021</a>)</span>, <span class="citation" data-cites="divito2022">Di Vito and Trottier (<a href="Outline_13.html#ref-divito2022" role="doc-biblioref">2022</a>)</span>, <span class="citation" data-cites="kaur2024">Kaur (<a href="Outline_13.html#ref-kaur2024" role="doc-biblioref">2024</a>)</span>, <span class="citation" data-cites="list2011">List and Pettit (<a href="Outline_13.html#ref-list2011" role="doc-biblioref">2011</a>)</span> and <span class="citation" data-cites="solomon2020">Solomon (<a href="Outline_13.html#ref-solomon2020" role="doc-biblioref">2020</a>)</span></p>
+<p><span class="citation" data-cites="cuomo2016">Cuomo, Mallin, and Zattoni (<a href="../../ref/references.html#ref-cuomo2016" role="doc-biblioref">2016</a>)</span>, <span class="citation" data-cites="demirag2000">Demirag, Sudarsanam, and WRIGHT (<a href="../../ref/references.html#ref-demirag2000" role="doc-biblioref">2000</a>)</span>, <span class="citation" data-cites="devilliers2021">De Villiers and Dimes (<a href="../../ref/references.html#ref-devilliers2021" role="doc-biblioref">2021</a>)</span>, <span class="citation" data-cites="divito2022">Di Vito and Trottier (<a href="../../ref/references.html#ref-divito2022" role="doc-biblioref">2022</a>)</span>, <span class="citation" data-cites="kaur2024">Kaur (<a href="../../ref/references.html#ref-kaur2024" role="doc-biblioref">2024</a>)</span>, <span class="citation" data-cites="list2011">List and Pettit (<a href="../../ref/references.html#ref-list2011" role="doc-biblioref">2011</a>)</span> and <span class="citation" data-cites="solomon2020">Solomon (<a href="../../ref/references.html#ref-solomon2020" role="doc-biblioref">2020</a>)</span></p>
 </section>
 <section id="sec-international-integration" class="level3">
 <h3 class="anchored" data-anchor-id="sec-international-integration">4.6.3 International Coordination</h3>
@@ -4704,7 +4756,7 @@ review of the effects of liability frameworks on corporate governance -->
     - add a brilliant deep-dive into "~ the theoretical reasons to be optimistic that AMTAIR is the beginning of a new research paradigm " based on the literature and the papers above
     - cite all the above sources and make a "rock-solid case"
 : "Methods for causal structure learning from text" -->
-<p><span class="citation" data-cites="babakov2025">Babakov et al. (<a href="Outline_13.html#ref-babakov2025" role="doc-biblioref">2025</a>)</span>, <span class="citation" data-cites="ban2023">Ban et al. (<a href="Outline_13.html#ref-ban2023" role="doc-biblioref">2023</a>)</span>, <span class="citation" data-cites="bethard2007">Bethard (<a href="Outline_13.html#ref-bethard2007" role="doc-biblioref">2007</a>)</span>, <span class="citation" data-cites="chen2023">Chen et al. (<a href="Outline_13.html#ref-chen2023" role="doc-biblioref">2023</a>)</span>, <span class="citation" data-cites="duhem1954">Duhem (<a href="Outline_13.html#ref-duhem1954" role="doc-biblioref">1954</a>)</span>, <span class="citation" data-cites="heinze-deml2018">Heinze-Deml, Maathuis, and Meinshausen (<a href="Outline_13.html#ref-heinze-deml2018" role="doc-biblioref">2018</a>)</span>, <span class="citation" data-cites="meyer2022b">Meyer (<a href="Outline_13.html#ref-meyer2022b" role="doc-biblioref">2022</a>)</span>, <span class="citation" data-cites="squires2023">Squires and Uhler (<a href="Outline_13.html#ref-squires2023" role="doc-biblioref">2023</a>)</span>, <span class="citation" data-cites="squires2023">Squires and Uhler (<a href="Outline_13.html#ref-squires2023" role="doc-biblioref">2023</a>)</span>, <span class="citation" data-cites="yang2022">Yang, Han, and Poon (<a href="Outline_13.html#ref-yang2022" role="doc-biblioref">2022</a>)</span></p>
+<p><span class="citation" data-cites="babakov2025">Babakov et al. (<a href="../../ref/references.html#ref-babakov2025" role="doc-biblioref">2025</a>)</span>, <span class="citation" data-cites="ban2023">Ban et al. (<a href="../../ref/references.html#ref-ban2023" role="doc-biblioref">2023</a>)</span>, <span class="citation" data-cites="bethard2007">Bethard (<a href="../../ref/references.html#ref-bethard2007" role="doc-biblioref">2007</a>)</span>, <span class="citation" data-cites="chen2023">Chen et al. (<a href="../../ref/references.html#ref-chen2023" role="doc-biblioref">2023</a>)</span>, <span class="citation" data-cites="duhem1954">Duhem (<a href="../../ref/references.html#ref-duhem1954" role="doc-biblioref">1954</a>)</span>, <span class="citation" data-cites="heinze-deml2018">Heinze-Deml, Maathuis, and Meinshausen (<a href="../../ref/references.html#ref-heinze-deml2018" role="doc-biblioref">2018</a>)</span>, <span class="citation" data-cites="meyer2022b">Meyer (<a href="../../ref/references.html#ref-meyer2022b" role="doc-biblioref">2022</a>)</span>, <span class="citation" data-cites="squires2023">Squires and Uhler (<a href="../../ref/references.html#ref-squires2023" role="doc-biblioref">2023</a>)</span>, <span class="citation" data-cites="squires2023">Squires and Uhler (<a href="../../ref/references.html#ref-squires2023" role="doc-biblioref">2023</a>)</span>, <span class="citation" data-cites="yang2022">Yang, Han, and Poon (<a href="../../ref/references.html#ref-yang2022" role="doc-biblioref">2022</a>)</span></p>
 </section>
 <section id="sec-application-future" class="level3">
 <h3 class="anchored" data-anchor-id="sec-application-future">4.7.3 Application Domains</h3>
@@ -4965,470 +5017,6 @@ The Stakes
 <!-- Quarto will auto-generate from .bib file -->
 <!-- [ ] TODO: Verify all citations are in ref/MAref.bib -->
 <!-- [ ] TODO: Check for missing references throughout document -->
-<div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" role="list">
-<div id="ref-amodei2016" class="csl-entry" role="listitem">
-Amodei, Dario, Chris Olah, Jacob Steinhardt, Paul Christiano, John
-Schulman, and Dan Mané. 2016. <span>“Concrete <span>Problems</span> in
-<span>AI Safety</span>.”</span> July 25, 2016. <a href="https://doi.org/10.48550/arXiv.1606.06565">https://doi.org/10.48550/arXiv.1606.06565</a>.
-</div>
-<div id="ref-anderson2007" class="csl-entry" role="listitem">
-Anderson, Terence J. 2007. <span>“Visualization Tools and Argument
-Schemes: A Question of Standpoint.”</span> <em>Law, Prob. &amp;
-Risk</em> 6: 97. <a href="https://heinonline.org/hol-cgi-bin/get_pdf.cgi?handle=hein.journals/lawprisk6&amp;section=9">https://heinonline.org/hol-cgi-bin/get_pdf.cgi?handle=hein.journals/lawprisk6&amp;section=9</a>.
-</div>
-<div id="ref-armstrong2016" class="csl-entry" role="listitem">
-Armstrong, Stuart, Nick Bostrom, and Carl Shulman. 2016. <span>“Racing
-to the Precipice: A Model of Artificial Intelligence
-Development.”</span> <em>AI &amp; SOCIETY</em> 31 (2): 201–6. <a href="https://doi.org/10.1007/s00146-015-0590-y">https://doi.org/10.1007/s00146-015-0590-y</a>.
-</div>
-<div id="ref-askell2021" class="csl-entry" role="listitem">
-Askell, Amanda, Yuntao Bai, Anna Chen, Dawn Drain, Deep Ganguli, Tom
-Henighan, Andy Jones, et al. 2021. <span>“A <span>General Language
-Assistant</span> as a <span>Laboratory</span> for
-<span>Alignment</span>.”</span> December 9, 2021. <a href="https://doi.org/10.48550/arXiv.2112.00861">https://doi.org/10.48550/arXiv.2112.00861</a>.
-</div>
-<div id="ref-babakov2025" class="csl-entry" role="listitem">
-Babakov, Nikolay, Adarsa Sivaprasad, Ehud Reiter, and Alberto
-Bugarín-Diz. 2025. <span>“Reusability of <span>Bayesian Networks</span>
-Case Studies: A Survey.”</span> <em>Applied Intelligence</em> 55 (6):
-417. <a href="https://doi.org/10.1007/s10489-025-06289-5">https://doi.org/10.1007/s10489-025-06289-5</a>.
-</div>
-<div id="ref-ban2023" class="csl-entry" role="listitem">
-Ban, Taiyu, Lyuzhou Chen, Derui Lyu, Xiangyu Wang, and Huanhuan Chen.
-2023. <span>“Causal <span>Structure Learning Supervised</span> by
-<span>Large Language Model</span>.”</span> November 20, 2023. <a href="https://doi.org/10.48550/arXiv.2311.11689">https://doi.org/10.48550/arXiv.2311.11689</a>.
-</div>
-<div id="ref-bayes2025" class="csl-entry" role="listitem">
-Bayes, Server. 2025. <span>“Risk Modeling with <span>Bayesian</span>
-Networks | <span>Bayes Server</span>.”</span>
-https://online.bayesserver.com/. <a href="https://bayesserver.com/docs/modeling/risk/">https://bayesserver.com/docs/modeling/risk/</a>.
-</div>
-<div id="ref-benn2011" class="csl-entry" role="listitem">
-Benn, Neil, and Ann Macintosh. 2011. <span>“Argument
-<span>Visualization</span> for <span class="nocase">eParticipation</span>: <span>Towards</span> a
-<span>Research Agenda</span> and <span>Prototype Tool</span>.”</span> In
-<em>Electronic <span>Participation</span></em>, edited by Efthimios
-Tambouris, Ann Macintosh, and Hans De Bruijn, 6847:60–73. Berlin,
-Heidelberg: Springer Berlin Heidelberg. <a href="https://doi.org/10.1007/978-3-642-23333-3_6">https://doi.org/10.1007/978-3-642-23333-3_6</a>.
-</div>
-<div id="ref-bethard2007" class="csl-entry" role="listitem">
-Bethard, Steven John. 2007. <span>“Finding Event, Temporal and Causal
-Structure in Text: <span>A</span> Machine Learning Approach.”</span> PhD
-thesis, University of Colorado at Boulder. <a href="https://search.proquest.com/openview/405fe32503123d9b5f4836dc3be4c011/1?pq-origsite=gscholar&amp;cbl=18750">https://search.proquest.com/openview/405fe32503123d9b5f4836dc3be4c011/1?pq-origsite=gscholar&amp;cbl=18750</a>.
-</div>
-<div id="ref-bostrom2014" class="csl-entry" role="listitem">
-Bostrom, Nick. 2014. <em>Superintelligence: <span>Paths</span>,
-Strategies, Dangers</em>. Oxford: Oxford University Press. <a href="https://scholar.dominican.edu/cynthia-stokes-brown-books-big-history/47">https://scholar.dominican.edu/cynthia-stokes-brown-books-big-history/47</a>.
-</div>
-<div id="ref-box1976" class="csl-entry" role="listitem">
-Box, George E. P. 1976. <span>“Science and
-<span>Statistics</span>.”</span> <em>Journal of the American Statistical
-Association</em> 71 (356): 791–99. <a href="https://doi.org/10.1080/01621459.1976.10480949">https://doi.org/10.1080/01621459.1976.10480949</a>.
-</div>
-<div id="ref-brundage2018" class="csl-entry" role="listitem">
-Brundage, Miles, Shahar Avin, Jack Clark, Helen Toner, Peter Eckersley,
-Ben Garfinkel, Allan Dafoe, Paul Scharre, Thomas Zeitzoff, Bobby Filar,
-Hyrum Anderson, et al. 2018. <span>“The <span>Malicious Use</span> of
-<span>Artificial Intelligence</span>: <span>Forecasting</span>,
-<span>Prevention</span>, and <span>Mitigation</span>.”</span> 2018. <a href="https://doi.org/10.48550/ARXIV.1802.07228">https://doi.org/10.48550/ARXIV.1802.07228</a>.
-</div>
-<div id="ref-brundage2018a" class="csl-entry" role="listitem">
-Brundage, Miles, Shahar Avin, Jack Clark, Helen Toner, Peter Eckersley,
-Ben Garfinkel, Allan Dafoe, Paul Scharre, Thomas Zeitzoff, and Bobby
-Filar. 2018. <span>“The Malicious Use of Artificial Intelligence:
-<span>Forecasting</span>, Prevention, and Mitigation.”</span> <a href="https://arxiv.org/abs/1802.07228">https://arxiv.org/abs/1802.07228</a>.
-</div>
-<div id="ref-carlsmith2021" class="csl-entry" role="listitem">
-Carlsmith, Joseph. 2021. <span>“Is <span>Power-Seeking AI</span> an
-<span>Existential Risk</span>?”</span> 2021. <a href="https://doi.org/10.48550/arXiv.2206.13353">https://doi.org/10.48550/arXiv.2206.13353</a>.
-</div>
-<div id="ref-carlsmith2022" class="csl-entry" role="listitem">
-———. 2022. <span>“Is Power-Seeking <span>AI</span> an Existential
-Risk?”</span> <a href="https://arxiv.org/abs/2206.13353">https://arxiv.org/abs/2206.13353</a>.
-</div>
-<div id="ref-carlsmith2024" class="csl-entry" role="listitem">
-———. 2024. <span>“Is <span>Power-Seeking AI</span> an <span>Existential
-Risk</span>?”</span> August 13, 2024. <a href="https://doi.org/10.48550/arXiv.2206.13353">https://doi.org/10.48550/arXiv.2206.13353</a>.
-</div>
-<div id="ref-chen2023" class="csl-entry" role="listitem">
-Chen, Lu, Ruqing Zhang, Wei Huang, Wei Chen, Jiafeng Guo, and Xueqi
-Cheng. 2023. <span>“Inducing <span>Causal Structure</span> for
-<span>Abstractive Text Summarization</span>.”</span> In <em>Proceedings
-of the 32nd <span>ACM International Conference</span> on
-<span>Information</span> and <span>Knowledge Management</span></em>,
-213–23. Birmingham United Kingdom: ACM. <a href="https://doi.org/10.1145/3583780.3614934">https://doi.org/10.1145/3583780.3614934</a>.
-</div>
-<div id="ref-christiano2019" class="csl-entry" role="listitem">
-Christiano, Paul F. 2019. <span>“What Failure Looks Like,”</span> March.
-<a href="https://www.alignmentforum.org/posts/HBxe6wdjxK239zajf/what-failure-looks-like">https://www.alignmentforum.org/posts/HBxe6wdjxK239zajf/what-failure-looks-like</a>.
-</div>
-<div id="ref-clarke2022" class="csl-entry" role="listitem">
-Clarke, Sam, Ben Cottier, Aryeh Englander, Daniel Eth, David Manheim,
-Samuel Dylan Martin, and Issa Rice. 2022. <span>“Modeling
-<span>Transformative AI Risks</span> (<span>MTAIR</span>)
-<span>Project</span> – <span>Summary Report</span>.”</span> 2022. <a href="https://doi.org/10.48550/ARXIV.2206.09360">https://doi.org/10.48550/ARXIV.2206.09360</a>.
-</div>
-<div id="ref-cottier2021" class="csl-entry" role="listitem">
-Cottier, Ben. 2021. <span>“Modeling <span>Risks From Learned
-Optimization</span>,”</span> October. <a href="https://www.lesswrong.com/posts/T9oFjteStcE2ijCJi/modeling-risks-from-learned-optimization">https://www.lesswrong.com/posts/T9oFjteStcE2ijCJi/modeling-risks-from-learned-optimization</a>.
-</div>
-<div id="ref-cottier2021b" class="csl-entry" role="listitem">
-Cottier, Ben, Daniel Eth, and Sammy Martin. 2021. <span>“Modeling
-<span>Failure Modes</span> of <span>High-Level Machine
-Intelligence</span>,”</span> December. <a href="https://www.lesswrong.com/posts/3Eq5Rq5uQ97kt8B8f/modeling-failure-modes-of-high-level-machine-intelligence">https://www.lesswrong.com/posts/3Eq5Rq5uQ97kt8B8f/modeling-failure-modes-of-high-level-machine-intelligence</a>.
-</div>
-<div id="ref-cottier2019" class="csl-entry" role="listitem">
-Cottier, Ben, and Rohin Shah. 2019. <span>“Clarifying Some Key
-Hypotheses in <span>AI</span> Alignment,”</span> August. <a href="https://www.lesswrong.com/posts/mJ5oNYnkYrd4sD5uE/clarifying-some-key-hypotheses-in-ai-alignment">https://www.lesswrong.com/posts/mJ5oNYnkYrd4sD5uE/clarifying-some-key-hypotheses-in-ai-alignment</a>.
-</div>
-<div id="ref-cuomo2016" class="csl-entry" role="listitem">
-Cuomo, Francesca, Christine Mallin, and Alessandro Zattoni. 2016.
-<span>“Corporate Governance Codes: <span>A</span> Review and Research
-Agenda.”</span> <em>Corporate Governance: An International Review</em>
-24 (3): 222–41. <a href="https://ueaeprints.uea.ac.uk/id/eprint/57664/">https://ueaeprints.uea.ac.uk/id/eprint/57664/</a>.
-</div>
-<div id="ref-dafoe2018" class="csl-entry" role="listitem">
-Dafoe, Allan. 2018. <span>“<span>AI</span> Governance: A Research
-Agenda.”</span> <em>Governance of AI Program, Future of Humanity
-Institute, University of Oxford: Oxford, UK</em> 1442: 1443. <a href="https://www.fhi.ox.ac.uk/wp-content/uploads/GovAI-Agenda.pdf">https://www.fhi.ox.ac.uk/wp-content/uploads/GovAI-Agenda.pdf</a>.
-</div>
-<div id="ref-dafoe2021" class="csl-entry" role="listitem">
-———. 2021. <span>“<span>AI</span> Governance: A Research Agenda.”</span>
-2021. <a href="https://www.fhi.ox.ac.uk/wp-content/uploads/GovAI-Agenda.pdf">https://www.fhi.ox.ac.uk/wp-content/uploads/GovAI-Agenda.pdf</a>.
-</div>
-<div id="ref-davidmanheim2021a" class="csl-entry" role="listitem">
-Davidmanheim, David. 2021. <span>“Elicitation for <span>Modeling
-Transformative AI Risks</span>,”</span> December. <a href="https://www.lesswrong.com/posts/Kz9NHBMeJxzSwb7R9/elicitation-for-modeling-transformative-ai-risks">https://www.lesswrong.com/posts/Kz9NHBMeJxzSwb7R9/elicitation-for-modeling-transformative-ai-risks</a>.
-</div>
-<div id="ref-devilliers2021" class="csl-entry" role="listitem">
-De Villiers, Charl, and Ruth Dimes. 2021. <span>“Determinants,
-Mechanisms and Consequences of Corporate Governance Reporting: A
-Research Framework.”</span> <em>Journal of Management and
-Governance</em> 25 (1): 7–26. <a href="https://doi.org/10.1007/s10997-020-09530-0">https://doi.org/10.1007/s10997-020-09530-0</a>.
-</div>
-<div id="ref-demirag2000" class="csl-entry" role="listitem">
-Demirag, Istemi, Sudi Sudarsanam, and MIKE WRIGHT. 2000.
-<span>“Corporate Governance: Overview and Research Agenda.”</span>
-<em>The British Accounting Review</em> 32 (4): 341–54. <a href="https://www.academia.edu/download/49469624/bare.2000.014620161009-3955-1dt4aq5.pdf">https://www.academia.edu/download/49469624/bare.2000.014620161009-3955-1dt4aq5.pdf</a>.
-</div>
-<div id="ref-divito2022" class="csl-entry" role="listitem">
-Di Vito, Jackie, and Kim Trottier. 2022. <span>“A <span>Literature
-Review</span> on <span>Corporate Governance Mechanisms</span>:
-<span>Past</span>, <span>Present</span>, and
-<span>Future</span>*.”</span> <em>Accounting Perspectives</em> 21 (2):
-207–35. <a href="https://doi.org/10.1111/1911-3838.12279">https://doi.org/10.1111/1911-3838.12279</a>.
-</div>
-<div id="ref-drexler2019a" class="csl-entry" role="listitem">
-Drexler, K. Eric. 2019. <span>“Reframing Superintelligence:
-<span>Comprehensive AI</span> Services as General Intelligence.”</span>
-</div>
-<div id="ref-drexler2019" class="csl-entry" role="listitem">
-Drexler, KE. 2019. <span>“Reframing Superintelligence: Comprehensive
-<span>AI</span> Services as General Intelligence.”</span> Technical
-Report. Future of Humanity Institute. <a href="https://owainevans.github.io/pdfs/Reframing_Superintelligence_FHI-TR-2019.pdf">https://owainevans.github.io/pdfs/Reframing_Superintelligence_FHI-TR-2019.pdf</a>.
-</div>
-<div id="ref-duhem1954" class="csl-entry" role="listitem">
-Duhem, Pierre Maurice Marie. 1954. <em>The <span>Aim</span> and
-<span>Structure</span> of <span>Physical Theory</span></em>. 1.
-Princeton University Press.
-</div>
-<div id="ref-eth2021" class="csl-entry" role="listitem">
-Eth, Daniel. 2021. <span>“Paths <span>To High-Level Machine
-Intelligence</span>,”</span> September. <a href="https://www.lesswrong.com/posts/amK9EqxALJXyd9Rb2/paths-to-high-level-machine-intelligence">https://www.lesswrong.com/posts/amK9EqxALJXyd9Rb2/paths-to-high-level-machine-intelligence</a>.
-</div>
-<div id="ref-european2024" class="csl-entry" role="listitem">
-European, Union. 2024. <span>“The <span>Act Texts</span> | <span>EU
-Artificial Intelligence Act</span>.”</span> 2024. <a href="https://artificialintelligenceact.eu/the-act/">https://artificialintelligenceact.eu/the-act/</a>.
-</div>
-<div id="ref-good1966" class="csl-entry" role="listitem">
-Good, Irving John. 1966. <span>“Speculations <span>Concerning</span> the
-<span>First Ultraintelligent Machine</span>.”</span> <em>Advances in
-Computers</em>, 31. <a href="https://doi.org/10.1016/S0065-2458(08)60418-0">https://doi.org/10.1016/S0065-2458(08)60418-0</a>.
-</div>
-<div id="ref-growiec2024" class="csl-entry" role="listitem">
-Growiec, Jakub. 2024. <span>“Existential Risk from Transformative
-<span>AI</span>: An Economic Perspective.”</span> <em>Technological and
-Economic Development of Economy</em> 30 (6): 1682–1708.
-</div>
-<div id="ref-gruetzemacher2022" class="csl-entry" role="listitem">
-Gruetzemacher, Ross. 2022. <span>“Bayesian <span>Networks</span> Vs.
-<span>Conditional Trees</span> for <span>Creating Questions</span> for
-<span>Forecasting Tournaments</span>.”</span>
-</div>
-<div id="ref-hadshar2023" class="csl-entry" role="listitem">
-Hadshar, Rose. 2023. <span>“A <span>Review</span> of the
-<span>Evidence</span> for <span>Existential Risk</span> from
-<span>AI</span> via <span>Misaligned Power-Seeking</span>.”</span> 2023.
-<a href="https://doi.org/10.48550/ARXIV.2310.18244">https://doi.org/10.48550/ARXIV.2310.18244</a>.
-</div>
-<div id="ref-hallegatte2012" class="csl-entry" role="listitem">
-Hallegatte, Stéphane, Ankur Shah, Robert Lempert, Casey Brown, and
-Stuart Gill. 2012. <span>“Investment Decision-Making Under Deep
-Uncertainty-Application to Climate Change.”</span> <em>Policy Research
-Working Paper</em> 6193. <a href="https://enpc.hal.science/hal-00802049/document">https://enpc.hal.science/hal-00802049/document</a>.
-</div>
-<div id="ref-heinze-deml2018" class="csl-entry" role="listitem">
-Heinze-Deml, Christina, Marloes H. Maathuis, and Nicolai Meinshausen.
-2018. <span>“Causal <span>Structure Learning</span>.”</span> <em>Annual
-Review of Statistics and Its Application</em> 5 (1): 371–91. <a href="https://doi.org/10.1146/annurev-statistics-031017-100630">https://doi.org/10.1146/annurev-statistics-031017-100630</a>.
-</div>
-<div id="ref-hendrycks2021" class="csl-entry" role="listitem">
-Hendrycks, Dan, Nicholas Carlini, John Schulman, and Jacob Steinhardt.
-2021a. <span>“Unsolved <span>Problems</span> in <span>ML
-Safety</span>.”</span> 2021. <a href="https://doi.org/10.48550/ARXIV.2109.13916">https://doi.org/10.48550/ARXIV.2109.13916</a>.
-</div>
-<div id="ref-hendrycks2021a" class="csl-entry" role="listitem">
-———. 2021b. <span>“Unsolved Problems in Ml Safety.”</span> <a href="https://arxiv.org/abs/2109.13916">https://arxiv.org/abs/2109.13916</a>.
-</div>
-<div id="ref-hunt2025" class="csl-entry" role="listitem">
-Hunt, Tam. 2025. <span>“The Insane <span>‘Logic’</span> of the
-<span>AI</span> Arms Race.”</span> Medium. March 3, 2025. <a href="https://tamhunt.medium.com/the-insane-logic-of-the-ai-arms-race-45a5f79f4c0e">https://tamhunt.medium.com/the-insane-logic-of-the-ai-arms-race-45a5f79f4c0e</a>.
-</div>
-<div id="ref-jaynes2003" class="csl-entry" role="listitem">
-Jaynes, Edwin T. 2003. <em>Probability Theory: <span>The</span> Logic of
-Science</em>. Cambridge university press.
-</div>
-<div id="ref-kasirzadeh2024" class="csl-entry" role="listitem">
-Kasirzadeh, Atoosa. 2024. <span>“Two <span>Types</span> of <span>AI
-Existential Risk</span>: <span>Decisive</span> and
-<span>Accumulative</span>.”</span> 2024. <a href="https://doi.org/10.48550/ARXIV.2401.07836">https://doi.org/10.48550/ARXIV.2401.07836</a>.
-</div>
-<div id="ref-kaur2024" class="csl-entry" role="listitem">
-Kaur, Kawaljit. 2024. <span>“Corporate <span>Governance</span> and
-<span>Legal Accountability</span>: <span>A Critical Review</span> of
-<span>Global Practices</span>.”</span> <em>Journal of Law</em> 2 (6):
-1–7. <a href="https://joi.shodhsagar.org/index.php/SSJOI/article/view/16">https://joi.shodhsagar.org/index.php/SSJOI/article/view/16</a>.
-</div>
-<div id="ref-khartabil2020" class="csl-entry" role="listitem">
-Khartabil, Dana. 2020. <span>“Visualisation Techniques to Facilitate
-Argument Exploration.”</span> PhD thesis. <a href="https://napier-repository.worktribe.com/output/2694675">https://napier-repository.worktribe.com/output/2694675</a>.
-</div>
-<div id="ref-khartabil2021" class="csl-entry" role="listitem">
-Khartabil, D., C. Collins, S. Wells, B. Bach, and J. Kennedy. 2021.
-<span>“Design and <span>Evaluation</span> of <span>Visualization
-Techniques</span> to <span>Facilitate Argument
-Exploration</span>.”</span> <em>Computer Graphics Forum</em> 40 (6):
-447–65. <a href="https://doi.org/10.1111/cgf.14389">https://doi.org/10.1111/cgf.14389</a>.
-</div>
-<div id="ref-kilian2023" class="csl-entry" role="listitem">
-Kilian, Kyle A., Christopher J. Ventura, and Mark M. Bailey. 2023.
-<span>“Examining the <span>Differential Risk</span> from <span class="nocase">High-level Artificial Intelligence</span> and the
-<span>Question</span> of <span>Control</span>.”</span> <em>Futures</em>
-151 (August): 103182. <a href="https://doi.org/10.1016/j.futures.2023.103182">https://doi.org/10.1016/j.futures.2023.103182</a>.
-</div>
-<div id="ref-koller2009" class="csl-entry" role="listitem">
-Koller, Daphne, and Nir Friedman. 2009. <em>Probabilistic Graphical
-Models: Principles and Techniques</em>. MIT press. <a href="https://books.google.ca/books?hl=en&amp;lr=&amp;id=7dzpHCHzNQ4C&amp;oi=fnd&amp;pg=PR9&amp;dq=Koller,+D.,+%26+Friedman,+N.+(2009).+Probabilistic+Graphical+Models&amp;ots=py2HAh0VAL&amp;sig=gpaID3x6-TY8x5SOopuXpZDXfzs">https://books.google.ca/books?hl=en&amp;lr=&amp;id=7dzpHCHzNQ4C&amp;oi=fnd&amp;pg=PR9&amp;dq=Koller,+D.,+%26+Friedman,+N.+(2009).+Probabilistic+Graphical+Models&amp;ots=py2HAh0VAL&amp;sig=gpaID3x6-TY8x5SOopuXpZDXfzs</a>.
-</div>
-<div id="ref-kulveit2025" class="csl-entry" role="listitem">
-Kulveit, Jan, Raymond Douglas, Nora Ammann, Deger Turan, David Krueger,
-and David Duvenaud. 2025. <span>“Gradual <span>Disempowerment</span>:
-<span>Systemic Existential Risks</span> from <span>Incremental AI
-Development</span>.”</span> January 29, 2025. <a href="https://doi.org/10.48550/arXiv.2501.16946">https://doi.org/10.48550/arXiv.2501.16946</a>.
-</div>
-<div id="ref-kumar2019a" class="csl-entry" role="listitem">
-Kumar, Ram Shankar Siva, David O. Brien, Kendra Albert, Salomé Viljöen,
-and Jeffrey Snover. 2019a. <span>“Failure Modes in Machine Learning
-Systems.”</span> <a href="https://arxiv.org/abs/1911.11034">https://arxiv.org/abs/1911.11034</a>.
-</div>
-<div id="ref-kumar2019" class="csl-entry" role="listitem">
-Kumar, Ram Shankar Siva, David O Brien, Kendra Albert, Salomé Viljöen,
-and Jeffrey Snover. 2019b. <span>“Failure <span>Modes</span> in
-<span>Machine Learning Systems</span>.”</span> 2019. <a href="https://doi.org/10.48550/ARXIV.1911.11034">https://doi.org/10.48550/ARXIV.1911.11034</a>.
-</div>
-<div id="ref-lempert2003" class="csl-entry" role="listitem">
-Lempert, Robert J, Steven W Popper, and Steven C Bankes. 2003.
-<em>Shaping the Next One Hundred Years: <span>New</span> Methods for
-Quantitative, Long-Term Policy Analysis</em>. RAND Corporation.
-</div>
-<div id="ref-lindley2013" class="csl-entry" role="listitem">
-Lindley, Dennis V. 2013. <em>Understanding Uncertainty</em>. John Wiley
-&amp; Sons. <a href="https://books.google.ca/books?hl=en&amp;lr=&amp;id=Tfk8AgAAQBAJ&amp;oi=fnd&amp;pg=PR11&amp;dq=Lindley,+D.+(2006).+Understanding+Uncertainty&amp;ots=55HS6lTOVP&amp;sig=0gKCDvRu5rUKhuPyJqhOzW23upU">https://books.google.ca/books?hl=en&amp;lr=&amp;id=Tfk8AgAAQBAJ&amp;oi=fnd&amp;pg=PR11&amp;dq=Lindley,+D.+(2006).+Understanding+Uncertainty&amp;ots=55HS6lTOVP&amp;sig=0gKCDvRu5rUKhuPyJqhOzW23upU</a>.
-</div>
-<div id="ref-list2011" class="csl-entry" role="listitem">
-List, Christian, and Philip Pettit. 2011. <em>Group <span>Agency</span>:
-<span>The Possibility</span>, <span>Design</span>, and
-<span>Status</span> of <span>Corporate Agents</span></em>. Oxford
-University Press.
-</div>
-<div id="ref-lumina2025" class="csl-entry" role="listitem">
-Lumina, Decision Systems. 2025. <span>“Analytica
-<span>Online</span>.”</span> 2025. <a href="https://acp.analytica.com/view0?invite=4560&amp;code=3000289064591444815">https://acp.analytica.com/view0?invite=4560&amp;code=3000289064591444815</a>.
-</div>
-<div id="ref-manheim2021" class="csl-entry" role="listitem">
-Manheim, David. 2021. <span>“Modeling <span>Transformative AI
-Risk</span> (<span>MTAIR</span>) - <span>LessWrong</span>.”</span> July
-28, 2021. <a href="https://www.lesswrong.com/s/aERZoriyHfCqvWkzg">https://www.lesswrong.com/s/aERZoriyHfCqvWkzg</a>.
-</div>
-<div id="ref-martin2023" class="csl-entry" role="listitem">
-Martin, Sammy, Lonnie Chrisman, and Aryeh Englander. 2023. <span>“A
-<span class="nocase">Model-based Approach</span> to <span>AI Existential
-Risk</span>,”</span> August. <a href="https://www.lesswrong.com/posts/sGkRDrpphsu6Jhega/a-model-based-approach-to-ai-existential-risk">https://www.lesswrong.com/posts/sGkRDrpphsu6Jhega/a-model-based-approach-to-ai-existential-risk</a>.
-</div>
-<div id="ref-martin2021" class="csl-entry" role="listitem">
-Martin, Sammy, and Daniel Eth. 2021. <span>“Takeoff <span>Speeds</span>
-and <span>Discontinuities</span>,”</span> September. <a href="https://www.lesswrong.com/posts/pGXR2ynhe5bBCCNqn/takeoff-speeds-and-discontinuities">https://www.lesswrong.com/posts/pGXR2ynhe5bBCCNqn/takeoff-speeds-and-discontinuities</a>.
-</div>
-<div id="ref-maslej2025" class="csl-entry" role="listitem">
-Maslej, Nestor. 2025. <span>“Artificial <span>Intelligence Index
-Report</span> 2025.”</span> <em>Artificial Intelligence</em>.
-</div>
-<div id="ref-mccaslin2024" class="csl-entry" role="listitem">
-McCaslin, Tegan, Josh Rosenberg, Ezra Karger, Avital Morris, Molly
-Hickman, Sam Glover, Zach Jacobs, and Phil Tetlock. 2024.
-<span>“Conditional <span>Trees</span>: <span>A Method</span> for
-<span>Generating Informative Questions</span> about <span>Complex
-Topics</span>.”</span> <em>Forecasting Research Institute</em>. <a href="https://static1.squarespace.com/static/635693acf15a3e2a14a56a4a/t/66ba37a144f1d6095de467df/1723479995772/AIConditionalTrees.pdf">https://static1.squarespace.com/static/635693acf15a3e2a14a56a4a/t/66ba37a144f1d6095de467df/1723479995772/AIConditionalTrees.pdf</a>.
-</div>
-<div id="ref-metropolitansky2025" class="csl-entry" role="listitem">
-Metropolitansky, Dasha, and Jonathan Larson. 2025. <span>“Towards
-<span>Effective Extraction</span> and <span>Evaluation</span> of
-<span>Factual Claims</span>.”</span> February 15, 2025. <a href="https://doi.org/10.48550/arXiv.2502.10855">https://doi.org/10.48550/arXiv.2502.10855</a>.
-</div>
-<div id="ref-meyer2022b" class="csl-entry" role="listitem">
-Meyer, Valentin Jakob. 2022. <span>“A <span>Structure</span> of
-<span>Knowledge</span> &amp; the <span>Process</span> of
-<span>Science</span>.”</span> <em>Philosophy of the Social Sciences</em>
-First Course Paper. https://doi.org/<a href="https://www.vjmeyer.com/papers/essays">https://www.vjmeyer.com/papers/essays</a>.
-</div>
-<div id="ref-miotti2024" class="csl-entry" role="listitem">
-Miotti, Andrea, Tolga Bilge, Dave Kasten, and James Newport. 2024.
-<span>“A <span>Narrow Path</span>.”</span> <a href="https://www.narrowpath.co/">https://www.narrowpath.co/</a>.
-</div>
-<div id="ref-nelson2006" class="csl-entry" role="listitem">
-Nelson, Roger B. 2006. <em>An <span>Introduction</span> to
-<span>Copulas</span></em>. Springer <span>Series</span> in
-<span>Statistics</span>. New York, NY: Springer New York. <a href="https://doi.org/10.1007/0-387-28678-0">https://doi.org/10.1007/0-387-28678-0</a>.
-</div>
-<div id="ref-ngajie2020" class="csl-entry" role="listitem">
-Ngajie, Berty Nsolly, Yan Li, Dawit Tibebu Tiruneh, and Mengmeng Cheng.
-2020. <span>“Investigating the Effects of a Systematic and Model-Based
-Design of Computer-Supported Argument Visualization on Critical
-Thinking.”</span> <em>Thinking Skills and Creativity</em> 38: 100742. <a href="https://www.sciencedirect.com/science/article/pii/S1871187120302169">https://www.sciencedirect.com/science/article/pii/S1871187120302169</a>.
-</div>
-<div id="ref-paul2023" class="csl-entry" role="listitem">
-Paul. 2023. <span>“The <span class="nocase">elephAInt</span> –
-<span>Are</span> We All Like the Six Blind Men When It Comes to
-<span>AI</span>? | <span>PRISMAGuard LLC</span>.”</span> 2023. <a href="https://www.prismaguard.com/the-elephaint-are-we-all-like-the-six-blind-men-when-it-comes-to-ai/">https://www.prismaguard.com/the-elephaint-are-we-all-like-the-six-blind-men-when-it-comes-to-ai/</a>.
-</div>
-<div id="ref-pearl2000" class="csl-entry" role="listitem">
-Pearl, Judea. 2000. <em>Causality: Models, Reasoning, and
-Inference</em>. Cambridge, U.K. ; New York: Cambridge University Press.
-</div>
-<div id="ref-pearl2009" class="csl-entry" role="listitem">
-———. 2009. <em>Causality: <span>Models</span>, Reasoning and
-Inference</em>. 2nd ed. Cambridge University Press.
-</div>
-<div id="ref-pearl2014" class="csl-entry" role="listitem">
-———. 2014. <em>Probabilistic Reasoning in Intelligent Systems: Networks
-of Plausible Inference</em>. Elsevier. <a href="https://books.google.ca/books?hl=en&amp;lr=&amp;id=mn2jBQAAQBAJ&amp;oi=fnd&amp;pg=PP1&amp;dq=Pearl,+J.+(1988).+Probabilistic+Reasoning+in+Intelligent+Systems&amp;ots=4tEX2A4Ha8&amp;sig=lgUs_RCoeXEEuGwM5xMEoyJy4HI">https://books.google.ca/books?hl=en&amp;lr=&amp;id=mn2jBQAAQBAJ&amp;oi=fnd&amp;pg=PP1&amp;dq=Pearl,+J.+(1988).+Probabilistic+Reasoning+in+Intelligent+Systems&amp;ots=4tEX2A4Ha8&amp;sig=lgUs_RCoeXEEuGwM5xMEoyJy4HI</a>.
-</div>
-<div id="ref-pollock1995" class="csl-entry" role="listitem">
-Pollock, John L. 1995. <em>Cognitive Carpentry: <span>A</span> Blueprint
-for How to Build a Person</em>. Mit Press. <a href="https://books.google.ca/books?hl=en&amp;lr=&amp;id=JAfHrHTqswAC&amp;oi=fnd&amp;pg=PA1&amp;dq=Pollock,+J.+(1995).+Cognitive+Carpentry&amp;ots=rq-qSCBcxV&amp;sig=aAfHGsGUosxl_1-JuxIEA7C2QO4">https://books.google.ca/books?hl=en&amp;lr=&amp;id=JAfHrHTqswAC&amp;oi=fnd&amp;pg=PA1&amp;dq=Pollock,+J.+(1995).+Cognitive+Carpentry&amp;ots=rq-qSCBcxV&amp;sig=aAfHGsGUosxl_1-JuxIEA7C2QO4</a>.
-</div>
-<div id="ref-prokudin2024" class="csl-entry" role="listitem">
-Prokudin, D. E., E. N. Lisanyuk, and I. R. Baymuratov. 2024.
-<span>“Visualization <span>Functions</span> in <span>Argumentation
-Representation Software</span>.”</span> <em>Scientific
-Visualization</em> 16 (3). <a href="https://sv-journal.org/2024-3/11/en.pdf">https://sv-journal.org/2024-3/11/en.pdf</a>.
-</div>
-<div id="ref-rehman2025" class="csl-entry" role="listitem">
-Rehman, Iskander. 2025. <span>“The <span>Battle</span> for
-<span>Brilliant Minds</span>: <span>From</span> the <span>Nuclear
-Age</span> to <span>AI</span>.”</span> War on the Rocks. January 13,
-2025. <a href="https://warontherocks.com/2025/01/the-battle-for-brilliant-minds-from-the-nuclear-age-to-ai/">https://warontherocks.com/2025/01/the-battle-for-brilliant-minds-from-the-nuclear-age-to-ai/</a>.
-</div>
-<div id="ref-russell2015" class="csl-entry" role="listitem">
-Russell, Stuart, Tom Dietterich, Eric Horvitz, Bart Selman, Francesca
-Rossi, Demis Hassabis, Shane Legg, et al. 2015. <span>“Research
-Priorities for Robust and Beneficial Artificial Intelligence:
-<span>An</span> Open Letter.”</span> <em>AI Magazine</em> 36 (4): 3–4.
-<a href="https://doi.org/10.1609/aimag.v36i4.2621">https://doi.org/10.1609/aimag.v36i4.2621</a>.
-</div>
-<div id="ref-samborska2025" class="csl-entry" role="listitem">
-Samborska, Veronika. 2025. <span>“Scaling up: How Increasing Inputs Has
-Made Artificial Intelligence More Capable.”</span> <em>Our World in
-Data</em>, January. <a href="https://ourworldindata.org/scaling-up-ai">https://ourworldindata.org/scaling-up-ai</a>.
-</div>
-<div id="ref-samuel2023" class="csl-entry" role="listitem">
-Samuel, Sigal. 2023. <span>“<span>AI</span> Is a <span>‘Tragedy of the
-Commons.’</span> <span>We</span>’ve Got Solutions for That.”</span> Vox.
-July 7, 2023. <a href="https://www.vox.com/future-perfect/2023/7/7/23787011/ai-arms-race-tragedy-commons-risk-safety">https://www.vox.com/future-perfect/2023/7/7/23787011/ai-arms-race-tragedy-commons-risk-safety</a>.
-</div>
-<div id="ref-schelling1960" class="csl-entry" role="listitem">
-Schelling, Thomas C. 1960. <span>“I960. <span>The</span> Strategy of
-Conflict.”</span> <em>Cambridge, Mass</em>.
-</div>
-<div id="ref-scheuer2010" class="csl-entry" role="listitem">
-Scheuer, Oliver, Frank Loll, Niels Pinkwart, and Bruce M. McLaren. 2010.
-<span>“Computer-Supported Argumentation: <span>A</span> Review of the
-State of the Art.”</span> <em>International Journal of
-Computer-Supported Collaborative Learning</em> 5 (1): 43–102. <a href="https://doi.org/10.1007/s11412-009-9080-x">https://doi.org/10.1007/s11412-009-9080-x</a>.
-</div>
-<div id="ref-solomon2020" class="csl-entry" role="listitem">
-Solomon, Jill. 2020. <em>Corporate Governance and Accountability</em>.
-John Wiley &amp; Sons. <a href="https://books.google.ca/books?hl=en&amp;lr=&amp;id=JAX9DwAAQBAJ&amp;oi=fnd&amp;pg=PR1&amp;dq=review+of+the+effects+of+liability+frameworks+on+corporate+governance+&amp;ots=ny23_vd-U0&amp;sig=3LuNNhvSWXriEeg-ipAdDIQGAgo">https://books.google.ca/books?hl=en&amp;lr=&amp;id=JAX9DwAAQBAJ&amp;oi=fnd&amp;pg=PR1&amp;dq=review+of+the+effects+of+liability+frameworks+on+corporate+governance+&amp;ots=ny23_vd-U0&amp;sig=3LuNNhvSWXriEeg-ipAdDIQGAgo</a>.
-</div>
-<div id="ref-sotala2018" class="csl-entry" role="listitem">
-Sotala, Kaj. 2018. <span>“Disjunctive <span>Scenarios</span> of
-<span>Catastrophic AI Risk</span>.”</span> In <em>Artificial
-<span>Intelligence Safety</span> and <span>Security</span></em>, edited
-by Roman V. Yampolskiy, 1st ed., 315–37. First edition. | Boca Raton, FL
-: CRC Press/Taylor &amp; Francis Group, 2018.: <span>Chapman and
-Hall/CRC</span>. <a href="https://doi.org/10.1201/9781351251389-22">https://doi.org/10.1201/9781351251389-22</a>.
-</div>
-<div id="ref-squires2023" class="csl-entry" role="listitem">
-Squires, Chandler, and Caroline Uhler. 2023. <span>“Causal
-<span>Structure Learning</span>: <span>A Combinatorial
-Perspective</span>.”</span> <em>Foundations of Computational
-Mathematics</em> 23 (5): 1781–1815. <a href="https://doi.org/10.1007/s10208-022-09581-9">https://doi.org/10.1007/s10208-022-09581-9</a>.
-</div>
-<div id="ref-tegmark2024" class="csl-entry" role="listitem">
-Tegmark, Max. 2024. <span>“Asilomar <span>AI Principles</span>.”</span>
-Future of Life Institute. 2024. <a href="https://futureoflife.org/open-letter/ai-principles/">https://futureoflife.org/open-letter/ai-principles/</a>.
-</div>
-<div id="ref-tetlock2022" class="csl-entry" role="listitem">
-Tetlock, Phil. 2022. <span>“Conditional <span>Trees</span>: <span>AI
-Risk</span>.”</span> 2022. <a href="https://www.metaculus.com/tournament/3508/">https://www.metaculus.com/tournament/3508/</a>.
-</div>
-<div id="ref-tetlock2015" class="csl-entry" role="listitem">
-Tetlock, Philip E., and Dan Gardner. 2015. <em>Superforecasting: The Art
-and Science of Prediction</em>. First paperback edition. New York:
-Broadway Books.
-</div>
-<div id="ref-todd2024" class="csl-entry" role="listitem">
-Todd, Benjamin. 2024. <span>“It Looks Like There Are Some Good Funding
-Opportunities in <span>AI</span> Safety Right Now.”</span> Substack
-newsletter. Benjamin Todd. December 21, 2024. <a href="https://benjamintodd.substack.com/p/looks-like-there-are-some-good-funding">https://benjamintodd.substack.com/p/looks-like-there-are-some-good-funding</a>.
-</div>
-<div id="ref-voigt2025" class="csl-entry" role="listitem">
-Voigt, Christian. (2014) 2025. <span>“Christianvoigt/Argdown.”</span> <a href="https://github.com/christianvoigt/argdown">https://github.com/christianvoigt/argdown</a>.
-</div>
-<div id="ref-walton2009" class="csl-entry" role="listitem">
-Walton, Douglas. 2009. <span>“Argument Visualization Tools for
-Corroborative Evidence.”</span> In <em>Proc. Of the 2nd
-<span>International Conference</span> on <span>Evidence Law</span> and
-<span>Forensic Science</span></em>, 32–49. <a href="https://www.academia.edu/download/37718171/09ArguVis.pdf">https://www.academia.edu/download/37718171/09ArguVis.pdf</a>.
-</div>
-<div id="ref-wilson2023" class="csl-entry" role="listitem">
-Wilson, Nick, Matt Boyd, John Kerr, Amanda Kvalsvig, and Michael Baker.
-2023. <span>“The Need for Long-Term Thinking–<span>Especially</span> for
-Preventing Catastrophic Risks.”</span> <em>Public Health Expert
-Briefing</em>.
-</div>
-<div id="ref-yang2022" class="csl-entry" role="listitem">
-Yang, Jie, Soyeon Caren Han, and Josiah Poon. 2022. <span>“A Survey on
-Extraction of Causal Relations from Natural Language Text.”</span>
-<em>Knowledge and Information Systems</em> 64 (5): 1161–86. <a href="https://doi.org/10.1007/s10115-022-01665-w">https://doi.org/10.1007/s10115-022-01665-w</a>.
-</div>
-<div id="ref-yudkowsky2008" class="csl-entry" role="listitem">
-Yudkowsky, Eliezer. 2008. <span>“Artificial <span>Intelligence</span> as
-a Positive and Negative Factor in Global Risk.”</span> In <em>Global
-<span>Catastrophic Risks</span></em>, by Eliezer Yudkowsky. Oxford
-University Press. <a href="https://doi.org/10.1093/oso/9780198570509.003.0021">https://doi.org/10.1093/oso/9780198570509.003.0021</a>.
-</div>
-</div>
 <p><code>{ embed I.Appendices.qmd }</code></p>
 <section id="amtair-thesis-relevant-literature-citations" class="level2">
 <h2 class="anchored" data-anchor-id="amtair-thesis-relevant-literature-citations">AMTAIR Thesis Relevant Literature &amp; Citations</h2>
@@ -5437,7 +5025,7 @@ University Press. <a href="https://doi.org/10.1093/oso/9780198570509.003.0021">h
 <!-- [ ] ADD: INTEGRATE ALL THE CITATIONS FROM BELOW AT THE CORRESPONDING / BEST (MULTIPLE) SECTIONS OF THE THESIS -->
 <!-- [ ] Update different Carlsmith paper versions in Zotero -->
 <section id="carlsmith2021-carlsmith2021" class="level4">
-<h4 class="anchored" data-anchor-id="carlsmith2021-carlsmith2021"><code>@carlsmith2021</code>: <span class="citation" data-cites="carlsmith2021">Carlsmith (<a href="Outline_13.html#ref-carlsmith2021" role="doc-biblioref">2021</a>)</span></h4>
+<h4 class="anchored" data-anchor-id="carlsmith2021-carlsmith2021"><code>@carlsmith2021</code>: <span class="citation" data-cites="carlsmith2021">Carlsmith (<a href="../../ref/references.html#ref-carlsmith2021" role="doc-biblioref">2021</a>)</span></h4>
 <pre><code>Carlsmith, Joseph (2021)
 Is Power-Seeking AI an Existential Risk?
 
@@ -5459,7 +5047,7 @@ Potential claims supported (with certainty %):
 - "Explicit probability estimates enable formal analysis" (95%)</code></pre>
 </section>
 <section id="bostrom2014-bostrom2014" class="level4">
-<h4 class="anchored" data-anchor-id="bostrom2014-bostrom2014"><code>@bostrom2014</code>: <span class="citation" data-cites="bostrom2014">Bostrom (<a href="Outline_13.html#ref-bostrom2014" role="doc-biblioref">2014</a>)</span></h4>
+<h4 class="anchored" data-anchor-id="bostrom2014-bostrom2014"><code>@bostrom2014</code>: <span class="citation" data-cites="bostrom2014">Bostrom (<a href="../../ref/references.html#ref-bostrom2014" role="doc-biblioref">2014</a>)</span></h4>
 <pre><code>Bostrom, Nick (2014)
 Superintelligence: Paths, Dangers, Strategies
 
@@ -5478,7 +5066,7 @@ Potential claims supported (with certainty %):
 - "Superintelligence poses existential risk" (85%)</code></pre>
 </section>
 <section id="clarke2022-clarke2022" class="level4">
-<h4 class="anchored" data-anchor-id="clarke2022-clarke2022"><code>@clarke2022</code>: <span class="citation" data-cites="clarke2022">Clarke et al. (<a href="Outline_13.html#ref-clarke2022" role="doc-biblioref">2022</a>)</span></h4>
+<h4 class="anchored" data-anchor-id="clarke2022-clarke2022"><code>@clarke2022</code>: <span class="citation" data-cites="clarke2022">Clarke et al. (<a href="../../ref/references.html#ref-clarke2022" role="doc-biblioref">2022</a>)</span></h4>
 <pre><code>Clarke, Sam et al. (2022)
 Modeling Transformative AI Risks (MTAIR) Project -- Summary Report
 
@@ -5499,7 +5087,7 @@ Potential claims supported (with certainty %):
 - "Static models cannot track evolving arguments" (90%)</code></pre>
 </section>
 <section id="pearl2009-and-pearl2000-pearl2000-and-pearl2009" class="level4">
-<h4 class="anchored" data-anchor-id="pearl2009-and-pearl2000-pearl2000-and-pearl2009"><code>@pearl2009</code> and <code>@pearl2000</code>: <span class="citation" data-cites="pearl2000">Pearl (<a href="Outline_13.html#ref-pearl2000" role="doc-biblioref">2000</a>)</span> and <span class="citation" data-cites="pearl2009">Pearl (<a href="Outline_13.html#ref-pearl2009" role="doc-biblioref">2009</a>)</span></h4>
+<h4 class="anchored" data-anchor-id="pearl2009-and-pearl2000-pearl2000-and-pearl2009"><code>@pearl2009</code> and <code>@pearl2000</code>: <span class="citation" data-cites="pearl2000">Pearl (<a href="../../ref/references.html#ref-pearl2000" role="doc-biblioref">2000</a>)</span> and <span class="citation" data-cites="pearl2009">Pearl (<a href="../../ref/references.html#ref-pearl2009" role="doc-biblioref">2009</a>)</span></h4>
 <pre><code>Pearl, Judea (2009)
 Causality: Models, Reasoning and Inference (2nd Edition)
 
@@ -5520,7 +5108,7 @@ Potential claims supported (with certainty %):
 - "DAGs encode conditional independence assumptions" (95%)</code></pre>
 </section>
 <section id="jaynes2003-jaynes2003" class="level4">
-<h4 class="anchored" data-anchor-id="jaynes2003-jaynes2003"><code>@jaynes2003</code>: <span class="citation" data-cites="jaynes2003">Jaynes (<a href="Outline_13.html#ref-jaynes2003" role="doc-biblioref">2003</a>)</span></h4>
+<h4 class="anchored" data-anchor-id="jaynes2003-jaynes2003"><code>@jaynes2003</code>: <span class="citation" data-cites="jaynes2003">Jaynes (<a href="../../ref/references.html#ref-jaynes2003" role="doc-biblioref">2003</a>)</span></h4>
 <pre><code>Jaynes, Edwin T. (2003)
 Probability Theory: The Logic of Science
 
@@ -5541,7 +5129,7 @@ Potential claims supported (with certainty %):
 - "Maximum entropy principles handle missing information" (90%)</code></pre>
 </section>
 <section id="tetlock2015-tetlock2015" class="level4">
-<h4 class="anchored" data-anchor-id="tetlock2015-tetlock2015"><code>@tetlock2015</code>: <span class="citation" data-cites="tetlock2015">P. E. Tetlock and Gardner (<a href="Outline_13.html#ref-tetlock2015" role="doc-biblioref">2015</a>)</span></h4>
+<h4 class="anchored" data-anchor-id="tetlock2015-tetlock2015"><code>@tetlock2015</code>: <span class="citation" data-cites="tetlock2015">P. E. Tetlock and Gardner (<a href="../../ref/references.html#ref-tetlock2015" role="doc-biblioref">2015</a>)</span></h4>
 <pre><code>Tetlock, Philip E. and Gardner, Dan (2015)
 Superforecasting: The Art and Science of Prediction
 
@@ -5560,7 +5148,7 @@ Potential claims supported (with certainty %):
 - "Calibrated forecasters achieve measurable accuracy" (90%)</code></pre>
 </section>
 <section id="lempert2003-lempert2003" class="level4">
-<h4 class="anchored" data-anchor-id="lempert2003-lempert2003"><code>@lempert2003</code>: <span class="citation" data-cites="lempert2003">Lempert, Popper, and Bankes (<a href="Outline_13.html#ref-lempert2003" role="doc-biblioref">2003</a>)</span></h4>
+<h4 class="anchored" data-anchor-id="lempert2003-lempert2003"><code>@lempert2003</code>: <span class="citation" data-cites="lempert2003">Lempert, Popper, and Bankes (<a href="../../ref/references.html#ref-lempert2003" role="doc-biblioref">2003</a>)</span></h4>
 <pre><code>Lempert, Robert J., Popper, Steven W., and Bankes, Steven C. (2003)
 Shaping the Next One Hundred Years: New Methods for Quantitative, Long-Term Policy Analysis
 
@@ -5579,7 +5167,7 @@ Potential claims supported (with certainty %):
 - "AI governance faces irreducible uncertainties" (90%)</code></pre>
 </section>
 <section id="good1966-good1966" class="level4">
-<h4 class="anchored" data-anchor-id="good1966-good1966"><code>@good1966</code>: <span class="citation" data-cites="good1966">Good (<a href="Outline_13.html#ref-good1966" role="doc-biblioref">1966</a>)</span></h4>
+<h4 class="anchored" data-anchor-id="good1966-good1966"><code>@good1966</code>: <span class="citation" data-cites="good1966">Good (<a href="../../ref/references.html#ref-good1966" role="doc-biblioref">1966</a>)</span></h4>
 <pre><code>Good, Irving John (1966)
 Speculations Concerning the First Ultraintelligent Machine
 
@@ -5596,7 +5184,7 @@ Potential claims supported (with certainty %):
 - "Recursive self-improvement could lead to rapid capability gains" (80%)</code></pre>
 </section>
 <section id="yudkowsky2008-yudkowsky2008" class="level4">
-<h4 class="anchored" data-anchor-id="yudkowsky2008-yudkowsky2008"><code>@yudkowsky2008</code>: <span class="citation" data-cites="yudkowsky2008">Yudkowsky (<a href="Outline_13.html#ref-yudkowsky2008" role="doc-biblioref">2008</a>)</span></h4>
+<h4 class="anchored" data-anchor-id="yudkowsky2008-yudkowsky2008"><code>@yudkowsky2008</code>: <span class="citation" data-cites="yudkowsky2008">Yudkowsky (<a href="../../ref/references.html#ref-yudkowsky2008" role="doc-biblioref">2008</a>)</span></h4>
 <pre><code>Yudkowsky, Eliezer (2008)
 Artificial Intelligence as a Positive and Negative Factor in Global Risk
 
@@ -5615,7 +5203,7 @@ Potential claims supported (with certainty %):
 - "Cognitive biases affect AI risk assessment" (90%)</code></pre>
 </section>
 <section id="russell2015-russell2015" class="level4">
-<h4 class="anchored" data-anchor-id="russell2015-russell2015"><code>@russell2015</code>: <span class="citation" data-cites="russell2015">Russell et al. (<a href="Outline_13.html#ref-russell2015" role="doc-biblioref">2015</a>)</span></h4>
+<h4 class="anchored" data-anchor-id="russell2015-russell2015"><code>@russell2015</code>: <span class="citation" data-cites="russell2015">Russell et al. (<a href="../../ref/references.html#ref-russell2015" role="doc-biblioref">2015</a>)</span></h4>
 <pre><code>Russell, Stuart et al. (2015)
 Research Priorities for Robust and Beneficial Artificial Intelligence: An Open Letter
 
@@ -5639,7 +5227,7 @@ Potential claims supported (with certainty %):
 <h3 class="anchored" data-anchor-id="new-items-to-consider">New Items to Consider:</h3>
 <!-- [ ] ADD: INTEGRATE ALL THE CITATIONS FROM BELOW AT THE CORRESPONDING / BEST (MULTIPLE) SECTIONS OF THE THESIS -->
 <section id="amodei2016-amodei2016" class="level4">
-<h4 class="anchored" data-anchor-id="amodei2016-amodei2016"><code>@amodei2016</code>: <span class="citation" data-cites="amodei2016">Amodei et al. (<a href="Outline_13.html#ref-amodei2016" role="doc-biblioref">2016</a>)</span></h4>
+<h4 class="anchored" data-anchor-id="amodei2016-amodei2016"><code>@amodei2016</code>: <span class="citation" data-cites="amodei2016">Amodei et al. (<a href="../../ref/references.html#ref-amodei2016" role="doc-biblioref">2016</a>)</span></h4>
 <pre><code>Amodei, Dario et al. (2016)
 Concrete Problems in AI Safety
 
@@ -5654,7 +5242,7 @@ Potential claims supported (with certainty %):
 - "Current ML systems exhibit safety failures" (90%)</code></pre>
 </section>
 <section id="christiano2019-christiano2019" class="level4">
-<h4 class="anchored" data-anchor-id="christiano2019-christiano2019"><code>@christiano2019</code>: <span class="citation" data-cites="christiano2019">Christiano (<a href="Outline_13.html#ref-christiano2019" role="doc-biblioref">2019</a>)</span></h4>
+<h4 class="anchored" data-anchor-id="christiano2019-christiano2019"><code>@christiano2019</code>: <span class="citation" data-cites="christiano2019">Christiano (<a href="../../ref/references.html#ref-christiano2019" role="doc-biblioref">2019</a>)</span></h4>
 <pre><code>Christiano, Paul (2019)
 What Failure Looks Like
 
@@ -5669,7 +5257,7 @@ Potential claims supported (with certainty %):
 - "Multiple pathways to existential risk exist" (90%)</code></pre>
 </section>
 <section id="critch2019-critch2019" class="level4">
-<h4 class="anchored" data-anchor-id="critch2019-critch2019"><code>@critch2019</code>: <span class="citation" data-cites="critch2019">(<a href="Outline_13.html#ref-critch2019" role="doc-biblioref"><strong>critch2019?</strong></a>)</span></h4>
+<h4 class="anchored" data-anchor-id="critch2019-critch2019"><code>@critch2019</code>: <span class="citation" data-cites="critch2019">(<a href="../../ref/references.html#ref-critch2019" role="doc-biblioref"><strong>critch2019?</strong></a>)</span></h4>
 <pre><code>Critch, Andrew (2019)
 ARCHES: AI Research Considerations for Human Existential Safety
 
@@ -5684,7 +5272,7 @@ Potential claims supported (with certainty %):
 - "Research, deployment, and governance interact complexly" (85%)</code></pre>
 </section>
 <section id="dafoe2018-and-updated-dafoe2021-dafoe2021-and-dafoe2018" class="level4">
-<h4 class="anchored" data-anchor-id="dafoe2018-and-updated-dafoe2021-dafoe2021-and-dafoe2018"><code>@dafoe2018</code> and updated <code>@dafoe2021</code>: <span class="citation" data-cites="dafoe2021">Dafoe (<a href="Outline_13.html#ref-dafoe2021" role="doc-biblioref">2021</a>)</span> and <span class="citation" data-cites="dafoe2018">Dafoe (<a href="Outline_13.html#ref-dafoe2018" role="doc-biblioref">2018</a>)</span></h4>
+<h4 class="anchored" data-anchor-id="dafoe2018-and-updated-dafoe2021-dafoe2021-and-dafoe2018"><code>@dafoe2018</code> and updated <code>@dafoe2021</code>: <span class="citation" data-cites="dafoe2021">Dafoe (<a href="../../ref/references.html#ref-dafoe2021" role="doc-biblioref">2021</a>)</span> and <span class="citation" data-cites="dafoe2018">Dafoe (<a href="../../ref/references.html#ref-dafoe2018" role="doc-biblioref">2018</a>)</span></h4>
 <pre><code>Dafoe, Allan (2021)
 AI Governance: A Research Agenda
 
@@ -5699,7 +5287,7 @@ Potential claims supported (with certainty %):
 - "Technical and policy communities need better coordination" (90%)</code></pre>
 </section>
 <section id="askell2021-askell2021" class="level4">
-<h4 class="anchored" data-anchor-id="askell2021-askell2021"><code>@askell2021</code>: <span class="citation" data-cites="askell2021">Askell et al. (<a href="Outline_13.html#ref-askell2021" role="doc-biblioref">2021</a>)</span></h4>
+<h4 class="anchored" data-anchor-id="askell2021-askell2021"><code>@askell2021</code>: <span class="citation" data-cites="askell2021">Askell et al. (<a href="../../ref/references.html#ref-askell2021" role="doc-biblioref">2021</a>)</span></h4>
 <pre><code>Askell, Amanda et al. (2021)
 A General Language Assistant as a Laboratory for Alignment
 
@@ -5719,34 +5307,34 @@ Potential claims supported (with certainty %):
 <h2 class="anchored" data-anchor-id="further-citations-to-integrate">Further Citations to Integrate:</h2>
 <!-- [ ] ADD: INTEGRATE ALL THE CITATIONS FROM BELOW AT THE CORRESPONDING / BEST (MULTIPLE) SECTIONS OF THE THESIS: -->
 <section id="growiec2024" class="level3">
-<h3 class="anchored" data-anchor-id="growiec2024"><span class="citation" data-cites="growiec2024">Growiec (<a href="Outline_13.html#ref-growiec2024" role="doc-biblioref">2024</a>)</span></h3>
-<p><span class="citation" data-cites="clarke2022">Clarke et al. (<a href="Outline_13.html#ref-clarke2022" role="doc-biblioref">2022</a>)</span></p>
-<p><span class="citation" data-cites="drexler2019">K. Drexler (<a href="Outline_13.html#ref-drexler2019" role="doc-biblioref">2019</a>)</span> and <span class="citation" data-cites="drexler2019a">K. E. Drexler (<a href="Outline_13.html#ref-drexler2019a" role="doc-biblioref">2019</a>)</span></p>
-<p><span class="citation" data-cites="brundage2018">Brundage, Avin, Clark, Toner, Eckersley, Garfinkel, Dafoe, Scharre, Zeitzoff, Filar, Anderson, et al. (<a href="Outline_13.html#ref-brundage2018" role="doc-biblioref">2018</a>)</span> and <span class="citation" data-cites="brundage2018a">Brundage, Avin, Clark, Toner, Eckersley, Garfinkel, Dafoe, Scharre, Zeitzoff, and Filar (<a href="Outline_13.html#ref-brundage2018a" role="doc-biblioref">2018</a>)</span></p>
-<p><span class="citation" data-cites="kumar2019">Kumar et al. (<a href="Outline_13.html#ref-kumar2019" role="doc-biblioref">2019b</a>)</span> and <span class="citation" data-cites="kumar2019a">Kumar et al. (<a href="Outline_13.html#ref-kumar2019a" role="doc-biblioref">2019a</a>)</span></p>
-<p><span class="citation" data-cites="carlsmith2021">Carlsmith (<a href="Outline_13.html#ref-carlsmith2021" role="doc-biblioref">2021</a>)</span> and <span class="citation" data-cites="carlsmith2022">Carlsmith (<a href="Outline_13.html#ref-carlsmith2022" role="doc-biblioref">2022</a>)</span> and <span class="citation" data-cites="carlsmith2024">Carlsmith (<a href="Outline_13.html#ref-carlsmith2024" role="doc-biblioref">2024</a>)</span></p>
-<p><span class="citation" data-cites="hendrycks2021">Hendrycks et al. (<a href="Outline_13.html#ref-hendrycks2021" role="doc-biblioref">2021a</a>)</span> and <span class="citation" data-cites="hendrycks2021a">Hendrycks et al. (<a href="Outline_13.html#ref-hendrycks2021a" role="doc-biblioref">2021b</a>)</span></p>
-<p><span class="citation" data-cites="wilson2023">Wilson et al. (<a href="Outline_13.html#ref-wilson2023" role="doc-biblioref">2023</a>)</span></p>
-<p><span class="citation" data-cites="kilian2023">Kilian, Ventura, and Bailey (<a href="Outline_13.html#ref-kilian2023" role="doc-biblioref">2023</a>)</span></p>
-<p><span class="citation" data-cites="kulveit2025">Kulveit et al. (<a href="Outline_13.html#ref-kulveit2025" role="doc-biblioref">2025</a>)</span></p>
-<p><span class="citation" data-cites="hadshar2023">Hadshar (<a href="Outline_13.html#ref-hadshar2023" role="doc-biblioref">2023</a>)</span></p>
-<p><span class="citation" data-cites="kasirzadeh2024">Kasirzadeh (<a href="Outline_13.html#ref-kasirzadeh2024" role="doc-biblioref">2024</a>)</span></p>
-<p><span class="citation" data-cites="sotala2018">Sotala (<a href="Outline_13.html#ref-sotala2018" role="doc-biblioref">2018</a>)</span></p>
-<p>Claimify: <span class="citation" data-cites="metropolitansky2025">Metropolitansky and Larson (<a href="Outline_13.html#ref-metropolitansky2025" role="doc-biblioref">2025</a>)</span></p>
+<h3 class="anchored" data-anchor-id="growiec2024"><span class="citation" data-cites="growiec2024">Growiec (<a href="../../ref/references.html#ref-growiec2024" role="doc-biblioref">2024</a>)</span></h3>
+<p><span class="citation" data-cites="clarke2022">Clarke et al. (<a href="../../ref/references.html#ref-clarke2022" role="doc-biblioref">2022</a>)</span></p>
+<p><span class="citation" data-cites="drexler2019">K. Drexler (<a href="../../ref/references.html#ref-drexler2019" role="doc-biblioref">2019</a>)</span> and <span class="citation" data-cites="drexler2019a">K. E. Drexler (<a href="../../ref/references.html#ref-drexler2019a" role="doc-biblioref">2019</a>)</span></p>
+<p><span class="citation" data-cites="brundage2018">Brundage, Avin, Clark, Toner, Eckersley, Garfinkel, Dafoe, Scharre, Zeitzoff, Filar, Anderson, et al. (<a href="../../ref/references.html#ref-brundage2018" role="doc-biblioref">2018</a>)</span> and <span class="citation" data-cites="brundage2018a">Brundage, Avin, Clark, Toner, Eckersley, Garfinkel, Dafoe, Scharre, Zeitzoff, and Filar (<a href="../../ref/references.html#ref-brundage2018a" role="doc-biblioref">2018</a>)</span></p>
+<p><span class="citation" data-cites="kumar2019">Kumar et al. (<a href="../../ref/references.html#ref-kumar2019" role="doc-biblioref">2019b</a>)</span> and <span class="citation" data-cites="kumar2019a">Kumar et al. (<a href="../../ref/references.html#ref-kumar2019a" role="doc-biblioref">2019a</a>)</span></p>
+<p><span class="citation" data-cites="carlsmith2021">Carlsmith (<a href="../../ref/references.html#ref-carlsmith2021" role="doc-biblioref">2021</a>)</span> and <span class="citation" data-cites="carlsmith2022">Carlsmith (<a href="../../ref/references.html#ref-carlsmith2022" role="doc-biblioref">2022</a>)</span> and <span class="citation" data-cites="carlsmith2024">Carlsmith (<a href="../../ref/references.html#ref-carlsmith2024" role="doc-biblioref">2024</a>)</span></p>
+<p><span class="citation" data-cites="hendrycks2021">Hendrycks et al. (<a href="../../ref/references.html#ref-hendrycks2021" role="doc-biblioref">2021a</a>)</span> and <span class="citation" data-cites="hendrycks2021a">Hendrycks et al. (<a href="../../ref/references.html#ref-hendrycks2021a" role="doc-biblioref">2021b</a>)</span></p>
+<p><span class="citation" data-cites="wilson2023">Wilson et al. (<a href="../../ref/references.html#ref-wilson2023" role="doc-biblioref">2023</a>)</span></p>
+<p><span class="citation" data-cites="kilian2023">Kilian, Ventura, and Bailey (<a href="../../ref/references.html#ref-kilian2023" role="doc-biblioref">2023</a>)</span></p>
+<p><span class="citation" data-cites="kulveit2025">Kulveit et al. (<a href="../../ref/references.html#ref-kulveit2025" role="doc-biblioref">2025</a>)</span></p>
+<p><span class="citation" data-cites="hadshar2023">Hadshar (<a href="../../ref/references.html#ref-hadshar2023" role="doc-biblioref">2023</a>)</span></p>
+<p><span class="citation" data-cites="kasirzadeh2024">Kasirzadeh (<a href="../../ref/references.html#ref-kasirzadeh2024" role="doc-biblioref">2024</a>)</span></p>
+<p><span class="citation" data-cites="sotala2018">Sotala (<a href="../../ref/references.html#ref-sotala2018" role="doc-biblioref">2018</a>)</span></p>
+<p>Claimify: <span class="citation" data-cites="metropolitansky2025">Metropolitansky and Larson (<a href="../../ref/references.html#ref-metropolitansky2025" role="doc-biblioref">2025</a>)</span></p>
 <p>Bayes Server:</p>
-<p><span class="citation" data-cites="bayes2025">Bayes (<a href="Outline_13.html#ref-bayes2025" role="doc-biblioref">2025</a>)</span></p>
+<p><span class="citation" data-cites="bayes2025">Bayes (<a href="../../ref/references.html#ref-bayes2025" role="doc-biblioref">2025</a>)</span></p>
 <p>MTAIR:</p>
-<p><span class="citation" data-cites="martin2023">Martin, Chrisman, and Englander (<a href="Outline_13.html#ref-martin2023" role="doc-biblioref">2023</a>)</span></p>
-<p><span class="citation" data-cites="manheim2021">Manheim (<a href="Outline_13.html#ref-manheim2021" role="doc-biblioref">2021</a>)</span></p>
-<p><span class="citation" data-cites="riceissa2021">(<a href="Outline_13.html#ref-riceissa2021" role="doc-biblioref"><strong>riceissa2021?</strong></a>)</span></p>
-<p><span class="citation" data-cites="eth2021">Eth (<a href="Outline_13.html#ref-eth2021" role="doc-biblioref">2021</a>)</span></p>
-<p><span class="citation" data-cites="martin2021">Martin and Eth (<a href="Outline_13.html#ref-martin2021" role="doc-biblioref">2021</a>)</span></p>
-<p><span class="citation" data-cites="cottier2021">Cottier (<a href="Outline_13.html#ref-cottier2021" role="doc-biblioref">2021</a>)</span></p>
-<p><span class="citation" data-cites="cottier2021">Cottier (<a href="Outline_13.html#ref-cottier2021" role="doc-biblioref">2021</a>)</span></p>
-<p><span class="citation" data-cites="cottier2021b">Cottier, Eth, and Martin (<a href="Outline_13.html#ref-cottier2021b" role="doc-biblioref">2021</a>)</span></p>
-<p><span class="citation" data-cites="davidmanheim2021a">Davidmanheim (<a href="Outline_13.html#ref-davidmanheim2021a" role="doc-biblioref">2021</a>)</span></p>
+<p><span class="citation" data-cites="martin2023">Martin, Chrisman, and Englander (<a href="../../ref/references.html#ref-martin2023" role="doc-biblioref">2023</a>)</span></p>
+<p><span class="citation" data-cites="manheim2021">Manheim (<a href="../../ref/references.html#ref-manheim2021" role="doc-biblioref">2021</a>)</span></p>
+<p><span class="citation" data-cites="riceissa2021">(<a href="../../ref/references.html#ref-riceissa2021" role="doc-biblioref"><strong>riceissa2021?</strong></a>)</span></p>
+<p><span class="citation" data-cites="eth2021">Eth (<a href="../../ref/references.html#ref-eth2021" role="doc-biblioref">2021</a>)</span></p>
+<p><span class="citation" data-cites="martin2021">Martin and Eth (<a href="../../ref/references.html#ref-martin2021" role="doc-biblioref">2021</a>)</span></p>
+<p><span class="citation" data-cites="cottier2021">Cottier (<a href="../../ref/references.html#ref-cottier2021" role="doc-biblioref">2021</a>)</span></p>
+<p><span class="citation" data-cites="cottier2021">Cottier (<a href="../../ref/references.html#ref-cottier2021" role="doc-biblioref">2021</a>)</span></p>
+<p><span class="citation" data-cites="cottier2021b">Cottier, Eth, and Martin (<a href="../../ref/references.html#ref-cottier2021b" role="doc-biblioref">2021</a>)</span></p>
+<p><span class="citation" data-cites="davidmanheim2021a">Davidmanheim (<a href="../../ref/references.html#ref-davidmanheim2021a" role="doc-biblioref">2021</a>)</span></p>
 <p>Analytica:</p>
-<p><span class="citation" data-cites="lumina2025">Lumina (<a href="Outline_13.html#ref-lumina2025" role="doc-biblioref">2025</a>)</span></p>
+<p><span class="citation" data-cites="lumina2025">Lumina (<a href="../../ref/references.html#ref-lumina2025" role="doc-biblioref">2025</a>)</span></p>
 </section>
 </section>
 </section>
@@ -5845,6 +5433,281 @@ Yang, Jie, Soyeon Caren Han, and Josiah Poon. 2022. “A Survey on Extraction of
 Yudkowsky, Eliezer. 2008. “Artificial Intelligence as a Positive and Negative Factor in Global Risk.” In Global Catastrophic Risks, by Eliezer Yudkowsky. Oxford University Press. https://doi.org/10.1093/oso/9780198570509.003.0021.</code></pre>
 
 
+<div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" role="list" style="display: none">
+<div id="ref-amodei2016" class="csl-entry" role="listitem">
+Amodei, Dario, Chris Olah, Jacob Steinhardt, Paul Christiano, John Schulman, and Dan Mané. 2016. <span>“Concrete <span>Problems</span> in <span>AI Safety</span>.”</span> July 25, 2016. <a href="https://doi.org/10.48550/arXiv.1606.06565">https://doi.org/10.48550/arXiv.1606.06565</a>.
+</div>
+<div id="ref-anderson2007" class="csl-entry" role="listitem">
+Anderson, Terence J. 2007. <span>“Visualization Tools and Argument Schemes: A Question of Standpoint.”</span> <em>Law, Prob. &amp; Risk</em> 6: 97. <a href="https://heinonline.org/hol-cgi-bin/get_pdf.cgi?handle=hein.journals/lawprisk6&amp;section=9">https://heinonline.org/hol-cgi-bin/get_pdf.cgi?handle=hein.journals/lawprisk6&amp;section=9</a>.
+</div>
+<div id="ref-armstrong2016" class="csl-entry" role="listitem">
+Armstrong, Stuart, Nick Bostrom, and Carl Shulman. 2016. <span>“Racing to the Precipice: A Model of Artificial Intelligence Development.”</span> <em>AI &amp; SOCIETY</em> 31 (2): 201–6. <a href="https://doi.org/10.1007/s00146-015-0590-y">https://doi.org/10.1007/s00146-015-0590-y</a>.
+</div>
+<div id="ref-askell2021" class="csl-entry" role="listitem">
+Askell, Amanda, Yuntao Bai, Anna Chen, Dawn Drain, Deep Ganguli, Tom Henighan, Andy Jones, et al. 2021. <span>“A <span>General Language Assistant</span> as a <span>Laboratory</span> for <span>Alignment</span>.”</span> December 9, 2021. <a href="https://doi.org/10.48550/arXiv.2112.00861">https://doi.org/10.48550/arXiv.2112.00861</a>.
+</div>
+<div id="ref-babakov2025" class="csl-entry" role="listitem">
+Babakov, Nikolay, Adarsa Sivaprasad, Ehud Reiter, and Alberto Bugarín-Diz. 2025. <span>“Reusability of <span>Bayesian Networks</span> Case Studies: A Survey.”</span> <em>Applied Intelligence</em> 55 (6): 417. <a href="https://doi.org/10.1007/s10489-025-06289-5">https://doi.org/10.1007/s10489-025-06289-5</a>.
+</div>
+<div id="ref-ban2023" class="csl-entry" role="listitem">
+Ban, Taiyu, Lyuzhou Chen, Derui Lyu, Xiangyu Wang, and Huanhuan Chen. 2023. <span>“Causal <span>Structure Learning Supervised</span> by <span>Large Language Model</span>.”</span> November 20, 2023. <a href="https://doi.org/10.48550/arXiv.2311.11689">https://doi.org/10.48550/arXiv.2311.11689</a>.
+</div>
+<div id="ref-bayes2025" class="csl-entry" role="listitem">
+Bayes, Server. 2025. <span>“Risk Modeling with <span>Bayesian</span> Networks | <span>Bayes Server</span>.”</span> https://online.bayesserver.com/. <a href="https://bayesserver.com/docs/modeling/risk/">https://bayesserver.com/docs/modeling/risk/</a>.
+</div>
+<div id="ref-benn2011" class="csl-entry" role="listitem">
+Benn, Neil, and Ann Macintosh. 2011. <span>“Argument <span>Visualization</span> for <span class="nocase">eParticipation</span>: <span>Towards</span> a <span>Research Agenda</span> and <span>Prototype Tool</span>.”</span> In <em>Electronic <span>Participation</span></em>, edited by Efthimios Tambouris, Ann Macintosh, and Hans De Bruijn, 6847:60–73. Berlin, Heidelberg: Springer Berlin Heidelberg. <a href="https://doi.org/10.1007/978-3-642-23333-3_6">https://doi.org/10.1007/978-3-642-23333-3_6</a>.
+</div>
+<div id="ref-bethard2007" class="csl-entry" role="listitem">
+Bethard, Steven John. 2007. <span>“Finding Event, Temporal and Causal Structure in Text: <span>A</span> Machine Learning Approach.”</span> PhD thesis, University of Colorado at Boulder. <a href="https://search.proquest.com/openview/405fe32503123d9b5f4836dc3be4c011/1?pq-origsite=gscholar&amp;cbl=18750">https://search.proquest.com/openview/405fe32503123d9b5f4836dc3be4c011/1?pq-origsite=gscholar&amp;cbl=18750</a>.
+</div>
+<div id="ref-bostrom2014" class="csl-entry" role="listitem">
+Bostrom, Nick. 2014. <em>Superintelligence: <span>Paths</span>, Strategies, Dangers</em>. Oxford: Oxford University Press. <a href="https://scholar.dominican.edu/cynthia-stokes-brown-books-big-history/47">https://scholar.dominican.edu/cynthia-stokes-brown-books-big-history/47</a>.
+</div>
+<div id="ref-box1976" class="csl-entry" role="listitem">
+Box, George E. P. 1976. <span>“Science and <span>Statistics</span>.”</span> <em>Journal of the American Statistical Association</em> 71 (356): 791–99. <a href="https://doi.org/10.1080/01621459.1976.10480949">https://doi.org/10.1080/01621459.1976.10480949</a>.
+</div>
+<div id="ref-brundage2018" class="csl-entry" role="listitem">
+Brundage, Miles, Shahar Avin, Jack Clark, Helen Toner, Peter Eckersley, Ben Garfinkel, Allan Dafoe, Paul Scharre, Thomas Zeitzoff, Bobby Filar, Hyrum Anderson, et al. 2018. <span>“The <span>Malicious Use</span> of <span>Artificial Intelligence</span>: <span>Forecasting</span>, <span>Prevention</span>, and <span>Mitigation</span>.”</span> 2018. <a href="https://doi.org/10.48550/ARXIV.1802.07228">https://doi.org/10.48550/ARXIV.1802.07228</a>.
+</div>
+<div id="ref-brundage2018a" class="csl-entry" role="listitem">
+Brundage, Miles, Shahar Avin, Jack Clark, Helen Toner, Peter Eckersley, Ben Garfinkel, Allan Dafoe, Paul Scharre, Thomas Zeitzoff, and Bobby Filar. 2018. <span>“The Malicious Use of Artificial Intelligence: <span>Forecasting</span>, Prevention, and Mitigation.”</span> <a href="https://arxiv.org/abs/1802.07228">https://arxiv.org/abs/1802.07228</a>.
+</div>
+<div id="ref-carlsmith2021" class="csl-entry" role="listitem">
+Carlsmith, Joseph. 2021. <span>“Is <span>Power-Seeking AI</span> an <span>Existential Risk</span>?”</span> 2021. <a href="https://doi.org/10.48550/arXiv.2206.13353">https://doi.org/10.48550/arXiv.2206.13353</a>.
+</div>
+<div id="ref-carlsmith2022" class="csl-entry" role="listitem">
+———. 2022. <span>“Is Power-Seeking <span>AI</span> an Existential Risk?”</span> <a href="https://arxiv.org/abs/2206.13353">https://arxiv.org/abs/2206.13353</a>.
+</div>
+<div id="ref-carlsmith2024" class="csl-entry" role="listitem">
+———. 2024. <span>“Is <span>Power-Seeking AI</span> an <span>Existential Risk</span>?”</span> August 13, 2024. <a href="https://doi.org/10.48550/arXiv.2206.13353">https://doi.org/10.48550/arXiv.2206.13353</a>.
+</div>
+<div id="ref-chen2023" class="csl-entry" role="listitem">
+Chen, Lu, Ruqing Zhang, Wei Huang, Wei Chen, Jiafeng Guo, and Xueqi Cheng. 2023. <span>“Inducing <span>Causal Structure</span> for <span>Abstractive Text Summarization</span>.”</span> In <em>Proceedings of the 32nd <span>ACM International Conference</span> on <span>Information</span> and <span>Knowledge Management</span></em>, 213–23. Birmingham United Kingdom: ACM. <a href="https://doi.org/10.1145/3583780.3614934">https://doi.org/10.1145/3583780.3614934</a>.
+</div>
+<div id="ref-christiano2019" class="csl-entry" role="listitem">
+Christiano, Paul F. 2019. <span>“What Failure Looks Like,”</span> March. <a href="https://www.alignmentforum.org/posts/HBxe6wdjxK239zajf/what-failure-looks-like">https://www.alignmentforum.org/posts/HBxe6wdjxK239zajf/what-failure-looks-like</a>.
+</div>
+<div id="ref-clarke2022" class="csl-entry" role="listitem">
+Clarke, Sam, Ben Cottier, Aryeh Englander, Daniel Eth, David Manheim, Samuel Dylan Martin, and Issa Rice. 2022. <span>“Modeling <span>Transformative AI Risks</span> (<span>MTAIR</span>) <span>Project</span> – <span>Summary Report</span>.”</span> 2022. <a href="https://doi.org/10.48550/ARXIV.2206.09360">https://doi.org/10.48550/ARXIV.2206.09360</a>.
+</div>
+<div id="ref-cottier2021" class="csl-entry" role="listitem">
+Cottier, Ben. 2021. <span>“Modeling <span>Risks From Learned Optimization</span>,”</span> October. <a href="https://www.lesswrong.com/posts/T9oFjteStcE2ijCJi/modeling-risks-from-learned-optimization">https://www.lesswrong.com/posts/T9oFjteStcE2ijCJi/modeling-risks-from-learned-optimization</a>.
+</div>
+<div id="ref-cottier2021b" class="csl-entry" role="listitem">
+Cottier, Ben, Daniel Eth, and Sammy Martin. 2021. <span>“Modeling <span>Failure Modes</span> of <span>High-Level Machine Intelligence</span>,”</span> December. <a href="https://www.lesswrong.com/posts/3Eq5Rq5uQ97kt8B8f/modeling-failure-modes-of-high-level-machine-intelligence">https://www.lesswrong.com/posts/3Eq5Rq5uQ97kt8B8f/modeling-failure-modes-of-high-level-machine-intelligence</a>.
+</div>
+<div id="ref-cottier2019" class="csl-entry" role="listitem">
+Cottier, Ben, and Rohin Shah. 2019. <span>“Clarifying Some Key Hypotheses in <span>AI</span> Alignment,”</span> August. <a href="https://www.lesswrong.com/posts/mJ5oNYnkYrd4sD5uE/clarifying-some-key-hypotheses-in-ai-alignment">https://www.lesswrong.com/posts/mJ5oNYnkYrd4sD5uE/clarifying-some-key-hypotheses-in-ai-alignment</a>.
+</div>
+<div id="ref-cuomo2016" class="csl-entry" role="listitem">
+Cuomo, Francesca, Christine Mallin, and Alessandro Zattoni. 2016. <span>“Corporate Governance Codes: <span>A</span> Review and Research Agenda.”</span> <em>Corporate Governance: An International Review</em> 24 (3): 222–41. <a href="https://ueaeprints.uea.ac.uk/id/eprint/57664/">https://ueaeprints.uea.ac.uk/id/eprint/57664/</a>.
+</div>
+<div id="ref-dafoe2018" class="csl-entry" role="listitem">
+Dafoe, Allan. 2018. <span>“<span>AI</span> Governance: A Research Agenda.”</span> <em>Governance of AI Program, Future of Humanity Institute, University of Oxford: Oxford, UK</em> 1442: 1443. <a href="https://www.fhi.ox.ac.uk/wp-content/uploads/GovAI-Agenda.pdf">https://www.fhi.ox.ac.uk/wp-content/uploads/GovAI-Agenda.pdf</a>.
+</div>
+<div id="ref-dafoe2021" class="csl-entry" role="listitem">
+———. 2021. <span>“<span>AI</span> Governance: A Research Agenda.”</span> 2021. <a href="https://www.fhi.ox.ac.uk/wp-content/uploads/GovAI-Agenda.pdf">https://www.fhi.ox.ac.uk/wp-content/uploads/GovAI-Agenda.pdf</a>.
+</div>
+<div id="ref-davidmanheim2021a" class="csl-entry" role="listitem">
+Davidmanheim, David. 2021. <span>“Elicitation for <span>Modeling Transformative AI Risks</span>,”</span> December. <a href="https://www.lesswrong.com/posts/Kz9NHBMeJxzSwb7R9/elicitation-for-modeling-transformative-ai-risks">https://www.lesswrong.com/posts/Kz9NHBMeJxzSwb7R9/elicitation-for-modeling-transformative-ai-risks</a>.
+</div>
+<div id="ref-devilliers2021" class="csl-entry" role="listitem">
+De Villiers, Charl, and Ruth Dimes. 2021. <span>“Determinants, Mechanisms and Consequences of Corporate Governance Reporting: A Research Framework.”</span> <em>Journal of Management and Governance</em> 25 (1): 7–26. <a href="https://doi.org/10.1007/s10997-020-09530-0">https://doi.org/10.1007/s10997-020-09530-0</a>.
+</div>
+<div id="ref-demirag2000" class="csl-entry" role="listitem">
+Demirag, Istemi, Sudi Sudarsanam, and MIKE WRIGHT. 2000. <span>“Corporate Governance: Overview and Research Agenda.”</span> <em>The British Accounting Review</em> 32 (4): 341–54. <a href="https://www.academia.edu/download/49469624/bare.2000.014620161009-3955-1dt4aq5.pdf">https://www.academia.edu/download/49469624/bare.2000.014620161009-3955-1dt4aq5.pdf</a>.
+</div>
+<div id="ref-divito2022" class="csl-entry" role="listitem">
+Di Vito, Jackie, and Kim Trottier. 2022. <span>“A <span>Literature Review</span> on <span>Corporate Governance Mechanisms</span>: <span>Past</span>, <span>Present</span>, and <span>Future</span>*.”</span> <em>Accounting Perspectives</em> 21 (2): 207–35. <a href="https://doi.org/10.1111/1911-3838.12279">https://doi.org/10.1111/1911-3838.12279</a>.
+</div>
+<div id="ref-drexler2019a" class="csl-entry" role="listitem">
+Drexler, K. Eric. 2019. <span>“Reframing Superintelligence: <span>Comprehensive AI</span> Services as General Intelligence.”</span>
+</div>
+<div id="ref-drexler2019" class="csl-entry" role="listitem">
+Drexler, KE. 2019. <span>“Reframing Superintelligence: Comprehensive <span>AI</span> Services as General Intelligence.”</span> Technical Report. Future of Humanity Institute. <a href="https://owainevans.github.io/pdfs/Reframing_Superintelligence_FHI-TR-2019.pdf">https://owainevans.github.io/pdfs/Reframing_Superintelligence_FHI-TR-2019.pdf</a>.
+</div>
+<div id="ref-duhem1954" class="csl-entry" role="listitem">
+Duhem, Pierre Maurice Marie. 1954. <em>The <span>Aim</span> and <span>Structure</span> of <span>Physical Theory</span></em>. 1. Princeton University Press.
+</div>
+<div id="ref-eth2021" class="csl-entry" role="listitem">
+Eth, Daniel. 2021. <span>“Paths <span>To High-Level Machine Intelligence</span>,”</span> September. <a href="https://www.lesswrong.com/posts/amK9EqxALJXyd9Rb2/paths-to-high-level-machine-intelligence">https://www.lesswrong.com/posts/amK9EqxALJXyd9Rb2/paths-to-high-level-machine-intelligence</a>.
+</div>
+<div id="ref-european2024" class="csl-entry" role="listitem">
+European, Union. 2024. <span>“The <span>Act Texts</span> | <span>EU Artificial Intelligence Act</span>.”</span> 2024. <a href="https://artificialintelligenceact.eu/the-act/">https://artificialintelligenceact.eu/the-act/</a>.
+</div>
+<div id="ref-good1966" class="csl-entry" role="listitem">
+Good, Irving John. 1966. <span>“Speculations <span>Concerning</span> the <span>First Ultraintelligent Machine</span>.”</span> <em>Advances in Computers</em>, 31. <a href="https://doi.org/10.1016/S0065-2458(08)60418-0">https://doi.org/10.1016/S0065-2458(08)60418-0</a>.
+</div>
+<div id="ref-growiec2024" class="csl-entry" role="listitem">
+Growiec, Jakub. 2024. <span>“Existential Risk from Transformative <span>AI</span>: An Economic Perspective.”</span> <em>Technological and Economic Development of Economy</em> 30 (6): 1682–1708.
+</div>
+<div id="ref-gruetzemacher2022" class="csl-entry" role="listitem">
+Gruetzemacher, Ross. 2022. <span>“Bayesian <span>Networks</span> Vs. <span>Conditional Trees</span> for <span>Creating Questions</span> for <span>Forecasting Tournaments</span>.”</span>
+</div>
+<div id="ref-hadshar2023" class="csl-entry" role="listitem">
+Hadshar, Rose. 2023. <span>“A <span>Review</span> of the <span>Evidence</span> for <span>Existential Risk</span> from <span>AI</span> via <span>Misaligned Power-Seeking</span>.”</span> 2023. <a href="https://doi.org/10.48550/ARXIV.2310.18244">https://doi.org/10.48550/ARXIV.2310.18244</a>.
+</div>
+<div id="ref-hallegatte2012" class="csl-entry" role="listitem">
+Hallegatte, Stéphane, Ankur Shah, Robert Lempert, Casey Brown, and Stuart Gill. 2012. <span>“Investment Decision-Making Under Deep Uncertainty-Application to Climate Change.”</span> <em>Policy Research Working Paper</em> 6193. <a href="https://enpc.hal.science/hal-00802049/document">https://enpc.hal.science/hal-00802049/document</a>.
+</div>
+<div id="ref-heinze-deml2018" class="csl-entry" role="listitem">
+Heinze-Deml, Christina, Marloes H. Maathuis, and Nicolai Meinshausen. 2018. <span>“Causal <span>Structure Learning</span>.”</span> <em>Annual Review of Statistics and Its Application</em> 5 (1): 371–91. <a href="https://doi.org/10.1146/annurev-statistics-031017-100630">https://doi.org/10.1146/annurev-statistics-031017-100630</a>.
+</div>
+<div id="ref-hendrycks2021" class="csl-entry" role="listitem">
+Hendrycks, Dan, Nicholas Carlini, John Schulman, and Jacob Steinhardt. 2021a. <span>“Unsolved <span>Problems</span> in <span>ML Safety</span>.”</span> 2021. <a href="https://doi.org/10.48550/ARXIV.2109.13916">https://doi.org/10.48550/ARXIV.2109.13916</a>.
+</div>
+<div id="ref-hendrycks2021a" class="csl-entry" role="listitem">
+———. 2021b. <span>“Unsolved Problems in Ml Safety.”</span> <a href="https://arxiv.org/abs/2109.13916">https://arxiv.org/abs/2109.13916</a>.
+</div>
+<div id="ref-hunt2025" class="csl-entry" role="listitem">
+Hunt, Tam. 2025. <span>“The Insane <span>‘Logic’</span> of the <span>AI</span> Arms Race.”</span> Medium. March 3, 2025. <a href="https://tamhunt.medium.com/the-insane-logic-of-the-ai-arms-race-45a5f79f4c0e">https://tamhunt.medium.com/the-insane-logic-of-the-ai-arms-race-45a5f79f4c0e</a>.
+</div>
+<div id="ref-jaynes2003" class="csl-entry" role="listitem">
+Jaynes, Edwin T. 2003. <em>Probability Theory: <span>The</span> Logic of Science</em>. Cambridge university press.
+</div>
+<div id="ref-kasirzadeh2024" class="csl-entry" role="listitem">
+Kasirzadeh, Atoosa. 2024. <span>“Two <span>Types</span> of <span>AI Existential Risk</span>: <span>Decisive</span> and <span>Accumulative</span>.”</span> 2024. <a href="https://doi.org/10.48550/ARXIV.2401.07836">https://doi.org/10.48550/ARXIV.2401.07836</a>.
+</div>
+<div id="ref-kaur2024" class="csl-entry" role="listitem">
+Kaur, Kawaljit. 2024. <span>“Corporate <span>Governance</span> and <span>Legal Accountability</span>: <span>A Critical Review</span> of <span>Global Practices</span>.”</span> <em>Journal of Law</em> 2 (6): 1–7. <a href="https://joi.shodhsagar.org/index.php/SSJOI/article/view/16">https://joi.shodhsagar.org/index.php/SSJOI/article/view/16</a>.
+</div>
+<div id="ref-khartabil2020" class="csl-entry" role="listitem">
+Khartabil, Dana. 2020. <span>“Visualisation Techniques to Facilitate Argument Exploration.”</span> PhD thesis. <a href="https://napier-repository.worktribe.com/output/2694675">https://napier-repository.worktribe.com/output/2694675</a>.
+</div>
+<div id="ref-khartabil2021" class="csl-entry" role="listitem">
+Khartabil, D., C. Collins, S. Wells, B. Bach, and J. Kennedy. 2021. <span>“Design and <span>Evaluation</span> of <span>Visualization Techniques</span> to <span>Facilitate Argument Exploration</span>.”</span> <em>Computer Graphics Forum</em> 40 (6): 447–65. <a href="https://doi.org/10.1111/cgf.14389">https://doi.org/10.1111/cgf.14389</a>.
+</div>
+<div id="ref-kilian2023" class="csl-entry" role="listitem">
+Kilian, Kyle A., Christopher J. Ventura, and Mark M. Bailey. 2023. <span>“Examining the <span>Differential Risk</span> from <span class="nocase">High-level Artificial Intelligence</span> and the <span>Question</span> of <span>Control</span>.”</span> <em>Futures</em> 151 (August): 103182. <a href="https://doi.org/10.1016/j.futures.2023.103182">https://doi.org/10.1016/j.futures.2023.103182</a>.
+</div>
+<div id="ref-koller2009" class="csl-entry" role="listitem">
+Koller, Daphne, and Nir Friedman. 2009. <em>Probabilistic Graphical Models: Principles and Techniques</em>. MIT press. <a href="https://books.google.ca/books?hl=en&amp;lr=&amp;id=7dzpHCHzNQ4C&amp;oi=fnd&amp;pg=PR9&amp;dq=Koller,+D.,+%26+Friedman,+N.+(2009).+Probabilistic+Graphical+Models&amp;ots=py2HAh0VAL&amp;sig=gpaID3x6-TY8x5SOopuXpZDXfzs">https://books.google.ca/books?hl=en&amp;lr=&amp;id=7dzpHCHzNQ4C&amp;oi=fnd&amp;pg=PR9&amp;dq=Koller,+D.,+%26+Friedman,+N.+(2009).+Probabilistic+Graphical+Models&amp;ots=py2HAh0VAL&amp;sig=gpaID3x6-TY8x5SOopuXpZDXfzs</a>.
+</div>
+<div id="ref-kulveit2025" class="csl-entry" role="listitem">
+Kulveit, Jan, Raymond Douglas, Nora Ammann, Deger Turan, David Krueger, and David Duvenaud. 2025. <span>“Gradual <span>Disempowerment</span>: <span>Systemic Existential Risks</span> from <span>Incremental AI Development</span>.”</span> January 29, 2025. <a href="https://doi.org/10.48550/arXiv.2501.16946">https://doi.org/10.48550/arXiv.2501.16946</a>.
+</div>
+<div id="ref-kumar2019a" class="csl-entry" role="listitem">
+Kumar, Ram Shankar Siva, David O. Brien, Kendra Albert, Salomé Viljöen, and Jeffrey Snover. 2019a. <span>“Failure Modes in Machine Learning Systems.”</span> <a href="https://arxiv.org/abs/1911.11034">https://arxiv.org/abs/1911.11034</a>.
+</div>
+<div id="ref-kumar2019" class="csl-entry" role="listitem">
+Kumar, Ram Shankar Siva, David O Brien, Kendra Albert, Salomé Viljöen, and Jeffrey Snover. 2019b. <span>“Failure <span>Modes</span> in <span>Machine Learning Systems</span>.”</span> 2019. <a href="https://doi.org/10.48550/ARXIV.1911.11034">https://doi.org/10.48550/ARXIV.1911.11034</a>.
+</div>
+<div id="ref-lempert2003" class="csl-entry" role="listitem">
+Lempert, Robert J, Steven W Popper, and Steven C Bankes. 2003. <em>Shaping the Next One Hundred Years: <span>New</span> Methods for Quantitative, Long-Term Policy Analysis</em>. RAND Corporation.
+</div>
+<div id="ref-lindley2013" class="csl-entry" role="listitem">
+Lindley, Dennis V. 2013. <em>Understanding Uncertainty</em>. John Wiley &amp; Sons. <a href="https://books.google.ca/books?hl=en&amp;lr=&amp;id=Tfk8AgAAQBAJ&amp;oi=fnd&amp;pg=PR11&amp;dq=Lindley,+D.+(2006).+Understanding+Uncertainty&amp;ots=55HS6lTOVP&amp;sig=0gKCDvRu5rUKhuPyJqhOzW23upU">https://books.google.ca/books?hl=en&amp;lr=&amp;id=Tfk8AgAAQBAJ&amp;oi=fnd&amp;pg=PR11&amp;dq=Lindley,+D.+(2006).+Understanding+Uncertainty&amp;ots=55HS6lTOVP&amp;sig=0gKCDvRu5rUKhuPyJqhOzW23upU</a>.
+</div>
+<div id="ref-list2011" class="csl-entry" role="listitem">
+List, Christian, and Philip Pettit. 2011. <em>Group <span>Agency</span>: <span>The Possibility</span>, <span>Design</span>, and <span>Status</span> of <span>Corporate Agents</span></em>. Oxford University Press.
+</div>
+<div id="ref-lumina2025" class="csl-entry" role="listitem">
+Lumina, Decision Systems. 2025. <span>“Analytica <span>Online</span>.”</span> 2025. <a href="https://acp.analytica.com/view0?invite=4560&amp;code=3000289064591444815">https://acp.analytica.com/view0?invite=4560&amp;code=3000289064591444815</a>.
+</div>
+<div id="ref-manheim2021" class="csl-entry" role="listitem">
+Manheim, David. 2021. <span>“Modeling <span>Transformative AI Risk</span> (<span>MTAIR</span>) - <span>LessWrong</span>.”</span> July 28, 2021. <a href="https://www.lesswrong.com/s/aERZoriyHfCqvWkzg">https://www.lesswrong.com/s/aERZoriyHfCqvWkzg</a>.
+</div>
+<div id="ref-martin2023" class="csl-entry" role="listitem">
+Martin, Sammy, Lonnie Chrisman, and Aryeh Englander. 2023. <span>“A <span class="nocase">Model-based Approach</span> to <span>AI Existential Risk</span>,”</span> August. <a href="https://www.lesswrong.com/posts/sGkRDrpphsu6Jhega/a-model-based-approach-to-ai-existential-risk">https://www.lesswrong.com/posts/sGkRDrpphsu6Jhega/a-model-based-approach-to-ai-existential-risk</a>.
+</div>
+<div id="ref-martin2021" class="csl-entry" role="listitem">
+Martin, Sammy, and Daniel Eth. 2021. <span>“Takeoff <span>Speeds</span> and <span>Discontinuities</span>,”</span> September. <a href="https://www.lesswrong.com/posts/pGXR2ynhe5bBCCNqn/takeoff-speeds-and-discontinuities">https://www.lesswrong.com/posts/pGXR2ynhe5bBCCNqn/takeoff-speeds-and-discontinuities</a>.
+</div>
+<div id="ref-maslej2025" class="csl-entry" role="listitem">
+Maslej, Nestor. 2025. <span>“Artificial <span>Intelligence Index Report</span> 2025.”</span> <em>Artificial Intelligence</em>.
+</div>
+<div id="ref-mccaslin2024" class="csl-entry" role="listitem">
+McCaslin, Tegan, Josh Rosenberg, Ezra Karger, Avital Morris, Molly Hickman, Sam Glover, Zach Jacobs, and Phil Tetlock. 2024. <span>“Conditional <span>Trees</span>: <span>A Method</span> for <span>Generating Informative Questions</span> about <span>Complex Topics</span>.”</span> <em>Forecasting Research Institute</em>. <a href="https://static1.squarespace.com/static/635693acf15a3e2a14a56a4a/t/66ba37a144f1d6095de467df/1723479995772/AIConditionalTrees.pdf">https://static1.squarespace.com/static/635693acf15a3e2a14a56a4a/t/66ba37a144f1d6095de467df/1723479995772/AIConditionalTrees.pdf</a>.
+</div>
+<div id="ref-metropolitansky2025" class="csl-entry" role="listitem">
+Metropolitansky, Dasha, and Jonathan Larson. 2025. <span>“Towards <span>Effective Extraction</span> and <span>Evaluation</span> of <span>Factual Claims</span>.”</span> February 15, 2025. <a href="https://doi.org/10.48550/arXiv.2502.10855">https://doi.org/10.48550/arXiv.2502.10855</a>.
+</div>
+<div id="ref-meyer2022b" class="csl-entry" role="listitem">
+Meyer, Valentin Jakob. 2022. <span>“A <span>Structure</span> of <span>Knowledge</span> &amp; the <span>Process</span> of <span>Science</span>.”</span> <em>Philosophy of the Social Sciences</em> First Course Paper. https://doi.org/<a href="https://www.vjmeyer.com/papers/essays">https://www.vjmeyer.com/papers/essays</a>.
+</div>
+<div id="ref-miotti2024" class="csl-entry" role="listitem">
+Miotti, Andrea, Tolga Bilge, Dave Kasten, and James Newport. 2024. <span>“A <span>Narrow Path</span>.”</span> <a href="https://www.narrowpath.co/">https://www.narrowpath.co/</a>.
+</div>
+<div id="ref-nelson2006" class="csl-entry" role="listitem">
+Nelson, Roger B. 2006. <em>An <span>Introduction</span> to <span>Copulas</span></em>. Springer <span>Series</span> in <span>Statistics</span>. New York, NY: Springer New York. <a href="https://doi.org/10.1007/0-387-28678-0">https://doi.org/10.1007/0-387-28678-0</a>.
+</div>
+<div id="ref-ngajie2020" class="csl-entry" role="listitem">
+Ngajie, Berty Nsolly, Yan Li, Dawit Tibebu Tiruneh, and Mengmeng Cheng. 2020. <span>“Investigating the Effects of a Systematic and Model-Based Design of Computer-Supported Argument Visualization on Critical Thinking.”</span> <em>Thinking Skills and Creativity</em> 38: 100742. <a href="https://www.sciencedirect.com/science/article/pii/S1871187120302169">https://www.sciencedirect.com/science/article/pii/S1871187120302169</a>.
+</div>
+<div id="ref-paul2023" class="csl-entry" role="listitem">
+Paul. 2023. <span>“The <span class="nocase">elephAInt</span> – <span>Are</span> We All Like the Six Blind Men When It Comes to <span>AI</span>? | <span>PRISMAGuard LLC</span>.”</span> 2023. <a href="https://www.prismaguard.com/the-elephaint-are-we-all-like-the-six-blind-men-when-it-comes-to-ai/">https://www.prismaguard.com/the-elephaint-are-we-all-like-the-six-blind-men-when-it-comes-to-ai/</a>.
+</div>
+<div id="ref-pearl2000" class="csl-entry" role="listitem">
+Pearl, Judea. 2000. <em>Causality: Models, Reasoning, and Inference</em>. Cambridge, U.K. ; New York: Cambridge University Press.
+</div>
+<div id="ref-pearl2009" class="csl-entry" role="listitem">
+———. 2009. <em>Causality: <span>Models</span>, Reasoning and Inference</em>. 2nd ed. Cambridge University Press.
+</div>
+<div id="ref-pearl2014" class="csl-entry" role="listitem">
+———. 2014. <em>Probabilistic Reasoning in Intelligent Systems: Networks of Plausible Inference</em>. Elsevier. <a href="https://books.google.ca/books?hl=en&amp;lr=&amp;id=mn2jBQAAQBAJ&amp;oi=fnd&amp;pg=PP1&amp;dq=Pearl,+J.+(1988).+Probabilistic+Reasoning+in+Intelligent+Systems&amp;ots=4tEX2A4Ha8&amp;sig=lgUs_RCoeXEEuGwM5xMEoyJy4HI">https://books.google.ca/books?hl=en&amp;lr=&amp;id=mn2jBQAAQBAJ&amp;oi=fnd&amp;pg=PP1&amp;dq=Pearl,+J.+(1988).+Probabilistic+Reasoning+in+Intelligent+Systems&amp;ots=4tEX2A4Ha8&amp;sig=lgUs_RCoeXEEuGwM5xMEoyJy4HI</a>.
+</div>
+<div id="ref-pollock1995" class="csl-entry" role="listitem">
+Pollock, John L. 1995. <em>Cognitive Carpentry: <span>A</span> Blueprint for How to Build a Person</em>. Mit Press. <a href="https://books.google.ca/books?hl=en&amp;lr=&amp;id=JAfHrHTqswAC&amp;oi=fnd&amp;pg=PA1&amp;dq=Pollock,+J.+(1995).+Cognitive+Carpentry&amp;ots=rq-qSCBcxV&amp;sig=aAfHGsGUosxl_1-JuxIEA7C2QO4">https://books.google.ca/books?hl=en&amp;lr=&amp;id=JAfHrHTqswAC&amp;oi=fnd&amp;pg=PA1&amp;dq=Pollock,+J.+(1995).+Cognitive+Carpentry&amp;ots=rq-qSCBcxV&amp;sig=aAfHGsGUosxl_1-JuxIEA7C2QO4</a>.
+</div>
+<div id="ref-prokudin2024" class="csl-entry" role="listitem">
+Prokudin, D. E., E. N. Lisanyuk, and I. R. Baymuratov. 2024. <span>“Visualization <span>Functions</span> in <span>Argumentation Representation Software</span>.”</span> <em>Scientific Visualization</em> 16 (3). <a href="https://sv-journal.org/2024-3/11/en.pdf">https://sv-journal.org/2024-3/11/en.pdf</a>.
+</div>
+<div id="ref-rehman2025" class="csl-entry" role="listitem">
+Rehman, Iskander. 2025. <span>“The <span>Battle</span> for <span>Brilliant Minds</span>: <span>From</span> the <span>Nuclear Age</span> to <span>AI</span>.”</span> War on the Rocks. January 13, 2025. <a href="https://warontherocks.com/2025/01/the-battle-for-brilliant-minds-from-the-nuclear-age-to-ai/">https://warontherocks.com/2025/01/the-battle-for-brilliant-minds-from-the-nuclear-age-to-ai/</a>.
+</div>
+<div id="ref-russell2015" class="csl-entry" role="listitem">
+Russell, Stuart, Tom Dietterich, Eric Horvitz, Bart Selman, Francesca Rossi, Demis Hassabis, Shane Legg, et al. 2015. <span>“Research Priorities for Robust and Beneficial Artificial Intelligence: <span>An</span> Open Letter.”</span> <em>AI Magazine</em> 36 (4): 3–4. <a href="https://doi.org/10.1609/aimag.v36i4.2621">https://doi.org/10.1609/aimag.v36i4.2621</a>.
+</div>
+<div id="ref-samborska2025" class="csl-entry" role="listitem">
+Samborska, Veronika. 2025. <span>“Scaling up: How Increasing Inputs Has Made Artificial Intelligence More Capable.”</span> <em>Our World in Data</em>, January. <a href="https://ourworldindata.org/scaling-up-ai">https://ourworldindata.org/scaling-up-ai</a>.
+</div>
+<div id="ref-samuel2023" class="csl-entry" role="listitem">
+Samuel, Sigal. 2023. <span>“<span>AI</span> Is a <span>‘Tragedy of the Commons.’</span> <span>We</span>’ve Got Solutions for That.”</span> Vox. July 7, 2023. <a href="https://www.vox.com/future-perfect/2023/7/7/23787011/ai-arms-race-tragedy-commons-risk-safety">https://www.vox.com/future-perfect/2023/7/7/23787011/ai-arms-race-tragedy-commons-risk-safety</a>.
+</div>
+<div id="ref-schelling1960" class="csl-entry" role="listitem">
+Schelling, Thomas C. 1960. <span>“I960. <span>The</span> Strategy of Conflict.”</span> <em>Cambridge, Mass</em>.
+</div>
+<div id="ref-scheuer2010" class="csl-entry" role="listitem">
+Scheuer, Oliver, Frank Loll, Niels Pinkwart, and Bruce M. McLaren. 2010. <span>“Computer-Supported Argumentation: <span>A</span> Review of the State of the Art.”</span> <em>International Journal of Computer-Supported Collaborative Learning</em> 5 (1): 43–102. <a href="https://doi.org/10.1007/s11412-009-9080-x">https://doi.org/10.1007/s11412-009-9080-x</a>.
+</div>
+<div id="ref-solomon2020" class="csl-entry" role="listitem">
+Solomon, Jill. 2020. <em>Corporate Governance and Accountability</em>. John Wiley &amp; Sons. <a href="https://books.google.ca/books?hl=en&amp;lr=&amp;id=JAX9DwAAQBAJ&amp;oi=fnd&amp;pg=PR1&amp;dq=review+of+the+effects+of+liability+frameworks+on+corporate+governance+&amp;ots=ny23_vd-U0&amp;sig=3LuNNhvSWXriEeg-ipAdDIQGAgo">https://books.google.ca/books?hl=en&amp;lr=&amp;id=JAX9DwAAQBAJ&amp;oi=fnd&amp;pg=PR1&amp;dq=review+of+the+effects+of+liability+frameworks+on+corporate+governance+&amp;ots=ny23_vd-U0&amp;sig=3LuNNhvSWXriEeg-ipAdDIQGAgo</a>.
+</div>
+<div id="ref-sotala2018" class="csl-entry" role="listitem">
+Sotala, Kaj. 2018. <span>“Disjunctive <span>Scenarios</span> of <span>Catastrophic AI Risk</span>.”</span> In <em>Artificial <span>Intelligence Safety</span> and <span>Security</span></em>, edited by Roman V. Yampolskiy, 1st ed., 315–37. First edition. | Boca Raton, FL : CRC Press/Taylor &amp; Francis Group, 2018.: <span>Chapman and Hall/CRC</span>. <a href="https://doi.org/10.1201/9781351251389-22">https://doi.org/10.1201/9781351251389-22</a>.
+</div>
+<div id="ref-squires2023" class="csl-entry" role="listitem">
+Squires, Chandler, and Caroline Uhler. 2023. <span>“Causal <span>Structure Learning</span>: <span>A Combinatorial Perspective</span>.”</span> <em>Foundations of Computational Mathematics</em> 23 (5): 1781–1815. <a href="https://doi.org/10.1007/s10208-022-09581-9">https://doi.org/10.1007/s10208-022-09581-9</a>.
+</div>
+<div id="ref-tegmark2024" class="csl-entry" role="listitem">
+Tegmark, Max. 2024. <span>“Asilomar <span>AI Principles</span>.”</span> Future of Life Institute. 2024. <a href="https://futureoflife.org/open-letter/ai-principles/">https://futureoflife.org/open-letter/ai-principles/</a>.
+</div>
+<div id="ref-tetlock2022" class="csl-entry" role="listitem">
+Tetlock, Phil. 2022. <span>“Conditional <span>Trees</span>: <span>AI Risk</span>.”</span> 2022. <a href="https://www.metaculus.com/tournament/3508/">https://www.metaculus.com/tournament/3508/</a>.
+</div>
+<div id="ref-tetlock2015" class="csl-entry" role="listitem">
+Tetlock, Philip E., and Dan Gardner. 2015. <em>Superforecasting: The Art and Science of Prediction</em>. First paperback edition. New York: Broadway Books.
+</div>
+<div id="ref-todd2024" class="csl-entry" role="listitem">
+Todd, Benjamin. 2024. <span>“It Looks Like There Are Some Good Funding Opportunities in <span>AI</span> Safety Right Now.”</span> Substack newsletter. Benjamin Todd. December 21, 2024. <a href="https://benjamintodd.substack.com/p/looks-like-there-are-some-good-funding">https://benjamintodd.substack.com/p/looks-like-there-are-some-good-funding</a>.
+</div>
+<div id="ref-voigt2025" class="csl-entry" role="listitem">
+Voigt, Christian. (2014) 2025. <span>“Christianvoigt/Argdown.”</span> <a href="https://github.com/christianvoigt/argdown">https://github.com/christianvoigt/argdown</a>.
+</div>
+<div id="ref-walton2009" class="csl-entry" role="listitem">
+Walton, Douglas. 2009. <span>“Argument Visualization Tools for Corroborative Evidence.”</span> In <em>Proc. Of the 2nd <span>International Conference</span> on <span>Evidence Law</span> and <span>Forensic Science</span></em>, 32–49. <a href="https://www.academia.edu/download/37718171/09ArguVis.pdf">https://www.academia.edu/download/37718171/09ArguVis.pdf</a>.
+</div>
+<div id="ref-wilson2023" class="csl-entry" role="listitem">
+Wilson, Nick, Matt Boyd, John Kerr, Amanda Kvalsvig, and Michael Baker. 2023. <span>“The Need for Long-Term Thinking–<span>Especially</span> for Preventing Catastrophic Risks.”</span> <em>Public Health Expert Briefing</em>.
+</div>
+<div id="ref-yang2022" class="csl-entry" role="listitem">
+Yang, Jie, Soyeon Caren Han, and Josiah Poon. 2022. <span>“A Survey on Extraction of Causal Relations from Natural Language Text.”</span> <em>Knowledge and Information Systems</em> 64 (5): 1161–86. <a href="https://doi.org/10.1007/s10115-022-01665-w">https://doi.org/10.1007/s10115-022-01665-w</a>.
+</div>
+<div id="ref-yudkowsky2008" class="csl-entry" role="listitem">
+Yudkowsky, Eliezer. 2008. <span>“Artificial <span>Intelligence</span> as a Positive and Negative Factor in Global Risk.”</span> In <em>Global <span>Catastrophic Risks</span></em>, by Eliezer Yudkowsky. Oxford University Press. <a href="https://doi.org/10.1093/oso/9780198570509.003.0021">https://doi.org/10.1093/oso/9780198570509.003.0021</a>.
+</div>
+</div>
 </section>
 <section id="footnotes" class="footnotes footnotes-end-of-document" role="doc-endnotes">
 <hr>
