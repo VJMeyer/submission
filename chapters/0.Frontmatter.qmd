@@ -144,10 +144,9 @@ These changes would elevate an already strong thesis to exceptional, addressing 
 
 4.  **Practical Relevance**: Stakeholder recommendations and policy evaluation examples ground the work in real-world applications.
 
-
-
 ## Grading
-::: {.callout-important}
+
+::: callout-important
 ### Research (10%)
 
 -   demonstrates knowledge of the subject area as drawn from appropriate sources
@@ -156,8 +155,7 @@ These changes would elevate an already strong thesis to exceptional, addressing 
 -   covers relevant material at appropriate level of detail
 :::
 
-
-::: {.callout-important}
+::: callout-important
 ## Structure (10%)
 
 -   outlines project clearly in the introduction
@@ -171,11 +169,9 @@ These changes would elevate an already strong thesis to exceptional, addressing 
 -   employs proper signposting and cross-referencing throughout paper
 
 -   sections are appropriately numbered and headlined
-
 :::
 
-
-::: {.callout-important}
+::: callout-important
 ## Callout Test — Language & Style (10%)
 
 -   employs appropriate tone and academic language
@@ -194,13 +190,6 @@ These changes would elevate an already strong thesis to exceptional, addressing 
 
 -   includes a complete list of references with full bibliographic details
 :::
-
-
-
-
-
-
-
 
 ## Old Checklists
 
