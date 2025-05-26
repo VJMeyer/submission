@@ -1562,6 +1562,17 @@ The successful application to Carlsmith's model demonstrates the AMTAIR approach
 
 This capability addresses a core limitation of the original MTAIR framework: the labor intensity of manual formalization. Where manually converting Carlsmith's argument to a formal model might take days of expert time, the AMTAIR approach accomplished this in minutes, creating a foundation for further analysis and exploration.
 
+
+
+
+
+
+
+
+
+
+
+
 ### 4.4 Performance and Validation
 
 The AMTAIR prototype demonstrates promising capabilities, but any automated system requires rigorous evaluation to assess reliability, accuracy, and practical utility. This section presents performance metrics and validation approaches for the extraction and transformation processes, providing a foundation for understanding the system's strengths and limitations.
@@ -1692,6 +1703,23 @@ The performance and validation assessment demonstrates that the AMTAIR prototype
 
 These results validate the fundamental approach while identifying clear paths for enhancement. The two-stage extraction process proves effective for separating structural and probabilistic aspects, with higher performance on the former suggesting that future work should focus particularly on improving probability extraction methods, perhaps through specialized prompting techniques or additional validation mechanisms.
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 ## 5. Analysis and Results
 
 ### 5.1 Structural Insights from Carlsmith's Model
@@ -1795,6 +1823,23 @@ Perhaps the most valuable structural insight is the identification of "Misaligne
 The structural analysis also reveals potential blindspots or simplifications in Carlsmith's model. For example, the relatively simple path from "Human_Disempowerment" to "Existential_Catastrophe" suggests limited exploration of how exactly disempowerment leads to catastrophic outcomes. Similarly, the limited connections between technical and governance clusters might indicate insufficient attention to how these domains interact in practice.
 
 These structural insights demonstrate the value of formalization beyond mere representation. By making implicit patterns explicit, the formalized model enables identification of central variables, critical pathways, and structural properties that might not be apparent from the original text. These insights can guide further research, highlight areas for model refinement, and inform intervention strategies focused on the most influential components of the causal structure.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 ### 5.2 Probabilistic Assessment and Sensitivity
 
@@ -1917,6 +1962,19 @@ The probabilistic assessments provide several key insights:
     
 
 These insights demonstrate the value of formalization for probabilistic reasoning. By making relationships and judgments explicit in a computational framework, the formalized model enables sophisticated analyses that reveal patterns, sensitivities, and implications not obvious from the original text.
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 ### 5.3 Policy Impact Evaluation
 

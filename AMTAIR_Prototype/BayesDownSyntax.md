@@ -86,7 +86,7 @@ The metadata must be valid JSON with this structure:
 
 When instructing an LLM to extract BayesDown from source material, follow these prompt patterns:
 
-```
+```json
 Given the following text about [topic], extract key variables and their causal relationships into BayesDown format:
 
 1. Identify the main variables discussed (examples: AI capabilities, governance mechanisms, risk factors)
@@ -119,7 +119,7 @@ BayesDown supports variables with more than two states:
 
 You can reference the same node in multiple places in the hierarchy:
 
-```
+```json
 [Outcome]: Description of the outcome.
 {"instantiations": ["TRUE", "FALSE"], "priors": {"p(TRUE)": "0.4", "p(FALSE)": "0.6"}}
  + [Cause1]: Description of first cause.

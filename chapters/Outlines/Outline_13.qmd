@@ -1346,6 +1346,13 @@ The LLM prompt for this stage emphasizes clear identification of causal structur
 -->
 
 
+
+
+
+
+
+
+
 This key function transforms the ArgDown text into a structured DataFrame, capturing the hierarchical relationships between variables and preparing them for further processing. The function works by identifying node titles, descriptions, and indentation levels, then establishing parent-child relationships based on the hierarchy indicated by indentation.
 
 
@@ -2064,9 +2071,21 @@ This represents a significant increase in complexity from the pedagogical exampl
 
 
 
-### 3.5.2 Extraction Results {#sec-carlsmith-extraction}
+### 3.5.2 Automated Extraction of the Carlsmith's Argument Structure   {#sec-carlsmith-extraction}
 
-The automated extraction successfully identifies:
+Having validated the implementation on the canonical rain-sprinkler-lawn example, I applied the AMTAIR approach to a substantially more complex real-world case: Joseph Carlsmith's model of existential risk from power-seeking AI. This application demonstrates the system's ability to handle sophisticated multi-level arguments with numerous variables and relationships.
+
+Carlsmith's analysis involves dozens of factors organized in a complex causal structure, from root causes like "Advanced AI Capability" and "Instrumental Convergence" through intermediate factors like "APS Systems" and "Misaligned Power Seeking" to final outcomes like "Existential Catastrophe." The model exhibits several challenging features:
+
+1. **Multi-level structure** with causal chains spanning multiple steps
+2. **Divergent pathways** where factors influence outcomes through multiple routes
+3. **Complex conditional dependencies** with variables influenced by multiple parents
+4. **Variables with three or more possible states** rather than simple binary outcomes
+5. **Interconnected clusters** where factors form distinct but related argument groups
+
+
+
+
 
 **Core Risk Pathway**:
 
@@ -2090,23 +2109,66 @@ Existential_Catastrophe
 - Conditional relationships properly captured
 - Final P(doom) calculation reproduces ~5% result
 
-<!-- [ ] IMPLEMENT: Full Carlsmith extraction with validation -->
+#### Prompting LLMs for ArgDown Extraction 
+
+{{< embed /AMTAIR_Prototype/data/example_carlsmith/AMTAIR_Prototype_example_carlsmith.ipynb#prompt_template_function echo=true >}}
+
+<!-- 
+#| label: prompt_template_function
+#| echo: true
+#| eval: true
+#| fig-cap: "Prompt Template Function Definitions"
+#| fig-link: "https://colab.research.google.com/github/VJMeyer/submission/blob/main/AMTAIR_Prototype/data/example_carlsmith/AMTAIR_Prototype_example_carlsmith.ipynb#scrollTo=MJpgdepF2Ug3&line=5&uniqifier=1"
+#| fig-alt: "Prompt Template Function Definitions"
+-->
+
+#### Processing LLM Response
+
+The extraction process began with an ArgDown representation capturing the structural relationships between variables:
+
+{{< embed /AMTAIR_Prototype/data/example_carlsmith/AMTAIR_Prototype_example_carlsmith.ipynb#parsing_argdown_bayesdown echo=true >}}
+<!-- 
+#| label: parsing_argdown_bayesdown
+#| echo: true
+#| eval: true
+#| fig-cap: "Parsing ArgDown & BayesDown"
+#| fig-link: "https://colab.research.google.com/github/VJMeyer/submission/blob/main/AMTAIR_Prototype/data/example_carlsmith/AMTAIR_Prototype_example_carlsmith.ipynb#scrollTo=LTDQOBd7COIm&line=8&uniqifier=1"
+#| fig-alt: "Parsing ArgDown & BayesDown"
+-->
+
+
+This representation captures the complex causal structure of Carlsmith's argument, with 21 variables organized in a multi-level hierarchy. The "Misaligned_Power_Seeking" node appears multiple times, reflecting its role as a central concept that influences several other variables.
 
 
 
+### 3.5.3 From ArgDown to BayesDown in Carlsmith's Model
+
+<!-- [ ] -->
+
+After processing this structure with the AMTAIR system, probability information had to be added to create a complete BayesDown representation. The following excerpt shows the probability information for a single node ("Deployment_Decisions"):
 
 
+```json
+[Deployment_Decisions]: Decisions to deploy potentially misaligned AI systems. {
+  "instantiations": ["deployment_decisions_DEPLOY", "deployment_decisions_WITHHOLD"],
+  "priors": {
+    "p(deployment_decisions_DEPLOY)": "0.70",
+    "p(deployment_decisions_WITHHOLD)": "0.30"
+  },
+  "posteriors": {
+    "p(deployment_decisions_DEPLOY|incentives_to_build_aps_STRONG, deception_by_ai_TRUE)": "0.90",
+    "p(deployment_decisions_DEPLOY|incentives_to_build_aps_STRONG, deception_by_ai_FALSE)": "0.75",
+    "p(deployment_decisions_DEPLOY|incentives_to_build_aps_WEAK, deception_by_ai_TRUE)": "0.60",
+    "p(deployment_decisions_DEPLOY|incentives_to_build_aps_WEAK, deception_by_ai_FALSE)": "0.30"
+  }
+}
+```
 
-
-
-
-
-
-### 3.5.3 
-
+This node has two possible states (DEPLOY or WITHHOLD), prior probabilities for each state, and conditional probabilities based on different combinations of its parent variables ("Incentives_To_Build_APS" and "Deception_By_AI").
 
 
 {{< embed /AMTAIR_Prototype/data/example_carlsmith/AMTAIR_Prototype_example_carlsmith.ipynb#generate_bayesdown echo=true >}}
+
 <!-- 
 #| label: generate_bayesdown
 #| echo: true
@@ -2115,6 +2177,35 @@ Existential_Catastrophe
 #| fig-link: "https://colab.research.google.com/github/VJMeyer/submission/blob/main/AMTAIR_Prototype/data/example_carlsmith/AMTAIR_Prototype_example_carlsmith.ipynb#scrollTo=lBLyoERIT557&line=1&uniqifier=1"
 #| fig-alt: "Questions Generated for BayesDown Extraction from Carlsmith model"
 -->
+
+
+Along with these questions the following prompt is sent to the LLM:
+
+```json
+
+You are an expert in probabilistic reasoning and Bayesian networks. Your task is
+to extend the provided ArgDown structure with probability information,
+creating a BayesDown representation.
+
+For each statement in the ArgDown structure, you need to:
+1. Estimate prior probabilities for each possible state
+2. Estimate conditional probabilities given parent states
+3. Maintain the original structure and relationships
+
+Here is the format to follow:
+[Node]: Description. { "instantiations": ["node_TRUE", "node_FALSE"], "priors": { "p(node_TRUE)": "0.7", "p(node_FALSE)": "0.3" }, "posteriors": { "p(node_TRUE|parent_TRUE)": "0.9", "p(node_TRUE|parent_FALSE)": "0.4", "p(node_FALSE|parent_TRUE)": "0.1", "p(node_FALSE|parent_FALSE)": "0.6" } }
+ [Parent]: Parent description. {...}
+
+
+Here are the specific probability questions to answer:
+$questions
+
+ArgDown structure to enhance:
+$argdown
+
+Provide the complete BayesDown representation with probabilities:
+
+```
 
 
 
@@ -2134,6 +2225,8 @@ Second, **machine processability** enables computational analysis and transforma
 Third, **contextual preservation** maintains the connection to original arguments. By including descriptive text alongside formal structure, BayesDown retains the narrative context and qualitative considerations that inform probability judgments. This contextual information helps users interpret the model in light of the original arguments.
 
 Consider how these principles manifest in the BayesDown syntax. Each node begins with a bracketed title followed by a natural language description, preserving the core statement being formalized. The JSON metadata contains technical information like instantiations, priors, and posteriors, but keeps this information clearly separated from the narrative content. Hierarchical relationships use indentation and plus symbols, creating a visual structure that mirrors causal influence.
+
+
 
 #### Example BayesDown Excerpt from the Carlsmith model
 
@@ -2205,11 +2298,19 @@ Third, **progressive disclosure** presents information in layers of increasing d
 
 Fourth, **interactive exploration** allows users to reorganize nodes, zoom in on areas of interest, adjust physics parameters, and investigate probability values. These capabilities transform the visualization from a static image into an explorable knowledge landscape.
 
-Figure 6 shows the interactive visualization of Carlsmith's model, highlighting how color, border styling, and layout work together to represent complex causal relationships:
+The complete BayesDown representation was processed through the AMTAIR pipeline, resulting in a structured DataFrame and ultimately a Bayesian network. 
 
-[FIGURE 6: Interactive visualization of Carlsmith's model showing color-coded nodes and causal relationships]
+
+<!-- [ ] FIX: redundant figure descriptions -->
+
+The figure below shows the interactive visualization of Carlsmith's model, highlighting how color, border styling, and layout work together to represent complex causal relationships:
+
 
 The visualization system implements these principles through a combination of NetworkX for graph representation and PyVis for interactive display, with custom HTML generation for tooltips and modals:
+
+The resulting visualization (Figure 10) shows the complete Carlsmith model with color-coded nodes representing probability values:
+
+[FIGURE 10: Interactive visualization of Carlsmith's model showing color-coded nodes and relationships]
 
 
 
@@ -2222,6 +2323,68 @@ The visualization system implements these principles through a combination of Ne
 #| fig-link: "https://colab.research.google.com/github/VJMeyer/submission/blob/main/AMTAIR_Prototype/data/example_carlsmith/AMTAIR_Prototype_example_carlsmith.ipynb#scrollTo=7UkPk-bm5_fm&line=8&uniqifier=1"
 #| fig-alt: "Main Visualization Function"
 -->
+
+[FIGURE N: Interactive visualization of Carlsmith's model showing color-coded nodes and causal relationships]
+
+
+
+
+
+This visualization reveals several structural insights:
+
+1. **Central importance of "Misaligned_Power_Seeking"** as a hub node with multiple parents and children
+2. **Multiple pathways to "Existential_Catastrophe"** through different intermediate factors
+3. **Clusters of related variables** forming coherent subarguments (e.g., factors affecting alignment difficulty)
+4. **Flow of influence** from technical factors (bottom) through deployment decisions to ultimate outcomes (top)
+
+The implementation successfully handles the complexity of Carlsmith's model, correctly processing the multi-level structure, resolving repeated node references, and calculating appropriate probability distributions. The interactive visualization makes this complex model accessible, allowing users to explore different aspects of the argument through intuitive navigation.
+
+Several key aspects of the implementation were particularly important for handling this complex model:
+
+1. The **parent-child relationship detection algorithm** correctly identified hierarchical relationships despite the complex structure with repeated nodes and multiple levels.
+    
+2. The **probability question generation system** created appropriate questions for all variables, including those with multiple parents requiring factorial combinations of conditional probabilities.
+    
+3. The **network enhancement functions** calculated useful metrics like centrality measures and Markov blankets that help interpret the model structure.
+    
+4. The **visualization system** effectively presented the complex network through color-coding, interactive exploration, and progressive disclosure of details.
+    
+
+The successful application to Carlsmith's model demonstrates the AMTAIR approach's scalability to complex real-world arguments. While the canonical rain-sprinkler-lawn example validated correctness, this application proves practical utility for sophisticated multi-level arguments with dozens of variables and complex interdependencies—precisely the kind of arguments that characterize AI risk assessments.
+
+This capability addresses a core limitation of the original MTAIR framework: the labor intensity of manual formalization. Where manually converting Carlsmith's argument to a formal model might take days of expert time, the AMTAIR approach accomplished this in minutes, creating a foundation for further analysis and exploration.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
