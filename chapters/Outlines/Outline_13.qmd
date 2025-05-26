@@ -1335,37 +1335,16 @@ The LLM prompt for this stage emphasizes clear identification of causal structur
 
 
 
-```python
-def parse_markdown_hierarchy_fixed(markdown_text, ArgDown=True):
-    """
-    Parse ArgDown format into a structured DataFrame with parent-child relationships.
+{{< embed /AMTAIR_Prototype/data/example_carlsmith/AMTAIR_Prototype_example_carlsmith.ipynb#parsing_argdown_bayesdown echo=true >}}
+<!-- 
+#| label: example_use_case
+#| echo: true
+#| eval: true
+#| fig-cap: "example use case"
+#| fig-link: "https://colab.research.google.com/github/VJMeyer/submission/blob/main/AMTAIR_Prototype/data/example_carlsmith/AMTAIR_Prototype_example_carlsmith.ipynb#scrollTo=ibjjJ34v3sQn&line=4&uniqifier=1"
+#| fig-alt: "example use case"
+-->
 
-    Args:
-        markdown_text (str): Text in ArgDown format
-        ArgDown (bool): If True, extracts only structure without probabilities
-                       If False, extracts both structure and probability information
-
-    Returns:
-        pandas.DataFrame: Structured data with node information, relationships, and attributes
-    """
-    # Clean and prepare the text
-    clean_text = remove_comments(markdown_text)
-
-    # Extract basic information about nodes
-    titles_info = extract_titles_info(clean_text)
-
-    # Determine hierarchical relationships
-    titles_with_relations = establish_relationships_fixed(titles_info, clean_text)
-
-    # Convert to structured DataFrame format
-    df = convert_to_dataframe(titles_with_relations, ArgDown)
-
-    # Add derived columns for analysis
-    df = add_no_parent_no_child_columns_to_df(df)
-    df = add_parents_instantiation_columns_to_df(df)
-
-    return df
-```
 
 This key function transforms the ArgDown text into a structured DataFrame, capturing the hierarchical relationships between variables and preparing them for further processing. The function works by identifying node titles, descriptions, and indentation levels, then establishing parent-child relationships based on the hierarchy indicated by indentation.
 
@@ -1413,6 +1392,17 @@ This two-stage approach offers several important advantages:
     
 
 Perhaps most importantly, the intermediate ArgDown representation creates a bridge between qualitative and quantitative aspects of arguments. It preserves the narrative structure and conceptual relationships from the original text while preparing for mathematical precision through probability integration. This hybrid approach maintains the strengths of both worlds: the richness of natural language and the rigor of formal models.
+
+
+
+
+
+
+
+
+
+
+
 
 
 ### 2.7.4 Directed Acyclic Graphs: Structure and Semantics {#sec-dag-structure}
@@ -1467,6 +1457,15 @@ Calibration challenges:
 
 
 
+
+
+
+
+
+
+
+
+
 ### 2.7.6 Inference Techniques for Complex Networks {#sec-inference-techniques}
 
 ::: {.duplicate-content data-source="Outline_11.7#inference-techniques"}
@@ -1504,10 +1503,18 @@ Live data sources for dynamic model updating include:
 - **Internal Expert Forecasting**: Organization-specific predictions and assessments
 :::
 
+
+<!-- [ ] COMPLETELY REWRITE: CODE IS HALLUCINATED -- rewrite by describing a possible implementation abstractly and discussing it 
+
+
 The data processing pipeline:
+
+
 
 python
 
+
+<!-- [ ] CODE CHANGE -->
 ```python
 def integrate_forecast_data(model_variables, forecast_platforms):
     """Connect Bayesian network variables to live forecasting data"""
@@ -1523,12 +1530,17 @@ def integrate_forecast_data(model_variables, forecast_platforms):
     return model.recompute_posteriors()
 ```
 
+-->
+
 Technical challenges:
 
 - **Question Mapping**: Semantic matching between model variables and market questions
 - **Temporal Alignment**: Different forecast horizons and update frequencies
 - **Conflict Resolution**: Principled aggregation of contradictory sources
 - **Track Record Weighting**: Incorporating forecaster calibration
+
+
+
 
 <!-- [ ] TODO: Add transition to Chapter 3 -->
 
