@@ -48,7 +48,7 @@ book:
   appendices:
     - chapters/manual_extraction_bucknall.qmd
     # - chapters/I.Appendices.qmd
-    # - AMTAIR_Prototype/data/example_carlsmith/AMTAIR_Prototype_example_carlsmith.ipynb
+    - AMTAIR_Prototype/data/example_carlsmith/AMTAIR_Prototype_example_carlsmith.ipynb
 
 # notebook-view:
 #   - notebook: AMTAIR_Prototype/data/example_carlsmith/AMTAIR_Prototype_example_carlsmith.ipynb

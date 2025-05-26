@@ -53,10 +53,11 @@ PDF - Portable Document Format
 TAI - Transformative Artificial Intelligence
 
 # 1. Introduction: The Coordination Crisis in AI Governance
-
+<!-- 
 **Chapter Overview**  
 **Grade Weight**: 10% | **Target Length**: ~14% of text (~4,200 words)  
 **Requirements**: Introduces and motivates the core question, provides context, states precise thesis, provides roadmap
+-->
 
 ## 1.1 Opening Scenario: The Policymaker's Dilemma
 
@@ -247,10 +248,10 @@ Show Image
 Having established the coordination crisis and outlined how automated modeling can address it, we now turn to the theoretical foundations that make this approach possible. The next chapter examines the unique epistemic challenges of AI governance and introduces the formal tools—particularly Bayesian networks—that enable rigorous reasoning under deep uncertainty.
 
 # 2. Context and Theoretical Foundations
-
+<!-- 
 **Chapter Overview**  
 **Grade Weight**: 20% | **Target Length**: ~29% of text (~8,700 words)  
-**Requirements**: Demonstrates understanding of relevant concepts, explains relevance, situates in debate, reconstructs arguments
+**Requirements**: Demonstrates understanding of relevant concepts, explains relevance, situates in debate, reconstructs arguments -->
 
 <!-- [-] INTRODUCE: Concise overview of the Literature, Concepts & Terminology introduced in this chapter/thesis-->
 
@@ -953,10 +954,10 @@ Platforms like Metaculus @tetlock2022 already demonstrate sophisticated conditio
 With these theoretical foundations and methodological commitments established, we can now turn to the concrete implementation of AMTAIR. The next chapter demonstrates how these abstract principles translate into working software that addresses real governance challenges. The journey from theory to practice always involves surprises—some pleasant, others less so—but that's what makes it interesting.
 
 # 3. AMTAIR: Design and Implementation {#sec-amtair}
-
+<!-- 
 **Chapter Overview**  
 **Grade Weight**: 20% | **Target Length**: ~29% of text (~8,700 words)  
-**Requirements**: Critical evaluation, strong argument for position, original contribution
+**Requirements**: Critical evaluation, strong argument for position, original contribution -->
 
 The moment of truth in any research project comes when elegant theories meet stubborn reality. For AMTAIR, this meant transforming the vision of automated argument extraction into working code that could handle the beautiful messiness of real AI safety arguments. Let me take you through this journey from blueprint to implementation, complete with victories, defeats, and the occasional moment of "well, that's unexpected."
 
@@ -1869,9 +1870,11 @@ Having demonstrated technical feasibility and practical utility, we must now cri
 
 # 4. Discussion: Implications and Limitations {#sec-discussion}
 
+<!-- 
 **Chapter Overview**  
 **Grade Weight**: 10% | **Target Length**: ~14% of text (~4,200 words)  
-**Requirements**: Discusses objections, provides convincing replies, extends beyond course materials
+**Requirements**: Discusses objections, provides convincing replies, extends beyond course materials 
+-->
 
 <!-- [-] TODO: Address each objection with rigorous counteranalysis -->
 
@@ -2320,11 +2323,11 @@ The discussion reveals both the promise and limitations of computational approac
 These findings suggest AMTAIR represents a valuable addition to the AI governance toolkit—not a panacea but a meaningful enhancement to our collective capacity for navigating unprecedented challenges.
 
 # 5. Conclusion: Toward Coordinated AI Governance {#sec-conclusion}
-
+<!-- 
 **Chapter Overview**  
 **Grade Weight**: 10% | **Target Length**: ~14% of text (~4,200 words)  
 **Requirements**: Summarizes thesis and argument, outlines implications, notes limitations, points to future research
-
+-->
 <!-- [-] TODO: Ensure strong connection back to introduction themes -->
 
 ## 5.1 Summary of Key Contributions {#sec-key-contributions}
