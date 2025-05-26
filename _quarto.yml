@@ -45,7 +45,8 @@ book:
     # - chapters/4.Discussion.qmd
     # - chapters/5.Conclusion.qmd
     - ref/references.qmd
-  # appendices:
+  appendices:
+    - chapters/manual_extraction_bucknall.qmd
     # - chapters/I.Appendices.qmd
     # - AMTAIR_Prototype/data/example_carlsmith/AMTAIR_Prototype_example_carlsmith.ipynb
 
