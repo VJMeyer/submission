@@ -365,6 +365,24 @@ Throughout this progression, I maintain dual focus on theoretical sophistication
 
 Having established the coordination crisis and outlined how automated modeling can address it, we now turn to the theoretical foundations that make this approach possible. The next chapter examines the unique epistemic challenges of AI governance and introduces the formal tools—particularly Bayesian networks—that enable rigorous reasoning under deep uncertainty.
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 # 2. Context and Theoretical Foundations {#sec-context}
 
 ::: {.callout-note}
@@ -375,10 +393,13 @@ Having established the coordination crisis and outlined how automated modeling c
 **Requirements**: Demonstrates understanding of relevant concepts, explains relevance, situates in debate, reconstructs arguments 
 :::
 
-
+<!-- [ ] INTRODUCE: Concise overview of the Literature, Concepts & Terminology introduced in this chapter/thesis-->
 
 
 <!-- [ ] TODO: Create "Background Knowledge" footnotes for key concepts -->
+
+
+
 
 ## 2.1 AI Existential Risk: The Carlsmith Model {#sec-carlsmith-model}
 
@@ -472,11 +493,22 @@ Carlsmith's model demonstrates several features that make it ideal for formal re
 
 @christiano2019
 
+
+
+
+
+
+
+
+
+
 ## 2.2 The Epistemic Challenge of Policy Evaluation {#sec-epistemic-challenge}
 
 <!-- [ ] TODO: Explain why evaluating AI governance policies is particularly difficult -->
 
 AI governance policy evaluation faces unique epistemic challenges that render traditional policy analysis methods insufficient. Understanding these challenges motivates the need for new computational approaches.
+
+
 
 ### 2.2.1 Unique Characteristics of AI Governance {#sec-ai-governance-unique}
 
@@ -493,6 +525,13 @@ AI governance policy evaluation faces unique epistemic challenges that render tr
 **Value-Laden Technical Choices**: The entanglement of technical and normative questions confounds traditional separation of facts and values. What constitutes "alignment"? How much capability development should we risk for economic benefits? Technical specifications embed ethical judgments that resist neutral expertise.
 
 <!-- [ ] CREATE: {#tbl-governance-challenges}: "Comparison of AI governance vs traditional policy domains" -->
+
+
+
+
+
+
+
 
 ### 2.2.2 Limitations of Traditional Approaches {#sec-traditional-limitations}
 
@@ -524,7 +563,29 @@ These limitations create a methodological gap: we need approaches that handle de
 
 
 
-### 2.2.3 Toward New Epistemic Tools {#sec-new-epistemic-tools}
+### 2.2.3 The Underlying Epistemic Framework 
+
+<!-- [ ] OUTLINE AND WRITE: this entire section about 
+
+Foundation
+
+Epistemic Framework — Probabilistic, Conditional, Possible Worlds
+
+— Probabilistic, Conditional, Possible Worlds
+
+
+<!-- [ ] DECIDE AND IMPLEMENT: Should this section be level 2 ?-->
+
+
+
+-->
+
+
+
+
+
+
+### 2.2.4 Toward New Epistemic Tools {#sec-new-epistemic-tools}
 
 <!-- [ ] TODO: Bridge from limitations to the need for automated, computational approaches -->
 
@@ -571,6 +632,12 @@ The computational approaches developed in this thesis—particularly Bayesian ne
 
 
 @gruetzemacher2022
+
+
+<!-- [ ] -->
+
+
+
 
 
 ## 2.3 Bayesian Networks as Knowledge Representation {#sec-bayesian-networks}
@@ -681,6 +748,12 @@ These features address key requirements for AI governance:
 - **Representing Causation**: Directed edges embody causal relationships
 - **Enabling Analysis**: Formal inference algorithms support systematic evaluation
 - **Facilitating Communication**: Visual structure aids cross-domain understanding
+
+
+
+
+
+
 
 
 ## 2.4 Argument Mapping and Formal Representations {#sec-argument-mapping}
@@ -880,9 +953,16 @@ This motivates AMTAIR's central innovation: using frontier language models to au
 
 <!-- [ ] IMPLEMENT: Comparative analysis of manual vs automated extraction times -->
 
+
+
+
+
+
+
 ## 2.6 Literature Review: Content and Technical Levels {#sec-literature-review}
 
 <!-- [ ] TODO: Provide an overview of the key / most important existing AI risk models, governance proposals, and technical approaches -->
+
 
 ### 2.6.1 AI Risk Models Evolution {#sec-risk-models-evolution}
 
@@ -913,6 +993,10 @@ The evolution of AI risk models reflects increasing sophistication in both struc
 
 
 The progression from qualitative arguments to structured probabilistic models demonstrates the field's maturation and the increasing recognition that rigorous quantitative analysis is essential for policy evaluation.
+
+
+
+
 
 ### 2.6.2 Governance Proposals Taxonomy {#sec-governance-taxonomy}
 
@@ -1179,6 +1263,8 @@ Calibration challenges:
 - Cultural influences on uncertainty expression
 - Limited empirical basis for unprecedented scenarios
 
+
+
 ### 2.7.6 Inference Techniques for Complex Networks {#sec-inference-techniques}
 
 ::: {.duplicate-content data-source="Outline_11.7#inference-techniques"}
@@ -1196,7 +1282,14 @@ Implementation considerations:
 
 <!-- [ ] TODO: Add MC sampling implementation example --> <!-- [ ] TODO: Discuss variance reduction techniques -->
 
+
+
+
 ### 2.7.7 Integration with Prediction Markets and Forecasting Platforms {#sec-prediction-markets}
+
+<!-- [ ] MODIFY: this section to make clear that the integration of Prediction Markets and Forecasting Platforms will be an extension which has not been implemented yet -->
+
+<!-- [ ] DISCUSS: the best case implementation and the advantages it would bring -->
 
 To maintain relevance in a rapidly evolving field, formal models must integrate with live data sources such as prediction markets and forecasting platforms.
 
@@ -1323,6 +1416,9 @@ The system emphasizes scalability through modular architecture, standard interfa
 
 
 <!-- [ ] COMPLETELY REWRITE: Results were HALLUCINATED -- rewrite by describing the procedure used in the .ipynb notebook -- reference the correct funtions!
+
+
+
 python
 
 ```python
@@ -1344,7 +1440,7 @@ class AMTAIRPipeline:
         return self.visualizer.render(network)
 ```
 
-<!-- [ ] TODO: Full component documentation with interfaces -->
+<!-- [ ] TODO: Explain that (for now) notebook is structured "as is" for maximum transparency, while .py function calling is preferred for full automation/scaling -->
 
 
 
@@ -1953,15 +2049,39 @@ Understanding these limitations guides both current usage and future improvement
 
 
 
+## 3.7 Extensions & Opportunities
+
+<!-- [ ] OUTLINE AND WRITE: new, complete section with a collection of all the possible future implementations enabled by the AMTAIR methodology -->
+
+
+### 3.7.1 Overview of Practical Software Implementations
+
+<!-- [ ] INTRODUCE: some of the key Practical Software Implementation enabled by AMTAIR -->
+
+<!-- [ ] EXPLAIN: how the automated extraction pipeline and the resulting data(format) enable so many new, powerful usecases-->
+
+### 3.7.2
 
 
 
 
 
+### 3.7.3 P(Doom) Calculator
 
 
 
 
+
+### 3.7.4
+
+
+
+
+### 3.7.5
+
+
+
+<!-- [ ] UPDATE: the heading numbering below -->
 
 ## 3.7 Policy Evaluation Capabilities {#sec-policy-evaluation}
 
@@ -3253,6 +3373,436 @@ This thesis contributes technical foundations and demonstrates feasibility. The 
 
 `{{ embed I.Appendices.qmd }}`
 
+
+
+
+
+## AMTAIR Thesis Relevant Literature & Citations
+
+### Items from MAref.bib
+
+<!-- [ ] ADD: INTEGRATE ALL THE CITATIONS FROM BELOW AT THE CORRESPONDING / BEST (MULTIPLE) SECTIONS OF THE THESIS -->
+
+
+<!-- [ ] Update different Carlsmith paper versions in Zotero -->
+#### `@carlsmith2021`: @carlsmith2021
+
+    Carlsmith, Joseph (2021)
+    Is Power-Seeking AI an Existential Risk?
+
+    DOI: 10.48550/arXiv.2206.13353
+
+    arXiv ID: 2206.13353
+
+    Better alternative: None - this is the primary case study
+
+    Relevant thesis section(s): 
+    - Section 2.1: AI Existential Risk: The Carlsmith Model
+    - Section 3.5: Case Study: Carlsmith's Power-Seeking AI Model
+    - Throughout as validation example
+
+
+    Potential claims supported (with certainty %):
+    - "Carlsmith's six-premise decomposition exemplifies structured probabilistic reasoning about AI risk" (95%)
+    - "The model estimates ~5% existential risk by 2070" (90%)
+    - "Explicit probability estimates enable formal analysis" (95%)
+
+#### `@bostrom2014`: @bostrom2014
+
+
+
+    Bostrom, Nick (2014)
+    Superintelligence: Paths, Dangers, Strategies
+
+    ISBN: 978-0-19-967811-2
+
+    Better alternative: None - foundational text
+
+    Relevant thesis section(s):
+    - Section 1.2: The Coordination Crisis
+    - Section 2.1: Historical foundations of AI risk
+    - Background context throughout
+
+    Potential claims supported (with certainty %):
+    - "Orthogonality thesis: intelligence and goals are independent" (95%)
+    - "Instrumental convergence leads to power-seeking behavior" (90%)
+    - "Superintelligence poses existential risk" (85%)
+
+#### `@clarke2022`: @clarke2022
+
+
+
+    Clarke, Sam et al. (2022)
+    Modeling Transformative AI Risks (MTAIR) Project -- Summary Report
+
+    DOI: 10.48550/ARXIV.2206.09360
+
+    arXiv ID: 2206.09360
+
+    Better alternative: None - this is what AMTAIR builds upon
+
+    Relevant thesis section(s):
+    - Section 2.5: The MTAIR Framework: Achievements and Limitations
+    - Section 1.3: Comparison with AMTAIR automation
+    - Throughout as predecessor project
+
+    Potential claims supported (with certainty %):
+    - "MTAIR demonstrated value of formal models but required extensive manual effort" (95%)
+    - "Manual extraction takes 200-400 expert hours per model" (80%)
+    - "Static models cannot track evolving arguments" (90%)
+
+#### `@pearl2009` and `@pearl2000`: @pearl2000 and @pearl2009
+
+
+
+    Pearl, Judea (2009)
+    Causality: Models, Reasoning and Inference (2nd Edition)
+
+    ISBN: 978-0-521-89560-6
+
+    DOI: 10.1017/CBO9780511803161
+
+    Better alternative: None - theoretical foundation
+
+    Relevant thesis section(s):
+    - Section 2.3: Bayesian Networks as Knowledge Representation
+    - Section 2.7.4: DAG structure and causal semantics
+    - Section 3.7.1: Do-calculus for policy interventions
+
+    Potential claims supported (with certainty %):
+    - "Bayesian networks enable causal reasoning under uncertainty" (95%)
+    - "Do-calculus allows formal policy evaluation" (95%)
+    - "DAGs encode conditional independence assumptions" (95%)
+
+#### `@jaynes2003`: @jaynes2003
+
+
+
+    Jaynes, Edwin T. (2003)
+    Probability Theory: The Logic of Science
+
+    ISBN: 978-0-521-59271-0
+
+    DOI: 10.1017/CBO9780511790423
+
+    Better alternative: None for foundational probability theory
+
+    Relevant thesis section(s):
+    - Section 2.3: Mathematical foundations of Bayesian inference
+    - Section 2.7.5: Probability as extended logic
+    - Epistemological grounding throughout
+
+    Potential claims supported (with certainty %):
+    - "Probability theory extends deductive logic to handle uncertainty" (95%)
+    - "Bayesian inference provides principled belief updating" (95%)
+    - "Maximum entropy principles handle missing information" (90%)
+
+#### `@tetlock2015`: @tetlock2015
+
+
+
+    Tetlock, Philip E. and Gardner, Dan (2015)
+    Superforecasting: The Art and Science of Prediction
+
+    ISBN: 978-0-8041-3671-6
+
+    Better alternative: @tetlock2023 for more recent long-range forecasting
+
+    Relevant thesis section(s):
+    - Section 1.5.2: Live Data Integration
+    - Section 3.9: Integration with Prediction Markets
+    - Forecasting methodology context
+
+    Potential claims supported (with certainty %):
+    - "Aggregated forecasts outperform individual expert judgment" (90%)
+    - "Prediction markets provide empirical grounding for models" (85%)
+    - "Calibrated forecasters achieve measurable accuracy" (90%)
+
+#### `@lempert2003`: @lempert2003
+
+
+
+    Lempert, Robert J., Popper, Steven W., and Bankes, Steven C. (2003)
+    Shaping the Next One Hundred Years: New Methods for Quantitative, Long-Term Policy Analysis
+
+    ISBN: 978-0-8330-3275-8
+
+    Better alternative: None for deep uncertainty methods
+
+    Relevant thesis section(s):
+    - Section 2.2.2: Limitations of Traditional Approaches
+    - Section 4.1.2: Deep uncertainty in AI governance
+    - Policy evaluation methodology
+
+    Potential claims supported (with certainty %):
+    - "Traditional policy analysis fails under deep uncertainty" (90%)
+    - "Robust decision-making requires considering multiple scenarios" (85%)
+    - "AI governance faces irreducible uncertainties" (90%)
+
+#### `@good1966`: @good1966
+
+
+
+    Good, Irving John (1966)
+    Speculations Concerning the First Ultraintelligent Machine
+
+    DOI: 10.1016/S0065-2458(08)60418-0
+
+
+
+    Relevant thesis section(s):
+    - Historical context in Introduction
+    - Background for intelligence explosion concept
+
+    Potential claims supported (with certainty %):
+    - "Intelligence explosion concept dates to 1960s" (95%)
+    - "Recursive self-improvement could lead to rapid capability gains" (80%)
+
+#### `@yudkowsky2008`: @yudkowsky2008
+
+
+    Yudkowsky, Eliezer (2008)
+    Artificial Intelligence as a Positive and Negative Factor in Global Risk
+
+    DOI: 10.1093/oso/9780198570509.003.0021
+
+    Better alternative: @yudkowsky2022 for more recent formulation
+
+    Relevant thesis section(s):
+    - Section 2.1: AI risk arguments
+    - Background on alignment problem
+    - Instrumental convergence discussion
+
+    Potential claims supported (with certainty %):
+    - "AI alignment is the core challenge for beneficial AI" (90%)
+    - "Default AI development may produce misaligned systems" (85%)
+    - "Cognitive biases affect AI risk assessment" (90%)
+
+#### `@russell2015`: @russell2015
+
+
+    Russell, Stuart et al. (2015)
+    Research Priorities for Robust and Beneficial Artificial Intelligence: An Open Letter
+
+    DOI: 10.1609/aimag.v36i4.2621
+
+    Better alternative: None - important consensus document
+
+    Relevant thesis section(s):
+    - Introduction: AI safety research mobilization
+    - Context for coordination efforts
+
+    Potential claims supported (with certainty %):
+    - "AI safety has gained mainstream research attention" (95%)
+    - "Technical and governance challenges are interrelated" (90%)
+
+
+
+## New Suggested Citations
+
+### New Items to Consider:
+
+<!-- [ ] ADD: INTEGRATE ALL THE CITATIONS FROM BELOW AT THE CORRESPONDING / BEST (MULTIPLE) SECTIONS OF THE THESIS -->
+
+
+#### `@amodei2016`: @amodei2016
+
+
+    Amodei, Dario et al. (2016)
+    Concrete Problems in AI Safety
+
+    arXiv ID: 1606.06565
+
+    Relevant thesis section(s):
+    - Section 2.2: Technical safety challenges
+    - Concrete problems motivating AMTAIR
+
+    Potential claims supported (with certainty %):
+    - "AI safety includes avoiding negative side effects, safe exploration" (95%)
+    - "Current ML systems exhibit safety failures" (90%)
+
+#### `@christiano2019`: @christiano2019
+
+
+    Christiano, Paul (2019)
+    What Failure Looks Like
+
+    URL: https://www.alignmentforum.org/posts/HBxe6wdjxK239zajf/what-failure-looks-like
+
+    Relevant thesis section(s):
+    - Additional case study for extraction
+    - Alternative risk model to Carlsmith
+
+    Potential claims supported (with certainty %):
+    - "AI risk may manifest through gradual loss of control" (85%)
+    - "Multiple pathways to existential risk exist" (90%)
+
+#### `@critch2019`: @critch2019
+
+
+    Critch, Andrew (2019)
+    ARCHES: AI Research Considerations for Human Existential Safety
+
+    URL: https://arxiv.org/abs/2006.04948
+
+    Relevant thesis section(s):
+    - Another structured model for extraction validation
+    - Multi-stakeholder coordination framework
+
+    Potential claims supported (with certainty %):
+    - "AI safety requires coordination across multiple sectors" (90%)
+    - "Research, deployment, and governance interact complexly" (85%)
+
+#### `@dafoe2018` and updated `@dafoe2021`: @dafoe2021 and @dafoe2018
+
+    Dafoe, Allan (2021)
+    AI Governance: A Research Agenda
+
+    URL: https://www.fhi.ox.ac.uk/govaiagenda/
+
+    Relevant thesis section(s):
+    - Section 2.6.2: Governance proposals taxonomy
+    - Context for policy evaluation needs
+
+    Potential claims supported (with certainty %):
+    - "AI governance requires interdisciplinary approaches" (95%)
+    - "Technical and policy communities need better coordination" (90%)
+
+#### `@askell2021`: @askell2021
+
+    Askell, Amanda et al. (2021)
+    A General Language Assistant as a Laboratory for Alignment
+
+    arXiv ID: 2112.00861
+
+    Relevant thesis section(s):
+    - LLM capabilities for extraction tasks
+    - Alignment considerations for AMTAIR
+
+    Potential claims supported (with certainty %):
+    - "Language models can assist in complex reasoning tasks" (90%)
+    - "Alignment challenges manifest in current systems" (85%)
+
+
+
+
+
+
+
+
+## Further Citations to Integrate:
+
+<!-- [ ] ADD: INTEGRATE ALL THE CITATIONS FROM BELOW AT THE CORRESPONDING / BEST (MULTIPLE) SECTIONS OF THE THESIS: -->
+
+  @growiec2024
+
+
+  @clarke2022
+
+  @drexler2019 and @drexler2019a
+
+
+  @brundage2018 and @brundage2018a 
+
+
+
+  @kumar2019 and @kumar2019a
+
+
+
+
+
+  @carlsmith2021 and @carlsmith2022 and @carlsmith2024
+
+
+  @hendrycks2021 and @hendrycks2021a
+
+
+  @wilson2023
+
+
+
+
+
+
+# CURRENT Bibliography {.unnumbered}
+
+
+
+    Amodei, Dario, Chris Olah, Jacob Steinhardt, Paul Christiano, John Schulman, and Dan Mané. 2016. “Concrete Problems in AI Safety.” July 25, 2016. https://doi.org/10.48550/arXiv.1606.06565.
+    Anderson, Terence J. 2007. “Visualization Tools and Argument Schemes: A Question of Standpoint.” Law, Prob. & Risk 6: 97. https://heinonline.org/hol-cgi-bin/get_pdf.cgi?handle=hein.journals/lawprisk6&section=9.
+    Armstrong, Stuart, Nick Bostrom, and Carl Shulman. 2016. “Racing to the Precipice: A Model of Artificial Intelligence Development.” AI & SOCIETY 31 (2): 201–6. https://doi.org/10.1007/s00146-015-0590-y.
+    Askell, Amanda, Yuntao Bai, Anna Chen, Dawn Drain, Deep Ganguli, Tom Henighan, Andy Jones, et al. 2021. “A General Language Assistant as a Laboratory for Alignment.” December 9, 2021. https://doi.org/10.48550/arXiv.2112.00861.
+    Babakov, Nikolay, Adarsa Sivaprasad, Ehud Reiter, and Alberto Bugarín-Diz. 2025. “Reusability of Bayesian Networks Case Studies: A Survey.” Applied Intelligence 55 (6): 417. https://doi.org/10.1007/s10489-025-06289-5.
+    Ban, Taiyu, Lyuzhou Chen, Derui Lyu, Xiangyu Wang, and Huanhuan Chen. 2023. “Causal Structure Learning Supervised by Large Language Model.” November 20, 2023. https://doi.org/10.48550/arXiv.2311.11689.
+    Benn, Neil, and Ann Macintosh. 2011. “Argument Visualization for eParticipation: Towards a Research Agenda and Prototype Tool.” In Electronic Participation, edited by Efthimios Tambouris, Ann Macintosh, and Hans De Bruijn, 6847:60–73. Berlin, Heidelberg: Springer Berlin Heidelberg. https://doi.org/10.1007/978-3-642-23333-3_6.
+    Bethard, Steven John. 2007. “Finding Event, Temporal and Causal Structure in Text: A Machine Learning Approach.” PhD thesis, University of Colorado at Boulder. https://search.proquest.com/openview/405fe32503123d9b5f4836dc3be4c011/1?pq-origsite=gscholar&cbl=18750.
+    Bostrom, Nick. 2014. Superintelligence: Paths, Strategies, Dangers. Oxford: Oxford University Press. https://scholar.dominican.edu/cynthia-stokes-brown-books-big-history/47.
+    Box, George E. P. 1976. “Science and Statistics.” Journal of the American Statistical Association 71 (356): 791–99. https://doi.org/10.1080/01621459.1976.10480949.
+    Brundage, Miles, Shahar Avin, Jack Clark, Helen Toner, Peter Eckersley, Ben Garfinkel, Allan Dafoe, Paul Scharre, Thomas Zeitzoff, Bobby Filar, Hyrum Anderson, et al. 2018. “The Malicious Use of Artificial Intelligence: Forecasting, Prevention, and Mitigation.” 2018. https://doi.org/10.48550/ARXIV.1802.07228.
+    Brundage, Miles, Shahar Avin, Jack Clark, Helen Toner, Peter Eckersley, Ben Garfinkel, Allan Dafoe, Paul Scharre, Thomas Zeitzoff, and Bobby Filar. 2018. “The Malicious Use of Artificial Intelligence: Forecasting, Prevention, and Mitigation.” https://arxiv.org/abs/1802.07228.
+    Carlsmith, Joseph. 2021. “Is Power-Seeking AI an Existential Risk?” 2021. https://doi.org/10.48550/arXiv.2206.13353.
+    ———. 2022. “Is Power-Seeking AI an Existential Risk?” https://arxiv.org/abs/2206.13353.
+    ———. 2024. “Is Power-Seeking AI an Existential Risk?” August 13, 2024. https://doi.org/10.48550/arXiv.2206.13353.
+    Chen, Lu, Ruqing Zhang, Wei Huang, Wei Chen, Jiafeng Guo, and Xueqi Cheng. 2023. “Inducing Causal Structure for Abstractive Text Summarization.” In Proceedings of the 32nd ACM International Conference on Information and Knowledge Management, 213–23. Birmingham United Kingdom: ACM. https://doi.org/10.1145/3583780.3614934.
+    Christiano, Paul F. 2019. “What Failure Looks Like,” March. https://www.alignmentforum.org/posts/HBxe6wdjxK239zajf/what-failure-looks-like.
+    Clarke, Sam, Ben Cottier, Aryeh Englander, Daniel Eth, David Manheim, Samuel Dylan Martin, and Issa Rice. 2022. “Modeling Transformative AI Risks (MTAIR) Project – Summary Report.” 2022. https://doi.org/10.48550/ARXIV.2206.09360.
+    Cuomo, Francesca, Christine Mallin, and Alessandro Zattoni. 2016. “Corporate Governance Codes: A Review and Research Agenda.” Corporate Governance: An International Review 24 (3): 222–41. https://ueaeprints.uea.ac.uk/id/eprint/57664/.
+    Dafoe, Allan. 2018. “AI Governance: A Research Agenda.” Governance of AI Program, Future of Humanity Institute, University of Oxford: Oxford, UK 1442: 1443. https://www.fhi.ox.ac.uk/wp-content/uploads/GovAI-Agenda.pdf.
+    ———. 2021. “AI Governance: A Research Agenda.” 2021. https://www.fhi.ox.ac.uk/wp-content/uploads/GovAI-Agenda.pdf.
+    De Villiers, Charl, and Ruth Dimes. 2021. “Determinants, Mechanisms and Consequences of Corporate Governance Reporting: A Research Framework.” Journal of Management and Governance 25 (1): 7–26. https://doi.org/10.1007/s10997-020-09530-0.
+    Demirag, Istemi, Sudi Sudarsanam, and MIKE WRIGHT. 2000. “Corporate Governance: Overview and Research Agenda.” The British Accounting Review 32 (4): 341–54. https://www.academia.edu/download/49469624/bare.2000.014620161009-3955-1dt4aq5.pdf.
+    Di Vito, Jackie, and Kim Trottier. 2022. “A Literature Review on Corporate Governance Mechanisms: Past, Present, and Future*.” Accounting Perspectives 21 (2): 207–35. https://doi.org/10.1111/1911-3838.12279.
+    Drexler, K. Eric. 2019. “Reframing Superintelligence: Comprehensive AI Services as General Intelligence.”
+    Drexler, KE. 2019. “Reframing Superintelligence: Comprehensive AI Services as General Intelligence.” Technical Report. Future of Humanity Institute. https://owainevans.github.io/pdfs/Reframing_Superintelligence_FHI-TR-2019.pdf.
+    Duhem, Pierre Maurice Marie. 1954. The Aim and Structure of Physical Theory. 1. Princeton University Press.
+    European, Union. 2024. “The Act Texts | EU Artificial Intelligence Act.” 2024. https://artificialintelligenceact.eu/the-act/.
+    Good, Irving John. 1966. “Speculations Concerning the First Ultraintelligent Machine.” Advances in Computers, 31. https://doi.org/10.1016/S0065-2458(08)60418-0.
+    Growiec, Jakub. 2024. “Existential Risk from Transformative AI: An Economic Perspective.” Technological and Economic Development of Economy 30 (6): 1682–1708.
+    Gruetzemacher, Ross. 2022. “Bayesian Networks Vs. Conditional Trees for Creating Questions for Forecasting Tournaments.”
+    Hallegatte, Stéphane, Ankur Shah, Robert Lempert, Casey Brown, and Stuart Gill. 2012. “Investment Decision-Making Under Deep Uncertainty-Application to Climate Change.” Policy Research Working Paper 6193. https://enpc.hal.science/hal-00802049/document.
+    Heinze-Deml, Christina, Marloes H. Maathuis, and Nicolai Meinshausen. 2018. “Causal Structure Learning.” Annual Review of Statistics and Its Application 5 (1): 371–91. https://doi.org/10.1146/annurev-statistics-031017-100630.
+    Hendrycks, Dan, Nicholas Carlini, John Schulman, and Jacob Steinhardt. 2021a. “Unsolved Problems in ML Safety.” 2021. https://doi.org/10.48550/ARXIV.2109.13916.
+    ———. 2021b. “Unsolved Problems in Ml Safety.” https://arxiv.org/abs/2109.13916.
+    Hunt, Tam. 2025. “The Insane ‘Logic’ of the AI Arms Race.” Medium. March 3, 2025. https://tamhunt.medium.com/the-insane-logic-of-the-ai-arms-race-45a5f79f4c0e.
+    Jaynes, Edwin T. 2003. Probability Theory: The Logic of Science. Cambridge university press.
+    Kaur, Kawaljit. 2024. “Corporate Governance and Legal Accountability: A Critical Review of Global Practices.” Journal of Law 2 (6): 1–7. https://joi.shodhsagar.org/index.php/SSJOI/article/view/16.
+    Khartabil, Dana. 2020. “Visualisation Techniques to Facilitate Argument Exploration.” PhD thesis. https://napier-repository.worktribe.com/output/2694675.
+    Khartabil, D., C. Collins, S. Wells, B. Bach, and J. Kennedy. 2021. “Design and Evaluation of Visualization Techniques to Facilitate Argument Exploration.” Computer Graphics Forum 40 (6): 447–65. https://doi.org/10.1111/cgf.14389.
+    Koller, Daphne, and Nir Friedman. 2009. Probabilistic Graphical Models: Principles and Techniques. MIT press. https://books.google.ca/books?hl=en&lr=&id=7dzpHCHzNQ4C&oi=fnd&pg=PR9&dq=Koller,+D.,+%26+Friedman,+N.+(2009).+Probabilistic+Graphical+Models&ots=py2HAh0VAL&sig=gpaID3x6-TY8x5SOopuXpZDXfzs.
+    Kumar, Ram Shankar Siva, David O. Brien, Kendra Albert, Salomé Viljöen, and Jeffrey Snover. 2019a. “Failure Modes in Machine Learning Systems.” https://arxiv.org/abs/1911.11034.
+    Kumar, Ram Shankar Siva, David O Brien, Kendra Albert, Salomé Viljöen, and Jeffrey Snover. 2019b. “Failure Modes in Machine Learning Systems.” 2019. https://doi.org/10.48550/ARXIV.1911.11034.
+    Lempert, Robert J, Steven W Popper, and Steven C Bankes. 2003. Shaping the Next One Hundred Years: New Methods for Quantitative, Long-Term Policy Analysis. RAND Corporation.
+    Lindley, Dennis V. 2013. Understanding Uncertainty. John Wiley & Sons. https://books.google.ca/books?hl=en&lr=&id=Tfk8AgAAQBAJ&oi=fnd&pg=PR11&dq=Lindley,+D.+(2006).+Understanding+Uncertainty&ots=55HS6lTOVP&sig=0gKCDvRu5rUKhuPyJqhOzW23upU.
+    List, Christian, and Philip Pettit. 2011. Group Agency: The Possibility, Design, and Status of Corporate Agents. Oxford University Press.
+    Maslej, Nestor. 2025. “Artificial Intelligence Index Report 2025.” Artificial Intelligence.
+    McCaslin, Tegan, Josh Rosenberg, Ezra Karger, Avital Morris, Molly Hickman, Sam Glover, Zach Jacobs, and Phil Tetlock. 2024. “Conditional Trees: A Method for Generating Informative Questions about Complex Topics.” Forecasting Research Institute. https://static1.squarespace.com/static/635693acf15a3e2a14a56a4a/t/66ba37a144f1d6095de467df/1723479995772/AIConditionalTrees.pdf.
+    Meyer, Valentin Jakob. 2022. “A Structure of Knowledge & the Process of Science.” Philosophy of the Social Sciences First Course Paper. https://doi.org/https://www.vjmeyer.com/papers/essays.
+    Miotti, Andrea, Tolga Bilge, Dave Kasten, and James Newport. 2024. “A Narrow Path.” https://www.narrowpath.co/.
+    Nelson, Roger B. 2006. An Introduction to Copulas. Springer Series in Statistics. New York, NY: Springer New York. https://doi.org/10.1007/0-387-28678-0.
+    Ngajie, Berty Nsolly, Yan Li, Dawit Tibebu Tiruneh, and Mengmeng Cheng. 2020. “Investigating the Effects of a Systematic and Model-Based Design of Computer-Supported Argument Visualization on Critical Thinking.” Thinking Skills and Creativity 38: 100742. https://www.sciencedirect.com/science/article/pii/S1871187120302169.
+    Paul. 2023. “The elephAInt – Are We All Like the Six Blind Men When It Comes to AI? | PRISMAGuard LLC.” 2023. https://www.prismaguard.com/the-elephaint-are-we-all-like-the-six-blind-men-when-it-comes-to-ai/.
+    Pearl, Judea. 2000. Causality: Models, Reasoning, and Inference. Cambridge, U.K. ; New York: Cambridge University Press.
+    ———. 2009. Causality: Models, Reasoning and Inference. 2nd ed. Cambridge University Press.
+    ———. 2014. Probabilistic Reasoning in Intelligent Systems: Networks of Plausible Inference. Elsevier. https://books.google.ca/books?hl=en&lr=&id=mn2jBQAAQBAJ&oi=fnd&pg=PP1&dq=Pearl,+J.+(1988).+Probabilistic+Reasoning+in+Intelligent+Systems&ots=4tEX2A4Ha8&sig=lgUs_RCoeXEEuGwM5xMEoyJy4HI.
+    Pollock, John L. 1995. Cognitive Carpentry: A Blueprint for How to Build a Person. Mit Press. https://books.google.ca/books?hl=en&lr=&id=JAfHrHTqswAC&oi=fnd&pg=PA1&dq=Pollock,+J.+(1995).+Cognitive+Carpentry&ots=rq-qSCBcxV&sig=aAfHGsGUosxl_1-JuxIEA7C2QO4.
+    Prokudin, D. E., E. N. Lisanyuk, and I. R. Baymuratov. 2024. “Visualization Functions in Argumentation Representation Software.” Scientific Visualization 16 (3). https://sv-journal.org/2024-3/11/en.pdf.
+    Rehman, Iskander. 2025. “The Battle for Brilliant Minds: From the Nuclear Age to AI.” War on the Rocks. January 13, 2025. https://warontherocks.com/2025/01/the-battle-for-brilliant-minds-from-the-nuclear-age-to-ai/.
+    Russell, Stuart, Tom Dietterich, Eric Horvitz, Bart Selman, Francesca Rossi, Demis Hassabis, Shane Legg, et al. 2015. “Research Priorities for Robust and Beneficial Artificial Intelligence: An Open Letter.” AI Magazine 36 (4): 3–4. https://doi.org/10.1609/aimag.v36i4.2621.
+    Samborska, Veronika. 2025. “Scaling up: How Increasing Inputs Has Made Artificial Intelligence More Capable.” Our World in Data, January. https://ourworldindata.org/scaling-up-ai.
+    Samuel, Sigal. 2023. “AI Is a ‘Tragedy of the Commons.’ We’ve Got Solutions for That.” Vox. July 7, 2023. https://www.vox.com/future-perfect/2023/7/7/23787011/ai-arms-race-tragedy-commons-risk-safety.
+    Schelling, Thomas C. 1960. “I960. The Strategy of Conflict.” Cambridge, Mass.
+    Scheuer, Oliver, Frank Loll, Niels Pinkwart, and Bruce M. McLaren. 2010. “Computer-Supported Argumentation: A Review of the State of the Art.” International Journal of Computer-Supported Collaborative Learning 5 (1): 43–102. https://doi.org/10.1007/s11412-009-9080-x.
+    Solomon, Jill. 2020. Corporate Governance and Accountability. John Wiley & Sons. https://books.google.ca/books?hl=en&lr=&id=JAX9DwAAQBAJ&oi=fnd&pg=PR1&dq=review+of+the+effects+of+liability+frameworks+on+corporate+governance+&ots=ny23_vd-U0&sig=3LuNNhvSWXriEeg-ipAdDIQGAgo.
+    Squires, Chandler, and Caroline Uhler. 2023. “Causal Structure Learning: A Combinatorial Perspective.” Foundations of Computational Mathematics 23 (5): 1781–1815. https://doi.org/10.1007/s10208-022-09581-9.
+    Tegmark, Max. 2024. “Asilomar AI Principles.” Future of Life Institute. 2024. https://futureoflife.org/open-letter/ai-principles/.
+    Tetlock, Philip E., and Dan Gardner. 2015. Superforecasting: The Art and Science of Prediction. First paperback edition. New York: Broadway Books.
+    Todd, Benjamin. 2024. “It Looks Like There Are Some Good Funding Opportunities in AI Safety Right Now.” Substack newsletter. Benjamin Todd. December 21, 2024. https://benjamintodd.substack.com/p/looks-like-there-are-some-good-funding.
+    Voigt, Christian. (2014) 2025. “Christianvoigt/Argdown.” https://github.com/christianvoigt/argdown.
+    Walton, Douglas. 2009. “Argument Visualization Tools for Corroborative Evidence.” In Proc. Of the 2nd International Conference on Evidence Law and Forensic Science, 32–49. https://www.academia.edu/download/37718171/09ArguVis.pdf.
+    Wilson, Nick, Matt Boyd, John Kerr, Amanda Kvalsvig, and Michael Baker. 2023. “The Need for Long-Term Thinking–Especially for Preventing Catastrophic Risks.” Public Health Expert Briefing.
+    Yang, Jie, Soyeon Caren Han, and Josiah Poon. 2022. “A Survey on Extraction of Causal Relations from Natural Language Text.” Knowledge and Information Systems 64 (5): 1161–86. https://doi.org/10.1007/s10115-022-01665-w.
+    Yudkowsky, Eliezer. 2008. “Artificial Intelligence as a Positive and Negative Factor in Global Risk.” In Global Catastrophic Risks, by Eliezer Yudkowsky. Oxford University Press. https://doi.org/10.1093/oso/9780198570509.003.0021.
 
 
 
