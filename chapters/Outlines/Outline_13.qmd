@@ -524,6 +524,9 @@ AI governance policy evaluation faces unique epistemic challenges that render tr
 
 **Value-Laden Technical Choices**: The entanglement of technical and normative questions confounds traditional separation of facts and values. What constitutes "alignment"? How much capability development should we risk for economic benefits? Technical specifications embed ethical judgments that resist neutral expertise.
 
+
+
+
 <!-- [ ] CREATE: {#tbl-governance-challenges}: "Comparison of AI governance vs traditional policy domains" -->
 
 
@@ -667,7 +670,12 @@ This factorization enables efficient inference and embodies causal assumptions e
 
 @pearl2014
 
+
+
+
 ### 2.3.2 The Rain-Sprinkler-Grass Example {#sec-rain-sprinkler-example}
+
+<!-- [ ] CHANGE ORDER: of Rain-sprinkler-grass example and argument mapping section-->
 
 The canonical example illustrates key concepts:^[This example, while simple, demonstrates all essential features of Bayesian networks and serves as the foundation for understanding more complex applications]
 
@@ -826,6 +834,52 @@ This notation captures argument structure while remaining human-readable and wri
 
 <!-- [ ] CREATE: {#fig-argdown-example}: "Side-by-side comparison of text argument and ArgDown representation" -->
 
+
+
+
+Argument mapping provides a bridge between natural language reasoning and formal probabilistic models, enabling the transformation of complex qualitative arguments into structured representations suitable for computational analysis. This section explores two key intermediate representations—ArgDown and BayesDown—that facilitate this transformation process.
+
+Argument maps are structured visualizations that represent the logical relationships between claims, evidence, and objections. Unlike free-form text, they make explicit how different statements support or challenge one another, forcing clarity about the logical structure of arguments. Traditional argument maps typically include:
+
+- Statements (claims, premises, conclusions) presented as nodes
+- Support and attack relationships shown as arrows between nodes
+- Hierarchical organization reflecting logical dependencies
+
+These visualizations help identify unstated assumptions, circular reasoning, and gaps in argumentation. However, traditional argument mapping has limited expressivity for representing uncertainty—a crucial element in complex domains like AI risk assessment.
+
+ArgDown extends the concept of argument mapping into a structured text format with a consistent syntax. Developed by Christian Voigt with support from the Karlsruhe Institute of Technology, ArgDown provides a markdown-like notation for representing arguments in a hierarchical structure that can be automatically visualized and analyzed. The basic syntax is:
+
+argdown
+```markdown
+[Statement]: Description of the statement.
+ + [Supporting_Statement]: Description of supporting statement.
+   + [Further_Support]: Description of additional support.
+ - [Opposing_Statement]: Description of opposing statement.
+```
+
+For the AMTAIR project, we adapt ArgDown to focus on causal relationships rather than general argumentation, using a modified syntax where the hierarchical structure represents causal influence:
+
+```json
+[Effect]: Description of effect. {"instantiations": ["effect_TRUE", "effect_FALSE"]}
+ + [Cause1]: Description of first cause. {"instantiations": ["cause1_TRUE", "cause1_FALSE"]}
+ + [Cause2]: Description of second cause. {"instantiations": ["cause2_TRUE", "cause2_FALSE"]}
+   + [Root_Cause]: A cause that influences Cause2. {"instantiations": ["root_TRUE", "root_FALSE"]}
+```
+
+This adaptation adds metadata in JSON format to specify possible states (instantiations) of each variable, preparing the structure for probabilistic enhancement. The hierarchical relationships (indented with plus signs) represent causal influence, creating a directed graph structure.
+
+
+
+
+
+
+
+
+
+
+
+
+
 ### 2.4.3 BayesDown: The Bridge to Bayesian Networks {#sec-bayesdown}
 
 <!-- [ ] EXPLAIN: that BayesDown has been developed by the author himself by extending the ArgDown Syntax with JSON defintions to capture all probabilistic information to fully specify the Bayesian networks -->
@@ -846,6 +900,22 @@ BayesDown extends ArgDown with probabilistic metadata:
 }
 ```
 
+
+```json
+[Node]: Description. {
+  "instantiations": ["node_TRUE", "node_FALSE"],
+  "priors": {
+    "p(node_TRUE)": "0.7",
+    "p(node_FALSE)": "0.3"
+  },
+  "posteriors": {
+    "p(node_TRUE|parent_TRUE)": "0.9",
+    "p(node_TRUE|parent_FALSE)": "0.4",
+    "p(node_FALSE|parent_TRUE)": "0.1",
+    "p(node_FALSE|parent_FALSE)": "0.6"
+  }
+}
+```
 :::
 
 This representation:
@@ -857,8 +927,11 @@ This representation:
 
 The two-stage extraction process (ArgDown → BayesDown) separates concerns: first capturing structure, then quantifying relationships. This modularity enables human oversight at critical decision points.
 
-<!-- [ ] ADD: bayesdown-syntax: Own creation (aspires to become a new standard based on ArgDown) "Link to full BayesDown specification in appendix" -->
+<!-- [ ] ADD: bayesdown-syntax is Own creation (aspires to become a new standard based on ArgDown) "Link to full BayesDown specification in appendix" -->
 
+The intermediate representations (ArgDown and BayesDown) remain human-readable, maintaining the connection to the original arguments while enabling computational analysis.
+
+The key innovation in this approach is the separation of structure extraction from probability quantification, which aligns with how experts typically approach complex arguments. First, they identify what factors matter and how they relate causally, then they consider how probable different scenarios are based on those relationships. This two-stage process makes the extraction more robust and the resulting representations more interpretable.
 
 
 ## 2.5 The MTAIR Framework: Achievements and Limitations {#sec-mtair-framework}
@@ -868,6 +941,49 @@ The two-stage extraction process (ArgDown → BayesDown) separates concerns: fir
 The Modeling Transformative AI Risks (MTAIR) project, led by RAND researchers, pioneered formal modeling of AI existential risk arguments. Understanding its approach and limitations motivates the automation efforts of AMTAIR.
 
 ### 2.5.1 MTAIR's Approach {#sec-mtair-approach}
+
+The Modeling Transformative AI Risks (MTAIR) project, led by David Manheim and colleagues, represents a significant precursor to the current research. Launched in 2021, MTAIR aimed to create structured representations of existential risks from advanced AI using Bayesian networks, directed acyclic graphs, and probabilistic modeling. Understanding its achievements and limitations provides important context for the current AMTAIR approach.
+
+MTAIR emerged from the recognition that AI risk discussions often involved complex causal arguments with implicit probability judgments that were difficult to compare or integrate. By formalizing these arguments in structured models, the project sought to make assumptions explicit, enable quantitative analysis, and facilitate more productive discourse across different perspectives on AI risk.
+
+The framework's key innovations included:
+
+1. **Explicit representation of uncertainty through probability distributions:** Rather than presenting point estimates, MTAIR captured uncertainty about parameters using distributions, acknowledging the significant uncertainty in AI risk assessment.
+    
+2. **Hierarchical structure for complex scenarios:** The approach used nested models that allowed exploration of different levels of detail, from high-level risk factors to specific technical mechanisms.
+    
+3. **Integration of diverse expert judgments:** The framework incorporated perspectives from various specialists, creating a more comprehensive view than any single expert could provide.
+    
+4. **Sensitivity analysis methodology:** MTAIR developed techniques for identifying which parameters most significantly affected risk estimates, helping prioritize research efforts.
+    
+
+The project's practical impact extended beyond its technical achievements. It influenced research prioritization by identifying critical uncertainties that warranted further investigation. It enhanced discourse quality by providing a shared vocabulary and structure for discussing causal pathways to risk. It also created visual representations that made complex arguments more accessible to stakeholders without technical backgrounds.
+
+Despite these achievements, MTAIR faced several important limitations:
+
+1. **Manual labor intensity limiting scalability:** Creating and updating models required substantial expert time, limiting the number and complexity of models that could be developed and maintained. As one team member noted, "It often took several days of work to formalize even relatively straightforward arguments."
+    
+2. **Static nature of models once constructed:** The models were essentially snapshots that did not automatically update as new information emerged, requiring manual revision to remain current.
+    
+3. **Limited accessibility for non-technical stakeholders:** While visual representations improved accessibility, understanding and interacting with the models still required specialized knowledge.
+    
+4. **Challenges in representing multiple worldviews simultaneously:** Comparing different perspectives required creating separate models, making it difficult to identify specific points of agreement and disagreement.
+    
+
+These limitations motivate the current research in automating the extraction and transformation process. As AI capabilities advance and the volume of relevant research grows, manual approaches cannot keep pace with the need for comprehensive, up-to-date models. Automation addresses the scalability limitation by dramatically reducing the time required to create formal representations of expert arguments.
+
+Moreover, incorporating frontier LLMs into the pipeline enables new capabilities that were not feasible in the original MTAIR framework. These include:
+
+1. Processing larger volumes of literature to capture more diverse perspectives
+2. Generating intermediate representations that preserve narrative structure
+3. Automating the creation of probability questions based on model structure
+4. Facilitating integration with live data sources for continuous updates
+
+By building on MTAIR's foundation while addressing its key limitations, the current research maintains continuity with established approaches to AI risk modeling while pushing the boundaries of what's possible through automation and enhanced representation formats.
+
+The evolution from MTAIR to AMTAIR represents a natural progression: as the field matures and the challenges become more pressing, more sophisticated tools are needed to facilitate coordination and decision-making. Automation doesn't replace expert judgment but amplifies it, allowing insights to be captured, formalized, and shared more efficiently across the AI governance community.
+
+
 
 ::: {.redundant-content data-better-version="Outline_11.7#mtair-approach"}
 The Modeling Transformative AI Risks (MTAIR) project demonstrated the value of formal probabilistic modeling for AI safety, but also revealed significant limitations in the manual approach. While MTAIR successfully translated complex arguments into Bayesian networks and enabled sensitivity analysis, the intensive human labor required for model creation limited both scalability and timeliness.
@@ -885,6 +1001,9 @@ MTAIR manually translated influential AI risk arguments into Bayesian networks u
 
 <!-- [ ] ADD: @clarke2022: "Modeling Transformative AI Risks (MTAIR) Project -- Summary Report" -->
 @clarke2022
+
+
+
 
 ### 2.5.2 Key Achievements {#sec-mtair-achievements}
 
@@ -1127,9 +1246,16 @@ Standard Bayesian networks assume conditional independence given parents, but re
 
 <!-- [ ] TODO: Add specific example of correlation impact on risk estimates -->
 
+
+
+
+
+
 ## 2.7 Methodology {#sec-methodology}
 
 <!-- [ ] TODO: Present the overall research approach -->
+
+
 
 ### 2.7.1 Research Design Overview {#sec-research-design}
 
@@ -1145,6 +1271,10 @@ The research process follows four integrated phases:
 3. **Empirical Validation**: Assessing quality against expert benchmarks
 4. **Policy Application**: Demonstrating practical utility for governance questions 
 :::
+
+
+
+
 
 ### 2.7.2 Formalizing World Models from AI Safety Literature {#sec-formalizing-world-models}
 
@@ -1169,7 +1299,14 @@ Large language models facilitate this process through specialized techniques:
 - **Implicit assumption detection**: Identifying unstated relationships
 - **Ambiguity handling**: Managing uncertainty in extraction
 
+
+
+
+
+
 ### 2.7.3 From Natural Language to Computational Models {#sec-natural-to-computational}
+
+
 
 ::: {.callout-tip}
 
@@ -1178,40 +1315,103 @@ Large language models facilitate this process through specialized techniques:
 AMTAIR employs a novel two-stage process that separates structural argument extraction from probability quantification, enabling modular improvement and human oversight at critical decision points.
 :::
 
-**Stage 1: Structural Extraction (ArgDown Generation)**
+The heart of the AMTAIR approach lies in its two-stage extraction process, which transforms unstructured text into structured probabilistic models through distinct steps that mirror human cognitive processes. This separation—extracting structure before probability—creates important advantages for automation quality, intermediate verification, and interpretability.
 
-python
+When humans analyze complex arguments, they typically first determine what factors matter and how they relate causally, then assess how likely different scenarios are based on those relationships. A climate scientist reading a paper first identifies key variables (emissions, warming, effects) and their causal connections before estimating probabilities of outcomes. This natural cognitive sequence inspired AMTAIR's two-stage approach.
+
+**Stage 1: Structure Extraction** focuses on identifying key variables and their causal relationships from text, transforming unstructured arguments into ArgDown format. This process involves:
+
+1. **Variable identification:** Determining the key factors discussed in the text, including their possible states (e.g., whether a factor is present/absent or has multiple levels)
+    
+2. **Relationship mapping:** Establishing how variables influence each other, creating a directed graph of causal connections
+    
+3. **Hierarchical organization:** Arranging variables according to their causal relationships, from root causes to final effects
+    
+4. **Metadata attachment:** Annotating each variable with its description and possible states in structured JSON format
+    
+
+The LLM prompt for this stage emphasizes clear identification of causal structure without requiring probability judgments, allowing the model to focus entirely on understanding "what affects what" in the text. This specialized prompt includes detailed instructions about ArgDown syntax, examples of well-formed representations, and guidance for preserving the author's intended meaning.
+
+Figure 4 shows a sample of the ArgDown extraction for Carlsmith's model, illustrating how complex qualitative arguments are transformed into structured representations:
+
+[FIGURE 4: Sample ArgDown extraction from Carlsmith's paper showing hierarchical structure of variables related to existential risk]
 
 ```python
-def extract_argument_structure(text):
-    """Extract hierarchical argument structure from natural language"""
-    # LLM-based extraction with specialized prompts
-    prompt = ArgumentExtractionPrompt(
-        text=text,
-        output_format="ArgDown",
-        focus_areas=["causal_claims", "probability_statements", "conditional_reasoning"]
-    )
-    
-    structure = llm.complete(prompt)
-    return validate_argdown_syntax(structure)
+def parse_markdown_hierarchy_fixed(markdown_text, ArgDown=True):
+    """
+    Parse ArgDown format into a structured DataFrame with parent-child relationships.
+
+    Args:
+        markdown_text (str): Text in ArgDown format
+        ArgDown (bool): If True, extracts only structure without probabilities
+                       If False, extracts both structure and probability information
+
+    Returns:
+        pandas.DataFrame: Structured data with node information, relationships, and attributes
+    """
+    # Clean and prepare the text
+    clean_text = remove_comments(markdown_text)
+
+    # Extract basic information about nodes
+    titles_info = extract_titles_info(clean_text)
+
+    # Determine hierarchical relationships
+    titles_with_relations = establish_relationships_fixed(titles_info, clean_text)
+
+    # Convert to structured DataFrame format
+    df = convert_to_dataframe(titles_with_relations, ArgDown)
+
+    # Add derived columns for analysis
+    df = add_no_parent_no_child_columns_to_df(df)
+    df = add_parents_instantiation_columns_to_df(df)
+
+    return df
 ```
 
-**Stage 2: Probability Integration (BayesDown Enhancement)**
+This key function transforms the ArgDown text into a structured DataFrame, capturing the hierarchical relationships between variables and preparing them for further processing. The function works by identifying node titles, descriptions, and indentation levels, then establishing parent-child relationships based on the hierarchy indicated by indentation.
 
-python
+**Stage 2: Probability Integration** enhances the structural representation with probability information, creating a complete BayesDown specification. This stage involves:
 
-```python
-def integrate_probabilities(argdown_structure, probability_sources):
-    """Convert ArgDown to BayesDown with probabilistic information"""
-    questions = generate_probability_questions(argdown_structure)
-    probabilities = extract_probabilities(probability_sources, questions)
+1. **Question generation:** Automatically creating appropriate probability questions based on the network structure
     
-    bayesdown = enhance_with_probabilities(argdown_structure, probabilities)
-    return validate_probability_coherence(bayesdown)
-```
+2. **Probability extraction:** Obtaining probability estimates for each question, either from the text or through LLM inference
+    
+3. **Consistency checking:** Ensuring probability distributions sum to 1 and match structural constraints
+    
+4. **BayesDown integration:** Incorporating probability information into the ArgDown structure
+    
 
-<!-- [ ] TODO: Document API call loops and prompt engineering details --> 
-<!-- [ ] TODO: Include full probability extraction prompt template -->
+The key innovation in this stage is the automated generation of appropriate probability questions based on network structure. For each node, the system generates questions about prior probabilities (how likely is this variable in isolation?) and conditional probabilities (how likely is this variable given different states of its parents?).
+
+Figure 5 illustrates how probability questions are derived for a simple node with one parent:
+
+[FIGURE 5: Diagram showing how probability questions are generated based on network structure]
+
+For the "Sprinkler" node with parent "Rain," the system automatically generates questions like:
+
+- What is the probability for Sprinkler=sprinkler_TRUE?
+- What is the probability for Sprinkler=sprinkler_TRUE if Rain=rain_TRUE?
+- What is the probability for Sprinkler=sprinkler_TRUE if Rain=rain_FALSE?
+
+These questions are then answered either by extracting explicit probabilities from the text or by having the LLM infer reasonable values based on the author's arguments. The answers are structured into a complete BayesDown representation that includes both the causal structure and all necessary probability information.
+
+The visualization below demonstrates the completed extraction for a portion of Carlsmith's model, showing how variables like "Misaligned Power Seeking" are influenced by multiple factors, each with associated probabilities:
+
+[VISUALIZATION: Extracted causal structure from Carlsmith's model with probability information]
+
+This two-stage approach offers several important advantages:
+
+1. **Improved extraction quality:** By focusing on one cognitive task at a time, the LLM performs better at each stage than it would attempting to extract everything simultaneously.
+    
+2. **Intermediate verification:** Having ArgDown as an intermediate representation allows human verification before probability extraction, catching structural errors early.
+    
+3. **Separation of concerns:** Structure and probability can be updated independently, enabling more flexible maintenance as new information emerges.
+    
+4. **Alignment with human cognition:** The process mirrors how experts approach complex arguments, making the system's operation more intuitive and interpretable.
+    
+
+Perhaps most importantly, the intermediate ArgDown representation creates a bridge between qualitative and quantitative aspects of arguments. It preserves the narrative structure and conceptual relationships from the original text while preparing for mathematical precision through probability integration. This hybrid approach maintains the strengths of both worlds: the richness of natural language and the rigor of formal models.
+
 
 ### 2.7.4 Directed Acyclic Graphs: Structure and Semantics {#sec-dag-structure}
 
@@ -1645,6 +1845,10 @@ Bounded “amount of information” per paper —> ~ for a given computation bud
 <!-- [ ] CLARIFY (Implicitly): these contributions are probably original -->
 
 <!-- [ ] REFERNCE: Section about information theory from the Context section -->
+
+
+
+
 
 ## 3.4 Case Study: Rain-Sprinkler-Grass {#sec-case-rain-sprinkler}
 

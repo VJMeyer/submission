@@ -653,7 +653,7 @@ Argument maps are structured visualizations that represent the logical relations
 
 These visualizations help identify unstated assumptions, circular reasoning, and gaps in argumentation. However, traditional argument mapping has limited expressivity for representing uncertainty—a crucial element in complex domains like AI risk assessment.
 
-ArgDown extends the concept of argument mapping into a structured text format with a consistent syntax. Developed by Christian Voigt at Karlsruhe Institute of Technology, ArgDown provides a markdown-like notation for representing arguments in a hierarchical structure that can be automatically visualized and analyzed. The basic syntax is:
+ArgDown extends the concept of argument mapping into a structured text format with a consistent syntax. Developed by Christian Voigt with support from the Karlsruhe Institute of Technology, ArgDown provides a markdown-like notation for representing arguments in a hierarchical structure that can be automatically visualized and analyzed. The basic syntax is:
 
 ```
 [Statement]: Description of the statement.
