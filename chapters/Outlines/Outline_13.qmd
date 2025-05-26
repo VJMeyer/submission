@@ -2102,36 +2102,23 @@ Existential_Catastrophe
 
 
 
-### 3.5.3 Validation Against Original (From the MTAIR Project) {#sec-carlsmith-validation}
-<!-- [ ] COMPLETELY REWRITE: Results were HALLUCINATED -- rewrite based on results / comparison with Ella and Johannes extractions and by describing what procedures etc. one would ideally follow
-::: {.duplicate-content data-source="Outline_11.7#carlsmith-validation"}
-Comparing extracted model to Carlsmith's original:
+### 3.5.3 
 
-|Metric|Performance|
-|---|---|
-|Structural Accuracy|92% (nodes and edges)|
-|Probability Accuracy|87% (within 0.05)|
-|Path Completeness|100% (all major paths)|
-|Semantic Preservation|High (per expert review)|
 
-: Carlsmith model extraction validation results {#tbl-carlsmith-validation}
-:::
 
-The high fidelity demonstrates AMTAIR's capability for complex real-world arguments.
-
+{{< embed /AMTAIR_Prototype/data/example_carlsmith/AMTAIR_Prototype_example_carlsmith.ipynb#generate_bayesdown echo=true >}}
+<!-- 
+#| label: generate_bayesdown
+#| echo: true
+#| eval: true
+#| fig-cap: "Questions Generated for BayesDown Extraction from Carlsmith model"
+#| fig-link: "https://colab.research.google.com/github/VJMeyer/submission/blob/main/AMTAIR_Prototype/data/example_carlsmith/AMTAIR_Prototype_example_carlsmith.ipynb#scrollTo=lBLyoERIT557&line=1&uniqifier=1"
+#| fig-alt: "Questions Generated for BayesDown Extraction from Carlsmith model"
 -->
 
 
 
-
-
-
-
-
-
-
-
-### 3.5.4 Meaningful BayesDown
+### 3.5.4 Practically Meaningful BayesDown
 Bridging Qualitative and Quantitative Representation
 
 If the coordination crisis in AI governance stems partly from incompatible languages across domains—technical researchers speaking in mathematical formalisms, policy specialists in institutional frameworks, and ethicists in normative concepts—then effective coordination requires bridges between these domains. BayesDown serves as such a bridge, combining the narrative richness of qualitative argumentation with the precision of quantitative probability judgments.
@@ -2148,7 +2135,18 @@ Third, **contextual preservation** maintains the connection to original argument
 
 Consider how these principles manifest in the BayesDown syntax. Each node begins with a bracketed title followed by a natural language description, preserving the core statement being formalized. The JSON metadata contains technical information like instantiations, priors, and posteriors, but keeps this information clearly separated from the narrative content. Hierarchical relationships use indentation and plus symbols, creating a visual structure that mirrors causal influence.
 
+#### Example BayesDown Excerpt from the Carlsmith model
+
 ```json
+#| label: json_carlsmith_excerpt
+#| echo: true
+#| eval: true
+#| fig-cap: "Example BayesDown Excerpt from the Carlsmith model"
+#| fig-link: "https://colab.research.google.com/github/VJMeyer/submission/blob/main/AMTAIR_Prototype/data/example_carlsmith/AMTAIR_Prototype_example_carlsmith.ipynb#scrollTo=AFnu_1Ludahi"
+#| fig-alt: "Example BayesDown Excerpt from the Carlsmith model"
+
+
+
 [Existential_Catastrophe]: The destruction of humanity's long-term potential due to AI systems we've lost control over. {
   "instantiations": ["existential_catastrophe_TRUE", "existential_catastrophe_FALSE"],
   "priors": {"p(existential_catastrophe_TRUE)": "0.05", "p(existential_catastrophe_FALSE)": "0.95"},
@@ -2272,6 +2270,24 @@ These insights emerge naturally from formal analysis but remain implicit in text
 
 
 
+### 3.5.6 Validation Against Original (From the MTAIR Project) {#sec-carlsmith-validation}
+<!-- [ ] COMPLETELY REWRITE: Results were HALLUCINATED -- rewrite based on results / comparison with Ella and Johannes extractions and by describing what procedures etc. one would ideally follow
+::: {.duplicate-content data-source="Outline_11.7#carlsmith-validation"}
+Comparing extracted model to Carlsmith's original:
+
+|Metric|Performance|
+|---|---|
+|Structural Accuracy|92% (nodes and edges)|
+|Probability Accuracy|87% (within 0.05)|
+|Path Completeness|100% (all major paths)|
+|Semantic Preservation|High (per expert review)|
+
+: Carlsmith model extraction validation results {#tbl-carlsmith-validation}
+:::
+
+The high fidelity demonstrates AMTAIR's capability for complex real-world arguments.
+
+-->
 
 
 
