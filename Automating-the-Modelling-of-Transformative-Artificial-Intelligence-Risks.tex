@@ -3281,12 +3281,9 @@ I thank my supervisor Dr.~Timo Speith for guidance throughout this
 project, the MTAIR team for pioneering the manual approach that inspired
 automation, and the AI safety community for creating the rich literature
 that made this work possible. Special recognition goes to technical
-advisors who provided implementation feedback and domain experts who
-validated extraction results.
-
-This research was conducted with support from {[}funding sources{]} and
-benefited from computational resources provided by {[}institutions{]}.
-Any errors or limitations remain my own responsibility.
+advisors who provided invaluable feedback and Coleman Snell for his
+partnership and research collaboration with the AMTAIR project. Any
+errors or limitations remain my own responsibility.
 
 \bookmarksetup{startatroot}
 
@@ -3342,7 +3339,7 @@ in AI Governance}
 \markboth{1. Introduction: The Coordination Crisis in AI Governance}{1.
 Introduction: The Coordination Crisis in AI Governance}
 
-\begin{tcolorbox}[enhanced jigsaw, coltitle=black, bottomtitle=1mm, breakable, colbacktitle=quarto-callout-note-color!10!white, leftrule=.75mm, opacityback=0, arc=.35mm, bottomrule=.15mm, rightrule=.15mm, colframe=quarto-callout-note-color-frame, left=2mm, titlerule=0mm, colback=white, opacitybacktitle=0.6, title=\textcolor{quarto-callout-note-color}{\faInfo}\hspace{0.5em}{Chapter Overview}, toprule=.15mm, toptitle=1mm]
+\begin{tcolorbox}[enhanced jigsaw, toptitle=1mm, opacitybacktitle=0.6, leftrule=.75mm, bottomrule=.15mm, left=2mm, arc=.35mm, colbacktitle=quarto-callout-note-color!10!white, breakable, opacityback=0, title=\textcolor{quarto-callout-note-color}{\faInfo}\hspace{0.5em}{Chapter Overview}, coltitle=black, colframe=quarto-callout-note-color-frame, bottomtitle=1mm, titlerule=0mm, rightrule=.15mm, toprule=.15mm, colback=white]
 
 \textbf{Grade Weight}: 10\% \textbar{} \textbf{Target Length}:
 \textasciitilde14\% of text (\textasciitilde4,200 words)\\
@@ -3357,6 +3354,8 @@ Dilemma}\label{sec-opening-scenario}
 Dilemma}
 
 \markright{1.1 Opening Scenario: The Policymaker's Dilemma}
+
+\textcite{todd2024}
 
 Imagine a senior policy advisor preparing recommendations for AI
 governance legislation. On her desk lie a dozen reports from leading AI
@@ -3391,6 +3390,10 @@ Governance}
 
 \markright{1.2 The Coordination Crisis in AI Governance}
 
+\textcite{maslej2025}
+
+\textcite{samborska2025}
+
 As AI capabilities advance at an accelerating pace---demonstrated by the
 rapid progression from GPT-3 to GPT-4, Claude, and emerging multimodal
 systems---humanity faces a governance challenge unlike any in history.
@@ -3422,6 +3425,10 @@ Principles} garnered thousands of signatures, the EU advances
 regulation} , and technical researchers produce increasingly
 sophisticated work on alignment, interpretability, and robustness.
 
+\textcite{tegmark2024}
+
+\textcite{european2024}
+
 Yet alongside this activity, we observe systematic coordination failures
 that may prove catastrophic. Technical safety researchers develop
 sophisticated alignment techniques without clear implementation
@@ -3452,6 +3459,8 @@ incentivize dangerous development patterns. Without shared models of the
 risk landscape, our collective efforts resemble the parable of blind men
 describing an elephant---each accurate within their domain but missing
 the complete picture.
+
+\textcite{paul2023}
 
 \subsection*{1.2.2 Resource
 Misallocation}\label{sec-resource-misallocation}
@@ -3498,6 +3507,10 @@ scientist-military tensions, public-expert divides---nearly led to
 catastrophe multiple times. Only through developing shared frameworks
 (deterrence theory), institutions (IAEA), and communication channels
 (hotlines, treaties) did humanity navigate the nuclear precipice.
+
+\textcite{schelling1960}
+
+\textcite{rehman2025}
 
 Yet AI presents unique coordination challenges that compress our
 response timeline:
@@ -3600,10 +3613,10 @@ real-time as new arguments emerge.
 Current approaches to AI risk modeling, exemplified by the Modeling
 Transformative AI Risks (MTAIR) project, demonstrate the value of formal
 representation but require extensive manual effort. Creating a single
-model demands hundreds of expert-hours to translate qualitative
-arguments into quantitative frameworks. This bottleneck severely limits
-the number of perspectives that can be formalized and the speed of model
-updates as new arguments emerge.
+model demands dozens of expert-hours to translate qualitative arguments
+into quantitative frameworks. This bottleneck severely limits the number
+of perspectives that can be formalized and the speed of model updates as
+new arguments emerge.
 
 Automation using frontier language models addresses this scaling
 challenge. By developing systematic methods to extract causal structures
@@ -3652,6 +3665,8 @@ This integration serves multiple purposes:
   Generating new questions for forecasting communities
 \end{itemize}
 
+\textcite{tetlock2015}
+
 \subsection*{1.5.3 Formal Policy
 Evaluation}\label{sec-policy-evaluation}
 \addcontentsline{toc}{subsection}{1.5.3 Formal Policy Evaluation}
@@ -3675,6 +3690,8 @@ This enables genuinely evidence-based policy development:
 \item
   Prioritizing research to reduce decision-relevant uncertainty
 \end{itemize}
+
+\textcite{pearl2000} and \textcite{pearl2009}
 
 \subsection*{1.5.4 The Synergy}\label{sec-synergy}
 \addcontentsline{toc}{subsection}{1.5.4 The Synergy}
@@ -3763,7 +3780,7 @@ under deep uncertainty.
 \markboth{2. Context and Theoretical Foundations}{2. Context and
 Theoretical Foundations}
 
-\begin{tcolorbox}[enhanced jigsaw, coltitle=black, bottomtitle=1mm, breakable, colbacktitle=quarto-callout-note-color!10!white, leftrule=.75mm, opacityback=0, arc=.35mm, bottomrule=.15mm, rightrule=.15mm, colframe=quarto-callout-note-color-frame, left=2mm, titlerule=0mm, colback=white, opacitybacktitle=0.6, title=\textcolor{quarto-callout-note-color}{\faInfo}\hspace{0.5em}{Chapter Overview}, toprule=.15mm, toptitle=1mm]
+\begin{tcolorbox}[enhanced jigsaw, toptitle=1mm, opacitybacktitle=0.6, leftrule=.75mm, bottomrule=.15mm, left=2mm, arc=.35mm, colbacktitle=quarto-callout-note-color!10!white, breakable, opacityback=0, title=\textcolor{quarto-callout-note-color}{\faInfo}\hspace{0.5em}{Chapter Overview}, coltitle=black, colframe=quarto-callout-note-color-frame, bottomtitle=1mm, titlerule=0mm, rightrule=.15mm, toprule=.15mm, colback=white]
 
 \textbf{Grade Weight}: 20\% \textbar{} \textbf{Target Length}:
 \textasciitilde29\% of text (\textasciitilde8,700 words)\\
@@ -3790,6 +3807,9 @@ To ground our discussion in concrete terms, I examine Joseph Carlsmith's
 structured reasoning about AI catastrophic risk. Carlsmith's analysis
 stands out for its explicit probabilistic decomposition of the path from
 current AI development to potential existential catastrophe.
+
+\textcite{carlsmith2024}, \textcite{carlsmith2021} and
+\textcite{carlsmith2022}
 
 \subsection*{2.1.1 Six-Premise Decomposition}\label{sec-six-premise}
 \addcontentsline{toc}{subsection}{2.1.1 Six-Premise Decomposition}
@@ -3984,6 +4004,8 @@ These limitations create a methodological gap: we need approaches that
 handle deep uncertainty, represent complex causation, quantify expert
 disagreement, and enable systematic exploration of intervention effects.
 
+\textcite{hallegatte2012}
+
 \subsection*{2.2.3 Toward New Epistemic
 Tools}\label{sec-new-epistemic-tools}
 \addcontentsline{toc}{subsection}{2.2.3 Toward New Epistemic Tools}
@@ -4007,7 +4029,7 @@ urgent need for new epistemic tools. These tools must:
   policy options
 \end{itemize}
 
-\begin{tcolorbox}[enhanced jigsaw, coltitle=black, bottomtitle=1mm, breakable, colbacktitle=quarto-callout-tip-color!10!white, leftrule=.75mm, opacityback=0, arc=.35mm, bottomrule=.15mm, rightrule=.15mm, colframe=quarto-callout-tip-color-frame, left=2mm, titlerule=0mm, colback=white, opacitybacktitle=0.6, title=\textcolor{quarto-callout-tip-color}{\faLightbulb}\hspace{0.5em}{Key Insight}, toprule=.15mm, toptitle=1mm]
+\begin{tcolorbox}[enhanced jigsaw, toptitle=1mm, opacitybacktitle=0.6, leftrule=.75mm, bottomrule=.15mm, left=2mm, arc=.35mm, colbacktitle=quarto-callout-tip-color!10!white, breakable, opacityback=0, title=\textcolor{quarto-callout-tip-color}{\faLightbulb}\hspace{0.5em}{Key Insight}, coltitle=black, colframe=quarto-callout-tip-color-frame, bottomtitle=1mm, titlerule=0mm, rightrule=.15mm, toprule=.15mm, colback=white]
 
 The computational approaches developed in this thesis---particularly
 Bayesian networks enhanced with automated extraction---directly address
@@ -4053,6 +4075,8 @@ Parents(X\_i))P(X1\hspace{0pt},X2\hspace{0pt},\ldots,Xn\hspace{0pt})=i=1∏n\hsp
 
 This factorization enables efficient inference and embodies causal
 assumptions explicitly.
+
+\textcite{pearl2014}
 
 \subsection*{2.3.2 The Rain-Sprinkler-Grass
 Example}\label{sec-rain-sprinkler-example}
@@ -4195,10 +4219,28 @@ Argument mapping extracts this structure, identifying:
   \textbf{Uncertainty qualifications}
 \end{itemize}
 
+\textcite{anderson2007}
+
+\textcite{benn2011}
+
+\textcite{khartabil2021}
+
+\textcite{khartabil2020}
+
+\textcite{ngajie2020}
+
+\textcite{prokudin2024}
+
+\textcite{scheuer2010}
+
+\textcite{walton2009}
+
 \subsection*{2.4.2 ArgDown: Structured Argument
 Notation}\label{sec-argdown-notation}
 \addcontentsline{toc}{subsection}{2.4.2 ArgDown: Structured Argument
 Notation}
+
+\textcite{voigt2025}
 
 ArgDown provides a markdown-like syntax for hierarchical argument
 representation:
@@ -4287,6 +4329,8 @@ influence conclusions about AI risk levels.
 
 \textbf{Visual Communication}: Creating interactive models that
 stakeholders could explore and modify.
+
+\textcite{clarke2022}
 
 \subsection*{2.5.2 Key Achievements}\label{sec-mtair-achievements}
 \addcontentsline{toc}{subsection}{2.5.2 Key Achievements}
@@ -4388,7 +4432,7 @@ both structure and quantification. Early models focused on simple binary
 outcomes, while recent work incorporates complex causal chains and
 continuous variables.
 
-\begin{tcolorbox}[enhanced jigsaw, coltitle=black, bottomtitle=1mm, breakable, colbacktitle=quarto-callout-note-color!10!white, leftrule=.75mm, opacityback=0, arc=.35mm, bottomrule=.15mm, rightrule=.15mm, colframe=quarto-callout-note-color-frame, left=2mm, titlerule=0mm, colback=white, opacitybacktitle=0.6, title=\textcolor{quarto-callout-note-color}{\faInfo}\hspace{0.5em}{Key Developments}, toprule=.15mm, toptitle=1mm]
+\begin{tcolorbox}[enhanced jigsaw, toptitle=1mm, opacitybacktitle=0.6, leftrule=.75mm, bottomrule=.15mm, left=2mm, arc=.35mm, colbacktitle=quarto-callout-note-color!10!white, breakable, opacityback=0, title=\textcolor{quarto-callout-note-color}{\faInfo}\hspace{0.5em}{Key Developments}, coltitle=black, colframe=quarto-callout-note-color-frame, bottomtitle=1mm, titlerule=0mm, rightrule=.15mm, toprule=.15mm, colback=white]
 
 \begin{itemize}
 \tightlist
@@ -4404,6 +4448,12 @@ continuous variables.
 \end{itemize}
 
 \end{tcolorbox}
+
+\textcite{yudkowsky2008}
+
+\textcite{bostrom2014}
+
+\textcite{amodei2016}
 
 The progression from qualitative arguments to structured probabilistic
 models demonstrates the field's maturation and the increasing
@@ -4432,6 +4482,8 @@ AI governance proposals can be categorized along several dimensions:
   knowledge sharing
 \end{itemize}
 
+\textcite{dafoe2021} and \textcite{dafoe2018}
+
 \subsection*{2.6.3 Bayesian Network Theory and
 Applications}\label{sec-bn-theory}
 \addcontentsline{toc}{subsection}{2.6.3 Bayesian Network Theory and
@@ -4451,6 +4503,8 @@ theory and graph theory. Key concepts include:
   \textbf{Inference Algorithms}: From exact methods to approximation
   approaches
 \end{itemize}
+
+\textcite{koller2009}
 
 \subsection*{2.6.4 Software Tools Landscape}\label{sec-software-tools}
 \addcontentsline{toc}{subsection}{2.6.4 Software Tools Landscape}
@@ -4487,6 +4541,8 @@ several theoretical challenges:
   quantitative expressions
 \end{itemize}
 
+\textcite{pollock1995}
+
 \subsection*{2.6.6 Correlation Accounting
 Methods}\label{sec-correlation-methods}
 \addcontentsline{toc}{subsection}{2.6.6 Correlation Accounting Methods}
@@ -4510,6 +4566,8 @@ correlations. Methods for handling correlations include:
   \textbf{Sensitivity Bounds}: Analyzing impact of independence
   assumptions
 \end{itemize}
+
+\textcite{nelson2006}
 
 \section*{2.7 Methodology}\label{sec-methodology}
 \addcontentsline{toc}{section}{2.7 Methodology}
@@ -4598,7 +4656,7 @@ Models}\label{sec-natural-to-computational}
 \addcontentsline{toc}{subsection}{2.7.3 From Natural Language to
 Computational Models}
 
-\begin{tcolorbox}[enhanced jigsaw, coltitle=black, bottomtitle=1mm, breakable, colbacktitle=quarto-callout-tip-color!10!white, leftrule=.75mm, opacityback=0, arc=.35mm, bottomrule=.15mm, rightrule=.15mm, colframe=quarto-callout-tip-color-frame, left=2mm, titlerule=0mm, colback=white, opacitybacktitle=0.6, title=\textcolor{quarto-callout-tip-color}{\faLightbulb}\hspace{0.5em}{The Two-Stage Extraction Process}, toprule=.15mm, toptitle=1mm]
+\begin{tcolorbox}[enhanced jigsaw, toptitle=1mm, opacitybacktitle=0.6, leftrule=.75mm, bottomrule=.15mm, left=2mm, arc=.35mm, colbacktitle=quarto-callout-tip-color!10!white, breakable, opacityback=0, title=\textcolor{quarto-callout-tip-color}{\faLightbulb}\hspace{0.5em}{The Two-Stage Extraction Process}, coltitle=black, colframe=quarto-callout-tip-color-frame, bottomtitle=1mm, titlerule=0mm, rightrule=.15mm, toprule=.15mm, colback=white]
 
 AMTAIR employs a novel two-stage process that separates structural
 argument extraction from probability quantification, enabling modular
@@ -4852,7 +4910,7 @@ models from AI safety literature.
 \markboth{3. AMTAIR: Design and Implementation}{3. AMTAIR: Design and
 Implementation}
 
-\begin{tcolorbox}[enhanced jigsaw, coltitle=black, bottomtitle=1mm, breakable, colbacktitle=quarto-callout-note-color!10!white, leftrule=.75mm, opacityback=0, arc=.35mm, bottomrule=.15mm, rightrule=.15mm, colframe=quarto-callout-note-color-frame, left=2mm, titlerule=0mm, colback=white, opacitybacktitle=0.6, title=\textcolor{quarto-callout-note-color}{\faInfo}\hspace{0.5em}{Chapter Overview}, toprule=.15mm, toptitle=1mm]
+\begin{tcolorbox}[enhanced jigsaw, toptitle=1mm, opacitybacktitle=0.6, leftrule=.75mm, bottomrule=.15mm, left=2mm, arc=.35mm, colbacktitle=quarto-callout-note-color!10!white, breakable, opacityback=0, title=\textcolor{quarto-callout-note-color}{\faInfo}\hspace{0.5em}{Chapter Overview}, coltitle=black, colframe=quarto-callout-note-color-frame, bottomtitle=1mm, titlerule=0mm, rightrule=.15mm, toprule=.15mm, colback=white]
 
 \textbf{Grade Weight}: 20\% \textbar{} \textbf{Target Length}:
 \textasciitilde29\% of text (\textasciitilde8,700 words)\\
@@ -4966,7 +5024,7 @@ propagation:
 \subsection*{3.1.2 Design Principles}\label{sec-design-principles}
 \addcontentsline{toc}{subsection}{3.1.2 Design Principles}
 
-\begin{tcolorbox}[enhanced jigsaw, coltitle=black, bottomtitle=1mm, breakable, colbacktitle=quarto-callout-tip-color!10!white, leftrule=.75mm, opacityback=0, arc=.35mm, bottomrule=.15mm, rightrule=.15mm, colframe=quarto-callout-tip-color-frame, left=2mm, titlerule=0mm, colback=white, opacitybacktitle=0.6, title=\textcolor{quarto-callout-tip-color}{\faLightbulb}\hspace{0.5em}{Core Design Philosophy}, toprule=.15mm, toptitle=1mm]
+\begin{tcolorbox}[enhanced jigsaw, toptitle=1mm, opacitybacktitle=0.6, leftrule=.75mm, bottomrule=.15mm, left=2mm, arc=.35mm, colbacktitle=quarto-callout-tip-color!10!white, breakable, opacityback=0, title=\textcolor{quarto-callout-tip-color}{\faLightbulb}\hspace{0.5em}{Core Design Philosophy}, coltitle=black, colframe=quarto-callout-tip-color-frame, bottomtitle=1mm, titlerule=0mm, rightrule=.15mm, toprule=.15mm, colback=white]
 
 The system emphasizes scalability through modular architecture, standard
 interfaces for interoperability, validation checkpoints for quality
@@ -5165,33 +5223,10 @@ probabilities, the system uses:
   Interactive elements for exploration
 \end{itemize}
 
-\subsection*{3.3.3 Performance Characteristics}\label{sec-performance}
-\addcontentsline{toc}{subsection}{3.3.3 Performance Characteristics}
-
-Benchmarking reveals practical scalability:
-
-\begin{longtable}[]{@{}llll@{}}
-\caption{Performance benchmarks for different network
-sizes}\label{tbl-performance}\tabularnewline
-\toprule\noalign{}
-Network Size & Nodes & Processing Time & Memory Usage \\
-\midrule\noalign{}
-\endfirsthead
-\toprule\noalign{}
-Network Size & Nodes & Processing Time & Memory Usage \\
-\midrule\noalign{}
-\endhead
-\bottomrule\noalign{}
-\endlastfoot
-Small & ≤10 & \textless1 second & \textless100MB \\
-Medium & 11-30 & 2-8 seconds & 100-500MB \\
-Large & 31-50 & 15-45 seconds & 0.5-1GB \\
-Very Large & \textgreater50 & Requires approximation &
-\textgreater1GB \\
-\end{longtable}
-
-The bottleneck shifts from extraction (linear in text length) to
-inference (exponential in network connectivity) as models grow.
+\subsection*{3.3.3 (Expected) Performance
+Characteristics}\label{sec-performance}
+\addcontentsline{toc}{subsection}{3.3.3 (Expected) Performance
+Characteristics}
 
 \section*{3.4 Case Study:
 Rain-Sprinkler-Grass}\label{sec-case-rain-sprinkler}
@@ -5254,7 +5289,7 @@ The system processes this input through five steps:
 \subsection*{3.4.3 Results}\label{sec-rsg-results}
 \addcontentsline{toc}{subsection}{3.4.3 Results}
 
-\begin{tcolorbox}[enhanced jigsaw, coltitle=black, bottomtitle=1mm, breakable, colbacktitle=quarto-callout-tip-color!10!white, leftrule=.75mm, opacityback=0, arc=.35mm, bottomrule=.15mm, rightrule=.15mm, colframe=quarto-callout-tip-color-frame, left=2mm, titlerule=0mm, colback=white, opacitybacktitle=0.6, title=\textcolor{quarto-callout-tip-color}{\faLightbulb}\hspace{0.5em}{Validation Success}, toprule=.15mm, toptitle=1mm]
+\begin{tcolorbox}[enhanced jigsaw, toptitle=1mm, opacitybacktitle=0.6, leftrule=.75mm, bottomrule=.15mm, left=2mm, arc=.35mm, colbacktitle=quarto-callout-tip-color!10!white, breakable, opacityback=0, title=\textcolor{quarto-callout-tip-color}{\faLightbulb}\hspace{0.5em}{Validation Success}, coltitle=black, colframe=quarto-callout-tip-color-frame, bottomtitle=1mm, titlerule=0mm, rightrule=.15mm, toprule=.15mm, colback=white]
 
 The system successfully extracts complete network structure, preserves
 all probability information, calculates correct marginal probabilities,
@@ -5336,30 +5371,6 @@ Existential_Catastrophe
 Original}\label{sec-carlsmith-validation}
 \addcontentsline{toc}{subsection}{3.5.3 Validation Against Original}
 
-Comparing extracted model to Carlsmith's original:
-
-\begin{longtable}[]{@{}ll@{}}
-\caption{Carlsmith model extraction validation
-results}\label{tbl-carlsmith-validation}\tabularnewline
-\toprule\noalign{}
-Metric & Performance \\
-\midrule\noalign{}
-\endfirsthead
-\toprule\noalign{}
-Metric & Performance \\
-\midrule\noalign{}
-\endhead
-\bottomrule\noalign{}
-\endlastfoot
-Structural Accuracy & 92\% (nodes and edges) \\
-Probability Accuracy & 87\% (within 0.05) \\
-Path Completeness & 100\% (all major paths) \\
-Semantic Preservation & High (per expert review) \\
-\end{longtable}
-
-The high fidelity demonstrates AMTAIR's capability for complex
-real-world arguments.
-
 \subsection*{3.5.4 Insights from
 Formalization}\label{sec-carlsmith-insights}
 \addcontentsline{toc}{subsection}{3.5.4 Insights from Formalization}
@@ -5389,16 +5400,8 @@ across multiple dimensions.
 \subsection*{3.6.1 Ground Truth Construction}\label{sec-ground-truth}
 \addcontentsline{toc}{subsection}{3.6.1 Ground Truth Construction}
 
-\begin{tcolorbox}[enhanced jigsaw, coltitle=black, bottomtitle=1mm, breakable, colbacktitle=quarto-callout-note-color!10!white, leftrule=.75mm, opacityback=0, arc=.35mm, bottomrule=.15mm, rightrule=.15mm, colframe=quarto-callout-note-color-frame, left=2mm, titlerule=0mm, colback=white, opacitybacktitle=0.6, title=\textcolor{quarto-callout-note-color}{\faInfo}\hspace{0.5em}{Validation Protocol}, toprule=.15mm, toptitle=1mm]
-
-We created validation datasets through expert manual extraction,
-consensus building, and source annotation---establishing gold standard
-representations for comparison.
-
-\end{tcolorbox}
-
 \begin{verbatim}
-Document the process:
+Plan the process:
 1. Expert selection criteria
 2. Training on extraction methodology
 3. Independent extraction procedures
@@ -5406,88 +5409,32 @@ Document the process:
 5. Inter-rater reliability metrics
 \end{verbatim}
 
+--\textgreater{}
+
 \subsection*{3.6.2 Evaluation Metrics}\label{sec-evaluation-metrics}
 \addcontentsline{toc}{subsection}{3.6.2 Evaluation Metrics}
 
-\textbf{Structural Metrics}:
-
-\begin{itemize}
-\tightlist
-\item
-  Precision: Fraction of extracted elements that are correct
-\item
-  Recall: Fraction of true elements that are extracted
-\item
-  F1 Score: Harmonic mean balancing precision and recall
-\end{itemize}
-
-\textbf{Probabilistic Metrics}:
-
-\begin{itemize}
-\tightlist
-\item
-  Mean Absolute Error for probability values
-\item
-  Kullback-Leibler divergence for distributions
-\item
-  Calibration plots for uncertainty expression
-\end{itemize}
-
-\textbf{Semantic Metrics}:
-
-\begin{itemize}
-\tightlist
-\item
-  Expert ratings of meaning preservation
-\item
-  Functional equivalence for inference queries
-\end{itemize}
-
-\subsection*{3.6.3 Results Summary}\label{sec-validation-results}
-\addcontentsline{toc}{subsection}{3.6.3 Results Summary}
-
-Across 20 test documents:
-
-\begin{longtable}[]{@{}llll@{}}
-\caption{System validation results across
-components}\label{tbl-validation-summary}\tabularnewline
-\toprule\noalign{}
-Component & Precision & Recall & F1 Score \\
-\midrule\noalign{}
-\endfirsthead
-\toprule\noalign{}
-Component & Precision & Recall & F1 Score \\
-\midrule\noalign{}
-\endhead
-\bottomrule\noalign{}
-\endlastfoot
-Node Identification & 89\% & 86\% & 0.875 \\
-Edge Extraction & 84\% & 81\% & 0.825 \\
-Probability Values & 76\% & 71\% & 0.735 \\
-\textbf{Overall System} & \textbf{83\%} & \textbf{79\%} &
-\textbf{0.810} \\
-\end{longtable}
+--\textgreater{} \#\#\# 3.6.3 Results Summary
+\{\#sec-validation-results\}
 
 Performance is strongest for explicit structural elements and numerical
 probabilities, with more challenges in extracting implicit relationships
-and qualitative uncertainty.
+and qualitative uncertainty. --\textgreater{} \#\#\# 3.6.4 Error
+Analysis \{\#sec-error-analysis\}
 
-\subsection*{3.6.4 Error Analysis}\label{sec-error-analysis}
-\addcontentsline{toc}{subsection}{3.6.4 Error Analysis}
+Common failure modes to avoid:
 
-Common failure modes:
+\textbf{Implicit Assumptions}: Unstated background assumptions that
+experts infer but system misses.
 
-\textbf{Implicit Assumptions} (23\% of errors): Unstated background
-assumptions that experts infer but system misses.
+\textbf{Complex Conditionals}: Nested conditionals with multiple
+antecedents challenge current parsing.
 
-\textbf{Complex Conditionals} (19\% of errors): Nested conditionals with
-multiple antecedents challenge current parsing.
+\textbf{Ambiguous Quantifiers}: Terms like ``significant'' lack clear
+probability mapping without context.
 
-\textbf{Ambiguous Quantifiers} (17\% of errors): Terms like
-``significant'' lack clear probability mapping without context.
-
-\textbf{Coreference Resolution} (15\% of errors): Pronouns and indirect
-references create attribution challenges.
+\textbf{Coreference Resolution}: Pronouns and indirect references create
+attribution challenges.
 
 Understanding these limitations guides both current usage and future
 improvements.
@@ -5505,29 +5452,7 @@ analysis through formal intervention modeling.
 Representation}\label{sec-intervention-representation}
 \addcontentsline{toc}{subsection}{3.7.1 Intervention Representation}
 
-Policies are modeled as modifications to network parameters:
-
-python
-
-\begin{Shaded}
-\begin{Highlighting}[]
-\KeywordTok{def}\NormalTok{ evaluate\_policy\_intervention(network, intervention, target\_variables):}
-    \CommentTok{"""Evaluate policy impact using rigorous counterfactual analysis"""}
-\NormalTok{    baseline\_probs }\OperatorTok{=}\NormalTok{ network.query(target\_variables)}
-\NormalTok{    intervention\_probs }\OperatorTok{=}\NormalTok{ network.do\_query(}
-\NormalTok{        intervention[}\StringTok{\textquotesingle{}variable\textquotesingle{}}\NormalTok{], }
-\NormalTok{        intervention[}\StringTok{\textquotesingle{}value\textquotesingle{}}\NormalTok{],}
-\NormalTok{        target\_variables}
-\NormalTok{    )}
-    
-    \ControlFlowTok{return}\NormalTok{ \{}
-        \StringTok{\textquotesingle{}baseline\textquotesingle{}}\NormalTok{: baseline\_probs,}
-        \StringTok{\textquotesingle{}intervention\textquotesingle{}}\NormalTok{: intervention\_probs, }
-        \StringTok{\textquotesingle{}effect\_size\textquotesingle{}}\NormalTok{: compute\_effect\_size(baseline\_probs, intervention\_probs),}
-        \StringTok{\textquotesingle{}robustness\textquotesingle{}}\NormalTok{: assess\_robustness\_across\_scenarios(intervention)}
-\NormalTok{    \}}
-\end{Highlighting}
-\end{Shaded}
+--\textgreater{}
 
 \subsection*{3.7.2 Example: Deployment
 Governance}\label{sec-deployment-example}
@@ -5552,12 +5477,13 @@ Consider a policy requiring safety certification before deployment:
   Number needed to regulate = 26 deployments
 \end{itemize}
 
-This quantitative analysis enables comparison across interventions.
+This hypothetical quantitative analysis enables comparison across
+interventions.
 
 \subsection*{3.7.3 Robustness Analysis}\label{sec-robustness}
 \addcontentsline{toc}{subsection}{3.7.3 Robustness Analysis}
 
-\begin{tcolorbox}[enhanced jigsaw, coltitle=black, bottomtitle=1mm, breakable, colbacktitle=quarto-callout-tip-color!10!white, leftrule=.75mm, opacityback=0, arc=.35mm, bottomrule=.15mm, rightrule=.15mm, colframe=quarto-callout-tip-color-frame, left=2mm, titlerule=0mm, colback=white, opacitybacktitle=0.6, title=\textcolor{quarto-callout-tip-color}{\faLightbulb}\hspace{0.5em}{Cross-Worldview Robustness}, toprule=.15mm, toptitle=1mm]
+\begin{tcolorbox}[enhanced jigsaw, toptitle=1mm, opacitybacktitle=0.6, leftrule=.75mm, bottomrule=.15mm, left=2mm, arc=.35mm, colbacktitle=quarto-callout-tip-color!10!white, breakable, opacityback=0, title=\textcolor{quarto-callout-tip-color}{\faLightbulb}\hspace{0.5em}{Cross-Worldview Robustness}, coltitle=black, colframe=quarto-callout-tip-color-frame, bottomtitle=1mm, titlerule=0mm, rightrule=.15mm, toprule=.15mm, colback=white]
 
 Policies must work across worldviews. AMTAIR enables multi-model
 evaluation, parameter sensitivity testing, scenario analysis, and
@@ -5611,23 +5537,6 @@ needs.
 \subsection*{3.8.3 User Interface Elements}\label{sec-ui-elements}
 \addcontentsline{toc}{subsection}{3.8.3 User Interface Elements}
 
-Key features enhance usability:
-
-\begin{itemize}
-\tightlist
-\item
-  \textbf{Physics Controls}: Adjust layout dynamics
-\item
-  \textbf{Filter Options}: Show/hide node types
-\item
-  \textbf{Export Functions}: Save images or data
-\item
-  \textbf{Comparison Mode}: Side-by-side worldviews
-\end{itemize}
-
-These features emerged from user testing with researchers and
-policymakers.
-
 \section*{3.9 Integration with Prediction
 Markets}\label{sec-market-integration}
 \addcontentsline{toc}{section}{3.9 Integration with Prediction Markets}
@@ -5640,7 +5549,7 @@ connection to live forecasting data.
 \subsection*{3.9.1 Design for Integration}\label{sec-integration-design}
 \addcontentsline{toc}{subsection}{3.9.1 Design for Integration}
 
-\begin{tcolorbox}[enhanced jigsaw, coltitle=black, bottomtitle=1mm, breakable, colbacktitle=quarto-callout-note-color!10!white, leftrule=.75mm, opacityback=0, arc=.35mm, bottomrule=.15mm, rightrule=.15mm, colframe=quarto-callout-note-color-frame, left=2mm, titlerule=0mm, colback=white, opacitybacktitle=0.6, title=\textcolor{quarto-callout-note-color}{\faInfo}\hspace{0.5em}{Integration Architecture}, toprule=.15mm, toptitle=1mm]
+\begin{tcolorbox}[enhanced jigsaw, toptitle=1mm, opacitybacktitle=0.6, leftrule=.75mm, bottomrule=.15mm, left=2mm, arc=.35mm, colbacktitle=quarto-callout-note-color!10!white, breakable, opacityback=0, title=\textcolor{quarto-callout-note-color}{\faInfo}\hspace{0.5em}{Integration Architecture}, coltitle=black, colframe=quarto-callout-note-color-frame, bottomtitle=1mm, titlerule=0mm, rightrule=.15mm, toprule=.15mm, colback=white]
 
 The system anticipates market connections through API specifications for
 major platforms, semantic matching algorithms, probability aggregation
@@ -5727,63 +5636,16 @@ Document strategies with benchmarks:
 Assessment}\label{sec-extraction-quality}
 \addcontentsline{toc}{subsection}{3.11.1 Extraction Quality Assessment}
 
-\begin{tcolorbox}[enhanced jigsaw, coltitle=black, bottomtitle=1mm, breakable, colbacktitle=quarto-callout-tip-color!10!white, leftrule=.75mm, opacityback=0, arc=.35mm, bottomrule=.15mm, rightrule=.15mm, colframe=quarto-callout-tip-color-frame, left=2mm, titlerule=0mm, colback=white, opacitybacktitle=0.6, title=\textcolor{quarto-callout-tip-color}{\faLightbulb}\hspace{0.5em}{Performance Highlights}, toprule=.15mm, toptitle=1mm]
-
-The system achieves 85\%+ accuracy for structural relationships and 73\%
-for probability capture---sufficient for practical use while maintaining
-transparency about limitations.
-
-\end{tcolorbox}
+--\textgreater{}
 
 \subsection*{3.11.2 Computational
 Performance}\label{sec-computational-performance}
 \addcontentsline{toc}{subsection}{3.11.2 Computational Performance}
 
-AMTAIR's computational performance was benchmarked across networks of
-varying size and complexity:
-
-\textbf{Scaling Performance Characteristics}:
-
-\begin{itemize}
-\tightlist
-\item
-  Small networks (≤10 nodes): \textless1 second end-to-end processing
-\item
-  Medium networks (11-30 nodes): 2-8 seconds total processing time
-\item
-  Large networks (31-50 nodes): 15-45 seconds total processing time
-\item
-  Very large networks (\textgreater50 nodes): Require approximate
-  inference methods
-\end{itemize}
-
 \subsection*{3.11.3 Policy Impact Evaluation}\label{sec-policy-impact}
 \addcontentsline{toc}{subsection}{3.11.3 Policy Impact Evaluation}
 
-The policy impact evaluation capability demonstrates how formal modeling
-clarifies the conditions under which specific governance interventions
-would be effective.
-
-Analysis of deployment restriction policies reveals complex
-dependencies:
-
-python
-
-\begin{Shaded}
-\begin{Highlighting}[]
-\NormalTok{deployment\_policy\_effects }\OperatorTok{=}\NormalTok{ \{}
-    \StringTok{\textquotesingle{}mandatory\_safety\_testing\textquotesingle{}}\NormalTok{: \{}
-        \StringTok{\textquotesingle{}conditions\_for\_effectiveness\textquotesingle{}}\NormalTok{: [}
-            \StringTok{\textquotesingle{}reliable\_test\_battery\_exists\textquotesingle{}}\NormalTok{,}
-            \StringTok{\textquotesingle{}enforcement\_mechanisms\_present\textquotesingle{}}\NormalTok{,}
-            \StringTok{\textquotesingle{}no\_significant\_regulatory\_capture\textquotesingle{}}
-\NormalTok{        ],}
-        \StringTok{\textquotesingle{}expected\_risk\_reduction\textquotesingle{}}\NormalTok{: }\FloatTok{0.45}\NormalTok{,}
-        \StringTok{\textquotesingle{}confidence\_interval\textquotesingle{}}\NormalTok{: (}\FloatTok{0.25}\NormalTok{, }\FloatTok{0.65}\NormalTok{)}
-\NormalTok{    \}}
-\NormalTok{\}}
-\end{Highlighting}
-\end{Shaded}
+--\textgreater{}
 
 \section*{3.12 Summary of Technical
 Contributions}\label{sec-technical-summary}
@@ -5804,8 +5666,6 @@ AMTAIR successfully demonstrates:
   \textbf{High fidelity} preservation of complex arguments
 \item
   \textbf{Interactive visualization} accessible to diverse users
-\item
-  \textbf{Policy evaluation} capabilities through intervention modeling
 \item
   \textbf{Scalable implementation} handling realistic network sizes
 \end{itemize}
@@ -5830,7 +5690,7 @@ Limitations}
 \markboth{4. Discussion: Implications and Limitations}{4. Discussion:
 Implications and Limitations}
 
-\begin{tcolorbox}[enhanced jigsaw, coltitle=black, bottomtitle=1mm, breakable, colbacktitle=quarto-callout-note-color!10!white, leftrule=.75mm, opacityback=0, arc=.35mm, bottomrule=.15mm, rightrule=.15mm, colframe=quarto-callout-note-color-frame, left=2mm, titlerule=0mm, colback=white, opacitybacktitle=0.6, title=\textcolor{quarto-callout-note-color}{\faInfo}\hspace{0.5em}{Chapter Overview}, toprule=.15mm, toptitle=1mm]
+\begin{tcolorbox}[enhanced jigsaw, toptitle=1mm, opacitybacktitle=0.6, leftrule=.75mm, bottomrule=.15mm, left=2mm, arc=.35mm, colbacktitle=quarto-callout-note-color!10!white, breakable, opacityback=0, title=\textcolor{quarto-callout-note-color}{\faInfo}\hspace{0.5em}{Chapter Overview}, coltitle=black, colframe=quarto-callout-note-color-frame, bottomtitle=1mm, titlerule=0mm, rightrule=.15mm, toprule=.15mm, colback=white]
 
 \textbf{Grade Weight}: 10\% \textbar{} \textbf{Target Length}:
 \textasciitilde14\% of text (\textasciitilde4,200 words)\\
@@ -5940,6 +5800,8 @@ makes these implicit quantities explicit and subject to scrutiny. As
 Dennis Lindley noted, ``Uncertainty is not in the events, but in our
 knowledge about them.''
 
+@\textcite{lindley2013}
+
 \subsection*{4.1.3 Objection 3: Correlation
 Complexity}\label{sec-correlation-complexity}
 \addcontentsline{toc}{subsection}{4.1.3 Objection 3: Correlation
@@ -5964,6 +5826,8 @@ functions can model dependencies while preserving marginal
 distributions. This extends standard Bayesian networks
 significantly.\footnote{Copulas provide a mathematically elegant way to
   separate marginal behavior from dependence structure}
+
+\textcite{nelson2006}
 
 \textbf{Sensitivity bounds}: When correlations remain uncertain, we can
 compute bounds on outcomes under different correlation assumptions. This
@@ -6072,6 +5936,8 @@ The goal isn't creating perfect representations but useful ones. By
 making simplifications explicit and modifiable, formal models enable
 systematic improvement in ways mental models cannot.
 
+\textcite{box1976}
+
 \section*{4.3 Red-Teaming Results}\label{sec-red-teaming}
 \addcontentsline{toc}{section}{4.3 Red-Teaming Results}
 
@@ -6084,31 +5950,12 @@ the AMTAIR system.
 Attempts}\label{sec-adversarial-extraction}
 \addcontentsline{toc}{subsection}{4.3.1 Adversarial Extraction Attempts}
 
-I tested the system with deliberately challenging inputs:
-
-\textbf{Contradictory Arguments}: Texts asserting P(A) = 0.2 and P(A) =
-0.8 in different sections - Result: System flagged inconsistency rather
-than averaging - Mitigation: Explicit consistency checking with user
-resolution
-
-\textbf{Circular Reasoning}: Arguments where A causes B causes C causes
-A - Result: DAG validation caught cycles, extraction failed gracefully -
-Mitigation: Clear error messages explaining the structural issue
-
-\textbf{Extremely Vague Language}: Texts using only qualitative terms
-without clear relationships - Result: Extraction quality degraded
-significantly (F1 \textless{} 0.5) - Mitigation: Confidence scores on
-extracted elements, human review triggers
-
-\textbf{Deceptive Framings}: Arguments designed to imply false causal
-relationships - Result: System sometimes extracted spurious connections
-- Mitigation: Source grounding requirements, validation against
-citations
+--\textgreater{}
 
 \subsection*{4.3.2 Robustness Findings}\label{sec-robustness-findings}
 \addcontentsline{toc}{subsection}{4.3.2 Robustness Findings}
 
-Key vulnerabilities identified:
+Key vulnerabilities of LLMs (and human experts) identified:
 
 \begin{verbatim}
 
@@ -6206,9 +6053,6 @@ Divergence}\label{sec-convergence-divergence}
 \addcontentsline{toc}{subsection}{4.4.2 Revealing Convergence and
 Divergence}
 
-Comparative analysis across extracted models reveals surprising
-patterns:
-
 \begin{verbatim}
 
 Implement comparison of 3+ models:
@@ -6235,6 +6079,8 @@ conclusions about overall risk.
 These insights remain hidden when arguments stay in natural language
 form.
 
+--\textgreater{}
+
 \subsection*{4.4.3 Improving Collective
 Reasoning}\label{sec-collective-reasoning}
 \addcontentsline{toc}{subsection}{4.4.3 Improving Collective Reasoning}
@@ -6243,7 +6089,7 @@ AMTAIR enhances group epistemics through:
 
 \textbf{Explicit uncertainty}: Replacing ``might,'' ``could,''
 ``likely'' with probability distributions reduces miscommunication and
-forces precision
+standardizes precision
 
 \textbf{Compositional reasoning}: Complex arguments decompose into
 manageable components that can be independently evaluated
@@ -6254,7 +6100,7 @@ parameters rather than requiring complete argument reconstruction
 \textbf{Exploration tools}: Stakeholders can modify assumptions and
 immediately see consequences, building intuition about model dynamics
 
-\begin{tcolorbox}[enhanced jigsaw, coltitle=black, bottomtitle=1mm, breakable, colbacktitle=quarto-callout-tip-color!10!white, leftrule=.75mm, opacityback=0, arc=.35mm, bottomrule=.15mm, rightrule=.15mm, colframe=quarto-callout-tip-color-frame, left=2mm, titlerule=0mm, colback=white, opacitybacktitle=0.6, title=\textcolor{quarto-callout-tip-color}{\faLightbulb}\hspace{0.5em}{Early Results}, toprule=.15mm, toptitle=1mm]
+\begin{tcolorbox}[enhanced jigsaw, toptitle=1mm, opacitybacktitle=0.6, leftrule=.75mm, bottomrule=.15mm, left=2mm, arc=.35mm, colbacktitle=quarto-callout-tip-color!10!white, breakable, opacityback=0, title=\textcolor{quarto-callout-tip-color}{\faLightbulb}\hspace{0.5em}{Early Results}, coltitle=black, colframe=quarto-callout-tip-color-frame, bottomtitle=1mm, titlerule=0mm, rightrule=.15mm, toprule=.15mm, colback=white]
 
 Pilot studies with AI governance researchers show 40\% reduction in time
 to identify disagreements and 60\% improvement in agreement
@@ -6335,7 +6181,8 @@ Frameworks}
 
 \markright{4.6 Integration with Governance Frameworks}
 
-AMTAIR complements rather than replaces existing governance approaches.
+AMTAIR complements and integrates rather than replaces existing
+governance approaches.
 
 \subsection*{4.6.1 Standards
 Development}\label{sec-standards-integration}
@@ -6360,6 +6207,10 @@ Design adaptive regulations responsive to evidence
 
 Example: Analyzing how liability frameworks affect corporate AI
 development decisions under different market conditions.
+
+\textcite{cuomo2016}, \textcite{demirag2000}, \textcite{devilliers2021},
+\textcite{divito2022}, \textcite{kaur2024}, \textcite{list2011} and
+\textcite{solomon2020}
 
 \subsection*{4.6.3 International
 Coordination}\label{sec-international-integration}
@@ -6561,7 +6412,7 @@ Governance}
 \markboth{5. Conclusion: Toward Coordinated AI Governance}{5.
 Conclusion: Toward Coordinated AI Governance}
 
-\begin{tcolorbox}[enhanced jigsaw, coltitle=black, bottomtitle=1mm, breakable, colbacktitle=quarto-callout-note-color!10!white, leftrule=.75mm, opacityback=0, arc=.35mm, bottomrule=.15mm, rightrule=.15mm, colframe=quarto-callout-note-color-frame, left=2mm, titlerule=0mm, colback=white, opacitybacktitle=0.6, title=\textcolor{quarto-callout-note-color}{\faInfo}\hspace{0.5em}{Chapter Overview}, toprule=.15mm, toptitle=1mm]
+\begin{tcolorbox}[enhanced jigsaw, toptitle=1mm, opacitybacktitle=0.6, leftrule=.75mm, bottomrule=.15mm, left=2mm, arc=.35mm, colbacktitle=quarto-callout-note-color!10!white, breakable, opacityback=0, title=\textcolor{quarto-callout-note-color}{\faInfo}\hspace{0.5em}{Chapter Overview}, coltitle=black, colframe=quarto-callout-note-color-frame, bottomtitle=1mm, titlerule=0mm, rightrule=.15mm, toprule=.15mm, colback=white]
 
 \textbf{Grade Weight}: 10\% \textbar{} \textbf{Target Length}:
 \textasciitilde14\% of text (\textasciitilde4,200 words)\\
@@ -6836,7 +6687,7 @@ Researchers}\label{sec-researcher-recommendations}
   alongside traditional papers to enable cumulative building
 \end{enumerate}
 
-\begin{tcolorbox}[enhanced jigsaw, coltitle=black, bottomtitle=1mm, breakable, colbacktitle=quarto-callout-tip-color!10!white, leftrule=.75mm, opacityback=0, arc=.35mm, bottomrule=.15mm, rightrule=.15mm, colframe=quarto-callout-tip-color-frame, left=2mm, titlerule=0mm, colback=white, opacitybacktitle=0.6, title=\textcolor{quarto-callout-tip-color}{\faLightbulb}\hspace{0.5em}{Quick Start Guide}, toprule=.15mm, toptitle=1mm]
+\begin{tcolorbox}[enhanced jigsaw, toptitle=1mm, opacitybacktitle=0.6, leftrule=.75mm, bottomrule=.15mm, left=2mm, arc=.35mm, colbacktitle=quarto-callout-tip-color!10!white, breakable, opacityback=0, title=\textcolor{quarto-callout-tip-color}{\faLightbulb}\hspace{0.5em}{Quick Start Guide}, coltitle=black, colframe=quarto-callout-tip-color-frame, bottomtitle=1mm, titlerule=0mm, rightrule=.15mm, toprule=.15mm, colback=white]
 
 A comprehensive guide for researchers getting started with AMTAIR will
 be available at {[}project website{]}, including templates, tutorials,
@@ -7001,7 +6852,7 @@ it's whether we can augment our collective intelligence with
 computational tools that help us reason together about futures too
 important to leave to chance.
 
-\begin{tcolorbox}[enhanced jigsaw, coltitle=black, bottomtitle=1mm, breakable, colbacktitle=quarto-callout-important-color!10!white, leftrule=.75mm, opacityback=0, arc=.35mm, bottomrule=.15mm, rightrule=.15mm, colframe=quarto-callout-important-color-frame, left=2mm, titlerule=0mm, colback=white, opacitybacktitle=0.6, title=\textcolor{quarto-callout-important-color}{\faExclamation}\hspace{0.5em}{The Stakes}, toprule=.15mm, toptitle=1mm]
+\begin{tcolorbox}[enhanced jigsaw, toptitle=1mm, opacitybacktitle=0.6, leftrule=.75mm, bottomrule=.15mm, left=2mm, arc=.35mm, colbacktitle=quarto-callout-important-color!10!white, breakable, opacityback=0, title=\textcolor{quarto-callout-important-color}{\faExclamation}\hspace{0.5em}{The Stakes}, coltitle=black, colframe=quarto-callout-important-color-frame, bottomtitle=1mm, titlerule=0mm, rightrule=.15mm, toprule=.15mm, colback=white]
 
 As AI capabilities advance toward transformative potential, the window
 for establishing effective governance narrows. We cannot afford

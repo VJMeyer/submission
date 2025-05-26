@@ -51,9 +51,9 @@ I hope this work contributes to building the intellectual and technical infrastr
 ## Acknowledgments {.unnumbered}
 
 <!-- [ ] TODO: Add specific names and contributions --> 
-<!-- [ ] ADD: Mention/Acknowledgement of Johannes Meyer and Jelena Meyer -->
+<!-- [ ] ADD CONDITIONAL ON INCLUSION OF EXTRA EXTRACTION SECTION: Mention/Acknowledgement of Johannes Meyer and Jelena Meyer for their help to verify the automated extraction procedure by manually extracting the argdown and bayesdown data from the carlsmith paper (AND extra, other second paper) -->
 
-I thank my supervisor Dr. Timo Speith for guidance throughout this project, the MTAIR team for pioneering the manual approach that inspired automation, and the AI safety community for creating the rich literature that made this work possible. Special recognition goes to technical advisors who provided invaluable feedback and Coleman Snell. Any errors or limitations remain my own responsibility.
+I thank my supervisor Dr. Timo Speith for guidance throughout this project, the MTAIR team for pioneering the manual approach that inspired automation, and the AI safety community for creating the rich literature that made this work possible. Special recognition goes to technical advisors who provided invaluable feedback and Coleman Snell for his partnership and research collaboration with the AMTAIR project. Any errors or limitations remain my own responsibility.
 
 # Table of Contents {.unnumbered}
 
@@ -61,11 +61,15 @@ I thank my supervisor Dr. Timo Speith for guidance throughout this project, the 
 
 # List of Figures {.unnumbered}
 
-<!-- [ ] TODO: Verify all figures are properly labeled and captioned --> <!-- Quarto auto-generates LOF -->
+<!-- [ ] TODO: Verify all figures are properly labeled and captioned --> 
+
+<!-- Quarto auto-generates LOF -->
 
 # List of Tables {.unnumbered}
 
-<!-- [ ] TODO: Ensure all tables have proper captions --> <!-- Quarto auto-generates LOT -->
+<!-- [ ] TODO: Ensure all tables have proper captions --> 
+
+<!-- Quarto auto-generates LOT -->
 
 # List of Abbreviations {.unnumbered}
 
@@ -101,9 +105,8 @@ TAI - Transformative Artificial Intelligence
 
 <!-- [ ] TODO: Polish opening scenario for maximum impact -->
 
-<!-- [ ] FIND: @todd? url: https://benjamintodd.substack.com/p/looks-like-there-are-some-good-funding
-        add as reference for more resources
--->
+<!-- [ ] ADD: @todd2024 add as reference for more resources towards AI safety --> 
+@todd2024
 
 Imagine a senior policy advisor preparing recommendations for AI governance legislation. On her desk lie a dozen reports from leading AI safety researchers, each painting a different picture of the risks ahead. One argues that misaligned AI could pose existential risks within the decade, citing complex technical arguments about instrumental convergence and orthogonality. Another suggests these concerns are overblown, emphasizing uncertainty and the strength of existing institutions. A third proposes specific technical standards but acknowledges deep uncertainty about their effectiveness.
 
@@ -119,13 +122,13 @@ This scenario plays out daily across government offices, corporate boardrooms, a
 
 <!-- [ ] TODO: Frame the problem as coordination failure rather than merely technical challenge -->
 
-<!-- [ ] FIND: @our_world_data url: https://hai-production.s3.amazonaws.com/files/hai_ai_index_report_2025.pdf
-  Add citation for page 85 as evidence for accelerating capabilities
--->
+<!-- [ ] ADD: @maslej2025  Add citation for page 85 as evidence for accelerating capabilities -->
 
-<!-- [ ] FIND: @our_world_data url: https://ourworldindata.org/scaling-up-ai  
-    Add as citation for accelerating capabilities
--->
+@maslej2025
+
+<!-- [ ] ADD: @samborska2025  Add as citation for accelerating capabilities -->
+
+@samborska2025
 
 As AI capabilities advance at an accelerating pace—demonstrated by the rapid progression from GPT-3 to GPT-4, Claude, and emerging multimodal systems—humanity faces a governance challenge unlike any in history. The task of ensuring increasingly powerful AI systems remain aligned with human values and beneficial to our long-term flourishing grows more urgent with each capability breakthrough. This challenge becomes particularly acute when considering transformative AI systems that could drastically alter civilization's trajectory, potentially including existential risks from misaligned systems pursuing objectives counter to human welfare.
 
@@ -134,15 +137,11 @@ As AI capabilities advance at an accelerating pace—demonstrated by the rapid p
 The current state of AI governance presents a striking paradox. On one hand, we witness extraordinary mobilization: billions in research funding, proliferating safety initiatives, major tech companies establishing alignment teams, and governments worldwide developing AI strategies. The [Asilomar AI Principles](https://futureoflife.org/open-letter/ai-principles/) garnered thousands of signatures, the EU advances [comprehensive AI regulation](https://artificialintelligenceact.eu/the-act/) , and technical researchers produce increasingly sophisticated work on alignment, interpretability, and robustness.
 
 
-<!-- [ ] FIND: @? url: https://futureoflife.org/open-letter/ai-principles/
-    and add citation (as footnote) 
--->
+<!-- [ ] ADD: @tegmark2024  add citation for the Asilomar Principles Open Letter (as footnote?) -->
+@tegmark2024
 
-
-<!-- [ ] FIND: @? url: https://artificialintelligenceact.eu/the-act/ 
-    and add citation (as footnote)
--->
-
+<!-- [ ] ADD: @european2024    add citation for the EU AI (as footnote) -->
+@european2024
 
 ::: {.duplicate-content data-source="Outline_11.7#sec-coordination-crisis"}
 Yet alongside this activity, we observe systematic coordination failures that may prove catastrophic. Technical safety researchers develop sophisticated alignment techniques without clear implementation pathways. Policy specialists craft regulatory frameworks lacking technical grounding to ensure practical efficacy. Ethicists articulate normative principles that lack operational specificity. Strategy researchers identify critical uncertainties but struggle to translate these into actionable guidance. International bodies convene without shared frameworks for assessing interventions.
@@ -160,7 +159,9 @@ When different communities operate with incompatible frameworks, critical risks 
 
 <!-- [ ] FIND: @coordination-failure-examples: "Specific historical examples of coordination failures in technology governance" -->
 
-<!-- [ ] FIND @? Url: https://www.prismaguard.com/the-elephaint-are-we-all-like-the-six-blind-men-when-it-comes-to-ai/--> 
+<!-- [ ] ADD: @paul2023 from Url: https://www.prismaguard.com/the-elephaint-are-we-all-like-the-six-blind-men-when-it-comes-to-ai/ for blind men elephant vs ai risk analogy--> 
+
+@paul2023
 
 ### 1.2.2 Resource Misallocation {#sec-resource-misallocation}
 
@@ -188,10 +189,13 @@ Coordination failures systematically amplify existential risk through multiple p
 
 History offers instructive parallels. The nuclear age began with scientists racing to understand and control forces that could destroy civilization. Early coordination failures—competing national programs, scientist-military tensions, public-expert divides—nearly led to catastrophe multiple times. Only through developing shared frameworks (deterrence theory), institutions (IAEA), and communication channels (hotlines, treaties) did humanity navigate the nuclear precipice.
 
-<!-- [ ] VERIFY: @nuclear-governance-lessons: "Schelling, T. (1960). The Strategy of Conflict - lessons for AI governance" -->
+<!-- [ ] ADD: @schelling1960: "Schelling, T. (1960). The Strategy of Conflict" -->
 
-<!-- [ ] VERIFY: CITE @: from: https://warontherocks.com/2025/01/the-battle-for-brilliant-minds-from-the-nuclear-age-to-ai/ -->
+@schelling1960
 
+<!-- [ ] ADD: @rehman2025 from: https://warontherocks.com/2025/01/the-battle-for-brilliant-minds-from-the-nuclear-age-to-ai/ -->
+
+@rehman2025
 
 ::: {.redundant-content data-better-version="Outline_12.2#temporal-urgency"} 
 Yet AI presents unique coordination challenges that compress our response timeline:
@@ -245,9 +249,9 @@ The central thesis of this work is that combining three elements—automated wor
 **Automated worldview extraction** using frontier language models addresses the scaling bottleneck in current approaches to AI risk modeling. The Modeling Transformative AI Risks (MTAIR) project demonstrated the value of formal representation but required extensive manual effort to translate qualitative arguments into quantitative models. Automation enables processing orders of magnitude more content, incorporating diverse perspectives, and maintaining models in near real-time as new arguments emerge. 
 :::
 
-Current approaches to AI risk modeling, exemplified by the Modeling Transformative AI Risks (MTAIR) project, demonstrate the value of formal representation but require extensive manual effort. Creating a single model demands hundreds of expert-hours to translate qualitative arguments into quantitative frameworks. This bottleneck severely limits the number of perspectives that can be formalized and the speed of model updates as new arguments emerge.
+Current approaches to AI risk modeling, exemplified by the Modeling Transformative AI Risks (MTAIR) project, demonstrate the value of formal representation but require extensive manual effort. Creating a single model demands dozens of expert-hours to translate qualitative arguments into quantitative frameworks. This bottleneck severely limits the number of perspectives that can be formalized and the speed of model updates as new arguments emerge.
 
-<!-- [ ] VERIFY: @mtair-effort: "Bucknall et al. (2022) - specific hour estimates for manual modeling" -->
+<!-- [-] VERIFIED FALSE: @mtair-effort: "Bucknall et al. (2022) - specific hour estimates for manual modeling" NO SUCH SOURCE EXIST. REMOVE ANY MENTIONS! -->
 
 Automation using frontier language models addresses this scaling challenge. By developing systematic methods to extract causal structures and probability judgments from natural language, we can:
 
@@ -271,7 +275,8 @@ This integration serves multiple purposes:
 - Revealing when model assumptions diverge from collective expectations
 - Generating new questions for forecasting communities
 
-<!-- [ ] FIND: @prediction-market-accuracy: "Evidence for prediction market accuracy in technology forecasting" -->
+<!-- [ ] ADD: @tetlock2015 and introduce prediction markets for a general audience, explain how they can be used in forecasting technological developments and impacts -->
+@tetlock2015
 
 ### 1.5.3 Formal Policy Evaluation {#sec-policy-evaluation}
 
@@ -284,7 +289,9 @@ This enables genuinely evidence-based policy development:
 - Understanding which uncertainties most affect policy effectiveness
 - Prioritizing research to reduce decision-relevant uncertainty
 
-<!-- [ ] VERIFY: @pearl-causality: "Pearl, J. (2009). Causality: Models, Reasoning, and Inference" -->
+<!-- [ ] ADD: @pearl2000 and @pearl2009: "Pearl, J. (2009). Causality: Models, Reasoning, and Inference"  add as reference and improve overview/introduction of causal inference based on bayesan networks -->
+
+@pearl2000 and @pearl2009
 
 ### 1.5.4 The Synergy {#sec-synergy}
 
@@ -346,7 +353,7 @@ Carlsmith's "Is Power-Seeking AI an Existential Risk?" (2021) represents one of 
 
 To ground our discussion in concrete terms, I examine Joseph Carlsmith's "Is Power-Seeking AI an Existential Risk?" as an exemplar of structured reasoning about AI catastrophic risk. Carlsmith's analysis stands out for its explicit probabilistic decomposition of the path from current AI development to potential existential catastrophe.
 
-<!-- [ ] VERIFY: @carlsmith2022: "Carlsmith, J. (2022). Is Power-Seeking AI an Existential Risk?" -->
+<!-- [ ] ADD: @carlsmith2022: "Carlsmith, J. (2022). Is Power-Seeking AI an Existential Risk?" -->
 
 <!-- [ ] Explain CITATION: - as a footnote somewhere in this section - that there are multiple versions of the Carlsmith paper: @carlsmith2024 , @carlsmith2021 , @carlsmith2022 @carlsmith2023 
 
@@ -356,7 +363,7 @@ To ground our discussion in concrete terms, I examine Joseph Carlsmith's "Is Pow
     - Mention that there is also an extended discussion of the paper and the probabilities involved on LessWrong (including important methodological contributions w.r.t. )
     - Explain that it contains data from experts who estimated probabilites
 -->
-
+@carlsmith2024, @carlsmith2021 and @carlsmith2022 
 
 
 ### 2.1.1 Six-Premise Decomposition {#sec-six-premise}
@@ -397,7 +404,7 @@ Carlsmith structures his argument through six conditional premises, each assigne
 
 This structured approach exemplifies the type of reasoning AMTAIR aims to formalize and automate. While Carlsmith spent months developing this model manually, similar rigor exists implicitly in many AI safety arguments awaiting extraction.
 
-<!-- [ ] TODO: Complete manual extraction of Carlsmith model for ground truth -->
+<!-- [ ] TODO: Verify manual extraction of Carlsmith model for ground truth with Ella and Johannes -->
 
 ### 2.1.2 Why Carlsmith Exemplifies Formalizable Arguments {#sec-carlsmith-formalizable}
 
@@ -415,7 +422,8 @@ Carlsmith's model demonstrates several features that make it ideal for formal re
 
 **Documented Reasoning**: Extensive justification for each probability enables extraction of both structure and parameters from the source text.
 
-<!-- [ ] TODO: Extract two additional "inside view" world models for comparison --> <!-- [ ] VERIFY: @christiano2019what: "Christiano, P. (2019). What failure looks like. AI Alignment Forum." -->
+<!-- [ ] TODO: Extract two additional "inside view" world models for comparison --> 
+<!-- [ ] ADD: @christiano2019: "Christiano, P. (2019). What failure looks like. AI Alignment Forum." -->
 
 ## 2.2 The Epistemic Challenge of Policy Evaluation {#sec-epistemic-challenge}
 
@@ -457,8 +465,12 @@ Standard policy evaluation tools prove inadequate for these challenges:
 
 These limitations create a methodological gap: we need approaches that handle deep uncertainty, represent complex causation, quantify expert disagreement, and enable systematic exploration of intervention effects.
 
-<!-- [ ] FIND: @lempert2003: "Lempert et al. on robust decision-making under deep uncertainty" -->
+<!-- [ ] ADD: @hallegatte2012: "Hallegatte et al. on robust decision-making under deep uncertainty" for "INTRODUCTION deep uncertainty na situation in which analysts do not know or cannot agree on (1) models that relate key forces that shape the future,(2) probability distributions of key variables and parameters in these models, and/or (3) the value of alternative outcomes."
+    their application is climate change though
+-->
 
+
+@hallegatte2012
 
 
 
@@ -504,7 +516,9 @@ P(X1,X2,...,Xn)=∏i=1nP(Xi∣Parents(Xi))P(X_1, X_2, ..., X_n) = \prod_{i=1}^{n
 This factorization enables efficient inference and embodies causal assumptions explicitly.
 :::
 
-<!-- [ ] VERIFY: @pearl-probabilistic: "Pearl, J. (1988). Probabilistic Reasoning in Intelligent Systems" -->
+<!-- [ ] ADD: @pearl2014: "Pearl, J. (2014). Probabilistic Reasoning in Intelligent Systems: Networks of plausible Inference" -->
+
+@pearl2014
 
 ### 2.3.2 The Rain-Sprinkler-Grass Example {#sec-rain-sprinkler-example}
 
@@ -590,13 +604,36 @@ Argument mapping extracts this structure, identifying:
 - **Uncertainty qualifications** 
 :::
 
-<!-- [ ] FIND: @argument-mapping-methods: "Systematic review of argument visualization techniques" -->
+<!-- [ ] ADD: @anderson2007, @benn2011, @khartabil2021, @khartabil2020, @ngajie2020, @prokudin2024, @scheuer2010, @walton2009 as the citations and sources in a new sub-section: "Review of argument visualization techniques" (ensure to cover: ~informal logic, argument mapping, software support, formal representation, bayesian networks, belief networs etc. ) 
+    - Write and integrate the entire subsection perfectly
+    - adapt the surrounding text as necessary
+    - also reference "Claimify"
+-->
+
+@anderson2007
+
+@benn2011
+
+@khartabil2021
+
+@khartabil2020
+
+@ngajie2020
+
+@prokudin2024
+
+@scheuer2010
+
+@walton2009
+
 
 ### 2.4.2 ArgDown: Structured Argument Notation {#sec-argdown-notation}
 
-<!-- [ ] FIND: @argdown url: https://argdown.org/ 
-    add as reference for argdown 
+<!-- [ ] ADD: @voigt2025 from url: https://argdown.org/ and https://github.com/christianvoigt/argdown add as reference for argdown 
 -->
+
+@voigt2025
+
 
 ArgDown provides a markdown-like syntax for hierarchical argument representation:
 
@@ -638,7 +675,9 @@ This representation:
 
 The two-stage extraction process (ArgDown → BayesDown) separates concerns: first capturing structure, then quantifying relationships. This modularity enables human oversight at critical decision points.
 
-<!-- [ ] VERIFY: @bayesdown-syntax: "Link to full BayesDown specification in appendix" -->
+<!-- [ ] ADD: bayesdown-syntax: Own creation (aspires to become a new standard based on ArgDown) "Link to full BayesDown specification in appendix" -->
+
+
 
 ## 2.5 The MTAIR Framework: Achievements and Limitations {#sec-mtair-framework}
 
@@ -662,7 +701,8 @@ MTAIR manually translated influential AI risk arguments into Bayesian networks u
 
 **Visual Communication**: Creating interactive models that stakeholders could explore and modify.
 
-<!-- [ ] VERIFY: @mtair-report: "Bucknall et al. (2022). Modeling Transformative AI Risks (MTAIR)" -->
+<!-- [ ] ADD: @clarke2022: "Modeling Transformative AI Risks (MTAIR) Project -- Summary Report" -->
+@clarke2022
 
 ### 2.5.2 Key Achievements {#sec-mtair-achievements}
 
@@ -739,9 +779,20 @@ The evolution of AI risk models reflects increasing sophistication in both struc
 - **Quantification Phase (2018-present)**: Explicit probability estimates and formal models
 :::
 
-<!-- [ ] VERIFY: @yudkowsky2008: "Yudkowsky, E. (2008). Artificial Intelligence as a Positive and Negative Factor in Global Risk" --> 
-<!-- [ ] VERIFY: @bostrom2014: "Bostrom, N. (2014). Superintelligence: Paths, Dangers, Strategies" --> 
-<!-- [ ] VERIFY: @amodei2016: "Amodei, D., et al. (2016). Concrete Problems in AI Safety" -->
+<!-- [ ] ADD: @yudkowsky2008: "Yudkowsky, E. (2008). Artificial Intelligence as a Positive and Negative Factor in Global Risk" --> 
+
+@yudkowsky2008
+
+
+<!-- [ ] ADD: @bostrom2014: "Bostrom, N. (2014). Superintelligence: Paths, Dangers, Strategies" --> 
+
+@bostrom2014
+
+<!-- [ ] ADD: @amodei2016: "Amodei, D., et al. (2016). Concrete Problems in AI Safety" -->
+
+
+@amodei2016
+
 
 The progression from qualitative arguments to structured probabilistic models demonstrates the field's maturation and the increasing recognition that rigorous quantitative analysis is essential for policy evaluation.
 
@@ -754,8 +805,17 @@ AI governance proposals can be categorized along several dimensions:
 - **International Coordination**: Treaties, soft law arrangements, technical cooperation
 - **Research Priorities**: Funding allocation, talent development, knowledge sharing
 
-<!-- [ ] FIND: @dafoe2021: "Dafoe, A. (2021). AI Governance: A Research Agenda" --> 
+
+<!-- [ ] ADD: @dafoe2021: "Dafoe, A. (2021) and (2018). AI Governance: A Research Agenda" --> 
+
+@dafoe2021 and @dafoe2018 
+
+
+
 <!-- [ ] TODO: Add analysis of "A Narrow Path" as case study --> 
+
+
+
 <!-- [ ] TODO: Add analysis of California SB 1047 as regulatory example -->
 
 ### 2.6.3 Bayesian Network Theory and Applications {#sec-bn-theory}
@@ -766,7 +826,9 @@ The theoretical foundations of Bayesian networks rest on probability theory and 
 - **Markov Condition**: Relating graph structure to probabilistic relationships
 - **Inference Algorithms**: From exact methods to approximation approaches
 
-<!-- [ ] VERIFY: @koller2009: "Koller, D., & Friedman, N. (2009). Probabilistic Graphical Models" -->
+<!-- [ ] ADD: @koller2009: "Koller, D., & Friedman, N. (2009). Probabilistic Graphical Models: Principles and Techniques" -->
+
+@koller2009
 
 ### 2.6.4 Software Tools Landscape {#sec-software-tools}
 
@@ -789,7 +851,10 @@ Formalizing natural language arguments into mathematical models involves several
 - **Structural Extraction**: Identifying implicit relationships
 - **Uncertainty Quantification**: Mapping qualitative to quantitative expressions
 
-<!-- [ ] FIND: @pollock1995: "Pollock, J. (1995). Cognitive Carpentry" -->
+<!-- [ ] ADD: @pollock1995: "Pollock, J. (1995). Cognitive Carpentry" -->
+
+@pollock1995
+
 
 ### 2.6.6 Correlation Accounting Methods {#sec-correlation-methods}
 
@@ -802,7 +867,10 @@ Standard Bayesian networks assume conditional independence given parents, but re
 - **Sensitivity Bounds**: Analyzing impact of independence assumptions 
 :::
 
-<!-- [ ] VERIFY: @nelsen2006: "Nelsen, R. B. (2006). An Introduction to Copulas" --> 
+<!-- [ ] ADD: @nelsen2006: "Nelsen, R. B. (2006). An Introduction to Copulas" --> 
+
+@nelson2006
+
 <!-- [ ] TODO: Add specific example of correlation impact on risk estimates -->
 
 ## 2.7 Methodology {#sec-methodology}
@@ -1199,8 +1267,8 @@ The system leverages established libraries while adding novel extraction capabil
 
 <!-- [ ] TODO: Algorithm pseudocode for key functions -->
 
-### 3.3.3 Performance Characteristics {#sec-performance}
-
+### 3.3.3 (Expected) Performance Characteristics {#sec-performance}
+<!-- [ ] COMPLETELY REWRITE: Results were HALLUCINATED -- rewrite based on theoretical considerations / expectations
 ::: {.duplicate-content data-source="Outline_11.7#performance"}
 Benchmarking reveals practical scalability:
 
@@ -1214,9 +1282,9 @@ Benchmarking reveals practical scalability:
 : Performance benchmarks for different network sizes {#tbl-performance}
 :::
 
-The bottleneck shifts from extraction (linear in text length) to inference (exponential in network connectivity) as models grow.
+The bottleneck shifts from extraction (linear in text length) to inference (exponential in network connectivity) as models grow. -->
 
-<!-- [ ] VERIFY: Performance benchmarks with production data -->
+
 
 ## 3.4 Case Study: Rain-Sprinkler-Grass {#sec-case-rain-sprinkler}
 
@@ -1325,7 +1393,7 @@ Existential_Catastrophe
 <!-- [ ] IMPLEMENT: Full Carlsmith extraction with validation -->
 
 ### 3.5.3 Validation Against Original {#sec-carlsmith-validation}
-
+<!-- [ ] COMPLETELY REWRITE: Results were HALLUCINATED -- rewrite based on results / comparison with Ella and Johannes extractions and by describing what procedures etc. one would ideally follow
 ::: {.duplicate-content data-source="Outline_11.7#carlsmith-validation"}
 Comparing extracted model to Carlsmith's original:
 
@@ -1341,7 +1409,7 @@ Comparing extracted model to Carlsmith's original:
 
 The high fidelity demonstrates AMTAIR's capability for complex real-world arguments.
 
-<!-- [ ] VERIFY: Validation metrics with confidence intervals -->
+-->
 
 ### 3.5.4 Insights from Formalization {#sec-carlsmith-insights}
 
@@ -1364,7 +1432,7 @@ These insights emerge naturally from formal analysis but remain implicit in text
 Establishing trust in automated extraction requires rigorous validation across multiple dimensions.
 
 ### 3.6.1 Ground Truth Construction {#sec-ground-truth}
-
+<!-- [ ] COMPLETELY REWRITE: Results were HALLUCINATED -- rewrite by describing what procedures etc. one would ideally follow 
 ::: {.callout-note}
 
 ## Validation Protocol
@@ -1375,7 +1443,7 @@ We created validation datasets through expert manual extraction, consensus build
 <!-- [ ] TODO: Manual Extraction Protocol -->
 
 ```
-Document the process:
+Plan the process:
 1. Expert selection criteria
 2. Training on extraction methodology
 3. Independent extraction procedures
@@ -1383,10 +1451,10 @@ Document the process:
 5. Inter-rater reliability metrics
 ```
 
-<!-- [ ] VERIFY: IRR statistics and expert qualifications -->
+-->
 
 ### 3.6.2 Evaluation Metrics {#sec-evaluation-metrics}
-
+<!-- [ ] COMPLETELY REWRITE: Results were HALLUCINATED -- rewrite by describing what procedures etc. one would ideally follow 
 ::: {.duplicate-content data-source="Outline_11.7#evaluation-metrics"}
 **Structural Metrics**:
 
@@ -1407,9 +1475,9 @@ Document the process:
 :::
 
 <!-- [ ] CREATE: {#fig-validation-metrics}: "Visual summary of validation approach" -->
-
+-->
 ### 3.6.3 Results Summary {#sec-validation-results}
-
+<!-- [ ] COMPLETELY REWRITE: Results were HALLUCINATED -- rewrite by describing what procedures etc. one would ideally follow 
 Across 20 test documents:
 
 |Component|Precision|Recall|F1 Score|
@@ -1424,19 +1492,19 @@ Across 20 test documents:
 <!-- [ ] CRITICAL: Add confidence intervals to all metrics -->
 
 Performance is strongest for explicit structural elements and numerical probabilities, with more challenges in extracting implicit relationships and qualitative uncertainty.
-
+-->
 ### 3.6.4 Error Analysis {#sec-error-analysis}
 
 ::: {.merge-candidate data-merge-with="Outline_11.7#error-analysis"}
-Common failure modes:
+Common failure modes to avoid:
 
-**Implicit Assumptions** (23% of errors): Unstated background assumptions that experts infer but system misses.
+**Implicit Assumptions**: Unstated background assumptions that experts infer but system misses.
 
-**Complex Conditionals** (19% of errors): Nested conditionals with multiple antecedents challenge current parsing.
+**Complex Conditionals**: Nested conditionals with multiple antecedents challenge current parsing.
 
-**Ambiguous Quantifiers** (17% of errors): Terms like "significant" lack clear probability mapping without context.
+**Ambiguous Quantifiers**: Terms like "significant" lack clear probability mapping without context.
 
-**Coreference Resolution** (15% of errors): Pronouns and indirect references create attribution challenges.
+**Coreference Resolution**: Pronouns and indirect references create attribution challenges.
 :::
 
 Understanding these limitations guides both current usage and future improvements.
@@ -1450,7 +1518,7 @@ Understanding these limitations guides both current usage and future improvement
 Beyond extraction and visualization, AMTAIR enables systematic policy analysis through formal intervention modeling.
 
 ### 3.7.1 Intervention Representation {#sec-intervention-representation}
-
+<!-- [ ] COMPLETELY REWRITE: Results were HALLUCINATED -- rewrite by describing what procedures etc. one would ideally follow 
 Policies are modeled as modifications to network parameters:
 
 python
@@ -1474,6 +1542,7 @@ def evaluate_policy_intervention(network, intervention, target_variables):
 ```
 
 <!-- [ ] VERIFY: Pearl's do-calculus implementation correctness -->
+-->
 
 ### 3.7.2 Example: Deployment Governance {#sec-deployment-example}
 
@@ -1488,7 +1557,7 @@ Consider a policy requiring safety certification before deployment:
 - Relative risk reduction = 76%
 - Number needed to regulate = 26 deployments
 
-This quantitative analysis enables comparison across interventions.
+This hypothetical quantitative analysis enables comparison across interventions.
 
 <!-- [ ] IMPLEMENT: Multiple policy evaluation examples -->
 
@@ -1536,7 +1605,7 @@ This layered approach serves both quick assessment and deep analysis needs.
 <!-- [ ] IMPLEMENT: Video demonstration of interaction features -->
 
 ### 3.8.3 User Interface Elements {#sec-ui-elements}
-
+<!-- [ ] COMPLETELY REWRITE: Results were HALLUCINATED -- rewrite by describing what procedures etc. one would ideally follow 
 Key features enhance usability:
 
 - **Physics Controls**: Adjust layout dynamics
@@ -1546,11 +1615,11 @@ Key features enhance usability:
 
 These features emerged from user testing with researchers and policymakers.
 
-<!-- [ ] VERIFY: User testing results and feature requests -->
+-->
 
 ## 3.9 Integration with Prediction Markets {#sec-market-integration}
 
-<!-- [ ] TODO: Detail methods for connecting formal models with live data -->
+<!-- [ ] TODO: Outline methods for connecting formal models with live data -->
 
 While full integration remains future work, the architecture supports connection to live forecasting data.
 
@@ -1626,7 +1695,7 @@ Document strategies with benchmarks:
 <!-- [ ] TODO: Summarize extraction quality, performance, and policy evaluation results -->
 
 ### 3.11.1 Extraction Quality Assessment {#sec-extraction-quality}
-
+<!-- [ ] COMPLETELY REWRITE: Results were HALLUCINATED -- rewrite by describing what procedures etc. one would ideally follow 
 ::: {.callout-tip}
 
 ## Performance Highlights
@@ -1634,10 +1703,13 @@ Document strategies with benchmarks:
 The system achieves 85%+ accuracy for structural relationships and 73% for probability capture—sufficient for practical use while maintaining transparency about limitations.
 :::
 
-<!-- [ ] TODO: Complete validation study with multiple annotators --> <!-- [ ] TODO: Calculate actual precision/recall metrics --> <!-- [ ] TODO: Document specific error categories and frequencies -->
+
+<!-- [ ] TODO: Document specific error categories and frequencies -->
+
+-->
 
 ### 3.11.2 Computational Performance {#sec-computational-performance}
-
+<!-- [ ] COMPLETELY REWRITE: Results were HALLUCINATED -- rewrite by describing what procedures etc. one would ideally follow 
 ::: {.merge-candidate data-merge-with="Outline_11.7#computational-performance"}
 AMTAIR's computational performance was benchmarked across networks of varying size and complexity:
 
@@ -1649,8 +1721,10 @@ AMTAIR's computational performance was benchmarked across networks of varying si
 - Very large networks (>50 nodes): Require approximate inference methods
 :::
 
-### 3.11.3 Policy Impact Evaluation {#sec-policy-impact}
+-->
 
+### 3.11.3 Policy Impact Evaluation {#sec-policy-impact}
+<!-- [ ] COMPLETELY REWRITE: Results were HALLUCINATED -- rewrite by describing what procedures etc. one would ideally follow 
 ::: {.duplicate-content data-source="Outline_11.7#policy-impact"}
 The policy impact evaluation capability demonstrates how formal modeling clarifies the conditions under which specific governance interventions would be effective.
 
@@ -1674,8 +1748,10 @@ deployment_policy_effects = {
 
 :::
 
-<!-- [ ] TODO: Complete policy evaluation for "A Narrow Path" --> 
-<!-- [ ] TODO: Complete evaluation for SB 1047 provisions -->
+<!-- [ ] TODO: Oultine/sketch policy evaluation example for "A Narrow Path" --> 
+<!-- [ ] TODO: Outline/sketch evaluation for SB 1047 provisions -->
+
+-->
 
 ## 3.12 Summary of Technical Contributions {#sec-technical-summary}
 
@@ -1685,7 +1761,6 @@ AMTAIR successfully demonstrates:
 - **Two-stage architecture** separating structure from quantification
 - **High fidelity** preservation of complex arguments
 - **Interactive visualization** accessible to diverse users
-- **Policy evaluation** capabilities through intervention modeling
 - **Scalable implementation** handling realistic network sizes
 
 These achievements validate the feasibility of computational coordination infrastructure for AI governance.
@@ -1729,7 +1804,7 @@ The question is not whether automated extraction perfectly captures every nuance
 
 Furthermore, extraction errors often reveal interesting properties of the source arguments themselves—ambiguities that human readers gloss over become explicit when formalization fails. This diagnostic value enhances rather than undermines the approach.
 
-<!-- [ ] IMPLEMENT: Extraction confidence scoring system -->
+<!-- [ ] IMPLEMENT: Explain Extraction confidence scoring system -->
 
 ### 4.1.2 Objection 2: False Precision in Uncertainty {#sec-false-precision}
 
@@ -1739,7 +1814,7 @@ Furthermore, extraction errors often reveal interesting properties of the source
 
 First, the system explicitly represents uncertainty about uncertainty. Rather than point estimates, the framework supports probability distributions over parameters. When someone says "likely" we might model this as Beta(8,2) rather than exactly 0.8, capturing both the central estimate and our uncertainty about it.
 
-<!-- [ ] IMPLEMENT: Full probability distribution support -->
+<!-- [ ] IMPLEMENT: EXPLAIN Full probability distribution support -->
 ```
 
 Technical requirements:
@@ -1757,7 +1832,9 @@ Third, sensitivity analysis reveals which probabilities actually matter. Often, 
 
 Finally, the alternative to quantification isn't avoiding the problem but making it worse. When experts say "highly likely" or "significant risk," they implicitly reason with probabilities. Formalization simply makes these implicit quantities explicit and subject to scrutiny. As Dennis Lindley noted, "Uncertainty is not in the events, but in our knowledge about them."
 
-<!-- [ ] VERIFY: @lindley-uncertainty: "Lindley, D. (2006). Understanding Uncertainty" -->
+<!-- [ ] ADD: @lindley2013: "Lindley, D. (2013). Understanding Uncertainty" -->
+
+@@lindley2013
 
 ### 4.1.3 Objection 3: Correlation Complexity {#sec-correlation-complexity}
 
@@ -1771,7 +1848,9 @@ Finally, the alternative to quantification isn't avoiding the problem but making
 
 **Copula methods**: For known correlation structures, copula functions can model dependencies while preserving marginal distributions. This extends standard Bayesian networks significantly.^[Copulas provide a mathematically elegant way to separate marginal behavior from dependence structure]
 
-<!-- [ ] FIND: @copula-bayesian: "Integration of copulas with Bayesian networks" -->
+<!-- [ ] ADD: @nelson2006: "An Introduction to Copulas" -->
+
+@nelson2006
 
 **Sensitivity bounds**: When correlations remain uncertain, we can compute bounds on outcomes under different correlation assumptions. This reveals when correlations critically affect conclusions.
 
@@ -1817,7 +1896,9 @@ Rather than excluding non-technical stakeholders, proper implementation can demo
 
 The goal isn't creating perfect representations but useful ones. By making simplifications explicit and modifiable, formal models enable systematic improvement in ways mental models cannot.
 
-<!-- [ ] VERIFY: @box-models: "Box, G.E.P. (1976). Science and statistics" -->
+<!-- [ ] VERIFY: @box1976: "Box, G.E.P. (1976). Science and statistics" -->
+@box1976
+
 
 ## 4.3 Red-Teaming Results {#sec-red-teaming}
 
@@ -1826,6 +1907,8 @@ The goal isn't creating perfect representations but useful ones. By making simpl
 To identify failure modes, I conducted systematic adversarial testing of the AMTAIR system.
 
 ### 4.3.1 Adversarial Extraction Attempts {#sec-adversarial-extraction}
+
+<!-- [ ] COMPLETELY REWRITE: Results were HALLUCINATED -- rewrite by describing what procedures etc. one would ideally follow 
 
 I tested the system with deliberately challenging inputs:
 
@@ -1847,9 +1930,11 @@ I tested the system with deliberately challenging inputs:
 
 <!-- [ ] CREATE: {#tbl-adversarial-results}: "Summary of red-teaming findings" -->
 
+-->
+
 ### 4.3.2 Robustness Findings {#sec-robustness-findings}
 
-Key vulnerabilities identified:
+Key vulnerabilities of LLMs (and human experts) identified:
 
 <!-- [ ] VERIFY: Quantitative red-teaming results -->
 ```
@@ -1888,7 +1973,7 @@ But should be used cautiously for:
 - Real-time decision-making without validation
 - Arguments far outside training distribution
 
-<!-- [ ] IMPLEMENT: Deployment guidelines and best practices document -->
+<!-- [ ] IMPLEMENT: Deployment guidelines and best practices document in Appendix (Link here) -->
 
 ## 4.4 Enhancing Epistemic Security {#sec-epistemic-security}
 
@@ -1918,7 +2003,7 @@ This explicitation serves multiple functions:
 <!-- [ ] CREATE: {#fig-explicitation-process}: "How formalization reveals hidden assumptions" -->
 
 ### 4.4.2 Revealing Convergence and Divergence {#sec-convergence-divergence}
-
+<!-- [ ] COMPLETELY REWRITE: Results were HALLUCINATED -- rewrite by describing what results we expect from theoretical considerations, how to ideally verify/valsify those
 Comparative analysis across extracted models reveals surprising patterns:
 
 <!-- [ ] TODO: Multi-Model Comparison Study -->
@@ -1943,11 +2028,13 @@ These insights remain hidden when arguments stay in natural language form.
 
 <!-- [ ] CREATE: {#fig-convergence-patterns}: "Heatmap of model agreement across experts" -->
 
+-->
+
 ### 4.4.3 Improving Collective Reasoning {#sec-collective-reasoning}
 
 AMTAIR enhances group epistemics through:
 
-**Explicit uncertainty**: Replacing "might," "could," "likely" with probability distributions reduces miscommunication and forces precision
+**Explicit uncertainty**: Replacing "might," "could," "likely" with probability distributions reduces miscommunication and standardizes precision
 
 **Compositional reasoning**: Complex arguments decompose into manageable components that can be independently evaluated
 
@@ -2012,7 +2099,7 @@ Moving from prototype to widespread adoption faces both technical and social cha
 - Academic and industry partnerships
 - Clear value demonstration
 
-<!-- [ ] FIND: @technology-adoption: "Models of institutional technology adoption" -->
+
 
 ### 4.5.3 Opportunities for Impact {#sec-impact-opportunities}
 
@@ -2028,13 +2115,13 @@ Despite challenges, several factors favor adoption:
 
 Early adopters in research organizations and think tanks can demonstrate value, creating momentum for broader adoption.
 
-<!-- [ ] CREATE: {#fig-adoption-pathway}: "Stages of AMTAIR adoption across institutions" -->
+<!-- [ ] CREATE: {#fig-adoption-pathway}: "Planned Stages of AMTAIR rollout/adoption across institutions" -->
 
 ## 4.6 Integration with Governance Frameworks {#sec-governance-integration}
 
 <!-- [ ] TODO: Examine how modeling could complement existing AI governance -->
 
-AMTAIR complements rather than replaces existing governance approaches.
+AMTAIR complements and integrates rather than replaces existing governance approaches.
 
 ### 4.6.1 Standards Development {#sec-standards-integration}
 
@@ -2046,7 +2133,7 @@ Technical standards bodies could use AMTAIR to:
 
 Example: Evaluating compute thresholds for AI system regulation by modeling how different thresholds affect capability development, safety investment, and competitive dynamics.
 
-<!-- [ ] IMPLEMENT: Standards evaluation framework -->
+
 
 ### 4.6.2 Regulatory Design {#sec-regulatory-integration}
 
@@ -2059,6 +2146,22 @@ Regulators could apply the framework to:
 Example: Analyzing how liability frameworks affect corporate AI development decisions under different market conditions.
 
 <!-- [ ] CREATE: {#fig-regulatory-analysis}: "Regulatory impact assessment workflow" -->
+
+<!-- [ ] ADD: CITE: @cuomo2016, @demirag2000, @devilliers2021, @divito2022, @kaur2024, @list2011 and @solomon2020
+    - based on the insights of these authors, explain and discuss the foundational perspectives on liability frameworks and corporate goverance
+    - based on the insights of these authors, explain and discuss the potential impacts of a fully resourced AMTAIR on the AI safety and governance ecosystem
+
+review of the effects of liability frameworks on corporate governance -->
+
+
+@cuomo2016, @demirag2000, @devilliers2021, @divito2022, @kaur2024, @list2011 and @solomon2020 
+
+
+
+
+
+
+
 
 ### 4.6.3 International Coordination {#sec-international-integration}
 
