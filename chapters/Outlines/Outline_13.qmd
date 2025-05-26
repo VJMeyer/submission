@@ -1332,9 +1332,8 @@ When humans analyze complex arguments, they typically first determine what facto
 
 The LLM prompt for this stage emphasizes clear identification of causal structure without requiring probability judgments, allowing the model to focus entirely on understanding "what affects what" in the text. This specialized prompt includes detailed instructions about ArgDown syntax, examples of well-formed representations, and guidance for preserving the author's intended meaning.
 
-Figure 4 shows a sample of the ArgDown extraction for Carlsmith's model, illustrating how complex qualitative arguments are transformed into structured representations:
 
-[FIGURE 4: Sample ArgDown extraction from Carlsmith's paper showing hierarchical structure of variables related to existential risk]
+
 
 ```python
 def parse_markdown_hierarchy_fixed(markdown_text, ArgDown=True):
@@ -1369,6 +1368,9 @@ def parse_markdown_hierarchy_fixed(markdown_text, ArgDown=True):
 ```
 
 This key function transforms the ArgDown text into a structured DataFrame, capturing the hierarchical relationships between variables and preparing them for further processing. The function works by identifying node titles, descriptions, and indentation levels, then establishing parent-child relationships based on the hierarchy indicated by indentation.
+
+
+
 
 **Stage 2: Probability Integration** enhances the structural representation with probability information, creating a complete BayesDown specification. This stage involves:
 
