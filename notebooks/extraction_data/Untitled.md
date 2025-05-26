@@ -1,0 +1,28 @@
+## Bucknall first Extraction:
+
+```json
+[Existential_Risk]: Increase in probability of an existential catastrophe for humanity. {"instantiations": ["risk_HIGH", "risk_LOW"]}
+  + [Unaligned_AGI_Risk]: Probability that a misaligned artificial general intelligence causes catastrophe. {"instantiations": ["agi_risk_HIGH", "agi_risk_LOW"]}
+    + [State-State_Relations]: Degree of AI-driven geopolitical tension and arms-race dynamics between states. {"instantiations": ["tension_HIGH", "tension_LOW"]}
+      + [Cybersecurity_Offense_Advantage]: AI tips cyber capabilities toward offence rather than defence. {"instantiations": ["offense_DOMINANT", "offense_PARITY"]}
+      + [Current_NearTerm_AI]: Deployment and capabilities of current and near-term AI systems. {"instantiations": ["ai_PRESENT", "ai_ABSENT"]}
+  + [Nuclear_Risk]: Probability that nuclear conflict escalates to civilisation-ending levels. {"instantiations": ["nuclear_risk_HIGH", "nuclear_risk_LOW"]}
+    + [State-State_Relations]
+  + [Biological_Risk]: Probability that a natural or engineered pandemic reaches existential scale. {"instantiations": ["bio_risk_HIGH", "bio_risk_LOW"]}
+    + [Malicious_AI_Use]: Deliberate hostile use of AI (e.g., pathogen design, targeted disinformation). {"instantiations": ["malicious_USE", "malicious_NO_USE"]}
+      + [Current_NearTerm_AI]
+    + [Compromised_Political_Decisionmaking]: Erosion of collective decision-making capacity due to information-ecosystem degradation. {"instantiations": ["decision_COMPROMISED", "decision_FUNCTIONAL"]}
+      + [Social_Media_AI_Ecosystem]: Influence of AI-driven recommender systems on public discourse and beliefs. {"instantiations": ["ecosystem_HARMFUL", "ecosystem_HEALTHY"]}
+        + [Current_NearTerm_AI]
+      + [State-Corporation_Relations]: Strength of corporate lobbying / regulatory capture in AI industries. {"instantiations": ["corp_influence_HIGH", "corp_influence_LOW"]}
+        + [Current_NearTerm_AI]
+  + [Environmental_Risk]: Probability of runaway climate change or biosphere collapse. {"instantiations": ["env_risk_HIGH", "env_risk_LOW"]}
+    + [Compromised_Political_Decisionmaking]
+    + [AI_Carbon_Emissions]: Greenhouse-gas emissions from training and deploying large ML models. {"instantiations": ["emissions_HIGH", "emissions_LOW"]}
+      + [Current_NearTerm_AI]
+  + [Stable_Repressive_Regime_Risk]: Probability that a global, durable autocracy emerges. {"instantiations": ["autocracy_HIGH", "autocracy_LOW"]}
+    + [State-Citizen_Surveillance]: Breadth and depth of AI-enabled surveillance over citizens. {"instantiations": ["surveillance_INTENSIVE", "surveillance_LIMITED"]}
+      + [Current_NearTerm_AI]
+  + [General_Diverted_Resources]: Political and economic resources diverted from risk mitigation toward AI competition. {"instantiations": ["resources_DIVERTED", "resources_ALIGNED"]}
+    + [State-State_Relations]
+```
