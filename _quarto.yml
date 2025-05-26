@@ -97,6 +97,7 @@ format:
     output-file: thesis-book.pdf
     cite-method: biblatex
     biblio-title: Bibliography
+    latex-max-runs: 15
     geometry:
       - margin=2.5cm
       - paper=a4paper

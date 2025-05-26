@@ -606,12 +606,12 @@ The inadequacy of traditional methods for AI governance creates an urgent need f
 - **Quantify Disagreement**: Make explicit where experts diverge and why
 - **Enable Systematic Analysis**: Support rigorous comparison of policy options
 
-::: {.callout-tip}
 
-## Key Insight
+
+**Key Insight**
 
 The computational approaches developed in this thesis—particularly Bayesian networks enhanced with automated extraction—directly address each of these requirements by providing formal frameworks for reasoning under uncertainty.
-:::
+::
 
 
 
@@ -2803,6 +2803,11 @@ The high fidelity demonstrates AMTAIR's capability for complex real-world argume
 <!-- [ ] TODO: Present results comparing automated extraction to manual annotation -->
 
 Establishing trust in automated extraction requires rigorous validation across multiple dimensions.
+
+<!-- [ ] COMPLETELY REWRITE: this section should focus on a qualitative (not quantitative) comparison between the results we expected/predicted/hoped for and explain that we conducted manual extractions of @growiec2024 and found that the results were structurally similar or identically (ArgDown) to the automated extraction.
+The probability estimates (Bayesdown ) varied substentially though, as was the case between automated extractions.
+
+-->
 
 
 ### 3.6.1 Ground Truth Construction {#sec-ground-truth}

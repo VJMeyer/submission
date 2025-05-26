@@ -22,136 +22,6 @@
 `<!-- [ ] Make sure all hallucinations have been removed -->`
 
 
-## Figure Inventory and Tracking
-
-
-
-```markdown
-## Master Figure Registry {.unnumbered .unlisted}
-
-<!-- FIGURE INVENTORY -->
-<!-- Last updated: 2024-02-15 -->
-
-## Implemented Figures
-
-
-## Section to keep track of all Figures
-
-`<!-- [ ] ALWAYS include the "inclusions" of all figures/graphics below -->`
-`<!-- [ ] ALWAYS keep the #fig-KEYS up-to-date -->`
-
-```markdown
-{{
-[![Example Caption/Title 4](/images/cover.png){
-    #fig-Unique_identifier_for_crossreferencing
-    fig-scap="Short caption 4 list of figures as seen in LoF"
-    fig-alt="Detailed alt text that describes the image content, type, purpose, and meaning.
-            [CHART TYPE]: [Short description].
-                DATA: [What data is shown, x/y axes].
-                PURPOSE: [Why it's included, what to look for].
-                DETAILS: [Longer description of patterns, anomalies, or key insights].
-                SOURCE: Data from [source name/year and url/link]
-            "
-    fig-align="left"
-    width="30%"
-    }](https://github.com/VJMeyer/submission)
-}}
-
-```
-
-### Chapter 1
-- [x] {#fig-overview}: System overview diagram
-  - File: images/system-overview.png
-  - Source: Created by author using Draw.io
-
-```markdown
-{{
-[![Example Caption/Title 4](/images/cover.png){
-    #fig-Unique_identifier_for_crossreferencing
-    fig-scap="Short caption 4 list of figures as seen in LoF"
-    fig-alt="Detailed alt text that describes the image content, type, purpose, and meaning.
-            [CHART TYPE]: [Short description].
-                DATA: [What data is shown, x/y axes].
-                PURPOSE: [Why it's included, what to look for].
-                DETAILS: [Longer description of patterns, anomalies, or key insights].
-                SOURCE: Data from [source name/year and url/link]
-            "
-    fig-align="left"
-    width="30%"
-    }](https://github.com/VJMeyer/submission)
-}}
-
-```
-
-### Chapter 2
-- [x] {#fig-methodology}: Research methodology flowchart
-  - File: images/methodology-flow.svg
-  - Source: Author original
-
-```markdown
-{{
-[![Example Caption/Title 4](/images/cover.png){
-    #fig-Unique_identifier_for_crossreferencing
-    fig-scap="Short caption 4 list of figures as seen in LoF"
-    fig-alt="Detailed alt text that describes the image content, type, purpose, and meaning.
-            [CHART TYPE]: [Short description].
-                DATA: [What data is shown, x/y axes].
-                PURPOSE: [Why it's included, what to look for].
-                DETAILS: [Longer description of patterns, anomalies, or key insights].
-                SOURCE: Data from [source name/year and url/link]
-            "
-    fig-align="left"
-    width="30%"
-    }](https://github.com/VJMeyer/submission)
-}}
-
-```
-
-## Pending Figures
-```markdown
-### High Priority
-- [ ] {#fig-results-chart}: Main results visualization
-  - Status: Data ready, needs visualization
-
-{{
-[![Example Caption/Title 4](/images/cover.png){
-    #fig-Unique_identifier_for_crossreferencing
-    fig-scap="Short caption 4 list of figures as seen in LoF"
-    fig-alt="Detailed alt text that describes the image content, type, purpose, and meaning.
-            [CHART TYPE]: [Short description].
-                DATA: [What data is shown, x/y axes].
-                PURPOSE: [Why it's included, what to look for].
-                DETAILS: [Longer description of patterns, anomalies, or key insights].
-                SOURCE: Data from [source name/year and url/link]
-            "
-    fig-align="left"
-    width="30%"
-    }](https://github.com/VJMeyer/submission)
-}}
-
-### Medium Priority
-- [ ] {#fig-architecture}: System architecture diagram
-  - Status: Sketch complete, needs professional rendering
-
-{{
-[![Example Caption/Title 4](/images/cover.png){
-    #fig-Unique_identifier_for_crossreferencing
-    fig-scap="Short caption 4 list of figures as seen in LoF"
-    fig-alt="Detailed alt text that describes the image content, type, purpose, and meaning.
-            [CHART TYPE]: [Short description].
-                DATA: [What data is shown, x/y axes].
-                PURPOSE: [Why it's included, what to look for].
-                DETAILS: [Longer description of patterns, anomalies, or key insights].
-                SOURCE: Data from [source name/year and url/link]
-            "
-    fig-align="left"
-    width="30%"
-    }](https://github.com/VJMeyer/submission)
-}}
-
-
-
-```
 
 
 
@@ -280,7 +150,14 @@ nocite: |
  <!-- ## Sidebars for comments {.sidebar}
 Create Sidebars by applying the .sidebar attribute to a level 1 heading (for global sidebars) or level 2 heading (for page level sidebars). -->
 
-### Figure tracking
+
+## Figure Inventory and Tracking
+
+
+
+```markdown
+## Master Figure Registry {.unnumbered .unlisted}
+
 
 
 <figure_syntax>
