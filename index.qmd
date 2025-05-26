@@ -18,10 +18,11 @@ numbering:
 
 # Abstract {#sec-abstract}
 
-```{=html}
+
 <!-- A concise overview highlighting the project's integration of frontier AI, Bayesian networks, and prediction markets to create a scalable framework for evaluating AI governance policies.
-Emphasize both technical contributions and policy relevance. -->
-```
+Emphasize both technical contributions and policy relevance.
+-->
+
 
 > The coordination crisis in AI governance presents a paradoxical challenge: unprecedented investment in AI safety coexists alongside fundamental coordination failures across technical, policy, and ethical domains. These divisions systematically increase existential risk. This thesis introduces AMTAIR (Automating Transformative AI Risk Modeling), a computational approach addressing this coordination failure by automating the extraction of probabilistic world models from AI safety literature using frontier language models. The system implements an end-to-end pipeline transforming unstructured text into interactive Bayesian networks through a novel two-stage extraction process that bridges communication gaps between stakeholders.
 
@@ -34,12 +35,13 @@ Emphasize both technical contributions and policy relevance. -->
 
 <!-- ## Illustrations and Terminology --- Quick References {.unnumbered} -->
 
-## **Acknowledgments**
+<!-- ## **Acknowledgments**
 
 -   Academic supervisor (Prof. Timo Speith) and institution (University of Bayreuth)\
 -   Research collaborators, especially those connected to the original MTAIR project\
 -   Technical advisors who provided feedback on implementation aspects\
 -   Personal supporters who enabled the research through encouragement and feedback
+ -->
 
 <!-- [ ] Ensure List of Tables is up-to-date -->
 
@@ -51,13 +53,13 @@ Emphasize both technical contributions and policy relevance. -->
 
 
 
-## List of Abbreviations {.unnumbered}
+<!-- ## List of Abbreviations {.unnumbered} -->
 
 <!-- [ ] Replace Placeholder List of Abbreviations with native Quarto Glossary -->
 
 
 <!-- [-] COMPLETED: Comprehensive abbreviation list -->
-
+<!-- 
 - AGI - Artificial General Intelligence
 - AMTAIR - Automating Modeling of Transformative AI Risks
 - API - Application Programming Interface
@@ -68,6 +70,7 @@ Emphasize both technical contributions and policy relevance. -->
 - LLM - Large Language Model
 - MTAIR - Modeling Transformative AI Risks
 - TAI - Transformative Artificial Intelligence
+-->
 
 ## Glossary {.unnumbered .unlisted}
 

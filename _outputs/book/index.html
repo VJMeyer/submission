@@ -154,7 +154,7 @@ ul.task-list li input[type="checkbox"] {
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./chapters/Outlines/final_draft.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Final Thesis: Automating the Modeling of Transformative Artificial Intelligence Risks</span></span></a>
+ <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Automating the Modeling of Transformative Artificial Intelligence Risks</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
@@ -196,11 +196,7 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">Table of contents</h2>
    
   <ul>
-  <li><a href="#sec-abstract" id="toc-sec-abstract" class="nav-link active" data-scroll-target="#sec-abstract"><span class="header-section-number">1</span> Abstract</a>
-  <ul>
-  <li><a href="#acknowledgments" id="toc-acknowledgments" class="nav-link" data-scroll-target="#acknowledgments"><span class="header-section-number">1.1</span> <strong>Acknowledgments</strong></a></li>
-  <li><a href="#list-of-abbreviations" id="toc-list-of-abbreviations" class="nav-link" data-scroll-target="#list-of-abbreviations">List of Abbreviations</a></li>
-  </ul></li>
+  <li><a href="#sec-abstract" id="toc-sec-abstract" class="nav-link active" data-scroll-target="#sec-abstract"><span class="header-section-number">1</span> Abstract</a></li>
   </ul>
 <div class="toc-actions"><ul><li><a href="https://github.com/VJMeyer/submission/edit/main/index.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li></ul></div><div class="quarto-code-links"><h2>Code Links</h2><ul><li><a href="https://colab.research.google.com/github/VJMeyer/submission/blob/main/AMTAIR_Prototype/data/example_carlsmith/AMTAIR_Prototype_example_carlsmith.ipynb"><i class="bi bi-file-code"></i>Colab Notebook (Manual Link in .yml)</a></li><li><a href="https://github.com/VJMeyer/submission"><i class="bi bi-github"></i>GitHub Repository</a></li></ul></div></nav>
     </div>
@@ -249,7 +245,8 @@ ul.task-list li input[type="checkbox"] {
 <section id="sec-abstract" class="level1" data-number="1">
 <h1 data-number="1"><span class="header-section-number">1</span> Abstract</h1><p><img src="images/cover.png" title="Automating the Modelling of Transformative Artificial Intelligence Risks" class="quarto-cover-image nolightbox img-fluid"></p>
 <!-- A concise overview highlighting the project's integration of frontier AI, Bayesian networks, and prediction markets to create a scalable framework for evaluating AI governance policies.
-Emphasize both technical contributions and policy relevance. -->
+Emphasize both technical contributions and policy relevance.
+-->
 <blockquote class="blockquote">
 <p>The coordination crisis in AI governance presents a paradoxical challenge: unprecedented investment in AI safety coexists alongside fundamental coordination failures across technical, policy, and ethical domains. These divisions systematically increase existential risk. This thesis introduces AMTAIR (Automating Transformative AI Risk Modeling), a computational approach addressing this coordination failure by automating the extraction of probabilistic world models from AI safety literature using frontier language models. The system implements an end-to-end pipeline transforming unstructured text into interactive Bayesian networks through a novel two-stage extraction process that bridges communication gaps between stakeholders.</p>
 </blockquote>
@@ -257,39 +254,32 @@ Emphasize both technical contributions and policy relevance. -->
 <!-- [ ] Add key quantitative results and validation findings to Abstract-->
 <!-- # Prefatory Apparatus: Frontmatter {.unnumbered} -->
 <!-- ## Illustrations and Terminology --- Quick References {.unnumbered} -->
-<section id="acknowledgments" class="level2" data-number="1.1">
-<h2 data-number="1.1" class="anchored" data-anchor-id="acknowledgments"><span class="header-section-number">1.1</span> <strong>Acknowledgments</strong></h2>
-<ul>
-<li>Academic supervisor (Prof.&nbsp;Timo Speith) and institution (University of Bayreuth)<br>
-</li>
-<li>Research collaborators, especially those connected to the original MTAIR project<br>
-</li>
-<li>Technical advisors who provided feedback on implementation aspects<br>
-</li>
-<li>Personal supporters who enabled the research through encouragement and feedback</li>
-</ul>
+<!-- ## **Acknowledgments**
+
+-   Academic supervisor (Prof. Timo Speith) and institution (University of Bayreuth)\
+-   Research collaborators, especially those connected to the original MTAIR project\
+-   Technical advisors who provided feedback on implementation aspects\
+-   Personal supporters who enabled the research through encouragement and feedback
+ -->
 <!-- [ ] Ensure List of Tables is up-to-date -->
 <!-- ## List of Graphics & Figures {.unnumbered} -->
 <!-- [ ] Replace Placeholder List of Graphics & Figures with native Quarto LoF -->
 <!-- [ ] Populate List of Graphics & Figures with the actual figures from thesis -->
-</section>
-<section id="list-of-abbreviations" class="level2 unnumbered">
-<h2 class="unnumbered anchored" data-anchor-id="list-of-abbreviations">List of Abbreviations</h2>
+<!-- ## List of Abbreviations {.unnumbered} -->
 <!-- [ ] Replace Placeholder List of Abbreviations with native Quarto Glossary -->
 <!-- [-] COMPLETED: Comprehensive abbreviation list -->
-<ul>
-<li>AGI - Artificial General Intelligence</li>
-<li>AMTAIR - Automating Modeling of Transformative AI Risks</li>
-<li>API - Application Programming Interface</li>
-<li>APS - Advanced, Planning, Strategic</li>
-<li>BN - Bayesian Network</li>
-<li>CPT - Conditional Probability Table</li>
-<li>DAG - Directed Acyclic Graph</li>
-<li>LLM - Large Language Model</li>
-<li>MTAIR - Modeling Transformative AI Risks</li>
-<li>TAI - Transformative Artificial Intelligence</li>
-</ul>
-</section>
+<!-- 
+- AGI - Artificial General Intelligence
+- AMTAIR - Automating Modeling of Transformative AI Risks
+- API - Application Programming Interface
+- APS - Advanced, Planning, Strategic 
+- BN - Bayesian Network
+- CPT - Conditional Probability Table
+- DAG - Directed Acyclic Graph
+- LLM - Large Language Model
+- MTAIR - Modeling Transformative AI Risks
+- TAI - Transformative Artificial Intelligence
+-->
 <section id="glossary" class="level2 unnumbered unlisted">
 <h2 class="unnumbered unlisted anchored" data-anchor-id="glossary">Glossary</h2>
 <!-- [ ] Replace Placeholder Glossary with native Quarto Glossary -->
@@ -724,8 +714,8 @@ Emphasize both technical contributions and policy relevance. -->
   <div class="nav-page nav-page-previous">
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./chapters/Outlines/final_draft.html" class="pagination-link" aria-label="Final Thesis: Automating the Modeling of Transformative Artificial Intelligence Risks">
-        <span class="nav-page-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Final Thesis: Automating the Modeling of Transformative Artificial Intelligence Risks</span></span> <i class="bi bi-arrow-right-short"></i>
+      <a href="./chapters/Outlines/final_draft.html" class="pagination-link" aria-label="Automating the Modeling of Transformative Artificial Intelligence Risks">
+        <span class="nav-page-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Automating the Modeling of Transformative Artificial Intelligence Risks</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>

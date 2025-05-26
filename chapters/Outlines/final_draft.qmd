@@ -1,4 +1,4 @@
-# Final Thesis: Automating the Modeling of Transformative Artificial Intelligence Risks
+# Automating the Modeling of Transformative Artificial Intelligence Risks
 
 ## Frontmatter: Preface
 
@@ -16,7 +16,7 @@ I hope this work contributes to building the intellectual and technical infrastr
 
 I thank my supervisor Dr. Timo Speith for his guidance throughout this project, providing both technical insights and philosophical grounding. The MTAIR team's pioneering manual approach inspired this automation effort, and I am grateful for their foundational work.
 
-<!-- [-] ADD CONDITIONAL ON INCLUSION OF EXTRA EXTRACTION SECTION: Mention/Acknowledgement of Johannes Meyer and Jelena Meyer for their help to verify the automated extraction procedure by manually extracting the argdown and bayesdown data from the carlsmith paper (AND extra, other second paper) -->
+<!-- [ ] ADD CONDITIONAL ON INCLUSION OF EXTRA EXTRACTION SECTION: Mention/Acknowledgement of Johannes Meyer and Jelena Meyer for their help to verify the automated extraction procedure by manually extracting the argdown and bayesdown data from the carlsmith paper (AND extra, other second paper) -->
 
 I acknowledge Johannes Meyer and Jelena Meyer for their invaluable assistance in verifying the automated extraction procedure through manual extraction of ArgDown and BayesDown data from the Carlsmith paper, providing crucial ground truth for validation.
 
@@ -26,11 +26,15 @@ Any errors or limitations remain my own responsibility.
 
 ## List of Figures
 
-<!-- [-] LATER VERIFY: Verify all figures are properly labeled and captioned --> <!-- Quarto auto-generates LOF -->
+<!-- [-] LATER VERIFY: Verify all figures are properly labeled and captioned --> 
+
+<!-- Quarto auto-generates LOF -->
 
 ## List of Tables
 
-<!-- [-] LATER VERIFY: Ensure all tables have proper captions --> <!-- Quarto auto-generates LOT -->
+<!-- [-] LATER VERIFY: Ensure all tables have proper captions --> 
+
+<!-- Quarto auto-generates LOT -->
 
 ## List of Abbreviations
 
@@ -273,16 +277,16 @@ To ground our discussion in concrete terms, I examine Joseph Carlsmith's "Is Pow
 
 According to the MTAIR model @clarke2022, Carlsmith decomposes existential risk into a probabilistic chain with explicit estimates^[Multiple versions of Carlsmith's paper exist with slight updates to probability estimates: @carlsmith2021, @carlsmith2022, @carlsmith2024. We primarily reference the version used by the MTAIR team for their extraction. Extended discussion and expert probability estimates can be found on LessWrong.]:
 
-1. **Premise 1**: Transformative AI development this century (P≈0.80)(P ≈ 0.80) (P≈0.80)
-2. **Premise 2**: AI systems pursuing objectives in the world (P≈0.95)(P ≈ 0.95) (P≈0.95)
-3. **Premise 3**: Systems with power-seeking instrumental incentives (P≈0.40)(P ≈ 0.40) (P≈0.40)
-4. **Premise 4**: Sufficient capability for existential threat (P≈0.65)(P ≈ 0.65) (P≈0.65)
-5. **Premise 5**: Misaligned systems despite safety efforts (P≈0.50)(P ≈ 0.50) (P≈0.50)
-6. **Premise 6**: Catastrophic outcomes from misaligned power-seeking (P≈0.65)(P ≈ 0.65) (P≈0.65)
+1. **Premise 1**: Transformative AI development this century `(P≈0.80)`
+2. **Premise 2**: AI systems pursuing objectives in the world `(P≈0.95)`
+3. **Premise 3**: Systems with power-seeking instrumental incentives `(P≈0.40)`
+4. **Premise 4**: Sufficient capability for existential threat `(P≈0.65)`
+5. **Premise 5**: Misaligned systems despite safety efforts `(P≈0.50)`
+6. **Premise 6**: Catastrophic outcomes from misaligned power-seeking `(P≈0.65)`
 
-**Composite Risk Calculation**: P(doom)≈0.05P(doom) ≈ 0.05 P(doom)≈0.05 (5%)
+**Composite Risk Calculation**: `P(doom)≈0.05 (5%)`
 
-<!-- [-] CREATE: Mermaid flowchart of Carlsmith model with probabilities (in correct Quarto Syntax)-->
+<!-- [ ] REPAIR: Mermaid flowchart of Carlsmith model with probabilities (in correct Quarto Syntax)-->
 
 mermaid
 
@@ -298,19 +302,19 @@ flowchart TD
 
 Carlsmith structures his argument through six conditional premises, each assigned explicit probability estimates:
 
-**Premise 1: APS Systems by 2070** (P≈0.65)(P ≈ 0.65) (P≈0.65) "By 2070, there will be AI systems with Advanced capability, Agentic planning, and Strategic awareness"—the conjunction of capabilities that could enable systematic pursuit of objectives in the world.
+**Premise 1: APS Systems by 2070** `(P≈0.65)` "By 2070, there will be AI systems with Advanced capability, Agentic planning, and Strategic awareness"—the conjunction of capabilities that could enable systematic pursuit of objectives in the world.
 
-**Premise 2: Alignment Difficulty** (P≈0.40)(P ≈ 0.40) (P≈0.40) "It will be harder to build aligned APS systems than misaligned systems that are still attractive to deploy"—capturing the challenge that safety may conflict with capability or efficiency.
+**Premise 2: Alignment Difficulty** `(P≈0.40)` "It will be harder to build aligned APS systems than misaligned systems that are still attractive to deploy"—capturing the challenge that safety may conflict with capability or efficiency.
 
-**Premise 3: Deployment Despite Misalignment** (P≈0.70)(P ≈ 0.70) (P≈0.70) "Conditional on 1 and 2, we will deploy misaligned APS systems"—reflecting competitive pressures and limited coordination.
+**Premise 3: Deployment Despite Misalignment** `(P≈0.70)` "Conditional on 1 and 2, we will deploy misaligned APS systems"—reflecting competitive pressures and limited coordination.
 
-**Premise 4: Power-Seeking Behavior** (P≈0.65)(P ≈ 0.65) (P≈0.65) "Conditional on 1-3, misaligned APS systems will seek power in high-impact ways"—based on instrumental convergence arguments.
+**Premise 4: Power-Seeking Behavior** `(P≈0.65)` "Conditional on 1-3, misaligned APS systems will seek power in high-impact ways"—based on instrumental convergence arguments.
 
-**Premise 5: Disempowerment Success** (P≈0.40)(P ≈ 0.40) (P≈0.40) "Conditional on 1-4, power-seeking will scale to permanent human disempowerment"—despite potential resistance and safeguards.
+**Premise 5: Disempowerment Success** `(P≈0.40)` "Conditional on 1-4, power-seeking will scale to permanent human disempowerment"—despite potential resistance and safeguards.
 
-**Premise 6: Existential Catastrophe** (P≈0.95)(P ≈ 0.95) (P≈0.95) "Conditional on 1-5, this disempowerment constitutes existential catastrophe"—connecting power loss to permanent curtailment of human potential.
+**Premise 6: Existential Catastrophe** `(P≈0.95)` "Conditional on 1-5, this disempowerment constitutes existential catastrophe"—connecting power loss to permanent curtailment of human potential.
 
-**Overall Risk**: Multiplying through the conditional chain yields P(doom)≈0.05P(doom) ≈ 0.05 P(doom)≈0.05 or 5% by 2070.
+**Overall Risk**: Multiplying through the conditional chain yields `P(doom)≈0.05 ` or 5% by 2070.
 
 This structured approach exemplifies the type of reasoning AMTAIR aims to formalize and automate. While Carlsmith spent months developing this model manually, similar rigor exists implicitly in many AI safety arguments awaiting extraction.
 
@@ -1741,7 +1745,7 @@ The perfect shouldn't be the enemy of the good—simple integration beats no int
 
 <!-- [-] COMPLETED: Added market challenges -->
 
-## 3.10 Computational Performance Analysis {#sec-computational-performance}
+## 3.10 Computational Performance Analysis {#sec-computational-performance-analysis}
 
 <!-- [-] TODO: Analyze the computational efficiency of the system -->
 
