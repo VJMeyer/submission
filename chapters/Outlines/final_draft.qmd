@@ -321,7 +321,7 @@ This structured approach exemplifies the type of reasoning AMTAIR aims to formal
 <!-- [-] TODO: Verify manual extraction of Carlsmith model for ground truth with Ella and Johannes -->
 
 ### 2.1.2 Why Carlsmith Exemplifies Formalizable Arguments
-
+<!-- [ ] Use as footnote description for enumeration above -->
 Carlsmith's model demonstrates several features that make it ideal for formal representation:
 
 **Explicit Probabilistic Structure**: Each premise receives numerical probability estimates with documented reasoning, enabling direct translation to Bayesian network parameters.
@@ -540,7 +540,7 @@ Show Image
 
 #### Rain-Sprinkler-Grass Network Rendering
 
-```
+```python
 #| label: rain_sprinkler_grass_example_network_rendering
 #| echo: true
 #| eval: true
@@ -564,7 +564,7 @@ These features address key requirements for AI governance:
 
 
 
-{{< pagebreak >}}
+
 
 
 ### 2.3.3 Advantages for AI Risk Modeling {#sec-modeling-advantages}
@@ -1039,7 +1039,7 @@ But extraction goes beyond simple pattern matching. The system must handle compl
 
 The output, formatted in ArgDown syntax, preserves both structure and semantics:
 
-```
+```markdown
 [Existential_Risk]: Threat to humanity's continued existence and flourishing.
  + [Power_Seeking_Behavior]: AI systems pursuing instrumental goals like resource acquisition.
    + [Intelligence_Explosion]: Rapid recursive self-improvement leading to superintelligence.
@@ -1286,7 +1286,7 @@ The successfully processed rain-sprinkler-grass example demonstrates several key
 
 **Inference Capability**: The system correctly calculates derived probabilities like P(Rain|Grass_Wet)—the diagnostic reasoning from effect to cause that makes Bayesian networks so powerful.
 
-This simple example validates the basic pipeline functionality. But the real test comes with complex, real-world arguments...
+This simple example validates the basic pipeline functionality. But the real test comes with complex, real-world arguments ...
 
 <!-- [-] COMPLETED: Added results -->
 
