@@ -1,3 +1,5 @@
+# Bucknall
+```
 [Existential_Risk]: Increase in probability of an existential catastrophe for humanity. {"instantiations": ["risk_HIGH", "risk_LOW"]}
   + [Unaligned_AGI_Risk]: Probability that a misaligned artificial general intelligence causes catastrophe. {"instantiations": ["agi_risk_HIGH", "agi_risk_LOW"]}
     + [State-State_Relations]: Degree of AI-driven geopolitical tension and arms-race dynamics between states. {"instantiations": ["tension_HIGH", "tension_LOW"]}
@@ -22,3 +24,4 @@
       + [Current_NearTerm_AI]
   + [General_Diverted_Resources]: Political and economic resources diverted from risk mitigation toward AI competition. {"instantiations": ["resources_DIVERTED", "resources_ALIGNED"]}
     + [State-State_Relations]
+```
