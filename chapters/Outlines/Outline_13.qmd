@@ -1514,7 +1514,7 @@ The data processing pipeline:
 python
 
 
-<!-- [ ] CODE CHANGE -->
+
 ```python
 def integrate_forecast_data(model_variables, forecast_platforms):
     """Connect Bayesian network variables to live forecasting data"""
@@ -1984,6 +1984,9 @@ The source BayesDown syntax representating the fully specified network:
 ### 3.4.3 Results {#sec-rsg-results}
 
 ### Rain-Sprinkler-Grass Network Rendering
+
+
+
 ```{python}
 #| label: rain_sprinkler_grass_example_network_rendering2
 #| echo: true
@@ -2033,6 +2036,9 @@ The system successfully extracts complete network structure, preserves all proba
 <!-- [ ] TODO: Introduce and refine walkthrough of the pipeline with the more complex Carlsmith model -->
 
 Applying AMTAIR to Carlsmith's model demonstrates scalability to realistic AI safety arguments.
+
+
+
 
 ### 3.5.1 Model Complexity {#sec-carlsmith-complexity}
 
@@ -2159,6 +2165,7 @@ These insights emerge naturally from formal analysis but remain implicit in text
 <!-- [ ] TODO: Present results comparing automated extraction to manual annotation -->
 
 Establishing trust in automated extraction requires rigorous validation across multiple dimensions.
+
 
 ### 3.6.1 Ground Truth Construction {#sec-ground-truth}
 <!-- [ ] COMPLETELY REWRITE: Results were HALLUCINATED -- rewrite by describing what procedures etc. one would ideally follow 

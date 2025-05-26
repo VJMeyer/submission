@@ -78,7 +78,7 @@ div.csl-indent {
 }</style>
 
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg==" crossorigin="anonymous"></script><script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg==" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg==" crossorigin="anonymous"></script><script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
 <script src="../../site_libs/quarto-nav/headroom.min.js"></script>
 <script src="../../site_libs/clipboard/clipboard.min.js"></script>
 <script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
@@ -124,6 +124,9 @@ div.csl-indent {
     "search-label": "Search"
   }
 }</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.6/require.min.js" integrity="sha512-c3Nl8+7g4LMSTdrm621y7kf9v3SDPnhxLNhcjFJbKECVnmZHTdo+IRO05sNLTH/D3vA6u1X32ehoLC7WFVdheg==" crossorigin="anonymous"></script>
+
+<script type="application/javascript">define('jquery', [],function() {return window.jQuery;})</script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.6/require.min.js" integrity="sha512-c3Nl8+7g4LMSTdrm621y7kf9v3SDPnhxLNhcjFJbKECVnmZHTdo+IRO05sNLTH/D3vA6u1X32ehoLC7WFVdheg==" crossorigin="anonymous"></script>
 
 <script type="application/javascript">define('jquery', [],function() {return window.jQuery;})</script>
@@ -249,29 +252,6 @@ window.Quarto = {
  <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">References (.md)</span></span></a>
   </div>
 </li>
-        <li class="sidebar-item sidebar-item-section">
-      <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true">
- <span class="menu-text">Appendices</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true" aria-label="Toggle section">
-            <i class="bi bi-chevron-right ms-2"></i>
-          </a> 
-      </div>
-      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../chapters/I.Appendices.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">A</span>&nbsp; <span class="chapter-title">Appendices</span></span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../AMTAIR_Prototype/data/example_carlsmith/AMTAIR_Prototype_example_carlsmith.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">B</span>&nbsp; <span class="chapter-title"></span></span></a><a href="https://colab.research.google.com/github/SingularitySmith/AMTAIR_Prototype/blob/main/version_history/AMTAIR_Prototype_0_1.3.ipynb#scrollTo=lt8-AnebGUXr">AMTAIR Prototype Demonstration (Public Colab Notebook)</a>
-  </div>
-</li>
-      </ul>
-  </li>
     </ul>
     </div>
 </nav>
@@ -320,7 +300,8 @@ window.Quarto = {
   <ul>
   <li><a href="#sec-ai-governance-unique" id="toc-sec-ai-governance-unique" class="nav-link" data-scroll-target="#sec-ai-governance-unique">2.2.1 Unique Characteristics of AI Governance</a></li>
   <li><a href="#sec-traditional-limitations" id="toc-sec-traditional-limitations" class="nav-link" data-scroll-target="#sec-traditional-limitations">2.2.2 Limitations of Traditional Approaches</a></li>
-  <li><a href="#sec-new-epistemic-tools" id="toc-sec-new-epistemic-tools" class="nav-link" data-scroll-target="#sec-new-epistemic-tools">2.2.3 Toward New Epistemic Tools</a></li>
+  <li><a href="#the-underlying-epistemic-framework" id="toc-the-underlying-epistemic-framework" class="nav-link" data-scroll-target="#the-underlying-epistemic-framework">2.2.3 The Underlying Epistemic Framework</a></li>
+  <li><a href="#sec-new-epistemic-tools" id="toc-sec-new-epistemic-tools" class="nav-link" data-scroll-target="#sec-new-epistemic-tools">2.2.4 Toward New Epistemic Tools</a></li>
   </ul></li>
   <li><a href="#sec-bayesian-networks" id="toc-sec-bayesian-networks" class="nav-link" data-scroll-target="#sec-bayesian-networks">2.3 Bayesian Networks as Knowledge Representation</a>
   <ul>
@@ -404,6 +385,14 @@ window.Quarto = {
   <li><a href="#sec-evaluation-metrics" id="toc-sec-evaluation-metrics" class="nav-link" data-scroll-target="#sec-evaluation-metrics">3.6.2 Evaluation Metrics</a></li>
   <li><a href="#sec-validation-results" id="toc-sec-validation-results" class="nav-link" data-scroll-target="#sec-validation-results">3.6.3 Results Summary</a></li>
   <li><a href="#sec-error-analysis" id="toc-sec-error-analysis" class="nav-link" data-scroll-target="#sec-error-analysis">3.6.4 Error Analysis</a></li>
+  </ul></li>
+  <li><a href="#extensions-opportunities" id="toc-extensions-opportunities" class="nav-link" data-scroll-target="#extensions-opportunities">3.7 Extensions &amp; Opportunities</a>
+  <ul>
+  <li><a href="#overview-of-practical-software-implementations" id="toc-overview-of-practical-software-implementations" class="nav-link" data-scroll-target="#overview-of-practical-software-implementations">3.7.1 Overview of Practical Software Implementations</a></li>
+  <li><a href="#section" id="toc-section" class="nav-link" data-scroll-target="#section">3.7.2</a></li>
+  <li><a href="#pdoom-calculator" id="toc-pdoom-calculator" class="nav-link" data-scroll-target="#pdoom-calculator">3.7.3 P(Doom) Calculator</a></li>
+  <li><a href="#section-1" id="toc-section-1" class="nav-link" data-scroll-target="#section-1">3.7.4</a></li>
+  <li><a href="#section-2" id="toc-section-2" class="nav-link" data-scroll-target="#section-2">3.7.5</a></li>
   </ul></li>
   <li><a href="#sec-policy-evaluation" id="toc-sec-policy-evaluation" class="nav-link" data-scroll-target="#sec-policy-evaluation">3.7 Policy Evaluation Capabilities</a>
   <ul>
@@ -523,7 +512,38 @@ window.Quarto = {
   </ul></li>
   <li><a href="#sec-closing-reflections" id="toc-sec-closing-reflections" class="nav-link" data-scroll-target="#sec-closing-reflections">5.6 Closing Reflections</a></li>
   </ul></li>
-  <li><a href="#sec-references" id="toc-sec-references" class="nav-link" data-scroll-target="#sec-references">References</a></li>
+  <li><a href="#sec-references" id="toc-sec-references" class="nav-link" data-scroll-target="#sec-references">References</a>
+  <ul>
+  <li><a href="#amtair-thesis-relevant-literature-citations" id="toc-amtair-thesis-relevant-literature-citations" class="nav-link" data-scroll-target="#amtair-thesis-relevant-literature-citations">AMTAIR Thesis Relevant Literature &amp; Citations</a>
+  <ul>
+  <li><a href="#items-from-maref.bib" id="toc-items-from-maref.bib" class="nav-link" data-scroll-target="#items-from-maref.bib">Items from MAref.bib</a>
+  <ul>
+  <li><a href="#carlsmith2021-carlsmith2021" id="toc-carlsmith2021-carlsmith2021" class="nav-link" data-scroll-target="#carlsmith2021-carlsmith2021"><code>@carlsmith2021</code>: <span class="citation" data-cites="carlsmith2021">Carlsmith (2021)</span></a></li>
+  <li><a href="#bostrom2014-bostrom2014" id="toc-bostrom2014-bostrom2014" class="nav-link" data-scroll-target="#bostrom2014-bostrom2014"><code>@bostrom2014</code>: <span class="citation" data-cites="bostrom2014">Bostrom (2014)</span></a></li>
+  <li><a href="#clarke2022-clarke2022" id="toc-clarke2022-clarke2022" class="nav-link" data-scroll-target="#clarke2022-clarke2022"><code>@clarke2022</code>: <span class="citation" data-cites="clarke2022">Clarke et al. (2022)</span></a></li>
+  <li><a href="#pearl2009-and-pearl2000-pearl2000-and-pearl2009" id="toc-pearl2009-and-pearl2000-pearl2000-and-pearl2009" class="nav-link" data-scroll-target="#pearl2009-and-pearl2000-pearl2000-and-pearl2009"><code>@pearl2009</code> and <code>@pearl2000</code>: <span class="citation" data-cites="pearl2000">Pearl (2000)</span> and <span class="citation" data-cites="pearl2009">Pearl (2009)</span></a></li>
+  <li><a href="#jaynes2003-jaynes2003" id="toc-jaynes2003-jaynes2003" class="nav-link" data-scroll-target="#jaynes2003-jaynes2003"><code>@jaynes2003</code>: <span class="citation" data-cites="jaynes2003">Jaynes (2003)</span></a></li>
+  <li><a href="#tetlock2015-tetlock2015" id="toc-tetlock2015-tetlock2015" class="nav-link" data-scroll-target="#tetlock2015-tetlock2015"><code>@tetlock2015</code>: <span class="citation" data-cites="tetlock2015">Tetlock and Gardner (2015)</span></a></li>
+  <li><a href="#lempert2003-lempert2003" id="toc-lempert2003-lempert2003" class="nav-link" data-scroll-target="#lempert2003-lempert2003"><code>@lempert2003</code>: <span class="citation" data-cites="lempert2003">Lempert, Popper, and Bankes (2003)</span></a></li>
+  <li><a href="#good1966-good1966" id="toc-good1966-good1966" class="nav-link" data-scroll-target="#good1966-good1966"><code>@good1966</code>: <span class="citation" data-cites="good1966">Good (1966)</span></a></li>
+  <li><a href="#yudkowsky2008-yudkowsky2008" id="toc-yudkowsky2008-yudkowsky2008" class="nav-link" data-scroll-target="#yudkowsky2008-yudkowsky2008"><code>@yudkowsky2008</code>: <span class="citation" data-cites="yudkowsky2008">Yudkowsky (2008)</span></a></li>
+  <li><a href="#russell2015-russell2015" id="toc-russell2015-russell2015" class="nav-link" data-scroll-target="#russell2015-russell2015"><code>@russell2015</code>: <span class="citation" data-cites="russell2015">Russell et al. (2015)</span></a></li>
+  </ul></li>
+  </ul></li>
+  <li><a href="#new-suggested-citations" id="toc-new-suggested-citations" class="nav-link" data-scroll-target="#new-suggested-citations">New Suggested Citations</a>
+  <ul>
+  <li><a href="#new-items-to-consider" id="toc-new-items-to-consider" class="nav-link" data-scroll-target="#new-items-to-consider">New Items to Consider:</a>
+  <ul>
+  <li><a href="#amodei2016-amodei2016" id="toc-amodei2016-amodei2016" class="nav-link" data-scroll-target="#amodei2016-amodei2016"><code>@amodei2016</code>: <span class="citation" data-cites="amodei2016">Amodei et al. (2016)</span></a></li>
+  <li><a href="#christiano2019-christiano2019" id="toc-christiano2019-christiano2019" class="nav-link" data-scroll-target="#christiano2019-christiano2019"><code>@christiano2019</code>: <span class="citation" data-cites="christiano2019">Christiano (2019)</span></a></li>
+  <li><a href="#critch2019-critch2019" id="toc-critch2019-critch2019" class="nav-link" data-scroll-target="#critch2019-critch2019"><code>@critch2019</code>: <span class="citation" data-cites="critch2019">(<strong>critch2019?</strong>)</span></a></li>
+  <li><a href="#dafoe2018-and-updated-dafoe2021-dafoe2021-and-dafoe2018" id="toc-dafoe2018-and-updated-dafoe2021-dafoe2021-and-dafoe2018" class="nav-link" data-scroll-target="#dafoe2018-and-updated-dafoe2021-dafoe2021-and-dafoe2018"><code>@dafoe2018</code> and updated <code>@dafoe2021</code>: <span class="citation" data-cites="dafoe2021">Dafoe (2021)</span> and <span class="citation" data-cites="dafoe2018">Dafoe (2018)</span></a></li>
+  <li><a href="#askell2021-askell2021" id="toc-askell2021-askell2021" class="nav-link" data-scroll-target="#askell2021-askell2021"><code>@askell2021</code>: <span class="citation" data-cites="askell2021">Askell et al. (2021)</span></a></li>
+  </ul></li>
+  </ul></li>
+  <li><a href="#further-citations-to-integrate" id="toc-further-citations-to-integrate" class="nav-link" data-scroll-target="#further-citations-to-integrate">Further Citations to Integrate:</a></li>
+  </ul></li>
+  <li><a href="#current-bibliography" id="toc-current-bibliography" class="nav-link" data-scroll-target="#current-bibliography">CURRENT Bibliography</a></li>
   </ul>
 <div class="toc-actions"><ul><li><a href="https://github.com/VJMeyer/submission/edit/main/chapters/Outlines/Outline_13.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li></ul></div><div class="quarto-code-links"><h2>Code Links</h2><ul><li><a href="https://colab.research.google.com/github/VJMeyer/submission/blob/main/AMTAIR_Prototype/data/example_carlsmith/AMTAIR_Prototype_example_carlsmith.ipynb"><i class="bi bi-file-code"></i>Colab Notebook (Manual Link in .yml)</a></li><li><a href="https://github.com/VJMeyer/submission"><i class="bi bi-github"></i>GitHub Repository</a></li></ul></div></nav>
     </div>
@@ -841,6 +861,7 @@ Chapter Overview
 <strong>Requirements</strong>: Demonstrates understanding of relevant concepts, explains relevance, situates in debate, reconstructs arguments</p>
 </div>
 </div>
+<!-- [ ] INTRODUCE: Concise overview of the Literature, Concepts & Terminology introduced in this chapter/thesis-->
 <!-- [ ] TODO: Create "Background Knowledge" footnotes for key concepts -->
 <section id="sec-carlsmith-model" class="level2">
 <h2 class="anchored" data-anchor-id="sec-carlsmith-model">2.1 AI Existential Risk: The Carlsmith Model</h2>
@@ -933,8 +954,22 @@ Chapter Overview
 -->
 <p><span class="citation" data-cites="hallegatte2012">Hallegatte et al. (<a href="Outline_13.html#ref-hallegatte2012" role="doc-biblioref">2012</a>)</span></p>
 </section>
+<section id="the-underlying-epistemic-framework" class="level3">
+<h3 class="anchored" data-anchor-id="the-underlying-epistemic-framework">2.2.3 The Underlying Epistemic Framework</h3>
+<!-- [ ] OUTLINE AND WRITE: this entire section about 
+
+Foundation
+
+Epistemic Framework — Probabilistic, Conditional, Possible Worlds
+
+— Probabilistic, Conditional, Possible Worlds
+
+
+<!-- [ ] DECIDE AND IMPLEMENT: Should this section be level 2 ?-->
+<p>–&gt;</p>
+</section>
 <section id="sec-new-epistemic-tools" class="level3">
-<h3 class="anchored" data-anchor-id="sec-new-epistemic-tools">2.2.3 Toward New Epistemic Tools</h3>
+<h3 class="anchored" data-anchor-id="sec-new-epistemic-tools">2.2.4 Toward New Epistemic Tools</h3>
 <!-- [ ] TODO: Bridge from limitations to the need for automated, computational approaches -->
 <p>The inadequacy of traditional methods for AI governance creates an urgent need for new epistemic tools. These tools must:</p>
 <ul>
@@ -980,6 +1015,7 @@ Key Insight
 
 -->
 <p><span class="citation" data-cites="gruetzemacher2022">Gruetzemacher (<a href="Outline_13.html#ref-gruetzemacher2022" role="doc-biblioref">2022</a>)</span></p>
+<!-- [ ] -->
 </section>
 </section>
 <section id="sec-bayesian-networks" class="level2">
@@ -1004,6 +1040,7 @@ P(X1,X2,...,Xn)=∏i=1nP(Xi∣Parents(Xi))P(X_1, X_2, ..., X_n) = \prod_{i=1}^{n
 </section>
 <section id="sec-rain-sprinkler-example" class="level3">
 <h3 class="anchored" data-anchor-id="sec-rain-sprinkler-example">2.3.2 The Rain-Sprinkler-Grass Example</h3>
+<!-- [ ] CHANGE ORDER: of Rain-sprinkler-grass example and argument mapping section-->
 <p>The canonical example illustrates key concepts:<a href="#fn2" class="footnote-ref" id="fnref2" role="doc-noteref"><sup>2</sup></a></p>
 <!-- [ ] EXPAND: Use this to elaborate and explain "from DAGs to Bayesian Networks" -->
 <pre><code>[Grass_Wet]: Concentrated moisture on grass. 
@@ -1117,6 +1154,26 @@ P(X1,X2,...,Xn)=∏i=1nP(Xi∣Parents(Xi))P(X_1, X_2, ..., X_n) = \prod_{i=1}^{n
  - [CounterArgument]: Evidence against the claim.</code></pre>
 <p>This notation captures argument structure while remaining human-readable and writable. Crucially, it serves as an intermediate representation between natural language and formal models.</p>
 <!-- [ ] CREATE: {#fig-argdown-example}: "Side-by-side comparison of text argument and ArgDown representation" -->
+<p>Argument mapping provides a bridge between natural language reasoning and formal probabilistic models, enabling the transformation of complex qualitative arguments into structured representations suitable for computational analysis. This section explores two key intermediate representations—ArgDown and BayesDown—that facilitate this transformation process.</p>
+<p>Argument maps are structured visualizations that represent the logical relationships between claims, evidence, and objections. Unlike free-form text, they make explicit how different statements support or challenge one another, forcing clarity about the logical structure of arguments. Traditional argument maps typically include:</p>
+<ul>
+<li>Statements (claims, premises, conclusions) presented as nodes</li>
+<li>Support and attack relationships shown as arrows between nodes</li>
+<li>Hierarchical organization reflecting logical dependencies</li>
+</ul>
+<p>These visualizations help identify unstated assumptions, circular reasoning, and gaps in argumentation. However, traditional argument mapping has limited expressivity for representing uncertainty—a crucial element in complex domains like AI risk assessment.</p>
+<p>ArgDown extends the concept of argument mapping into a structured text format with a consistent syntax. Developed by Christian Voigt with support from the Karlsruhe Institute of Technology, ArgDown provides a markdown-like notation for representing arguments in a hierarchical structure that can be automatically visualized and analyzed. The basic syntax is:</p>
+<p>argdown</p>
+<div class="sourceCode" id="cb6"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="ot">[Statement]: </span>Description of the statement.</span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a><span class="ss"> + </span><span class="co">[</span><span class="ot">Supporting_Statement</span><span class="co">]</span>: Description of supporting statement.</span>
+<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a><span class="ss">   + </span><span class="co">[</span><span class="ot">Further_Support</span><span class="co">]</span>: Description of additional support.</span>
+<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a><span class="ss"> - </span><span class="co">[</span><span class="ot">Opposing_Statement</span><span class="co">]</span>: Description of opposing statement.</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>For the AMTAIR project, we adapt ArgDown to focus on causal relationships rather than general argumentation, using a modified syntax where the hierarchical structure represents causal influence:</p>
+<div class="sourceCode" id="cb7"><pre class="sourceCode json code-with-copy"><code class="sourceCode json"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="ot">[</span><span class="er">Effect</span><span class="ot">]</span><span class="er">:</span> <span class="er">Description</span> <span class="er">of</span> <span class="er">effect.</span> <span class="fu">{</span><span class="dt">"instantiations"</span><span class="fu">:</span> <span class="ot">[</span><span class="st">"effect_TRUE"</span><span class="ot">,</span> <span class="st">"effect_FALSE"</span><span class="ot">]</span><span class="fu">}</span></span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a> <span class="er">+</span> <span class="ot">[</span><span class="er">Cause1</span><span class="ot">]</span><span class="er">:</span> <span class="er">Description</span> <span class="er">of</span> <span class="er">first</span> <span class="er">cause.</span> <span class="fu">{</span><span class="dt">"instantiations"</span><span class="fu">:</span> <span class="ot">[</span><span class="st">"cause1_TRUE"</span><span class="ot">,</span> <span class="st">"cause1_FALSE"</span><span class="ot">]</span><span class="fu">}</span></span>
+<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a> <span class="er">+</span> <span class="ot">[</span><span class="er">Cause2</span><span class="ot">]</span><span class="er">:</span> <span class="er">Description</span> <span class="er">of</span> <span class="er">second</span> <span class="er">cause.</span> <span class="fu">{</span><span class="dt">"instantiations"</span><span class="fu">:</span> <span class="ot">[</span><span class="st">"cause2_TRUE"</span><span class="ot">,</span> <span class="st">"cause2_FALSE"</span><span class="ot">]</span><span class="fu">}</span></span>
+<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a>   <span class="er">+</span> <span class="ot">[</span><span class="er">Root_Cause</span><span class="ot">]</span><span class="er">:</span> <span class="er">A</span> <span class="er">cause</span> <span class="er">that</span> <span class="er">influences</span> <span class="er">Cause2.</span> <span class="fu">{</span><span class="dt">"instantiations"</span><span class="fu">:</span> <span class="ot">[</span><span class="st">"root_TRUE"</span><span class="ot">,</span> <span class="st">"root_FALSE"</span><span class="ot">]</span><span class="fu">}</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>This adaptation adds metadata in JSON format to specify possible states (instantiations) of each variable, preparing the structure for probabilistic enhancement. The hierarchical relationships (indented with plus signs) represent causal influence, creating a directed graph structure.</p>
 </section>
 <section id="sec-bayesdown" class="level3">
 <h3 class="anchored" data-anchor-id="sec-bayesdown">2.4.3 BayesDown: The Bridge to Bayesian Networks</h3>
@@ -1124,14 +1181,27 @@ P(X1,X2,...,Xn)=∏i=1nP(Xi∣Parents(Xi))P(X_1, X_2, ..., X_n) = \prod_{i=1}^{n
 <!-- [ ] WRITE: Provide a detailed description and explanation of Bayesdown -->
 <div class="duplicate-content" data-source="Outline_11.7#bayesdown">
 <p>BayesDown extends ArgDown with probabilistic metadata:</p>
-<div class="sourceCode" id="cb6"><pre class="sourceCode json code-with-copy"><code class="sourceCode json"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="ot">[</span><span class="er">Node</span><span class="ot">]</span><span class="er">:</span> <span class="er">Description.</span> <span class="fu">{</span></span>
-<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>  <span class="dt">"instantiations"</span><span class="fu">:</span> <span class="ot">[</span><span class="st">"node_TRUE"</span><span class="ot">,</span> <span class="st">"node_FALSE"</span><span class="ot">]</span><span class="fu">,</span></span>
-<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a>  <span class="dt">"priors"</span><span class="fu">:</span> <span class="fu">{</span><span class="dt">"p(node_TRUE)"</span><span class="fu">:</span> <span class="st">"0.7"</span><span class="fu">,</span> <span class="dt">"p(node_FALSE)"</span><span class="fu">:</span> <span class="st">"0.3"</span><span class="fu">},</span></span>
-<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a>  <span class="dt">"posteriors"</span><span class="fu">:</span> <span class="fu">{</span></span>
-<span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a>    <span class="dt">"p(node_TRUE|parent_TRUE)"</span><span class="fu">:</span> <span class="st">"0.9"</span><span class="fu">,</span></span>
-<span id="cb6-6"><a href="#cb6-6" aria-hidden="true" tabindex="-1"></a>    <span class="dt">"p(node_TRUE|parent_FALSE)"</span><span class="fu">:</span> <span class="st">"0.4"</span></span>
-<span id="cb6-7"><a href="#cb6-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">}</span></span>
-<span id="cb6-8"><a href="#cb6-8" aria-hidden="true" tabindex="-1"></a><span class="fu">}</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb8"><pre class="sourceCode json code-with-copy"><code class="sourceCode json"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="ot">[</span><span class="er">Node</span><span class="ot">]</span><span class="er">:</span> <span class="er">Description.</span> <span class="fu">{</span></span>
+<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a>  <span class="dt">"instantiations"</span><span class="fu">:</span> <span class="ot">[</span><span class="st">"node_TRUE"</span><span class="ot">,</span> <span class="st">"node_FALSE"</span><span class="ot">]</span><span class="fu">,</span></span>
+<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a>  <span class="dt">"priors"</span><span class="fu">:</span> <span class="fu">{</span><span class="dt">"p(node_TRUE)"</span><span class="fu">:</span> <span class="st">"0.7"</span><span class="fu">,</span> <span class="dt">"p(node_FALSE)"</span><span class="fu">:</span> <span class="st">"0.3"</span><span class="fu">},</span></span>
+<span id="cb8-4"><a href="#cb8-4" aria-hidden="true" tabindex="-1"></a>  <span class="dt">"posteriors"</span><span class="fu">:</span> <span class="fu">{</span></span>
+<span id="cb8-5"><a href="#cb8-5" aria-hidden="true" tabindex="-1"></a>    <span class="dt">"p(node_TRUE|parent_TRUE)"</span><span class="fu">:</span> <span class="st">"0.9"</span><span class="fu">,</span></span>
+<span id="cb8-6"><a href="#cb8-6" aria-hidden="true" tabindex="-1"></a>    <span class="dt">"p(node_TRUE|parent_FALSE)"</span><span class="fu">:</span> <span class="st">"0.4"</span></span>
+<span id="cb8-7"><a href="#cb8-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">}</span></span>
+<span id="cb8-8"><a href="#cb8-8" aria-hidden="true" tabindex="-1"></a><span class="fu">}</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb9"><pre class="sourceCode json code-with-copy"><code class="sourceCode json"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="ot">[</span><span class="er">Node</span><span class="ot">]</span><span class="er">:</span> <span class="er">Description.</span> <span class="fu">{</span></span>
+<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a>  <span class="dt">"instantiations"</span><span class="fu">:</span> <span class="ot">[</span><span class="st">"node_TRUE"</span><span class="ot">,</span> <span class="st">"node_FALSE"</span><span class="ot">]</span><span class="fu">,</span></span>
+<span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a>  <span class="dt">"priors"</span><span class="fu">:</span> <span class="fu">{</span></span>
+<span id="cb9-4"><a href="#cb9-4" aria-hidden="true" tabindex="-1"></a>    <span class="dt">"p(node_TRUE)"</span><span class="fu">:</span> <span class="st">"0.7"</span><span class="fu">,</span></span>
+<span id="cb9-5"><a href="#cb9-5" aria-hidden="true" tabindex="-1"></a>    <span class="dt">"p(node_FALSE)"</span><span class="fu">:</span> <span class="st">"0.3"</span></span>
+<span id="cb9-6"><a href="#cb9-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">},</span></span>
+<span id="cb9-7"><a href="#cb9-7" aria-hidden="true" tabindex="-1"></a>  <span class="dt">"posteriors"</span><span class="fu">:</span> <span class="fu">{</span></span>
+<span id="cb9-8"><a href="#cb9-8" aria-hidden="true" tabindex="-1"></a>    <span class="dt">"p(node_TRUE|parent_TRUE)"</span><span class="fu">:</span> <span class="st">"0.9"</span><span class="fu">,</span></span>
+<span id="cb9-9"><a href="#cb9-9" aria-hidden="true" tabindex="-1"></a>    <span class="dt">"p(node_TRUE|parent_FALSE)"</span><span class="fu">:</span> <span class="st">"0.4"</span><span class="fu">,</span></span>
+<span id="cb9-10"><a href="#cb9-10" aria-hidden="true" tabindex="-1"></a>    <span class="dt">"p(node_FALSE|parent_TRUE)"</span><span class="fu">:</span> <span class="st">"0.1"</span><span class="fu">,</span></span>
+<span id="cb9-11"><a href="#cb9-11" aria-hidden="true" tabindex="-1"></a>    <span class="dt">"p(node_FALSE|parent_FALSE)"</span><span class="fu">:</span> <span class="st">"0.6"</span></span>
+<span id="cb9-12"><a href="#cb9-12" aria-hidden="true" tabindex="-1"></a>  <span class="fu">}</span></span>
+<span id="cb9-13"><a href="#cb9-13" aria-hidden="true" tabindex="-1"></a><span class="fu">}</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>This representation:</p>
 <ul>
@@ -1141,7 +1211,9 @@ P(X1,X2,...,Xn)=∏i=1nP(Xi∣Parents(Xi))P(X_1, X_2, ..., X_n) = \prod_{i=1}^{n
 <li><strong>Supports validation</strong> by maintaining traceability to sources</li>
 </ul>
 <p>The two-stage extraction process (ArgDown → BayesDown) separates concerns: first capturing structure, then quantifying relationships. This modularity enables human oversight at critical decision points.</p>
-<!-- [ ] ADD: bayesdown-syntax: Own creation (aspires to become a new standard based on ArgDown) "Link to full BayesDown specification in appendix" -->
+<!-- [ ] ADD: bayesdown-syntax is Own creation (aspires to become a new standard based on ArgDown) "Link to full BayesDown specification in appendix" -->
+<p>The intermediate representations (ArgDown and BayesDown) remain human-readable, maintaining the connection to the original arguments while enabling computational analysis.</p>
+<p>The key innovation in this approach is the separation of structure extraction from probability quantification, which aligns with how experts typically approach complex arguments. First, they identify what factors matter and how they relate causally, then they consider how probable different scenarios are based on those relationships. This two-stage process makes the extraction more robust and the resulting representations more interpretable.</p>
 </section>
 </section>
 <section id="sec-mtair-framework" class="level2">
@@ -1150,6 +1222,33 @@ P(X1,X2,...,Xn)=∏i=1nP(Xi∣Parents(Xi))P(X_1, X_2, ..., X_n) = \prod_{i=1}^{n
 <p>The Modeling Transformative AI Risks (MTAIR) project, led by RAND researchers, pioneered formal modeling of AI existential risk arguments. Understanding its approach and limitations motivates the automation efforts of AMTAIR.</p>
 <section id="sec-mtair-approach" class="level3">
 <h3 class="anchored" data-anchor-id="sec-mtair-approach">2.5.1 MTAIR’s Approach</h3>
+<p>The Modeling Transformative AI Risks (MTAIR) project, led by David Manheim and colleagues, represents a significant precursor to the current research. Launched in 2021, MTAIR aimed to create structured representations of existential risks from advanced AI using Bayesian networks, directed acyclic graphs, and probabilistic modeling. Understanding its achievements and limitations provides important context for the current AMTAIR approach.</p>
+<p>MTAIR emerged from the recognition that AI risk discussions often involved complex causal arguments with implicit probability judgments that were difficult to compare or integrate. By formalizing these arguments in structured models, the project sought to make assumptions explicit, enable quantitative analysis, and facilitate more productive discourse across different perspectives on AI risk.</p>
+<p>The framework’s key innovations included:</p>
+<ol type="1">
+<li><p><strong>Explicit representation of uncertainty through probability distributions:</strong> Rather than presenting point estimates, MTAIR captured uncertainty about parameters using distributions, acknowledging the significant uncertainty in AI risk assessment.</p></li>
+<li><p><strong>Hierarchical structure for complex scenarios:</strong> The approach used nested models that allowed exploration of different levels of detail, from high-level risk factors to specific technical mechanisms.</p></li>
+<li><p><strong>Integration of diverse expert judgments:</strong> The framework incorporated perspectives from various specialists, creating a more comprehensive view than any single expert could provide.</p></li>
+<li><p><strong>Sensitivity analysis methodology:</strong> MTAIR developed techniques for identifying which parameters most significantly affected risk estimates, helping prioritize research efforts.</p></li>
+</ol>
+<p>The project’s practical impact extended beyond its technical achievements. It influenced research prioritization by identifying critical uncertainties that warranted further investigation. It enhanced discourse quality by providing a shared vocabulary and structure for discussing causal pathways to risk. It also created visual representations that made complex arguments more accessible to stakeholders without technical backgrounds.</p>
+<p>Despite these achievements, MTAIR faced several important limitations:</p>
+<ol type="1">
+<li><p><strong>Manual labor intensity limiting scalability:</strong> Creating and updating models required substantial expert time, limiting the number and complexity of models that could be developed and maintained. As one team member noted, “It often took several days of work to formalize even relatively straightforward arguments.”</p></li>
+<li><p><strong>Static nature of models once constructed:</strong> The models were essentially snapshots that did not automatically update as new information emerged, requiring manual revision to remain current.</p></li>
+<li><p><strong>Limited accessibility for non-technical stakeholders:</strong> While visual representations improved accessibility, understanding and interacting with the models still required specialized knowledge.</p></li>
+<li><p><strong>Challenges in representing multiple worldviews simultaneously:</strong> Comparing different perspectives required creating separate models, making it difficult to identify specific points of agreement and disagreement.</p></li>
+</ol>
+<p>These limitations motivate the current research in automating the extraction and transformation process. As AI capabilities advance and the volume of relevant research grows, manual approaches cannot keep pace with the need for comprehensive, up-to-date models. Automation addresses the scalability limitation by dramatically reducing the time required to create formal representations of expert arguments.</p>
+<p>Moreover, incorporating frontier LLMs into the pipeline enables new capabilities that were not feasible in the original MTAIR framework. These include:</p>
+<ol type="1">
+<li>Processing larger volumes of literature to capture more diverse perspectives</li>
+<li>Generating intermediate representations that preserve narrative structure</li>
+<li>Automating the creation of probability questions based on model structure</li>
+<li>Facilitating integration with live data sources for continuous updates</li>
+</ol>
+<p>By building on MTAIR’s foundation while addressing its key limitations, the current research maintains continuity with established approaches to AI risk modeling while pushing the boundaries of what’s possible through automation and enhanced representation formats.</p>
+<p>The evolution from MTAIR to AMTAIR represents a natural progression: as the field matures and the challenges become more pressing, more sophisticated tools are needed to facilitate coordination and decision-making. Automation doesn’t replace expert judgment but amplifies it, allowing insights to be captured, formalized, and shared more efficiently across the AI governance community.</p>
 <div class="redundant-content" data-better-version="Outline_11.7#mtair-approach">
 <p>The Modeling Transformative AI Risks (MTAIR) project demonstrated the value of formal probabilistic modeling for AI safety, but also revealed significant limitations in the manual approach. While MTAIR successfully translated complex arguments into Bayesian networks and enabled sensitivity analysis, the intensive human labor required for model creation limited both scalability and timeliness.</p>
 </div>
@@ -1400,30 +1499,504 @@ The Two-Stage Extraction Process
 <p>AMTAIR employs a novel two-stage process that separates structural argument extraction from probability quantification, enabling modular improvement and human oversight at critical decision points.</p>
 </div>
 </div>
-<p><strong>Stage 1: Structural Extraction (ArgDown Generation)</strong></p>
-<p>python</p>
-<div class="sourceCode" id="cb7"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> extract_argument_structure(text):</span>
-<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a>    <span class="co">"""Extract hierarchical argument structure from natural language"""</span></span>
-<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a>    <span class="co"># LLM-based extraction with specialized prompts</span></span>
-<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a>    prompt <span class="op">=</span> ArgumentExtractionPrompt(</span>
-<span id="cb7-5"><a href="#cb7-5" aria-hidden="true" tabindex="-1"></a>        text<span class="op">=</span>text,</span>
-<span id="cb7-6"><a href="#cb7-6" aria-hidden="true" tabindex="-1"></a>        output_format<span class="op">=</span><span class="st">"ArgDown"</span>,</span>
-<span id="cb7-7"><a href="#cb7-7" aria-hidden="true" tabindex="-1"></a>        focus_areas<span class="op">=</span>[<span class="st">"causal_claims"</span>, <span class="st">"probability_statements"</span>, <span class="st">"conditional_reasoning"</span>]</span>
-<span id="cb7-8"><a href="#cb7-8" aria-hidden="true" tabindex="-1"></a>    )</span>
-<span id="cb7-9"><a href="#cb7-9" aria-hidden="true" tabindex="-1"></a>    </span>
-<span id="cb7-10"><a href="#cb7-10" aria-hidden="true" tabindex="-1"></a>    structure <span class="op">=</span> llm.complete(prompt)</span>
-<span id="cb7-11"><a href="#cb7-11" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> validate_argdown_syntax(structure)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<p><strong>Stage 2: Probability Integration (BayesDown Enhancement)</strong></p>
-<p>python</p>
-<div class="sourceCode" id="cb8"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> integrate_probabilities(argdown_structure, probability_sources):</span>
-<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a>    <span class="co">"""Convert ArgDown to BayesDown with probabilistic information"""</span></span>
-<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a>    questions <span class="op">=</span> generate_probability_questions(argdown_structure)</span>
-<span id="cb8-4"><a href="#cb8-4" aria-hidden="true" tabindex="-1"></a>    probabilities <span class="op">=</span> extract_probabilities(probability_sources, questions)</span>
-<span id="cb8-5"><a href="#cb8-5" aria-hidden="true" tabindex="-1"></a>    </span>
-<span id="cb8-6"><a href="#cb8-6" aria-hidden="true" tabindex="-1"></a>    bayesdown <span class="op">=</span> enhance_with_probabilities(argdown_structure, probabilities)</span>
-<span id="cb8-7"><a href="#cb8-7" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> validate_probability_coherence(bayesdown)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<!-- [ ] TODO: Document API call loops and prompt engineering details -->
-<!-- [ ] TODO: Include full probability extraction prompt template -->
+<p>The heart of the AMTAIR approach lies in its two-stage extraction process, which transforms unstructured text into structured probabilistic models through distinct steps that mirror human cognitive processes. This separation—extracting structure before probability—creates important advantages for automation quality, intermediate verification, and interpretability.</p>
+<p>When humans analyze complex arguments, they typically first determine what factors matter and how they relate causally, then assess how likely different scenarios are based on those relationships. A climate scientist reading a paper first identifies key variables (emissions, warming, effects) and their causal connections before estimating probabilities of outcomes. This natural cognitive sequence inspired AMTAIR’s two-stage approach.</p>
+<p><strong>Stage 1: Structure Extraction</strong> focuses on identifying key variables and their causal relationships from text, transforming unstructured arguments into ArgDown format. This process involves:</p>
+<ol type="1">
+<li><p><strong>Variable identification:</strong> Determining the key factors discussed in the text, including their possible states (e.g., whether a factor is present/absent or has multiple levels)</p></li>
+<li><p><strong>Relationship mapping:</strong> Establishing how variables influence each other, creating a directed graph of causal connections</p></li>
+<li><p><strong>Hierarchical organization:</strong> Arranging variables according to their causal relationships, from root causes to final effects</p></li>
+<li><p><strong>Metadata attachment:</strong> Annotating each variable with its description and possible states in structured JSON format</p></li>
+</ol>
+<p>The LLM prompt for this stage emphasizes clear identification of causal structure without requiring probability judgments, allowing the model to focus entirely on understanding “what affects what” in the text. This specialized prompt includes detailed instructions about ArgDown syntax, examples of well-formed representations, and guidance for preserving the author’s intended meaning.</p>
+<div class="quarto-embed-nb-cell" data-notebook="/Users/vjm/Library/Mobile Documents/iCloud~md~obsidian/Documents/Vaulty/2_DoingGood/Studies/P&amp;E/Specializations/Test_Sync_MAThesis/submission/AMTAIR_Prototype/data/example_carlsmith/AMTAIR_Prototype_example_carlsmith.ipynb" data-notebook-title="[AMTAIR Prototype Demonstration (Public Colab Notebook)](https://colab.research.google.com/github/SingularitySmith/AMTAIR_Prototype/blob/main/version_history/AMTAIR_Prototype_0_1.3.ipynb#scrollTo=lt8-AnebGUXr)" data-notebook-cellid="cell-parsing_argdown_bayesdown">
+<div id="parsing_argdown_bayesdown" class="cell" data-cellview="form">
+<details class="code-fold">
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb10"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="co"># @title 1.7.0 --- Parsing ArgDown &amp; BayesDown (.md to .csv) --- [parsing_argdown_bayesdown]</span></span>
+<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a><span class="co">"""</span></span>
+<span id="cb10-4"><a href="#cb10-4" aria-hidden="true" tabindex="-1"></a><span class="co">BLOCK PURPOSE: Provides the core parsing functionality for transforming ArgDown</span></span>
+<span id="cb10-5"><a href="#cb10-5" aria-hidden="true" tabindex="-1"></a><span class="co">and BayesDown text representations into structured DataFrame format for further</span></span>
+<span id="cb10-6"><a href="#cb10-6" aria-hidden="true" tabindex="-1"></a><span class="co">processing.</span></span>
+<span id="cb10-7"><a href="#cb10-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-8"><a href="#cb10-8" aria-hidden="true" tabindex="-1"></a><span class="co">This block implements the critical extraction pipeline described in the AMTAIR</span></span>
+<span id="cb10-9"><a href="#cb10-9" aria-hidden="true" tabindex="-1"></a><span class="co">project (see PY_TechnicalImplementation) that converts argument structures</span></span>
+<span id="cb10-10"><a href="#cb10-10" aria-hidden="true" tabindex="-1"></a><span class="co">into Bayesian networks.</span></span>
+<span id="cb10-11"><a href="#cb10-11" aria-hidden="true" tabindex="-1"></a><span class="co">The function can handle both basic ArgDown (structure-only) and</span></span>
+<span id="cb10-12"><a href="#cb10-12" aria-hidden="true" tabindex="-1"></a><span class="co">BayesDown (with probabilities).</span></span>
+<span id="cb10-13"><a href="#cb10-13" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-14"><a href="#cb10-14" aria-hidden="true" tabindex="-1"></a><span class="co">Key steps in the parsing process:</span></span>
+<span id="cb10-15"><a href="#cb10-15" aria-hidden="true" tabindex="-1"></a><span class="co">1. Remove comments from the markdown text</span></span>
+<span id="cb10-16"><a href="#cb10-16" aria-hidden="true" tabindex="-1"></a><span class="co">2. Extract titles, descriptions, and indentation levels</span></span>
+<span id="cb10-17"><a href="#cb10-17" aria-hidden="true" tabindex="-1"></a><span class="co">3. Establish parent-child relationships based on indentation</span></span>
+<span id="cb10-18"><a href="#cb10-18" aria-hidden="true" tabindex="-1"></a><span class="co">4. Convert the structured information into a DataFrame</span></span>
+<span id="cb10-19"><a href="#cb10-19" aria-hidden="true" tabindex="-1"></a><span class="co">5. Add derived columns for network analysis</span></span>
+<span id="cb10-20"><a href="#cb10-20" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-21"><a href="#cb10-21" aria-hidden="true" tabindex="-1"></a><span class="co">DEPENDENCIES: pandas, re, json libraries</span></span>
+<span id="cb10-22"><a href="#cb10-22" aria-hidden="true" tabindex="-1"></a><span class="co">INPUTS: Markdown text in ArgDown/BayesDown format</span></span>
+<span id="cb10-23"><a href="#cb10-23" aria-hidden="true" tabindex="-1"></a><span class="co">OUTPUTS: Structured DataFrame with node information, relationships, and properties</span></span>
+<span id="cb10-24"><a href="#cb10-24" aria-hidden="true" tabindex="-1"></a><span class="co">"""</span></span>
+<span id="cb10-25"><a href="#cb10-25" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-26"><a href="#cb10-26" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> parse_markdown_hierarchy_fixed(markdown_text, ArgDown<span class="op">=</span><span class="va">False</span>):</span>
+<span id="cb10-27"><a href="#cb10-27" aria-hidden="true" tabindex="-1"></a>    <span class="co">"""</span></span>
+<span id="cb10-28"><a href="#cb10-28" aria-hidden="true" tabindex="-1"></a><span class="co">    Parse ArgDown or BayesDown format into a structured DataFrame with parent-child relationships.</span></span>
+<span id="cb10-29"><a href="#cb10-29" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-30"><a href="#cb10-30" aria-hidden="true" tabindex="-1"></a><span class="co">    Args:</span></span>
+<span id="cb10-31"><a href="#cb10-31" aria-hidden="true" tabindex="-1"></a><span class="co">        markdown_text (str): Text in ArgDown or BayesDown format</span></span>
+<span id="cb10-32"><a href="#cb10-32" aria-hidden="true" tabindex="-1"></a><span class="co">        ArgDown (bool): If True, extracts only structure without probabilities</span></span>
+<span id="cb10-33"><a href="#cb10-33" aria-hidden="true" tabindex="-1"></a><span class="co">                        If False, extracts both structure and probability information</span></span>
+<span id="cb10-34"><a href="#cb10-34" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-35"><a href="#cb10-35" aria-hidden="true" tabindex="-1"></a><span class="co">    Returns:</span></span>
+<span id="cb10-36"><a href="#cb10-36" aria-hidden="true" tabindex="-1"></a><span class="co">        pandas.DataFrame: Structured data with node information, relationships, and attributes</span></span>
+<span id="cb10-37"><a href="#cb10-37" aria-hidden="true" tabindex="-1"></a><span class="co">    """</span></span>
+<span id="cb10-38"><a href="#cb10-38" aria-hidden="true" tabindex="-1"></a>    <span class="co"># PHASE 1: Clean and prepare the text</span></span>
+<span id="cb10-39"><a href="#cb10-39" aria-hidden="true" tabindex="-1"></a>    clean_text <span class="op">=</span> remove_comments(markdown_text)</span>
+<span id="cb10-40"><a href="#cb10-40" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-41"><a href="#cb10-41" aria-hidden="true" tabindex="-1"></a>    <span class="co"># PHASE 2: Extract basic information about nodes</span></span>
+<span id="cb10-42"><a href="#cb10-42" aria-hidden="true" tabindex="-1"></a>    titles_info <span class="op">=</span> extract_titles_info(clean_text)</span>
+<span id="cb10-43"><a href="#cb10-43" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-44"><a href="#cb10-44" aria-hidden="true" tabindex="-1"></a>    <span class="co"># PHASE 3: Determine the hierarchical relationships</span></span>
+<span id="cb10-45"><a href="#cb10-45" aria-hidden="true" tabindex="-1"></a>    titles_with_relations <span class="op">=</span> establish_relationships_fixed(titles_info, clean_text)</span>
+<span id="cb10-46"><a href="#cb10-46" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-47"><a href="#cb10-47" aria-hidden="true" tabindex="-1"></a>    <span class="co"># PHASE 4: Convert to structured DataFrame format</span></span>
+<span id="cb10-48"><a href="#cb10-48" aria-hidden="true" tabindex="-1"></a>    df <span class="op">=</span> convert_to_dataframe(titles_with_relations, ArgDown)</span>
+<span id="cb10-49"><a href="#cb10-49" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-50"><a href="#cb10-50" aria-hidden="true" tabindex="-1"></a>    <span class="co"># PHASE 5: Add derived columns for analysis</span></span>
+<span id="cb10-51"><a href="#cb10-51" aria-hidden="true" tabindex="-1"></a>    df <span class="op">=</span> add_no_parent_no_child_columns_to_df(df)</span>
+<span id="cb10-52"><a href="#cb10-52" aria-hidden="true" tabindex="-1"></a>    df <span class="op">=</span> add_parents_instantiation_columns_to_df(df)</span>
+<span id="cb10-53"><a href="#cb10-53" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-54"><a href="#cb10-54" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> df</span>
+<span id="cb10-55"><a href="#cb10-55" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-56"><a href="#cb10-56" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> remove_comments(markdown_text):</span>
+<span id="cb10-57"><a href="#cb10-57" aria-hidden="true" tabindex="-1"></a>    <span class="co">"""</span></span>
+<span id="cb10-58"><a href="#cb10-58" aria-hidden="true" tabindex="-1"></a><span class="co">    Remove comment blocks from markdown text using regex pattern matching.</span></span>
+<span id="cb10-59"><a href="#cb10-59" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-60"><a href="#cb10-60" aria-hidden="true" tabindex="-1"></a><span class="co">    Args:</span></span>
+<span id="cb10-61"><a href="#cb10-61" aria-hidden="true" tabindex="-1"></a><span class="co">        markdown_text (str): Text containing potential comment blocks</span></span>
+<span id="cb10-62"><a href="#cb10-62" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-63"><a href="#cb10-63" aria-hidden="true" tabindex="-1"></a><span class="co">    Returns:</span></span>
+<span id="cb10-64"><a href="#cb10-64" aria-hidden="true" tabindex="-1"></a><span class="co">        str: Text with comment blocks removed</span></span>
+<span id="cb10-65"><a href="#cb10-65" aria-hidden="true" tabindex="-1"></a><span class="co">    """</span></span>
+<span id="cb10-66"><a href="#cb10-66" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Remove anything between /* and */ using regex</span></span>
+<span id="cb10-67"><a href="#cb10-67" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> re.sub(<span class="vs">r'/</span><span class="ch">\*</span><span class="dv">.</span><span class="op">*?</span><span class="ch">\*</span><span class="vs">/'</span>, <span class="st">''</span>, markdown_text, flags<span class="op">=</span>re.DOTALL)</span>
+<span id="cb10-68"><a href="#cb10-68" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-69"><a href="#cb10-69" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> extract_titles_info(text):</span>
+<span id="cb10-70"><a href="#cb10-70" aria-hidden="true" tabindex="-1"></a>    <span class="co">"""</span></span>
+<span id="cb10-71"><a href="#cb10-71" aria-hidden="true" tabindex="-1"></a><span class="co">    Extract titles with their descriptions and indentation levels from markdown text.</span></span>
+<span id="cb10-72"><a href="#cb10-72" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-73"><a href="#cb10-73" aria-hidden="true" tabindex="-1"></a><span class="co">    Args:</span></span>
+<span id="cb10-74"><a href="#cb10-74" aria-hidden="true" tabindex="-1"></a><span class="co">        text (str): Cleaned markdown text</span></span>
+<span id="cb10-75"><a href="#cb10-75" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-76"><a href="#cb10-76" aria-hidden="true" tabindex="-1"></a><span class="co">    Returns:</span></span>
+<span id="cb10-77"><a href="#cb10-77" aria-hidden="true" tabindex="-1"></a><span class="co">        dict: Dictionary with titles as keys and dictionaries of attributes as values</span></span>
+<span id="cb10-78"><a href="#cb10-78" aria-hidden="true" tabindex="-1"></a><span class="co">    """</span></span>
+<span id="cb10-79"><a href="#cb10-79" aria-hidden="true" tabindex="-1"></a>    lines <span class="op">=</span> text.split(<span class="st">'</span><span class="ch">\n</span><span class="st">'</span>)</span>
+<span id="cb10-80"><a href="#cb10-80" aria-hidden="true" tabindex="-1"></a>    titles_info <span class="op">=</span> {}</span>
+<span id="cb10-81"><a href="#cb10-81" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-82"><a href="#cb10-82" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> line <span class="kw">in</span> lines:</span>
+<span id="cb10-83"><a href="#cb10-83" aria-hidden="true" tabindex="-1"></a>        <span class="co"># Skip empty lines</span></span>
+<span id="cb10-84"><a href="#cb10-84" aria-hidden="true" tabindex="-1"></a>        <span class="cf">if</span> <span class="kw">not</span> line.strip():</span>
+<span id="cb10-85"><a href="#cb10-85" aria-hidden="true" tabindex="-1"></a>            <span class="cf">continue</span></span>
+<span id="cb10-86"><a href="#cb10-86" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-87"><a href="#cb10-87" aria-hidden="true" tabindex="-1"></a>        <span class="co"># Extract title within square or angle brackets</span></span>
+<span id="cb10-88"><a href="#cb10-88" aria-hidden="true" tabindex="-1"></a>        title_match <span class="op">=</span> re.search(<span class="vs">r'</span><span class="pp">[&lt;</span><span class="ch">\[</span><span class="pp">]</span><span class="kw">(</span><span class="dv">.</span><span class="op">+?</span><span class="kw">)</span><span class="pp">[&gt;</span><span class="ch">\]</span><span class="pp">]</span><span class="vs">'</span>, line)</span>
+<span id="cb10-89"><a href="#cb10-89" aria-hidden="true" tabindex="-1"></a>        <span class="cf">if</span> <span class="kw">not</span> title_match:</span>
+<span id="cb10-90"><a href="#cb10-90" aria-hidden="true" tabindex="-1"></a>            <span class="cf">continue</span></span>
+<span id="cb10-91"><a href="#cb10-91" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-92"><a href="#cb10-92" aria-hidden="true" tabindex="-1"></a>        title <span class="op">=</span> title_match.group(<span class="dv">1</span>)</span>
+<span id="cb10-93"><a href="#cb10-93" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-94"><a href="#cb10-94" aria-hidden="true" tabindex="-1"></a>        <span class="co"># Extract description and metadata</span></span>
+<span id="cb10-95"><a href="#cb10-95" aria-hidden="true" tabindex="-1"></a>        title_pattern_in_line <span class="op">=</span> <span class="vs">r'</span><span class="pp">[&lt;</span><span class="ch">\[</span><span class="pp">]</span><span class="vs">'</span> <span class="op">+</span> re.escape(title) <span class="op">+</span> <span class="vs">r'</span><span class="pp">[&gt;</span><span class="ch">\]</span><span class="pp">]</span><span class="vs">:'</span></span>
+<span id="cb10-96"><a href="#cb10-96" aria-hidden="true" tabindex="-1"></a>        description_match <span class="op">=</span> re.search(title_pattern_in_line <span class="op">+</span> <span class="vs">r'</span><span class="dv">\s</span><span class="op">*</span><span class="kw">(</span><span class="dv">.</span><span class="op">*</span><span class="kw">)</span><span class="vs">'</span>, line)</span>
+<span id="cb10-97"><a href="#cb10-97" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-98"><a href="#cb10-98" aria-hidden="true" tabindex="-1"></a>        <span class="cf">if</span> description_match:</span>
+<span id="cb10-99"><a href="#cb10-99" aria-hidden="true" tabindex="-1"></a>            full_text <span class="op">=</span> description_match.group(<span class="dv">1</span>).strip()</span>
+<span id="cb10-100"><a href="#cb10-100" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-101"><a href="#cb10-101" aria-hidden="true" tabindex="-1"></a>            <span class="co"># Split description and metadata at the first "{"</span></span>
+<span id="cb10-102"><a href="#cb10-102" aria-hidden="true" tabindex="-1"></a>            <span class="cf">if</span> <span class="st">"{"</span> <span class="kw">in</span> full_text:</span>
+<span id="cb10-103"><a href="#cb10-103" aria-hidden="true" tabindex="-1"></a>                split_index <span class="op">=</span> full_text.find(<span class="st">"{"</span>)</span>
+<span id="cb10-104"><a href="#cb10-104" aria-hidden="true" tabindex="-1"></a>                description <span class="op">=</span> full_text[:split_index].strip()</span>
+<span id="cb10-105"><a href="#cb10-105" aria-hidden="true" tabindex="-1"></a>                metadata <span class="op">=</span> full_text[split_index:].strip()</span>
+<span id="cb10-106"><a href="#cb10-106" aria-hidden="true" tabindex="-1"></a>            <span class="cf">else</span>:</span>
+<span id="cb10-107"><a href="#cb10-107" aria-hidden="true" tabindex="-1"></a>                <span class="co"># Keep the entire description and no metadata</span></span>
+<span id="cb10-108"><a href="#cb10-108" aria-hidden="true" tabindex="-1"></a>                description <span class="op">=</span> full_text</span>
+<span id="cb10-109"><a href="#cb10-109" aria-hidden="true" tabindex="-1"></a>                metadata <span class="op">=</span> <span class="st">''</span>  <span class="co"># Initialize as empty string</span></span>
+<span id="cb10-110"><a href="#cb10-110" aria-hidden="true" tabindex="-1"></a>        <span class="cf">else</span>:</span>
+<span id="cb10-111"><a href="#cb10-111" aria-hidden="true" tabindex="-1"></a>            description <span class="op">=</span> <span class="st">''</span></span>
+<span id="cb10-112"><a href="#cb10-112" aria-hidden="true" tabindex="-1"></a>            metadata <span class="op">=</span> <span class="st">''</span>  <span class="co"># Ensure metadata is initialized</span></span>
+<span id="cb10-113"><a href="#cb10-113" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-114"><a href="#cb10-114" aria-hidden="true" tabindex="-1"></a>        <span class="co"># Calculate indentation level based on spaces before + or - symbol</span></span>
+<span id="cb10-115"><a href="#cb10-115" aria-hidden="true" tabindex="-1"></a>        indentation <span class="op">=</span> <span class="dv">0</span></span>
+<span id="cb10-116"><a href="#cb10-116" aria-hidden="true" tabindex="-1"></a>        <span class="cf">if</span> <span class="st">'+'</span> <span class="kw">in</span> line:</span>
+<span id="cb10-117"><a href="#cb10-117" aria-hidden="true" tabindex="-1"></a>            symbol_index <span class="op">=</span> line.find(<span class="st">'+'</span>)</span>
+<span id="cb10-118"><a href="#cb10-118" aria-hidden="true" tabindex="-1"></a>            <span class="co"># Count spaces before the '+' symbol</span></span>
+<span id="cb10-119"><a href="#cb10-119" aria-hidden="true" tabindex="-1"></a>            i <span class="op">=</span> symbol_index <span class="op">-</span> <span class="dv">1</span></span>
+<span id="cb10-120"><a href="#cb10-120" aria-hidden="true" tabindex="-1"></a>            <span class="cf">while</span> i <span class="op">&gt;=</span> <span class="dv">0</span> <span class="kw">and</span> line[i] <span class="op">==</span> <span class="st">' '</span>:</span>
+<span id="cb10-121"><a href="#cb10-121" aria-hidden="true" tabindex="-1"></a>                indentation <span class="op">+=</span> <span class="dv">1</span></span>
+<span id="cb10-122"><a href="#cb10-122" aria-hidden="true" tabindex="-1"></a>                i <span class="op">-=</span> <span class="dv">1</span></span>
+<span id="cb10-123"><a href="#cb10-123" aria-hidden="true" tabindex="-1"></a>        <span class="cf">elif</span> <span class="st">'-'</span> <span class="kw">in</span> line:</span>
+<span id="cb10-124"><a href="#cb10-124" aria-hidden="true" tabindex="-1"></a>            symbol_index <span class="op">=</span> line.find(<span class="st">'-'</span>)</span>
+<span id="cb10-125"><a href="#cb10-125" aria-hidden="true" tabindex="-1"></a>            <span class="co"># Count spaces before the '-' symbol</span></span>
+<span id="cb10-126"><a href="#cb10-126" aria-hidden="true" tabindex="-1"></a>            i <span class="op">=</span> symbol_index <span class="op">-</span> <span class="dv">1</span></span>
+<span id="cb10-127"><a href="#cb10-127" aria-hidden="true" tabindex="-1"></a>            <span class="cf">while</span> i <span class="op">&gt;=</span> <span class="dv">0</span> <span class="kw">and</span> line[i] <span class="op">==</span> <span class="st">' '</span>:</span>
+<span id="cb10-128"><a href="#cb10-128" aria-hidden="true" tabindex="-1"></a>                indentation <span class="op">+=</span> <span class="dv">1</span></span>
+<span id="cb10-129"><a href="#cb10-129" aria-hidden="true" tabindex="-1"></a>                i <span class="op">-=</span> <span class="dv">1</span></span>
+<span id="cb10-130"><a href="#cb10-130" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-131"><a href="#cb10-131" aria-hidden="true" tabindex="-1"></a>        <span class="co"># If neither symbol exists, indentation remains 0</span></span>
+<span id="cb10-132"><a href="#cb10-132" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-133"><a href="#cb10-133" aria-hidden="true" tabindex="-1"></a>        <span class="cf">if</span> title <span class="kw">in</span> titles_info:</span>
+<span id="cb10-134"><a href="#cb10-134" aria-hidden="true" tabindex="-1"></a>            <span class="co"># Only update description if it's currently empty and we found a new one</span></span>
+<span id="cb10-135"><a href="#cb10-135" aria-hidden="true" tabindex="-1"></a>            <span class="cf">if</span> <span class="kw">not</span> titles_info[title][<span class="st">'description'</span>] <span class="kw">and</span> description:</span>
+<span id="cb10-136"><a href="#cb10-136" aria-hidden="true" tabindex="-1"></a>                titles_info[title][<span class="st">'description'</span>] <span class="op">=</span> description</span>
+<span id="cb10-137"><a href="#cb10-137" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-138"><a href="#cb10-138" aria-hidden="true" tabindex="-1"></a>            <span class="co"># Store all indentation levels for this title</span></span>
+<span id="cb10-139"><a href="#cb10-139" aria-hidden="true" tabindex="-1"></a>            titles_info[title][<span class="st">'indentation_levels'</span>].append(indentation)</span>
+<span id="cb10-140"><a href="#cb10-140" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-141"><a href="#cb10-141" aria-hidden="true" tabindex="-1"></a>            <span class="co"># Keep max indentation for backward compatibility</span></span>
+<span id="cb10-142"><a href="#cb10-142" aria-hidden="true" tabindex="-1"></a>            <span class="cf">if</span> indentation <span class="op">&gt;</span> titles_info[title][<span class="st">'indentation'</span>]:</span>
+<span id="cb10-143"><a href="#cb10-143" aria-hidden="true" tabindex="-1"></a>                titles_info[title][<span class="st">'indentation'</span>] <span class="op">=</span> indentation</span>
+<span id="cb10-144"><a href="#cb10-144" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-145"><a href="#cb10-145" aria-hidden="true" tabindex="-1"></a>            <span class="co"># Do NOT update metadata here - keep the original metadata</span></span>
+<span id="cb10-146"><a href="#cb10-146" aria-hidden="true" tabindex="-1"></a>        <span class="cf">else</span>:</span>
+<span id="cb10-147"><a href="#cb10-147" aria-hidden="true" tabindex="-1"></a>            <span class="co"># First time seeing this title, create a new entry</span></span>
+<span id="cb10-148"><a href="#cb10-148" aria-hidden="true" tabindex="-1"></a>            titles_info[title] <span class="op">=</span> {</span>
+<span id="cb10-149"><a href="#cb10-149" aria-hidden="true" tabindex="-1"></a>                <span class="st">'description'</span>: description,</span>
+<span id="cb10-150"><a href="#cb10-150" aria-hidden="true" tabindex="-1"></a>                <span class="st">'indentation'</span>: indentation,</span>
+<span id="cb10-151"><a href="#cb10-151" aria-hidden="true" tabindex="-1"></a>                <span class="st">'indentation_levels'</span>: [indentation],  <span class="co"># Initialize with first indentation level</span></span>
+<span id="cb10-152"><a href="#cb10-152" aria-hidden="true" tabindex="-1"></a>                <span class="st">'parents'</span>: [],</span>
+<span id="cb10-153"><a href="#cb10-153" aria-hidden="true" tabindex="-1"></a>                <span class="st">'children'</span>: [],</span>
+<span id="cb10-154"><a href="#cb10-154" aria-hidden="true" tabindex="-1"></a>                <span class="st">'line'</span>: <span class="va">None</span>,</span>
+<span id="cb10-155"><a href="#cb10-155" aria-hidden="true" tabindex="-1"></a>                <span class="st">'line_numbers'</span>: [],  <span class="co"># Initialize an empty list for all occurrences</span></span>
+<span id="cb10-156"><a href="#cb10-156" aria-hidden="true" tabindex="-1"></a>                <span class="st">'metadata'</span>: metadata  <span class="co"># Set metadata explicitly from what we found</span></span>
+<span id="cb10-157"><a href="#cb10-157" aria-hidden="true" tabindex="-1"></a>            }</span>
+<span id="cb10-158"><a href="#cb10-158" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-159"><a href="#cb10-159" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> titles_info</span>
+<span id="cb10-160"><a href="#cb10-160" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-161"><a href="#cb10-161" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> establish_relationships_fixed(titles_info, text):</span>
+<span id="cb10-162"><a href="#cb10-162" aria-hidden="true" tabindex="-1"></a>    <span class="co">"""</span></span>
+<span id="cb10-163"><a href="#cb10-163" aria-hidden="true" tabindex="-1"></a><span class="co">    Establish parent-child relationships between titles using BayesDown</span></span>
+<span id="cb10-164"><a href="#cb10-164" aria-hidden="true" tabindex="-1"></a><span class="co">    indentation rules.</span></span>
+<span id="cb10-165"><a href="#cb10-165" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-166"><a href="#cb10-166" aria-hidden="true" tabindex="-1"></a><span class="co">    In BayesDown syntax:</span></span>
+<span id="cb10-167"><a href="#cb10-167" aria-hidden="true" tabindex="-1"></a><span class="co">    - More indented nodes (with + symbol) are PARENTS of less indented nodes</span></span>
+<span id="cb10-168"><a href="#cb10-168" aria-hidden="true" tabindex="-1"></a><span class="co">    - The relationship reads as "Effect is caused by Cause" (Effect + Cause)</span></span>
+<span id="cb10-169"><a href="#cb10-169" aria-hidden="true" tabindex="-1"></a><span class="co">    - This aligns with how Bayesian networks represent causality</span></span>
+<span id="cb10-170"><a href="#cb10-170" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-171"><a href="#cb10-171" aria-hidden="true" tabindex="-1"></a><span class="co">    Args:</span></span>
+<span id="cb10-172"><a href="#cb10-172" aria-hidden="true" tabindex="-1"></a><span class="co">        titles_info (dict): Dictionary with information about titles</span></span>
+<span id="cb10-173"><a href="#cb10-173" aria-hidden="true" tabindex="-1"></a><span class="co">        text (str): Original markdown text (for identifying line numbers)</span></span>
+<span id="cb10-174"><a href="#cb10-174" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-175"><a href="#cb10-175" aria-hidden="true" tabindex="-1"></a><span class="co">    Returns:</span></span>
+<span id="cb10-176"><a href="#cb10-176" aria-hidden="true" tabindex="-1"></a><span class="co">        dict: Updated dictionary with parent-child relationships</span></span>
+<span id="cb10-177"><a href="#cb10-177" aria-hidden="true" tabindex="-1"></a><span class="co">    """</span></span>
+<span id="cb10-178"><a href="#cb10-178" aria-hidden="true" tabindex="-1"></a>    lines <span class="op">=</span> text.split(<span class="st">'</span><span class="ch">\n</span><span class="st">'</span>)</span>
+<span id="cb10-179"><a href="#cb10-179" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-180"><a href="#cb10-180" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Dictionary to store line numbers for each title occurrence</span></span>
+<span id="cb10-181"><a href="#cb10-181" aria-hidden="true" tabindex="-1"></a>    title_occurrences <span class="op">=</span> {}</span>
+<span id="cb10-182"><a href="#cb10-182" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-183"><a href="#cb10-183" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Record line number for each title (including multiple occurrences)</span></span>
+<span id="cb10-184"><a href="#cb10-184" aria-hidden="true" tabindex="-1"></a>    line_number <span class="op">=</span> <span class="dv">0</span></span>
+<span id="cb10-185"><a href="#cb10-185" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> line <span class="kw">in</span> lines:</span>
+<span id="cb10-186"><a href="#cb10-186" aria-hidden="true" tabindex="-1"></a>        <span class="cf">if</span> <span class="kw">not</span> line.strip():</span>
+<span id="cb10-187"><a href="#cb10-187" aria-hidden="true" tabindex="-1"></a>            line_number <span class="op">+=</span> <span class="dv">1</span></span>
+<span id="cb10-188"><a href="#cb10-188" aria-hidden="true" tabindex="-1"></a>            <span class="cf">continue</span></span>
+<span id="cb10-189"><a href="#cb10-189" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-190"><a href="#cb10-190" aria-hidden="true" tabindex="-1"></a>        title_match <span class="op">=</span> re.search(<span class="vs">r'</span><span class="pp">[&lt;</span><span class="ch">\[</span><span class="pp">]</span><span class="kw">(</span><span class="dv">.</span><span class="op">+?</span><span class="kw">)</span><span class="pp">[&gt;</span><span class="ch">\]</span><span class="pp">]</span><span class="vs">'</span>, line)</span>
+<span id="cb10-191"><a href="#cb10-191" aria-hidden="true" tabindex="-1"></a>        <span class="cf">if</span> <span class="kw">not</span> title_match:</span>
+<span id="cb10-192"><a href="#cb10-192" aria-hidden="true" tabindex="-1"></a>            line_number <span class="op">+=</span> <span class="dv">1</span></span>
+<span id="cb10-193"><a href="#cb10-193" aria-hidden="true" tabindex="-1"></a>            <span class="cf">continue</span></span>
+<span id="cb10-194"><a href="#cb10-194" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-195"><a href="#cb10-195" aria-hidden="true" tabindex="-1"></a>        title <span class="op">=</span> title_match.group(<span class="dv">1</span>)</span>
+<span id="cb10-196"><a href="#cb10-196" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-197"><a href="#cb10-197" aria-hidden="true" tabindex="-1"></a>        <span class="co"># Store all occurrences of each title with their line numbers</span></span>
+<span id="cb10-198"><a href="#cb10-198" aria-hidden="true" tabindex="-1"></a>        <span class="cf">if</span> title <span class="kw">not</span> <span class="kw">in</span> title_occurrences:</span>
+<span id="cb10-199"><a href="#cb10-199" aria-hidden="true" tabindex="-1"></a>            title_occurrences[title] <span class="op">=</span> []</span>
+<span id="cb10-200"><a href="#cb10-200" aria-hidden="true" tabindex="-1"></a>        title_occurrences[title].append(line_number)</span>
+<span id="cb10-201"><a href="#cb10-201" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-202"><a href="#cb10-202" aria-hidden="true" tabindex="-1"></a>        <span class="co"># Store all line numbers where this title appears</span></span>
+<span id="cb10-203"><a href="#cb10-203" aria-hidden="true" tabindex="-1"></a>        <span class="cf">if</span> <span class="st">'line_numbers'</span> <span class="kw">not</span> <span class="kw">in</span> titles_info[title]:</span>
+<span id="cb10-204"><a href="#cb10-204" aria-hidden="true" tabindex="-1"></a>            titles_info[title][<span class="st">'line_numbers'</span>] <span class="op">=</span> []</span>
+<span id="cb10-205"><a href="#cb10-205" aria-hidden="true" tabindex="-1"></a>        titles_info[title][<span class="st">'line_numbers'</span>].append(line_number)</span>
+<span id="cb10-206"><a href="#cb10-206" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-207"><a href="#cb10-207" aria-hidden="true" tabindex="-1"></a>        <span class="co"># For backward compatibility, keep the first occurrence in 'line'</span></span>
+<span id="cb10-208"><a href="#cb10-208" aria-hidden="true" tabindex="-1"></a>        <span class="cf">if</span> titles_info[title][<span class="st">'line'</span>] <span class="kw">is</span> <span class="va">None</span>:</span>
+<span id="cb10-209"><a href="#cb10-209" aria-hidden="true" tabindex="-1"></a>            titles_info[title][<span class="st">'line'</span>] <span class="op">=</span> line_number</span>
+<span id="cb10-210"><a href="#cb10-210" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-211"><a href="#cb10-211" aria-hidden="true" tabindex="-1"></a>        line_number <span class="op">+=</span> <span class="dv">1</span></span>
+<span id="cb10-212"><a href="#cb10-212" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-213"><a href="#cb10-213" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Create an ordered list of all title occurrences with their line numbers</span></span>
+<span id="cb10-214"><a href="#cb10-214" aria-hidden="true" tabindex="-1"></a>    all_occurrences <span class="op">=</span> []</span>
+<span id="cb10-215"><a href="#cb10-215" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> title, occurrences <span class="kw">in</span> title_occurrences.items():</span>
+<span id="cb10-216"><a href="#cb10-216" aria-hidden="true" tabindex="-1"></a>        <span class="cf">for</span> line_num <span class="kw">in</span> occurrences:</span>
+<span id="cb10-217"><a href="#cb10-217" aria-hidden="true" tabindex="-1"></a>            all_occurrences.append((title, line_num))</span>
+<span id="cb10-218"><a href="#cb10-218" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-219"><a href="#cb10-219" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Sort occurrences by line number</span></span>
+<span id="cb10-220"><a href="#cb10-220" aria-hidden="true" tabindex="-1"></a>    all_occurrences.sort(key<span class="op">=</span><span class="kw">lambda</span> x: x[<span class="dv">1</span>])</span>
+<span id="cb10-221"><a href="#cb10-221" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-222"><a href="#cb10-222" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Get indentation for each occurrence</span></span>
+<span id="cb10-223"><a href="#cb10-223" aria-hidden="true" tabindex="-1"></a>    occurrence_indents <span class="op">=</span> {}</span>
+<span id="cb10-224"><a href="#cb10-224" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> title, line_num <span class="kw">in</span> all_occurrences:</span>
+<span id="cb10-225"><a href="#cb10-225" aria-hidden="true" tabindex="-1"></a>        <span class="cf">for</span> line <span class="kw">in</span> lines[line_num:line_num<span class="op">+</span><span class="dv">1</span>]:  <span class="co"># Only check the current line</span></span>
+<span id="cb10-226"><a href="#cb10-226" aria-hidden="true" tabindex="-1"></a>            indent <span class="op">=</span> <span class="dv">0</span></span>
+<span id="cb10-227"><a href="#cb10-227" aria-hidden="true" tabindex="-1"></a>            <span class="cf">if</span> <span class="st">'+'</span> <span class="kw">in</span> line:</span>
+<span id="cb10-228"><a href="#cb10-228" aria-hidden="true" tabindex="-1"></a>                symbol_index <span class="op">=</span> line.find(<span class="st">'+'</span>)</span>
+<span id="cb10-229"><a href="#cb10-229" aria-hidden="true" tabindex="-1"></a>                <span class="co"># Count spaces before the '+' symbol</span></span>
+<span id="cb10-230"><a href="#cb10-230" aria-hidden="true" tabindex="-1"></a>                j <span class="op">=</span> symbol_index <span class="op">-</span> <span class="dv">1</span></span>
+<span id="cb10-231"><a href="#cb10-231" aria-hidden="true" tabindex="-1"></a>                <span class="cf">while</span> j <span class="op">&gt;=</span> <span class="dv">0</span> <span class="kw">and</span> line[j] <span class="op">==</span> <span class="st">' '</span>:</span>
+<span id="cb10-232"><a href="#cb10-232" aria-hidden="true" tabindex="-1"></a>                    indent <span class="op">+=</span> <span class="dv">1</span></span>
+<span id="cb10-233"><a href="#cb10-233" aria-hidden="true" tabindex="-1"></a>                    j <span class="op">-=</span> <span class="dv">1</span></span>
+<span id="cb10-234"><a href="#cb10-234" aria-hidden="true" tabindex="-1"></a>            <span class="cf">elif</span> <span class="st">'-'</span> <span class="kw">in</span> line:</span>
+<span id="cb10-235"><a href="#cb10-235" aria-hidden="true" tabindex="-1"></a>                symbol_index <span class="op">=</span> line.find(<span class="st">'-'</span>)</span>
+<span id="cb10-236"><a href="#cb10-236" aria-hidden="true" tabindex="-1"></a>                <span class="co"># Count spaces before the '-' symbol</span></span>
+<span id="cb10-237"><a href="#cb10-237" aria-hidden="true" tabindex="-1"></a>                j <span class="op">=</span> symbol_index <span class="op">-</span> <span class="dv">1</span></span>
+<span id="cb10-238"><a href="#cb10-238" aria-hidden="true" tabindex="-1"></a>                <span class="cf">while</span> j <span class="op">&gt;=</span> <span class="dv">0</span> <span class="kw">and</span> line[j] <span class="op">==</span> <span class="st">' '</span>:</span>
+<span id="cb10-239"><a href="#cb10-239" aria-hidden="true" tabindex="-1"></a>                    indent <span class="op">+=</span> <span class="dv">1</span></span>
+<span id="cb10-240"><a href="#cb10-240" aria-hidden="true" tabindex="-1"></a>                    j <span class="op">-=</span> <span class="dv">1</span></span>
+<span id="cb10-241"><a href="#cb10-241" aria-hidden="true" tabindex="-1"></a>            occurrence_indents[(title, line_num)] <span class="op">=</span> indent</span>
+<span id="cb10-242"><a href="#cb10-242" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-243"><a href="#cb10-243" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Enhanced backward pass for correct parent-child relationships</span></span>
+<span id="cb10-244"><a href="#cb10-244" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> i, (title, line_num) <span class="kw">in</span> <span class="bu">enumerate</span>(all_occurrences):</span>
+<span id="cb10-245"><a href="#cb10-245" aria-hidden="true" tabindex="-1"></a>        current_indent <span class="op">=</span> occurrence_indents[(title, line_num)]</span>
+<span id="cb10-246"><a href="#cb10-246" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-247"><a href="#cb10-247" aria-hidden="true" tabindex="-1"></a>        <span class="co"># Skip root nodes (indentation 0) for processing</span></span>
+<span id="cb10-248"><a href="#cb10-248" aria-hidden="true" tabindex="-1"></a>        <span class="cf">if</span> current_indent <span class="op">==</span> <span class="dv">0</span>:</span>
+<span id="cb10-249"><a href="#cb10-249" aria-hidden="true" tabindex="-1"></a>            <span class="cf">continue</span></span>
+<span id="cb10-250"><a href="#cb10-250" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-251"><a href="#cb10-251" aria-hidden="true" tabindex="-1"></a>        <span class="co"># Look for the immediately preceding node with lower indentation</span></span>
+<span id="cb10-252"><a href="#cb10-252" aria-hidden="true" tabindex="-1"></a>        j <span class="op">=</span> i <span class="op">-</span> <span class="dv">1</span></span>
+<span id="cb10-253"><a href="#cb10-253" aria-hidden="true" tabindex="-1"></a>        <span class="cf">while</span> j <span class="op">&gt;=</span> <span class="dv">0</span>:</span>
+<span id="cb10-254"><a href="#cb10-254" aria-hidden="true" tabindex="-1"></a>            prev_title, prev_line <span class="op">=</span> all_occurrences[j]</span>
+<span id="cb10-255"><a href="#cb10-255" aria-hidden="true" tabindex="-1"></a>            prev_indent <span class="op">=</span> occurrence_indents[(prev_title, prev_line)]</span>
+<span id="cb10-256"><a href="#cb10-256" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-257"><a href="#cb10-257" aria-hidden="true" tabindex="-1"></a>            <span class="co"># If we find a node with less indentation, it's a child of current node</span></span>
+<span id="cb10-258"><a href="#cb10-258" aria-hidden="true" tabindex="-1"></a>            <span class="cf">if</span> prev_indent <span class="op">&lt;</span> current_indent:</span>
+<span id="cb10-259"><a href="#cb10-259" aria-hidden="true" tabindex="-1"></a>                <span class="co"># In BayesDown:</span></span>
+<span id="cb10-260"><a href="#cb10-260" aria-hidden="true" tabindex="-1"></a>                <span class="co"># More indented node is a parent (cause) of less indented node (effect)</span></span>
+<span id="cb10-261"><a href="#cb10-261" aria-hidden="true" tabindex="-1"></a>                <span class="cf">if</span> title <span class="kw">not</span> <span class="kw">in</span> titles_info[prev_title][<span class="st">'parents'</span>]:</span>
+<span id="cb10-262"><a href="#cb10-262" aria-hidden="true" tabindex="-1"></a>                    titles_info[prev_title][<span class="st">'parents'</span>].append(title)</span>
+<span id="cb10-263"><a href="#cb10-263" aria-hidden="true" tabindex="-1"></a>                <span class="cf">if</span> prev_title <span class="kw">not</span> <span class="kw">in</span> titles_info[title][<span class="st">'children'</span>]:</span>
+<span id="cb10-264"><a href="#cb10-264" aria-hidden="true" tabindex="-1"></a>                    titles_info[title][<span class="st">'children'</span>].append(prev_title)</span>
+<span id="cb10-265"><a href="#cb10-265" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-266"><a href="#cb10-266" aria-hidden="true" tabindex="-1"></a>                <span class="co"># Only need to find the immediate child</span></span>
+<span id="cb10-267"><a href="#cb10-267" aria-hidden="true" tabindex="-1"></a>                <span class="co"># (closest preceding node with lower indentation)</span></span>
+<span id="cb10-268"><a href="#cb10-268" aria-hidden="true" tabindex="-1"></a>                <span class="cf">break</span></span>
+<span id="cb10-269"><a href="#cb10-269" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-270"><a href="#cb10-270" aria-hidden="true" tabindex="-1"></a>            j <span class="op">-=</span> <span class="dv">1</span></span>
+<span id="cb10-271"><a href="#cb10-271" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-272"><a href="#cb10-272" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> titles_info</span>
+<span id="cb10-273"><a href="#cb10-273" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-274"><a href="#cb10-274" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> convert_to_dataframe(titles_info, ArgDown):</span>
+<span id="cb10-275"><a href="#cb10-275" aria-hidden="true" tabindex="-1"></a>    <span class="co">"""</span></span>
+<span id="cb10-276"><a href="#cb10-276" aria-hidden="true" tabindex="-1"></a><span class="co">    Convert the titles information dictionary to a pandas DataFrame.</span></span>
+<span id="cb10-277"><a href="#cb10-277" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-278"><a href="#cb10-278" aria-hidden="true" tabindex="-1"></a><span class="co">    Args:</span></span>
+<span id="cb10-279"><a href="#cb10-279" aria-hidden="true" tabindex="-1"></a><span class="co">        titles_info (dict): Dictionary with information about titles</span></span>
+<span id="cb10-280"><a href="#cb10-280" aria-hidden="true" tabindex="-1"></a><span class="co">        ArgDown (bool): If True, extract only structural information without probabilities</span></span>
+<span id="cb10-281"><a href="#cb10-281" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-282"><a href="#cb10-282" aria-hidden="true" tabindex="-1"></a><span class="co">    Returns:</span></span>
+<span id="cb10-283"><a href="#cb10-283" aria-hidden="true" tabindex="-1"></a><span class="co">        pandas.DataFrame: Structured data with node information and relationships</span></span>
+<span id="cb10-284"><a href="#cb10-284" aria-hidden="true" tabindex="-1"></a><span class="co">    """</span></span>
+<span id="cb10-285"><a href="#cb10-285" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> ArgDown <span class="op">==</span> <span class="va">True</span>:</span>
+<span id="cb10-286"><a href="#cb10-286" aria-hidden="true" tabindex="-1"></a>        <span class="co"># For ArgDown, exclude probability columns</span></span>
+<span id="cb10-287"><a href="#cb10-287" aria-hidden="true" tabindex="-1"></a>        df <span class="op">=</span> pd.DataFrame(columns<span class="op">=</span>[<span class="st">'Title'</span>, <span class="st">'Description'</span>, <span class="st">'line'</span>, <span class="st">'line_numbers'</span>, <span class="st">'indentation'</span>,</span>
+<span id="cb10-288"><a href="#cb10-288" aria-hidden="true" tabindex="-1"></a>                               <span class="st">'indentation_levels'</span>, <span class="st">'Parents'</span>, <span class="st">'Children'</span>, <span class="st">'instantiations'</span>])</span>
+<span id="cb10-289"><a href="#cb10-289" aria-hidden="true" tabindex="-1"></a>    <span class="cf">else</span>:</span>
+<span id="cb10-290"><a href="#cb10-290" aria-hidden="true" tabindex="-1"></a>        <span class="co"># For BayesDown, include probability columns</span></span>
+<span id="cb10-291"><a href="#cb10-291" aria-hidden="true" tabindex="-1"></a>        df <span class="op">=</span> pd.DataFrame(columns<span class="op">=</span>[<span class="st">'Title'</span>, <span class="st">'Description'</span>, <span class="st">'line'</span>, <span class="st">'line_numbers'</span>, <span class="st">'indentation'</span>,</span>
+<span id="cb10-292"><a href="#cb10-292" aria-hidden="true" tabindex="-1"></a>                               <span class="st">'indentation_levels'</span>, <span class="st">'Parents'</span>, <span class="st">'Children'</span>, <span class="st">'instantiations'</span>,</span>
+<span id="cb10-293"><a href="#cb10-293" aria-hidden="true" tabindex="-1"></a>                               <span class="st">'priors'</span>, <span class="st">'posteriors'</span>])</span>
+<span id="cb10-294"><a href="#cb10-294" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-295"><a href="#cb10-295" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> title, info <span class="kw">in</span> titles_info.items():</span>
+<span id="cb10-296"><a href="#cb10-296" aria-hidden="true" tabindex="-1"></a>        <span class="co"># Parse the metadata JSON string into a Python dictionary</span></span>
+<span id="cb10-297"><a href="#cb10-297" aria-hidden="true" tabindex="-1"></a>        <span class="cf">if</span> <span class="st">'metadata'</span> <span class="kw">in</span> info <span class="kw">and</span> info[<span class="st">'metadata'</span>]:</span>
+<span id="cb10-298"><a href="#cb10-298" aria-hidden="true" tabindex="-1"></a>            <span class="cf">try</span>:</span>
+<span id="cb10-299"><a href="#cb10-299" aria-hidden="true" tabindex="-1"></a>                <span class="co"># Only try to parse if metadata is not empty</span></span>
+<span id="cb10-300"><a href="#cb10-300" aria-hidden="true" tabindex="-1"></a>                <span class="cf">if</span> info[<span class="st">'metadata'</span>].strip():</span>
+<span id="cb10-301"><a href="#cb10-301" aria-hidden="true" tabindex="-1"></a>                    jsonMetadata <span class="op">=</span> json.loads(info[<span class="st">'metadata'</span>])</span>
+<span id="cb10-302"><a href="#cb10-302" aria-hidden="true" tabindex="-1"></a>                    <span class="cf">if</span> ArgDown <span class="op">==</span> <span class="va">True</span>:</span>
+<span id="cb10-303"><a href="#cb10-303" aria-hidden="true" tabindex="-1"></a>                        <span class="co"># Create the row dictionary with instantiations as</span></span>
+<span id="cb10-304"><a href="#cb10-304" aria-hidden="true" tabindex="-1"></a>                        <span class="co"># metadata only, no probabilities yet</span></span>
+<span id="cb10-305"><a href="#cb10-305" aria-hidden="true" tabindex="-1"></a>                        row <span class="op">=</span> {</span>
+<span id="cb10-306"><a href="#cb10-306" aria-hidden="true" tabindex="-1"></a>                            <span class="st">'Title'</span>: title,</span>
+<span id="cb10-307"><a href="#cb10-307" aria-hidden="true" tabindex="-1"></a>                            <span class="st">'Description'</span>: info.get(<span class="st">'description'</span>, <span class="st">''</span>),</span>
+<span id="cb10-308"><a href="#cb10-308" aria-hidden="true" tabindex="-1"></a>                            <span class="st">'line'</span>: info.get(<span class="st">'line'</span>,<span class="st">''</span>),</span>
+<span id="cb10-309"><a href="#cb10-309" aria-hidden="true" tabindex="-1"></a>                            <span class="st">'line_numbers'</span>: info.get(<span class="st">'line_numbers'</span>, []),</span>
+<span id="cb10-310"><a href="#cb10-310" aria-hidden="true" tabindex="-1"></a>                            <span class="st">'indentation'</span>: info.get(<span class="st">'indentation'</span>,<span class="st">''</span>),</span>
+<span id="cb10-311"><a href="#cb10-311" aria-hidden="true" tabindex="-1"></a>                            <span class="st">'indentation_levels'</span>: info.get(<span class="st">'indentation_levels'</span>, []),</span>
+<span id="cb10-312"><a href="#cb10-312" aria-hidden="true" tabindex="-1"></a>                            <span class="st">'Parents'</span>: info.get(<span class="st">'parents'</span>, []),</span>
+<span id="cb10-313"><a href="#cb10-313" aria-hidden="true" tabindex="-1"></a>                            <span class="st">'Children'</span>: info.get(<span class="st">'children'</span>, []),</span>
+<span id="cb10-314"><a href="#cb10-314" aria-hidden="true" tabindex="-1"></a>                            <span class="co"># Extract specific metadata fields,</span></span>
+<span id="cb10-315"><a href="#cb10-315" aria-hidden="true" tabindex="-1"></a>                            <span class="co"># defaulting to empty if not present</span></span>
+<span id="cb10-316"><a href="#cb10-316" aria-hidden="true" tabindex="-1"></a>                            <span class="st">'instantiations'</span>: jsonMetadata.get(<span class="st">'instantiations'</span>, []),</span>
+<span id="cb10-317"><a href="#cb10-317" aria-hidden="true" tabindex="-1"></a>                        }</span>
+<span id="cb10-318"><a href="#cb10-318" aria-hidden="true" tabindex="-1"></a>                    <span class="cf">else</span>:</span>
+<span id="cb10-319"><a href="#cb10-319" aria-hidden="true" tabindex="-1"></a>                        <span class="co"># Create dict with probabilities for BayesDown</span></span>
+<span id="cb10-320"><a href="#cb10-320" aria-hidden="true" tabindex="-1"></a>                        row <span class="op">=</span> {</span>
+<span id="cb10-321"><a href="#cb10-321" aria-hidden="true" tabindex="-1"></a>                            <span class="st">'Title'</span>: title,</span>
+<span id="cb10-322"><a href="#cb10-322" aria-hidden="true" tabindex="-1"></a>                            <span class="st">'Description'</span>: info.get(<span class="st">'description'</span>, <span class="st">''</span>),</span>
+<span id="cb10-323"><a href="#cb10-323" aria-hidden="true" tabindex="-1"></a>                            <span class="st">'line'</span>: info.get(<span class="st">'line'</span>,<span class="st">''</span>),</span>
+<span id="cb10-324"><a href="#cb10-324" aria-hidden="true" tabindex="-1"></a>                            <span class="st">'line_numbers'</span>: info.get(<span class="st">'line_numbers'</span>, []),</span>
+<span id="cb10-325"><a href="#cb10-325" aria-hidden="true" tabindex="-1"></a>                            <span class="st">'indentation'</span>: info.get(<span class="st">'indentation'</span>,<span class="st">''</span>),</span>
+<span id="cb10-326"><a href="#cb10-326" aria-hidden="true" tabindex="-1"></a>                            <span class="st">'indentation_levels'</span>: info.get(<span class="st">'indentation_levels'</span>, []),</span>
+<span id="cb10-327"><a href="#cb10-327" aria-hidden="true" tabindex="-1"></a>                            <span class="st">'Parents'</span>: info.get(<span class="st">'parents'</span>, []),</span>
+<span id="cb10-328"><a href="#cb10-328" aria-hidden="true" tabindex="-1"></a>                            <span class="st">'Children'</span>: info.get(<span class="st">'children'</span>, []),</span>
+<span id="cb10-329"><a href="#cb10-329" aria-hidden="true" tabindex="-1"></a>                            <span class="co"># Extract specific metadata fields, defaulting to empty if not present</span></span>
+<span id="cb10-330"><a href="#cb10-330" aria-hidden="true" tabindex="-1"></a>                            <span class="st">'instantiations'</span>: jsonMetadata.get(<span class="st">'instantiations'</span>, []),</span>
+<span id="cb10-331"><a href="#cb10-331" aria-hidden="true" tabindex="-1"></a>                            <span class="st">'priors'</span>: jsonMetadata.get(<span class="st">'priors'</span>, {}),</span>
+<span id="cb10-332"><a href="#cb10-332" aria-hidden="true" tabindex="-1"></a>                            <span class="st">'posteriors'</span>: jsonMetadata.get(<span class="st">'posteriors'</span>, {})</span>
+<span id="cb10-333"><a href="#cb10-333" aria-hidden="true" tabindex="-1"></a>                        }</span>
+<span id="cb10-334"><a href="#cb10-334" aria-hidden="true" tabindex="-1"></a>                <span class="cf">else</span>:</span>
+<span id="cb10-335"><a href="#cb10-335" aria-hidden="true" tabindex="-1"></a>                    <span class="co"># Empty metadata case</span></span>
+<span id="cb10-336"><a href="#cb10-336" aria-hidden="true" tabindex="-1"></a>                    row <span class="op">=</span> {</span>
+<span id="cb10-337"><a href="#cb10-337" aria-hidden="true" tabindex="-1"></a>                        <span class="st">'Title'</span>: title,</span>
+<span id="cb10-338"><a href="#cb10-338" aria-hidden="true" tabindex="-1"></a>                        <span class="st">'Description'</span>: info.get(<span class="st">'description'</span>, <span class="st">''</span>),</span>
+<span id="cb10-339"><a href="#cb10-339" aria-hidden="true" tabindex="-1"></a>                        <span class="st">'line'</span>: info.get(<span class="st">'line'</span>,<span class="st">''</span>),</span>
+<span id="cb10-340"><a href="#cb10-340" aria-hidden="true" tabindex="-1"></a>                        <span class="st">'line_numbers'</span>: info.get(<span class="st">'line_numbers'</span>, []),</span>
+<span id="cb10-341"><a href="#cb10-341" aria-hidden="true" tabindex="-1"></a>                        <span class="st">'indentation'</span>: info.get(<span class="st">'indentation'</span>,<span class="st">''</span>),</span>
+<span id="cb10-342"><a href="#cb10-342" aria-hidden="true" tabindex="-1"></a>                        <span class="st">'indentation_levels'</span>: info.get(<span class="st">'indentation_levels'</span>, []),</span>
+<span id="cb10-343"><a href="#cb10-343" aria-hidden="true" tabindex="-1"></a>                        <span class="st">'Parents'</span>: info.get(<span class="st">'parents'</span>, []),</span>
+<span id="cb10-344"><a href="#cb10-344" aria-hidden="true" tabindex="-1"></a>                        <span class="st">'Children'</span>: info.get(<span class="st">'children'</span>, []),</span>
+<span id="cb10-345"><a href="#cb10-345" aria-hidden="true" tabindex="-1"></a>                        <span class="st">'instantiations'</span>: [],</span>
+<span id="cb10-346"><a href="#cb10-346" aria-hidden="true" tabindex="-1"></a>                        <span class="st">'priors'</span>: {},</span>
+<span id="cb10-347"><a href="#cb10-347" aria-hidden="true" tabindex="-1"></a>                        <span class="st">'posteriors'</span>: {}</span>
+<span id="cb10-348"><a href="#cb10-348" aria-hidden="true" tabindex="-1"></a>                    }</span>
+<span id="cb10-349"><a href="#cb10-349" aria-hidden="true" tabindex="-1"></a>            <span class="cf">except</span> json.JSONDecodeError:</span>
+<span id="cb10-350"><a href="#cb10-350" aria-hidden="true" tabindex="-1"></a>                <span class="co"># Handle case where metadata isn't valid JSON</span></span>
+<span id="cb10-351"><a href="#cb10-351" aria-hidden="true" tabindex="-1"></a>                row <span class="op">=</span> {</span>
+<span id="cb10-352"><a href="#cb10-352" aria-hidden="true" tabindex="-1"></a>                    <span class="st">'Title'</span>: title,</span>
+<span id="cb10-353"><a href="#cb10-353" aria-hidden="true" tabindex="-1"></a>                    <span class="st">'Description'</span>: info.get(<span class="st">'description'</span>, <span class="st">''</span>),</span>
+<span id="cb10-354"><a href="#cb10-354" aria-hidden="true" tabindex="-1"></a>                    <span class="st">'line'</span>: info.get(<span class="st">'line'</span>,<span class="st">''</span>),</span>
+<span id="cb10-355"><a href="#cb10-355" aria-hidden="true" tabindex="-1"></a>                    <span class="st">'line_numbers'</span>: info.get(<span class="st">'line_numbers'</span>, []),</span>
+<span id="cb10-356"><a href="#cb10-356" aria-hidden="true" tabindex="-1"></a>                    <span class="st">'indentation'</span>: info.get(<span class="st">'indentation'</span>,<span class="st">''</span>),</span>
+<span id="cb10-357"><a href="#cb10-357" aria-hidden="true" tabindex="-1"></a>                    <span class="st">'indentation_levels'</span>: info.get(<span class="st">'indentation_levels'</span>, []),</span>
+<span id="cb10-358"><a href="#cb10-358" aria-hidden="true" tabindex="-1"></a>                    <span class="st">'Parents'</span>: info.get(<span class="st">'parents'</span>, []),</span>
+<span id="cb10-359"><a href="#cb10-359" aria-hidden="true" tabindex="-1"></a>                    <span class="st">'Children'</span>: info.get(<span class="st">'children'</span>, []),</span>
+<span id="cb10-360"><a href="#cb10-360" aria-hidden="true" tabindex="-1"></a>                    <span class="st">'instantiations'</span>: [],</span>
+<span id="cb10-361"><a href="#cb10-361" aria-hidden="true" tabindex="-1"></a>                    <span class="st">'priors'</span>: {},</span>
+<span id="cb10-362"><a href="#cb10-362" aria-hidden="true" tabindex="-1"></a>                    <span class="st">'posteriors'</span>: {}</span>
+<span id="cb10-363"><a href="#cb10-363" aria-hidden="true" tabindex="-1"></a>                }</span>
+<span id="cb10-364"><a href="#cb10-364" aria-hidden="true" tabindex="-1"></a>        <span class="cf">else</span>:</span>
+<span id="cb10-365"><a href="#cb10-365" aria-hidden="true" tabindex="-1"></a>            <span class="co"># Handle case where metadata field doesn't exist or is empty</span></span>
+<span id="cb10-366"><a href="#cb10-366" aria-hidden="true" tabindex="-1"></a>            row <span class="op">=</span> {</span>
+<span id="cb10-367"><a href="#cb10-367" aria-hidden="true" tabindex="-1"></a>                <span class="st">'Title'</span>: title,</span>
+<span id="cb10-368"><a href="#cb10-368" aria-hidden="true" tabindex="-1"></a>                <span class="st">'Description'</span>: info.get(<span class="st">'description'</span>, <span class="st">''</span>),</span>
+<span id="cb10-369"><a href="#cb10-369" aria-hidden="true" tabindex="-1"></a>                <span class="st">'line'</span>: info.get(<span class="st">'line'</span>,<span class="st">''</span>),</span>
+<span id="cb10-370"><a href="#cb10-370" aria-hidden="true" tabindex="-1"></a>                <span class="st">'line_numbers'</span>: info.get(<span class="st">'line_numbers'</span>, []),</span>
+<span id="cb10-371"><a href="#cb10-371" aria-hidden="true" tabindex="-1"></a>                <span class="st">'indentation'</span>: info.get(<span class="st">'indentation'</span>,<span class="st">''</span>),</span>
+<span id="cb10-372"><a href="#cb10-372" aria-hidden="true" tabindex="-1"></a>                <span class="st">'indentation_levels'</span>: info.get(<span class="st">'indentation_levels'</span>, []),</span>
+<span id="cb10-373"><a href="#cb10-373" aria-hidden="true" tabindex="-1"></a>                <span class="st">'Parents'</span>: info.get(<span class="st">'parents'</span>, []),</span>
+<span id="cb10-374"><a href="#cb10-374" aria-hidden="true" tabindex="-1"></a>                <span class="st">'Children'</span>: info.get(<span class="st">'children'</span>, []),</span>
+<span id="cb10-375"><a href="#cb10-375" aria-hidden="true" tabindex="-1"></a>                <span class="st">'instantiations'</span>: [],</span>
+<span id="cb10-376"><a href="#cb10-376" aria-hidden="true" tabindex="-1"></a>                <span class="st">'priors'</span>: {},</span>
+<span id="cb10-377"><a href="#cb10-377" aria-hidden="true" tabindex="-1"></a>                <span class="st">'posteriors'</span>: {}</span>
+<span id="cb10-378"><a href="#cb10-378" aria-hidden="true" tabindex="-1"></a>            }</span>
+<span id="cb10-379"><a href="#cb10-379" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-380"><a href="#cb10-380" aria-hidden="true" tabindex="-1"></a>        <span class="co"># Add the row to the DataFrame</span></span>
+<span id="cb10-381"><a href="#cb10-381" aria-hidden="true" tabindex="-1"></a>        df.loc[<span class="bu">len</span>(df)] <span class="op">=</span> row</span>
+<span id="cb10-382"><a href="#cb10-382" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-383"><a href="#cb10-383" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> df</span>
+<span id="cb10-384"><a href="#cb10-384" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-385"><a href="#cb10-385" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> add_no_parent_no_child_columns_to_df(dataframe):</span>
+<span id="cb10-386"><a href="#cb10-386" aria-hidden="true" tabindex="-1"></a>    <span class="co">"""</span></span>
+<span id="cb10-387"><a href="#cb10-387" aria-hidden="true" tabindex="-1"></a><span class="co">    Add No_Parent and No_Children boolean columns to the DataFrame to</span></span>
+<span id="cb10-388"><a href="#cb10-388" aria-hidden="true" tabindex="-1"></a><span class="co">    identify root and leaf nodes.</span></span>
+<span id="cb10-389"><a href="#cb10-389" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-390"><a href="#cb10-390" aria-hidden="true" tabindex="-1"></a><span class="co">    Args:</span></span>
+<span id="cb10-391"><a href="#cb10-391" aria-hidden="true" tabindex="-1"></a><span class="co">        dataframe (pandas.DataFrame): The DataFrame to enhance</span></span>
+<span id="cb10-392"><a href="#cb10-392" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-393"><a href="#cb10-393" aria-hidden="true" tabindex="-1"></a><span class="co">    Returns:</span></span>
+<span id="cb10-394"><a href="#cb10-394" aria-hidden="true" tabindex="-1"></a><span class="co">        pandas.DataFrame: Enhanced DataFrame with additional boolean columns</span></span>
+<span id="cb10-395"><a href="#cb10-395" aria-hidden="true" tabindex="-1"></a><span class="co">    """</span></span>
+<span id="cb10-396"><a href="#cb10-396" aria-hidden="true" tabindex="-1"></a>    no_parent <span class="op">=</span> []</span>
+<span id="cb10-397"><a href="#cb10-397" aria-hidden="true" tabindex="-1"></a>    no_children <span class="op">=</span> []</span>
+<span id="cb10-398"><a href="#cb10-398" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-399"><a href="#cb10-399" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> _, row <span class="kw">in</span> dataframe.iterrows():</span>
+<span id="cb10-400"><a href="#cb10-400" aria-hidden="true" tabindex="-1"></a>        no_parent.append(<span class="kw">not</span> row[<span class="st">'Parents'</span>])  <span class="co"># True if Parents list is empty</span></span>
+<span id="cb10-401"><a href="#cb10-401" aria-hidden="true" tabindex="-1"></a>        no_children.append(<span class="kw">not</span> row[<span class="st">'Children'</span>])  <span class="co"># True if Children list is empty</span></span>
+<span id="cb10-402"><a href="#cb10-402" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-403"><a href="#cb10-403" aria-hidden="true" tabindex="-1"></a>    dataframe[<span class="st">'No_Parent'</span>] <span class="op">=</span> no_parent</span>
+<span id="cb10-404"><a href="#cb10-404" aria-hidden="true" tabindex="-1"></a>    dataframe[<span class="st">'No_Children'</span>] <span class="op">=</span> no_children</span>
+<span id="cb10-405"><a href="#cb10-405" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-406"><a href="#cb10-406" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> dataframe</span>
+<span id="cb10-407"><a href="#cb10-407" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-408"><a href="#cb10-408" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> add_parents_instantiation_columns_to_df(dataframe):</span>
+<span id="cb10-409"><a href="#cb10-409" aria-hidden="true" tabindex="-1"></a>    <span class="co">"""</span></span>
+<span id="cb10-410"><a href="#cb10-410" aria-hidden="true" tabindex="-1"></a><span class="co">    Add all possible instantiations of parents as a list of lists column</span></span>
+<span id="cb10-411"><a href="#cb10-411" aria-hidden="true" tabindex="-1"></a><span class="co">    to the DataFrame.</span></span>
+<span id="cb10-412"><a href="#cb10-412" aria-hidden="true" tabindex="-1"></a><span class="co">    This is crucial for generating conditional probability tables.</span></span>
+<span id="cb10-413"><a href="#cb10-413" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-414"><a href="#cb10-414" aria-hidden="true" tabindex="-1"></a><span class="co">    Args:</span></span>
+<span id="cb10-415"><a href="#cb10-415" aria-hidden="true" tabindex="-1"></a><span class="co">        dataframe (pandas.DataFrame): The DataFrame to enhance</span></span>
+<span id="cb10-416"><a href="#cb10-416" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-417"><a href="#cb10-417" aria-hidden="true" tabindex="-1"></a><span class="co">    Returns:</span></span>
+<span id="cb10-418"><a href="#cb10-418" aria-hidden="true" tabindex="-1"></a><span class="co">        pandas.DataFrame: Enhanced DataFrame with parent_instantiations column</span></span>
+<span id="cb10-419"><a href="#cb10-419" aria-hidden="true" tabindex="-1"></a><span class="co">    """</span></span>
+<span id="cb10-420"><a href="#cb10-420" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Create a new column to store parent instantiations</span></span>
+<span id="cb10-421"><a href="#cb10-421" aria-hidden="true" tabindex="-1"></a>    parent_instantiations <span class="op">=</span> []</span>
+<span id="cb10-422"><a href="#cb10-422" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-423"><a href="#cb10-423" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Iterate through each row in the dataframe</span></span>
+<span id="cb10-424"><a href="#cb10-424" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> _, row <span class="kw">in</span> dataframe.iterrows():</span>
+<span id="cb10-425"><a href="#cb10-425" aria-hidden="true" tabindex="-1"></a>        parents <span class="op">=</span> row[<span class="st">'Parents'</span>]</span>
+<span id="cb10-426"><a href="#cb10-426" aria-hidden="true" tabindex="-1"></a>        parent_insts <span class="op">=</span> []</span>
+<span id="cb10-427"><a href="#cb10-427" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-428"><a href="#cb10-428" aria-hidden="true" tabindex="-1"></a>        <span class="co"># For each parent, find its instantiations and add to the list</span></span>
+<span id="cb10-429"><a href="#cb10-429" aria-hidden="true" tabindex="-1"></a>        <span class="cf">for</span> parent <span class="kw">in</span> parents:</span>
+<span id="cb10-430"><a href="#cb10-430" aria-hidden="true" tabindex="-1"></a>            <span class="co"># Find the row where Title matches the parent</span></span>
+<span id="cb10-431"><a href="#cb10-431" aria-hidden="true" tabindex="-1"></a>            parent_row <span class="op">=</span> dataframe[dataframe[<span class="st">'Title'</span>] <span class="op">==</span> parent]</span>
+<span id="cb10-432"><a href="#cb10-432" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-433"><a href="#cb10-433" aria-hidden="true" tabindex="-1"></a>            <span class="co"># If parent found in the dataframe</span></span>
+<span id="cb10-434"><a href="#cb10-434" aria-hidden="true" tabindex="-1"></a>            <span class="cf">if</span> <span class="kw">not</span> parent_row.empty:</span>
+<span id="cb10-435"><a href="#cb10-435" aria-hidden="true" tabindex="-1"></a>                <span class="co"># Get the instantiations of this parent</span></span>
+<span id="cb10-436"><a href="#cb10-436" aria-hidden="true" tabindex="-1"></a>                parent_instantiation <span class="op">=</span> parent_row[<span class="st">'instantiations'</span>].iloc[<span class="dv">0</span>]</span>
+<span id="cb10-437"><a href="#cb10-437" aria-hidden="true" tabindex="-1"></a>                parent_insts.append(parent_instantiation)</span>
+<span id="cb10-438"><a href="#cb10-438" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-439"><a href="#cb10-439" aria-hidden="true" tabindex="-1"></a>        <span class="co"># Add the list of parent instantiations to our new column</span></span>
+<span id="cb10-440"><a href="#cb10-440" aria-hidden="true" tabindex="-1"></a>        parent_instantiations.append(parent_insts)</span>
+<span id="cb10-441"><a href="#cb10-441" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-442"><a href="#cb10-442" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Add the new column to the dataframe</span></span>
+<span id="cb10-443"><a href="#cb10-443" aria-hidden="true" tabindex="-1"></a>    dataframe[<span class="st">'parent_instantiations'</span>] <span class="op">=</span> parent_instantiations</span>
+<span id="cb10-444"><a href="#cb10-444" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-445"><a href="#cb10-445" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> dataframe</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+</div>
+</div>
+<!-- 
+#| label: example_use_case
+#| echo: true
+#| eval: true
+#| fig-cap: "example use case"
+#| fig-link: "https://colab.research.google.com/github/VJMeyer/submission/blob/main/AMTAIR_Prototype/data/example_carlsmith/AMTAIR_Prototype_example_carlsmith.ipynb#scrollTo=ibjjJ34v3sQn&line=4&uniqifier=1"
+#| fig-alt: "example use case"
+-->
+<p>This key function transforms the ArgDown text into a structured DataFrame, capturing the hierarchical relationships between variables and preparing them for further processing. The function works by identifying node titles, descriptions, and indentation levels, then establishing parent-child relationships based on the hierarchy indicated by indentation.</p>
+<p><strong>Stage 2: Probability Integration</strong> enhances the structural representation with probability information, creating a complete BayesDown specification. This stage involves:</p>
+<ol type="1">
+<li><p><strong>Question generation:</strong> Automatically creating appropriate probability questions based on the network structure</p></li>
+<li><p><strong>Probability extraction:</strong> Obtaining probability estimates for each question, either from the text or through LLM inference</p></li>
+<li><p><strong>Consistency checking:</strong> Ensuring probability distributions sum to 1 and match structural constraints</p></li>
+<li><p><strong>BayesDown integration:</strong> Incorporating probability information into the ArgDown structure</p></li>
+</ol>
+<p>The key innovation in this stage is the automated generation of appropriate probability questions based on network structure. For each node, the system generates questions about prior probabilities (how likely is this variable in isolation?) and conditional probabilities (how likely is this variable given different states of its parents?).</p>
+<p>Figure 5 illustrates how probability questions are derived for a simple node with one parent:</p>
+<p>[FIGURE 5: Diagram showing how probability questions are generated based on network structure]</p>
+<p>For the “Sprinkler” node with parent “Rain,” the system automatically generates questions like:</p>
+<ul>
+<li>What is the probability for Sprinkler=sprinkler_TRUE?</li>
+<li>What is the probability for Sprinkler=sprinkler_TRUE if Rain=rain_TRUE?</li>
+<li>What is the probability for Sprinkler=sprinkler_TRUE if Rain=rain_FALSE?</li>
+</ul>
+<p>These questions are then answered either by extracting explicit probabilities from the text or by having the LLM infer reasonable values based on the author’s arguments. The answers are structured into a complete BayesDown representation that includes both the causal structure and all necessary probability information.</p>
+<p>The visualization below demonstrates the completed extraction for a portion of Carlsmith’s model, showing how variables like “Misaligned Power Seeking” are influenced by multiple factors, each with associated probabilities:</p>
+<p>[VISUALIZATION: Extracted causal structure from Carlsmith’s model with probability information]</p>
+<p>This two-stage approach offers several important advantages:</p>
+<ol type="1">
+<li><p><strong>Improved extraction quality:</strong> By focusing on one cognitive task at a time, the LLM performs better at each stage than it would attempting to extract everything simultaneously.</p></li>
+<li><p><strong>Intermediate verification:</strong> Having ArgDown as an intermediate representation allows human verification before probability extraction, catching structural errors early.</p></li>
+<li><p><strong>Separation of concerns:</strong> Structure and probability can be updated independently, enabling more flexible maintenance as new information emerges.</p></li>
+<li><p><strong>Alignment with human cognition:</strong> The process mirrors how experts approach complex arguments, making the system’s operation more intuitive and interpretable.</p></li>
+</ol>
+<p>Perhaps most importantly, the intermediate ArgDown representation creates a bridge between qualitative and quantitative aspects of arguments. It preserves the narrative structure and conceptual relationships from the original text while preparing for mathematical precision through probability integration. This hybrid approach maintains the strengths of both worlds: the richness of natural language and the rigor of formal models.</p>
 </section>
 <section id="sec-dag-structure" class="level3">
 <h3 class="anchored" data-anchor-id="sec-dag-structure">2.7.4 Directed Acyclic Graphs: Structure and Semantics</h3>
@@ -1492,6 +2065,8 @@ The Two-Stage Extraction Process
 </section>
 <section id="sec-prediction-markets" class="level3">
 <h3 class="anchored" data-anchor-id="sec-prediction-markets">2.7.7 Integration with Prediction Markets and Forecasting Platforms</h3>
+<!-- [ ] MODIFY: this section to make clear that the integration of Prediction Markets and Forecasting Platforms will be an extension which has not been implemented yet -->
+<!-- [ ] DISCUSS: the best case implementation and the advantages it would bring -->
 <p>To maintain relevance in a rapidly evolving field, formal models must integrate with live data sources such as prediction markets and forecasting platforms.</p>
 <div class="redundant-content" data-better-version="Outline_11.7#prediction-markets">
 <p>Live data sources for dynamic model updating include:</p>
@@ -1502,20 +2077,30 @@ The Two-Stage Extraction Process
 <li><strong>Internal Expert Forecasting</strong>: Organization-specific predictions and assessments</li>
 </ul>
 </div>
-<p>The data processing pipeline:</p>
-<p>python</p>
-<div class="sourceCode" id="cb9"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> integrate_forecast_data(model_variables, forecast_platforms):</span>
-<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a>    <span class="co">"""Connect Bayesian network variables to live forecasting data"""</span></span>
-<span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a>    mappings <span class="op">=</span> create_semantic_mappings(model_variables, forecast_platforms)</span>
-<span id="cb9-4"><a href="#cb9-4" aria-hidden="true" tabindex="-1"></a>    </span>
-<span id="cb9-5"><a href="#cb9-5" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> variable, forecasts <span class="kw">in</span> mappings.items():</span>
-<span id="cb9-6"><a href="#cb9-6" aria-hidden="true" tabindex="-1"></a>        weighted_forecast <span class="op">=</span> aggregate_forecasts(</span>
-<span id="cb9-7"><a href="#cb9-7" aria-hidden="true" tabindex="-1"></a>            forecasts, </span>
-<span id="cb9-8"><a href="#cb9-8" aria-hidden="true" tabindex="-1"></a>            weights<span class="op">=</span>calculate_track_record_weights(forecasts)</span>
-<span id="cb9-9"><a href="#cb9-9" aria-hidden="true" tabindex="-1"></a>        )</span>
-<span id="cb9-10"><a href="#cb9-10" aria-hidden="true" tabindex="-1"></a>        model.update_prior(variable, weighted_forecast)</span>
-<span id="cb9-11"><a href="#cb9-11" aria-hidden="true" tabindex="-1"></a>    </span>
-<span id="cb9-12"><a href="#cb9-12" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> model.recompute_posteriors()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<!-- [ ] COMPLETELY REWRITE: CODE IS HALLUCINATED -- rewrite by describing a possible implementation abstractly and discussing it 
+
+
+The data processing pipeline:
+
+
+
+python
+
+
+<!-- [ ] CODE CHANGE -->
+<div class="sourceCode" id="cb11"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> integrate_forecast_data(model_variables, forecast_platforms):</span>
+<span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a>    <span class="co">"""Connect Bayesian network variables to live forecasting data"""</span></span>
+<span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a>    mappings <span class="op">=</span> create_semantic_mappings(model_variables, forecast_platforms)</span>
+<span id="cb11-4"><a href="#cb11-4" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb11-5"><a href="#cb11-5" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> variable, forecasts <span class="kw">in</span> mappings.items():</span>
+<span id="cb11-6"><a href="#cb11-6" aria-hidden="true" tabindex="-1"></a>        weighted_forecast <span class="op">=</span> aggregate_forecasts(</span>
+<span id="cb11-7"><a href="#cb11-7" aria-hidden="true" tabindex="-1"></a>            forecasts, </span>
+<span id="cb11-8"><a href="#cb11-8" aria-hidden="true" tabindex="-1"></a>            weights<span class="op">=</span>calculate_track_record_weights(forecasts)</span>
+<span id="cb11-9"><a href="#cb11-9" aria-hidden="true" tabindex="-1"></a>        )</span>
+<span id="cb11-10"><a href="#cb11-10" aria-hidden="true" tabindex="-1"></a>        model.update_prior(variable, weighted_forecast)</span>
+<span id="cb11-11"><a href="#cb11-11" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb11-12"><a href="#cb11-12" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> model.recompute_posteriors()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>–&gt;</p>
 <p>Technical challenges:</p>
 <ul>
 <li><strong>Question Mapping</strong>: Semantic matching between model variables and market questions</li>
@@ -1573,6 +2158,9 @@ Core Design Philosophy
 </div>
 </div>
 <!-- [ ] COMPLETELY REWRITE: Results were HALLUCINATED -- rewrite by describing the procedure used in the .ipynb notebook -- reference the correct funtions!
+
+
+
 python
 
 ```python
@@ -1594,7 +2182,7 @@ class AMTAIRPipeline:
         return self.visualizer.render(network)
 ```
 
-<!-- [ ] TODO: Full component documentation with interfaces -->
+<!-- [ ] TODO: Explain that (for now) notebook is structured "as is" for maximum transparency, while .py function calling is preferred for full automation/scaling -->
 </section>
 </section>
 <section id="sec-two-stage-extraction" class="level2">
@@ -1795,65 +2383,65 @@ Bounded “amount of information” per paper —> ~ for a given computation bud
 <div class="landscape">
 <section id="argdown-example" class="level4">
 <h4 class="anchored" data-anchor-id="argdown-example">ArgDown Example</h4>
-<div class="sourceCode" id="cb12"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="ot">[Grass_Wet]: </span>Concentrated moisture on, between and around the blades of grass.{"instantiations": <span class="co">[</span><span class="ot">"grass_wet_TRUE", "grass_wet_FALSE"</span><span class="co">]</span>}    </span>
-<span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a>    +<span class="co">[</span><span class="ot">Rain</span><span class="co">]</span>: Tears of angles crying high up in the skies hitting the ground.{"instantiations": <span class="co">[</span><span class="ot">"rain_TRUE", "rain_FALSE"</span><span class="co">]</span>}</span>
-<span id="cb12-3"><a href="#cb12-3" aria-hidden="true" tabindex="-1"></a>    +<span class="co">[</span><span class="ot">Sprinkler</span><span class="co">]</span>: Activation of a centrifugal force based CO2 droplet distribution system.{"instantiations": <span class="co">[</span><span class="ot">"sprinkler_TRUE", "sprinkler_FALSE"</span><span class="co">]</span>}</span>
-<span id="cb12-4"><a href="#cb12-4" aria-hidden="true" tabindex="-1"></a>        +<span class="co">[</span><span class="ot">Rain</span><span class="co">]</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb14"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a><span class="ot">[Grass_Wet]: </span>Concentrated moisture on, between and around the blades of grass.{"instantiations": <span class="co">[</span><span class="ot">"grass_wet_TRUE", "grass_wet_FALSE"</span><span class="co">]</span>}    </span>
+<span id="cb14-2"><a href="#cb14-2" aria-hidden="true" tabindex="-1"></a>    +<span class="co">[</span><span class="ot">Rain</span><span class="co">]</span>: Tears of angles crying high up in the skies hitting the ground.{"instantiations": <span class="co">[</span><span class="ot">"rain_TRUE", "rain_FALSE"</span><span class="co">]</span>}</span>
+<span id="cb14-3"><a href="#cb14-3" aria-hidden="true" tabindex="-1"></a>    +<span class="co">[</span><span class="ot">Sprinkler</span><span class="co">]</span>: Activation of a centrifugal force based CO2 droplet distribution system.{"instantiations": <span class="co">[</span><span class="ot">"sprinkler_TRUE", "sprinkler_FALSE"</span><span class="co">]</span>}</span>
+<span id="cb14-4"><a href="#cb14-4" aria-hidden="true" tabindex="-1"></a>        +<span class="co">[</span><span class="ot">Rain</span><span class="co">]</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </section>
 <section id="example-of-questions-for-bayesdown-extraction" class="level4">
 <h4 class="anchored" data-anchor-id="example-of-questions-for-bayesdown-extraction">Example of Questions for BayesDown extraction</h4>
-<div class="sourceCode" id="cb13"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="an">BayesDown Format Preview:</span></span>
-<span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a><span class="fu"># BayesDown Representation with Placeholder Probabilities</span></span>
-<span id="cb13-3"><a href="#cb13-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb13-4"><a href="#cb13-4" aria-hidden="true" tabindex="-1"></a>/* This file contains BayesDown syntax with placeholder probabilities.</span>
-<span id="cb13-5"><a href="#cb13-5" aria-hidden="true" tabindex="-1"></a>   Replace the placeholders with actual probability values based on the </span>
-<span id="cb13-6"><a href="#cb13-6" aria-hidden="true" tabindex="-1"></a>   questions in the comments. */</span>
-<span id="cb13-7"><a href="#cb13-7" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb13-8"><a href="#cb13-8" aria-hidden="true" tabindex="-1"></a><span class="in">    /* What is the probability for Grass_Wet=grass_wet_TRUE? */</span></span>
-<span id="cb13-9"><a href="#cb13-9" aria-hidden="true" tabindex="-1"></a><span class="in">    /* What is the probability for Grass_Wet=grass_wet_TRUE if Rain=rain_TRUE, Sprinkler=sprinkler_TRUE? */</span></span>
-<span id="cb13-10"><a href="#cb13-10" aria-hidden="true" tabindex="-1"></a><span class="in">    /* What is the probability for Grass_Wet=grass_wet_TRUE if Rain=rain_TRUE, Sprinkler=sprinkler_FALSE? */</span></span>
-<span id="cb13-11"><a href="#cb13-11" aria-hidden="true" tabindex="-1"></a><span class="in">    /* What is the probability for Grass_Wet=grass_wet_TRUE if Rain=rain_FALSE, Sprinkler=sprinkler_TRUE? */</span></span>
-<span id="cb13-12"><a href="#cb13-12" aria-hidden="true" tabindex="-1"></a><span class="in">    /* What is the probability for Grass_Wet=grass_wet_TRUE if Rain=rain_FALSE, Sprinkler=sprinkler_FALSE? */</span></span>
-<span id="cb13-13"><a href="#cb13-13" aria-hidden="true" tabindex="-1"></a><span class="in">    /* What is the probability for Grass_Wet=grass_wet_FALSE? */</span></span>
-<span id="cb13-14"><a href="#cb13-14" aria-hidden="true" tabindex="-1"></a><span class="in">    /* What is the probability for Grass_Wet=grass_wet_FALSE if Rain=rain_TRUE, Sprinkler=sprinkler_TRUE? */</span></span>
-<span id="cb13-15"><a href="#cb13-15" aria-hidden="true" tabindex="-1"></a><span class="in">    /* What is the probability for Grass_Wet=grass_wet_FALSE if Rain=rain_TRUE, Sprinkler=sprinkler_FALSE? */</span></span>
-<span id="cb13-16"><a href="#cb13-16" aria-hidden="true" tabindex="-1"></a><span class="in">    /* What is the probability for Grass_Wet=grass_wet_FALSE if Rain=rain_FALSE, Sprinkler=sprinkler_TRUE? */</span></span>
-<span id="cb13-17"><a href="#cb13-17" aria-hidden="true" tabindex="-1"></a><span class="in">    /* What is the probability for Grass_Wet=grass_wet_FALSE if Rain=rain_FALSE, Sprinkler=sprinkler_FALSE? */</span></span>
-<span id="cb13-18"><a href="#cb13-18" aria-hidden="true" tabindex="-1"></a><span class="in">    [Grass_Wet]: Concentrated moisture on, between and around the blades of grass. {"instantiations": ["grass_wet_TRUE", "grass_wet_FALSE"], "priors": {"What is the probability for Grass_Wet=grass_wet_TRUE?": "%?", "What is the probability for Grass_Wet=grass_wet_FALSE?": "%?"}, "posteriors": {"What is the probability for Grass_Wet=grass_wet_TRUE if Rain=rain_TRUE, Sprinkler=sprinkler_TRUE?": "?%", "What is the probability for Grass_Wet=grass_wet_TRUE if Rain=rain_TRUE, Sprinkler=sprinkler_FALSE?": "?%", "What is the probability for Grass_Wet=grass_wet_TRUE if Rain=rain_FALSE, Sprinkler=sprinkler_TRUE?": "?%", "What is the probability for Grass_Wet=grass_wet_TRUE if Rain=rain_FALSE, Sprinkler=sprinkler_FALSE?": "?%", "What is the probability for Grass_Wet=grass_wet_FALSE if Rain=rain_TRUE, Sprinkler=sprinkler_TRUE?": "?%", "What is the probability for Grass_Wet=grass_wet_FALSE if Rain=rain_TRUE, Sprinkler=sprinkler_FALSE?": "?%", "What is the probability for Grass_Wet=grass_wet_FALSE if Rain=rain_FALSE, Sprinkler=sprinkler_TRUE?": "?%", "What is the probability for Grass_Wet=grass_wet_FALSE if Rain=rain_FALSE, Sprinkler=sprinkler_FALSE?": "?%"}}</span></span>
-<span id="cb13-19"><a href="#cb13-19" aria-hidden="true" tabindex="-1"></a><span class="in">        /* What is the probability for Rain=rain_TRUE? */</span></span>
-<span id="cb13-20"><a href="#cb13-20" aria-hidden="true" tabindex="-1"></a><span class="in">        /* What is the probability for Rain=rain_FALSE? */</span></span>
-<span id="cb13-21"><a href="#cb13-21" aria-hidden="true" tabindex="-1"></a><span class="in">        + [Rain]: Tears of angles crying high up in the skies hitting the ground. {"instantiations": ["rain_TRUE", "rain_FALSE"], "priors": {"What is the probability for Rain=rain_TRUE?": "%?", "What is the probability for Rain=rain_FALSE?": "%?"}}</span></span>
-<span id="cb13-22"><a href="#cb13-22" aria-hidden="true" tabindex="-1"></a><span class="in">        /* What is the probability for Sprinkler=sprinkler_TRUE? */</span></span>
-<span id="cb13-23"><a href="#cb13-23" aria-hidden="true" tabindex="-1"></a><span class="in">        /* What is the probability for Sprinkler=sprinkler_TRUE if Rain=rain_TRUE? */</span></span>
-<span id="cb13-24"><a href="#cb13-24" aria-hidden="true" tabindex="-1"></a><span class="in">        /* What is the probability for Sprinkler=sprinkler_TRUE if Rain=rain_FALSE? */</span></span>
-<span id="cb13-25"><a href="#cb13-25" aria-hidden="true" tabindex="-1"></a><span class="in">        /* What is the probability for Sprinkler=sprinkler_FALSE? */</span></span>
-<span id="cb13-26"><a href="#cb13-26" aria-hidden="true" tabindex="-1"></a><span class="in">        /* What is the probability for Sprinkler=sprinkler_FALSE if Rain=rain_TRUE? */</span></span>
-<span id="cb13-27"><a href="#cb13-27" aria-hidden="true" tabindex="-1"></a><span class="in">        /* What is the probability for Sprinkler=sprinkler_FALSE if Rain=rain_FALSE? */</span></span>
-<span id="cb13-28"><a href="#cb13-28" aria-hidden="true" tabindex="-1"></a><span class="in">        + [Sprinkler]: Activation of a centrifugal force based CO2 droplet distribution system. {"instantiations": ["sprinkler_TRUE", "sprinkler_FALSE"], "priors": {"What is the probability for Sprinkler=sprinkler_TRUE?": "%?", "What is the probability for Sprinkler=sprinkler_FALSE?": "%?"}, "posteriors": {"What is the probability for Sprinkler=sprinkler_TRUE if Rain=rain_TRUE?": "?%", "What is the probability for Sprinkler=sprinkler_TRUE if Rain=rain_FALSE?": "?%", "What is the probability for Sprinkler=sprinkler_FALSE if Rain=rain_TRUE?": "?%", "What is the probability for Sprinkler=sprinkler_FALSE if Rain=rain_FALSE?": "?%"}}</span></span>
-<span id="cb13-29"><a href="#cb13-29" aria-hidden="true" tabindex="-1"></a><span class="in">            /* What is the probability for Rain=rain_TRUE? */</span></span>
-<span id="cb13-30"><a href="#cb13-30" aria-hidden="true" tabindex="-1"></a><span class="in">            /* What is the probability for Rain=rain_FALSE? */</span></span>
-<span id="cb13-31"><a href="#cb13-31" aria-hidden="true" tabindex="-1"></a><span class="in">            + [Rain]</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb15"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a><span class="an">BayesDown Format Preview:</span></span>
+<span id="cb15-2"><a href="#cb15-2" aria-hidden="true" tabindex="-1"></a><span class="fu"># BayesDown Representation with Placeholder Probabilities</span></span>
+<span id="cb15-3"><a href="#cb15-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-4"><a href="#cb15-4" aria-hidden="true" tabindex="-1"></a>/* This file contains BayesDown syntax with placeholder probabilities.</span>
+<span id="cb15-5"><a href="#cb15-5" aria-hidden="true" tabindex="-1"></a>   Replace the placeholders with actual probability values based on the </span>
+<span id="cb15-6"><a href="#cb15-6" aria-hidden="true" tabindex="-1"></a>   questions in the comments. */</span>
+<span id="cb15-7"><a href="#cb15-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-8"><a href="#cb15-8" aria-hidden="true" tabindex="-1"></a><span class="in">    /* What is the probability for Grass_Wet=grass_wet_TRUE? */</span></span>
+<span id="cb15-9"><a href="#cb15-9" aria-hidden="true" tabindex="-1"></a><span class="in">    /* What is the probability for Grass_Wet=grass_wet_TRUE if Rain=rain_TRUE, Sprinkler=sprinkler_TRUE? */</span></span>
+<span id="cb15-10"><a href="#cb15-10" aria-hidden="true" tabindex="-1"></a><span class="in">    /* What is the probability for Grass_Wet=grass_wet_TRUE if Rain=rain_TRUE, Sprinkler=sprinkler_FALSE? */</span></span>
+<span id="cb15-11"><a href="#cb15-11" aria-hidden="true" tabindex="-1"></a><span class="in">    /* What is the probability for Grass_Wet=grass_wet_TRUE if Rain=rain_FALSE, Sprinkler=sprinkler_TRUE? */</span></span>
+<span id="cb15-12"><a href="#cb15-12" aria-hidden="true" tabindex="-1"></a><span class="in">    /* What is the probability for Grass_Wet=grass_wet_TRUE if Rain=rain_FALSE, Sprinkler=sprinkler_FALSE? */</span></span>
+<span id="cb15-13"><a href="#cb15-13" aria-hidden="true" tabindex="-1"></a><span class="in">    /* What is the probability for Grass_Wet=grass_wet_FALSE? */</span></span>
+<span id="cb15-14"><a href="#cb15-14" aria-hidden="true" tabindex="-1"></a><span class="in">    /* What is the probability for Grass_Wet=grass_wet_FALSE if Rain=rain_TRUE, Sprinkler=sprinkler_TRUE? */</span></span>
+<span id="cb15-15"><a href="#cb15-15" aria-hidden="true" tabindex="-1"></a><span class="in">    /* What is the probability for Grass_Wet=grass_wet_FALSE if Rain=rain_TRUE, Sprinkler=sprinkler_FALSE? */</span></span>
+<span id="cb15-16"><a href="#cb15-16" aria-hidden="true" tabindex="-1"></a><span class="in">    /* What is the probability for Grass_Wet=grass_wet_FALSE if Rain=rain_FALSE, Sprinkler=sprinkler_TRUE? */</span></span>
+<span id="cb15-17"><a href="#cb15-17" aria-hidden="true" tabindex="-1"></a><span class="in">    /* What is the probability for Grass_Wet=grass_wet_FALSE if Rain=rain_FALSE, Sprinkler=sprinkler_FALSE? */</span></span>
+<span id="cb15-18"><a href="#cb15-18" aria-hidden="true" tabindex="-1"></a><span class="in">    [Grass_Wet]: Concentrated moisture on, between and around the blades of grass. {"instantiations": ["grass_wet_TRUE", "grass_wet_FALSE"], "priors": {"What is the probability for Grass_Wet=grass_wet_TRUE?": "%?", "What is the probability for Grass_Wet=grass_wet_FALSE?": "%?"}, "posteriors": {"What is the probability for Grass_Wet=grass_wet_TRUE if Rain=rain_TRUE, Sprinkler=sprinkler_TRUE?": "?%", "What is the probability for Grass_Wet=grass_wet_TRUE if Rain=rain_TRUE, Sprinkler=sprinkler_FALSE?": "?%", "What is the probability for Grass_Wet=grass_wet_TRUE if Rain=rain_FALSE, Sprinkler=sprinkler_TRUE?": "?%", "What is the probability for Grass_Wet=grass_wet_TRUE if Rain=rain_FALSE, Sprinkler=sprinkler_FALSE?": "?%", "What is the probability for Grass_Wet=grass_wet_FALSE if Rain=rain_TRUE, Sprinkler=sprinkler_TRUE?": "?%", "What is the probability for Grass_Wet=grass_wet_FALSE if Rain=rain_TRUE, Sprinkler=sprinkler_FALSE?": "?%", "What is the probability for Grass_Wet=grass_wet_FALSE if Rain=rain_FALSE, Sprinkler=sprinkler_TRUE?": "?%", "What is the probability for Grass_Wet=grass_wet_FALSE if Rain=rain_FALSE, Sprinkler=sprinkler_FALSE?": "?%"}}</span></span>
+<span id="cb15-19"><a href="#cb15-19" aria-hidden="true" tabindex="-1"></a><span class="in">        /* What is the probability for Rain=rain_TRUE? */</span></span>
+<span id="cb15-20"><a href="#cb15-20" aria-hidden="true" tabindex="-1"></a><span class="in">        /* What is the probability for Rain=rain_FALSE? */</span></span>
+<span id="cb15-21"><a href="#cb15-21" aria-hidden="true" tabindex="-1"></a><span class="in">        + [Rain]: Tears of angles crying high up in the skies hitting the ground. {"instantiations": ["rain_TRUE", "rain_FALSE"], "priors": {"What is the probability for Rain=rain_TRUE?": "%?", "What is the probability for Rain=rain_FALSE?": "%?"}}</span></span>
+<span id="cb15-22"><a href="#cb15-22" aria-hidden="true" tabindex="-1"></a><span class="in">        /* What is the probability for Sprinkler=sprinkler_TRUE? */</span></span>
+<span id="cb15-23"><a href="#cb15-23" aria-hidden="true" tabindex="-1"></a><span class="in">        /* What is the probability for Sprinkler=sprinkler_TRUE if Rain=rain_TRUE? */</span></span>
+<span id="cb15-24"><a href="#cb15-24" aria-hidden="true" tabindex="-1"></a><span class="in">        /* What is the probability for Sprinkler=sprinkler_TRUE if Rain=rain_FALSE? */</span></span>
+<span id="cb15-25"><a href="#cb15-25" aria-hidden="true" tabindex="-1"></a><span class="in">        /* What is the probability for Sprinkler=sprinkler_FALSE? */</span></span>
+<span id="cb15-26"><a href="#cb15-26" aria-hidden="true" tabindex="-1"></a><span class="in">        /* What is the probability for Sprinkler=sprinkler_FALSE if Rain=rain_TRUE? */</span></span>
+<span id="cb15-27"><a href="#cb15-27" aria-hidden="true" tabindex="-1"></a><span class="in">        /* What is the probability for Sprinkler=sprinkler_FALSE if Rain=rain_FALSE? */</span></span>
+<span id="cb15-28"><a href="#cb15-28" aria-hidden="true" tabindex="-1"></a><span class="in">        + [Sprinkler]: Activation of a centrifugal force based CO2 droplet distribution system. {"instantiations": ["sprinkler_TRUE", "sprinkler_FALSE"], "priors": {"What is the probability for Sprinkler=sprinkler_TRUE?": "%?", "What is the probability for Sprinkler=sprinkler_FALSE?": "%?"}, "posteriors": {"What is the probability for Sprinkler=sprinkler_TRUE if Rain=rain_TRUE?": "?%", "What is the probability for Sprinkler=sprinkler_TRUE if Rain=rain_FALSE?": "?%", "What is the probability for Sprinkler=sprinkler_FALSE if Rain=rain_TRUE?": "?%", "What is the probability for Sprinkler=sprinkler_FALSE if Rain=rain_FALSE?": "?%"}}</span></span>
+<span id="cb15-29"><a href="#cb15-29" aria-hidden="true" tabindex="-1"></a><span class="in">            /* What is the probability for Rain=rain_TRUE? */</span></span>
+<span id="cb15-30"><a href="#cb15-30" aria-hidden="true" tabindex="-1"></a><span class="in">            /* What is the probability for Rain=rain_FALSE? */</span></span>
+<span id="cb15-31"><a href="#cb15-31" aria-hidden="true" tabindex="-1"></a><span class="in">            + [Rain]</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </section>
 <section id="complete-bayesdown-example" class="level4">
 <h4 class="anchored" data-anchor-id="complete-bayesdown-example">Complete BayesDown Example</h4>
 <p>The source BayesDown syntax representating the fully specified network:</p>
-<div class="sourceCode" id="cb14"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a><span class="ot">[Grass_Wet]: </span>Concentrated moisture on grass. {"instantiations": <span class="co">[</span><span class="ot">"grass_wet_TRUE", "grass_wet_FALSE"</span><span class="co">]</span>,</span>
-<span id="cb14-2"><a href="#cb14-2" aria-hidden="true" tabindex="-1"></a> "priors": {"p(grass_wet_TRUE)": "0.322", "p(grass_wet_FALSE)": "0.678"},</span>
-<span id="cb14-3"><a href="#cb14-3" aria-hidden="true" tabindex="-1"></a> "posteriors": {</span>
-<span id="cb14-4"><a href="#cb14-4" aria-hidden="true" tabindex="-1"></a>   "p(grass_wet_TRUE|sprinkler_TRUE,rain_TRUE)": "0.99",</span>
-<span id="cb14-5"><a href="#cb14-5" aria-hidden="true" tabindex="-1"></a>   "p(grass_wet_TRUE|sprinkler_TRUE,rain_FALSE)": "0.9",</span>
-<span id="cb14-6"><a href="#cb14-6" aria-hidden="true" tabindex="-1"></a>   "p(grass_wet_TRUE|sprinkler_FALSE,rain_TRUE)": "0.8",</span>
-<span id="cb14-7"><a href="#cb14-7" aria-hidden="true" tabindex="-1"></a>   "p(grass_wet_TRUE|sprinkler_FALSE,rain_FALSE)": "0.0"</span>
-<span id="cb14-8"><a href="#cb14-8" aria-hidden="true" tabindex="-1"></a> }}</span>
-<span id="cb14-9"><a href="#cb14-9" aria-hidden="true" tabindex="-1"></a><span class="ss"> + </span><span class="co">[</span><span class="ot">Rain</span><span class="co">]</span>: Water falling from sky. {"instantiations": <span class="co">[</span><span class="ot">"rain_TRUE", "rain_FALSE"</span><span class="co">]</span>,</span>
-<span id="cb14-10"><a href="#cb14-10" aria-hidden="true" tabindex="-1"></a>    "priors": {"p(rain_TRUE)": "0.2", "p(rain_FALSE)": "0.8"}}</span>
-<span id="cb14-11"><a href="#cb14-11" aria-hidden="true" tabindex="-1"></a><span class="ss"> + </span><span class="co">[</span><span class="ot">Sprinkler</span><span class="co">]</span>: Artificial watering system. {"instantiations": <span class="co">[</span><span class="ot">"sprinkler_TRUE", "sprinkler_FALSE"</span><span class="co">]</span>,</span>
-<span id="cb14-12"><a href="#cb14-12" aria-hidden="true" tabindex="-1"></a>    "priors": {"p(sprinkler_TRUE)": "0.448", "p(sprinkler_FALSE)": "0.552"},</span>
-<span id="cb14-13"><a href="#cb14-13" aria-hidden="true" tabindex="-1"></a>    "posteriors": {</span>
-<span id="cb14-14"><a href="#cb14-14" aria-hidden="true" tabindex="-1"></a>      "p(sprinkler_TRUE|rain_TRUE)": "0.01",</span>
-<span id="cb14-15"><a href="#cb14-15" aria-hidden="true" tabindex="-1"></a>      "p(sprinkler_TRUE|rain_FALSE)": "0.4"</span>
-<span id="cb14-16"><a href="#cb14-16" aria-hidden="true" tabindex="-1"></a>    }}</span>
-<span id="cb14-17"><a href="#cb14-17" aria-hidden="true" tabindex="-1"></a><span class="ss">   + </span><span class="co">[</span><span class="ot">Rain</span><span class="co">]</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb16"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a><span class="ot">[Grass_Wet]: </span>Concentrated moisture on grass. {"instantiations": <span class="co">[</span><span class="ot">"grass_wet_TRUE", "grass_wet_FALSE"</span><span class="co">]</span>,</span>
+<span id="cb16-2"><a href="#cb16-2" aria-hidden="true" tabindex="-1"></a> "priors": {"p(grass_wet_TRUE)": "0.322", "p(grass_wet_FALSE)": "0.678"},</span>
+<span id="cb16-3"><a href="#cb16-3" aria-hidden="true" tabindex="-1"></a> "posteriors": {</span>
+<span id="cb16-4"><a href="#cb16-4" aria-hidden="true" tabindex="-1"></a>   "p(grass_wet_TRUE|sprinkler_TRUE,rain_TRUE)": "0.99",</span>
+<span id="cb16-5"><a href="#cb16-5" aria-hidden="true" tabindex="-1"></a>   "p(grass_wet_TRUE|sprinkler_TRUE,rain_FALSE)": "0.9",</span>
+<span id="cb16-6"><a href="#cb16-6" aria-hidden="true" tabindex="-1"></a>   "p(grass_wet_TRUE|sprinkler_FALSE,rain_TRUE)": "0.8",</span>
+<span id="cb16-7"><a href="#cb16-7" aria-hidden="true" tabindex="-1"></a>   "p(grass_wet_TRUE|sprinkler_FALSE,rain_FALSE)": "0.0"</span>
+<span id="cb16-8"><a href="#cb16-8" aria-hidden="true" tabindex="-1"></a> }}</span>
+<span id="cb16-9"><a href="#cb16-9" aria-hidden="true" tabindex="-1"></a><span class="ss"> + </span><span class="co">[</span><span class="ot">Rain</span><span class="co">]</span>: Water falling from sky. {"instantiations": <span class="co">[</span><span class="ot">"rain_TRUE", "rain_FALSE"</span><span class="co">]</span>,</span>
+<span id="cb16-10"><a href="#cb16-10" aria-hidden="true" tabindex="-1"></a>    "priors": {"p(rain_TRUE)": "0.2", "p(rain_FALSE)": "0.8"}}</span>
+<span id="cb16-11"><a href="#cb16-11" aria-hidden="true" tabindex="-1"></a><span class="ss"> + </span><span class="co">[</span><span class="ot">Sprinkler</span><span class="co">]</span>: Artificial watering system. {"instantiations": <span class="co">[</span><span class="ot">"sprinkler_TRUE", "sprinkler_FALSE"</span><span class="co">]</span>,</span>
+<span id="cb16-12"><a href="#cb16-12" aria-hidden="true" tabindex="-1"></a>    "priors": {"p(sprinkler_TRUE)": "0.448", "p(sprinkler_FALSE)": "0.552"},</span>
+<span id="cb16-13"><a href="#cb16-13" aria-hidden="true" tabindex="-1"></a>    "posteriors": {</span>
+<span id="cb16-14"><a href="#cb16-14" aria-hidden="true" tabindex="-1"></a>      "p(sprinkler_TRUE|rain_TRUE)": "0.01",</span>
+<span id="cb16-15"><a href="#cb16-15" aria-hidden="true" tabindex="-1"></a>      "p(sprinkler_TRUE|rain_FALSE)": "0.4"</span>
+<span id="cb16-16"><a href="#cb16-16" aria-hidden="true" tabindex="-1"></a>    }}</span>
+<span id="cb16-17"><a href="#cb16-17" aria-hidden="true" tabindex="-1"></a><span class="ss">   + </span><span class="co">[</span><span class="ot">Rain</span><span class="co">]</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </section>
 <section id="resulting-rain-sprinkler-grass-dataframe" class="level4">
 <h4 class="anchored" data-anchor-id="resulting-rain-sprinkler-grass-dataframe">Resulting Rain-Sprinkler-Grass DataFrame</h4>
@@ -1961,9 +2549,9 @@ Bounded “amount of information” per paper —> ~ for a given computation bud
 <div id="cell-rain_sprinkler_grass_example_network_rendering2" class="cell" data-execution_count="2">
 <details class="code-fold">
 <summary>Code</summary>
-<div class="sourceCode cell-code" id="cb15"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> IPython.display <span class="im">import</span> IFrame</span>
-<span id="cb15-2"><a href="#cb15-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb15-3"><a href="#cb15-3" aria-hidden="true" tabindex="-1"></a>IFrame(src<span class="op">=</span><span class="st">"https://singularitysmith.github.io/AMTAIR_Prototype/bayesian_network.html"</span>, width<span class="op">=</span><span class="st">"100%"</span>, height<span class="op">=</span><span class="st">"600px"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb17"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> IPython.display <span class="im">import</span> IFrame</span>
+<span id="cb17-2"><a href="#cb17-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb17-3"><a href="#cb17-3" aria-hidden="true" tabindex="-1"></a>IFrame(src<span class="op">=</span><span class="st">"https://singularitysmith.github.io/AMTAIR_Prototype/bayesian_network.html"</span>, width<span class="op">=</span><span class="st">"100%"</span>, height<span class="op">=</span><span class="st">"600px"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 <div id="rain_sprinkler_grass_example_network_rendering2" class="cell-output cell-output-display" data-execution_count="2">
 
@@ -2134,6 +2722,28 @@ Across 20 test documents:
 </div>
 <p>Understanding these limitations guides both current usage and future improvements.</p>
 <!-- [ ] CREATE: {#fig-error-taxonomy}: "Breakdown of error types with examples" -->
+</section>
+</section>
+<section id="extensions-opportunities" class="level2">
+<h2 class="anchored" data-anchor-id="extensions-opportunities">3.7 Extensions &amp; Opportunities</h2>
+<!-- [ ] OUTLINE AND WRITE: new, complete section with a collection of all the possible future implementations enabled by the AMTAIR methodology -->
+<section id="overview-of-practical-software-implementations" class="level3">
+<h3 class="anchored" data-anchor-id="overview-of-practical-software-implementations">3.7.1 Overview of Practical Software Implementations</h3>
+<!-- [ ] INTRODUCE: some of the key Practical Software Implementation enabled by AMTAIR -->
+<!-- [ ] EXPLAIN: how the automated extraction pipeline and the resulting data(format) enable so many new, powerful usecases-->
+</section>
+<section id="section" class="level3">
+<h3 class="anchored" data-anchor-id="section">3.7.2</h3>
+</section>
+<section id="pdoom-calculator" class="level3">
+<h3 class="anchored" data-anchor-id="pdoom-calculator">3.7.3 P(Doom) Calculator</h3>
+</section>
+<section id="section-1" class="level3">
+<h3 class="anchored" data-anchor-id="section-1">3.7.4</h3>
+</section>
+<section id="section-2" class="level3">
+<h3 class="anchored" data-anchor-id="section-2">3.7.5</h3>
+<!-- [ ] UPDATE: the heading numbering below -->
 </section>
 </section>
 <section id="sec-policy-evaluation" class="level2">
@@ -3325,6 +3935,380 @@ University Press. <a href="https://doi.org/10.1093/oso/9780198570509.003.0021">h
 </div>
 </div>
 <p><code>{ embed I.Appendices.qmd }</code></p>
+<section id="amtair-thesis-relevant-literature-citations" class="level2">
+<h2 class="anchored" data-anchor-id="amtair-thesis-relevant-literature-citations">AMTAIR Thesis Relevant Literature &amp; Citations</h2>
+<section id="items-from-maref.bib" class="level3">
+<h3 class="anchored" data-anchor-id="items-from-maref.bib">Items from MAref.bib</h3>
+<!-- [ ] ADD: INTEGRATE ALL THE CITATIONS FROM BELOW AT THE CORRESPONDING / BEST (MULTIPLE) SECTIONS OF THE THESIS -->
+<!-- [ ] Update different Carlsmith paper versions in Zotero -->
+<section id="carlsmith2021-carlsmith2021" class="level4">
+<h4 class="anchored" data-anchor-id="carlsmith2021-carlsmith2021"><code>@carlsmith2021</code>: <span class="citation" data-cites="carlsmith2021">Carlsmith (<a href="Outline_13.html#ref-carlsmith2021" role="doc-biblioref">2021</a>)</span></h4>
+<pre><code>Carlsmith, Joseph (2021)
+Is Power-Seeking AI an Existential Risk?
+
+DOI: 10.48550/arXiv.2206.13353
+
+arXiv ID: 2206.13353
+
+Better alternative: None - this is the primary case study
+
+Relevant thesis section(s): 
+- Section 2.1: AI Existential Risk: The Carlsmith Model
+- Section 3.5: Case Study: Carlsmith's Power-Seeking AI Model
+- Throughout as validation example
+
+
+Potential claims supported (with certainty %):
+- "Carlsmith's six-premise decomposition exemplifies structured probabilistic reasoning about AI risk" (95%)
+- "The model estimates ~5% existential risk by 2070" (90%)
+- "Explicit probability estimates enable formal analysis" (95%)</code></pre>
+</section>
+<section id="bostrom2014-bostrom2014" class="level4">
+<h4 class="anchored" data-anchor-id="bostrom2014-bostrom2014"><code>@bostrom2014</code>: <span class="citation" data-cites="bostrom2014">Bostrom (<a href="Outline_13.html#ref-bostrom2014" role="doc-biblioref">2014</a>)</span></h4>
+<pre><code>Bostrom, Nick (2014)
+Superintelligence: Paths, Dangers, Strategies
+
+ISBN: 978-0-19-967811-2
+
+Better alternative: None - foundational text
+
+Relevant thesis section(s):
+- Section 1.2: The Coordination Crisis
+- Section 2.1: Historical foundations of AI risk
+- Background context throughout
+
+Potential claims supported (with certainty %):
+- "Orthogonality thesis: intelligence and goals are independent" (95%)
+- "Instrumental convergence leads to power-seeking behavior" (90%)
+- "Superintelligence poses existential risk" (85%)</code></pre>
+</section>
+<section id="clarke2022-clarke2022" class="level4">
+<h4 class="anchored" data-anchor-id="clarke2022-clarke2022"><code>@clarke2022</code>: <span class="citation" data-cites="clarke2022">Clarke et al. (<a href="Outline_13.html#ref-clarke2022" role="doc-biblioref">2022</a>)</span></h4>
+<pre><code>Clarke, Sam et al. (2022)
+Modeling Transformative AI Risks (MTAIR) Project -- Summary Report
+
+DOI: 10.48550/ARXIV.2206.09360
+
+arXiv ID: 2206.09360
+
+Better alternative: None - this is what AMTAIR builds upon
+
+Relevant thesis section(s):
+- Section 2.5: The MTAIR Framework: Achievements and Limitations
+- Section 1.3: Comparison with AMTAIR automation
+- Throughout as predecessor project
+
+Potential claims supported (with certainty %):
+- "MTAIR demonstrated value of formal models but required extensive manual effort" (95%)
+- "Manual extraction takes 200-400 expert hours per model" (80%)
+- "Static models cannot track evolving arguments" (90%)</code></pre>
+</section>
+<section id="pearl2009-and-pearl2000-pearl2000-and-pearl2009" class="level4">
+<h4 class="anchored" data-anchor-id="pearl2009-and-pearl2000-pearl2000-and-pearl2009"><code>@pearl2009</code> and <code>@pearl2000</code>: <span class="citation" data-cites="pearl2000">Pearl (<a href="Outline_13.html#ref-pearl2000" role="doc-biblioref">2000</a>)</span> and <span class="citation" data-cites="pearl2009">Pearl (<a href="Outline_13.html#ref-pearl2009" role="doc-biblioref">2009</a>)</span></h4>
+<pre><code>Pearl, Judea (2009)
+Causality: Models, Reasoning and Inference (2nd Edition)
+
+ISBN: 978-0-521-89560-6
+
+DOI: 10.1017/CBO9780511803161
+
+Better alternative: None - theoretical foundation
+
+Relevant thesis section(s):
+- Section 2.3: Bayesian Networks as Knowledge Representation
+- Section 2.7.4: DAG structure and causal semantics
+- Section 3.7.1: Do-calculus for policy interventions
+
+Potential claims supported (with certainty %):
+- "Bayesian networks enable causal reasoning under uncertainty" (95%)
+- "Do-calculus allows formal policy evaluation" (95%)
+- "DAGs encode conditional independence assumptions" (95%)</code></pre>
+</section>
+<section id="jaynes2003-jaynes2003" class="level4">
+<h4 class="anchored" data-anchor-id="jaynes2003-jaynes2003"><code>@jaynes2003</code>: <span class="citation" data-cites="jaynes2003">Jaynes (<a href="Outline_13.html#ref-jaynes2003" role="doc-biblioref">2003</a>)</span></h4>
+<pre><code>Jaynes, Edwin T. (2003)
+Probability Theory: The Logic of Science
+
+ISBN: 978-0-521-59271-0
+
+DOI: 10.1017/CBO9780511790423
+
+Better alternative: None for foundational probability theory
+
+Relevant thesis section(s):
+- Section 2.3: Mathematical foundations of Bayesian inference
+- Section 2.7.5: Probability as extended logic
+- Epistemological grounding throughout
+
+Potential claims supported (with certainty %):
+- "Probability theory extends deductive logic to handle uncertainty" (95%)
+- "Bayesian inference provides principled belief updating" (95%)
+- "Maximum entropy principles handle missing information" (90%)</code></pre>
+</section>
+<section id="tetlock2015-tetlock2015" class="level4">
+<h4 class="anchored" data-anchor-id="tetlock2015-tetlock2015"><code>@tetlock2015</code>: <span class="citation" data-cites="tetlock2015">Tetlock and Gardner (<a href="Outline_13.html#ref-tetlock2015" role="doc-biblioref">2015</a>)</span></h4>
+<pre><code>Tetlock, Philip E. and Gardner, Dan (2015)
+Superforecasting: The Art and Science of Prediction
+
+ISBN: 978-0-8041-3671-6
+
+Better alternative: @tetlock2023 for more recent long-range forecasting
+
+Relevant thesis section(s):
+- Section 1.5.2: Live Data Integration
+- Section 3.9: Integration with Prediction Markets
+- Forecasting methodology context
+
+Potential claims supported (with certainty %):
+- "Aggregated forecasts outperform individual expert judgment" (90%)
+- "Prediction markets provide empirical grounding for models" (85%)
+- "Calibrated forecasters achieve measurable accuracy" (90%)</code></pre>
+</section>
+<section id="lempert2003-lempert2003" class="level4">
+<h4 class="anchored" data-anchor-id="lempert2003-lempert2003"><code>@lempert2003</code>: <span class="citation" data-cites="lempert2003">Lempert, Popper, and Bankes (<a href="Outline_13.html#ref-lempert2003" role="doc-biblioref">2003</a>)</span></h4>
+<pre><code>Lempert, Robert J., Popper, Steven W., and Bankes, Steven C. (2003)
+Shaping the Next One Hundred Years: New Methods for Quantitative, Long-Term Policy Analysis
+
+ISBN: 978-0-8330-3275-8
+
+Better alternative: None for deep uncertainty methods
+
+Relevant thesis section(s):
+- Section 2.2.2: Limitations of Traditional Approaches
+- Section 4.1.2: Deep uncertainty in AI governance
+- Policy evaluation methodology
+
+Potential claims supported (with certainty %):
+- "Traditional policy analysis fails under deep uncertainty" (90%)
+- "Robust decision-making requires considering multiple scenarios" (85%)
+- "AI governance faces irreducible uncertainties" (90%)</code></pre>
+</section>
+<section id="good1966-good1966" class="level4">
+<h4 class="anchored" data-anchor-id="good1966-good1966"><code>@good1966</code>: <span class="citation" data-cites="good1966">Good (<a href="Outline_13.html#ref-good1966" role="doc-biblioref">1966</a>)</span></h4>
+<pre><code>Good, Irving John (1966)
+Speculations Concerning the First Ultraintelligent Machine
+
+DOI: 10.1016/S0065-2458(08)60418-0
+
+
+
+Relevant thesis section(s):
+- Historical context in Introduction
+- Background for intelligence explosion concept
+
+Potential claims supported (with certainty %):
+- "Intelligence explosion concept dates to 1960s" (95%)
+- "Recursive self-improvement could lead to rapid capability gains" (80%)</code></pre>
+</section>
+<section id="yudkowsky2008-yudkowsky2008" class="level4">
+<h4 class="anchored" data-anchor-id="yudkowsky2008-yudkowsky2008"><code>@yudkowsky2008</code>: <span class="citation" data-cites="yudkowsky2008">Yudkowsky (<a href="Outline_13.html#ref-yudkowsky2008" role="doc-biblioref">2008</a>)</span></h4>
+<pre><code>Yudkowsky, Eliezer (2008)
+Artificial Intelligence as a Positive and Negative Factor in Global Risk
+
+DOI: 10.1093/oso/9780198570509.003.0021
+
+Better alternative: @yudkowsky2022 for more recent formulation
+
+Relevant thesis section(s):
+- Section 2.1: AI risk arguments
+- Background on alignment problem
+- Instrumental convergence discussion
+
+Potential claims supported (with certainty %):
+- "AI alignment is the core challenge for beneficial AI" (90%)
+- "Default AI development may produce misaligned systems" (85%)
+- "Cognitive biases affect AI risk assessment" (90%)</code></pre>
+</section>
+<section id="russell2015-russell2015" class="level4">
+<h4 class="anchored" data-anchor-id="russell2015-russell2015"><code>@russell2015</code>: <span class="citation" data-cites="russell2015">Russell et al. (<a href="Outline_13.html#ref-russell2015" role="doc-biblioref">2015</a>)</span></h4>
+<pre><code>Russell, Stuart et al. (2015)
+Research Priorities for Robust and Beneficial Artificial Intelligence: An Open Letter
+
+DOI: 10.1609/aimag.v36i4.2621
+
+Better alternative: None - important consensus document
+
+Relevant thesis section(s):
+- Introduction: AI safety research mobilization
+- Context for coordination efforts
+
+Potential claims supported (with certainty %):
+- "AI safety has gained mainstream research attention" (95%)
+- "Technical and governance challenges are interrelated" (90%)</code></pre>
+</section>
+</section>
+</section>
+<section id="new-suggested-citations" class="level2">
+<h2 class="anchored" data-anchor-id="new-suggested-citations">New Suggested Citations</h2>
+<section id="new-items-to-consider" class="level3">
+<h3 class="anchored" data-anchor-id="new-items-to-consider">New Items to Consider:</h3>
+<!-- [ ] ADD: INTEGRATE ALL THE CITATIONS FROM BELOW AT THE CORRESPONDING / BEST (MULTIPLE) SECTIONS OF THE THESIS -->
+<section id="amodei2016-amodei2016" class="level4">
+<h4 class="anchored" data-anchor-id="amodei2016-amodei2016"><code>@amodei2016</code>: <span class="citation" data-cites="amodei2016">Amodei et al. (<a href="Outline_13.html#ref-amodei2016" role="doc-biblioref">2016</a>)</span></h4>
+<pre><code>Amodei, Dario et al. (2016)
+Concrete Problems in AI Safety
+
+arXiv ID: 1606.06565
+
+Relevant thesis section(s):
+- Section 2.2: Technical safety challenges
+- Concrete problems motivating AMTAIR
+
+Potential claims supported (with certainty %):
+- "AI safety includes avoiding negative side effects, safe exploration" (95%)
+- "Current ML systems exhibit safety failures" (90%)</code></pre>
+</section>
+<section id="christiano2019-christiano2019" class="level4">
+<h4 class="anchored" data-anchor-id="christiano2019-christiano2019"><code>@christiano2019</code>: <span class="citation" data-cites="christiano2019">Christiano (<a href="Outline_13.html#ref-christiano2019" role="doc-biblioref">2019</a>)</span></h4>
+<pre><code>Christiano, Paul (2019)
+What Failure Looks Like
+
+URL: https://www.alignmentforum.org/posts/HBxe6wdjxK239zajf/what-failure-looks-like
+
+Relevant thesis section(s):
+- Additional case study for extraction
+- Alternative risk model to Carlsmith
+
+Potential claims supported (with certainty %):
+- "AI risk may manifest through gradual loss of control" (85%)
+- "Multiple pathways to existential risk exist" (90%)</code></pre>
+</section>
+<section id="critch2019-critch2019" class="level4">
+<h4 class="anchored" data-anchor-id="critch2019-critch2019"><code>@critch2019</code>: <span class="citation" data-cites="critch2019">(<a href="Outline_13.html#ref-critch2019" role="doc-biblioref"><strong>critch2019?</strong></a>)</span></h4>
+<pre><code>Critch, Andrew (2019)
+ARCHES: AI Research Considerations for Human Existential Safety
+
+URL: https://arxiv.org/abs/2006.04948
+
+Relevant thesis section(s):
+- Another structured model for extraction validation
+- Multi-stakeholder coordination framework
+
+Potential claims supported (with certainty %):
+- "AI safety requires coordination across multiple sectors" (90%)
+- "Research, deployment, and governance interact complexly" (85%)</code></pre>
+</section>
+<section id="dafoe2018-and-updated-dafoe2021-dafoe2021-and-dafoe2018" class="level4">
+<h4 class="anchored" data-anchor-id="dafoe2018-and-updated-dafoe2021-dafoe2021-and-dafoe2018"><code>@dafoe2018</code> and updated <code>@dafoe2021</code>: <span class="citation" data-cites="dafoe2021">Dafoe (<a href="Outline_13.html#ref-dafoe2021" role="doc-biblioref">2021</a>)</span> and <span class="citation" data-cites="dafoe2018">Dafoe (<a href="Outline_13.html#ref-dafoe2018" role="doc-biblioref">2018</a>)</span></h4>
+<pre><code>Dafoe, Allan (2021)
+AI Governance: A Research Agenda
+
+URL: https://www.fhi.ox.ac.uk/govaiagenda/
+
+Relevant thesis section(s):
+- Section 2.6.2: Governance proposals taxonomy
+- Context for policy evaluation needs
+
+Potential claims supported (with certainty %):
+- "AI governance requires interdisciplinary approaches" (95%)
+- "Technical and policy communities need better coordination" (90%)</code></pre>
+</section>
+<section id="askell2021-askell2021" class="level4">
+<h4 class="anchored" data-anchor-id="askell2021-askell2021"><code>@askell2021</code>: <span class="citation" data-cites="askell2021">Askell et al. (<a href="Outline_13.html#ref-askell2021" role="doc-biblioref">2021</a>)</span></h4>
+<pre><code>Askell, Amanda et al. (2021)
+A General Language Assistant as a Laboratory for Alignment
+
+arXiv ID: 2112.00861
+
+Relevant thesis section(s):
+- LLM capabilities for extraction tasks
+- Alignment considerations for AMTAIR
+
+Potential claims supported (with certainty %):
+- "Language models can assist in complex reasoning tasks" (90%)
+- "Alignment challenges manifest in current systems" (85%)</code></pre>
+</section>
+</section>
+</section>
+<section id="further-citations-to-integrate" class="level2">
+<h2 class="anchored" data-anchor-id="further-citations-to-integrate">Further Citations to Integrate:</h2>
+<!-- [ ] ADD: INTEGRATE ALL THE CITATIONS FROM BELOW AT THE CORRESPONDING / BEST (MULTIPLE) SECTIONS OF THE THESIS: -->
+<p><span class="citation" data-cites="growiec2024">Growiec (<a href="Outline_13.html#ref-growiec2024" role="doc-biblioref">2024</a>)</span></p>
+<p><span class="citation" data-cites="clarke2022">Clarke et al. (<a href="Outline_13.html#ref-clarke2022" role="doc-biblioref">2022</a>)</span></p>
+<p><span class="citation" data-cites="drexler2019">K. Drexler (<a href="Outline_13.html#ref-drexler2019" role="doc-biblioref">2019</a>)</span> and <span class="citation" data-cites="drexler2019a">K. E. Drexler (<a href="Outline_13.html#ref-drexler2019a" role="doc-biblioref">2019</a>)</span></p>
+<p><span class="citation" data-cites="brundage2018">Brundage, Avin, Clark, Toner, Eckersley, Garfinkel, Dafoe, Scharre, Zeitzoff, Filar, Anderson, et al. (<a href="Outline_13.html#ref-brundage2018" role="doc-biblioref">2018</a>)</span> and <span class="citation" data-cites="brundage2018a">Brundage, Avin, Clark, Toner, Eckersley, Garfinkel, Dafoe, Scharre, Zeitzoff, and Filar (<a href="Outline_13.html#ref-brundage2018a" role="doc-biblioref">2018</a>)</span></p>
+<p><span class="citation" data-cites="kumar2019">Kumar et al. (<a href="Outline_13.html#ref-kumar2019" role="doc-biblioref">2019b</a>)</span> and <span class="citation" data-cites="kumar2019a">Kumar et al. (<a href="Outline_13.html#ref-kumar2019a" role="doc-biblioref">2019a</a>)</span></p>
+<p><span class="citation" data-cites="carlsmith2021">Carlsmith (<a href="Outline_13.html#ref-carlsmith2021" role="doc-biblioref">2021</a>)</span> and <span class="citation" data-cites="carlsmith2022">Carlsmith (<a href="Outline_13.html#ref-carlsmith2022" role="doc-biblioref">2022</a>)</span> and <span class="citation" data-cites="carlsmith2024">Carlsmith (<a href="Outline_13.html#ref-carlsmith2024" role="doc-biblioref">2024</a>)</span></p>
+<p><span class="citation" data-cites="hendrycks2021">Hendrycks et al. (<a href="Outline_13.html#ref-hendrycks2021" role="doc-biblioref">2021a</a>)</span> and <span class="citation" data-cites="hendrycks2021a">Hendrycks et al. (<a href="Outline_13.html#ref-hendrycks2021a" role="doc-biblioref">2021b</a>)</span></p>
+<p><span class="citation" data-cites="wilson2023">Wilson et al. (<a href="Outline_13.html#ref-wilson2023" role="doc-biblioref">2023</a>)</span></p>
+</section>
+</section>
+<section id="current-bibliography" class="level1 unnumbered">
+<h1 class="unnumbered">CURRENT Bibliography</h1>
+<pre><code>Amodei, Dario, Chris Olah, Jacob Steinhardt, Paul Christiano, John Schulman, and Dan Mané. 2016. “Concrete Problems in AI Safety.” July 25, 2016. https://doi.org/10.48550/arXiv.1606.06565.
+Anderson, Terence J. 2007. “Visualization Tools and Argument Schemes: A Question of Standpoint.” Law, Prob. &amp; Risk 6: 97. https://heinonline.org/hol-cgi-bin/get_pdf.cgi?handle=hein.journals/lawprisk6&amp;section=9.
+Armstrong, Stuart, Nick Bostrom, and Carl Shulman. 2016. “Racing to the Precipice: A Model of Artificial Intelligence Development.” AI &amp; SOCIETY 31 (2): 201–6. https://doi.org/10.1007/s00146-015-0590-y.
+Askell, Amanda, Yuntao Bai, Anna Chen, Dawn Drain, Deep Ganguli, Tom Henighan, Andy Jones, et al. 2021. “A General Language Assistant as a Laboratory for Alignment.” December 9, 2021. https://doi.org/10.48550/arXiv.2112.00861.
+Babakov, Nikolay, Adarsa Sivaprasad, Ehud Reiter, and Alberto Bugarín-Diz. 2025. “Reusability of Bayesian Networks Case Studies: A Survey.” Applied Intelligence 55 (6): 417. https://doi.org/10.1007/s10489-025-06289-5.
+Ban, Taiyu, Lyuzhou Chen, Derui Lyu, Xiangyu Wang, and Huanhuan Chen. 2023. “Causal Structure Learning Supervised by Large Language Model.” November 20, 2023. https://doi.org/10.48550/arXiv.2311.11689.
+Benn, Neil, and Ann Macintosh. 2011. “Argument Visualization for eParticipation: Towards a Research Agenda and Prototype Tool.” In Electronic Participation, edited by Efthimios Tambouris, Ann Macintosh, and Hans De Bruijn, 6847:60–73. Berlin, Heidelberg: Springer Berlin Heidelberg. https://doi.org/10.1007/978-3-642-23333-3_6.
+Bethard, Steven John. 2007. “Finding Event, Temporal and Causal Structure in Text: A Machine Learning Approach.” PhD thesis, University of Colorado at Boulder. https://search.proquest.com/openview/405fe32503123d9b5f4836dc3be4c011/1?pq-origsite=gscholar&amp;cbl=18750.
+Bostrom, Nick. 2014. Superintelligence: Paths, Strategies, Dangers. Oxford: Oxford University Press. https://scholar.dominican.edu/cynthia-stokes-brown-books-big-history/47.
+Box, George E. P. 1976. “Science and Statistics.” Journal of the American Statistical Association 71 (356): 791–99. https://doi.org/10.1080/01621459.1976.10480949.
+Brundage, Miles, Shahar Avin, Jack Clark, Helen Toner, Peter Eckersley, Ben Garfinkel, Allan Dafoe, Paul Scharre, Thomas Zeitzoff, Bobby Filar, Hyrum Anderson, et al. 2018. “The Malicious Use of Artificial Intelligence: Forecasting, Prevention, and Mitigation.” 2018. https://doi.org/10.48550/ARXIV.1802.07228.
+Brundage, Miles, Shahar Avin, Jack Clark, Helen Toner, Peter Eckersley, Ben Garfinkel, Allan Dafoe, Paul Scharre, Thomas Zeitzoff, and Bobby Filar. 2018. “The Malicious Use of Artificial Intelligence: Forecasting, Prevention, and Mitigation.” https://arxiv.org/abs/1802.07228.
+Carlsmith, Joseph. 2021. “Is Power-Seeking AI an Existential Risk?” 2021. https://doi.org/10.48550/arXiv.2206.13353.
+———. 2022. “Is Power-Seeking AI an Existential Risk?” https://arxiv.org/abs/2206.13353.
+———. 2024. “Is Power-Seeking AI an Existential Risk?” August 13, 2024. https://doi.org/10.48550/arXiv.2206.13353.
+Chen, Lu, Ruqing Zhang, Wei Huang, Wei Chen, Jiafeng Guo, and Xueqi Cheng. 2023. “Inducing Causal Structure for Abstractive Text Summarization.” In Proceedings of the 32nd ACM International Conference on Information and Knowledge Management, 213–23. Birmingham United Kingdom: ACM. https://doi.org/10.1145/3583780.3614934.
+Christiano, Paul F. 2019. “What Failure Looks Like,” March. https://www.alignmentforum.org/posts/HBxe6wdjxK239zajf/what-failure-looks-like.
+Clarke, Sam, Ben Cottier, Aryeh Englander, Daniel Eth, David Manheim, Samuel Dylan Martin, and Issa Rice. 2022. “Modeling Transformative AI Risks (MTAIR) Project – Summary Report.” 2022. https://doi.org/10.48550/ARXIV.2206.09360.
+Cuomo, Francesca, Christine Mallin, and Alessandro Zattoni. 2016. “Corporate Governance Codes: A Review and Research Agenda.” Corporate Governance: An International Review 24 (3): 222–41. https://ueaeprints.uea.ac.uk/id/eprint/57664/.
+Dafoe, Allan. 2018. “AI Governance: A Research Agenda.” Governance of AI Program, Future of Humanity Institute, University of Oxford: Oxford, UK 1442: 1443. https://www.fhi.ox.ac.uk/wp-content/uploads/GovAI-Agenda.pdf.
+———. 2021. “AI Governance: A Research Agenda.” 2021. https://www.fhi.ox.ac.uk/wp-content/uploads/GovAI-Agenda.pdf.
+De Villiers, Charl, and Ruth Dimes. 2021. “Determinants, Mechanisms and Consequences of Corporate Governance Reporting: A Research Framework.” Journal of Management and Governance 25 (1): 7–26. https://doi.org/10.1007/s10997-020-09530-0.
+Demirag, Istemi, Sudi Sudarsanam, and MIKE WRIGHT. 2000. “Corporate Governance: Overview and Research Agenda.” The British Accounting Review 32 (4): 341–54. https://www.academia.edu/download/49469624/bare.2000.014620161009-3955-1dt4aq5.pdf.
+Di Vito, Jackie, and Kim Trottier. 2022. “A Literature Review on Corporate Governance Mechanisms: Past, Present, and Future*.” Accounting Perspectives 21 (2): 207–35. https://doi.org/10.1111/1911-3838.12279.
+Drexler, K. Eric. 2019. “Reframing Superintelligence: Comprehensive AI Services as General Intelligence.”
+Drexler, KE. 2019. “Reframing Superintelligence: Comprehensive AI Services as General Intelligence.” Technical Report. Future of Humanity Institute. https://owainevans.github.io/pdfs/Reframing_Superintelligence_FHI-TR-2019.pdf.
+Duhem, Pierre Maurice Marie. 1954. The Aim and Structure of Physical Theory. 1. Princeton University Press.
+European, Union. 2024. “The Act Texts | EU Artificial Intelligence Act.” 2024. https://artificialintelligenceact.eu/the-act/.
+Good, Irving John. 1966. “Speculations Concerning the First Ultraintelligent Machine.” Advances in Computers, 31. https://doi.org/10.1016/S0065-2458(08)60418-0.
+Growiec, Jakub. 2024. “Existential Risk from Transformative AI: An Economic Perspective.” Technological and Economic Development of Economy 30 (6): 1682–1708.
+Gruetzemacher, Ross. 2022. “Bayesian Networks Vs. Conditional Trees for Creating Questions for Forecasting Tournaments.”
+Hallegatte, Stéphane, Ankur Shah, Robert Lempert, Casey Brown, and Stuart Gill. 2012. “Investment Decision-Making Under Deep Uncertainty-Application to Climate Change.” Policy Research Working Paper 6193. https://enpc.hal.science/hal-00802049/document.
+Heinze-Deml, Christina, Marloes H. Maathuis, and Nicolai Meinshausen. 2018. “Causal Structure Learning.” Annual Review of Statistics and Its Application 5 (1): 371–91. https://doi.org/10.1146/annurev-statistics-031017-100630.
+Hendrycks, Dan, Nicholas Carlini, John Schulman, and Jacob Steinhardt. 2021a. “Unsolved Problems in ML Safety.” 2021. https://doi.org/10.48550/ARXIV.2109.13916.
+———. 2021b. “Unsolved Problems in Ml Safety.” https://arxiv.org/abs/2109.13916.
+Hunt, Tam. 2025. “The Insane ‘Logic’ of the AI Arms Race.” Medium. March 3, 2025. https://tamhunt.medium.com/the-insane-logic-of-the-ai-arms-race-45a5f79f4c0e.
+Jaynes, Edwin T. 2003. Probability Theory: The Logic of Science. Cambridge university press.
+Kaur, Kawaljit. 2024. “Corporate Governance and Legal Accountability: A Critical Review of Global Practices.” Journal of Law 2 (6): 1–7. https://joi.shodhsagar.org/index.php/SSJOI/article/view/16.
+Khartabil, Dana. 2020. “Visualisation Techniques to Facilitate Argument Exploration.” PhD thesis. https://napier-repository.worktribe.com/output/2694675.
+Khartabil, D., C. Collins, S. Wells, B. Bach, and J. Kennedy. 2021. “Design and Evaluation of Visualization Techniques to Facilitate Argument Exploration.” Computer Graphics Forum 40 (6): 447–65. https://doi.org/10.1111/cgf.14389.
+Koller, Daphne, and Nir Friedman. 2009. Probabilistic Graphical Models: Principles and Techniques. MIT press. https://books.google.ca/books?hl=en&amp;lr=&amp;id=7dzpHCHzNQ4C&amp;oi=fnd&amp;pg=PR9&amp;dq=Koller,+D.,+%26+Friedman,+N.+(2009).+Probabilistic+Graphical+Models&amp;ots=py2HAh0VAL&amp;sig=gpaID3x6-TY8x5SOopuXpZDXfzs.
+Kumar, Ram Shankar Siva, David O. Brien, Kendra Albert, Salomé Viljöen, and Jeffrey Snover. 2019a. “Failure Modes in Machine Learning Systems.” https://arxiv.org/abs/1911.11034.
+Kumar, Ram Shankar Siva, David O Brien, Kendra Albert, Salomé Viljöen, and Jeffrey Snover. 2019b. “Failure Modes in Machine Learning Systems.” 2019. https://doi.org/10.48550/ARXIV.1911.11034.
+Lempert, Robert J, Steven W Popper, and Steven C Bankes. 2003. Shaping the Next One Hundred Years: New Methods for Quantitative, Long-Term Policy Analysis. RAND Corporation.
+Lindley, Dennis V. 2013. Understanding Uncertainty. John Wiley &amp; Sons. https://books.google.ca/books?hl=en&amp;lr=&amp;id=Tfk8AgAAQBAJ&amp;oi=fnd&amp;pg=PR11&amp;dq=Lindley,+D.+(2006).+Understanding+Uncertainty&amp;ots=55HS6lTOVP&amp;sig=0gKCDvRu5rUKhuPyJqhOzW23upU.
+List, Christian, and Philip Pettit. 2011. Group Agency: The Possibility, Design, and Status of Corporate Agents. Oxford University Press.
+Maslej, Nestor. 2025. “Artificial Intelligence Index Report 2025.” Artificial Intelligence.
+McCaslin, Tegan, Josh Rosenberg, Ezra Karger, Avital Morris, Molly Hickman, Sam Glover, Zach Jacobs, and Phil Tetlock. 2024. “Conditional Trees: A Method for Generating Informative Questions about Complex Topics.” Forecasting Research Institute. https://static1.squarespace.com/static/635693acf15a3e2a14a56a4a/t/66ba37a144f1d6095de467df/1723479995772/AIConditionalTrees.pdf.
+Meyer, Valentin Jakob. 2022. “A Structure of Knowledge &amp; the Process of Science.” Philosophy of the Social Sciences First Course Paper. https://doi.org/https://www.vjmeyer.com/papers/essays.
+Miotti, Andrea, Tolga Bilge, Dave Kasten, and James Newport. 2024. “A Narrow Path.” https://www.narrowpath.co/.
+Nelson, Roger B. 2006. An Introduction to Copulas. Springer Series in Statistics. New York, NY: Springer New York. https://doi.org/10.1007/0-387-28678-0.
+Ngajie, Berty Nsolly, Yan Li, Dawit Tibebu Tiruneh, and Mengmeng Cheng. 2020. “Investigating the Effects of a Systematic and Model-Based Design of Computer-Supported Argument Visualization on Critical Thinking.” Thinking Skills and Creativity 38: 100742. https://www.sciencedirect.com/science/article/pii/S1871187120302169.
+Paul. 2023. “The elephAInt – Are We All Like the Six Blind Men When It Comes to AI? | PRISMAGuard LLC.” 2023. https://www.prismaguard.com/the-elephaint-are-we-all-like-the-six-blind-men-when-it-comes-to-ai/.
+Pearl, Judea. 2000. Causality: Models, Reasoning, and Inference. Cambridge, U.K. ; New York: Cambridge University Press.
+———. 2009. Causality: Models, Reasoning and Inference. 2nd ed. Cambridge University Press.
+———. 2014. Probabilistic Reasoning in Intelligent Systems: Networks of Plausible Inference. Elsevier. https://books.google.ca/books?hl=en&amp;lr=&amp;id=mn2jBQAAQBAJ&amp;oi=fnd&amp;pg=PP1&amp;dq=Pearl,+J.+(1988).+Probabilistic+Reasoning+in+Intelligent+Systems&amp;ots=4tEX2A4Ha8&amp;sig=lgUs_RCoeXEEuGwM5xMEoyJy4HI.
+Pollock, John L. 1995. Cognitive Carpentry: A Blueprint for How to Build a Person. Mit Press. https://books.google.ca/books?hl=en&amp;lr=&amp;id=JAfHrHTqswAC&amp;oi=fnd&amp;pg=PA1&amp;dq=Pollock,+J.+(1995).+Cognitive+Carpentry&amp;ots=rq-qSCBcxV&amp;sig=aAfHGsGUosxl_1-JuxIEA7C2QO4.
+Prokudin, D. E., E. N. Lisanyuk, and I. R. Baymuratov. 2024. “Visualization Functions in Argumentation Representation Software.” Scientific Visualization 16 (3). https://sv-journal.org/2024-3/11/en.pdf.
+Rehman, Iskander. 2025. “The Battle for Brilliant Minds: From the Nuclear Age to AI.” War on the Rocks. January 13, 2025. https://warontherocks.com/2025/01/the-battle-for-brilliant-minds-from-the-nuclear-age-to-ai/.
+Russell, Stuart, Tom Dietterich, Eric Horvitz, Bart Selman, Francesca Rossi, Demis Hassabis, Shane Legg, et al. 2015. “Research Priorities for Robust and Beneficial Artificial Intelligence: An Open Letter.” AI Magazine 36 (4): 3–4. https://doi.org/10.1609/aimag.v36i4.2621.
+Samborska, Veronika. 2025. “Scaling up: How Increasing Inputs Has Made Artificial Intelligence More Capable.” Our World in Data, January. https://ourworldindata.org/scaling-up-ai.
+Samuel, Sigal. 2023. “AI Is a ‘Tragedy of the Commons.’ We’ve Got Solutions for That.” Vox. July 7, 2023. https://www.vox.com/future-perfect/2023/7/7/23787011/ai-arms-race-tragedy-commons-risk-safety.
+Schelling, Thomas C. 1960. “I960. The Strategy of Conflict.” Cambridge, Mass.
+Scheuer, Oliver, Frank Loll, Niels Pinkwart, and Bruce M. McLaren. 2010. “Computer-Supported Argumentation: A Review of the State of the Art.” International Journal of Computer-Supported Collaborative Learning 5 (1): 43–102. https://doi.org/10.1007/s11412-009-9080-x.
+Solomon, Jill. 2020. Corporate Governance and Accountability. John Wiley &amp; Sons. https://books.google.ca/books?hl=en&amp;lr=&amp;id=JAX9DwAAQBAJ&amp;oi=fnd&amp;pg=PR1&amp;dq=review+of+the+effects+of+liability+frameworks+on+corporate+governance+&amp;ots=ny23_vd-U0&amp;sig=3LuNNhvSWXriEeg-ipAdDIQGAgo.
+Squires, Chandler, and Caroline Uhler. 2023. “Causal Structure Learning: A Combinatorial Perspective.” Foundations of Computational Mathematics 23 (5): 1781–1815. https://doi.org/10.1007/s10208-022-09581-9.
+Tegmark, Max. 2024. “Asilomar AI Principles.” Future of Life Institute. 2024. https://futureoflife.org/open-letter/ai-principles/.
+Tetlock, Philip E., and Dan Gardner. 2015. Superforecasting: The Art and Science of Prediction. First paperback edition. New York: Broadway Books.
+Todd, Benjamin. 2024. “It Looks Like There Are Some Good Funding Opportunities in AI Safety Right Now.” Substack newsletter. Benjamin Todd. December 21, 2024. https://benjamintodd.substack.com/p/looks-like-there-are-some-good-funding.
+Voigt, Christian. (2014) 2025. “Christianvoigt/Argdown.” https://github.com/christianvoigt/argdown.
+Walton, Douglas. 2009. “Argument Visualization Tools for Corroborative Evidence.” In Proc. Of the 2nd International Conference on Evidence Law and Forensic Science, 32–49. https://www.academia.edu/download/37718171/09ArguVis.pdf.
+Wilson, Nick, Matt Boyd, John Kerr, Amanda Kvalsvig, and Michael Baker. 2023. “The Need for Long-Term Thinking–Especially for Preventing Catastrophic Risks.” Public Health Expert Briefing.
+Yang, Jie, Soyeon Caren Han, and Josiah Poon. 2022. “A Survey on Extraction of Causal Relations from Natural Language Text.” Knowledge and Information Systems 64 (5): 1161–86. https://doi.org/10.1007/s10115-022-01665-w.
+Yudkowsky, Eliezer. 2008. “Artificial Intelligence as a Positive and Negative Factor in Global Risk.” In Global Catastrophic Risks, by Eliezer Yudkowsky. Oxford University Press. https://doi.org/10.1093/oso/9780198570509.003.0021.</code></pre>
 
 
 </section>
