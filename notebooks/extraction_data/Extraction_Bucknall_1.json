@@ -1,4 +1,3 @@
-# Bucknall
 
 [Existential_Risk]: Increase in probability of an existential catastrophe for humanity. {"instantiations": ["risk_HIGH", "risk_LOW"]}
   + [Unaligned_AGI_Risk]: Probability that a misaligned artificial general intelligence causes catastrophe. {"instantiations": ["agi_risk_HIGH", "agi_risk_LOW"]}
