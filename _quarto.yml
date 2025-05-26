@@ -32,7 +32,8 @@ book:
   chapters:
     - index.qmd
     # - backup_index.qmd
-    - chapters/Outlines/Outline_13.qmd
+    # - chapters/Outlines/Outline_13.qmd
+    - chapters/Outlines/final_draft.qmd
     # - chapters/Outlines/Outline_12.2.qmd
     # - chapters/Outlines/Outline_11.7.qmd
     # - chapters/code_improve/Code-Improvement-Plan_12.2.qmd
@@ -97,7 +98,7 @@ format:
     output-file: thesis-book.pdf
     cite-method: biblatex
     biblio-title: Bibliography
-    latex-max-runs: 15
+    latex-max-runs: 4
     geometry:
       - margin=2.5cm
       - paper=a4paper

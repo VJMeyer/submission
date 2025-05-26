@@ -1,0 +1,1324 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.7.29">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>1&nbsp; Final Thesis: Automating the Modeling of Transformative Artificial Intelligence Risks – Automating the Modelling of Transformative Artificial Intelligence Risks</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+/* CSS for citations */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+  margin-bottom: 0em;
+}
+.hanging-indent div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}</style>
+
+
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../">
+<link href="../../ref/references.html" rel="next">
+<link href="../../index.html" rel="prev">
+<script src="../../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-0815c480559380816a4d1ea211a47e91.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap-485d01fc63b59abcd3ee1bf1e8e2748d.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "sidebar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "start",
+  "type": "textbox",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+
+
+</head>
+
+<body class="nav-sidebar floating quarto-light">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../chapters/Outlines/final_draft.html"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Final Thesis: Automating the Modeling of Transformative Artificial Intelligence Risks</span></a></li></ol></nav>
+        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        </a>
+      <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
+        <i class="bi bi-search"></i>
+      </button>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
+    <div class="pt-lg-2 mt-2 text-left sidebar-header">
+    <div class="sidebar-title mb-0 py-0">
+      <a href="../../">Automating the Modelling of Transformative Artificial Intelligence Risks</a> 
+        <div class="sidebar-tools-main tools-wide">
+    <a href="https://github.com/VJMeyer/submission" title="Source Code" class="quarto-navigation-tool px-1" aria-label="Source Code"><i class="bi bi-github"></i></a>
+    <div class="dropdown">
+      <a href="" title="Download" id="quarto-navigation-tool-dropdown-0" class="quarto-navigation-tool dropdown-toggle px-1" data-bs-toggle="dropdown" aria-expanded="false" role="link" aria-label="Download"><i class="bi bi-download"></i></a>
+      <ul class="dropdown-menu" aria-labelledby="quarto-navigation-tool-dropdown-0">
+          <li>
+            <a class="dropdown-item sidebar-tools-main-item" href="../../Automating-the-Modelling-of-Transformative-Artificial-Intelligence-Risks.pdf">
+              <i class="bi bi-file-pdf pe-1"></i>
+            Download PDF
+            </a>
+          </li>
+          <li>
+            <a class="dropdown-item sidebar-tools-main-item" href="../../Automating-the-Modelling-of-Transformative-Artificial-Intelligence-Risks.epub">
+              <i class="bi bi-journal pe-1"></i>
+            Download ePub
+            </a>
+          </li>
+      </ul>
+    </div>
+    <div class="dropdown">
+      <a href="" title="Share" id="quarto-navigation-tool-dropdown-1" class="quarto-navigation-tool dropdown-toggle px-1" data-bs-toggle="dropdown" aria-expanded="false" role="link" aria-label="Share"><i class="bi bi-share"></i></a>
+      <ul class="dropdown-menu" aria-labelledby="quarto-navigation-tool-dropdown-1">
+          <li>
+            <a class="dropdown-item sidebar-tools-main-item" href="https://twitter.com/intent/tweet?url=|url|">
+              <i class="bi bi-twitter pe-1"></i>
+            Twitter
+            </a>
+          </li>
+          <li>
+            <a class="dropdown-item sidebar-tools-main-item" href="https://www.facebook.com/sharer/sharer.php?u=|url|">
+              <i class="bi bi-facebook pe-1"></i>
+            Facebook
+            </a>
+          </li>
+      </ul>
+    </div>
+</div>
+    </div>
+      </div>
+        <div class="mt-2 flex-shrink-0 align-items-center">
+        <div class="sidebar-search">
+        <div id="quarto-search" class="" title="Search"></div>
+        </div>
+        </div>
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Preface</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../chapters/Outlines/final_draft.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Final Thesis: Automating the Modeling of Transformative Artificial Intelligence Risks</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../ref/references.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Bibliography</span></a>
+  </div>
+</li>
+    </ul>
+    </div>
+</nav>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Table of contents</h2>
+   
+  <ul>
+  <li><a href="#frontmatter-preface" id="toc-frontmatter-preface" class="nav-link active" data-scroll-target="#frontmatter-preface"><span class="header-section-number">1.1</span> Frontmatter: Preface</a></li>
+  <li><a href="#acknowledgments" id="toc-acknowledgments" class="nav-link" data-scroll-target="#acknowledgments"><span class="header-section-number">1.2</span> Acknowledgments</a></li>
+  <li><a href="#list-of-figures" id="toc-list-of-figures" class="nav-link" data-scroll-target="#list-of-figures"><span class="header-section-number">1.3</span> List of Figures</a></li>
+  <li><a href="#list-of-tables" id="toc-list-of-tables" class="nav-link" data-scroll-target="#list-of-tables"><span class="header-section-number">1.4</span> List of Tables</a></li>
+  <li><a href="#list-of-abbreviations" id="toc-list-of-abbreviations" class="nav-link" data-scroll-target="#list-of-abbreviations"><span class="header-section-number">1.5</span> List of Abbreviations</a></li>
+  <li><a href="#introduction-the-coordination-crisis-in-ai-governance" id="toc-introduction-the-coordination-crisis-in-ai-governance" class="nav-link" data-scroll-target="#introduction-the-coordination-crisis-in-ai-governance"><span class="header-section-number">2</span> 1. Introduction: The Coordination Crisis in AI Governance</a>
+  <ul>
+  <li><a href="#opening-scenario-the-policymakers-dilemma" id="toc-opening-scenario-the-policymakers-dilemma" class="nav-link" data-scroll-target="#opening-scenario-the-policymakers-dilemma"><span class="header-section-number">2.1</span> 1.1 Opening Scenario: The Policymaker’s Dilemma</a></li>
+  <li><a href="#the-coordination-crisis-in-ai-governance" id="toc-the-coordination-crisis-in-ai-governance" class="nav-link" data-scroll-target="#the-coordination-crisis-in-ai-governance"><span class="header-section-number">2.2</span> 1.2 The Coordination Crisis in AI Governance</a>
+  <ul>
+  <li><a href="#safety-gaps-from-misaligned-efforts" id="toc-safety-gaps-from-misaligned-efforts" class="nav-link" data-scroll-target="#safety-gaps-from-misaligned-efforts"><span class="header-section-number">2.2.1</span> 1.2.1 Safety Gaps from Misaligned Efforts</a></li>
+  <li><a href="#resource-misallocation" id="toc-resource-misallocation" class="nav-link" data-scroll-target="#resource-misallocation"><span class="header-section-number">2.2.2</span> 1.2.2 Resource Misallocation</a></li>
+  <li><a href="#negative-sum-dynamics" id="toc-negative-sum-dynamics" class="nav-link" data-scroll-target="#negative-sum-dynamics"><span class="header-section-number">2.2.3</span> 1.2.3 Negative-Sum Dynamics</a></li>
+  </ul></li>
+  <li><a href="#historical-parallels-and-temporal-urgency" id="toc-historical-parallels-and-temporal-urgency" class="nav-link" data-scroll-target="#historical-parallels-and-temporal-urgency"><span class="header-section-number">2.3</span> 1.3 Historical Parallels and Temporal Urgency</a></li>
+  <li><a href="#research-question-and-scope" id="toc-research-question-and-scope" class="nav-link" data-scroll-target="#research-question-and-scope"><span class="header-section-number">2.4</span> 1.4 Research Question and Scope</a></li>
+  <li><a href="#the-multiplicative-benefits-framework" id="toc-the-multiplicative-benefits-framework" class="nav-link" data-scroll-target="#the-multiplicative-benefits-framework"><span class="header-section-number">2.5</span> 1.5 The Multiplicative Benefits Framework</a>
+  <ul>
+  <li><a href="#automated-worldview-extraction" id="toc-automated-worldview-extraction" class="nav-link" data-scroll-target="#automated-worldview-extraction"><span class="header-section-number">2.5.1</span> 1.5.1 Automated Worldview Extraction</a></li>
+  <li><a href="#live-data-integration" id="toc-live-data-integration" class="nav-link" data-scroll-target="#live-data-integration"><span class="header-section-number">2.5.2</span> 1.5.2 Live Data Integration</a></li>
+  <li><a href="#formal-policy-evaluation" id="toc-formal-policy-evaluation" class="nav-link" data-scroll-target="#formal-policy-evaluation"><span class="header-section-number">2.5.3</span> 1.5.3 Formal Policy Evaluation</a></li>
+  <li><a href="#the-synergy" id="toc-the-synergy" class="nav-link" data-scroll-target="#the-synergy"><span class="header-section-number">2.5.4</span> 1.5.4 The Synergy</a></li>
+  </ul></li>
+  <li><a href="#thesis-structure-and-roadmap" id="toc-thesis-structure-and-roadmap" class="nav-link" data-scroll-target="#thesis-structure-and-roadmap"><span class="header-section-number">2.6</span> 1.6 Thesis Structure and Roadmap</a></li>
+  </ul></li>
+  <li><a href="#context-and-theoretical-foundations" id="toc-context-and-theoretical-foundations" class="nav-link" data-scroll-target="#context-and-theoretical-foundations"><span class="header-section-number">3</span> 2. Context and Theoretical Foundations</a>
+  <ul>
+  <li><a href="#ai-existential-risk-the-carlsmith-model" id="toc-ai-existential-risk-the-carlsmith-model" class="nav-link" data-scroll-target="#ai-existential-risk-the-carlsmith-model"><span class="header-section-number">3.1</span> 2.1 AI Existential Risk: The Carlsmith Model</a>
+  <ul>
+  <li><a href="#six-premise-decomposition" id="toc-six-premise-decomposition" class="nav-link" data-scroll-target="#six-premise-decomposition"><span class="header-section-number">3.1.1</span> 2.1.1 Six-Premise Decomposition</a></li>
+  <li><a href="#why-carlsmith-exemplifies-formalizable-arguments" id="toc-why-carlsmith-exemplifies-formalizable-arguments" class="nav-link" data-scroll-target="#why-carlsmith-exemplifies-formalizable-arguments"><span class="header-section-number">3.1.2</span> 2.1.2 Why Carlsmith Exemplifies Formalizable Arguments</a></li>
+  </ul></li>
+  <li><a href="#the-epistemic-challenge-of-policy-evaluation" id="toc-the-epistemic-challenge-of-policy-evaluation" class="nav-link" data-scroll-target="#the-epistemic-challenge-of-policy-evaluation"><span class="header-section-number">3.2</span> 2.2 The Epistemic Challenge of Policy Evaluation</a>
+  <ul>
+  <li><a href="#unique-characteristics-of-ai-governance" id="toc-unique-characteristics-of-ai-governance" class="nav-link" data-scroll-target="#unique-characteristics-of-ai-governance"><span class="header-section-number">3.2.1</span> 2.2.1 Unique Characteristics of AI Governance</a></li>
+  <li><a href="#limitations-of-traditional-approaches" id="toc-limitations-of-traditional-approaches" class="nav-link" data-scroll-target="#limitations-of-traditional-approaches"><span class="header-section-number">3.2.2</span> 2.2.2 Limitations of Traditional Approaches</a></li>
+  <li><a href="#the-underlying-epistemic-framework" id="toc-the-underlying-epistemic-framework" class="nav-link" data-scroll-target="#the-underlying-epistemic-framework"><span class="header-section-number">3.2.3</span> 2.2.3 The Underlying Epistemic Framework</a></li>
+  <li><a href="#toward-new-epistemic-tools" id="toc-toward-new-epistemic-tools" class="nav-link" data-scroll-target="#toward-new-epistemic-tools"><span class="header-section-number">3.2.4</span> 2.2.4 Toward New Epistemic Tools</a></li>
+  </ul></li>
+  <li><a href="#bayesian-networks-as-knowledge-representation" id="toc-bayesian-networks-as-knowledge-representation" class="nav-link" data-scroll-target="#bayesian-networks-as-knowledge-representation"><span class="header-section-number">3.3</span> 2.3 Bayesian Networks as Knowledge Representation</a>
+  <ul>
+  <li><a href="#mathematical-foundations" id="toc-mathematical-foundations" class="nav-link" data-scroll-target="#mathematical-foundations"><span class="header-section-number">3.3.1</span> 2.3.1 Mathematical Foundations</a></li>
+  <li><a href="#the-rain-sprinkler-grass-example" id="toc-the-rain-sprinkler-grass-example" class="nav-link" data-scroll-target="#the-rain-sprinkler-grass-example"><span class="header-section-number">3.3.2</span> 2.3.2 The Rain-Sprinkler-Grass Example</a>
+  <ul>
+  <li><a href="#rain-sprinkler-grass-network-rendering" id="toc-rain-sprinkler-grass-network-rendering" class="nav-link" data-scroll-target="#rain-sprinkler-grass-network-rendering"><span class="header-section-number">3.3.2.1</span> Rain-Sprinkler-Grass Network Rendering</a></li>
+  </ul></li>
+  <li><a href="#advantages-for-ai-risk-modeling" id="toc-advantages-for-ai-risk-modeling" class="nav-link" data-scroll-target="#advantages-for-ai-risk-modeling"><span class="header-section-number">3.3.3</span> 2.3.3 Advantages for AI Risk Modeling</a></li>
+  </ul></li>
+  </ul></li>
+  </ul>
+<div class="toc-actions"><ul><li><a href="https://github.com/VJMeyer/submission/edit/main/chapters/Outlines/final_draft.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li></ul></div><div class="quarto-code-links"><h2>Code Links</h2><ul><li><a href="https://colab.research.google.com/github/VJMeyer/submission/blob/main/AMTAIR_Prototype/data/example_carlsmith/AMTAIR_Prototype_example_carlsmith.ipynb"><i class="bi bi-file-code"></i>Colab Notebook (Manual Link in .yml)</a></li><li><a href="https://github.com/VJMeyer/submission"><i class="bi bi-github"></i>GitHub Repository</a></li></ul></div></nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Final Thesis: Automating the Modeling of Transformative Artificial Intelligence Risks</span></h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<section id="frontmatter-preface" class="level2" data-number="1.1">
+<h2 data-number="1.1" class="anchored" data-anchor-id="frontmatter-preface"><span class="header-section-number">1.1</span> Frontmatter: Preface</h2>
+<!-- [-] TODO: Expand preface to include personal journey and acknowledgments -->
+<p>This thesis represents the culmination of interdisciplinary research at the intersection of AI safety, formal epistemology, and computational social science. The work emerged from recognizing a fundamental challenge in AI governance: while investment in AI safety research has grown exponentially, coordination between different stakeholder communities remains fragmented, potentially increasing existential risk through misaligned efforts.</p>
+<p>The journey from initial concept to working implementation involved iterative refinement based on feedback from advisors, domain experts, and potential users. What began as a technical exercise in automated extraction evolved into a broader framework for enhancing epistemic security in one of humanity’s most critical coordination challenges. The AMTAIR project—Automating Transformative AI Risk Modeling—represents an attempt to build computational bridges between communities that, despite shared concerns about AI risk, often struggle to communicate effectively due to incompatible frameworks, terminologies, and implicit assumptions.</p>
+<p>I hope this work contributes to building the intellectual and technical infrastructure necessary for humanity to navigate the transition to transformative AI safely. The tools and frameworks presented here are offered in the spirit of collaborative problem-solving, recognizing that the challenges we face require unprecedented cooperation across disciplines, institutions, and worldviews.</p>
+</section>
+<section id="acknowledgments" class="level2" data-number="1.2">
+<h2 data-number="1.2" class="anchored" data-anchor-id="acknowledgments"><span class="header-section-number">1.2</span> Acknowledgments</h2>
+<!-- [-] TODO: Add specific names and contributions -->
+<p>I thank my supervisor Dr.&nbsp;Timo Speith for his guidance throughout this project, providing both technical insights and philosophical grounding. The MTAIR team’s pioneering manual approach inspired this automation effort, and I am grateful for their foundational work.</p>
+<!-- [-] ADD CONDITIONAL ON INCLUSION OF EXTRA EXTRACTION SECTION: Mention/Acknowledgement of Johannes Meyer and Jelena Meyer for their help to verify the automated extraction procedure by manually extracting the argdown and bayesdown data from the carlsmith paper (AND extra, other second paper) -->
+<p>I acknowledge Johannes Meyer and Jelena Meyer for their invaluable assistance in verifying the automated extraction procedure through manual extraction of ArgDown and BayesDown data from the Carlsmith paper, providing crucial ground truth for validation.</p>
+<p>Special recognition goes to Coleman Snell for his partnership and research collaboration with the AMTAIR project, offering both technical expertise and strategic vision. The AI safety community’s creation of rich literature made this work possible, and I thank all researchers whose arguments provided the raw material for formalization.</p>
+<p>Any errors or limitations remain my own responsibility.</p>
+</section>
+<section id="list-of-figures" class="level2" data-number="1.3">
+<h2 data-number="1.3" class="anchored" data-anchor-id="list-of-figures"><span class="header-section-number">1.3</span> List of Figures</h2>
+<!-- [-] LATER VERIFY: Verify all figures are properly labeled and captioned -->
+<!-- Quarto auto-generates LOF -->
+</section>
+<section id="list-of-tables" class="level2" data-number="1.4">
+<h2 data-number="1.4" class="anchored" data-anchor-id="list-of-tables"><span class="header-section-number">1.4</span> List of Tables</h2>
+<!-- [-] LATER VERIFY: Ensure all tables have proper captions -->
+<!-- Quarto auto-generates LOT -->
+</section>
+<section id="list-of-abbreviations" class="level2" data-number="1.5">
+<h2 data-number="1.5" class="anchored" data-anchor-id="list-of-abbreviations"><span class="header-section-number">1.5</span> List of Abbreviations</h2>
+<!-- [-] TODO: Review and expand abbreviation list -->
+<p>AI - Artificial Intelligence<br>
+AGI - Artificial General Intelligence<br>
+AMTAIR - Automating Transformative AI Risk Modeling<br>
+API - Application Programming Interface<br>
+APS - Advanced, Planning, Strategic (AI systems)<br>
+BN - Bayesian Network<br>
+CPT - Conditional Probability Table<br>
+DAG - Directed Acyclic Graph<br>
+LLM - Large Language Model<br>
+ML - Machine Learning<br>
+MTAIR - Modeling Transformative AI Risks<br>
+NLP - Natural Language Processing<br>
+P&amp;E - Philosophy &amp; Economics<br>
+PDF - Portable Document Format<br>
+TAI - Transformative Artificial Intelligence</p>
+</section>
+<section id="introduction-the-coordination-crisis-in-ai-governance" class="level1" data-number="2">
+<h1 data-number="2"><span class="header-section-number">2</span> 1. Introduction: The Coordination Crisis in AI Governance</h1>
+<p><strong>Chapter Overview</strong><br>
+<strong>Grade Weight</strong>: 10% | <strong>Target Length</strong>: ~14% of text (~4,200 words)<br>
+<strong>Requirements</strong>: Introduces and motivates the core question, provides context, states precise thesis, provides roadmap</p>
+<section id="opening-scenario-the-policymakers-dilemma" class="level2" data-number="2.1">
+<h2 data-number="2.1" class="anchored" data-anchor-id="opening-scenario-the-policymakers-dilemma"><span class="header-section-number">2.1</span> 1.1 Opening Scenario: The Policymaker’s Dilemma</h2>
+<!-- [-] TODO: Polish opening scenario for maximum impact -->
+<!-- [-] ADD: @todd2024 add as reference for more resources towards AI safety -->
+<p>Imagine a senior policy advisor preparing recommendations for AI governance legislation. On her desk lie a dozen reports from leading AI safety researchers, each painting a different picture of the risks ahead. One argues that misaligned AI could pose existential risks within the decade, citing complex technical arguments about instrumental convergence and orthogonality. Another suggests these concerns are overblown, emphasizing uncertainty and the strength of existing institutions. A third proposes specific technical standards but acknowledges deep uncertainty about their effectiveness.</p>
+<p>Each report seems compelling in isolation, written by credentialed experts with sophisticated arguments. Yet they reach dramatically different conclusions about both the magnitude of risk and appropriate interventions. The technical arguments involve unfamiliar concepts—mesa-optimization, corrigibility, capability amplification—expressed through different frameworks and implicit assumptions. Time is limited, stakes are high, and the legislation could shape humanity’s trajectory for decades.</p>
+<!-- [-] EXPLAIN: in footnotes: a) Orthogonality Thesis: Intelligence and goals are independent; an AI can have any set of objectives regardless of its intelligence level. b) Instrumental Convergence Thesis: Different AI systems may adopt similar instrumental goals (e.g., self-preservation, resource acquisition) to achieve their objectives. -->
+<p>This scenario<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a> plays out daily across government offices, corporate boardrooms, and research institutions worldwide. It exemplifies what I term the “coordination crisis” in AI governance: despite unprecedented attention and resources directed toward AI safety, we lack the epistemic infrastructure to synthesize diverse expert knowledge into actionable governance strategies <span class="citation" data-cites="todd2024">Todd (<a href="../../ref/references.html#ref-todd2024" role="doc-biblioref">2024</a>)</span>.</p>
+<!-- [-] CREATE: {#fig-policymaker-dilemma}: "Visual representation of conflicting expert reports on advisor's desk" -->
+<p>Show Image</p>
+</section>
+<section id="the-coordination-crisis-in-ai-governance" class="level2" data-number="2.2">
+<h2 data-number="2.2" class="anchored" data-anchor-id="the-coordination-crisis-in-ai-governance"><span class="header-section-number">2.2</span> 1.2 The Coordination Crisis in AI Governance</h2>
+<!-- [-] TODO: Frame the problem as coordination failure rather than merely technical challenge -->
+<!-- [-] ADD: @maslej2025 Add citation for page 85 as evidence for accelerating capabilities -->
+<!-- [-] ADD: @samborska2025 Add as citation for accelerating capabilities -->
+<p>As AI capabilities advance at an accelerating pace—demonstrated by the rapid progression from GPT-3 to GPT-4, Claude, and emerging multimodal systems <span class="citation" data-cites="maslej2025">Maslej (<a href="../../ref/references.html#ref-maslej2025" role="doc-biblioref">2025</a>)</span> <span class="citation" data-cites="samborska2025">Samborska (<a href="../../ref/references.html#ref-samborska2025" role="doc-biblioref">2025</a>)</span>—humanity faces a governance challenge unlike any in history. The task of ensuring increasingly powerful AI systems remain aligned with human values and beneficial to our long-term flourishing grows more urgent with each capability breakthrough. This challenge becomes particularly acute when considering transformative AI systems that could drastically alter civilization’s trajectory, potentially including existential risks from misaligned systems pursuing objectives counter to human welfare.</p>
+<p>Despite unprecedented investment in AI safety research, rapidly growing awareness among key stakeholders, and proliferating frameworks for responsible AI development, we face what I’ll term the “coordination crisis” in AI governance—a systemic failure to align diverse efforts across technical, policy, and strategic domains into a coherent response proportionate to the risks we face.</p>
+<p>The current state of AI governance presents a striking paradox. On one hand, we witness extraordinary mobilization: billions in research funding, proliferating safety initiatives, major tech companies establishing alignment teams, and governments worldwide developing AI strategies. The Asilomar AI Principles garnered thousands of signatures <span class="citation" data-cites="tegmark2024">Tegmark (<a href="../../ref/references.html#ref-tegmark2024" role="doc-biblioref">2024</a>)</span>, the EU advances comprehensive AI regulation <span class="citation" data-cites="european2024">European (<a href="../../ref/references.html#ref-european2024" role="doc-biblioref">2024</a>)</span>, and technical researchers produce increasingly sophisticated work on alignment, interpretability, and robustness.</p>
+<p>Yet alongside this activity, we observe systematic coordination failures that may prove catastrophic. Technical safety researchers develop sophisticated alignment techniques without clear implementation pathways. Policy specialists craft regulatory frameworks lacking technical grounding to ensure practical efficacy. Ethicists articulate normative principles that lack operational specificity. Strategy researchers identify critical uncertainties but struggle to translate these into actionable guidance. International bodies convene without shared frameworks for assessing interventions.</p>
+<!-- [-] CREATE: {#fig-coordination-crisis}: "Systems diagram showing fragmentation between AI governance communities" -->
+<p>Show Image</p>
+<section id="safety-gaps-from-misaligned-efforts" class="level3" data-number="2.2.1">
+<h3 data-number="2.2.1" class="anchored" data-anchor-id="safety-gaps-from-misaligned-efforts"><span class="header-section-number">2.2.1</span> 1.2.1 Safety Gaps from Misaligned Efforts</h3>
+<!-- [-] TODO: Document how fragmentation systematically increases risk through with specific, good examples -->
+<p>The fragmentation problem manifests in incompatible frameworks between technical researchers, policy specialists, and strategic analysts. Each community develops sophisticated approaches within their domain, yet translation between domains remains primitive. This creates systematic blind spots where risks emerge at the interfaces between technical capabilities, institutional responses, and strategic dynamics.</p>
+<p>When different communities operate with incompatible frameworks, critical risks fall through the cracks. Technical researchers may solve alignment problems under assumptions that policymakers’ decisions invalidate. Regulations optimized for current systems may inadvertently incentivize dangerous development patterns. Without shared models of the risk landscape, our collective efforts resemble the parable of blind men describing an elephant—each accurate within their domain but missing the complete picture <span class="citation" data-cites="paul2023">Paul (<a href="../../ref/references.html#ref-paul2023" role="doc-biblioref">2023</a>)</span>.</p>
+<!-- [-] FIND: @coordination-failure-examples: "Specific historical examples of coordination failures in technology governance" -- arms races to nobodies benefit -- technological race to ?? -->
+<p>Historical precedents demonstrate how coordination failures in technology governance can lead to dangerous dynamics. The nuclear arms race exemplifies how lack of coordination can create negative-sum outcomes where all parties become less secure despite massive investments in safety measures. Similar dynamics may emerge in AI development without proper coordination infrastructure.</p>
+</section>
+<section id="resource-misallocation" class="level3" data-number="2.2.2">
+<h3 data-number="2.2.2" class="anchored" data-anchor-id="resource-misallocation"><span class="header-section-number">2.2.2</span> 1.2.2 Resource Misallocation</h3>
+<!-- [-] TODO: Explain that duplicative efforts absorbing research funding, publications, and initiatives might sometimes improve reliability (think reproducing results) but tend to waste resources in expectation (opportuntity cost) -- change the tone of the paragraph accordingly -->
+<p>The AI safety community faces a complex tradeoff in resource allocation. While some duplication of efforts can improve reliability through independent verification—akin to reproducing scientific results—the current level of fragmentation often leads to wasteful redundancy. Multiple teams independently develop similar frameworks without building on each other’s work, creating opportunity costs where critical but unglamorous research areas remain understaffed. Funders struggle to identify high-impact opportunities across technical and governance domains, lacking the epistemic infrastructure to assess where marginal resources would have the greatest impact. This misallocation becomes more costly as the window for establishing effective governance narrows with accelerating AI development.</p>
+<!-- [-] CREATE: {#tbl-resource-duplication}: "Examples of duplicated AI safety efforts across organizations" -->
+<div id="tbl-resource-duplication" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-tbl figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-resource-duplication-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Table&nbsp;2.1: Examples of duplicated AI safety efforts across organizations
+</figcaption>
+<div aria-describedby="tbl-resource-duplication-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<table class="caption-top table">
+<colgroup>
+<col style="width: 20%">
+<col style="width: 20%">
+<col style="width: 20%">
+<col style="width: 20%">
+<col style="width: 20%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Research Area</th>
+<th>Organization A</th>
+<th>Organization B</th>
+<th>Duplication Level</th>
+<th>Opportunity Cost</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Interpretability Methods</td>
+<td>Anthropic’s mechanistic interpretability</td>
+<td>DeepMind’s concept activation vectors</td>
+<td>Medium</td>
+<td>Reduced focus on multi-agent safety</td>
+</tr>
+<tr class="even">
+<td>Alignment Frameworks</td>
+<td>MIRI’s embedded agency</td>
+<td>FHI’s comprehensive AI services</td>
+<td>High</td>
+<td>Limited work on institutional design</td>
+</tr>
+<tr class="odd">
+<td>Risk Assessment Models</td>
+<td>GovAI’s policy models</td>
+<td>CSER’s existential risk frameworks</td>
+<td>High</td>
+<td>Insufficient capability benchmarking</td>
+</tr>
+</tbody>
+</table>
+</div>
+</figure>
+</div>
+</section>
+<section id="negative-sum-dynamics" class="level3" data-number="2.2.3">
+<h3 data-number="2.2.3" class="anchored" data-anchor-id="negative-sum-dynamics"><span class="header-section-number">2.2.3</span> 1.2.3 Negative-Sum Dynamics</h3>
+<!-- [-] TODO: Address capability-governance gaps widening with accelerating development -->
+<p>Perhaps most concerning, uncoordinated interventions can actively increase risk. Safety standards that advantage established players may accelerate risky development elsewhere. Partial transparency requirements might enable capability advances without commensurate safety improvements. International agreements lacking shared technical understanding may lock in dangerous practices. Without coordination, our cure risks becoming worse than the disease.</p>
+<p>The game-theoretic structure of AI development creates particularly pernicious dynamics. Armstrong et al. <span class="citation" data-cites="armstrong2016">Armstrong, Bostrom, and Shulman (<a href="../../ref/references.html#ref-armstrong2016" role="doc-biblioref">2016</a>)</span> demonstrate how uncoordinated policies can incentivize a “race to the precipice” where competitive pressures override safety considerations. The situation resembles a multi-player prisoner’s dilemma or stag hunt where individually rational decisions lead to collectively catastrophic outcomes <span class="citation" data-cites="samuel2023">Samuel (<a href="../../ref/references.html#ref-samuel2023" role="doc-biblioref">2023</a>)</span> <span class="citation" data-cites="hunt2025">Hunt (<a href="../../ref/references.html#ref-hunt2025" role="doc-biblioref">2025</a>)</span>.</p>
+<!-- [-] LATER ADD: Citation for unpublished "anybody builds it everyone dies (soares & yudkowsky)" -->
+</section>
+</section>
+<section id="historical-parallels-and-temporal-urgency" class="level2" data-number="2.3">
+<h2 data-number="2.3" class="anchored" data-anchor-id="historical-parallels-and-temporal-urgency"><span class="header-section-number">2.3</span> 1.3 Historical Parallels and Temporal Urgency</h2>
+<!-- [-] TODO: Draw connections to nuclear governance, climate change, and biosecurity -->
+<p>History offers instructive parallels. The nuclear age began with scientists racing to understand and control forces that could destroy civilization. Early coordination failures—competing national programs, scientist-military tensions, public-expert divides—nearly led to catastrophe multiple times. Only through developing shared frameworks (deterrence theory) <span class="citation" data-cites="schelling1960">Schelling (<a href="../../ref/references.html#ref-schelling1960" role="doc-biblioref">1960</a>)</span>, institutions (IAEA), and communication channels (hotlines, treaties) did humanity navigate the nuclear precipice <span class="citation" data-cites="rehman2025">Rehman (<a href="../../ref/references.html#ref-rehman2025" role="doc-biblioref">2025</a>)</span>.</p>
+<p>Yet AI presents unique coordination challenges that compress our response timeline:</p>
+<p><strong>Accelerating Development</strong>: Unlike nuclear weapons requiring massive infrastructure, AI development proceeds in corporate labs and academic departments worldwide. Capability improvements come through algorithmic insights and computational scale, both advancing exponentially.</p>
+<p><strong>Dual-Use Ubiquity</strong>: Every AI advance potentially contributes to both beneficial applications and catastrophic risks. The same language model architectures enabling scientific breakthroughs could facilitate dangerous manipulation or deception at scale.</p>
+<p><strong>Comprehension Barriers</strong>: Nuclear risks were viscerally understandable—cities vaporized, radiation sickness, nuclear winter. AI risks involve abstract concepts like optimization processes, goal misspecification, and emergent capabilities that resist intuitive understanding.</p>
+<p><strong>Governance Lag</strong>: Traditional governance mechanisms—legislation, international treaties, professional standards—operate on timescales of years to decades. AI capabilities advance on timescales of months to years, creating an ever-widening capability-governance gap.</p>
+<!-- [-] CREATE: {#fig-governance-lag}: "Timeline comparison of AI capability vs governance development" -->
+<p>Show Image</p>
+</section>
+<section id="research-question-and-scope" class="level2" data-number="2.4">
+<h2 data-number="2.4" class="anchored" data-anchor-id="research-question-and-scope"><span class="header-section-number">2.4</span> 1.4 Research Question and Scope</h2>
+<!-- [-] TODO: Clearly articulate the primary research question with precision -->
+<p>This thesis addresses a specific dimension of the coordination challenge by investigating the question:</p>
+<p><strong>Can frontier AI technologies be utilized to automate the modeling of transformative AI risks, enabling robust prediction of policy impacts across diverse worldviews?</strong></p>
+<p>More specifically, I explore whether frontier language models can automate the extraction and formalization of probabilistic world models from AI safety literature, creating a scalable computational framework that enhances coordination in AI governance through systematic policy evaluation under uncertainty.</p>
+<p>To break this down into its components:</p>
+<ul>
+<li><strong>Frontier AI Technologies</strong>: Today’s most capable language models (GPT-4, Claude-3 level systems)</li>
+<li><strong>Automated Modeling</strong>: Using these systems to extract and formalize argument structures from natural language</li>
+<li><strong>Transformative AI Risks</strong>: Potentially catastrophic outcomes from advanced AI systems, particularly existential risks</li>
+<li><strong>Policy Impact Prediction</strong>: Evaluating how governance interventions might alter probability distributions over outcomes</li>
+<li><strong>Diverse Worldviews</strong>: Accounting for fundamental disagreements about AI development trajectories and risk factors</li>
+</ul>
+<p>The investigation encompasses both theoretical development and practical implementation, focusing specifically on existential risks from misaligned AI systems rather than broader AI ethics concerns. This narrowed scope enables deep technical development while addressing the highest-stakes coordination challenges.</p>
+<!-- [-] LATER TODO: Refine thesis statement based on advisor feedback -->
+</section>
+<section id="the-multiplicative-benefits-framework" class="level2" data-number="2.5">
+<h2 data-number="2.5" class="anchored" data-anchor-id="the-multiplicative-benefits-framework"><span class="header-section-number">2.5</span> 1.5 The Multiplicative Benefits Framework</h2>
+<!-- [-] TODO: Establish central thesis about synergistic combination of three elements -->
+<p>The central thesis of this work is that combining three elements—automated worldview extraction, prediction market integration, and formal policy evaluation—creates multiplicative rather than merely additive benefits for AI governance. Each component enhances the others, creating a system more valuable than the sum of its parts.</p>
+<!-- [-] CREATE: {#fig-multiplicative-benefits}: "Venn diagram showing synergies between extraction, markets, and evaluation": Automation × Live Prediction Market Integrations × Policy Impact Evaluations -->
+<p>Show Image</p>
+<section id="automated-worldview-extraction" class="level3" data-number="2.5.1">
+<h3 data-number="2.5.1" class="anchored" data-anchor-id="automated-worldview-extraction"><span class="header-section-number">2.5.1</span> 1.5.1 Automated Worldview Extraction</h3>
+<p>Current approaches to AI risk modeling, exemplified by the Modeling Transformative AI Risks (MTAIR) project, demonstrate the value of formal representation but require extensive manual effort. Creating a single model demands dozens of expert-hours to translate qualitative arguments into quantitative frameworks. This bottleneck severely limits the number of perspectives that can be formalized and the speed of model updates as new arguments emerge.</p>
+<p>Automation using frontier language models addresses this scaling challenge. By developing systematic methods to extract causal structures and probability judgments from natural language, we can:</p>
+<ul>
+<li>Process orders of magnitude more content</li>
+<li>Incorporate diverse perspectives rapidly</li>
+<li>Maintain models that evolve with the discourse</li>
+<li>Reduce barriers to entry for contributing worldviews</li>
+</ul>
+</section>
+<section id="live-data-integration" class="level3" data-number="2.5.2">
+<h3 data-number="2.5.2" class="anchored" data-anchor-id="live-data-integration"><span class="header-section-number">2.5.2</span> 1.5.2 Live Data Integration</h3>
+<p>Static models, however well-constructed, quickly become outdated in fast-moving domains. Prediction markets and forecasting platforms aggregate distributed knowledge about uncertain futures, providing continuously updated probability estimates. By connecting formal models to these live data sources, we create dynamic assessments that incorporate the latest collective intelligence <span class="citation" data-cites="tetlock2015">P. E. Tetlock and Gardner (<a href="../../ref/references.html#ref-tetlock2015" role="doc-biblioref">2015</a>)</span>.</p>
+<p>This integration serves multiple purposes:</p>
+<ul>
+<li>Grounding abstract models in empirical forecasts</li>
+<li>Identifying which uncertainties most affect outcomes</li>
+<li>Revealing when model assumptions diverge from collective expectations</li>
+<li>Generating new questions for forecasting communities</li>
+</ul>
+</section>
+<section id="formal-policy-evaluation" class="level3" data-number="2.5.3">
+<h3 data-number="2.5.3" class="anchored" data-anchor-id="formal-policy-evaluation"><span class="header-section-number">2.5.3</span> 1.5.3 Formal Policy Evaluation</h3>
+<p><strong>Formal policy evaluation</strong> transforms static risk assessments into actionable guidance by modeling how specific interventions alter critical parameters. Using causal inference techniques <span class="citation" data-cites="pearl2000">Pearl (<a href="../../ref/references.html#ref-pearl2000" role="doc-biblioref">2000</a>)</span> <span class="citation" data-cites="pearl2009">Pearl (<a href="../../ref/references.html#ref-pearl2009" role="doc-biblioref">2009</a>)</span>, we can assess not just the probability of adverse outcomes but how those probabilities change under different policy regimes.</p>
+<p>This enables genuinely evidence-based policy development:</p>
+<ul>
+<li>Comparing interventions across multiple worldviews</li>
+<li>Identifying robust strategies that work across scenarios</li>
+<li>Understanding which uncertainties most affect policy effectiveness</li>
+<li>Prioritizing research to reduce decision-relevant uncertainty</li>
+</ul>
+</section>
+<section id="the-synergy" class="level3" data-number="2.5.4">
+<h3 data-number="2.5.4" class="anchored" data-anchor-id="the-synergy"><span class="header-section-number">2.5.4</span> 1.5.4 The Synergy</h3>
+<p>The multiplicative benefits emerge from the interactions between components:</p>
+<ul>
+<li>Automation enables comprehensive coverage, making prediction market integration more valuable by connecting to more perspectives</li>
+<li>Market data validates and calibrates automated extractions, improving quality</li>
+<li>Policy evaluation gains precision from both comprehensive models and live probability updates</li>
+<li>The complete system creates feedback loops where policy analysis identifies critical uncertainties for market attention</li>
+</ul>
+<p>This synergistic combination addresses the coordination crisis by providing common ground for disparate communities, translating between technical and policy languages, quantifying previously implicit disagreements, and enabling evidence-based compromise.</p>
+</section>
+</section>
+<section id="thesis-structure-and-roadmap" class="level2" data-number="2.6">
+<h2 data-number="2.6" class="anchored" data-anchor-id="thesis-structure-and-roadmap"><span class="header-section-number">2.6</span> 1.6 Thesis Structure and Roadmap</h2>
+<!-- [-] TODO: Preview the logical progression of the thesis -->
+<p>The remainder of this thesis develops the multiplicative benefits framework from theoretical foundations to practical implementation:</p>
+<p><strong>Chapter 2: Context and Theoretical Foundations</strong> establishes the intellectual groundwork, examining the epistemic challenges unique to AI governance, Bayesian networks as formal tools for uncertainty representation, argument mapping as a bridge from natural language to formal models, the MTAIR project’s achievements and limitations, and requirements for effective coordination infrastructure.</p>
+<p><strong>Chapter 3: AMTAIR Design and Implementation</strong> presents the technical system including overall architecture and design principles, the two-stage extraction pipeline (ArgDown → BayesDown), validation methodology and results, case studies from simple examples to complex AI risk models, and integration with prediction markets and policy evaluation.</p>
+<p><strong>Chapter 4: Discussion - Implications and Limitations</strong> critically examines technical limitations and failure modes, conceptual concerns about formalization, integration with existing governance frameworks, scaling challenges and opportunities, and broader implications for epistemic security.</p>
+<p><strong>Chapter 5: Conclusion</strong> synthesizes key contributions and charts paths forward with a summary of theoretical and practical achievements, concrete recommendations for stakeholders, research agenda for community development, and vision for AI governance with proper coordination infrastructure.</p>
+<p>Throughout this progression, I maintain dual focus on theoretical sophistication and practical utility. The framework aims not merely to advance academic understanding but to provide actionable tools for improving coordination in AI governance during this critical period.</p>
+<!-- [-] CREATE: {#fig-thesis-roadmap}: "Visual flowchart of thesis structure and chapter connections" -->
+<p>Show Image</p>
+<p>Having established the coordination crisis and outlined how automated modeling can address it, we now turn to the theoretical foundations that make this approach possible. The next chapter examines the unique epistemic challenges of AI governance and introduces the formal tools—particularly Bayesian networks—that enable rigorous reasoning under deep uncertainty.</p>
+</section>
+</section>
+<section id="context-and-theoretical-foundations" class="level1" data-number="3">
+<h1 data-number="3"><span class="header-section-number">3</span> 2. Context and Theoretical Foundations</h1>
+<p><strong>Chapter Overview</strong><br>
+<strong>Grade Weight</strong>: 20% | <strong>Target Length</strong>: ~29% of text (~8,700 words)<br>
+<strong>Requirements</strong>: Demonstrates understanding of relevant concepts, explains relevance, situates in debate, reconstructs arguments</p>
+<!-- [-] INTRODUCE: Concise overview of the Literature, Concepts & Terminology introduced in this chapter/thesis-->
+<p>This chapter establishes the theoretical and methodological foundations for the AMTAIR approach. We begin by examining a concrete example of structured AI risk assessment—Joseph Carlsmith’s power-seeking AI model—to ground our discussion in practical terms. We then explore the unique epistemic challenges of AI governance that render traditional policy analysis inadequate, introduce Bayesian networks as formal tools for representing uncertainty, and examine how argument mapping bridges natural language reasoning and formal models. The chapter concludes by analyzing the MTAIR project’s achievements and limitations, motivating the need for automated approaches, and surveying relevant literature across AI risk modeling, governance proposals, and technical methodologies.</p>
+<!-- [-] TODO: Create "Background Knowledge" footnotes for key concepts -->
+<section id="ai-existential-risk-the-carlsmith-model" class="level2" data-number="3.1">
+<h2 data-number="3.1" class="anchored" data-anchor-id="ai-existential-risk-the-carlsmith-model"><span class="header-section-number">3.1</span> 2.1 AI Existential Risk: The Carlsmith Model</h2>
+<!-- [-] TODO: Provide overview of Joe Carlsmith's probabilistic model of power-seeking AI -->
+<p>To ground our discussion in concrete terms, I examine Joseph Carlsmith’s “Is Power-Seeking AI an Existential Risk?” as an exemplar of structured reasoning about AI catastrophic risk <span class="citation" data-cites="carlsmith2022">Carlsmith (<a href="../../ref/references.html#ref-carlsmith2022" role="doc-biblioref">2022</a>)</span>. Carlsmith’s analysis stands out for its explicit probabilistic decomposition of the path from current AI development to potential existential catastrophe.</p>
+<!-- [-] ADD: @carlsmith2022: "Carlsmith, J. (2022). Is Power-Seeking AI an Existential Risk?" -->
+<!-- [-] Explain CITATION: - as a footnote somewhere in this section - that there are multiple versions of the Carlsmith paper: @carlsmith2024 , @carlsmith2021 , @carlsmith2022 @carlsmith2023 -->
+<section id="six-premise-decomposition" class="level3" data-number="3.1.1">
+<h3 data-number="3.1.1" class="anchored" data-anchor-id="six-premise-decomposition"><span class="header-section-number">3.1.1</span> 2.1.1 Six-Premise Decomposition</h3>
+<!-- [-] ADD: @clarke2022 citation -->
+<p>According to the MTAIR model <span class="citation" data-cites="clarke2022">Clarke et al. (<a href="../../ref/references.html#ref-clarke2022" role="doc-biblioref">2022</a>)</span>, Carlsmith decomposes existential risk into a probabilistic chain with explicit estimates<a href="#fn2" class="footnote-ref" id="fnref2" role="doc-noteref"><sup>2</sup></a>:</p>
+<ol type="1">
+<li><strong>Premise 1</strong>: Transformative AI development this century (P≈0.80)(P ≈ 0.80) (P≈0.80)</li>
+<li><strong>Premise 2</strong>: AI systems pursuing objectives in the world (P≈0.95)(P ≈ 0.95) (P≈0.95)</li>
+<li><strong>Premise 3</strong>: Systems with power-seeking instrumental incentives (P≈0.40)(P ≈ 0.40) (P≈0.40)</li>
+<li><strong>Premise 4</strong>: Sufficient capability for existential threat (P≈0.65)(P ≈ 0.65) (P≈0.65)</li>
+<li><strong>Premise 5</strong>: Misaligned systems despite safety efforts (P≈0.50)(P ≈ 0.50) (P≈0.50)</li>
+<li><strong>Premise 6</strong>: Catastrophic outcomes from misaligned power-seeking (P≈0.65)(P ≈ 0.65) (P≈0.65)</li>
+</ol>
+<p><strong>Composite Risk Calculation</strong>: P(doom)≈0.05P(doom) ≈ 0.05 P(doom)≈0.05 (5%)</p>
+<!-- [-] CREATE: Mermaid flowchart of Carlsmith model with probabilities (in correct Quarto Syntax)-->
+<p>mermaid</p>
+<pre class="mermaid"><code>flowchart TD
+    P1[Premise 1: Transformative AI&lt;br/&gt;P ≈ 0.80] --&gt; P2[Premise 2: AI pursuing objectives&lt;br/&gt;P ≈ 0.95]
+    P2 --&gt; P3[Premise 3: Power-seeking incentives&lt;br/&gt;P ≈ 0.40]
+    P3 --&gt; P4[Premise 4: Existential capability&lt;br/&gt;P ≈ 0.65]
+    P4 --&gt; P5[Premise 5: Misalignment despite safety&lt;br/&gt;P ≈ 0.50]
+    P5 --&gt; P6[Premise 6: Catastrophic outcome&lt;br/&gt;P ≈ 0.65]
+    P6 --&gt; D[Existential Catastrophe&lt;br/&gt;P ≈ 0.05]</code></pre>
+<p>Carlsmith structures his argument through six conditional premises, each assigned explicit probability estimates:</p>
+<p><strong>Premise 1: APS Systems by 2070</strong> (P≈0.65)(P ≈ 0.65) (P≈0.65) “By 2070, there will be AI systems with Advanced capability, Agentic planning, and Strategic awareness”—the conjunction of capabilities that could enable systematic pursuit of objectives in the world.</p>
+<p><strong>Premise 2: Alignment Difficulty</strong> (P≈0.40)(P ≈ 0.40) (P≈0.40) “It will be harder to build aligned APS systems than misaligned systems that are still attractive to deploy”—capturing the challenge that safety may conflict with capability or efficiency.</p>
+<p><strong>Premise 3: Deployment Despite Misalignment</strong> (P≈0.70)(P ≈ 0.70) (P≈0.70) “Conditional on 1 and 2, we will deploy misaligned APS systems”—reflecting competitive pressures and limited coordination.</p>
+<p><strong>Premise 4: Power-Seeking Behavior</strong> (P≈0.65)(P ≈ 0.65) (P≈0.65) “Conditional on 1-3, misaligned APS systems will seek power in high-impact ways”—based on instrumental convergence arguments.</p>
+<p><strong>Premise 5: Disempowerment Success</strong> (P≈0.40)(P ≈ 0.40) (P≈0.40) “Conditional on 1-4, power-seeking will scale to permanent human disempowerment”—despite potential resistance and safeguards.</p>
+<p><strong>Premise 6: Existential Catastrophe</strong> (P≈0.95)(P ≈ 0.95) (P≈0.95) “Conditional on 1-5, this disempowerment constitutes existential catastrophe”—connecting power loss to permanent curtailment of human potential.</p>
+<p><strong>Overall Risk</strong>: Multiplying through the conditional chain yields P(doom)≈0.05P(doom) ≈ 0.05 P(doom)≈0.05 or 5% by 2070.</p>
+<p>This structured approach exemplifies the type of reasoning AMTAIR aims to formalize and automate. While Carlsmith spent months developing this model manually, similar rigor exists implicitly in many AI safety arguments awaiting extraction.</p>
+<!-- [-] TODO: Verify manual extraction of Carlsmith model for ground truth with Ella and Johannes -->
+</section>
+<section id="why-carlsmith-exemplifies-formalizable-arguments" class="level3" data-number="3.1.2">
+<h3 data-number="3.1.2" class="anchored" data-anchor-id="why-carlsmith-exemplifies-formalizable-arguments"><span class="header-section-number">3.1.2</span> 2.1.2 Why Carlsmith Exemplifies Formalizable Arguments</h3>
+<p>Carlsmith’s model demonstrates several features that make it ideal for formal representation:</p>
+<p><strong>Explicit Probabilistic Structure</strong>: Each premise receives numerical probability estimates with documented reasoning, enabling direct translation to Bayesian network parameters.</p>
+<p><strong>Clear Conditional Dependencies</strong>: The logical flow from capabilities through deployment decisions to catastrophic outcomes maps naturally onto directed acyclic graphs.</p>
+<p><strong>Transparent Decomposition</strong>: Breaking the argument into modular premises allows independent evaluation and sensitivity analysis of each component.</p>
+<p><strong>Documented Reasoning</strong>: Extensive justification for each probability enables extraction of both structure and parameters from the source text.</p>
+<!-- [-] ADD: "foreshadowing" of how/why we will pick up with carlsmith model later-->
+<p>We will return to Carlsmith’s model in Chapter 3 as our primary complex case study, demonstrating how AMTAIR successfully extracts and formalizes this sophisticated multi-level argument.</p>
+<!-- [-] LATER TODO: Extract two additional "inside view" world models for comparison -->
+<!-- [-] ADD: @christiano2019: "Christiano, P. (2019). What failure looks like. AI Alignment Forum." -->
+<p>Beyond Carlsmith’s model, other structured approaches to AI risk—such as Christiano’s “What failure looks like” <span class="citation" data-cites="christiano2019">Christiano (<a href="../../ref/references.html#ref-christiano2019" role="doc-biblioref">2019</a>)</span>—provide additional targets for automated extraction, enabling comparative analysis across different expert worldviews.</p>
+</section>
+</section>
+<section id="the-epistemic-challenge-of-policy-evaluation" class="level2" data-number="3.2">
+<h2 data-number="3.2" class="anchored" data-anchor-id="the-epistemic-challenge-of-policy-evaluation"><span class="header-section-number">3.2</span> 2.2 The Epistemic Challenge of Policy Evaluation</h2>
+<!-- [-] TODO: Explain why evaluating AI governance policies is particularly difficult -->
+<p>AI governance policy evaluation faces unique epistemic challenges that render traditional policy analysis methods insufficient. Understanding these challenges motivates the need for new computational approaches.</p>
+<section id="unique-characteristics-of-ai-governance" class="level3" data-number="3.2.1">
+<h3 data-number="3.2.1" class="anchored" data-anchor-id="unique-characteristics-of-ai-governance"><span class="header-section-number">3.2.1</span> 2.2.1 Unique Characteristics of AI Governance</h3>
+<p><strong>Deep Uncertainty Rather Than Risk</strong>: Traditional policy analysis distinguishes between risk (known probability distributions) and uncertainty (known possibilities, unknown probabilities). AI governance faces deep uncertainty—we cannot confidently enumerate possible futures, much less assign probabilities <span class="citation" data-cites="hallegatte2012">Hallegatte et al. (<a href="../../ref/references.html#ref-hallegatte2012" role="doc-biblioref">2012</a>)</span>. Will recursive self-improvement enable rapid capability gains? Can value alignment be solved technically? These foundational questions resist empirical resolution before their answers become catastrophically relevant.</p>
+<p><strong>Complex Multi-Level Causation</strong>: Policy effects propagate through technical, institutional, and social levels with intricate feedback loops. A technical standard might alter research incentives, shifting capability development trajectories, changing competitive dynamics, and ultimately affecting existential risk through pathways invisible at the policy’s inception. Traditional linear causal models cannot capture these dynamics.</p>
+<p><strong>Irreversibility and Lock-In</strong>: Many AI governance decisions create path dependencies that prove difficult or impossible to reverse. Early technical standards shape development trajectories. Institutional structures ossify. International agreements create sticky equilibria. Unlike many policy domains where course correction remains possible, AI governance mistakes may prove permanent.</p>
+<p><strong>Value-Laden Technical Choices</strong>: The entanglement of technical and normative questions confounds traditional separation of facts and values. What constitutes “alignment”? How much capability development should we risk for economic benefits? Technical specifications embed ethical judgments that resist neutral expertise.</p>
+<!-- [-] CREATE: {#tbl-governance-challenges}: "Comparison of AI governance vs traditional policy domains" -->
+<div id="tbl-governance-challenges" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-tbl figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-governance-challenges-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Table&nbsp;3.1: Comparison of AI governance vs traditional policy domains
+</figcaption>
+<div aria-describedby="tbl-governance-challenges-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<table class="caption-top table">
+<colgroup>
+<col style="width: 33%">
+<col style="width: 33%">
+<col style="width: 33%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Dimension</th>
+<th>Traditional Policy</th>
+<th>AI Governance</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Uncertainty Type</td>
+<td>Risk (known distributions)</td>
+<td>Deep uncertainty (unknown unknowns)</td>
+</tr>
+<tr class="even">
+<td>Causal Structure</td>
+<td>Linear, traceable</td>
+<td>Multi-level, feedback loops</td>
+</tr>
+<tr class="odd">
+<td>Reversibility</td>
+<td>Course correction possible</td>
+<td>Path dependencies, lock-in</td>
+</tr>
+<tr class="even">
+<td>Fact-Value Separation</td>
+<td>Clear boundaries</td>
+<td>Entangled technical-normative</td>
+</tr>
+<tr class="odd">
+<td>Empirical Grounding</td>
+<td>Historical precedents</td>
+<td>Unprecedented phenomena</td>
+</tr>
+<tr class="even">
+<td>Time Horizons</td>
+<td>Years to decades</td>
+<td>Months to centuries</td>
+</tr>
+</tbody>
+</table>
+</div>
+</figure>
+</div>
+</section>
+<section id="limitations-of-traditional-approaches" class="level3" data-number="3.2.2">
+<h3 data-number="3.2.2" class="anchored" data-anchor-id="limitations-of-traditional-approaches"><span class="header-section-number">3.2.2</span> 2.2.2 Limitations of Traditional Approaches</h3>
+<p>Standard policy evaluation tools prove inadequate for these challenges:</p>
+<p><strong>Cost-Benefit Analysis</strong> assumes commensurable outcomes and stable probability distributions. When potential outcomes include existential catastrophe with deeply uncertain probabilities, the mathematical machinery breaks down. Infinite negative utility resists standard decision frameworks.</p>
+<p><strong>Scenario Planning</strong> helps explore possible futures but typically lacks the probabilistic reasoning needed for decision-making under uncertainty. Without quantification, scenarios provide narrative richness but limited action guidance.</p>
+<p><strong>Expert Elicitation</strong> aggregates specialist judgment but struggles with interdisciplinary questions where no single expert grasps all relevant factors. Moreover, experts often operate with different implicit models, making aggregation problematic.</p>
+<p><strong>Red Team Exercises</strong> test specific plans but miss systemic risks emerging from component interactions. Gaming individual failures cannot reveal emergent catastrophic possibilities.</p>
+<p>These limitations create a methodological gap: we need approaches that handle deep uncertainty, represent complex causation, quantify expert disagreement, and enable systematic exploration of intervention effects.</p>
+<!-- [-] ADD: @hallegatte2012: "Hallegatte et al. on robust decision-making under deep uncertainty" -->
+</section>
+<section id="the-underlying-epistemic-framework" class="level3" data-number="3.2.3">
+<h3 data-number="3.2.3" class="anchored" data-anchor-id="the-underlying-epistemic-framework"><span class="header-section-number">3.2.3</span> 2.2.3 The Underlying Epistemic Framework</h3>
+<!-- [-] OUTLINE AND WRITE: this entire section about Foundation Epistemic Framework — Probabilistic, Conditional, Possible Worlds -->
+<p>The AMTAIR approach rests on a specific epistemic framework that combines probabilistic reasoning, conditional logic, and possible worlds semantics. This framework provides the philosophical foundation for representing deep uncertainty about AI futures.</p>
+<p><strong>Probabilistic Epistemology</strong>: Following the Bayesian tradition, we treat probability as a measure of rational credence rather than objective frequency. This subjective interpretation allows meaningful probability assignments even for unique, unprecedented events like AI catastrophe. As E.T. Jaynes demonstrated, probability theory extends deductive logic to handle uncertainty, providing a calculus for rational belief <span class="citation" data-cites="jaynes2003">Jaynes (<a href="../../ref/references.html#ref-jaynes2003" role="doc-biblioref">2003</a>)</span>.</p>
+<p><strong>Conditional Structure</strong>: The framework emphasizes conditional rather than absolute probabilities. Instead of asking “What is P(catastrophe)?” we ask “What is P(catastrophe | specific assumptions)?” This conditionalization makes explicit the dependency of conclusions on worldview assumptions, enabling productive disagreement about premises rather than conclusions.</p>
+<p><strong>Possible Worlds Semantics</strong>: We conceptualize uncertainty as distributions over possible worlds—complete descriptions of how reality might unfold. Each world represents a coherent scenario with specific values for all relevant variables. Probability distributions over these worlds capture both what we know and what we don’t know about the future.</p>
+<p>This framework enables several key capabilities:</p>
+<ol type="1">
+<li><strong>Representing ignorance</strong>: We can express uncertainty about uncertainty itself through hierarchical probability models</li>
+<li><strong>Combining evidence</strong>: Bayesian updating provides principled methods for integrating new information</li>
+<li><strong>Comparing worldviews</strong>: Different probability distributions over the same space of possibilities enable systematic comparison</li>
+<li><strong>Evaluating interventions</strong>: Counterfactual reasoning about how actions change probability distributions</li>
+</ol>
+<!-- [-] DECIDE AND IMPLEMENT: Should this section be level 2 ?-->
+</section>
+<section id="toward-new-epistemic-tools" class="level3" data-number="3.2.4">
+<h3 data-number="3.2.4" class="anchored" data-anchor-id="toward-new-epistemic-tools"><span class="header-section-number">3.2.4</span> 2.2.4 Toward New Epistemic Tools</h3>
+<!-- [-] TODO: Bridge from limitations to the need for automated, computational approaches -->
+<p>The inadequacy of traditional methods for AI governance creates an urgent need for new epistemic tools. These tools must:</p>
+<ul>
+<li><strong>Handle Deep Uncertainty</strong>: Move beyond point estimates to represent ranges of possibilities</li>
+<li><strong>Capture Complex Causation</strong>: Model multi-level interactions and feedback loops</li>
+<li><strong>Quantify Disagreement</strong>: Make explicit where experts diverge and why</li>
+<li><strong>Enable Systematic Analysis</strong>: Support rigorous comparison of policy options</li>
+</ul>
+<p><strong>Key Insight</strong>: The computational approaches developed in this thesis—particularly Bayesian networks enhanced with automated extraction—directly address each of these requirements by providing formal frameworks for reasoning under uncertainty.</p>
+<!-- [-] Images -->
+<p>Show Image</p>
+<p>Show Image</p>
+<p>Show Image</p>
+<p>Show Image</p>
+<!-- [-] ADD: @mccaslin2024 cite and write about "Conditional Trees: A Method for Generating Informative Questions about Complex Topics" -->
+<p>Recent work on conditional trees demonstrates the value of structured approaches to uncertainty. McCaslin et al. <span class="citation" data-cites="mccaslin2024">McCaslin et al. (<a href="../../ref/references.html#ref-mccaslin2024" role="doc-biblioref">2024</a>)</span> show how hierarchical conditional forecasting can identify high-value questions for reducing uncertainty about complex topics like AI risk. Their methodology, which asks experts to produce simplified Bayesian networks of informative forecasting questions, achieved nine times higher information value than standard forecasting platform questions.</p>
+<!-- [-] ADD: @tetlock2022 cite and explain their use of metaculus prediction markets -->
+<p>Tetlock’s work with the Forecasting Research Institute <span class="citation" data-cites="tetlock2022">P. Tetlock (<a href="../../ref/references.html#ref-tetlock2022" role="doc-biblioref">2022</a>)</span> exemplifies how prediction markets can provide empirical grounding for formal models. By structuring questions as conditional trees, they enable forecasters to express complex dependencies between events, providing exactly the type of data needed for Bayesian network parameterization.</p>
+<!-- [-] ADD @gruetzemacher2022 cite and summarize the relevant aspects -->
+<p>Gruetzemacher <span class="citation" data-cites="gruetzemacher2022">Gruetzemacher (<a href="../../ref/references.html#ref-gruetzemacher2022" role="doc-biblioref">2022</a>)</span> evaluates the tradeoffs between full Bayesian networks and conditional trees for forecasting tournaments. While conditional trees offer simplicity, Bayesian networks provide richer representation of dependencies—motivating AMTAIR’s approach of using full networks while leveraging conditional tree insights for question generation.</p>
+</section>
+</section>
+<section id="bayesian-networks-as-knowledge-representation" class="level2" data-number="3.3">
+<h2 data-number="3.3" class="anchored" data-anchor-id="bayesian-networks-as-knowledge-representation"><span class="header-section-number">3.3</span> 2.3 Bayesian Networks as Knowledge Representation</h2>
+<!-- [-] TODO: Introduce Bayesian networks as formal tools for representing uncertainty -->
+<p>Bayesian networks offer a mathematical framework uniquely suited to addressing these epistemic challenges. By combining graphical structure with probability theory, they provide tools for reasoning about complex uncertain domains.</p>
+<section id="mathematical-foundations" class="level3" data-number="3.3.1">
+<h3 data-number="3.3.1" class="anchored" data-anchor-id="mathematical-foundations"><span class="header-section-number">3.3.1</span> 2.3.1 Mathematical Foundations</h3>
+<p>A Bayesian network consists of:</p>
+<ul>
+<li><strong>Directed Acyclic Graph (DAG)</strong>: Nodes represent variables, edges represent direct dependencies</li>
+<li><strong>Conditional Probability Tables (CPTs)</strong>: For each node, P(node|parents) quantifies relationships</li>
+</ul>
+<p>The joint probability distribution factors according to the graph structure:</p>
+<!-- [-] CHECK: if this equation is correct -->
+<p>P(X1,X2,…,Xn)=∏i=1nP(Xi∣Parents(Xi))P(X_1, X_2, …, X_n) = _{i=1}^{n} P(X_i | Parents(X_i))P(X1​,X2​,…,Xn​)=i=1∏n​P(Xi​∣Parents(Xi​))</p>
+<p>This factorization enables efficient inference and embodies causal assumptions explicitly.</p>
+<!-- [-] ADD: @pearl2014: "Pearl, J. (2014). Probabilistic Reasoning in Intelligent Systems: Networks of plausible Inference" -->
+<p>Pearl’s foundational work <span class="citation" data-cites="pearl2014">Pearl (<a href="../../ref/references.html#ref-pearl2014" role="doc-biblioref">2014</a>)</span> established Bayesian networks as a principled approach to automated reasoning under uncertainty, providing both theoretical foundations and practical algorithms.</p>
+<!-- [-] INTEGRATE: the information of this write up -->
+<!-- Removed lengthy section on risk management and Bayesian networks that wasn't directly relevant to the thesis focus -->
+</section>
+<section id="the-rain-sprinkler-grass-example" class="level3" data-number="3.3.2">
+<h3 data-number="3.3.2" class="anchored" data-anchor-id="the-rain-sprinkler-grass-example"><span class="header-section-number">3.3.2</span> 2.3.2 The Rain-Sprinkler-Grass Example</h3>
+<!-- [-] CHANGE ORDER: of Rain-sprinkler-grass example and argument mapping section-->
+<p>The canonical example illustrates key concepts<a href="#fn3" class="footnote-ref" id="fnref3" role="doc-noteref"><sup>3</sup></a>:</p>
+<!-- [-] EXPAND: Use this to elaborate and explain "from DAGs to Bayesian Networks" -->
+<pre><code>[Grass_Wet]: Concentrated moisture on grass. 
+ + [Rain]: Water falling from sky.
+ + [Sprinkler]: Artificial watering system.
+   + [Rain]</code></pre>
+<p>Network Structure:</p>
+<ul>
+<li><strong>Rain</strong> (root cause): P(rain) = 0.2</li>
+<li><strong>Sprinkler</strong> (intermediate): P(sprinkler|rain) varies by rain state</li>
+<li><strong>Grass_Wet</strong> (effect): P(wet|rain, sprinkler) depends on both causes</li>
+</ul>
+<!-- [-] CREATE: Mermaid flowchart of Rain-Sprinkler-Grass model with probabilities (in correct Quarto Syntax)-->
+<p>mermaid</p>
+<pre class="mermaid"><code>flowchart TD
+    R[Rain&lt;br/&gt;P(rain) = 0.2] --&gt; S[Sprinkler]
+    R --&gt; G[Grass_Wet]
+    S --&gt; G
+    
+    subgraph CPT1[Sprinkler CPT]
+        S1[P(sprinkler|rain) = 0.01]
+        S2[P(sprinkler|¬rain) = 0.4]
+    end
+    
+    subgraph CPT2[Grass_Wet CPT]
+        G1[P(wet|rain,sprinkler) = 0.99]
+        G2[P(wet|rain,¬sprinkler) = 0.8]
+        G3[P(wet|¬rain,sprinkler) = 0.9]
+        G4[P(wet|¬rain,¬sprinkler) = 0.01]
+    end</code></pre>
+<p>python</p>
+<div class="sourceCode" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Basic network representation</span></span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>nodes <span class="op">=</span> [<span class="st">'Rain'</span>, <span class="st">'Sprinkler'</span>, <span class="st">'Grass_Wet'</span>]</span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>edges <span class="op">=</span> [(<span class="st">'Rain'</span>, <span class="st">'Sprinkler'</span>), (<span class="st">'Rain'</span>, <span class="st">'Grass_Wet'</span>), (<span class="st">'Sprinkler'</span>, <span class="st">'Grass_Wet'</span>)]</span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a><span class="co"># Conditional probability specification</span></span>
+<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a>P_wet_given_causes <span class="op">=</span> {</span>
+<span id="cb4-7"><a href="#cb4-7" aria-hidden="true" tabindex="-1"></a>    (<span class="va">True</span>, <span class="va">True</span>): <span class="fl">0.99</span>,    <span class="co"># Rain=T, Sprinkler=T</span></span>
+<span id="cb4-8"><a href="#cb4-8" aria-hidden="true" tabindex="-1"></a>    (<span class="va">True</span>, <span class="va">False</span>): <span class="fl">0.80</span>,   <span class="co"># Rain=T, Sprinkler=F  </span></span>
+<span id="cb4-9"><a href="#cb4-9" aria-hidden="true" tabindex="-1"></a>    (<span class="va">False</span>, <span class="va">True</span>): <span class="fl">0.90</span>,   <span class="co"># Rain=F, Sprinkler=T</span></span>
+<span id="cb4-10"><a href="#cb4-10" aria-hidden="true" tabindex="-1"></a>    (<span class="va">False</span>, <span class="va">False</span>): <span class="fl">0.01</span>   <span class="co"># Rain=F, Sprinkler=F</span></span>
+<span id="cb4-11"><a href="#cb4-11" aria-hidden="true" tabindex="-1"></a>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>This simple network demonstrates:</p>
+<ul>
+<li><strong>Marginal Inference</strong>: P(grass_wet) computed from joint distribution</li>
+<li><strong>Diagnostic Reasoning</strong>: P(rain|grass_wet) reasoning from effects to causes</li>
+<li><strong>Intervention Modeling</strong>: P(grass_wet|do(sprinkler=on)) for policy analysis</li>
+</ul>
+<!-- [-] CREATE: {#fig-rain-sprinkler-network}: "Visual Bayesian network for rain-sprinkler-grass with CPTs" -->
+<p>Show Image</p>
+<section id="rain-sprinkler-grass-network-rendering" class="level4" data-number="3.3.2.1">
+<h4 data-number="3.3.2.1" class="anchored" data-anchor-id="rain-sprinkler-grass-network-rendering"><span class="header-section-number">3.3.2.1</span> Rain-Sprinkler-Grass Network Rendering</h4>
+<pre><code>#| label: rain_sprinkler_grass_example_network_rendering
+#| echo: true
+#| eval: true
+#| fig-cap: "Dynamic Html Rendering of the Rain-Sprinkler-Grass DAG with Conditional Probabilities"
+#| fig-link: "https://singularitysmith.github.io/AMTAIR_Prototype/bayesian_network.html"
+#| fig-alt: "Dynamic Html Rendering of the Rain-Sprinkler-Grass DAG"
+
+from IPython.display import IFrame
+
+IFrame(src="https://singularitysmith.github.io/AMTAIR_Prototype/bayesian_network.html", width="100%", height="600px")</code></pre>
+</section>
+</section>
+<section id="advantages-for-ai-risk-modeling" class="level3" data-number="3.3.3">
+<h3 data-number="3.3.3" class="anchored" data-anchor-id="advantages-for-ai-risk-modeling"><span class="header-section-number">3.3.3</span> 2.3.3 Advantages for AI Risk Modeling</h3>
+<p>These features address key requirements for AI governance:</p>
+<ul>
+<li><strong>Handling Uncertainty</strong>: Every parameter is a distribution, not a point estimate</li>
+<li><strong>Representing Causation</strong>: Directed edges embody causal relationships</li>
+<li><strong>Enabling Analysis</strong>: Formal inference algorithms support systematic evaluation</li>
+<li><strong>Facilitating Communication</strong>: Visual structure aids cross-domain understanding</li>
+</ul>
+
+
+<div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" role="list" style="display: none">
+<div id="ref-armstrong2016" class="csl-entry" role="listitem">
+Armstrong, Stuart, Nick Bostrom, and Carl Shulman. 2016. <span>“Racing to the Precipice: A Model of Artificial Intelligence Development.”</span> <em>AI &amp; SOCIETY</em> 31 (2): 201–6. <a href="https://doi.org/10.1007/s00146-015-0590-y">https://doi.org/10.1007/s00146-015-0590-y</a>.
+</div>
+<div id="ref-carlsmith2021" class="csl-entry" role="listitem">
+Carlsmith, Joseph. 2021. <span>“Is <span>Power-Seeking AI</span> an <span>Existential Risk</span>?”</span> 2021. <a href="https://doi.org/10.48550/arXiv.2206.13353">https://doi.org/10.48550/arXiv.2206.13353</a>.
+</div>
+<div id="ref-carlsmith2022" class="csl-entry" role="listitem">
+———. 2022. <span>“Is Power-Seeking <span>AI</span> an Existential Risk?”</span> <a href="https://arxiv.org/abs/2206.13353">https://arxiv.org/abs/2206.13353</a>.
+</div>
+<div id="ref-carlsmith2024" class="csl-entry" role="listitem">
+———. 2024. <span>“Is <span>Power-Seeking AI</span> an <span>Existential Risk</span>?”</span> August 13, 2024. <a href="https://doi.org/10.48550/arXiv.2206.13353">https://doi.org/10.48550/arXiv.2206.13353</a>.
+</div>
+<div id="ref-christiano2019" class="csl-entry" role="listitem">
+Christiano, Paul F. 2019. <span>“What Failure Looks Like,”</span> March. <a href="https://www.alignmentforum.org/posts/HBxe6wdjxK239zajf/what-failure-looks-like">https://www.alignmentforum.org/posts/HBxe6wdjxK239zajf/what-failure-looks-like</a>.
+</div>
+<div id="ref-clarke2022" class="csl-entry" role="listitem">
+Clarke, Sam, Ben Cottier, Aryeh Englander, Daniel Eth, David Manheim, Samuel Dylan Martin, and Issa Rice. 2022. <span>“Modeling <span>Transformative AI Risks</span> (<span>MTAIR</span>) <span>Project</span> – <span>Summary Report</span>.”</span> 2022. <a href="https://doi.org/10.48550/ARXIV.2206.09360">https://doi.org/10.48550/ARXIV.2206.09360</a>.
+</div>
+<div id="ref-european2024" class="csl-entry" role="listitem">
+European, Union. 2024. <span>“The <span>Act Texts</span> | <span>EU Artificial Intelligence Act</span>.”</span> 2024. <a href="https://artificialintelligenceact.eu/the-act/">https://artificialintelligenceact.eu/the-act/</a>.
+</div>
+<div id="ref-gruetzemacher2022" class="csl-entry" role="listitem">
+Gruetzemacher, Ross. 2022. <span>“Bayesian <span>Networks</span> Vs. <span>Conditional Trees</span> for <span>Creating Questions</span> for <span>Forecasting Tournaments</span>.”</span>
+</div>
+<div id="ref-hallegatte2012" class="csl-entry" role="listitem">
+Hallegatte, Stéphane, Ankur Shah, Robert Lempert, Casey Brown, and Stuart Gill. 2012. <span>“Investment Decision-Making Under Deep Uncertainty-Application to Climate Change.”</span> <em>Policy Research Working Paper</em> 6193. <a href="https://enpc.hal.science/hal-00802049/document">https://enpc.hal.science/hal-00802049/document</a>.
+</div>
+<div id="ref-hunt2025" class="csl-entry" role="listitem">
+Hunt, Tam. 2025. <span>“The Insane <span>‘Logic’</span> of the <span>AI</span> Arms Race.”</span> Medium. March 3, 2025. <a href="https://tamhunt.medium.com/the-insane-logic-of-the-ai-arms-race-45a5f79f4c0e">https://tamhunt.medium.com/the-insane-logic-of-the-ai-arms-race-45a5f79f4c0e</a>.
+</div>
+<div id="ref-jaynes2003" class="csl-entry" role="listitem">
+Jaynes, Edwin T. 2003. <em>Probability Theory: <span>The</span> Logic of Science</em>. Cambridge university press.
+</div>
+<div id="ref-maslej2025" class="csl-entry" role="listitem">
+Maslej, Nestor. 2025. <span>“Artificial <span>Intelligence Index Report</span> 2025.”</span> <em>Artificial Intelligence</em>.
+</div>
+<div id="ref-mccaslin2024" class="csl-entry" role="listitem">
+McCaslin, Tegan, Josh Rosenberg, Ezra Karger, Avital Morris, Molly Hickman, Sam Glover, Zach Jacobs, and Phil Tetlock. 2024. <span>“Conditional <span>Trees</span>: <span>A Method</span> for <span>Generating Informative Questions</span> about <span>Complex Topics</span>.”</span> <em>Forecasting Research Institute</em>. <a href="https://static1.squarespace.com/static/635693acf15a3e2a14a56a4a/t/66ba37a144f1d6095de467df/1723479995772/AIConditionalTrees.pdf">https://static1.squarespace.com/static/635693acf15a3e2a14a56a4a/t/66ba37a144f1d6095de467df/1723479995772/AIConditionalTrees.pdf</a>.
+</div>
+<div id="ref-paul2023" class="csl-entry" role="listitem">
+Paul. 2023. <span>“The <span class="nocase">elephAInt</span> – <span>Are</span> We All Like the Six Blind Men When It Comes to <span>AI</span>? | <span>PRISMAGuard LLC</span>.”</span> 2023. <a href="https://www.prismaguard.com/the-elephaint-are-we-all-like-the-six-blind-men-when-it-comes-to-ai/">https://www.prismaguard.com/the-elephaint-are-we-all-like-the-six-blind-men-when-it-comes-to-ai/</a>.
+</div>
+<div id="ref-pearl2000" class="csl-entry" role="listitem">
+Pearl, Judea. 2000. <em>Causality: Models, Reasoning, and Inference</em>. Cambridge, U.K. ; New York: Cambridge University Press.
+</div>
+<div id="ref-pearl2009" class="csl-entry" role="listitem">
+———. 2009. <em>Causality: <span>Models</span>, Reasoning and Inference</em>. 2nd ed. Cambridge University Press.
+</div>
+<div id="ref-pearl2014" class="csl-entry" role="listitem">
+———. 2014. <em>Probabilistic Reasoning in Intelligent Systems: Networks of Plausible Inference</em>. Elsevier. <a href="https://books.google.ca/books?hl=en&amp;lr=&amp;id=mn2jBQAAQBAJ&amp;oi=fnd&amp;pg=PP1&amp;dq=Pearl,+J.+(1988).+Probabilistic+Reasoning+in+Intelligent+Systems&amp;ots=4tEX2A4Ha8&amp;sig=lgUs_RCoeXEEuGwM5xMEoyJy4HI">https://books.google.ca/books?hl=en&amp;lr=&amp;id=mn2jBQAAQBAJ&amp;oi=fnd&amp;pg=PP1&amp;dq=Pearl,+J.+(1988).+Probabilistic+Reasoning+in+Intelligent+Systems&amp;ots=4tEX2A4Ha8&amp;sig=lgUs_RCoeXEEuGwM5xMEoyJy4HI</a>.
+</div>
+<div id="ref-rehman2025" class="csl-entry" role="listitem">
+Rehman, Iskander. 2025. <span>“The <span>Battle</span> for <span>Brilliant Minds</span>: <span>From</span> the <span>Nuclear Age</span> to <span>AI</span>.”</span> War on the Rocks. January 13, 2025. <a href="https://warontherocks.com/2025/01/the-battle-for-brilliant-minds-from-the-nuclear-age-to-ai/">https://warontherocks.com/2025/01/the-battle-for-brilliant-minds-from-the-nuclear-age-to-ai/</a>.
+</div>
+<div id="ref-samborska2025" class="csl-entry" role="listitem">
+Samborska, Veronika. 2025. <span>“Scaling up: How Increasing Inputs Has Made Artificial Intelligence More Capable.”</span> <em>Our World in Data</em>, January. <a href="https://ourworldindata.org/scaling-up-ai">https://ourworldindata.org/scaling-up-ai</a>.
+</div>
+<div id="ref-samuel2023" class="csl-entry" role="listitem">
+Samuel, Sigal. 2023. <span>“<span>AI</span> Is a <span>‘Tragedy of the Commons.’</span> <span>We</span>’ve Got Solutions for That.”</span> Vox. July 7, 2023. <a href="https://www.vox.com/future-perfect/2023/7/7/23787011/ai-arms-race-tragedy-commons-risk-safety">https://www.vox.com/future-perfect/2023/7/7/23787011/ai-arms-race-tragedy-commons-risk-safety</a>.
+</div>
+<div id="ref-schelling1960" class="csl-entry" role="listitem">
+Schelling, Thomas C. 1960. <span>“I960. <span>The</span> Strategy of Conflict.”</span> <em>Cambridge, Mass</em>.
+</div>
+<div id="ref-tegmark2024" class="csl-entry" role="listitem">
+Tegmark, Max. 2024. <span>“Asilomar <span>AI Principles</span>.”</span> Future of Life Institute. 2024. <a href="https://futureoflife.org/open-letter/ai-principles/">https://futureoflife.org/open-letter/ai-principles/</a>.
+</div>
+<div id="ref-tetlock2022" class="csl-entry" role="listitem">
+Tetlock, Phil. 2022. <span>“Conditional <span>Trees</span>: <span>AI Risk</span>.”</span> 2022. <a href="https://www.metaculus.com/tournament/3508/">https://www.metaculus.com/tournament/3508/</a>.
+</div>
+<div id="ref-tetlock2015" class="csl-entry" role="listitem">
+Tetlock, Philip E., and Dan Gardner. 2015. <em>Superforecasting: The Art and Science of Prediction</em>. First paperback edition. New York: Broadway Books.
+</div>
+<div id="ref-todd2024" class="csl-entry" role="listitem">
+Todd, Benjamin. 2024. <span>“It Looks Like There Are Some Good Funding Opportunities in <span>AI</span> Safety Right Now.”</span> Substack newsletter. Benjamin Todd. December 21, 2024. <a href="https://benjamintodd.substack.com/p/looks-like-there-are-some-good-funding">https://benjamintodd.substack.com/p/looks-like-there-are-some-good-funding</a>.
+</div>
+</div>
+</section>
+</section>
+</section>
+<section id="footnotes" class="footnotes footnotes-end-of-document" role="doc-endnotes">
+<hr>
+<ol>
+<li id="fn1"><p>The orthogonality thesis posits that intelligence and goals are independent—an AI can have any set of objectives regardless of its intelligence level. The instrumental convergence thesis suggests that different AI systems may adopt similar instrumental goals (e.g., self-preservation, resource acquisition) to achieve their objectives.<a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn2"><p>Multiple versions of Carlsmith’s paper exist with slight updates to probability estimates: <span class="citation" data-cites="carlsmith2021">Carlsmith (<a href="../../ref/references.html#ref-carlsmith2021" role="doc-biblioref">2021</a>)</span>, <span class="citation" data-cites="carlsmith2022">Carlsmith (<a href="../../ref/references.html#ref-carlsmith2022" role="doc-biblioref">2022</a>)</span>, <span class="citation" data-cites="carlsmith2024">Carlsmith (<a href="../../ref/references.html#ref-carlsmith2024" role="doc-biblioref">2024</a>)</span>. We primarily reference the version used by the MTAIR team for their extraction. Extended discussion and expert probability estimates can be found on LessWrong.<a href="#fnref2" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn3"><p>This example, while simple, demonstrates all essential features of Bayesian networks and serves as the foundation for understanding more complex applications<a href="#fnref3" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+</ol>
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copied!");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copied!");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+        const codeEl = trigger.previousElementSibling.cloneNode(true);
+        for (const childEl of codeEl.children) {
+          if (isCodeAnnotation(childEl)) {
+            childEl.remove();
+          }
+        }
+        return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp('/' + window.location.host + '/');
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+<nav class="page-navigation">
+  <div class="nav-page nav-page-previous">
+      <a href="../../index.html" class="pagination-link" aria-label="Preface">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Preface</span>
+      </a>          
+  </div>
+  <div class="nav-page nav-page-next">
+      <a href="../../ref/references.html" class="pagination-link" aria-label="Bibliography">
+        <span class="nav-page-text">Bibliography</span> <i class="bi bi-arrow-right-short"></i>
+      </a>
+  </div>
+</nav>
+</div> <!-- /content -->
+
+
+
+
+<footer class="footer"><div class="nav-footer"><div class="nav-footer-center"><div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/VJMeyer/submission/edit/main/chapters/Outlines/final_draft.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li></ul></div></div></div></footer></body></html>
