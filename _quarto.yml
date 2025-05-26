@@ -44,9 +44,9 @@ book:
     # - chapters/4.Discussion.qmd
     # - chapters/5.Conclusion.qmd
     - ref/references.qmd
-  # appendices:
-    # - chapters/I.Appendices.qmd
-    # - AMTAIR_Prototype/data/example_carlsmith/AMTAIR_Prototype_example_carlsmith.ipynb
+  appendices:
+    - chapters/I.Appendices.qmd
+    - AMTAIR_Prototype/data/example_carlsmith/AMTAIR_Prototype_example_carlsmith.ipynb
 
 # notebook-view:
 #   - notebook: AMTAIR_Prototype/data/example_carlsmith/AMTAIR_Prototype_example_carlsmith.ipynb
@@ -60,8 +60,9 @@ format:
       # dark: darkly
     code-fold: true
     toc: true
-    toc-depth: 5
+    toc-depth: 10
     number-sections: true
+    number-depth: 10
     code-links:
       - text: Colab Notebook (Manual Link in .yml)
         icon: file-code
@@ -82,9 +83,11 @@ format:
     keep-tex: true
     toc: true
     toc-title: Table of Contents
+    toc-depth: 10
+    number-sections: false
+    number-depth: 0
     lof: true
     lot: true
-    number-sections: true
     crossref:
       sec-prefix: "Section"
       fig-prefix: "Figure"

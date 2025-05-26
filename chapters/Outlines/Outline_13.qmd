@@ -1,8 +1,9 @@
 
-
+# Automating the Modeling of Transformative Artificial Intelligence Risks (AMTAIR) {.unnumbered}
 
 ```markdown
-title: "Automating the Modeling of Transformative Artificial Intelligence Risks" subtitle: "An Epistemic Framework for Leveraging Frontier AI Systems to Upscale Conditional Policy Assessments in Bayesian Networks on a Narrow Path toward Existential Safety" author:
+title: "Automating the Modeling of Transformative Artificial Intelligence Risks"
+subtitle: "An Epistemic Framework for Leveraging Frontier AI Systems to Upscale Conditional Policy Assessments in Bayesian Networks on a Narrow Path toward Existential Safety" author:
 
 - name: Valentin Jakob Meyer orcid: 0009-0006-0889-5269 corresponding: true email: [Valentin.Meyer@uni-bayreuth.de](mailto:Valentin.Meyer@uni-bayreuth.de) roles:
     - Graduate Author affiliations:
@@ -36,7 +37,7 @@ The thesis contributes both theoretical foundations and practical implementation
 
 ---
 
-# Preface {.unnumbered}
+# Frontmatter: Preface {.unnumbered}
 
 <!-- [ ] TODO: Expand preface to include personal journey and acknowledgments -->
 
@@ -462,7 +463,11 @@ Carlsmith's model demonstrates several features that make it ideal for formal re
 
 **Documented Reasoning**: Extensive justification for each probability enables extraction of both structure and parameters from the source text.
 
+<!-- [ ] ADD: "foreshadowing" of how/why we will pick up with carlsmith model later-->
+
 <!-- [ ] LATER TODO: Extract two additional "inside view" world models for comparison --> 
+
+
 <!-- [ ] ADD: @christiano2019: "Christiano, P. (2019). What failure looks like. AI Alignment Forum." -->
 
 @christiano2019
@@ -599,6 +604,8 @@ This factorization enables efficient inference and embodies causal assumptions e
 
 The canonical example illustrates key concepts:^[This example, while simple, demonstrates all essential features of Bayesian networks and serves as the foundation for understanding more complex applications]
 
+<!-- [ ] EXPAND: Use this to elaborate and explain "from DAGs to Bayesian Networks" -->
+
 ```
 [Grass_Wet]: Concentrated moisture on grass. 
  + [Rain]: Water falling from sky.
@@ -614,7 +621,7 @@ Network Structure:
 
 <!-- [ ] CREATE: Mermaid flowchart of Rain-Sprinkler-Grass model with probabilities (in correct Quarto Syntax)-->
 
-::: {.merge-candidate data-merge-with="Outline_11.7#rain-sprinkler-code"}
+
 
 
 
@@ -635,7 +642,7 @@ P_wet_given_causes = {
 }
 ```
 
-:::
+
 
 This simple network demonstrates:
 
@@ -645,7 +652,7 @@ This simple network demonstrates:
 
 <!-- [ ] CREATE: {#fig-rain-sprinkler-network}: "Visual Bayesian network for rain-sprinkler-grass with CPTs" -->
 
-### Rain-Sprinkler-Grass Network Rendering
+#### Rain-Sprinkler-Grass Network Rendering
 ```{python}
 #| label: rain_sprinkler_grass_example_network_rendering
 #| echo: true
@@ -1232,7 +1239,16 @@ Technical challenges:
 
 With these theoretical foundations and methodological approaches established, we can now present the AMTAIR system implementation. The next chapter demonstrates how these concepts translate into a working prototype that automates the extraction and formalization of world models from AI safety literature.
 
+
+
+
+
+
+
+
 # 3. AMTAIR: Design and Implementation {#sec-amtair}
+
+
 
 ::: {.callout-note}
 
@@ -1242,8 +1258,10 @@ With these theoretical foundations and methodological approaches established, we
 **Requirements**: Critical evaluation, strong argument for position, original contribution
 :::
 
-<!-- [ ] TODO: Reduce code snippets to 3-5 key examples maximum --> 
-<!-- [ ] TODO: Focus on conceptual explanations over implementation details -->
+
+<!-- [ ] REFINE: Focus on conceptual explanations over implementation details -->
+
+
 
 ## 3.1 System Architecture Overview {#sec-system-architecture}
 
@@ -1257,10 +1275,13 @@ The AMTAIR system implements an end-to-end pipeline from unstructured text to in
 
 <!-- [ ] CREATE: {#fig-system-architecture}: "Component diagram showing AMTAIR modules and data flow" -->
 
+
+
+
 ### 3.1.1 Five-Stage Pipeline Architecture {#sec-five-stage-pipeline}
 
 The five-stage pipeline architecture demonstrates how each component builds on the previous, with validation checkpoints preventing error propagation:
-
+<!-- [ ] COMPARE AND CORRECT: this list against the workflow in the .ipynb notebook -->
 1. **Text Ingestion and Preprocessing**
     - Format normalization (PDF, HTML, Markdown)
     - Metadata extraction and citation tracking
@@ -1287,6 +1308,10 @@ The five-stage pipeline architecture demonstrates how each component builds on t
     - Interactive exploration features
     - Export capabilities for reports
 
+
+
+
+
 ### 3.1.2 Design Principles {#sec-design-principles}
 
 ::: {.callout-tip}
@@ -1296,6 +1321,8 @@ The five-stage pipeline architecture demonstrates how each component builds on t
 The system emphasizes scalability through modular architecture, standard interfaces for interoperability, validation checkpoints for quality assurance, and an extensible framework for future capabilities.
 :::
 
+
+<!-- [ ] COMPLETELY REWRITE: Results were HALLUCINATED -- rewrite by describing the procedure used in the .ipynb notebook -- reference the correct funtions!
 python
 
 ```python
@@ -1319,11 +1346,17 @@ class AMTAIRPipeline:
 
 <!-- [ ] TODO: Full component documentation with interfaces -->
 
+
+
 ## 3.2 The Two-Stage Extraction Process {#sec-two-stage-extraction}
 
 <!-- [ ] TODO: Detail the process of extracting ArgDown representations -->
 
 The core innovation of AMTAIR lies in separating structural extraction from probability quantification. This two-stage approach addresses key challenges in automated formalization.
+
+
+
+
 
 ### 3.2.1 Stage 1: Structural Extraction (ArgDown) {#sec-stage1-argdown}
 
@@ -1350,6 +1383,12 @@ Example ArgDown extraction:
 ```
 
 <!-- [ ] CREATE: {#fig-extraction-example}: "Side-by-side source text and extracted ArgDown" -->
+
+
+
+
+
+
 
 ### 3.2.2 Stage 2: Probability Integration (BayesDown) {#sec-stage2-bayesdown}
 
@@ -1379,10 +1418,23 @@ Examples needed:
 - Check for logical contradictions
 - Flag low-confidence extractions
 
+
+
+
 ### 3.2.3 Why Two Stages? {#sec-why-two-stages}
+
+<!-- [ ] EXPAND: the benefits this setup, add -->
 
 ::: {.merge-candidate data-merge-with="Outline_11.7#why-two-stages"}
 This separation provides several benefits:
+
+**Transparency**: Being able to scrutinize each step of the automated workflow provides reliable insight into the work being done
+
+**Accountability**: False information (think of hallucinations) can be traced back to its origins
+
+
+**Visibility**: 
+
 
 **Modular Validation**: Structure can be verified independently from probability estimates, simplifying quality assurance.
 
@@ -1391,13 +1443,22 @@ This separation provides several benefits:
 **Flexible Quantification**: Different methods (LLM extraction, expert elicitation, market data) can provide probabilities for the same structure.
 
 **Error Isolation**: Structural errors don't contaminate probability extraction and vice versa.
+
+
 :::
 
 <!-- [ ] CREATE: {#fig-two-stage-benefits}: "Flowchart showing modular validation points" -->
 
+
+
+
+
 ## 3.3 Implementation Technologies {#sec-implementation-tech}
 
 <!-- [ ] TODO: Detail the technology stack and key algorithms -->
+
+
+
 
 ### 3.3.1 Technology Stack {#sec-tech-stack}
 
@@ -1412,6 +1473,9 @@ The system leverages established libraries while adding novel extraction capabil
 |Data Processing|Pandas|Structured manipulation|
 
 : Technology stack components {#tbl-tech-stack}
+
+
+
 
 ### 3.3.2 Key Algorithms {#sec-key-algorithms}
 
@@ -1431,6 +1495,8 @@ The system leverages established libraries while adding novel extraction capabil
 
 <!-- [ ] TODO: Algorithm pseudocode for key functions -->
 
+
+
 ### 3.3.3 (Expected) Performance Characteristics {#sec-performance}
 <!-- [ ] COMPLETELY REWRITE: Results were HALLUCINATED -- rewrite based on theoretical considerations / expectations
 ::: {.duplicate-content data-source="Outline_11.7#performance"}
@@ -1446,9 +1512,43 @@ Benchmarking reveals practical scalability:
 : Performance benchmarks for different network sizes {#tbl-performance}
 :::
 
-The bottleneck shifts from extraction (linear in text length) to inference (exponential in network connectivity) as models grow. -->
+The bottleneck shifts from extraction (linear in text length) to inference (exponential in network connectivity) as models grow.
+
+Explain upper bound of computational complexity
+
+Complexity of extraction:
+A) simple extraction (one argdown call, bayesdown call):  linear complexity
+B) “full / distribution” extraction: n-argdown calls, n^m bayesdown calls:  quadratic complexity
 
 
+Bounded “amount of information” per paper —> ~ for a given computation budget (tokens) per paper we can (using prob. Distr. over bases nets) we can ideally)  approximate “full/complete” information extraction
+
+
+
+
+<!-- [ ] ADD: appropriate citations throught this section-->
+
+-->
+
+
+### 3.3.4 Deterministic vs. Probabilistic Components of the Workflow
+
+<!-- [ ] WRITE: entire section explainig the Deterministic (=all python code etc.) vs. Probabilistic Components (LLM calls for ArgDown extraction and LLM calls for BayesDown extractions) of the Workflow -->
+
+<!-- [ ] ADD Footnote:  Explain that with current tech; theoretically LLMs are still (quasi-) deterministic  but practically  (non-deterministic) probabilistic-->
+
+<!-- [ ] PREVIEW: Some analysis / inference methods are fully deterministic others are probabilistic (e.g. MC-sampling) -->
+
+<!-- [ ] EXPLAIN: fundamental priority is "the extraction and processing of as much information for a given budget of compute (e.g. tokens)" -->
+
+<!-- [ ] ELABORATE: Bounded “amount of information” per paper —> ~ for a given computation budget (tokens) per paper we can (using prob. Distr. over bases nets) we can ideally)  approximate “full/complete” information extraction-->
+
+
+<!-- [ ] Ground this treaty in the appropriate information theory -->
+
+<!-- [ ] CLARIFY (Implicitly): these contributions are probably original -->
+
+<!-- [ ] REFERNCE: Section about information theory from the Context section -->
 
 ## 3.4 Case Study: Rain-Sprinkler-Grass {#sec-case-rain-sprinkler}
 
@@ -1476,7 +1576,7 @@ The system processes this input through five steps:
 ### 3.4.2 Example Conversion Steps {#sec-rsg-input}
 
 <!-- [ ] EXPAND: Add informative descriptions and explanations for everything in this section -->
-
+::: {.landscape}
 #### ArgDown Example
 
 ```markdown
@@ -1551,7 +1651,7 @@ The source BayesDown syntax representating the fully specified network:
 
 
 #### Resulting Rain-Sprinkler-Grass DataFrame
-::: {.landscape}
+
 <!-- [ ] ADD: table formatting (alt tex, label etc. to this table) -->
 
 #| column: page
@@ -1616,7 +1716,7 @@ The system successfully extracts complete network structure, preserves all proba
 
 ## 3.5 Case Study: Carlsmith's Power-Seeking AI Model {#sec-case-carlsmith}
 
-<!-- [ ] TODO: Apply the pipeline to the more complex Carlsmith model -->
+<!-- [ ] TODO: Introduce and refine walkthrough of the pipeline with the more complex Carlsmith model -->
 
 Applying AMTAIR to Carlsmith's model demonstrates scalability to realistic AI safety arguments.
 
@@ -1626,7 +1726,7 @@ Applying AMTAIR to Carlsmith's model demonstrates scalability to realistic AI sa
 The Carlsmith model contains:
 
 - **23 nodes** representing different factors
-- **27 edges** encoding dependencies
+- **29 edges** encoding dependencies
 - **Multiple probability tables** with complex conditionals
 - **Six-level causal depth** from root causes to catastrophe
 :::
@@ -1634,6 +1734,15 @@ The Carlsmith model contains:
 This represents a significant increase in complexity from the pedagogical example.
 
 <!-- [ ] CREATE: {#fig-carlsmith-network}: "Full Carlsmith model Bayesian network visualization" -->
+
+
+
+
+
+
+
+
+
 
 ### 3.5.2 Extraction Results {#sec-carlsmith-extraction}
 
@@ -1663,7 +1772,17 @@ Existential_Catastrophe
 
 <!-- [ ] IMPLEMENT: Full Carlsmith extraction with validation -->
 
-### 3.5.3 Validation Against Original {#sec-carlsmith-validation}
+
+
+
+
+
+
+
+
+
+
+### 3.5.3 Validation Against Original (From the MTAIR Project) {#sec-carlsmith-validation}
 <!-- [ ] COMPLETELY REWRITE: Results were HALLUCINATED -- rewrite based on results / comparison with Ella and Johannes extractions and by describing what procedures etc. one would ideally follow
 ::: {.duplicate-content data-source="Outline_11.7#carlsmith-validation"}
 Comparing extracted model to Carlsmith's original:
@@ -1682,6 +1801,14 @@ The high fidelity demonstrates AMTAIR's capability for complex real-world argume
 
 -->
 
+
+
+
+
+
+
+
+
 ### 3.5.4 Insights from Formalization {#sec-carlsmith-insights}
 
 Formal representation reveals several insights:
@@ -1695,6 +1822,23 @@ Formal representation reveals several insights:
 These insights emerge naturally from formal analysis but remain implicit in textual arguments.
 
 <!-- [ ] CREATE: {#fig-sensitivity-analysis}: "Tornado diagram of parameter sensitivity" -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 ## 3.6 Validation Methodology {#sec-validation-methodology}
 
@@ -1724,6 +1868,14 @@ Plan the process:
 
 -->
 
+
+
+
+
+
+
+
+
 ### 3.6.2 Evaluation Metrics {#sec-evaluation-metrics}
 <!-- [ ] COMPLETELY REWRITE: Results were HALLUCINATED -- rewrite by describing what procedures etc. one would ideally follow 
 ::: {.duplicate-content data-source="Outline_11.7#evaluation-metrics"}
@@ -1747,6 +1899,15 @@ Plan the process:
 
 <!-- [ ] CREATE: {#fig-validation-metrics}: "Visual summary of validation approach" -->
 -->
+
+
+
+
+
+
+
+
+
 ### 3.6.3 Results Summary {#sec-validation-results}
 <!-- [ ] COMPLETELY REWRITE: Results were HALLUCINATED -- rewrite by describing what procedures etc. one would ideally follow 
 Across 20 test documents:
@@ -1764,6 +1925,10 @@ Across 20 test documents:
 
 Performance is strongest for explicit structural elements and numerical probabilities, with more challenges in extracting implicit relationships and qualitative uncertainty.
 -->
+
+
+
+
 ### 3.6.4 Error Analysis {#sec-error-analysis}
 
 ::: {.merge-candidate data-merge-with="Outline_11.7#error-analysis"}
@@ -1782,11 +1947,29 @@ Understanding these limitations guides both current usage and future improvement
 
 <!-- [ ] CREATE: {#fig-error-taxonomy}: "Breakdown of error types with examples" -->
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 ## 3.7 Policy Evaluation Capabilities {#sec-policy-evaluation}
 
 <!-- [ ] TODO: Showcase how inference, sensitivity analysis, and policy evaluation work -->
 
 Beyond extraction and visualization, AMTAIR enables systematic policy analysis through formal intervention modeling.
+
+
 
 ### 3.7.1 Intervention Representation {#sec-intervention-representation}
 <!-- [ ] COMPLETELY REWRITE: Results were HALLUCINATED -- rewrite by describing what procedures etc. one would ideally follow 
@@ -1815,6 +1998,13 @@ def evaluate_policy_intervention(network, intervention, target_variables):
 <!-- [ ] VERIFY: Pearl's do-calculus implementation correctness -->
 -->
 
+
+
+
+
+
+
+
 ### 3.7.2 Example: Deployment Governance {#sec-deployment-example}
 
 Consider a policy requiring safety certification before deployment:
@@ -1831,6 +2021,17 @@ Consider a policy requiring safety certification before deployment:
 This hypothetical quantitative analysis enables comparison across interventions.
 
 <!-- [ ] IMPLEMENT: Multiple policy evaluation examples -->
+
+
+
+
+
+
+
+
+
+
+
 
 ### 3.7.3 Robustness Analysis {#sec-robustness}
 
@@ -1849,6 +2050,16 @@ Policies must work across worldviews. AMTAIR enables multi-model evaluation, par
 
 Making Bayesian networks accessible to diverse stakeholders requires careful visualization design.
 
+
+
+
+
+
+
+
+
+
+
 ### 3.8.1 Visual Encoding Strategy {#sec-visual-encoding}
 
 ::: {.duplicate-content data-source="Outline_11.7#visual-encoding"}
@@ -1861,6 +2072,15 @@ The system uses multiple visual channels:
 :::
 
 <!-- [ ] CREATE: {#fig-visual-encoding}: "Legend showing all visual encodings" -->
+
+
+
+
+
+
+
+
+
 
 ### 3.8.2 Progressive Disclosure {#sec-progressive-disclosure}
 
@@ -1875,6 +2095,15 @@ This layered approach serves both quick assessment and deep analysis needs.
 
 <!-- [ ] IMPLEMENT: Video demonstration of interaction features -->
 
+
+
+
+
+
+
+
+
+
 ### 3.8.3 User Interface Elements {#sec-ui-elements}
 <!-- [ ] COMPLETELY REWRITE: Results were HALLUCINATED -- rewrite by describing what procedures etc. one would ideally follow 
 Key features enhance usability:
@@ -1888,11 +2117,32 @@ These features emerged from user testing with researchers and policymakers.
 
 -->
 
+
+
+
+
+
+
+
+
+
+
 ## 3.9 Integration with Prediction Markets {#sec-market-integration}
 
 <!-- [ ] TODO: Outline methods for connecting formal models with live data -->
 
 While full integration remains future work, the architecture supports connection to live forecasting data.
+
+
+
+
+
+
+
+
+
+
+
 
 ### 3.9.1 Design for Integration {#sec-integration-design}
 
@@ -1913,6 +2163,16 @@ Design documentation needed:
 - Update scheduling and caching
 ```
 
+
+
+
+
+
+
+
+
+
+
 ### 3.9.2 Challenges and Opportunities {#sec-market-challenges}
 
 ::: {.merge-candidate data-merge-with="Outline_11.7#market-challenges"}
@@ -1927,11 +2187,26 @@ Despite challenges, even partial integration provides value through external val
 
 <!-- [ ] CREATE: {#fig-market-integration}: "Workflow for prediction market integration" -->
 
+
+
+
+
+
+
+
+
+
+
+
+
 ## 3.10 Computational Performance Analysis {#sec-computational-performance}
 
 <!-- [ ] TODO: Analyze the computational efficiency of the system -->
 
 As networks grow large, computational challenges emerge requiring sophisticated approaches.
+
+
+
 
 ### 3.10.1 Exact vs. Approximate Inference {#sec-exact-approximate}
 
@@ -1947,6 +2222,10 @@ The system automatically selects appropriate methods based on network properties
 
 <!-- [ ] CREATE: {#tbl-inference-methods}: "Comparison of inference algorithms" -->
 
+
+
+
+
 ### 3.10.2 Scaling Strategies {#sec-scaling-strategies}
 
 For very large networks:
@@ -1961,9 +2240,16 @@ Document strategies with benchmarks:
 4. Parallelization speedups
 ```
 
+
+
+
+
 ## 3.11 Results and Achievements {#sec-results-achievements}
 
 <!-- [ ] TODO: Summarize extraction quality, performance, and policy evaluation results -->
+
+
+
 
 ### 3.11.1 Extraction Quality Assessment {#sec-extraction-quality}
 <!-- [ ] COMPLETELY REWRITE: Results were HALLUCINATED -- rewrite by describing what procedures etc. one would ideally follow 
@@ -1979,6 +2265,9 @@ The system achieves 85%+ accuracy for structural relationships and 73% for proba
 
 -->
 
+
+
+
 ### 3.11.2 Computational Performance {#sec-computational-performance}
 <!-- [ ] COMPLETELY REWRITE: Results were HALLUCINATED -- rewrite by describing what procedures etc. one would ideally follow 
 ::: {.merge-candidate data-merge-with="Outline_11.7#computational-performance"}
@@ -1993,6 +2282,9 @@ AMTAIR's computational performance was benchmarked across networks of varying si
 :::
 
 -->
+
+
+
 
 ### 3.11.3 Policy Impact Evaluation {#sec-policy-impact}
 <!-- [ ] COMPLETELY REWRITE: Results were HALLUCINATED -- rewrite by describing what procedures etc. one would ideally follow 
@@ -2025,6 +2317,9 @@ deployment_policy_effects = {
 
 -->
 
+
+
+
 ## 3.12 Summary of Technical Contributions {#sec-technical-summary}
 
 AMTAIR successfully demonstrates:
@@ -2041,6 +2336,22 @@ These achievements validate the feasibility of computational coordination infras
 
 These results demonstrate both the feasibility and value of automated model extraction for AI governance. However, several important considerations and limitations merit discussion. The next chapter critically examines these issues, addresses potential objections, and explores the broader implications of this approach for enhancing epistemic security in AI governance.
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 # 4. Discussion: Implications and Limitations {#sec-discussion}
 
 ::: {.callout-note}
@@ -2053,7 +2364,12 @@ These results demonstrate both the feasibility and value of automated model extr
 
 <!-- [ ] TODO: Address each objection with rigorous counteranalysis -->
 
+
+
+
 ## 4.1 Technical Limitations and Responses {#sec-technical-limitations}
+
+
 
 ### 4.1.1 Objection 1: Extraction Quality Boundaries {#sec-extraction-boundaries}
 
@@ -2077,6 +2393,9 @@ The question is not whether automated extraction perfectly captures every nuance
 Furthermore, extraction errors often reveal interesting properties of the source arguments themselves—ambiguities that human readers gloss over become explicit when formalization fails. This diagnostic value enhances rather than undermines the approach.
 
 <!-- [ ] IMPLEMENT: Explain Extraction confidence scoring system -->
+
+
+
 
 ### 4.1.2 Objection 2: False Precision in Uncertainty {#sec-false-precision}
 
@@ -2108,6 +2427,15 @@ Finally, the alternative to quantification isn't avoiding the problem but making
 
 @@lindley2013
 
+
+
+
+
+
+
+
+
+
 ### 4.1.3 Objection 3: Correlation Complexity {#sec-correlation-complexity}
 
 **Critic**: "Bayesian networks assume conditional independence given parents, but real-world AI risks involve complex correlations. Ignoring these dependencies could dramatically misrepresent risk levels."
@@ -2132,6 +2460,10 @@ More fundamentally, the question is whether imperfect independence assumptions i
 
 <!-- [ ] IMPLEMENT: Correlation sensitivity analysis tools -->
 
+
+
+
+
 ## 4.2 Conceptual and Methodological Concerns {#sec-conceptual-concerns}
 
 ### 4.2.1 Objection 4: Democratic Exclusion {#sec-democratic-exclusion}
@@ -2152,6 +2484,15 @@ Rather than excluding non-technical stakeholders, proper implementation can demo
 
 <!-- [ ] CREATE: {#fig-multi-interface}: "Different stakeholder interfaces for same model" -->
 
+
+
+
+
+
+
+
+
+
 ### 4.2.2 Objection 5: Oversimplification of Complex Systems {#sec-oversimplification}
 
 **Critic**: "Forcing rich socio-technical systems into discrete Bayesian networks necessarily loses crucial dynamics—feedback loops, emergent properties, institutional responses, and cultural factors that shape AI development. The models become precise but wrong."
@@ -2170,6 +2511,11 @@ The goal isn't creating perfect representations but useful ones. By making simpl
 
 <!-- [ ] ADD: @box1976: "Box, G.E.P. (1976). Science and statistics" -->
 @box1976
+
+
+
+
+
 
 
 ## 4.3 Red-Teaming Results {#sec-red-teaming}
