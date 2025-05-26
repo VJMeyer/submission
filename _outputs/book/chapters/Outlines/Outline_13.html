@@ -365,6 +365,38 @@ window.Quarto = {
   <li><a href="#sec-performance" id="toc-sec-performance" class="nav-link" data-scroll-target="#sec-performance">3.3.3 (Expected) Performance Characteristics</a></li>
   <li><a href="#deterministic-vs.-probabilistic-components-of-the-workflow" id="toc-deterministic-vs.-probabilistic-components-of-the-workflow" class="nav-link" data-scroll-target="#deterministic-vs.-probabilistic-components-of-the-workflow">3.3.4 Deterministic vs.&nbsp;Probabilistic Components of the Workflow</a></li>
   </ul></li>
+  <li><a href="#sec-case-rain-sprinkler" id="toc-sec-case-rain-sprinkler" class="nav-link" data-scroll-target="#sec-case-rain-sprinkler">3.4 Case Study: Rain-Sprinkler-Grass</a>
+  <ul>
+  <li><a href="#sec-rsg-processing" id="toc-sec-rsg-processing" class="nav-link" data-scroll-target="#sec-rsg-processing">3.4.1 Processing Steps</a></li>
+  <li><a href="#sec-rsg-input" id="toc-sec-rsg-input" class="nav-link" data-scroll-target="#sec-rsg-input">3.4.2 Example Conversion Steps</a>
+  <ul>
+  <li><a href="#argdown-example" id="toc-argdown-example" class="nav-link" data-scroll-target="#argdown-example">ArgDown Example</a></li>
+  <li><a href="#example-of-questions-for-bayesdown-extraction" id="toc-example-of-questions-for-bayesdown-extraction" class="nav-link" data-scroll-target="#example-of-questions-for-bayesdown-extraction">Example of Questions for BayesDown extraction</a></li>
+  <li><a href="#complete-bayesdown-example" id="toc-complete-bayesdown-example" class="nav-link" data-scroll-target="#complete-bayesdown-example">Complete BayesDown Example</a></li>
+  <li><a href="#resulting-rain-sprinkler-grass-dataframe" id="toc-resulting-rain-sprinkler-grass-dataframe" class="nav-link" data-scroll-target="#resulting-rain-sprinkler-grass-dataframe">Resulting Rain-Sprinkler-Grass DataFrame</a></li>
+  </ul></li>
+  <li><a href="#sec-rsg-results" id="toc-sec-rsg-results" class="nav-link" data-scroll-target="#sec-rsg-results">3.4.3 Results</a></li>
+  <li><a href="#rain-sprinkler-grass-network-rendering-1" id="toc-rain-sprinkler-grass-network-rendering-1" class="nav-link" data-scroll-target="#rain-sprinkler-grass-network-rendering-1">Rain-Sprinkler-Grass Network Rendering</a></li>
+  </ul></li>
+  <li><a href="#sec-case-carlsmith" id="toc-sec-case-carlsmith" class="nav-link" data-scroll-target="#sec-case-carlsmith">3.5 Case Study: Carlsmith’s Power-Seeking AI Model</a>
+  <ul>
+  <li><a href="#sec-carlsmith-complexity" id="toc-sec-carlsmith-complexity" class="nav-link" data-scroll-target="#sec-carlsmith-complexity">3.5.1 Model Complexity</a></li>
+  <li><a href="#sec-carlsmith-extraction" id="toc-sec-carlsmith-extraction" class="nav-link" data-scroll-target="#sec-carlsmith-extraction">3.5.2 Automated Extraction of the Carlsmith’s Argument Structure</a>
+  <ul>
+  <li><a href="#prompting-llms-for-argdown-extraction" id="toc-prompting-llms-for-argdown-extraction" class="nav-link" data-scroll-target="#prompting-llms-for-argdown-extraction">Prompting LLMs for ArgDown Extraction</a></li>
+  <li><a href="#processing-llm-response" id="toc-processing-llm-response" class="nav-link" data-scroll-target="#processing-llm-response">Processing LLM Response</a></li>
+  </ul></li>
+  <li><a href="#from-argdown-to-bayesdown-in-carlsmiths-model" id="toc-from-argdown-to-bayesdown-in-carlsmiths-model" class="nav-link" data-scroll-target="#from-argdown-to-bayesdown-in-carlsmiths-model">3.5.3 From ArgDown to BayesDown in Carlsmith’s Model</a></li>
+  <li><a href="#practically-meaningful-bayesdown" id="toc-practically-meaningful-bayesdown" class="nav-link" data-scroll-target="#practically-meaningful-bayesdown">3.5.4 Practically Meaningful BayesDown</a>
+  <ul>
+  <li><a href="#example-bayesdown-excerpt-from-the-carlsmith-model" id="toc-example-bayesdown-excerpt-from-the-carlsmith-model" class="nav-link" data-scroll-target="#example-bayesdown-excerpt-from-the-carlsmith-model">Example BayesDown Excerpt from the Carlsmith model</a></li>
+  </ul></li>
+  <li><a href="#interactive-visualization-and-exploration" id="toc-interactive-visualization-and-exploration" class="nav-link" data-scroll-target="#interactive-visualization-and-exploration">3.5.5 Interactive Visualization and Exploration</a>
+  <ul>
+  <li><a href="#insights-from-formalization" id="toc-insights-from-formalization" class="nav-link" data-scroll-target="#insights-from-formalization"><strong>Insights from Formalization</strong></a></li>
+  </ul></li>
+  <li><a href="#sec-carlsmith-validation" id="toc-sec-carlsmith-validation" class="nav-link" data-scroll-target="#sec-carlsmith-validation">3.5.6 Validation Against Original (From the MTAIR Project)</a></li>
+  </ul></li>
   <li><a href="#sec-validation-methodology" id="toc-sec-validation-methodology" class="nav-link" data-scroll-target="#sec-validation-methodology">3.6 Validation Methodology</a>
   <ul>
   <li><a href="#sec-ground-truth" id="toc-sec-ground-truth" class="nav-link" data-scroll-target="#sec-ground-truth">3.6.1 Ground Truth Construction</a></li>
@@ -1005,7 +1037,7 @@ Key Insight
 </div>
 </div>
 <p>from <span class="citation" data-cites="tetlock2022">P. Tetlock (<a href="../../ref/references.html#ref-tetlock2022" role="doc-biblioref">2022</a>)</span></p>
-<div id="fig-conditional_metaculus" class="quarto-float quarto-figure quarto-figure-center anchored" alt="SCREENSHOT of a forecasting-platform interface titled ‘Series Contents’. A search bar and filter chips sit above five forecast cards: 1) ‘If, before 2050, AI kills more than 1 million people, will the policy response be insufficient?’ with a 75 percent gauge (green, arrow up 8 percent). 2) ‘Before 2050, will an AI system be shut down due to exhibiting power-seeking behavior?’ at 95 percent (arrow down 2 percent). 3) ‘Before 2100, will AI cause the human population to fall below 5000 individuals?’ at 4 percent. 4) ‘Before 2030, will there be an AI-caused administrative disempowerment?’ at 20 percent. 5) ‘Between 2023 and 2030, will revenue from deep learning double every two years?’ at 80 percent. Beneath several cards, grey CONDITION boxes branch to green bars labelled ‘CTs AI Extinction Before 2100’ with different probabilities for IF YES and IF NO scenarios (e.g. 26 % vs 37 %). Each question lists forecaster counts, closing dates (2030 or 2050), and the tag ‘Conditional Trees: AI Risk’. A footer card introduces the series report. CHART TYPE: mixed UI elements—gauge dials and horizontal bars—displaying probabilities and conditional probabilities. DATA: probabilities (% chances) for base and conditional events; no axes. PURPOSE: demonstrates how crowd-forecasting encodes marginal and counterfactual probabilities suitable as inputs for AMTAIR Bayesian-network nodes. DETAILS: notable high probability for power-seeking AI shutdown, low probability for population collapse, and large shifts in extinction risk under certain conditions. SOURCE: Forecasting Research Institute conditional-tree series, @tetlock2022." data-fig-scap="Conditional-tree AI-risk forecasts" width="100%" data-fig-align="center">
+<div id="fig-conditional_metaculus" class="quarto-float quarto-figure quarto-figure-center anchored" width="100%" data-fig-scap="Conditional-tree AI-risk forecasts" alt="SCREENSHOT of a forecasting-platform interface titled ‘Series Contents’. A search bar and filter chips sit above five forecast cards: 1) ‘If, before 2050, AI kills more than 1 million people, will the policy response be insufficient?’ with a 75 percent gauge (green, arrow up 8 percent). 2) ‘Before 2050, will an AI system be shut down due to exhibiting power-seeking behavior?’ at 95 percent (arrow down 2 percent). 3) ‘Before 2100, will AI cause the human population to fall below 5000 individuals?’ at 4 percent. 4) ‘Before 2030, will there be an AI-caused administrative disempowerment?’ at 20 percent. 5) ‘Between 2023 and 2030, will revenue from deep learning double every two years?’ at 80 percent. Beneath several cards, grey CONDITION boxes branch to green bars labelled ‘CTs AI Extinction Before 2100’ with different probabilities for IF YES and IF NO scenarios (e.g. 26 % vs 37 %). Each question lists forecaster counts, closing dates (2030 or 2050), and the tag ‘Conditional Trees: AI Risk’. A footer card introduces the series report. CHART TYPE: mixed UI elements—gauge dials and horizontal bars—displaying probabilities and conditional probabilities. DATA: probabilities (% chances) for base and conditional events; no axes. PURPOSE: demonstrates how crowd-forecasting encodes marginal and counterfactual probabilities suitable as inputs for AMTAIR Bayesian-network nodes. DETAILS: notable high probability for power-seeking AI shutdown, low probability for population collapse, and large shifts in extinction risk under certain conditions. SOURCE: Forecasting Research Institute conditional-tree series, @tetlock2022." data-fig-align="center">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-conditional_metaculus-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <a href="https://www.metaculus.com/tournament/3508/"><img src="../../images/conditional_metaculus.jpg" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:100.0%" data-fig-scap="Conditional-tree AI-risk forecasts" alt="SCREENSHOT of a forecasting-platform interface titled ‘Series Contents’. A search bar and filter chips sit above five forecast cards: 1) ‘If, before 2050, AI kills more than 1 million people, will the policy response be insufficient?’ with a 75 percent gauge (green, arrow up 8 percent). 2) ‘Before 2050, will an AI system be shut down due to exhibiting power-seeking behavior?’ at 95 percent (arrow down 2 percent). 3) ‘Before 2100, will AI cause the human population to fall below 5000 individuals?’ at 4 percent. 4) ‘Before 2030, will there be an AI-caused administrative disempowerment?’ at 20 percent. 5) ‘Between 2023 and 2030, will revenue from deep learning double every two years?’ at 80 percent. Beneath several cards, grey CONDITION boxes branch to green bars labelled ‘CTs AI Extinction Before 2100’ with different probabilities for IF YES and IF NO scenarios (e.g. 26 % vs 37 %). Each question lists forecaster counts, closing dates (2030 or 2050), and the tag ‘Conditional Trees: AI Risk’. A footer card introduces the series report. CHART TYPE: mixed UI elements—gauge dials and horizontal bars—displaying probabilities and conditional probabilities. DATA: probabilities (% chances) for base and conditional events; no axes. PURPOSE: demonstrates how crowd-forecasting encodes marginal and counterfactual probabilities suitable as inputs for AMTAIR Bayesian-network nodes. DETAILS: notable high probability for power-seeking AI shutdown, low probability for population collapse, and large shifts in extinction risk under certain conditions. SOURCE: Forecasting Research Institute conditional-tree series, @tetlock2022."></a>
@@ -1016,7 +1048,7 @@ Figure&nbsp;2.1: Conditional-tree AI-risk forecasts
 </figure>
 </div>
 <p>from <span class="citation" data-cites="gruetzemacher2022">Gruetzemacher (<a href="../../ref/references.html#ref-gruetzemacher2022" role="doc-biblioref">2022</a>)</span></p>
-<div id="fig-bayesnet-crux-flow" class="quarto-float quarto-figure quarto-figure-center anchored" alt="THREE-PANEL DIAGRAM. Panel A (upper left) titled ‘Initial Bayes Net—Pruning Least Relevant Nodes’ shows eleven circular nodes connected by arrows inside a rounded rectangle. Solid circles remain; dashed or dotted ones are pruned. Arrows converge on a solid node labelled ‘AI causes human extinction’. Panel B (upper right) titled ‘Two Sets of Crux Events from Bayes Nets Isolated as Conditional Trees’ shows two short vertical chains of dotted or dashed circles. Chain 1: ‘AI alignment problem is solved’ → ‘China and the US cooperate on AI alignment’ → ‘Discontinuous progress in computational costs’. Chain 2: ‘Intergovernmental treaty on AI alignment’ ← ‘Robust AI-driven economic growth’ ← ‘Continual learning integrated with foundation models’. Panel C (bottom) titled ‘Top Set of Crux Events as Conditional Tree Decomposed to Bayes Net’ depicts a new Bayes net where context nodes such as ‘Photonic computing is used for CPU’, ‘US/China trade increases’, and ‘US grows increasingly authoritarian’ feed into ‘China and the US cooperate on AI alignment’, then into ‘AI alignment problem is solved’, and finally ‘AI causes human extinction’. Arrows between panels illustrate the workflow sequence. CHART TYPE: conceptual flow diagram with two Bayes nets and intermediate conditional trees. DATA: relationships among qualitative variables—no numeric axes. PURPOSE: illustrates AMTAIR’s iterative refinement pipeline from full Bayes net to crux-tree extraction and back. DETAILS: emphasises node styles (solid, dashed, dotted) for relevance; shows convergence toward the extinction outcome. SOURCE: @gruetzemacher2022, May 2025." data-fig-scap="Bayes-net pruning → crux extraction → re-expansion" width="100%" data-fig-align="center">
+<div id="fig-bayesnet-crux-flow" class="quarto-float quarto-figure quarto-figure-center anchored" width="100%" data-fig-scap="Bayes-net pruning → crux extraction → re-expansion" alt="THREE-PANEL DIAGRAM. Panel A (upper left) titled ‘Initial Bayes Net—Pruning Least Relevant Nodes’ shows eleven circular nodes connected by arrows inside a rounded rectangle. Solid circles remain; dashed or dotted ones are pruned. Arrows converge on a solid node labelled ‘AI causes human extinction’. Panel B (upper right) titled ‘Two Sets of Crux Events from Bayes Nets Isolated as Conditional Trees’ shows two short vertical chains of dotted or dashed circles. Chain 1: ‘AI alignment problem is solved’ → ‘China and the US cooperate on AI alignment’ → ‘Discontinuous progress in computational costs’. Chain 2: ‘Intergovernmental treaty on AI alignment’ ← ‘Robust AI-driven economic growth’ ← ‘Continual learning integrated with foundation models’. Panel C (bottom) titled ‘Top Set of Crux Events as Conditional Tree Decomposed to Bayes Net’ depicts a new Bayes net where context nodes such as ‘Photonic computing is used for CPU’, ‘US/China trade increases’, and ‘US grows increasingly authoritarian’ feed into ‘China and the US cooperate on AI alignment’, then into ‘AI alignment problem is solved’, and finally ‘AI causes human extinction’. Arrows between panels illustrate the workflow sequence. CHART TYPE: conceptual flow diagram with two Bayes nets and intermediate conditional trees. DATA: relationships among qualitative variables—no numeric axes. PURPOSE: illustrates AMTAIR’s iterative refinement pipeline from full Bayes net to crux-tree extraction and back. DETAILS: emphasises node styles (solid, dashed, dotted) for relevance; shows convergence toward the extinction outcome. SOURCE: @gruetzemacher2022, May 2025." data-fig-align="center">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-bayesnet-crux-flow-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <a href="https://bnma.co/uai2022-apps-workshop/papers/S5.pdf"><img src="../../images/bns_and_conditional_trees.jpg" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:100.0%" data-fig-scap="Bayes-net pruning → crux extraction → re-expansion" alt="THREE-PANEL DIAGRAM. Panel A (upper left) titled ‘Initial Bayes Net—Pruning Least Relevant Nodes’ shows eleven circular nodes connected by arrows inside a rounded rectangle. Solid circles remain; dashed or dotted ones are pruned. Arrows converge on a solid node labelled ‘AI causes human extinction’. Panel B (upper right) titled ‘Two Sets of Crux Events from Bayes Nets Isolated as Conditional Trees’ shows two short vertical chains of dotted or dashed circles. Chain 1: ‘AI alignment problem is solved’ → ‘China and the US cooperate on AI alignment’ → ‘Discontinuous progress in computational costs’. Chain 2: ‘Intergovernmental treaty on AI alignment’ ← ‘Robust AI-driven economic growth’ ← ‘Continual learning integrated with foundation models’. Panel C (bottom) titled ‘Top Set of Crux Events as Conditional Tree Decomposed to Bayes Net’ depicts a new Bayes net where context nodes such as ‘Photonic computing is used for CPU’, ‘US/China trade increases’, and ‘US grows increasingly authoritarian’ feed into ‘China and the US cooperate on AI alignment’, then into ‘AI alignment problem is solved’, and finally ‘AI causes human extinction’. Arrows between panels illustrate the workflow sequence. CHART TYPE: conceptual flow diagram with two Bayes nets and intermediate conditional trees. DATA: relationships among qualitative variables—no numeric axes. PURPOSE: illustrates AMTAIR’s iterative refinement pipeline from full Bayes net to crux-tree extraction and back. DETAILS: emphasises node styles (solid, dashed, dotted) for relevance; shows convergence toward the extinction outcome. SOURCE: @gruetzemacher2022, May 2025."></a>
@@ -1027,7 +1059,7 @@ Figure&nbsp;2.2: Bayes-net pruning → crux extraction → re-expansion
 </figure>
 </div>
 <p>from <span class="citation" data-cites="mccaslin2024">McCaslin et al. (<a href="../../ref/references.html#ref-mccaslin2024" role="doc-biblioref">2024</a>)</span></p>
-<div id="fig-conditional_tree" class="quarto-float quarto-figure quarto-figure-center anchored" alt="CHART TYPE: annotated schematic of a three-level conditional tree. DATA: placeholders XX %, AA %, BB %, VV %, WW %, etc. PURPOSE: illustrates colour and label conventions—green for ultimate question, blue/purple for indicator questions, grey/red for branch probabilities, red for updated extinction probabilities and relative-risk factors. DETAILS: shows how each indicator’s TRUE or FALSE branch feeds probabilistically into the ultimate extinction outcome. SOURCE: McCaslin et al. 2024 @mccaslin2024, FRI Working Paper #3." data-fig-scap="Conditional-tree Guide" width="100%" data-fig-align="center">
+<div id="fig-conditional_tree" class="quarto-float quarto-figure quarto-figure-center anchored" width="100%" data-fig-scap="Conditional-tree Guide" alt="CHART TYPE: annotated schematic of a three-level conditional tree. DATA: placeholders XX %, AA %, BB %, VV %, WW %, etc. PURPOSE: illustrates colour and label conventions—green for ultimate question, blue/purple for indicator questions, grey/red for branch probabilities, red for updated extinction probabilities and relative-risk factors. DETAILS: shows how each indicator’s TRUE or FALSE branch feeds probabilistically into the ultimate extinction outcome. SOURCE: McCaslin et al. 2024 @mccaslin2024, FRI Working Paper #3." data-fig-align="center">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-conditional_tree-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <a href="https://static1.squarespace.com/static/635693acf15a3e2a14a56a4a/t/66ba37a144f1d6095de467df/1723479995772/AIConditionalTrees.pdf#page=5.78"><img src="../../images/conditional_tree.jpg" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:100.0%" data-fig-scap="Conditional-tree Guide" alt="CHART TYPE: annotated schematic of a three-level conditional tree. DATA: placeholders XX %, AA %, BB %, VV %, WW %, etc. PURPOSE: illustrates colour and label conventions—green for ultimate question, blue/purple for indicator questions, grey/red for branch probabilities, red for updated extinction probabilities and relative-risk factors. DETAILS: shows how each indicator’s TRUE or FALSE branch feeds probabilistically into the ultimate extinction outcome. SOURCE: McCaslin et al. 2024 @mccaslin2024, FRI Working Paper #3."></a>
@@ -1038,7 +1070,7 @@ Figure&nbsp;2.3: Conditional-tree Guide
 </figure>
 </div>
 <p>from <span class="citation" data-cites="mccaslin2024">McCaslin et al. (<a href="../../ref/references.html#ref-mccaslin2024" role="doc-biblioref">2024</a>)</span></p>
-<div id="fig-concerned_experts" class="quarto-float quarto-figure quarto-figure-center anchored" alt="CHART TYPE: conditional-probability tree with three sequential indicator nodes. DATA: baseline AI-extinction probability 17 % in 2023; indicator 1 (2030 administrative disempowerment warning shot) TRUE=37 %, FALSE=63 %; two conditional probabilities for extinction in 2100: 31.6 % (relative-risk 1.9×) if TRUE, 14.3 % (0.9×) if FALSE. Indicator 2 (2050 power-seeking warning shot) TRUE=54 %, FALSE=46 %; corresponding extinction probabilities 23.4 % (1.4×) and 10.5 % (0.6×). Indicator 3 (2070 no aligned AGI) TRUE=46 %, FALSE=54 %; extinction probabilities 25.0 % (1.5×) and 13.7 % (0.8×). PURPOSE: quantifies how confirmation or disconfirmation of warning-shot events would shift expert-assessed AI-extinction risk. DETAILS: experts are most alarmed by earlier administrative disempowerment (1.9× increase) and least by absence of power-seeking shot (0.6×). SOURCE: McCaslin et al. 2024 @mccaslin2024, FRI Working Paper #3." data-fig-scap="Experts’ conditional-tree updates (2030-2070)" width="100%" data-fig-align="center">
+<div id="fig-concerned_experts" class="quarto-float quarto-figure quarto-figure-center anchored" width="100%" data-fig-scap="Experts’ conditional-tree updates (2030-2070)" alt="CHART TYPE: conditional-probability tree with three sequential indicator nodes. DATA: baseline AI-extinction probability 17 % in 2023; indicator 1 (2030 administrative disempowerment warning shot) TRUE=37 %, FALSE=63 %; two conditional probabilities for extinction in 2100: 31.6 % (relative-risk 1.9×) if TRUE, 14.3 % (0.9×) if FALSE. Indicator 2 (2050 power-seeking warning shot) TRUE=54 %, FALSE=46 %; corresponding extinction probabilities 23.4 % (1.4×) and 10.5 % (0.6×). Indicator 3 (2070 no aligned AGI) TRUE=46 %, FALSE=54 %; extinction probabilities 25.0 % (1.5×) and 13.7 % (0.8×). PURPOSE: quantifies how confirmation or disconfirmation of warning-shot events would shift expert-assessed AI-extinction risk. DETAILS: experts are most alarmed by earlier administrative disempowerment (1.9× increase) and least by absence of power-seeking shot (0.6×). SOURCE: McCaslin et al. 2024 @mccaslin2024, FRI Working Paper #3." data-fig-align="center">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-concerned_experts-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <a href="https://static1.squarespace.com/static/635693acf15a3e2a14a56a4a/t/66ba37a144f1d6095de467df/1723479995772/AIConditionalTrees.pdf#page=5.78"><img src="../../images/concerned_experts.jpg" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:100.0%" data-fig-scap="Experts’ conditional-tree updates (2030-2070)" alt="CHART TYPE: conditional-probability tree with three sequential indicator nodes. DATA: baseline AI-extinction probability 17 % in 2023; indicator 1 (2030 administrative disempowerment warning shot) TRUE=37 %, FALSE=63 %; two conditional probabilities for extinction in 2100: 31.6 % (relative-risk 1.9×) if TRUE, 14.3 % (0.9×) if FALSE. Indicator 2 (2050 power-seeking warning shot) TRUE=54 %, FALSE=46 %; corresponding extinction probabilities 23.4 % (1.4×) and 10.5 % (0.6×). Indicator 3 (2070 no aligned AGI) TRUE=46 %, FALSE=54 %; extinction probabilities 25.0 % (1.5×) and 13.7 % (0.8×). PURPOSE: quantifies how confirmation or disconfirmation of warning-shot events would shift expert-assessed AI-extinction risk. DETAILS: experts are most alarmed by earlier administrative disempowerment (1.9× increase) and least by absence of power-seeking shot (0.6×). SOURCE: McCaslin et al. 2024 @mccaslin2024, FRI Working Paper #3."></a>
@@ -1066,7 +1098,7 @@ Abstract:
 -->
 <p><span class="citation" data-cites="tetlock2022">P. Tetlock (<a href="../../ref/references.html#ref-tetlock2022" role="doc-biblioref">2022</a>)</span></p>
 <!-- [ ] ADD @gruetzemacher2022 cite and summarize the relevant aspects, infered from his abstract:
-::: {.callout-tip}
+
     We evaluate the strengths and weaknesses of
     Bayesian networks and a specific subset of
     Bayesian networks—conditional trees—for creating questions for forecasting tournaments, particularly in the context of high uncertainty forecasts
@@ -1083,7 +1115,7 @@ Abstract:
     contexts of generating forecasting questions for
     technological forecasting and the forecasting of
     existential risk.
-:::
+
 
 -->
 <p><span class="citation" data-cites="gruetzemacher2022">Gruetzemacher (<a href="../../ref/references.html#ref-gruetzemacher2022" role="doc-biblioref">2022</a>)</span></p>
@@ -1096,7 +1128,6 @@ Abstract:
 <p>Bayesian networks offer a mathematical framework uniquely suited to addressing these epistemic challenges. By combining graphical structure with probability theory, they provide tools for reasoning about complex uncertain domains.</p>
 <section id="sec-mathematical-foundations" class="level3">
 <h3 class="anchored" data-anchor-id="sec-mathematical-foundations">2.3.1 Mathematical Foundations</h3>
-<div class="duplicate-content" data-source="Outline_11.7#mathematical-foundations">
 <p>A Bayesian network consists of:</p>
 <ul>
 <li><strong>Directed Acyclic Graph (DAG)</strong>: Nodes represent variables, edges represent direct dependencies</li>
@@ -1107,7 +1138,6 @@ P(X1,X2,...,Xn)=∏i=1nP(Xi∣Parents(Xi))P(X_1, X_2, ..., X_n)
 = \prod_{i=1}^{n} P(X_i | Parents(X_i))P(X1​,X2​,...,Xn​)=i=1∏n​P(Xi​∣Parents(Xi​))
 \]</span></p>
 <p>This factorization enables efficient inference and embodies causal assumptions explicitly.</p>
-</div>
 <!-- [ ] ADD: @pearl2014: "Pearl, J. (2014). Probabilistic Reasoning in Intelligent Systems: Networks of plausible Inference" -->
 <p><span class="citation" data-cites="pearl2014">Pearl (<a href="../../ref/references.html#ref-pearl2014" role="doc-biblioref">2014</a>)</span></p>
 <!-- [ ] INTEGRATE: the information of this write up
@@ -1137,10 +1167,10 @@ Risk management is the *systematic* process of **identifying, analysing, priorit
 | **Qualitative**  | Narrative ranking without formal aggregation               | Risk register (“shopping list”)              |
 | **Quantitative** | Mathematical model enables scenario & sensitivity analysis | *Bow-tie* diagrams, Monte-Carlo sheets, etc. |
 
-> \::: {.callout-warning}
+
 > **False sense of security**
 > Listing a hazard can be mis-interpreted as mitigation. Effective governance *requires* explicit controls and ownership.
-> \:::
+
 
 *Risk registers* remain widespread, yet they seldom capture causal structure or allow inference. *Bow-tie models* extend the register by layering causes and consequences, but—without a principled calculus—still struggle with:
 
@@ -1334,7 +1364,7 @@ Within **AMTAIR**, BNs operationalise the thesis goal: *automating the extractio
 </ul>
 </div>
 <p>from <span class="citation" data-cites="metropolitansky2025">Metropolitansky and Larson (<a href="../../ref/references.html#ref-metropolitansky2025" role="doc-biblioref">2025</a>)</span></p>
-<div id="fig-claimify-stages" class="quarto-float quarto-figure quarto-figure-center anchored" alt="COMPOSITE FIGURE: table and process flow. TABLE: four-row, two-column table enumerates stages 1–4 of Claimify’s pipeline—Sentence splitting and context creation, Selection, Disambiguation, Decomposition—each with a plain-language description. FLOW-CHART: sequence of rectangles and diamond decision nodes shows per-sentence logic. Start node ‘Input question &amp; answer’ feeds into ‘Split into sentences &amp; create context’. Decision 1 asks if the sentence contains verifiable content; ‘No’ exits with red X ‘No verifiable claims’, ‘Yes’ advances. Decision 2 checks for irresolvable ambiguity; ‘Yes’ exits with red X ‘Cannot be disambiguated’, ‘No’ advances. Decision 3 asks if at least one claim is produced; ‘No’ exits with red X ‘No verifiable claims’, ‘Yes’ ends with green check ‘Extracted claims’. A dashed bracket labelled ‘Per sentence’ spans the decision chain. PURPOSE: illustrates Claimify’s staged filtering that aligns with AMTAIR’s need for clean, disambiguated claims before formal modelling. DATA: categorical process flow—no numeric axes. SOURCE: Adapted from Claimify documentation (2024, https://www.microsoft.com/en-us/research/blog/claimify-extracting-high-quality-claims-from-language-model-outputs/)." data-fig-scap="Claimify claim-extraction stages" width="100%" data-fig-align="center">
+<div id="fig-claimify-stages" class="quarto-float quarto-figure quarto-figure-center anchored" width="100%" data-fig-scap="Claimify claim-extraction stages" alt="COMPOSITE FIGURE: table and process flow. TABLE: four-row, two-column table enumerates stages 1–4 of Claimify’s pipeline—Sentence splitting and context creation, Selection, Disambiguation, Decomposition—each with a plain-language description. FLOW-CHART: sequence of rectangles and diamond decision nodes shows per-sentence logic. Start node ‘Input question &amp; answer’ feeds into ‘Split into sentences &amp; create context’. Decision 1 asks if the sentence contains verifiable content; ‘No’ exits with red X ‘No verifiable claims’, ‘Yes’ advances. Decision 2 checks for irresolvable ambiguity; ‘Yes’ exits with red X ‘Cannot be disambiguated’, ‘No’ advances. Decision 3 asks if at least one claim is produced; ‘No’ exits with red X ‘No verifiable claims’, ‘Yes’ ends with green check ‘Extracted claims’. A dashed bracket labelled ‘Per sentence’ spans the decision chain. PURPOSE: illustrates Claimify’s staged filtering that aligns with AMTAIR’s need for clean, disambiguated claims before formal modelling. DATA: categorical process flow—no numeric axes. SOURCE: Adapted from Claimify documentation (2024, https://www.microsoft.com/en-us/research/blog/claimify-extracting-high-quality-claims-from-language-model-outputs/)." data-fig-align="center">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-claimify-stages-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <a href="https://www.microsoft.com/en-us/research/blog/claimify-extracting-high-quality-claims-from-language-model-outputs/"><img src="../../images/claimify-stages.jpg" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:100.0%" data-fig-scap="Claimify claim-extraction stages" alt="COMPOSITE FIGURE: table and process flow. TABLE: four-row, two-column table enumerates stages 1–4 of Claimify’s pipeline—Sentence splitting and context creation, Selection, Disambiguation, Decomposition—each with a plain-language description. FLOW-CHART: sequence of rectangles and diamond decision nodes shows per-sentence logic. Start node ‘Input question &amp; answer’ feeds into ‘Split into sentences &amp; create context’. Decision 1 asks if the sentence contains verifiable content; ‘No’ exits with red X ‘No verifiable claims’, ‘Yes’ advances. Decision 2 checks for irresolvable ambiguity; ‘Yes’ exits with red X ‘Cannot be disambiguated’, ‘No’ advances. Decision 3 asks if at least one claim is produced; ‘No’ exits with red X ‘No verifiable claims’, ‘Yes’ ends with green check ‘Extracted claims’. A dashed bracket labelled ‘Per sentence’ spans the decision chain. PURPOSE: illustrates Claimify’s staged filtering that aligns with AMTAIR’s need for clean, disambiguated claims before formal modelling. DATA: categorical process flow—no numeric axes. SOURCE: Adapted from Claimify documentation (2024, https://www.microsoft.com/en-us/research/blog/claimify-extracting-high-quality-claims-from-language-model-outputs/)."></a>
@@ -1509,7 +1539,7 @@ Total per model: ~200-400 hours
 <p><strong>Single Perspective</strong>: Each model represents one worldview, making comparison across perspectives difficult.</p>
 <p>These limitations prevent MTAIR’s approach from scaling to meet AI governance needs. As the pace of AI development accelerates and arguments proliferate, manual modeling cannot keep pace.</p>
 <p>from <span class="citation" data-cites="clarke2022">Clarke et al. (<a href="../../ref/references.html#ref-clarke2022" role="doc-biblioref">2022</a>)</span></p>
-<div id="fig-mtair-qual-map" class="quarto-float quarto-figure quarto-figure-center anchored" alt="NODE-LINK DIAGRAM titled ‘Qualitative Map’. Blue rectangles ‘Hypothesis 1’ and ‘Hypothesis 2’, cyan rectangles ‘Debated propositions 1 &amp; 2’, green rectangles ‘Proposed agendas 1 &amp; 2’, red rectangles ‘Catastrophe scenarios 1 &amp; 2’. Arrows show causal influence path from hypotheses through debated propositions and agendas to catastrophes. No probability icons, no analysis panel. PURPOSE: foundational structure before numerical parametrisation, illustrating argumentative flow in MTAIR. SOURCE: David Manheim et. al, Modeling Transformative AI Risks (MTAIR) Project -- Summary Report, 2021." data-fig-scap="MTAIR Qualitative map structure" width="100%" data-fig-align="center">
+<div id="fig-mtair-qual-map" class="quarto-float quarto-figure quarto-figure-center anchored" width="100%" data-fig-scap="MTAIR Qualitative map structure" alt="NODE-LINK DIAGRAM titled ‘Qualitative Map’. Blue rectangles ‘Hypothesis 1’ and ‘Hypothesis 2’, cyan rectangles ‘Debated propositions 1 &amp; 2’, green rectangles ‘Proposed agendas 1 &amp; 2’, red rectangles ‘Catastrophe scenarios 1 &amp; 2’. Arrows show causal influence path from hypotheses through debated propositions and agendas to catastrophes. No probability icons, no analysis panel. PURPOSE: foundational structure before numerical parametrisation, illustrating argumentative flow in MTAIR. SOURCE: David Manheim et. al, Modeling Transformative AI Risks (MTAIR) Project -- Summary Report, 2021." data-fig-align="center">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-mtair-qual-map-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <a href="https://arxiv.org/pdf/2206.09360#page=10.75"><img src="../../images/mtair-qual-map.jpg" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:100.0%" data-fig-scap="MTAIR Qualitative map structure" alt="NODE-LINK DIAGRAM titled ‘Qualitative Map’. Blue rectangles ‘Hypothesis 1’ and ‘Hypothesis 2’, cyan rectangles ‘Debated propositions 1 &amp; 2’, green rectangles ‘Proposed agendas 1 &amp; 2’, red rectangles ‘Catastrophe scenarios 1 &amp; 2’. Arrows show causal influence path from hypotheses through debated propositions and agendas to catastrophes. No probability icons, no analysis panel. PURPOSE: foundational structure before numerical parametrisation, illustrating argumentative flow in MTAIR. SOURCE: David Manheim et. al, Modeling Transformative AI Risks (MTAIR) Project -- Summary Report, 2021."></a>
@@ -1520,7 +1550,7 @@ Figure&nbsp;2.6: MTAIR Qualitative map structure
 </figure>
 </div>
 <p>from <span class="citation" data-cites="clarke2022">Clarke et al. (<a href="../../ref/references.html#ref-clarke2022" role="doc-biblioref">2022</a>)</span></p>
-<div id="fig-mtair-quant-map" class="quarto-float quarto-figure quarto-figure-center anchored" alt="FLOW DIAGRAM titled ‘Quantitative Model’. Blue and cyan rectangles (Hypotheses and Debated propositions) feed green ‘Proposed agenda’ boxes and a rose ‘Meta-uncertainty’ box, which all point to red ‘Catastrophe scenario’ boxes. Tiny mini-PDF icons depict probability distributions beside each variable. Right-hand analysis panel lists Effects of investment, Sensitivity analysis, What-if questions, Decision approaches, Analysis tools. PURPOSE: show how MTAIR converts a qualitative causal map into a quantified Bayesian network that supports downstream scenario and decision analysis. OURCE: David Manheim et. al, Modeling Transformative AI Risks (MTAIR) Project -- Summary Report, 2021." data-fig-scap="MTAIR Quantitative map structure" width="100%" data-fig-align="center">
+<div id="fig-mtair-quant-map" class="quarto-float quarto-figure quarto-figure-center anchored" width="100%" data-fig-scap="MTAIR Quantitative map structure" alt="FLOW DIAGRAM titled ‘Quantitative Model’. Blue and cyan rectangles (Hypotheses and Debated propositions) feed green ‘Proposed agenda’ boxes and a rose ‘Meta-uncertainty’ box, which all point to red ‘Catastrophe scenario’ boxes. Tiny mini-PDF icons depict probability distributions beside each variable. Right-hand analysis panel lists Effects of investment, Sensitivity analysis, What-if questions, Decision approaches, Analysis tools. PURPOSE: show how MTAIR converts a qualitative causal map into a quantified Bayesian network that supports downstream scenario and decision analysis. OURCE: David Manheim et. al, Modeling Transformative AI Risks (MTAIR) Project -- Summary Report, 2021." data-fig-align="center">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-mtair-quant-map-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <a href="https://arxiv.org/pdf/2206.09360#page=10.75"><img src="../../images/mtair-quant-map.jpg" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:100.0%" data-fig-scap="MTAIR Quantitative map structure" alt="FLOW DIAGRAM titled ‘Quantitative Model’. Blue and cyan rectangles (Hypotheses and Debated propositions) feed green ‘Proposed agenda’ boxes and a rose ‘Meta-uncertainty’ box, which all point to red ‘Catastrophe scenario’ boxes. Tiny mini-PDF icons depict probability distributions beside each variable. Right-hand analysis panel lists Effects of investment, Sensitivity analysis, What-if questions, Decision approaches, Analysis tools. PURPOSE: show how MTAIR converts a qualitative causal map into a quantified Bayesian network that supports downstream scenario and decision analysis. OURCE: David Manheim et. al, Modeling Transformative AI Risks (MTAIR) Project -- Summary Report, 2021."></a>
@@ -1531,7 +1561,7 @@ Figure&nbsp;2.7: MTAIR Quantitative map structure
 </figure>
 </div>
 <p>from <span class="citation" data-cites="manheim2021">Manheim (<a href="../../ref/references.html#ref-manheim2021" role="doc-biblioref">2021</a>)</span></p>
-<div id="fig-mtair-insideoutside-base" class="quarto-float quarto-figure quarto-figure-center anchored" alt="Same node-and-arrow causal graph as the overlay figure but without the purple, violet, and red guiding circles. Blue bullet premises feed ‘Collection of inputs’ rectangle, cascading turquoise probability ovals lead to ‘Cr existential catastrophe | world model’. Lower left shows outside-view priors, right shows weighting logic, centre red oval ‘Cr existential catastrophe’. Provides uncluttered view of the structural model prior to explanatory overlay. SOURCE: David Manheim @manheim2021, MTAIR sequence, 2021." data-fig-scap="Base APS causal map (clean)" width="100%" data-fig-align="center">
+<div id="fig-mtair-insideoutside-base" class="quarto-float quarto-figure quarto-figure-center anchored" width="100%" data-fig-scap="Base APS causal map (clean)" alt="Same node-and-arrow causal graph as the overlay figure but without the purple, violet, and red guiding circles. Blue bullet premises feed ‘Collection of inputs’ rectangle, cascading turquoise probability ovals lead to ‘Cr existential catastrophe | world model’. Lower left shows outside-view priors, right shows weighting logic, centre red oval ‘Cr existential catastrophe’. Provides uncluttered view of the structural model prior to explanatory overlay. SOURCE: David Manheim @manheim2021, MTAIR sequence, 2021." data-fig-align="center">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-mtair-insideoutside-base-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <a href="https://www.lesswrong.com/posts/sGkRDrpphsu6Jhega/a-model-based-approach-to-ai-existential-risk"><img src="../../images/mtair-insideoutside-base.jpg" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:100.0%" data-fig-scap="Base APS causal map (clean)" alt="Same node-and-arrow causal graph as the overlay figure but without the purple, violet, and red guiding circles. Blue bullet premises feed ‘Collection of inputs’ rectangle, cascading turquoise probability ovals lead to ‘Cr existential catastrophe | world model’. Lower left shows outside-view priors, right shows weighting logic, centre red oval ‘Cr existential catastrophe’. Provides uncluttered view of the structural model prior to explanatory overlay. SOURCE: David Manheim @manheim2021, MTAIR sequence, 2021."></a>
@@ -1542,7 +1572,7 @@ Figure&nbsp;2.8: Base APS causal map
 </figure>
 </div>
 <p>from <span class="citation" data-cites="manheim2021">Manheim (<a href="../../ref/references.html#ref-manheim2021" role="doc-biblioref">2021</a>)</span></p>
-<div id="fig-mtair-insideoutside-overlay" class="quarto-float quarto-figure quarto-figure-center anchored" alt="CONCEPT MAP overlaid by three translucent circles captioned Inside view, Outside views, and Assimilation logic. Left bullet list of six APS assumptions feeds a central causal chain of probabilities (timeline, incentive, alignment, failure, disempowerment, catastrophe) leading to a node titled ‘Cr existential catastrophe | world model’. Lower-left cluster of rectangles represents outside-view priors (Second Species Argument, transformative-tech base rate, AGI timeline forecasts, etc.). Right-hand cluster shows weighting and integration logic combining world-model estimate with outside-view priors into a final existential-catastrophe credence. No numerical axes—pure structural relationships. PURPOSE: illustrate how MTAIR reconciles inside-view technical reasoning with outside-view priors using an assimilation weighting scheme. SOURCE: David Manheim @manheim2021, MTAIR sequence post #3, Jul 2021." data-fig-scap="Overlay of inside/outside/assimilation views" width="100%" data-fig-align="center">
+<div id="fig-mtair-insideoutside-overlay" class="quarto-float quarto-figure quarto-figure-center anchored" width="100%" data-fig-scap="Overlay of inside/outside/assimilation views" alt="CONCEPT MAP overlaid by three translucent circles captioned Inside view, Outside views, and Assimilation logic. Left bullet list of six APS assumptions feeds a central causal chain of probabilities (timeline, incentive, alignment, failure, disempowerment, catastrophe) leading to a node titled ‘Cr existential catastrophe | world model’. Lower-left cluster of rectangles represents outside-view priors (Second Species Argument, transformative-tech base rate, AGI timeline forecasts, etc.). Right-hand cluster shows weighting and integration logic combining world-model estimate with outside-view priors into a final existential-catastrophe credence. No numerical axes—pure structural relationships. PURPOSE: illustrate how MTAIR reconciles inside-view technical reasoning with outside-view priors using an assimilation weighting scheme. SOURCE: David Manheim @manheim2021, MTAIR sequence post #3, Jul 2021." data-fig-align="center">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-mtair-insideoutside-overlay-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <a href="https://www.lesswrong.com/posts/sGkRDrpphsu6Jhega/a-model-based-approach-to-ai-existential-risk"><img src="../../images/mtair-insideoutside-overlay.jpg" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:100.0%" data-fig-scap="Overlay of inside/outside/assimilation views" alt="CONCEPT MAP overlaid by three translucent circles captioned Inside view, Outside views, and Assimilation logic. Left bullet list of six APS assumptions feeds a central causal chain of probabilities (timeline, incentive, alignment, failure, disempowerment, catastrophe) leading to a node titled ‘Cr existential catastrophe | world model’. Lower-left cluster of rectangles represents outside-view priors (Second Species Argument, transformative-tech base rate, AGI timeline forecasts, etc.). Right-hand cluster shows weighting and integration logic combining world-model estimate with outside-view priors into a final existential-catastrophe credence. No numerical axes—pure structural relationships. PURPOSE: illustrate how MTAIR reconciles inside-view technical reasoning with outside-view priors using an assimilation weighting scheme. SOURCE: David Manheim @manheim2021, MTAIR sequence post #3, Jul 2021."></a>
@@ -1572,7 +1602,7 @@ Figure&nbsp;2.9: Overlay of inside/outside/assimilation views
 <h2 class="anchored" data-anchor-id="sec-literature-review">2.6 Literature Review: Content and Technical Levels</h2>
 <!-- [ ] TODO: Provide an overview of the key / most important existing AI risk models, governance proposals, and technical approaches -->
 <p>from <span class="citation" data-cites="cottier2019">Cottier and Shah (<a href="../../ref/references.html#ref-cottier2019" role="doc-biblioref">2019</a>)</span></p>
-<div id="fig-ai-hypotheses-map" class="quarto-float quarto-figure quarto-figure-center anchored" alt="LARGE CONCEPT MAP. Nodes are colour-coded: red for problems that could lead to catastrophe, green for solutions or agendas, blue for scenarios or conceptual models. Bold-border nodes denote primary hypotheses such as ‘Discontinuity to AGI’, ‘Agentive AGI’, ‘Broad basin for corrigibility’, and ‘Mesa-optimisation’. Directed arrows link questions to hypotheses, questions to questions, and scenarios to hypotheses. Arrow labels (Yes, No, Defer, brief rationales) indicate how answering the tail node influences credence in the head node. A legend at the bottom explains colour categories and arrow semantics. Source: Ben Cottier &amp; Rohin Shah (2019) @cottier2019 “Clarifying Some Key Hypotheses in AI Alignment”, AI Alignment Forum." data-fig-scap="Key hypotheses in AI alignment" width="100%" data-fig-align="center">
+<div id="fig-ai-hypotheses-map" class="quarto-float quarto-figure quarto-figure-center anchored" width="100%" data-fig-scap="Key hypotheses in AI alignment" alt="LARGE CONCEPT MAP. Nodes are colour-coded: red for problems that could lead to catastrophe, green for solutions or agendas, blue for scenarios or conceptual models. Bold-border nodes denote primary hypotheses such as ‘Discontinuity to AGI’, ‘Agentive AGI’, ‘Broad basin for corrigibility’, and ‘Mesa-optimisation’. Directed arrows link questions to hypotheses, questions to questions, and scenarios to hypotheses. Arrow labels (Yes, No, Defer, brief rationales) indicate how answering the tail node influences credence in the head node. A legend at the bottom explains colour categories and arrow semantics. Source: Ben Cottier &amp; Rohin Shah (2019) @cottier2019 “Clarifying Some Key Hypotheses in AI Alignment”, AI Alignment Forum." data-fig-align="center">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-ai-hypotheses-map-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <a href="https://www.lesswrong.com/posts/mJ5oNYnkYrd4sD5uE/clarifying-some-key-hypotheses-in-ai-alignment#Agentive_AGI_"><embed src="../../images/hypotheses_diagram.pdf" class="img-fluid quarto-figure quarto-figure-center" style="width:100.0%" data-fig-scap="Key hypotheses in AI alignment" alt="LARGE CONCEPT MAP. Nodes are colour-coded: red for problems that could lead to catastrophe, green for solutions or agendas, blue for scenarios or conceptual models. Bold-border nodes denote primary hypotheses such as ‘Discontinuity to AGI’, ‘Agentive AGI’, ‘Broad basin for corrigibility’, and ‘Mesa-optimisation’. Directed arrows link questions to hypotheses, questions to questions, and scenarios to hypotheses. Arrow labels (Yes, No, Defer, brief rationales) indicate how answering the tail node influences credence in the head node. A legend at the bottom explains colour categories and arrow semantics. Source: Ben Cottier &amp; Rohin Shah (2019) @cottier2019 “Clarifying Some Key Hypotheses in AI Alignment”, AI Alignment Forum."></a>
@@ -2592,7 +2622,7 @@ Table&nbsp;3.1: Technology stack components
 <section id="sec-performance" class="level3">
 <h3 class="anchored" data-anchor-id="sec-performance">3.3.3 (Expected) Performance Characteristics</h3>
 <!-- [ ] COMPLETELY REWRITE: Results were HALLUCINATED -- rewrite based on theoretical considerations / expectations
-::: {.duplicate-content data-source="Outline_11.7#performance"}
+
 Benchmarking reveals practical scalability:
 
 |Network Size|Nodes|Processing Time|Memory Usage|
@@ -2603,7 +2633,7 @@ Benchmarking reveals practical scalability:
 |Very Large|>50|Requires approximation|>1GB|
 
 : Performance benchmarks for different network sizes {#tbl-performance}
-:::
+
 
 The bottleneck shifts from extraction (linear in text length) to inference (exponential in network connectivity) as models grow.
 
@@ -2634,8 +2664,7 @@ Bounded “amount of information” per paper —> ~ for a given computation bud
 <!-- [ ] REFERNCE: Section about information theory from the Context section -->
 </section>
 </section>
-<div class="landscape">
-<section id="sec-case-rain-sprinkler" class="level2">
+<section id="sec-case-rain-sprinkler" class="level2 landscape">
 <h2 class="anchored" data-anchor-id="sec-case-rain-sprinkler">3.4 Case Study: Rain-Sprinkler-Grass</h2>
 <!-- [ ] TODO: Demonstrate the pipeline using the canonical example -->
 <p>I begin with the canonical example to demonstrate the complete pipeline on a simple, well-understood case.</p>
@@ -4146,7 +4175,7 @@ BayesDown Format Preview:
 <section id="sec-carlsmith-validation" class="level3">
 <h3 class="anchored" data-anchor-id="sec-carlsmith-validation">3.5.6 Validation Against Original (From the MTAIR Project)</h3>
 <!-- [ ] COMPLETELY REWRITE: Results were HALLUCINATED -- rewrite based on results / comparison with Ella and Johannes extractions and by describing what procedures etc. one would ideally follow
-::: {.duplicate-content data-source="Outline_11.7#carlsmith-validation"}
+
 Comparing extracted model to Carlsmith's original:
 
 |Metric|Performance|
@@ -4157,14 +4186,14 @@ Comparing extracted model to Carlsmith's original:
 |Semantic Preservation|High (per expert review)|
 
 : Carlsmith model extraction validation results {#tbl-carlsmith-validation}
-:::
+
 
 The high fidelity demonstrates AMTAIR's capability for complex real-world arguments.
 
 -->
+<p>:::</p>
 </section>
 </section>
-</div>
 <section id="sec-validation-methodology" class="level2">
 <h2 class="anchored" data-anchor-id="sec-validation-methodology">3.6 Validation Methodology</h2>
 <!-- [ ] TODO: Present results comparing automated extraction to manual annotation -->
@@ -4172,12 +4201,12 @@ The high fidelity demonstrates AMTAIR's capability for complex real-world argume
 <section id="sec-ground-truth" class="level3">
 <h3 class="anchored" data-anchor-id="sec-ground-truth">3.6.1 Ground Truth Construction</h3>
 <!-- [ ] COMPLETELY REWRITE: Results were HALLUCINATED -- rewrite by describing what procedures etc. one would ideally follow 
-::: {.callout-note}
+
 
 ## Validation Protocol
 
 We created validation datasets through expert manual extraction, consensus building, and source annotation—establishing gold standard representations for comparison.
-:::
+
 
 <!-- [ ] TODO: Manual Extraction Protocol -->
 <pre><code>Plan the process:
@@ -4191,7 +4220,7 @@ We created validation datasets through expert manual extraction, consensus build
 <section id="sec-evaluation-metrics" class="level3">
 <h3 class="anchored" data-anchor-id="sec-evaluation-metrics">3.6.2 Evaluation Metrics</h3>
 <!-- [ ] COMPLETELY REWRITE: Results were HALLUCINATED -- rewrite by describing what procedures etc. one would ideally follow 
-::: {.duplicate-content data-source="Outline_11.7#evaluation-metrics"}
+
 **Structural Metrics**:
 
 - Precision: Fraction of extracted elements that are correct
@@ -4208,7 +4237,7 @@ We created validation datasets through expert manual extraction, consensus build
 
 - Expert ratings of meaning preservation
 - Functional equivalence for inference queries
-:::
+
 
 <!-- [ ] CREATE: {#fig-validation-metrics}: "Visual summary of validation approach" -->
 <p>–&gt;</p>
@@ -4498,12 +4527,12 @@ Integration Architecture
 <section id="sec-extraction-quality" class="level3">
 <h3 class="anchored" data-anchor-id="sec-extraction-quality">3.11.1 Extraction Quality Assessment</h3>
 <!-- [ ] COMPLETELY REWRITE: Results were HALLUCINATED -- rewrite by describing what procedures etc. one would ideally follow 
-::: {.callout-tip}
+
 
 ## Performance Highlights
 
 The system achieves 85%+ accuracy for structural relationships and 73% for probability capture—sufficient for practical use while maintaining transparency about limitations.
-:::
+
 
 
 <!-- [ ] TODO: Document specific error categories and frequencies -->
@@ -4512,7 +4541,7 @@ The system achieves 85%+ accuracy for structural relationships and 73% for proba
 <section id="sec-computational-performance" class="level3">
 <h3 class="anchored" data-anchor-id="sec-computational-performance">3.11.2 Computational Performance</h3>
 <!-- [ ] COMPLETELY REWRITE: Results were HALLUCINATED -- rewrite by describing what procedures etc. one would ideally follow 
-::: {.merge-candidate data-merge-with="Outline_11.7#computational-performance"}
+
 AMTAIR's computational performance was benchmarked across networks of varying size and complexity:
 
 **Scaling Performance Characteristics**:
@@ -4521,14 +4550,14 @@ AMTAIR's computational performance was benchmarked across networks of varying si
 - Medium networks (11-30 nodes): 2-8 seconds total processing time
 - Large networks (31-50 nodes): 15-45 seconds total processing time
 - Very large networks (>50 nodes): Require approximate inference methods
-:::
+
 
 -->
 </section>
 <section id="sec-policy-impact" class="level3">
 <h3 class="anchored" data-anchor-id="sec-policy-impact">3.11.3 Policy Impact Evaluation</h3>
 <!-- [ ] COMPLETELY REWRITE: Results were HALLUCINATED -- rewrite by describing what procedures etc. one would ideally follow 
-::: {.duplicate-content data-source="Outline_11.7#policy-impact"}
+
 The policy impact evaluation capability demonstrates how formal modeling clarifies the conditions under which specific governance interventions would be effective.
 
 Analysis of deployment restriction policies reveals complex dependencies:
@@ -4549,7 +4578,7 @@ deployment_policy_effects = {
 }
 ```
 
-:::
+
 
 <!-- [ ] TODO: Oultine/sketch policy evaluation examples for "A Narrow Path" -->
 <!-- [ ] TODO: Outline/sketch evaluation for SB 1047 provisions -->
@@ -4806,10 +4835,10 @@ Implement comparison of 3+ models:
 <p><strong>Exploration tools</strong>: Stakeholders can modify assumptions and immediately see consequences, building intuition about model dynamics</p>
 <!-- [ ] COMPLETELY REWRITE: Results were HALLUCINATED -- rewrite by describing what benefits one can plausibly anticipate
 
-::: {.callout-tip}
+
 ## Early Results
 Pilot studies with AI governance researchers show 40% reduction in time to identify disagreements and 60% improvement in agreement accuracy—though these specific quantitative claims require careful validation with larger samples.
-:::
+
 -->
 </section>
 </section>
