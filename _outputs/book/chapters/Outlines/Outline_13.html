@@ -78,7 +78,7 @@ div.csl-indent {
 }</style>
 
 
-<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg==" crossorigin="anonymous"></script><script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
 <script src="../../site_libs/quarto-nav/headroom.min.js"></script>
 <script src="../../site_libs/clipboard/clipboard.min.js"></script>
 <script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
@@ -124,7 +124,39 @@ div.csl-indent {
     "search-label": "Search"
   }
 }</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.6/require.min.js" integrity="sha512-c3Nl8+7g4LMSTdrm621y7kf9v3SDPnhxLNhcjFJbKECVnmZHTdo+IRO05sNLTH/D3vA6u1X32ehoLC7WFVdheg==" crossorigin="anonymous"></script>
 
+<script type="application/javascript">define('jquery', [],function() {return window.jQuery;})</script>
+
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN") {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
 
 </head>
 
@@ -228,7 +260,6 @@ div.csl-indent {
    
   <ul>
   <li><a href="#acknowledgments" id="toc-acknowledgments" class="nav-link active" data-scroll-target="#acknowledgments">Acknowledgments</a></li>
-  <li><a href="#table-of-contents" id="toc-table-of-contents" class="nav-link" data-scroll-target="#table-of-contents">Table of Contents</a></li>
   <li><a href="#list-of-figures" id="toc-list-of-figures" class="nav-link" data-scroll-target="#list-of-figures">List of Figures</a></li>
   <li><a href="#list-of-tables" id="toc-list-of-tables" class="nav-link" data-scroll-target="#list-of-tables">List of Tables</a></li>
   <li><a href="#list-of-abbreviations" id="toc-list-of-abbreviations" class="nav-link" data-scroll-target="#list-of-abbreviations">List of Abbreviations</a></li>
@@ -269,6 +300,7 @@ div.csl-indent {
   <ul>
   <li><a href="#sec-mathematical-foundations" id="toc-sec-mathematical-foundations" class="nav-link" data-scroll-target="#sec-mathematical-foundations">2.3.1 Mathematical Foundations</a></li>
   <li><a href="#sec-rain-sprinkler-example" id="toc-sec-rain-sprinkler-example" class="nav-link" data-scroll-target="#sec-rain-sprinkler-example">2.3.2 The Rain-Sprinkler-Grass Example</a></li>
+  <li><a href="#rain-sprinkler-grass-network-rendering" id="toc-rain-sprinkler-grass-network-rendering" class="nav-link" data-scroll-target="#rain-sprinkler-grass-network-rendering">Rain-Sprinkler-Grass Network Rendering</a></li>
   <li><a href="#sec-modeling-advantages" id="toc-sec-modeling-advantages" class="nav-link" data-scroll-target="#sec-modeling-advantages">2.3.3 Advantages for AI Risk Modeling</a></li>
   </ul></li>
   <li><a href="#sec-argument-mapping" id="toc-sec-argument-mapping" class="nav-link" data-scroll-target="#sec-argument-mapping">2.4 Argument Mapping and Formal Representations</a>
@@ -325,9 +357,16 @@ div.csl-indent {
   </ul></li>
   <li><a href="#sec-case-rain-sprinkler" id="toc-sec-case-rain-sprinkler" class="nav-link" data-scroll-target="#sec-case-rain-sprinkler">3.4 Case Study: Rain-Sprinkler-Grass</a>
   <ul>
-  <li><a href="#sec-rsg-input" id="toc-sec-rsg-input" class="nav-link" data-scroll-target="#sec-rsg-input">3.4.1 Input Representation</a></li>
-  <li><a href="#sec-rsg-processing" id="toc-sec-rsg-processing" class="nav-link" data-scroll-target="#sec-rsg-processing">3.4.2 Processing Steps</a></li>
+  <li><a href="#sec-rsg-processing" id="toc-sec-rsg-processing" class="nav-link" data-scroll-target="#sec-rsg-processing">3.4.1 Processing Steps</a></li>
+  <li><a href="#sec-rsg-input" id="toc-sec-rsg-input" class="nav-link" data-scroll-target="#sec-rsg-input">3.4.2 Example Conversion Steps</a>
+  <ul class="collapse">
+  <li><a href="#argdown-example" id="toc-argdown-example" class="nav-link" data-scroll-target="#argdown-example">ArgDown Example</a></li>
+  <li><a href="#example-of-questions-for-bayesdown-extraction" id="toc-example-of-questions-for-bayesdown-extraction" class="nav-link" data-scroll-target="#example-of-questions-for-bayesdown-extraction">Example of Questions for BayesDown extraction</a></li>
+  <li><a href="#complete-bayesdown-example" id="toc-complete-bayesdown-example" class="nav-link" data-scroll-target="#complete-bayesdown-example">Complete BayesDown Example</a></li>
+  <li><a href="#resulting-rain-sprinkler-grass-dataframe" id="toc-resulting-rain-sprinkler-grass-dataframe" class="nav-link" data-scroll-target="#resulting-rain-sprinkler-grass-dataframe">Resulting Rain-Sprinkler-Grass DataFrame</a></li>
+  </ul></li>
   <li><a href="#sec-rsg-results" id="toc-sec-rsg-results" class="nav-link" data-scroll-target="#sec-rsg-results">3.4.3 Results</a></li>
+  <li><a href="#rain-sprinkler-grass-network-rendering-1" id="toc-rain-sprinkler-grass-network-rendering-1" class="nav-link" data-scroll-target="#rain-sprinkler-grass-network-rendering-1">Rain-Sprinkler-Grass Network Rendering</a></li>
   </ul></li>
   <li><a href="#sec-case-carlsmith" id="toc-sec-case-carlsmith" class="nav-link" data-scroll-target="#sec-case-carlsmith">3.5 Case Study: Carlsmith’s Power-Seeking AI Model</a>
   <ul>
@@ -460,39 +499,6 @@ div.csl-indent {
   <li><a href="#sec-closing-reflections" id="toc-sec-closing-reflections" class="nav-link" data-scroll-target="#sec-closing-reflections">5.6 Closing Reflections</a></li>
   </ul></li>
   <li><a href="#sec-references" id="toc-sec-references" class="nav-link" data-scroll-target="#sec-references">References</a></li>
-  <li><a href="#sec-appendices" id="toc-sec-appendices" class="nav-link" data-scroll-target="#sec-appendices">Appendices</a>
-  <ul>
-  <li><a href="#sec-appendix-technical" id="toc-sec-appendix-technical" class="nav-link" data-scroll-target="#sec-appendix-technical">Appendix A: Technical Implementation Details</a>
-  <ul>
-  <li><a href="#sec-data-structures" id="toc-sec-data-structures" class="nav-link" data-scroll-target="#sec-data-structures">A.1 Core Data Structures</a></li>
-  <li><a href="#sec-extraction-details" id="toc-sec-extraction-details" class="nav-link" data-scroll-target="#sec-extraction-details">A.2 Extraction Algorithm Details</a></li>
-  <li><a href="#sec-api-specs" id="toc-sec-api-specs" class="nav-link" data-scroll-target="#sec-api-specs">A.3 API Specifications</a></li>
-  </ul></li>
-  <li><a href="#sec-appendix-validation" id="toc-sec-appendix-validation" class="nav-link" data-scroll-target="#sec-appendix-validation">Appendix B: Validation Datasets and Procedures</a>
-  <ul>
-  <li><a href="#sec-annotation-protocol" id="toc-sec-annotation-protocol" class="nav-link" data-scroll-target="#sec-annotation-protocol">B.1 Expert Annotation Protocol</a></li>
-  <li><a href="#sec-benchmark-construction" id="toc-sec-benchmark-construction" class="nav-link" data-scroll-target="#sec-benchmark-construction">B.2 Benchmark Dataset Construction</a></li>
-  <li><a href="#sec-validation-results" id="toc-sec-validation-results" class="nav-link" data-scroll-target="#sec-validation-results">B.3 Validation Results</a></li>
-  </ul></li>
-  <li><a href="#sec-appendix-cases" id="toc-sec-appendix-cases" class="nav-link" data-scroll-target="#sec-appendix-cases">Appendix C: Extended Case Studies</a>
-  <ul>
-  <li><a href="#sec-christiano-extraction" id="toc-sec-christiano-extraction" class="nav-link" data-scroll-target="#sec-christiano-extraction">C.1 Christiano’s “What Failure Looks Like” Extraction</a></li>
-  <li><a href="#sec-critch-extraction" id="toc-sec-critch-extraction" class="nav-link" data-scroll-target="#sec-critch-extraction">C.2 Critch’s ARCHES Model</a></li>
-  <li><a href="#sec-narrow-path-evaluation" id="toc-sec-narrow-path-evaluation" class="nav-link" data-scroll-target="#sec-narrow-path-evaluation">C.3 Policy Evaluation: A Narrow Path</a></li>
-  </ul></li>
-  <li><a href="#sec-appendix-bayesdown" id="toc-sec-appendix-bayesdown" class="nav-link" data-scroll-target="#sec-appendix-bayesdown">Appendix D: BayesDown Syntax Specification</a></li>
-  <li><a href="#sec-appendix-prompts" id="toc-sec-appendix-prompts" class="nav-link" data-scroll-target="#sec-appendix-prompts">Appendix E: Prompt Engineering Details</a></li>
-  <li><a href="#sec-appendix-userguide" id="toc-sec-appendix-userguide" class="nav-link" data-scroll-target="#sec-appendix-userguide">Appendix F: User Guide</a></li>
-  <li><a href="#sec-appendix-notebook" id="toc-sec-appendix-notebook" class="nav-link" data-scroll-target="#sec-appendix-notebook">Appendix G: Jupyter Notebook Implementation</a></li>
-  <li><a href="#sec-appendix-ethical" id="toc-sec-appendix-ethical" class="nav-link" data-scroll-target="#sec-appendix-ethical">Appendix H: Ethical Considerations and Governance</a>
-  <ul>
-  <li><a href="#sec-misuse-scenarios" id="toc-sec-misuse-scenarios" class="nav-link" data-scroll-target="#sec-misuse-scenarios">H.1 Potential Misuse Scenarios</a></li>
-  <li><a href="#sec-democratic-frameworks" id="toc-sec-democratic-frameworks" class="nav-link" data-scroll-target="#sec-democratic-frameworks">H.2 Democratic Participation Frameworks</a></li>
-  <li><a href="#sec-responsibility" id="toc-sec-responsibility" class="nav-link" data-scroll-target="#sec-responsibility">H.3 Responsibility Assignment</a></li>
-  </ul></li>
-  <li><a href="#sec-appendix-examples" id="toc-sec-appendix-examples" class="nav-link" data-scroll-target="#sec-appendix-examples">Appendix I: Full Extraction Examples</a></li>
-  <li><a href="#sec-appendix-software" id="toc-sec-appendix-software" class="nav-link" data-scroll-target="#sec-appendix-software">Appendix J: Software Installation and Usage Guide</a></li>
-  </ul></li>
   </ul>
 <div class="toc-actions"><ul><li><a href="https://github.com/VJMeyer/submission/edit/main/chapters/Outlines/Outline_13.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li></ul></div><div class="quarto-code-links"><h2>Code Links</h2><ul><li><a href="https://colab.research.google.com/github/VJMeyer/submission/blob/main/AMTAIR_Prototype/data/example_carlsmith/AMTAIR_Prototype_example_carlsmith.ipynb"><i class="bi bi-file-code"></i>Colab Notebook (Manual Link in .yml)</a></li><li><a href="https://github.com/VJMeyer/submission"><i class="bi bi-github"></i>GitHub Repository</a></li></ul></div></nav>
     </div>
@@ -560,18 +566,14 @@ div.csl-indent {
 <!-- [ ] ADD CONDITIONAL ON INCLUSION OF EXTRA EXTRACTION SECTION: Mention/Acknowledgement of Johannes Meyer and Jelena Meyer for their help to verify the automated extraction procedure by manually extracting the argdown and bayesdown data from the carlsmith paper (AND extra, other second paper) -->
 <p>I thank my supervisor Dr.&nbsp;Timo Speith for guidance throughout this project, the MTAIR team for pioneering the manual approach that inspired automation, and the AI safety community for creating the rich literature that made this work possible. Special recognition goes to technical advisors who provided invaluable feedback and Coleman Snell for his partnership and research collaboration with the AMTAIR project. Any errors or limitations remain my own responsibility.</p>
 </section>
-<section id="table-of-contents" class="level1 unnumbered">
-<h1 class="unnumbered">Table of Contents</h1>
-<!-- Quarto auto-generates TOC -->
-</section>
 <section id="list-of-figures" class="level1 unnumbered">
 <h1 class="unnumbered">List of Figures</h1>
-<!-- [ ] TODO: Verify all figures are properly labeled and captioned -->
+<!-- [ ] LATER VERIFY: Verify all figures are properly labeled and captioned -->
 <!-- Quarto auto-generates LOF -->
 </section>
 <section id="list-of-tables" class="level1 unnumbered">
 <h1 class="unnumbered">List of Tables</h1>
-<!-- [ ] TODO: Ensure all tables have proper captions -->
+<!-- [ ] LATER VERIFY: Ensure all tables have proper captions -->
 <!-- Quarto auto-generates LOT -->
 </section>
 <section id="list-of-abbreviations" class="level1 unnumbered">
@@ -643,16 +645,16 @@ Chapter Overview
 <!-- [ ] CREATE: {#fig-coordination-crisis}: "Systems diagram showing fragmentation between AI governance communities" -->
 <section id="sec-safety-gaps" class="level3">
 <h3 class="anchored" data-anchor-id="sec-safety-gaps">1.2.1 Safety Gaps from Misaligned Efforts</h3>
-<!-- [ ] TODO: Document how fragmentation systematically increases risk through specific examples -->
+<!-- [ ] TODO: Document how fragmentation systematically increases risk through with specific, good examples -->
 <p>The fragmentation problem manifests in incompatible frameworks between technical researchers, policy specialists, and strategic analysts. Each community develops sophisticated approaches within their domain, yet translation between domains remains primitive. This creates systematic blind spots where risks emerge at the interfaces between technical capabilities, institutional responses, and strategic dynamics.</p>
 <p>When different communities operate with incompatible frameworks, critical risks fall through the cracks. Technical researchers may solve alignment problems under assumptions that policymakers’ decisions invalidate. Regulations optimized for current systems may inadvertently incentivize dangerous development patterns. Without shared models of the risk landscape, our collective efforts resemble the parable of blind men describing an elephant—each accurate within their domain but missing the complete picture.</p>
-<!-- [ ] FIND: @coordination-failure-examples: "Specific historical examples of coordination failures in technology governance" -->
+<!-- [ ] FIND: @coordination-failure-examples: "Specific historical examples of coordination failures in technology governance" -- arms races to nobodies benefit -- technological race to ?? -->
 <!-- [ ] ADD: @paul2023 from Url: https://www.prismaguard.com/the-elephaint-are-we-all-like-the-six-blind-men-when-it-comes-to-ai/ for blind men elephant vs ai risk analogy-->
 <p><span class="citation" data-cites="paul2023">Paul (<a href="Outline_13.html#ref-paul2023" role="doc-biblioref">2023</a>)</span></p>
 </section>
 <section id="sec-resource-misallocation" class="level3">
 <h3 class="anchored" data-anchor-id="sec-resource-misallocation">1.2.2 Resource Misallocation</h3>
-<!-- [ ] TODO: Provide concrete statistics on research funding, publications, and initiatives -->
+<!-- [ ] TODO: Explain that duplicative efforts absorbing research funding, publications, and initiatives might sometimes improve reliability (think reproducing results) but tend to waste resources in expectation (opportuntity cost) -- change the tone of the paragraph accordingly  -->
 <p>The AI safety community duplicates efforts while leaving critical areas underexplored. Multiple teams independently develop similar frameworks without building on each other’s work. Funders struggle to identify high-impact opportunities across technical and governance domains. Talent flows toward well-publicized approaches while neglected strategies remain understaffed. This misallocation becomes more costly as the window for establishing effective governance narrows.</p>
 <!-- [ ] CREATE: {#tbl-resource-duplication}: "Examples of duplicated AI safety efforts across organizations" -->
 </section>
@@ -663,7 +665,17 @@ Chapter Overview
 <div class="merge-candidate" data-merge-with="Outline_11.7#systematic-risk">
 <p>Coordination failures systematically amplify existential risk through multiple pathways. Safety gaps emerge when technical solutions lack policy implementation pathways. Resource misallocation occurs when multiple teams unknowingly duplicate efforts while critical areas remain unaddressed. Most perniciously, locally optimized decisions by individual actors can create negative-sum dynamics that increase overall risk—an AI governance tragedy of the commons.</p>
 </div>
-<!-- [ ] FIND: @negative-sum-policy: "Game-theoretic analysis of how uncoordinated AI policies can backfire" -->
+<!-- [ ] ADD: @armstrong2016: "Racing to the precipice: a model of artificial intelligence development"
+    Add detailed explanation: "Game-theoretic analysis of how uncoordinated AI policies can backfire"  
+
+
+-->
+<p><span class="citation" data-cites="armstrong2016">Armstrong, Bostrom, and Shulman (<a href="Outline_13.html#ref-armstrong2016" role="doc-biblioref">2016</a>)</span></p>
+<!-- [ ] ADD: @samuel2023, @hunt2025, @trager2025, 
+    Cite all and explain in detail: -- prisoners dilemma vs. stag hunt -- anbody builds it everyone dies
+-->
+<p><span class="citation" data-cites="samuel2023">Samuel (<a href="Outline_13.html#ref-samuel2023" role="doc-biblioref">2023</a>)</span>, <span class="citation" data-cites="hunt2025">Hunt (<a href="Outline_13.html#ref-hunt2025" role="doc-biblioref">2025</a>)</span></p>
+<!-- [ ] LATER ADD: Citation for unpublished "anbody builds it everyone dies (soares & yudkowsky)" -->
 </section>
 </section>
 <section id="sec-historical-urgency" class="level2">
@@ -700,13 +712,16 @@ Chapter Overview
 <li><strong>Diverse Worldviews</strong>: Accounting for fundamental disagreements about AI development trajectories and risk factors</li>
 </ul>
 <p>The investigation encompasses both theoretical development and practical implementation, focusing specifically on existential risks from misaligned AI systems rather than broader AI ethics concerns. This narrowed scope enables deep technical development while addressing the highest-stakes coordination challenges.</p>
-<!-- [ ] TODO: Refine thesis statement based on advisor feedback -->
+<!-- [ ] LATER TODO: Refine thesis statement based on advisor feedback -->
 </section>
 <section id="sec-multiplicative-benefits" class="level2">
 <h2 class="anchored" data-anchor-id="sec-multiplicative-benefits">1.5 The Multiplicative Benefits Framework</h2>
 <!-- [ ] TODO: Establish central thesis about synergistic combination of three elements -->
 <p>The central thesis of this work is that combining three elements—automated worldview extraction, prediction market integration, and formal policy evaluation—creates multiplicative rather than merely additive benefits for AI governance. Each component enhances the others, creating a system more valuable than the sum of its parts.</p>
-<!-- [ ] CREATE: {#fig-multiplicative-benefits}: "Venn diagram showing synergies between extraction, markets, and evaluation" -->
+<!-- [ ] CREATE: {#fig-multiplicative-benefits}: "Venn diagram showing synergies between extraction, markets, and evaluation":  Automation × Live Prediction Market Integrations × Policy Impact Evaluations
+
+    - re-reference in Conclusion
+ -->
 <section id="sec-automated-extraction" class="level3">
 <h3 class="anchored" data-anchor-id="sec-automated-extraction">1.5.1 Automated Worldview Extraction</h3>
 <div class="duplicate-content" data-source="Outline_11.7#automated-extraction">
@@ -797,11 +812,10 @@ Chapter Overview
 <strong>Requirements</strong>: Demonstrates understanding of relevant concepts, explains relevance, situates in debate, reconstructs arguments</p>
 </div>
 </div>
-<!-- [ ] TODO: Add conceptual dependency diagram showing prerequisite knowledge -->
-<!-- [ ] TODO: Create "Background Knowledge" boxes for key concepts -->
+<!-- [ ] TODO: Create "Background Knowledge" footnotes for key concepts -->
 <section id="sec-carlsmith-model" class="level2">
 <h2 class="anchored" data-anchor-id="sec-carlsmith-model">2.1 AI Existential Risk: The Carlsmith Model</h2>
-<!-- [ ] TODO: Examine Joe Carlsmith's probabilistic model of power-seeking AI -->
+<!-- [ ] TODO: Provide overview of Joe Carlsmith's probabilistic model of power-seeking AI -->
 <div class="merge-candidate" data-merge-with="Outline_11.7#carlsmith-model">
 <p>Carlsmith’s “Is Power-Seeking AI an Existential Risk?” (2021) represents one of the most structured approaches to assessing the probability of existential catastrophe from advanced AI. The analysis decomposes the overall risk into six key premises, each with an explicit probability estimate.</p>
 </div>
@@ -818,31 +832,28 @@ Chapter Overview
 <p><span class="citation" data-cites="carlsmith2024">Carlsmith (<a href="Outline_13.html#ref-carlsmith2024" role="doc-biblioref">2024</a>)</span>, <span class="citation" data-cites="carlsmith2021">Carlsmith (<a href="Outline_13.html#ref-carlsmith2021" role="doc-biblioref">2021</a>)</span> and <span class="citation" data-cites="carlsmith2022">Carlsmith (<a href="Outline_13.html#ref-carlsmith2022" role="doc-biblioref">2022</a>)</span></p>
 <section id="sec-six-premise" class="level3">
 <h3 class="anchored" data-anchor-id="sec-six-premise">2.1.1 Six-Premise Decomposition</h3>
+<!-- [ ] ADD: @clarke2022 citation -->
 <div class="duplicate-content" data-source="Outline_11.7#six-premise">
-<p>Carlsmith decomposes existential risk into a probabilistic chain with explicit estimates:</p>
+<p>According to the MTAIR model Carlsmith decomposes existential risk into a probabilistic chain with explicit estimates:</p>
 <ol type="1">
-<li><strong>Premise 1</strong>: Transformative AI development this century (P ≈ 0.80)</li>
-<li><strong>Premise 2</strong>: AI systems pursuing objectives in the world (P ≈ 0.95)</li>
-<li><strong>Premise 3</strong>: Systems with power-seeking instrumental incentives (P ≈ 0.40)</li>
-<li><strong>Premise 4</strong>: Sufficient capability for existential threat (P ≈ 0.65)</li>
-<li><strong>Premise 5</strong>: Misaligned systems despite safety efforts (P ≈ 0.50)</li>
-<li><strong>Premise 6</strong>: Catastrophic outcomes from misaligned power-seeking (P ≈ 0.65)</li>
+<li><strong>Premise 1</strong>: Transformative AI development this century <span class="math inline">\((P ≈ 0.80)\)</span></li>
+<li><strong>Premise 2</strong>: AI systems pursuing objectives in the world <span class="math inline">\((P ≈ 0.95)\)</span></li>
+<li><strong>Premise 3</strong>: Systems with power-seeking instrumental incentives <span class="math inline">\((P ≈ 0.40)\)</span></li>
+<li><strong>Premise 4</strong>: Sufficient capability for existential threat <span class="math inline">\((P ≈ 0.65)\)</span></li>
+<li><strong>Premise 5</strong>: Misaligned systems despite safety efforts <span class="math inline">\((P ≈ 0.50)\)</span></li>
+<li><strong>Premise 6</strong>: Catastrophic outcomes from misaligned power-seeking <span class="math inline">\((P ≈ 0.65)\)</span></li>
 </ol>
-<p><strong>Composite Risk Calculation</strong>: P(doom) ≈ 0.05 (5%)</p>
+<p><strong>Composite Risk Calculation</strong>: <span class="math inline">\(P(doom) ≈ 0.05\)</span> (5%)</p>
 </div>
+<!-- [ ] CREATE: Mermaid flowchart of Carlsmith model with probabilities (in correct Quarto Syntax)-->
 <p>Carlsmith structures his argument through six conditional premises, each assigned explicit probability estimates:</p>
-<p><strong>Premise 1: APS Systems by 2070</strong> (P ≈ 0.65)<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a> “By 2070, there will be AI systems with Advanced capability, Agentic planning, and Strategic awareness”—the conjunction of capabilities that could enable systematic pursuit of objectives in the world.</p>
-<p><strong>Premise 2: Alignment Difficulty</strong> (P ≈ 0.40)<br>
-“It will be harder to build aligned APS systems than misaligned systems that are still attractive to deploy”—capturing the challenge that safety may conflict with capability or efficiency.</p>
-<p><strong>Premise 3: Deployment Despite Misalignment</strong> (P ≈ 0.70)<br>
-“Conditional on 1 and 2, we will deploy misaligned APS systems”—reflecting competitive pressures and limited coordination.</p>
-<p><strong>Premise 4: Power-Seeking Behavior</strong> (P ≈ 0.65)<br>
-“Conditional on 1-3, misaligned APS systems will seek power in high-impact ways”—based on instrumental convergence arguments.</p>
-<p><strong>Premise 5: Disempowerment Success</strong> (P ≈ 0.40)<br>
-“Conditional on 1-4, power-seeking will scale to permanent human disempowerment”—despite potential resistance and safeguards.</p>
-<p><strong>Premise 6: Existential Catastrophe</strong> (P ≈ 0.95)<br>
-“Conditional on 1-5, this disempowerment constitutes existential catastrophe”—connecting power loss to permanent curtailment of human potential.</p>
-<p><strong>Overall Risk</strong>: Multiplying through the conditional chain yields P(doom) ≈ 0.05 or 5% by 2070.</p>
+<p><strong>Premise 1: APS Systems by 2070</strong> <span class="math inline">\((P ≈ 0.65)\)</span><a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a> “By 2070, there will be AI systems with Advanced capability, Agentic planning, and Strategic awareness”—the conjunction of capabilities that could enable systematic pursuit of objectives in the world.</p>
+<p><strong>Premise 2: Alignment Difficulty</strong> $(P ≈ 0.40) $ “It will be harder to build aligned APS systems than misaligned systems that are still attractive to deploy”—capturing the challenge that safety may conflict with capability or efficiency.</p>
+<p><strong>Premise 3: Deployment Despite Misalignment</strong> $(P ≈ 0.70) $ “Conditional on 1 and 2, we will deploy misaligned APS systems”—reflecting competitive pressures and limited coordination.</p>
+<p><strong>Premise 4: Power-Seeking Behavior</strong> $(P ≈ 0.65) $ “Conditional on 1-3, misaligned APS systems will seek power in high-impact ways”—based on instrumental convergence arguments.</p>
+<p><strong>Premise 5: Disempowerment Success</strong> $(P ≈ 0.40) $ “Conditional on 1-4, power-seeking will scale to permanent human disempowerment”—despite potential resistance and safeguards.</p>
+<p><strong>Premise 6: Existential Catastrophe</strong> $(P ≈ 0.95) $ “Conditional on 1-5, this disempowerment constitutes existential catastrophe”—connecting power loss to permanent curtailment of human potential.</p>
+<p><strong>Overall Risk</strong>: Multiplying through the conditional chain yields <span class="math inline">\(P(doom) ≈ 0.05\)</span> or 5% by 2070.</p>
 <p>This structured approach exemplifies the type of reasoning AMTAIR aims to formalize and automate. While Carlsmith spent months developing this model manually, similar rigor exists implicitly in many AI safety arguments awaiting extraction.</p>
 <!-- [ ] TODO: Verify manual extraction of Carlsmith model for ground truth with Ella and Johannes -->
 </section>
@@ -856,13 +867,14 @@ Chapter Overview
 <p><strong>Clear Conditional Dependencies</strong>: The logical flow from capabilities through deployment decisions to catastrophic outcomes maps naturally onto directed acyclic graphs.</p>
 <p><strong>Transparent Decomposition</strong>: Breaking the argument into modular premises allows independent evaluation and sensitivity analysis of each component.</p>
 <p><strong>Documented Reasoning</strong>: Extensive justification for each probability enables extraction of both structure and parameters from the source text.</p>
-<!-- [ ] TODO: Extract two additional "inside view" world models for comparison -->
+<!-- [ ] LATER TODO: Extract two additional "inside view" world models for comparison -->
 <!-- [ ] ADD: @christiano2019: "Christiano, P. (2019). What failure looks like. AI Alignment Forum." -->
+<p><span class="citation" data-cites="christiano2019">Christiano (<a href="Outline_13.html#ref-christiano2019" role="doc-biblioref">2019</a>)</span></p>
 </section>
 </section>
 <section id="sec-epistemic-challenge" class="level2">
 <h2 class="anchored" data-anchor-id="sec-epistemic-challenge">2.2 The Epistemic Challenge of Policy Evaluation</h2>
-<!-- [ ] TODO: Explore why evaluating AI governance policies is particularly difficult -->
+<!-- [ ] TODO: Explain why evaluating AI governance policies is particularly difficult -->
 <p>AI governance policy evaluation faces unique epistemic challenges that render traditional policy analysis methods insufficient. Understanding these challenges motivates the need for new computational approaches.</p>
 <section id="sec-ai-governance-unique" class="level3">
 <h3 class="anchored" data-anchor-id="sec-ai-governance-unique">2.2.1 Unique Characteristics of AI Governance</h3>
@@ -893,7 +905,7 @@ Chapter Overview
 </section>
 <section id="sec-new-epistemic-tools" class="level3">
 <h3 class="anchored" data-anchor-id="sec-new-epistemic-tools">2.2.3 Toward New Epistemic Tools</h3>
-<!-- [ ] TODO: Bridge from limitations to the need for computational approaches -->
+<!-- [ ] TODO: Bridge from limitations to the need for automated, computational approaches -->
 <p>The inadequacy of traditional methods for AI governance creates an urgent need for new epistemic tools. These tools must:</p>
 <ul>
 <li><strong>Handle Deep Uncertainty</strong>: Move beyond point estimates to represent ranges of possibilities</li>
@@ -914,6 +926,30 @@ Key Insight
 <p>The computational approaches developed in this thesis—particularly Bayesian networks enhanced with automated extraction—directly address each of these requirements by providing formal frameworks for reasoning under uncertainty.</p>
 </div>
 </div>
+<!-- [ ] ADD: @mccaslin2024 cite and write about "Conditional Trees: A Method for Generating Informative Questions about Complex Topics" -->
+<p><span class="citation" data-cites="mccaslin2024">McCaslin et al. (<a href="Outline_13.html#ref-mccaslin2024" role="doc-biblioref">2024</a>)</span></p>
+<!-- [ ] ADD @gruetzemacher2022 cite and summarize the relevant aspects, infered from his abstract:
+::: {.callout-tip}
+    We evaluate the strengths and weaknesses of
+    Bayesian networks and a specific subset of
+    Bayesian networks—conditional trees—for creating questions for forecasting tournaments, particularly in the context of high uncertainty forecasts
+    such as for technological forecasting or for the
+    forecasting of existential risk. A conditional tree
+    takes the probability of a final outcome and divides
+    it among a sequence of conditioning nodes that
+    would have the maximal impact on the final outcome. This framework can be used to identify the
+    maximally impactful questions to ask in forecasting tournaments through the evaluation of conditional trees using an evidence ratio. However, conditional trees are not without limitations. In this
+    study, we describe applications in which Bayesian
+    networks resolve some of the limitations of conditional trees, but often at additional costs. We further
+    discuss when it is best to use each of the methods,
+    and we make some suggestions for the particular
+    contexts of generating forecasting questions for
+    technological forecasting and the forecasting of
+    existential risk.
+:::
+
+-->
+<p><span class="citation" data-cites="gruetzemacher2022">Gruetzemacher (<a href="Outline_13.html#ref-gruetzemacher2022" role="doc-biblioref">2022</a>)</span></p>
 </section>
 </section>
 <section id="sec-bayesian-networks" class="level2">
@@ -928,8 +964,9 @@ Key Insight
 <li><strong>Directed Acyclic Graph (DAG)</strong>: Nodes represent variables, edges represent direct dependencies</li>
 <li><strong>Conditional Probability Tables (CPTs)</strong>: For each node, P(node|parents) quantifies relationships</li>
 </ul>
-<p>The joint probability distribution factors according to the graph structure:</p>
-<p>P(X1,X2,…,Xn)=∏i=1nP(Xi∣Parents(Xi))P(X_1, X_2, …, X_n) = _{i=1}^{n} P(X_i | Parents(X_i))P(X1​,X2​,…,Xn​)=i=1∏n​P(Xi​∣Parents(Xi​))</p>
+<p>The joint probability distribution factors according to the graph structure: <!-- [ ] CHECK: if this equation is correct --> <span class="math display">\[
+P(X1,X2,...,Xn)=∏i=1nP(Xi∣Parents(Xi))P(X_1, X_2, ..., X_n) = \prod_{i=1}^{n} P(X_i | Parents(X_i))P(X1​,X2​,...,Xn​)=i=1∏n​P(Xi​∣Parents(Xi​))
+\]</span></p>
 <p>This factorization enables efficient inference and embodies causal assumptions explicitly.</p>
 </div>
 <!-- [ ] ADD: @pearl2014: "Pearl, J. (2014). Probabilistic Reasoning in Intelligent Systems: Networks of plausible Inference" -->
@@ -948,6 +985,7 @@ Key Insight
 <li><strong>Sprinkler</strong> (intermediate): P(sprinkler|rain) varies by rain state</li>
 <li><strong>Grass_Wet</strong> (effect): P(wet|rain, sprinkler) depends on both causes</li>
 </ul>
+<!-- [ ] CREATE: Mermaid flowchart of Rain-Sprinkler-Grass model with probabilities (in correct Quarto Syntax)-->
 <div class="merge-candidate" data-merge-with="Outline_11.7#rain-sprinkler-code">
 <p>python</p>
 <div class="sourceCode" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Basic network representation</span></span>
@@ -970,6 +1008,23 @@ Key Insight
 </ul>
 <!-- [ ] CREATE: {#fig-rain-sprinkler-network}: "Visual Bayesian network for rain-sprinkler-grass with CPTs" -->
 </section>
+<section id="rain-sprinkler-grass-network-rendering" class="level3">
+<h3 class="anchored" data-anchor-id="rain-sprinkler-grass-network-rendering">Rain-Sprinkler-Grass Network Rendering</h3>
+<div id="cell-rain_sprinkler_grass_example_network_rendering" class="cell" data-execution_count="1">
+<details class="code-fold">
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> IPython.display <span class="im">import</span> IFrame</span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>IFrame(src<span class="op">=</span><span class="st">"https://singularitysmith.github.io/AMTAIR_Prototype/bayesian_network.html"</span>, width<span class="op">=</span><span class="st">"100%"</span>, height<span class="op">=</span><span class="st">"600px"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div id="rain_sprinkler_grass_example_network_rendering" class="cell-output cell-output-display" data-execution_count="1">
+
+        <iframe width="100%" height="600px" src="https://singularitysmith.github.io/AMTAIR_Prototype/bayesian_network.html" frameborder="0" allowfullscreen=""></iframe>
+        
+<p>Dynamic Html Rendering of the Rain-Sprinkler-Grass DAG with Conditional Probabilities</p>
+</div>
+</div>
+</section>
 <section id="sec-modeling-advantages" class="level3">
 <h3 class="anchored" data-anchor-id="sec-modeling-advantages">2.3.3 Advantages for AI Risk Modeling</h3>
 <div class="redundant-content" data-better-version="Outline_11.7#modeling-advantages">
@@ -982,7 +1037,6 @@ Key Insight
 <li><strong>Enabling Analysis</strong>: Formal inference algorithms support systematic evaluation</li>
 <li><strong>Facilitating Communication</strong>: Visual structure aids cross-domain understanding</li>
 </ul>
-<!-- [ ] IMPLEMENT: Interactive rain-sprinkler demo in supplementary materials -->
 </section>
 </section>
 <section id="sec-argument-mapping" class="level2">
@@ -1007,7 +1061,7 @@ Key Insight
 <li><strong>Uncertainty qualifications</strong></li>
 </ul>
 </div>
-<!-- [ ] ADD: @anderson2007, @benn2011, @khartabil2021, @khartabil2020, @ngajie2020, @prokudin2024, @scheuer2010, @walton2009 as the citations and sources in a new sub-section: "Review of argument visualization techniques" (ensure to cover: ~informal logic, argument mapping, software support, formal representation, bayesian networks, belief networs etc. ) 
+<!-- [ ] ADD: @anderson2007, @benn2011, @khartabil2021, @khartabil2020, @ngajie2020, @prokudin2024, @thomas1962, @scheuer2010, @walton2009 as the citations and sources in a new sub-section: "Review of argument visualization techniques" (ensure to cover: ~informal logic, argument mapping, software support, formal representation, bayesian networks, belief networs etc. ) 
     - Write and integrate the entire subsection perfectly
     - adapt the surrounding text as necessary
     - also reference "Claimify"
@@ -1019,6 +1073,7 @@ Key Insight
 <p><span class="citation" data-cites="ngajie2020">Ngajie et al. (<a href="Outline_13.html#ref-ngajie2020" role="doc-biblioref">2020</a>)</span></p>
 <p><span class="citation" data-cites="prokudin2024">Prokudin, Lisanyuk, and Baymuratov (<a href="Outline_13.html#ref-prokudin2024" role="doc-biblioref">2024</a>)</span></p>
 <p><span class="citation" data-cites="scheuer2010">Scheuer et al. (<a href="Outline_13.html#ref-scheuer2010" role="doc-biblioref">2010</a>)</span></p>
+<p><span class="citation" data-cites="thomas1962">(<a href="Outline_13.html#ref-thomas1962" role="doc-biblioref"><strong>thomas1962?</strong></a>)</span></p>
 <p><span class="citation" data-cites="walton2009">Walton (<a href="Outline_13.html#ref-walton2009" role="doc-biblioref">2009</a>)</span></p>
 </section>
 <section id="sec-argdown-notation" class="level3">
@@ -1036,16 +1091,18 @@ Key Insight
 </section>
 <section id="sec-bayesdown" class="level3">
 <h3 class="anchored" data-anchor-id="sec-bayesdown">2.4.3 BayesDown: The Bridge to Bayesian Networks</h3>
+<!-- [ ] EXPLAIN: that BayesDown has been developed by the author himself by extending the ArgDown Syntax with JSON defintions to capture all probabilistic information to fully specify the Bayesian networks -->
+<!-- [ ] WRITE: Provide a detailed description and explanation of Bayesdown -->
 <div class="duplicate-content" data-source="Outline_11.7#bayesdown">
 <p>BayesDown extends ArgDown with probabilistic metadata:</p>
-<pre><code>[Node]: Description. {
-  "instantiations": ["node_TRUE", "node_FALSE"],
-  "priors": {"p(node_TRUE)": "0.7", "p(node_FALSE)": "0.3"},
-  "posteriors": {
-    "p(node_TRUE|parent_TRUE)": "0.9",
-    "p(node_TRUE|parent_FALSE)": "0.4"
-  }
-}</code></pre>
+<div class="sourceCode" id="cb6"><pre class="sourceCode json code-with-copy"><code class="sourceCode json"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="ot">[</span><span class="er">Node</span><span class="ot">]</span><span class="er">:</span> <span class="er">Description.</span> <span class="fu">{</span></span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>  <span class="dt">"instantiations"</span><span class="fu">:</span> <span class="ot">[</span><span class="st">"node_TRUE"</span><span class="ot">,</span> <span class="st">"node_FALSE"</span><span class="ot">]</span><span class="fu">,</span></span>
+<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a>  <span class="dt">"priors"</span><span class="fu">:</span> <span class="fu">{</span><span class="dt">"p(node_TRUE)"</span><span class="fu">:</span> <span class="st">"0.7"</span><span class="fu">,</span> <span class="dt">"p(node_FALSE)"</span><span class="fu">:</span> <span class="st">"0.3"</span><span class="fu">},</span></span>
+<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a>  <span class="dt">"posteriors"</span><span class="fu">:</span> <span class="fu">{</span></span>
+<span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a>    <span class="dt">"p(node_TRUE|parent_TRUE)"</span><span class="fu">:</span> <span class="st">"0.9"</span><span class="fu">,</span></span>
+<span id="cb6-6"><a href="#cb6-6" aria-hidden="true" tabindex="-1"></a>    <span class="dt">"p(node_TRUE|parent_FALSE)"</span><span class="fu">:</span> <span class="st">"0.4"</span></span>
+<span id="cb6-7"><a href="#cb6-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">}</span></span>
+<span id="cb6-8"><a href="#cb6-8" aria-hidden="true" tabindex="-1"></a><span class="fu">}</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>This representation:</p>
 <ul>
@@ -1060,7 +1117,7 @@ Key Insight
 </section>
 <section id="sec-mtair-framework" class="level2">
 <h2 class="anchored" data-anchor-id="sec-mtair-framework">2.5 The MTAIR Framework: Achievements and Limitations</h2>
-<!-- [ ] TODO: Review the MTAIR project's approach to modeling AI risks -->
+<!-- [ ] TODO: Explain the MTAIR project's methodological approach -->
 <p>The Modeling Transformative AI Risks (MTAIR) project, led by RAND researchers, pioneered formal modeling of AI existential risk arguments. Understanding its approach and limitations motivates the automation efforts of AMTAIR.</p>
 <section id="sec-mtair-approach" class="level3">
 <h3 class="anchored" data-anchor-id="sec-mtair-approach">2.5.1 MTAIR’s Approach</h3>
@@ -1090,14 +1147,18 @@ Key Insight
 <p>Despite its innovations, MTAIR faces fundamental limitations that motivate the automated approach. The scalability bottleneck is severe—manual model construction requires weeks of expert effort per argument, making comprehensive coverage impossible. The static nature of manually constructed models provides no mechanisms for updating as new research and evidence emerge. Limited accessibility restricts usage to specialists with formal modeling expertise, excluding many stakeholders. Finally, the single worldview focus creates difficulty in representing multiple conflicting perspectives simultaneously, limiting the framework’s utility for coordination across diverse viewpoints.</p>
 </div>
 <p>However, MTAIR’s manual approach faces severe constraints:</p>
-<p><strong>Labor Intensity</strong>: Each model requires hundreds of expert-hours to construct, limiting coverage to a few perspectives.</p>
+<p><strong>Labor Intensity</strong>: Each model requires dozens of expert-hours to construct, limiting coverage to a few perspectives.</p>
 <!-- [ ] TODO: Manual Extraction Time Analysis -->
-<pre><code>Detailed breakdown needed:
+<!-- [ ] COMPLETELY REWRITE: Results were HALLUCINATED -- rewrite by describing what procedures etc. one would ideally follow (inferred from MTAIR materials)
+```
+Detailed breakdown needed:
 - Variable identification: X hours
 - Structure elicitation: Y hours  
 - Probability quantification: Z hours
 - Validation and refinement: W hours
-Total per model: ~200-400 hours</code></pre>
+Total per model: ~200-400 hours
+```
+-->
 <p><strong>Static Nature</strong>: Models become outdated as arguments evolve but updating requires near-complete reconstruction.</p>
 <p><strong>Limited Accessibility</strong>: Using the models requires Analytica software and significant technical sophistication.</p>
 <p><strong>Single Perspective</strong>: Each model represents one worldview, making comparison across perspectives difficult.</p>
@@ -1120,25 +1181,23 @@ Total per model: ~200-400 hours</code></pre>
 </section>
 <section id="sec-literature-review" class="level2">
 <h2 class="anchored" data-anchor-id="sec-literature-review">2.6 Literature Review: Content and Technical Levels</h2>
-<!-- [ ] TODO: Review existing AI risk models, governance proposals, and technical approaches -->
+<!-- [ ] TODO: Provide an overview of the key / most important existing AI risk models, governance proposals, and technical approaches -->
 <section id="sec-risk-models-evolution" class="level3">
 <h3 class="anchored" data-anchor-id="sec-risk-models-evolution">2.6.1 AI Risk Models Evolution</h3>
 <p>The evolution of AI risk models reflects increasing sophistication in both structure and quantification. Early models focused on simple binary outcomes, while recent work incorporates complex causal chains and continuous variables.</p>
-<div class="callout callout-style-simple callout-note callout-titled">
-<div class="callout-header d-flex align-content-center">
+<div class="callout callout-style-simple callout-note">
+<div class="callout-body d-flex">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
-<div class="callout-title-container flex-fill">
-Key Developments
-</div>
-</div>
-<div class="callout-body-container callout-body">
+<div class="callout-body-container">
+<p>## Key Developments</p>
 <ul>
 <li><strong>Early Phase (2000-2010)</strong>: Qualitative arguments about intelligence explosion</li>
 <li><strong>Formalization Phase (2010-2018)</strong>: Introduction of structured scenarios</li>
 <li><strong>Quantification Phase (2018-present)</strong>: Explicit probability estimates and formal models</li>
 </ul>
+</div>
 </div>
 </div>
 <!-- [ ] ADD: @yudkowsky2008: "Yudkowsky, E. (2008). Artificial Intelligence as a Positive and Negative Factor in Global Risk" -->
@@ -1161,6 +1220,50 @@ Key Developments
 <!-- [ ] ADD: @dafoe2021: "Dafoe, A. (2021) and (2018). AI Governance: A Research Agenda" -->
 <p><span class="citation" data-cites="dafoe2021">Dafoe (<a href="Outline_13.html#ref-dafoe2021" role="doc-biblioref">2021</a>)</span> and <span class="citation" data-cites="dafoe2018">Dafoe (<a href="Outline_13.html#ref-dafoe2018" role="doc-biblioref">2018</a>)</span></p>
 <!-- [ ] TODO: Add analysis of "A Narrow Path" as case study -->
+<!-- [ ] ADD: @miotti2024 cite and write a fantastic sub-section "Conditional Policy Proposal Example: A Narrow Path" -->
+<p><span class="citation" data-cites="miotti2024">Miotti et al. (<a href="Outline_13.html#ref-miotti2024" role="doc-biblioref">2024</a>)</span></p>
+<!-- [ ] FULLY REFORMULATE TO AVOID PLAGIARISM OR QUOTE PARTS DIRECTLY:
+        
+        There is a simple truth - humanityʼs extinction is possible. Recent history has also
+        shown us another truth - we can create artificial intelligence AI that can rival
+        humanity.
+        While most AI development is beneficial, artificial superintelligence threatens
+        humanity with extinction. We have no method to currently control an entity with
+        greater intelligence than us. We currently have no ability to predict the intelligence of
+        advanced AIs prior to developing them, and we have incredibly limited methods to
+        accurately measure their competence after development.
+        We now stand at a time of peril. Companies across the globe are investing to create
+        artificial superintelligence – that they believe will surpass the collective capabilities
+        of all humans. They publicly state that it is not a matter of “ifˮ such superintelligence
+        might exist, but “whenˮ.
+        We do not know how to control AI vastly more powerful than us. Should attempts to
+        build superintelligence succeed, this would risk our extinction as a species. But
+        humanity can choose a different future: there is a narrow path through.
+        A new and ambitious future lies beyond a narrow path. A future driven by human
+        advancement and technological progress. One where humanity fulfills the dreams
+        and aspirations of our ancestors to end disease and extreme poverty, achieves
+        virtually limitless energy, lives longer and healthier lives, and travels the cosmos.
+        That future requires us to be in control of that which we create, including AI.
+        We are currently on an unmanaged and uncontrolled path towards the creation of AI
+        that threatens the extinction of humanity. This document is our effort to
+        comprehensively outline what is needed to step off that dangerous path and tread an
+        alternate path for humanity. To achieve these goals, we have developed proposals
+        intended for action by policymakers, split into three Phases:
+        Phase 0 Safety - New institutions, legislation, and policies that countries should
+        implement immediately that prevent development of AI that we do not have control
+        of. With correct execution, the strength of these measures should prevent anyone
+        from developing artificial superintelligence for the next 20 years.
+        Phase 1 Stability - International institutions that ensure measures to control the
+        development of AI do not collapse under geopolitical rivalries or rogue development
+        by state and non-state actors. With correct execution, these measures should
+        ensure stability and lead to an international AI oversight system that does not
+        collapse over time.
+        Phase 2 Flourishing - With the development of rogue superintelligence prevented
+        and a stable international system in place, humanity can focus on the scientific
+        foundations for transformative AI under human control. Build a robust science and
+        metrology of intelligence, safe-by-design AI engineering, and other foundations
+        for transformative AI under human control.
+        -->
 <!-- [ ] TODO: Add analysis of California SB 1047 as regulatory example -->
 </section>
 <section id="sec-bn-theory" class="level3">
@@ -1646,45 +1749,203 @@ The bottleneck shifts from extraction (linear in text length) to inference (expo
 <h2 class="anchored" data-anchor-id="sec-case-rain-sprinkler">3.4 Case Study: Rain-Sprinkler-Grass</h2>
 <!-- [ ] TODO: Demonstrate the pipeline using the canonical example -->
 <p>I begin with the canonical example to demonstrate the complete pipeline on a simple, well-understood case.</p>
-<section id="sec-rsg-input" class="level3">
-<h3 class="anchored" data-anchor-id="sec-rsg-input">3.4.1 Input Representation</h3>
-<div class="redundant-content" data-better-version="Outline_11.7#rsg-input">
-<p>The source BayesDown representation:</p>
-<pre><code>[Grass_Wet]: Concentrated moisture on grass.
-{"instantiations": ["grass_wet_TRUE", "grass_wet_FALSE"],
- "priors": {"p(grass_wet_TRUE)": "0.322", "p(grass_wet_FALSE)": "0.678"},
- "posteriors": {
-   "p(grass_wet_TRUE|sprinkler_TRUE,rain_TRUE)": "0.99",
-   "p(grass_wet_TRUE|sprinkler_TRUE,rain_FALSE)": "0.9",
-   "p(grass_wet_TRUE|sprinkler_FALSE,rain_TRUE)": "0.8",
-   "p(grass_wet_TRUE|sprinkler_FALSE,rain_FALSE)": "0.0"
- }}
- + [Rain]: Water falling from sky.
-   {"instantiations": ["rain_TRUE", "rain_FALSE"],
-    "priors": {"p(rain_TRUE)": "0.2", "p(rain_FALSE)": "0.8"}}
- + [Sprinkler]: Artificial watering system.
-   {"instantiations": ["sprinkler_TRUE", "sprinkler_FALSE"],
-    "priors": {"p(sprinkler_TRUE)": "0.448", "p(sprinkler_FALSE)": "0.552"},
-    "posteriors": {
-      "p(sprinkler_TRUE|rain_TRUE)": "0.01",
-      "p(sprinkler_TRUE|rain_FALSE)": "0.4"
-    }}
-   + [Rain]</code></pre>
-</div>
-</section>
 <section id="sec-rsg-processing" class="level3">
-<h3 class="anchored" data-anchor-id="sec-rsg-processing">3.4.2 Processing Steps</h3>
+<h3 class="anchored" data-anchor-id="sec-rsg-processing">3.4.1 Processing Steps</h3>
 <p>The system processes this input through five steps:</p>
 <ol type="1">
-<li><strong>Parsing</strong>: Extract three nodes with relationships</li>
-<li><strong>Validation</strong>: Verify probability coherence and DAG structure</li>
-<li><strong>Enhancement</strong>: Calculate joint probabilities and network metrics</li>
-<li><strong>Construction</strong>: Build formal Bayesian network</li>
+<li><strong>ArgDown Parsing</strong>: Extract three nodes with relationships in ArgDown syntax</li>
+<li><strong>Question Generation</strong>: Generate questions based on the possible instantiations and combinations of each parent note to identify the probabilities to be extracted in the next step</li>
+<li><strong>BayesDown Extraction</strong>: LLM call extracting the full conditional probability tables for each node</li>
+<li><strong>Construction</strong>: Building of the formal Bayesian network</li>
 <li><strong>Visualization</strong>: Render interactive display</li>
 </ol>
+<!-- [ ] CREATE: Mermaid flowchart showing the file format conversions: 
+    Pdf -> ArgDown -> CSV -> CSV (with quesions) -> Markdown (Extraction Questions) -> BayesDown -> CSV
+-->
+</section>
+<section id="sec-rsg-input" class="level3">
+<h3 class="anchored" data-anchor-id="sec-rsg-input">3.4.2 Example Conversion Steps</h3>
+<!-- [ ] EXPAND: Add informative descriptions and explanations for everything in this section -->
+<section id="argdown-example" class="level4">
+<h4 class="anchored" data-anchor-id="argdown-example">ArgDown Example</h4>
+<div class="sourceCode" id="cb13"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="ot">[Grass_Wet]: </span>Concentrated moisture on, between and around the blades of grass.{"instantiations": <span class="co">[</span><span class="ot">"grass_wet_TRUE", "grass_wet_FALSE"</span><span class="co">]</span>}    </span>
+<span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a>    +<span class="co">[</span><span class="ot">Rain</span><span class="co">]</span>: Tears of angles crying high up in the skies hitting the ground.{"instantiations": <span class="co">[</span><span class="ot">"rain_TRUE", "rain_FALSE"</span><span class="co">]</span>}</span>
+<span id="cb13-3"><a href="#cb13-3" aria-hidden="true" tabindex="-1"></a>    +<span class="co">[</span><span class="ot">Sprinkler</span><span class="co">]</span>: Activation of a centrifugal force based CO2 droplet distribution system.{"instantiations": <span class="co">[</span><span class="ot">"sprinkler_TRUE", "sprinkler_FALSE"</span><span class="co">]</span>}</span>
+<span id="cb13-4"><a href="#cb13-4" aria-hidden="true" tabindex="-1"></a>        +<span class="co">[</span><span class="ot">Rain</span><span class="co">]</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section id="example-of-questions-for-bayesdown-extraction" class="level4">
+<h4 class="anchored" data-anchor-id="example-of-questions-for-bayesdown-extraction">Example of Questions for BayesDown extraction</h4>
+<div class="sourceCode" id="cb14"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a><span class="an">BayesDown Format Preview:</span></span>
+<span id="cb14-2"><a href="#cb14-2" aria-hidden="true" tabindex="-1"></a><span class="fu"># BayesDown Representation with Placeholder Probabilities</span></span>
+<span id="cb14-3"><a href="#cb14-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-4"><a href="#cb14-4" aria-hidden="true" tabindex="-1"></a>/* This file contains BayesDown syntax with placeholder probabilities.</span>
+<span id="cb14-5"><a href="#cb14-5" aria-hidden="true" tabindex="-1"></a>   Replace the placeholders with actual probability values based on the </span>
+<span id="cb14-6"><a href="#cb14-6" aria-hidden="true" tabindex="-1"></a>   questions in the comments. */</span>
+<span id="cb14-7"><a href="#cb14-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-8"><a href="#cb14-8" aria-hidden="true" tabindex="-1"></a><span class="in">    /* What is the probability for Grass_Wet=grass_wet_TRUE? */</span></span>
+<span id="cb14-9"><a href="#cb14-9" aria-hidden="true" tabindex="-1"></a><span class="in">    /* What is the probability for Grass_Wet=grass_wet_TRUE if Rain=rain_TRUE, Sprinkler=sprinkler_TRUE? */</span></span>
+<span id="cb14-10"><a href="#cb14-10" aria-hidden="true" tabindex="-1"></a><span class="in">    /* What is the probability for Grass_Wet=grass_wet_TRUE if Rain=rain_TRUE, Sprinkler=sprinkler_FALSE? */</span></span>
+<span id="cb14-11"><a href="#cb14-11" aria-hidden="true" tabindex="-1"></a><span class="in">    /* What is the probability for Grass_Wet=grass_wet_TRUE if Rain=rain_FALSE, Sprinkler=sprinkler_TRUE? */</span></span>
+<span id="cb14-12"><a href="#cb14-12" aria-hidden="true" tabindex="-1"></a><span class="in">    /* What is the probability for Grass_Wet=grass_wet_TRUE if Rain=rain_FALSE, Sprinkler=sprinkler_FALSE? */</span></span>
+<span id="cb14-13"><a href="#cb14-13" aria-hidden="true" tabindex="-1"></a><span class="in">    /* What is the probability for Grass_Wet=grass_wet_FALSE? */</span></span>
+<span id="cb14-14"><a href="#cb14-14" aria-hidden="true" tabindex="-1"></a><span class="in">    /* What is the probability for Grass_Wet=grass_wet_FALSE if Rain=rain_TRUE, Sprinkler=sprinkler_TRUE? */</span></span>
+<span id="cb14-15"><a href="#cb14-15" aria-hidden="true" tabindex="-1"></a><span class="in">    /* What is the probability for Grass_Wet=grass_wet_FALSE if Rain=rain_TRUE, Sprinkler=sprinkler_FALSE? */</span></span>
+<span id="cb14-16"><a href="#cb14-16" aria-hidden="true" tabindex="-1"></a><span class="in">    /* What is the probability for Grass_Wet=grass_wet_FALSE if Rain=rain_FALSE, Sprinkler=sprinkler_TRUE? */</span></span>
+<span id="cb14-17"><a href="#cb14-17" aria-hidden="true" tabindex="-1"></a><span class="in">    /* What is the probability for Grass_Wet=grass_wet_FALSE if Rain=rain_FALSE, Sprinkler=sprinkler_FALSE? */</span></span>
+<span id="cb14-18"><a href="#cb14-18" aria-hidden="true" tabindex="-1"></a><span class="in">    [Grass_Wet]: Concentrated moisture on, between and around the blades of grass. {"instantiations": ["grass_wet_TRUE", "grass_wet_FALSE"], "priors": {"What is the probability for Grass_Wet=grass_wet_TRUE?": "%?", "What is the probability for Grass_Wet=grass_wet_FALSE?": "%?"}, "posteriors": {"What is the probability for Grass_Wet=grass_wet_TRUE if Rain=rain_TRUE, Sprinkler=sprinkler_TRUE?": "?%", "What is the probability for Grass_Wet=grass_wet_TRUE if Rain=rain_TRUE, Sprinkler=sprinkler_FALSE?": "?%", "What is the probability for Grass_Wet=grass_wet_TRUE if Rain=rain_FALSE, Sprinkler=sprinkler_TRUE?": "?%", "What is the probability for Grass_Wet=grass_wet_TRUE if Rain=rain_FALSE, Sprinkler=sprinkler_FALSE?": "?%", "What is the probability for Grass_Wet=grass_wet_FALSE if Rain=rain_TRUE, Sprinkler=sprinkler_TRUE?": "?%", "What is the probability for Grass_Wet=grass_wet_FALSE if Rain=rain_TRUE, Sprinkler=sprinkler_FALSE?": "?%", "What is the probability for Grass_Wet=grass_wet_FALSE if Rain=rain_FALSE, Sprinkler=sprinkler_TRUE?": "?%", "What is the probability for Grass_Wet=grass_wet_FALSE if Rain=rain_FALSE, Sprinkler=sprinkler_FALSE?": "?%"}}</span></span>
+<span id="cb14-19"><a href="#cb14-19" aria-hidden="true" tabindex="-1"></a><span class="in">        /* What is the probability for Rain=rain_TRUE? */</span></span>
+<span id="cb14-20"><a href="#cb14-20" aria-hidden="true" tabindex="-1"></a><span class="in">        /* What is the probability for Rain=rain_FALSE? */</span></span>
+<span id="cb14-21"><a href="#cb14-21" aria-hidden="true" tabindex="-1"></a><span class="in">        + [Rain]: Tears of angles crying high up in the skies hitting the ground. {"instantiations": ["rain_TRUE", "rain_FALSE"], "priors": {"What is the probability for Rain=rain_TRUE?": "%?", "What is the probability for Rain=rain_FALSE?": "%?"}}</span></span>
+<span id="cb14-22"><a href="#cb14-22" aria-hidden="true" tabindex="-1"></a><span class="in">        /* What is the probability for Sprinkler=sprinkler_TRUE? */</span></span>
+<span id="cb14-23"><a href="#cb14-23" aria-hidden="true" tabindex="-1"></a><span class="in">        /* What is the probability for Sprinkler=sprinkler_TRUE if Rain=rain_TRUE? */</span></span>
+<span id="cb14-24"><a href="#cb14-24" aria-hidden="true" tabindex="-1"></a><span class="in">        /* What is the probability for Sprinkler=sprinkler_TRUE if Rain=rain_FALSE? */</span></span>
+<span id="cb14-25"><a href="#cb14-25" aria-hidden="true" tabindex="-1"></a><span class="in">        /* What is the probability for Sprinkler=sprinkler_FALSE? */</span></span>
+<span id="cb14-26"><a href="#cb14-26" aria-hidden="true" tabindex="-1"></a><span class="in">        /* What is the probability for Sprinkler=sprinkler_FALSE if Rain=rain_TRUE? */</span></span>
+<span id="cb14-27"><a href="#cb14-27" aria-hidden="true" tabindex="-1"></a><span class="in">        /* What is the probability for Sprinkler=sprinkler_FALSE if Rain=rain_FALSE? */</span></span>
+<span id="cb14-28"><a href="#cb14-28" aria-hidden="true" tabindex="-1"></a><span class="in">        + [Sprinkler]: Activation of a centrifugal force based CO2 droplet distribution system. {"instantiations": ["sprinkler_TRUE", "sprinkler_FALSE"], "priors": {"What is the probability for Sprinkler=sprinkler_TRUE?": "%?", "What is the probability for Sprinkler=sprinkler_FALSE?": "%?"}, "posteriors": {"What is the probability for Sprinkler=sprinkler_TRUE if Rain=rain_TRUE?": "?%", "What is the probability for Sprinkler=sprinkler_TRUE if Rain=rain_FALSE?": "?%", "What is the probability for Sprinkler=sprinkler_FALSE if Rain=rain_TRUE?": "?%", "What is the probability for Sprinkler=sprinkler_FALSE if Rain=rain_FALSE?": "?%"}}</span></span>
+<span id="cb14-29"><a href="#cb14-29" aria-hidden="true" tabindex="-1"></a><span class="in">            /* What is the probability for Rain=rain_TRUE? */</span></span>
+<span id="cb14-30"><a href="#cb14-30" aria-hidden="true" tabindex="-1"></a><span class="in">            /* What is the probability for Rain=rain_FALSE? */</span></span>
+<span id="cb14-31"><a href="#cb14-31" aria-hidden="true" tabindex="-1"></a><span class="in">            + [Rain]</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section id="complete-bayesdown-example" class="level4">
+<h4 class="anchored" data-anchor-id="complete-bayesdown-example">Complete BayesDown Example</h4>
+<p>The source BayesDown syntax representating the fully specified network:</p>
+<div class="sourceCode" id="cb15"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a><span class="ot">[Grass_Wet]: </span>Concentrated moisture on grass. {"instantiations": <span class="co">[</span><span class="ot">"grass_wet_TRUE", "grass_wet_FALSE"</span><span class="co">]</span>,</span>
+<span id="cb15-2"><a href="#cb15-2" aria-hidden="true" tabindex="-1"></a> "priors": {"p(grass_wet_TRUE)": "0.322", "p(grass_wet_FALSE)": "0.678"},</span>
+<span id="cb15-3"><a href="#cb15-3" aria-hidden="true" tabindex="-1"></a> "posteriors": {</span>
+<span id="cb15-4"><a href="#cb15-4" aria-hidden="true" tabindex="-1"></a>   "p(grass_wet_TRUE|sprinkler_TRUE,rain_TRUE)": "0.99",</span>
+<span id="cb15-5"><a href="#cb15-5" aria-hidden="true" tabindex="-1"></a>   "p(grass_wet_TRUE|sprinkler_TRUE,rain_FALSE)": "0.9",</span>
+<span id="cb15-6"><a href="#cb15-6" aria-hidden="true" tabindex="-1"></a>   "p(grass_wet_TRUE|sprinkler_FALSE,rain_TRUE)": "0.8",</span>
+<span id="cb15-7"><a href="#cb15-7" aria-hidden="true" tabindex="-1"></a>   "p(grass_wet_TRUE|sprinkler_FALSE,rain_FALSE)": "0.0"</span>
+<span id="cb15-8"><a href="#cb15-8" aria-hidden="true" tabindex="-1"></a> }}</span>
+<span id="cb15-9"><a href="#cb15-9" aria-hidden="true" tabindex="-1"></a><span class="ss"> + </span><span class="co">[</span><span class="ot">Rain</span><span class="co">]</span>: Water falling from sky. {"instantiations": <span class="co">[</span><span class="ot">"rain_TRUE", "rain_FALSE"</span><span class="co">]</span>,</span>
+<span id="cb15-10"><a href="#cb15-10" aria-hidden="true" tabindex="-1"></a>    "priors": {"p(rain_TRUE)": "0.2", "p(rain_FALSE)": "0.8"}}</span>
+<span id="cb15-11"><a href="#cb15-11" aria-hidden="true" tabindex="-1"></a><span class="ss"> + </span><span class="co">[</span><span class="ot">Sprinkler</span><span class="co">]</span>: Artificial watering system. {"instantiations": <span class="co">[</span><span class="ot">"sprinkler_TRUE", "sprinkler_FALSE"</span><span class="co">]</span>,</span>
+<span id="cb15-12"><a href="#cb15-12" aria-hidden="true" tabindex="-1"></a>    "priors": {"p(sprinkler_TRUE)": "0.448", "p(sprinkler_FALSE)": "0.552"},</span>
+<span id="cb15-13"><a href="#cb15-13" aria-hidden="true" tabindex="-1"></a>    "posteriors": {</span>
+<span id="cb15-14"><a href="#cb15-14" aria-hidden="true" tabindex="-1"></a>      "p(sprinkler_TRUE|rain_TRUE)": "0.01",</span>
+<span id="cb15-15"><a href="#cb15-15" aria-hidden="true" tabindex="-1"></a>      "p(sprinkler_TRUE|rain_FALSE)": "0.4"</span>
+<span id="cb15-16"><a href="#cb15-16" aria-hidden="true" tabindex="-1"></a>    }}</span>
+<span id="cb15-17"><a href="#cb15-17" aria-hidden="true" tabindex="-1"></a><span class="ss">   + </span><span class="co">[</span><span class="ot">Rain</span><span class="co">]</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section id="resulting-rain-sprinkler-grass-dataframe" class="level4">
+<h4 class="anchored" data-anchor-id="resulting-rain-sprinkler-grass-dataframe">Resulting Rain-Sprinkler-Grass DataFrame</h4>
+<div class="landscape">
+<!-- [ ] ADD: table formatting (alt tex, label etc. to this table) -->
+<p>#| column: page</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 1%">
+<col style="width: 3%">
+<col style="width: 13%">
+<col style="width: 3%">
+<col style="width: 3%">
+<col style="width: 4%">
+<col style="width: 1%">
+<col style="width: 4%">
+<col style="width: 6%">
+<col style="width: 9%">
+<col style="width: 13%">
+<col style="width: 13%">
+<col style="width: 3%">
+<col style="width: 5%">
+<col style="width: 13%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Title</th>
+<th>Description</th>
+<th>line</th>
+<th>line_numbers</th>
+<th>indentation</th>
+<th>indentation_levels</th>
+<th>Parents</th>
+<th>Children</th>
+<th>instantiations</th>
+<th>priors</th>
+<th>posteriors</th>
+<th>No_Parent</th>
+<th>No_Children</th>
+<th>parent_instantiations</th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>0</td>
+<td>Grass_Wet</td>
+<td>Concentrated moisture on, between and around t…</td>
+<td>3</td>
+<td>[3]</td>
+<td>0</td>
+<td>[0]</td>
+<td>[Rain, Sprinkler]</td>
+<td>[]</td>
+<td>[grass_wet_TRUE, grass_wet_FALSE]</td>
+<td>{‘p(grass_wet_TRUE)’: ‘0.322’, ’p(grass_wet_FA…</td>
+<td>{‘p(grass_wet_TRUE|sprinkler_TRUE,rain_TRUE)’:…</td>
+<td>False</td>
+<td>True</td>
+<td>[[rain_TRUE, rain_FALSE], [sprinkler_TRUE, spr…</td>
+</tr>
+<tr class="even">
+<td>1</td>
+<td>Rain</td>
+<td>Tears of angles crying high up in the skies hi…</td>
+<td>4</td>
+<td>[4, 6]</td>
+<td>2</td>
+<td>[1, 2]</td>
+<td>[]</td>
+<td>[Grass_Wet, Sprinkler]</td>
+<td>[rain_TRUE, rain_FALSE]</td>
+<td>{‘p(rain_TRUE)’: ‘0.2’, ‘p(rain_FALSE)’: ‘0.8’}</td>
+<td>{}</td>
+<td>True</td>
+<td>False</td>
+<td>[]</td>
+</tr>
+<tr class="odd">
+<td>2</td>
+<td>Sprinkler</td>
+<td>Activation of a centrifugal force based CO2 dr…</td>
+<td>5</td>
+<td>[5]</td>
+<td>1</td>
+<td>[1]</td>
+<td>[Rain]</td>
+<td>[Grass_Wet]</td>
+<td>[sprinkler_TRUE, sprinkler_FALSE]</td>
+<td>{‘p(sprinkler_TRUE)’: ‘0.44838’, ’p(sprinkler_…</td>
+<td>{‘p(sprinkler_TRUE|rain_TRUE)’: ‘0.01’, ’p(spr…</td>
+<td>False</td>
+<td>False</td>
+<td>[[rain_TRUE, rain_FALSE]]</td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
 </section>
 <section id="sec-rsg-results" class="level3">
 <h3 class="anchored" data-anchor-id="sec-rsg-results">3.4.3 Results</h3>
+</section>
+<section id="rain-sprinkler-grass-network-rendering-1" class="level3">
+<h3 class="anchored" data-anchor-id="rain-sprinkler-grass-network-rendering-1">Rain-Sprinkler-Grass Network Rendering</h3>
+<div id="cell-rain_sprinkler_grass_example_network_rendering2" class="cell" data-execution_count="2">
+<details class="code-fold">
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb16"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> IPython.display <span class="im">import</span> IFrame</span>
+<span id="cb16-2"><a href="#cb16-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb16-3"><a href="#cb16-3" aria-hidden="true" tabindex="-1"></a>IFrame(src<span class="op">=</span><span class="st">"https://singularitysmith.github.io/AMTAIR_Prototype/bayesian_network.html"</span>, width<span class="op">=</span><span class="st">"100%"</span>, height<span class="op">=</span><span class="st">"600px"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div id="rain_sprinkler_grass_example_network_rendering2" class="cell-output cell-output-display" data-execution_count="2">
+
+        <iframe width="100%" height="600px" src="https://singularitysmith.github.io/AMTAIR_Prototype/bayesian_network.html" frameborder="0" allowfullscreen=""></iframe>
+        
+<p>Dynamic Html Rendering of the Rain-Sprinkler-Grass DAG with Conditional Probabilities</p>
+</div>
+</div>
 <div class="callout callout-style-simple callout-tip callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -1698,7 +1959,6 @@ Validation Success
 <p>The system successfully extracts complete network structure, preserves all probability information, calculates correct marginal probabilities, generates interactive visualization, and enables inference queries—validating the basic pipeline functionality.</p>
 </div>
 </div>
-<!-- [ ] CREATE: {#fig-rsg-visualization}: "Interactive rain-sprinkler-grass network visualization" -->
 </section>
 </section>
 <section id="sec-case-carlsmith" class="level2">
@@ -2074,7 +2334,7 @@ deployment_policy_effects = {
 
 :::
 
-<!-- [ ] TODO: Oultine/sketch policy evaluation example for "A Narrow Path" -->
+<!-- [ ] TODO: Oultine/sketch policy evaluation examples for "A Narrow Path" -->
 <!-- [ ] TODO: Outline/sketch evaluation for SB 1047 provisions -->
 <p>–&gt;</p>
 </section>
@@ -2188,7 +2448,7 @@ Technical requirements:
 <p><strong>Complementary tools</strong> address different aspects of the system. Bayesian networks excel at probabilistic reasoning and intervention analysis. Other approaches—agent-based models, system dynamics, scenario planning—can capture different properties. AMTAIR provides one lens, not the only lens.</p>
 <p><strong>Empirical adequacy</strong> ultimately judges models. If simplified representations enable better predictions and decisions than informal alternatives, their abstractions are justified. Early results suggest formal models, despite simplifications, outperform intuitive reasoning for complex risk assessment.</p>
 <p>The goal isn’t creating perfect representations but useful ones. By making simplifications explicit and modifiable, formal models enable systematic improvement in ways mental models cannot.</p>
-<!-- [ ] VERIFY: @box1976: "Box, G.E.P. (1976). Science and statistics" -->
+<!-- [ ] ADD: @box1976: "Box, G.E.P. (1976). Science and statistics" -->
 <p><span class="citation" data-cites="box1976">Box (<a href="Outline_13.html#ref-box1976" role="doc-biblioref">1976</a>)</span></p>
 </section>
 </section>
@@ -2224,7 +2484,7 @@ I tested the system with deliberately challenging inputs:
 <section id="sec-robustness-findings" class="level3">
 <h3 class="anchored" data-anchor-id="sec-robustness-findings">4.3.2 Robustness Findings</h3>
 <p>Key vulnerabilities of LLMs (and human experts) identified:</p>
-<!-- [ ] VERIFY: Quantitative red-teaming results -->
+<!-- [ ] VERIFY: red-teaming results -->
 <pre><code>
 Specific metrics need validation:
 
@@ -2296,20 +2556,13 @@ Implement comparison of 3+ models:
 <p><strong>Compositional reasoning</strong>: Complex arguments decompose into manageable components that can be independently evaluated</p>
 <p><strong>Evidence integration</strong>: New information updates specific parameters rather than requiring complete argument reconstruction</p>
 <p><strong>Exploration tools</strong>: Stakeholders can modify assumptions and immediately see consequences, building intuition about model dynamics</p>
-<div class="callout callout-style-simple callout-tip callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-Early Results
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>Pilot studies with AI governance researchers show 40% reduction in time to identify disagreements and 60% improvement in agreement accuracy—though these specific quantitative claims require careful validation with larger samples.</p>
-</div>
-</div>
-<!-- [ ] VERIFY: Pilot study metrics with proper methodology -->
+<!-- [ ] COMPLETELY REWRITE: Results were HALLUCINATED -- rewrite by describing what benefits one can plausibly anticipate
+
+::: {.callout-tip}
+## Early Results
+Pilot studies with AI governance researchers show 40% reduction in time to identify disagreements and 60% improvement in agreement accuracy—though these specific quantitative claims require careful validation with larger samples.
+:::
+-->
 </section>
 </section>
 <section id="sec-scaling" class="level2">
@@ -2366,13 +2619,13 @@ review of the effects of liability frameworks on corporate governance -->
 <h3 class="anchored" data-anchor-id="sec-international-integration">4.6.3 International Coordination</h3>
 <p>Multilateral bodies could leverage shared models for: - Establishing common risk assessments - Negotiating agreements with explicit assumptions - Monitoring compliance through parameter tracking - Adapting agreements as evidence emerges</p>
 <p>Example: Building shared models for AGI development scenarios to inform international AI governance treaties.</p>
-<!-- [ ] FIND: @international-ai-governance: "Precedents for technical cooperation in treaties" -->
+<!-- [ ] Improve this somehow -->
 </section>
 <section id="sec-organizational-integration" class="level3">
 <h3 class="anchored" data-anchor-id="sec-organizational-integration">4.6.4 Organizational Decision-Making</h3>
 <p>Individual organizations could use AMTAIR for: - Internal risk assessment and planning - Board-level communication about AI strategies - Research prioritization based on model sensitivity - Safety case development with explicit assumptions</p>
 <p>Example: An AI lab modeling how different safety investments affect both capability advancement and risk mitigation.</p>
-<!-- [ ] VERIFY: Organization use cases through interviews -->
+<!-- [ ] rewrite by describing what procedures etc. one would ideally follow to improve institutional decision making with AMTAIR -->
 </section>
 </section>
 <section id="sec-future-research" class="level2">
@@ -2393,7 +2646,11 @@ review of the effects of liability frameworks on corporate governance -->
 <p><strong>Experimental integration</strong>: Connecting models to empirical results from AI safety experiments</p>
 <p><strong>Dynamic updating</strong>: Continuous model refinement as new evidence emerges from research and deployment</p>
 <p><strong>Uncertainty quantification</strong>: Richer representation of deep uncertainty and model confidence</p>
-<!-- [ ] FIND: @causal-discovery-nlp: "Methods for causal structure learning from text" -->
+<!-- [ ] ADD: @babakov2025, @ban2023, @bethard2007, @chen2023, @duhem1954, @heinze-deml2018, @meyer2022b, @squires2023, @squires2023, @yang2022
+    - add a brilliant deep-dive into "~ the theoretical reasons to be optimistic that AMTAIR is the beginning of a new research paradigm " based on the literature and the papers above
+    - cite all the above sources and make a "rock-solid case"
+: "Methods for causal structure learning from text" -->
+<p><span class="citation" data-cites="babakov2025">Babakov et al. (<a href="Outline_13.html#ref-babakov2025" role="doc-biblioref">2025</a>)</span>, <span class="citation" data-cites="ban2023">Ban et al. (<a href="Outline_13.html#ref-ban2023" role="doc-biblioref">2023</a>)</span>, <span class="citation" data-cites="bethard2007">Bethard (<a href="Outline_13.html#ref-bethard2007" role="doc-biblioref">2007</a>)</span>, <span class="citation" data-cites="chen2023">Chen et al. (<a href="Outline_13.html#ref-chen2023" role="doc-biblioref">2023</a>)</span>, <span class="citation" data-cites="duhem1954">Duhem (<a href="Outline_13.html#ref-duhem1954" role="doc-biblioref">1954</a>)</span>, <span class="citation" data-cites="heinze-deml2018">Heinze-Deml, Maathuis, and Meinshausen (<a href="Outline_13.html#ref-heinze-deml2018" role="doc-biblioref">2018</a>)</span>, <span class="citation" data-cites="meyer2022b">Meyer (<a href="Outline_13.html#ref-meyer2022b" role="doc-biblioref">2022</a>)</span>, <span class="citation" data-cites="squires2023">Squires and Uhler (<a href="Outline_13.html#ref-squires2023" role="doc-biblioref">2023</a>)</span>, <span class="citation" data-cites="squires2023">Squires and Uhler (<a href="Outline_13.html#ref-squires2023" role="doc-biblioref">2023</a>)</span>, <span class="citation" data-cites="yang2022">Yang, Han, and Poon (<a href="Outline_13.html#ref-yang2022" role="doc-biblioref">2022</a>)</span></p>
 </section>
 <section id="sec-application-future" class="level3">
 <h3 class="anchored" data-anchor-id="sec-application-future">4.7.3 Application Domains</h3>
@@ -2410,7 +2667,7 @@ review of the effects of liability frameworks on corporate governance -->
 <p><strong>Training programs</strong>: Building capacity for formal modeling in governance communities</p>
 <p><strong>Quality assurance</strong>: Certification processes for high-stakes model applications</p>
 <p>These directions could transform AMTAIR from a single tool into a broader ecosystem for enhanced reasoning about complex risks.</p>
-<!-- [ ] IMPLEMENT: Community development roadmap -->
+<!-- [ ] DESCRIBE: Community development roadmap -->
 </section>
 </section>
 <section id="sec-deep-uncertainties" class="level2">
@@ -2473,10 +2730,9 @@ Chapter Overview
 </section>
 <section id="sec-methodological-innovations" class="level3">
 <h3 class="anchored" data-anchor-id="sec-methodological-innovations">5.1.2 Methodological Innovations</h3>
-<p><strong>Two-Stage Extraction Architecture</strong>: Separating structural extraction (ArgDown) from probability quantification (BayesDown) addresses key challenges in automated formalization. This modularity enables human oversight at critical points, supports multiple quantification methods, and isolates different types of errors for targeted improvement.</p>
+<p><strong>Two-Stage Extraction Architecture</strong>: Separating structural extraction (ArgDown) from probability quantification (BayesDown) addresses key challenges in automated formalization. This modularity enables human oversight at critical points, supports multiple quantification methods, allows for unprecedented transparency and explainability of the entire process, and isolates different types of errors for targeted improvement.</p>
 <p><strong>BayesDown as Bridge Representation</strong>: The development of BayesDown syntax creates a crucial intermediate representation preserving both narrative accessibility and mathematical precision. This bridge enables the transformation from qualitative arguments to quantitative models while maintaining traceability and human readability.</p>
 <p><strong>Validation Framework</strong>: The systematic approach to validating automated extraction—comparing against expert annotations, measuring multiple accuracy dimensions, and analyzing error patterns—establishes scientific standards for assessing formalization tools. This framework can guide future development in this emerging area.</p>
-<!-- [ ] VERIFY: Contribution claims against evidence in previous chapters -->
 </section>
 <section id="sec-technical-achievements" class="level3">
 <h3 class="anchored" data-anchor-id="sec-technical-achievements">5.1.3 Technical Achievements</h3>
@@ -2488,9 +2744,8 @@ Chapter Overview
 <section id="sec-empirical-findings" class="level3">
 <h3 class="anchored" data-anchor-id="sec-empirical-findings">5.1.4 Empirical Findings</h3>
 <p><strong>Extraction Feasibility</strong>: The successful extraction of complex arguments like Carlsmith’s model validates the core premise that implicit formal structures exist in natural language arguments and can be computationally recovered with reasonable fidelity.</p>
-<p><strong>Convergence Patterns</strong>: Comparative analysis reveals surprising structural agreement across worldviews even when probability estimates diverge dramatically. This suggests shared causal understanding despite parameter disagreements—a foundation for coordination.</p>
+<p><strong>Convergence Patterns</strong>: Comparative analysis reveals structural agreement across repeated extraction even when probability estimates diverge substantially. This suggests shared understanding of the understanding causal models, argument structure and worldview despite parameter disagreements—a foundation for coordination.</p>
 <p><strong>Intervention Impacts</strong>: Policy evaluation demonstrates how formal models enable rigorous assessment of governance options. The ability to quantify risk reduction across scenarios and identify robust strategies validates the practical value of formalization.</p>
-<!-- [ ] IMPLEMENT: Summary statistics across all empirical studies -->
 </section>
 </section>
 <section id="sec-limitations-assessment" class="level2">
@@ -2498,22 +2753,21 @@ Chapter Overview
 <p>Despite these contributions, important limitations constrain current capabilities and should guide appropriate use.</p>
 <section id="sec-technical-constraints" class="level3">
 <h3 class="anchored" data-anchor-id="sec-technical-constraints">5.2.1 Technical Constraints</h3>
-<p><strong>Extraction Boundaries</strong>: While 73-85% accuracy suffices for many purposes, systematic biases remain. The system struggles with implicit assumptions, complex conditionals, and context-dependent meanings. These limitations necessitate human review for high-stakes applications.</p>
-<p><strong>Correlation Handling</strong>: Standard Bayesian networks inadequately represent complex correlations in real systems. While extensions like copulas and explicit correlation nodes help, fully capturing interdependencies remains challenging.</p>
-<p><strong>Computational Scaling</strong>: Very large networks (&gt;50 nodes) require approximations that may affect accuracy. As models grow to represent richer phenomena, computational constraints increasingly bind.</p>
-<!-- [ ] VERIFY: Limitation claims are supported by evidence -->
+<p><strong>Extraction Boundaries</strong>: Potential sources of systematic biases and confounding variables remain. Similar to experts, the automated system still struggles with implicit and hidden assumptions and complex conditionals. These limitations necessitate human review for high-stakes applications.</p>
+<p><strong>Correlation Handling</strong>: Over simplified Bayesian networks inadequately represent complex correlations in real systems. While extensions like copulas and explicit correlation nodes help, fully capturing interdependencies remains challenging.</p>
+<p><strong>Computational Scaling</strong>: Very large networks (&gt;&gt;500 nodes) require approximations that may affect accuracy. As models grow to represent richer phenomena, computational constraints increasingly bind.</p>
 </section>
 <section id="sec-conceptual-limitations" class="level3">
 <h3 class="anchored" data-anchor-id="sec-conceptual-limitations">5.2.2 Conceptual Limitations</h3>
-<p><strong>Formalization Trade-offs</strong>: Converting rich arguments to formal models necessarily loses nuance. While making assumptions explicit provides value, some insights resist mathematical representation.</p>
-<p><strong>Probability Interpretation</strong>: Deep uncertainty about unprecedented events challenges probabilistic representation. Numbers can create false precision even when explicitly conditional and uncertain.</p>
-<p><strong>Social Complexity</strong>: Institutional dynamics, cultural factors, and political processes influence AI development in ways that simple causal models struggle to capture.</p>
+<p><strong>Formalization Trade-offs</strong>: Converting rich arguments to formal models necessarily loses nuance. While making assumptions explicit provides value, some unspoken insights may resist clear mathematical representation.</p>
+<p><strong>Probability Interpretation</strong>: Deep uncertainty about unprecedented events challenges probabilistic intuitions. Numbers can create false precision even when explicitly conditional and uncertain.</p>
+<p><strong>Social Complexity</strong>: Institutional dynamics, cultural factors, and political processes influence AI development in ways that purely causal models struggle to capture.</p>
 </section>
 <section id="sec-practical-constraints" class="level3">
 <h3 class="anchored" data-anchor-id="sec-practical-constraints">5.2.3 Practical Constraints</h3>
 <p><strong>Adoption Barriers</strong>: Learning curves, institutional inertia, and resource requirements limit immediate deployment. Even demonstrably valuable tools face implementation challenges.</p>
 <p><strong>Maintenance Burden</strong>: Models require updating as arguments evolve and evidence emerges. Without sustained effort, formal representations quickly become outdated.</p>
-<p><strong>Context Dependence</strong>: The approach works best for well-structured academic arguments. Application to informal discussions, political speeches, or social media remains challenging.</p>
+<p><strong>Context Dependence</strong>: The approach works best for well-structured academic arguments. Application to “fuzzy” informal discussions, political speeches, or social media remains challenging.</p>
 <!-- [ ] CREATE: {#fig-limitation-landscape}: "Visual summary of system limitations" -->
 </section>
 </section>
@@ -2526,7 +2780,7 @@ Chapter Overview
 <p><strong>Research Coordination</strong>: Research organizations can use formal models to: - Map the landscape of current arguments and identify gaps - Prioritize investigations targeting high-sensitivity parameters - Build cumulative knowledge through explicit model updating - Facilitate collaboration through shared representations</p>
 <p><strong>Policy Development</strong>: Governance bodies can apply the framework to: - Evaluate proposals across multiple expert worldviews - Identify robust interventions effective under uncertainty - Make assumptions explicit for democratic scrutiny - Track how evidence changes optimal policies over time</p>
 <p><strong>Stakeholder Communication</strong>: The visualization and analysis tools enable: - Clearer communication between technical and policy communities - Public engagement with complex risk assessments - Board-level strategic discussions grounded in formal analysis - International negotiations with explicit shared models</p>
-<!-- [ ] CREATE: {#fig-near-term-impact}: "Pathways to immediate AMTAIR adoption" -->
+<!-- [ ] CREATE: {#fig-near-term-impact}: "Planned Pathways to AMTAIR adoption" -->
 </section>
 <section id="sec-medium-term" class="level3">
 <h3 class="anchored" data-anchor-id="sec-medium-term">5.3.2 Medium-Term Transformation</h3>
@@ -2535,7 +2789,6 @@ Chapter Overview
 <p><strong>Adaptive Governance</strong>: Policies designed with explicit models can include triggers for reassessment as key parameters change, enabling responsive governance that avoids both paralysis and recklessness.</p>
 <p><strong>Professionalization</strong>: “Model curator” and “argument formalization specialist” emerge as recognized roles, building expertise in bridging natural language and formal representations.</p>
 <p><strong>Quality Standards</strong>: Community norms develop around model transparency, validation requirements, and appropriate use cases, preventing both dismissal and over-reliance on formal tools.</p>
-<!-- [ ] FIND: @epistemic-commons: "Examples of shared knowledge infrastructure in other domains" -->
 </section>
 <section id="sec-long-term-vision" class="level3">
 <h3 class="anchored" data-anchor-id="sec-long-term-vision">5.3.3 Long-Term Vision</h3>
@@ -2581,7 +2834,7 @@ Quick Start Guide
 <li><p><strong>Fund development</strong>: Support tool development and training to build governance capacity for formal methods</p></li>
 <li><p><strong>Design adaptively</strong>: Create policies with explicit triggers based on model parameters to enable responsive governance</p></li>
 </ol>
-<!-- [ ] CREATE: Policy evaluation template -->
+<!-- [ ] HIGHLIGHT: Benefits of AMTAIR for policy impact prediction -->
 </section>
 <section id="sec-technologist-recommendations" class="level3">
 <h3 class="anchored" data-anchor-id="sec-technologist-recommendations">5.4.3 For Technologists</h3>
@@ -2591,7 +2844,7 @@ Quick Start Guide
 <li><p><strong>Build integrations</strong>: Connect AMTAIR to other tools in the AI governance ecosystem</p></li>
 <li><p><strong>Scale infrastructure</strong>: Address computational challenges for larger models and broader deployment</p></li>
 </ol>
-<!-- [ ] CREATE: Technical contribution guidelines -->
+<!-- [ ] ELABORATE: Possibilities for Technical contributions  -->
 </section>
 <section id="sec-funder-recommendations" class="level3">
 <h3 class="anchored" data-anchor-id="sec-funder-recommendations">5.4.4 For Funders</h3>
@@ -2601,7 +2854,7 @@ Quick Start Guide
 <li><p><strong>Measure coordination</strong>: Develop metrics for assessing coordination improvements from formal tools</p></li>
 <li><p><strong>Patient capital</strong>: Recognize that epistemic infrastructure requires sustained investment to reach potential</p></li>
 </ol>
-<!-- [ ] CREATE: Funding opportunity framework -->
+<!-- [ ] HIGHLIGHT: Opportunity AMTAIR could seize with adquate resources and funding -->
 </section>
 </section>
 <section id="sec-future-research-agenda" class="level2">
@@ -2613,17 +2866,18 @@ Quick Start Guide
 <p><strong>Representation Extensions</strong>: - Temporal dynamics for modeling AI development trajectories - Multi-agent representations for strategic interactions - Continuous variables for economic and capability metrics - Uncertainty types beyond probability distributions</p>
 <p><strong>Integration Depth</strong>: - Semantic matching between models and prediction markets - Automated experiment design based on model sensitivity - Policy optimization algorithms using extracted models - Real-time updating from news and research feeds</p>
 <!-- [ ] CREATE: {#tbl-research-priorities}: "Technical research roadmap with timelines" -->
+<!-- [ ] EXPAND: Add more extensions opportunities -->
 </section>
 <section id="sec-methodological-development" class="level3">
 <h3 class="anchored" data-anchor-id="sec-methodological-development">5.5.2 Methodological Development</h3>
 <p><strong>Validation Science</strong>: - Larger benchmark datasets with diverse argument types - Metrics for semantic preservation beyond accuracy - Adversarial robustness testing protocols - Longitudinal studies of model evolution</p>
 <p><strong>Hybrid Approaches</strong>: - Optimal human-AI collaboration patterns for extraction - Combining formal models with other methods (scenarios, simulations) - Integration with deliberative and participatory processes - Balancing automation with expert judgment</p>
 <p><strong>Social Methods</strong>: - Ethnographic studies of model use in organizations - Measuring coordination improvements empirically - Understanding adoption barriers and facilitators - Designing interventions for epistemic security</p>
-<!-- [ ] FIND: @human-ai-collaboration: "Best practices for human-AI teaming" -->
+<!-- [ ] EXPAND: explain more research directions that can improve the METHODOLOGIES underlying AMTAIR -->
 </section>
 <section id="sec-application-expansion" class="level3">
 <h3 class="anchored" data-anchor-id="sec-application-expansion">5.5.3 Application Expansion</h3>
-<p><strong>Domain Extensions</strong>: - Climate risk assessment and policy evaluation - Biosecurity governance and pandemic preparedness - Nuclear policy and deterrence stability - Emerging technology governance broadly</p>
+<p><strong>Domain Extensions</strong>: - Biosecurity governance and pandemic preparedness - Cyber risk assessment and policy evaluation - Nuclear policy and deterrence stability - Emerging technology governance broadly</p>
 <p><strong>Institutional Integration</strong>: - Embedding in regulatory impact assessment - Corporate strategic planning applications - Academic peer review enhancement - Democratic deliberation support tools</p>
 <p><strong>Global Deployment</strong>: - Adapting to different governance contexts - Supporting multilateral negotiation processes - Building capacity in developing nations - Creating resilient distributed infrastructure</p>
 <!-- [ ] CREATE: {#fig-application-roadmap}: "Expansion pathways across domains" -->
@@ -2668,11 +2922,27 @@ Anderson, Terence J. 2007. <span>“Visualization Tools and Argument
 Schemes: A Question of Standpoint.”</span> <em>Law, Prob. &amp;
 Risk</em> 6: 97. <a href="https://heinonline.org/hol-cgi-bin/get_pdf.cgi?handle=hein.journals/lawprisk6&amp;section=9">https://heinonline.org/hol-cgi-bin/get_pdf.cgi?handle=hein.journals/lawprisk6&amp;section=9</a>.
 </div>
+<div id="ref-armstrong2016" class="csl-entry" role="listitem">
+Armstrong, Stuart, Nick Bostrom, and Carl Shulman. 2016. <span>“Racing
+to the Precipice: A Model of Artificial Intelligence
+Development.”</span> <em>AI &amp; SOCIETY</em> 31 (2): 201–6. <a href="https://doi.org/10.1007/s00146-015-0590-y">https://doi.org/10.1007/s00146-015-0590-y</a>.
+</div>
 <div id="ref-askell2021" class="csl-entry" role="listitem">
 Askell, Amanda, Yuntao Bai, Anna Chen, Dawn Drain, Deep Ganguli, Tom
 Henighan, Andy Jones, et al. 2021. <span>“A <span>General Language
 Assistant</span> as a <span>Laboratory</span> for
 <span>Alignment</span>.”</span> December 9, 2021. <a href="https://doi.org/10.48550/arXiv.2112.00861">https://doi.org/10.48550/arXiv.2112.00861</a>.
+</div>
+<div id="ref-babakov2025" class="csl-entry" role="listitem">
+Babakov, Nikolay, Adarsa Sivaprasad, Ehud Reiter, and Alberto
+Bugarín-Diz. 2025. <span>“Reusability of <span>Bayesian Networks</span>
+Case Studies: A Survey.”</span> <em>Applied Intelligence</em> 55 (6):
+417. <a href="https://doi.org/10.1007/s10489-025-06289-5">https://doi.org/10.1007/s10489-025-06289-5</a>.
+</div>
+<div id="ref-ban2023" class="csl-entry" role="listitem">
+Ban, Taiyu, Lyuzhou Chen, Derui Lyu, Xiangyu Wang, and Huanhuan Chen.
+2023. <span>“Causal <span>Structure Learning Supervised</span> by
+<span>Large Language Model</span>.”</span> November 20, 2023. <a href="https://doi.org/10.48550/arXiv.2311.11689">https://doi.org/10.48550/arXiv.2311.11689</a>.
 </div>
 <div id="ref-benn2011" class="csl-entry" role="listitem">
 Benn, Neil, and Ann Macintosh. 2011. <span>“Argument
@@ -2681,6 +2951,11 @@ Benn, Neil, and Ann Macintosh. 2011. <span>“Argument
 <em>Electronic <span>Participation</span></em>, edited by Efthimios
 Tambouris, Ann Macintosh, and Hans De Bruijn, 6847:60–73. Berlin,
 Heidelberg: Springer Berlin Heidelberg. <a href="https://doi.org/10.1007/978-3-642-23333-3_6">https://doi.org/10.1007/978-3-642-23333-3_6</a>.
+</div>
+<div id="ref-bethard2007" class="csl-entry" role="listitem">
+Bethard, Steven John. 2007. <span>“Finding Event, Temporal and Causal
+Structure in Text: <span>A</span> Machine Learning Approach.”</span> PhD
+thesis, University of Colorado at Boulder. <a href="https://search.proquest.com/openview/405fe32503123d9b5f4836dc3be4c011/1?pq-origsite=gscholar&amp;cbl=18750">https://search.proquest.com/openview/405fe32503123d9b5f4836dc3be4c011/1?pq-origsite=gscholar&amp;cbl=18750</a>.
 </div>
 <div id="ref-bostrom2014" class="csl-entry" role="listitem">
 Bostrom, Nick. 2014. <em>Superintelligence: <span>Paths</span>,
@@ -2715,6 +2990,14 @@ Risk?”</span> <a href="https://arxiv.org/abs/2206.13353">https://arxiv.org/abs
 <div id="ref-carlsmith2024" class="csl-entry" role="listitem">
 ———. 2024. <span>“Is <span>Power-Seeking AI</span> an <span>Existential
 Risk</span>?”</span> August 13, 2024. <a href="https://doi.org/10.48550/arXiv.2206.13353">https://doi.org/10.48550/arXiv.2206.13353</a>.
+</div>
+<div id="ref-chen2023" class="csl-entry" role="listitem">
+Chen, Lu, Ruqing Zhang, Wei Huang, Wei Chen, Jiafeng Guo, and Xueqi
+Cheng. 2023. <span>“Inducing <span>Causal Structure</span> for
+<span>Abstractive Text Summarization</span>.”</span> In <em>Proceedings
+of the 32nd <span>ACM International Conference</span> on
+<span>Information</span> and <span>Knowledge Management</span></em>,
+213–23. Birmingham United Kingdom: ACM. <a href="https://doi.org/10.1145/3583780.3614934">https://doi.org/10.1145/3583780.3614934</a>.
 </div>
 <div id="ref-christiano2019" class="csl-entry" role="listitem">
 Christiano, Paul F. 2019. <span>“What Failure Looks Like,”</span> March.
@@ -2768,6 +3051,11 @@ Drexler, KE. 2019. <span>“Reframing Superintelligence: Comprehensive
 <span>AI</span> Services as General Intelligence.”</span> Technical
 Report. Future of Humanity Institute. <a href="https://owainevans.github.io/pdfs/Reframing_Superintelligence_FHI-TR-2019.pdf">https://owainevans.github.io/pdfs/Reframing_Superintelligence_FHI-TR-2019.pdf</a>.
 </div>
+<div id="ref-duhem1954" class="csl-entry" role="listitem">
+Duhem, Pierre Maurice Marie. 1954. <em>The <span>Aim</span> and
+<span>Structure</span> of <span>Physical Theory</span></em>. 1.
+Princeton University Press.
+</div>
 <div id="ref-european2024" class="csl-entry" role="listitem">
 European, Union. 2024. <span>“The <span>Act Texts</span> | <span>EU
 Artificial Intelligence Act</span>.”</span> 2024. <a href="https://artificialintelligenceact.eu/the-act/">https://artificialintelligenceact.eu/the-act/</a>.
@@ -2782,11 +3070,21 @@ Growiec, Jakub. 2024. <span>“Existential Risk from Transformative
 <span>AI</span>: An Economic Perspective.”</span> <em>Technological and
 Economic Development of Economy</em> 30 (6): 1682–1708.
 </div>
+<div id="ref-gruetzemacher2022" class="csl-entry" role="listitem">
+Gruetzemacher, Ross. 2022. <span>“Bayesian <span>Networks</span> Vs.
+<span>Conditional Trees</span> for <span>Creating Questions</span> for
+<span>Forecasting Tournaments</span>.”</span>
+</div>
 <div id="ref-hallegatte2012" class="csl-entry" role="listitem">
 Hallegatte, Stéphane, Ankur Shah, Robert Lempert, Casey Brown, and
 Stuart Gill. 2012. <span>“Investment Decision-Making Under Deep
 Uncertainty-Application to Climate Change.”</span> <em>Policy Research
 Working Paper</em> 6193. <a href="https://enpc.hal.science/hal-00802049/document">https://enpc.hal.science/hal-00802049/document</a>.
+</div>
+<div id="ref-heinze-deml2018" class="csl-entry" role="listitem">
+Heinze-Deml, Christina, Marloes H. Maathuis, and Nicolai Meinshausen.
+2018. <span>“Causal <span>Structure Learning</span>.”</span> <em>Annual
+Review of Statistics and Its Application</em> 5 (1): 371–91. <a href="https://doi.org/10.1146/annurev-statistics-031017-100630">https://doi.org/10.1146/annurev-statistics-031017-100630</a>.
 </div>
 <div id="ref-hendrycks2021" class="csl-entry" role="listitem">
 Hendrycks, Dan, Nicholas Carlini, John Schulman, and Jacob Steinhardt.
@@ -2795,6 +3093,10 @@ Safety</span>.”</span> 2021. <a href="https://doi.org/10.48550/ARXIV.2109.1391
 </div>
 <div id="ref-hendrycks2021a" class="csl-entry" role="listitem">
 ———. 2021b. <span>“Unsolved Problems in Ml Safety.”</span> <a href="https://arxiv.org/abs/2109.13916">https://arxiv.org/abs/2109.13916</a>.
+</div>
+<div id="ref-hunt2025" class="csl-entry" role="listitem">
+Hunt, Tam. 2025. <span>“The Insane <span>‘Logic’</span> of the
+<span>AI</span> Arms Race.”</span> Medium. March 3, 2025. <a href="https://tamhunt.medium.com/the-insane-logic-of-the-ai-arms-race-45a5f79f4c0e">https://tamhunt.medium.com/the-insane-logic-of-the-ai-arms-race-45a5f79f4c0e</a>.
 </div>
 <div id="ref-jaynes2003" class="csl-entry" role="listitem">
 Jaynes, Edwin T. 2003. <em>Probability Theory: <span>The</span> Logic of
@@ -2849,6 +3151,23 @@ University Press.
 <div id="ref-maslej2025" class="csl-entry" role="listitem">
 Maslej, Nestor. 2025. <span>“Artificial <span>Intelligence Index
 Report</span> 2025.”</span> <em>Artificial Intelligence</em>.
+</div>
+<div id="ref-mccaslin2024" class="csl-entry" role="listitem">
+McCaslin, Tegan, Josh Rosenberg, Ezra Karger, Avital Morris, Molly
+Hickman, Sam Glover, Zach Jacobs, and Phil Tetlock. 2024.
+<span>“Conditional <span>Trees</span>: <span>A Method</span> for
+<span>Generating Informative Questions</span> about <span>Complex
+Topics</span>.”</span> <em>Forecasting Research Institute</em>. <a href="https://static1.squarespace.com/static/635693acf15a3e2a14a56a4a/t/66ba37a144f1d6095de467df/1723479995772/AIConditionalTrees.pdf">https://static1.squarespace.com/static/635693acf15a3e2a14a56a4a/t/66ba37a144f1d6095de467df/1723479995772/AIConditionalTrees.pdf</a>.
+</div>
+<div id="ref-meyer2022b" class="csl-entry" role="listitem">
+Meyer, Valentin Jakob. 2022. <span>“A <span>Structure</span> of
+<span>Knowledge</span> &amp; the <span>Process</span> of
+<span>Science</span>.”</span> <em>Philosophy of the Social Sciences</em>
+First Course Paper. https://doi.org/<a href="https://www.vjmeyer.com/papers/essays">https://www.vjmeyer.com/papers/essays</a>.
+</div>
+<div id="ref-miotti2024" class="csl-entry" role="listitem">
+Miotti, Andrea, Tolga Bilge, Dave Kasten, and James Newport. 2024.
+<span>“A <span>Narrow Path</span>.”</span> <a href="https://www.narrowpath.co/">https://www.narrowpath.co/</a>.
 </div>
 <div id="ref-nelson2006" class="csl-entry" role="listitem">
 Nelson, Roger B. 2006. <em>An <span>Introduction</span> to
@@ -2906,6 +3225,11 @@ Samborska, Veronika. 2025. <span>“Scaling up: How Increasing Inputs Has
 Made Artificial Intelligence More Capable.”</span> <em>Our World in
 Data</em>, January. <a href="https://ourworldindata.org/scaling-up-ai">https://ourworldindata.org/scaling-up-ai</a>.
 </div>
+<div id="ref-samuel2023" class="csl-entry" role="listitem">
+Samuel, Sigal. 2023. <span>“<span>AI</span> Is a <span>‘Tragedy of the
+Commons.’</span> <span>We</span>’ve Got Solutions for That.”</span> Vox.
+July 7, 2023. <a href="https://www.vox.com/future-perfect/2023/7/7/23787011/ai-arms-race-tragedy-commons-risk-safety">https://www.vox.com/future-perfect/2023/7/7/23787011/ai-arms-race-tragedy-commons-risk-safety</a>.
+</div>
 <div id="ref-schelling1960" class="csl-entry" role="listitem">
 Schelling, Thomas C. 1960. <span>“I960. <span>The</span> Strategy of
 Conflict.”</span> <em>Cambridge, Mass</em>.
@@ -2919,6 +3243,12 @@ Computer-Supported Collaborative Learning</em> 5 (1): 43–102. <a href="https:/
 <div id="ref-solomon2020" class="csl-entry" role="listitem">
 Solomon, Jill. 2020. <em>Corporate Governance and Accountability</em>.
 John Wiley &amp; Sons. <a href="https://books.google.ca/books?hl=en&amp;lr=&amp;id=JAX9DwAAQBAJ&amp;oi=fnd&amp;pg=PR1&amp;dq=review+of+the+effects+of+liability+frameworks+on+corporate+governance+&amp;ots=ny23_vd-U0&amp;sig=3LuNNhvSWXriEeg-ipAdDIQGAgo">https://books.google.ca/books?hl=en&amp;lr=&amp;id=JAX9DwAAQBAJ&amp;oi=fnd&amp;pg=PR1&amp;dq=review+of+the+effects+of+liability+frameworks+on+corporate+governance+&amp;ots=ny23_vd-U0&amp;sig=3LuNNhvSWXriEeg-ipAdDIQGAgo</a>.
+</div>
+<div id="ref-squires2023" class="csl-entry" role="listitem">
+Squires, Chandler, and Caroline Uhler. 2023. <span>“Causal
+<span>Structure Learning</span>: <span>A Combinatorial
+Perspective</span>.”</span> <em>Foundations of Computational
+Mathematics</em> 23 (5): 1781–1815. <a href="https://doi.org/10.1007/s10208-022-09581-9">https://doi.org/10.1007/s10208-022-09581-9</a>.
 </div>
 <div id="ref-tegmark2024" class="csl-entry" role="listitem">
 Tegmark, Max. 2024. <span>“Asilomar <span>AI Principles</span>.”</span>
@@ -2949,6 +3279,11 @@ Wilson, Nick, Matt Boyd, John Kerr, Amanda Kvalsvig, and Michael Baker.
 Preventing Catastrophic Risks.”</span> <em>Public Health Expert
 Briefing</em>.
 </div>
+<div id="ref-yang2022" class="csl-entry" role="listitem">
+Yang, Jie, Soyeon Caren Han, and Josiah Poon. 2022. <span>“A Survey on
+Extraction of Causal Relations from Natural Language Text.”</span>
+<em>Knowledge and Information Systems</em> 64 (5): 1161–86. <a href="https://doi.org/10.1007/s10115-022-01665-w">https://doi.org/10.1007/s10115-022-01665-w</a>.
+</div>
 <div id="ref-yudkowsky2008" class="csl-entry" role="listitem">
 Yudkowsky, Eliezer. 2008. <span>“Artificial <span>Intelligence</span> as
 a Positive and Negative Factor in Global Risk.”</span> In <em>Global
@@ -2956,184 +3291,9 @@ a Positive and Negative Factor in Global Risk.”</span> In <em>Global
 University Press. <a href="https://doi.org/10.1093/oso/9780198570509.003.0021">https://doi.org/10.1093/oso/9780198570509.003.0021</a>.
 </div>
 </div>
-</section>
-<section id="sec-appendices" class="level1 unnumbered">
-<h1 class="unnumbered">Appendices</h1>
-<section id="sec-appendix-technical" class="level2 unnumbered">
-<h2 class="unnumbered anchored" data-anchor-id="sec-appendix-technical">Appendix A: Technical Implementation Details</h2>
-<!-- [ ] CREATE: Complete technical documentation -->
-<pre><code>
-Contents:
-
-- Full API specifications
-- Architectural diagrams with component details
-- Code structure and organization
-- Deployment instructions
-- Performance optimization guides
-</code></pre>
-<section id="sec-data-structures" class="level3 unnumbered">
-<h3 class="unnumbered anchored" data-anchor-id="sec-data-structures">A.1 Core Data Structures</h3>
-<p>The AMTAIR system employs several custom data structures optimized for representing hierarchical arguments with probabilistic metadata:</p>
-<div class="sourceCode" id="cb22"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb22-1"><a href="#cb22-1" aria-hidden="true" tabindex="-1"></a><span class="at">@dataclass</span></span>
-<span id="cb22-2"><a href="#cb22-2" aria-hidden="true" tabindex="-1"></a><span class="kw">class</span> BayesDownNode:</span>
-<span id="cb22-3"><a href="#cb22-3" aria-hidden="true" tabindex="-1"></a>    <span class="co">"""Represents a single node in the BayesDown format"""</span></span>
-<span id="cb22-4"><a href="#cb22-4" aria-hidden="true" tabindex="-1"></a>    title: <span class="bu">str</span></span>
-<span id="cb22-5"><a href="#cb22-5" aria-hidden="true" tabindex="-1"></a>    description: <span class="bu">str</span></span>
-<span id="cb22-6"><a href="#cb22-6" aria-hidden="true" tabindex="-1"></a>    instantiations: List[<span class="bu">str</span>]</span>
-<span id="cb22-7"><a href="#cb22-7" aria-hidden="true" tabindex="-1"></a>    priors: Dict[<span class="bu">str</span>, <span class="bu">float</span>] <span class="op">=</span> field(default_factory<span class="op">=</span><span class="bu">dict</span>)</span>
-<span id="cb22-8"><a href="#cb22-8" aria-hidden="true" tabindex="-1"></a>    posteriors: Dict[<span class="bu">str</span>, <span class="bu">float</span>] <span class="op">=</span> field(default_factory<span class="op">=</span><span class="bu">dict</span>)</span>
-<span id="cb22-9"><a href="#cb22-9" aria-hidden="true" tabindex="-1"></a>    parents: List[<span class="bu">str</span>] <span class="op">=</span> field(default_factory<span class="op">=</span><span class="bu">list</span>)</span>
-<span id="cb22-10"><a href="#cb22-10" aria-hidden="true" tabindex="-1"></a>    children: List[<span class="bu">str</span>] <span class="op">=</span> field(default_factory<span class="op">=</span><span class="bu">list</span>)</span>
-<span id="cb22-11"><a href="#cb22-11" aria-hidden="true" tabindex="-1"></a>    metadata: Dict[<span class="bu">str</span>, Any] <span class="op">=</span> field(default_factory<span class="op">=</span><span class="bu">dict</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</section>
-<section id="sec-extraction-details" class="level3 unnumbered">
-<h3 class="unnumbered anchored" data-anchor-id="sec-extraction-details">A.2 Extraction Algorithm Details</h3>
-<!-- [ ] TODO: Document complete extraction pipeline with pseudocode -->
-<!-- [ ] TODO: Include prompt templates and engineering decisions -->
-</section>
-<section id="sec-api-specs" class="level3 unnumbered">
-<h3 class="unnumbered anchored" data-anchor-id="sec-api-specs">A.3 API Specifications</h3>
-<!-- [ ] TODO: Complete API documentation for each component -->
-<!-- [ ] TODO: Include example usage and error handling -->
-</section>
-</section>
-<section id="sec-appendix-validation" class="level2 unnumbered">
-<h2 class="unnumbered anchored" data-anchor-id="sec-appendix-validation">Appendix B: Validation Datasets and Procedures</h2>
-<!-- [ ] CREATE: Validation materials -->
-<pre><code>Contents:
-- Benchmark dataset descriptions
-- Annotation guidelines
-- Inter-rater reliability protocols
-- Statistical analysis procedures
-- Replication instructions</code></pre>
-<section id="sec-annotation-protocol" class="level3 unnumbered">
-<h3 class="unnumbered anchored" data-anchor-id="sec-annotation-protocol">B.1 Expert Annotation Protocol</h3>
-<!-- [ ] TODO: Detailed instructions for manual extraction -->
-<!-- [ ] TODO: Inter-annotator agreement methodology -->
-</section>
-<section id="sec-benchmark-construction" class="level3 unnumbered">
-<h3 class="unnumbered anchored" data-anchor-id="sec-benchmark-construction">B.2 Benchmark Dataset Construction</h3>
-<!-- [ ] TODO: Dataset statistics and characteristics -->
-<!-- [ ] TODO: Quality control procedures -->
-</section>
-<section id="sec-validation-results" class="level3 unnumbered">
-<h3 class="unnumbered anchored" data-anchor-id="sec-validation-results">B.3 Validation Results</h3>
-<!-- [ ] TODO: Complete precision/recall tables -->
-<!-- [ ] TODO: Error analysis breakdowns -->
-</section>
-</section>
-<section id="sec-appendix-cases" class="level2 unnumbered">
-<h2 class="unnumbered anchored" data-anchor-id="sec-appendix-cases">Appendix C: Extended Case Studies</h2>
-<!-- [ ] IMPLEMENT: Additional extraction examples -->
-<pre><code>Include:
-- Christiano's "What failure looks like"
-- Critch's ARCHES model
-- Additional policy evaluation scenarios
-- Comparative analysis across models</code></pre>
-<section id="sec-christiano-extraction" class="level3 unnumbered">
-<h3 class="unnumbered anchored" data-anchor-id="sec-christiano-extraction">C.1 Christiano’s “What Failure Looks Like” Extraction</h3>
-<!-- [ ] TODO: Complete manual extraction for comparison -->
-<!-- [ ] TODO: Document extraction decisions and challenges -->
-</section>
-<section id="sec-critch-extraction" class="level3 unnumbered">
-<h3 class="unnumbered anchored" data-anchor-id="sec-critch-extraction">C.2 Critch’s ARCHES Model</h3>
-<!-- [ ] TODO: Full model extraction and formalization -->
-<!-- [ ] TODO: Comparison with original presentation -->
-</section>
-<section id="sec-narrow-path-evaluation" class="level3 unnumbered">
-<h3 class="unnumbered anchored" data-anchor-id="sec-narrow-path-evaluation">C.3 Policy Evaluation: A Narrow Path</h3>
-<!-- [ ] TODO: Detailed analysis of policy proposals -->
-<!-- [ ] TODO: Sensitivity to implementation specifics -->
-</section>
-</section>
-<section id="sec-appendix-bayesdown" class="level2 unnumbered">
-<h2 class="unnumbered anchored" data-anchor-id="sec-appendix-bayesdown">Appendix D: BayesDown Syntax Specification</h2>
-<!-- [ ] CREATE: Complete formal specification -->
-<pre><code>Contents:
-- Full syntax definition
-- Validation rules
-- Example transformations
-- Implementation notes
-- Extension possibilities</code></pre>
-</section>
-<section id="sec-appendix-prompts" class="level2 unnumbered">
-<h2 class="unnumbered anchored" data-anchor-id="sec-appendix-prompts">Appendix E: Prompt Engineering Details</h2>
-<!-- [ ] CREATE: Prompt documentation -->
-<pre><code>Include:
-- Full extraction prompts with annotations
-- Iterative refinement history
-- Ablation study results
-- Best practices guide
-- Common failure patterns</code></pre>
-</section>
-<section id="sec-appendix-userguide" class="level2 unnumbered">
-<h2 class="unnumbered anchored" data-anchor-id="sec-appendix-userguide">Appendix F: User Guide</h2>
-<!-- [ ] CREATE: Practical user guide -->
-<pre><code>Sections:
-- Getting started with AMTAIR
-- Creating your first extraction
-- Interpreting visualizations
-- Policy evaluation walkthrough
-- Troubleshooting common issues</code></pre>
-</section>
-<section id="sec-appendix-notebook" class="level2 unnumbered">
-<h2 class="unnumbered anchored" data-anchor-id="sec-appendix-notebook">Appendix G: Jupyter Notebook Implementation</h2>
-<!-- Link to embedded notebook as per _quarto.yml configuration -->
-<p>The complete implementation is available as an interactive Jupyter notebook demonstrating:</p>
-<ul>
-<li>Environment setup and configuration</li>
-<li>Step-by-step extraction pipeline</li>
-<li>Visualization generation</li>
-<li>Policy evaluation examples</li>
-<li>Performance benchmarking</li>
-</ul>
-<!-- {{< embed /AMTAIR_Prototype/data/example_carlsmith/AMTAIR_Prototype_example_carlsmith.ipynb >}} -->
-</section>
-<section id="sec-appendix-ethical" class="level2 unnumbered">
-<h2 class="unnumbered anchored" data-anchor-id="sec-appendix-ethical">Appendix H: Ethical Considerations and Governance</h2>
-<!-- [ ] TODO: Analyze ethical dimensions comprehensively -->
-<!-- [ ] TODO: Include misuse analysis and mitigations -->
-<!-- [ ] TODO: Document responsibility frameworks -->
-<section id="sec-misuse-scenarios" class="level3 unnumbered">
-<h3 class="unnumbered anchored" data-anchor-id="sec-misuse-scenarios">H.1 Potential Misuse Scenarios</h3>
-<!-- [ ] TODO: Strategic manipulation of models -->
-<!-- [ ] TODO: Technocratic capture risks -->
-<!-- [ ] TODO: Mitigation strategies -->
-</section>
-<section id="sec-democratic-frameworks" class="level3 unnumbered">
-<h3 class="unnumbered anchored" data-anchor-id="sec-democratic-frameworks">H.2 Democratic Participation Frameworks</h3>
-<!-- [ ] TODO: Inclusivity design principles -->
-<!-- [ ] TODO: Stakeholder engagement protocols -->
-</section>
-<section id="sec-responsibility" class="level3 unnumbered">
-<h3 class="unnumbered anchored" data-anchor-id="sec-responsibility">H.3 Responsibility Assignment</h3>
-<!-- [ ] TODO: Model developer obligations -->
-<!-- [ ] TODO: User responsibilities -->
-<!-- [ ] TODO: Institutional oversight needs -->
-</section>
-</section>
-<section id="sec-appendix-examples" class="level2 unnumbered">
-<h2 class="unnumbered anchored" data-anchor-id="sec-appendix-examples">Appendix I: Full Extraction Examples</h2>
-<!-- [ ] TODO: Include complete worked examples -->
-<!-- [ ] TODO: Show all intermediate steps -->
-<!-- [ ] TODO: Document decision points -->
-</section>
-<section id="sec-appendix-software" class="level2 unnumbered">
-<h2 class="unnumbered anchored" data-anchor-id="sec-appendix-software">Appendix J: Software Installation and Usage Guide</h2>
-<!-- [ ] TODO: Complete installation instructions -->
-<!-- [ ] TODO: Tutorial walkthrough -->
-<!-- [ ] TODO: Troubleshooting guide -->
-<!-- [ ] FINAL CHECKLIST: -->
-<!-- [ ] TODO: American spelling check throughout -->
-<!-- [ ] TODO: Word count verification (~30,000 words) -->
-<!-- [ ] TODO: All figures and tables properly labeled -->
-<!-- [ ] TODO: All citations verified -->
-<!-- [ ] TODO: Task management system fully implemented -->
-<!-- [ ] TODO: Quarto syntax validated -->
-<!-- [ ] TODO: Final review for consistency and completeness -->
+<p><code>{ embed I.Appendices.qmd }</code></p>
 
 
-</section>
 </section>
 <section id="footnotes" class="footnotes footnotes-end-of-document" role="doc-endnotes">
 <hr>

@@ -607,7 +607,7 @@ Create Sidebars by applying the .sidebar attribute to a level 1 heading (for glo
   @growiec2024
 
 
-  @clark2022
+  @clarke2022
 
   @drexler2019 and @drexler2019a
 

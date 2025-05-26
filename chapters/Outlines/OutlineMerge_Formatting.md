@@ -36,10 +36,6 @@ Lastly, produce the perfect, combined outline.
 
 
 
-
-
-
-
 # Prompt1
 
 

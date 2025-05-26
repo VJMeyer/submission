@@ -294,6 +294,9 @@
 \newcommand*\listoflistings{\listof{codelisting}{List of Listings}}
 \makeatother
 \makeatletter
+\usepackage{pdflscape}
+\makeatother
+\makeatletter
 \makeatother
 \makeatletter
 \@ifpackageloaded{caption}{}{\usepackage{caption}}
@@ -3287,13 +3290,6 @@ errors or limitations remain my own responsibility.
 
 \bookmarksetup{startatroot}
 
-\chapter*{Table of Contents}\label{table-of-contents}
-\addcontentsline{toc}{chapter}{Table of Contents}
-
-\markboth{Table of Contents}{Table of Contents}
-
-\bookmarksetup{startatroot}
-
 \chapter*{List of Figures}\label{list-of-figures}
 \addcontentsline{toc}{chapter}{List of Figures}
 
@@ -3339,7 +3335,7 @@ in AI Governance}
 \markboth{1. Introduction: The Coordination Crisis in AI Governance}{1.
 Introduction: The Coordination Crisis in AI Governance}
 
-\begin{tcolorbox}[enhanced jigsaw, toptitle=1mm, opacitybacktitle=0.6, leftrule=.75mm, bottomrule=.15mm, left=2mm, arc=.35mm, colbacktitle=quarto-callout-note-color!10!white, breakable, opacityback=0, title=\textcolor{quarto-callout-note-color}{\faInfo}\hspace{0.5em}{Chapter Overview}, coltitle=black, colframe=quarto-callout-note-color-frame, bottomtitle=1mm, titlerule=0mm, rightrule=.15mm, toprule=.15mm, colback=white]
+\begin{tcolorbox}[enhanced jigsaw, breakable, opacityback=0, opacitybacktitle=0.6, bottomrule=.15mm, arc=.35mm, leftrule=.75mm, coltitle=black, titlerule=0mm, colback=white, bottomtitle=1mm, colframe=quarto-callout-note-color-frame, toptitle=1mm, colbacktitle=quarto-callout-note-color!10!white, title=\textcolor{quarto-callout-note-color}{\faInfo}\hspace{0.5em}{Chapter Overview}, rightrule=.15mm, toprule=.15mm, left=2mm]
 
 \textbf{Grade Weight}: 10\% \textbar{} \textbf{Target Length}:
 \textasciitilde14\% of text (\textasciitilde4,200 words)\\
@@ -3492,6 +3488,10 @@ multiple teams unknowingly duplicate efforts while critical areas remain
 unaddressed. Most perniciously, locally optimized decisions by
 individual actors can create negative-sum dynamics that increase overall
 risk---an AI governance tragedy of the commons.
+
+\textcite{armstrong2016}
+
+\textcite{samuel2023}, \textcite{hunt2025}
 
 \section*{1.3 Historical Parallels and Temporal
 Urgency}\label{sec-historical-urgency}
@@ -3780,7 +3780,7 @@ under deep uncertainty.
 \markboth{2. Context and Theoretical Foundations}{2. Context and
 Theoretical Foundations}
 
-\begin{tcolorbox}[enhanced jigsaw, toptitle=1mm, opacitybacktitle=0.6, leftrule=.75mm, bottomrule=.15mm, left=2mm, arc=.35mm, colbacktitle=quarto-callout-note-color!10!white, breakable, opacityback=0, title=\textcolor{quarto-callout-note-color}{\faInfo}\hspace{0.5em}{Chapter Overview}, coltitle=black, colframe=quarto-callout-note-color-frame, bottomtitle=1mm, titlerule=0mm, rightrule=.15mm, toprule=.15mm, colback=white]
+\begin{tcolorbox}[enhanced jigsaw, breakable, opacityback=0, opacitybacktitle=0.6, bottomrule=.15mm, arc=.35mm, leftrule=.75mm, coltitle=black, titlerule=0mm, colback=white, bottomtitle=1mm, colframe=quarto-callout-note-color-frame, toptitle=1mm, colbacktitle=quarto-callout-note-color!10!white, title=\textcolor{quarto-callout-note-color}{\faInfo}\hspace{0.5em}{Chapter Overview}, rightrule=.15mm, toprule=.15mm, left=2mm]
 
 \textbf{Grade Weight}: 20\% \textbar{} \textbf{Target Length}:
 \textasciitilde29\% of text (\textasciitilde8,700 words)\\
@@ -3814,68 +3814,68 @@ current AI development to potential existential catastrophe.
 \subsection*{2.1.1 Six-Premise Decomposition}\label{sec-six-premise}
 \addcontentsline{toc}{subsection}{2.1.1 Six-Premise Decomposition}
 
-Carlsmith decomposes existential risk into a probabilistic chain with
-explicit estimates:
+According to the MTAIR model Carlsmith decomposes existential risk into
+a probabilistic chain with explicit estimates:
 
 \begin{enumerate}
 \def\labelenumi{\arabic{enumi}.}
 \tightlist
 \item
-  \textbf{Premise 1}: Transformative AI development this century (P ≈
-  0.80)
+  \textbf{Premise 1}: Transformative AI development this century
+  \((P ≈ 0.80)\)
 \item
-  \textbf{Premise 2}: AI systems pursuing objectives in the world (P ≈
-  0.95)
+  \textbf{Premise 2}: AI systems pursuing objectives in the world
+  \((P ≈ 0.95)\)
 \item
   \textbf{Premise 3}: Systems with power-seeking instrumental incentives
-  (P ≈ 0.40)
+  \((P ≈ 0.40)\)
 \item
-  \textbf{Premise 4}: Sufficient capability for existential threat (P ≈
-  0.65)
+  \textbf{Premise 4}: Sufficient capability for existential threat
+  \((P ≈ 0.65)\)
 \item
-  \textbf{Premise 5}: Misaligned systems despite safety efforts (P ≈
-  0.50)
+  \textbf{Premise 5}: Misaligned systems despite safety efforts
+  \((P ≈ 0.50)\)
 \item
   \textbf{Premise 6}: Catastrophic outcomes from misaligned
-  power-seeking (P ≈ 0.65)
+  power-seeking \((P ≈ 0.65)\)
 \end{enumerate}
 
-\textbf{Composite Risk Calculation}: P(doom) ≈ 0.05 (5\%)
+\textbf{Composite Risk Calculation}: \(P(doom) ≈ 0.05\) (5\%)
 
 Carlsmith structures his argument through six conditional premises, each
 assigned explicit probability estimates:
 
-\textbf{Premise 1: APS Systems by 2070} (P ≈ 0.65)\footnote{The
+\textbf{Premise 1: APS Systems by 2070} \((P ≈ 0.65)\)\footnote{The
   probability estimates vary between outlines; using more conservative
   estimates from 12.2} ``By 2070, there will be AI systems with Advanced
 capability, Agentic planning, and Strategic awareness''---the
 conjunction of capabilities that could enable systematic pursuit of
 objectives in the world.
 
-\textbf{Premise 2: Alignment Difficulty} (P ≈ 0.40)\\
-``It will be harder to build aligned APS systems than misaligned systems
-that are still attractive to deploy''---capturing the challenge that
-safety may conflict with capability or efficiency.
+\textbf{Premise 2: Alignment Difficulty} \$(P ≈ 0.40) \$ ``It will be
+harder to build aligned APS systems than misaligned systems that are
+still attractive to deploy''---capturing the challenge that safety may
+conflict with capability or efficiency.
 
-\textbf{Premise 3: Deployment Despite Misalignment} (P ≈ 0.70)\\
+\textbf{Premise 3: Deployment Despite Misalignment} \$(P ≈ 0.70) \$
 ``Conditional on 1 and 2, we will deploy misaligned APS
 systems''---reflecting competitive pressures and limited coordination.
 
-\textbf{Premise 4: Power-Seeking Behavior} (P ≈ 0.65)\\
-``Conditional on 1-3, misaligned APS systems will seek power in
-high-impact ways''---based on instrumental convergence arguments.
+\textbf{Premise 4: Power-Seeking Behavior} \$(P ≈ 0.65) \$ ``Conditional
+on 1-3, misaligned APS systems will seek power in high-impact
+ways''---based on instrumental convergence arguments.
 
-\textbf{Premise 5: Disempowerment Success} (P ≈ 0.40)\\
-``Conditional on 1-4, power-seeking will scale to permanent human
+\textbf{Premise 5: Disempowerment Success} \$(P ≈ 0.40) \$ ``Conditional
+on 1-4, power-seeking will scale to permanent human
 disempowerment''---despite potential resistance and safeguards.
 
-\textbf{Premise 6: Existential Catastrophe} (P ≈ 0.95)\\
+\textbf{Premise 6: Existential Catastrophe} \$(P ≈ 0.95) \$
 ``Conditional on 1-5, this disempowerment constitutes existential
 catastrophe''---connecting power loss to permanent curtailment of human
 potential.
 
 \textbf{Overall Risk}: Multiplying through the conditional chain yields
-P(doom) ≈ 0.05 or 5\% by 2070.
+\(P(doom) ≈ 0.05\) or 5\% by 2070.
 
 This structured approach exemplifies the type of reasoning AMTAIR aims
 to formalize and automate. While Carlsmith spent months developing this
@@ -3911,6 +3911,8 @@ component.
 \textbf{Documented Reasoning}: Extensive justification for each
 probability enables extraction of both structure and parameters from the
 source text.
+
+\textcite{christiano2019}
 
 \section*{2.2 The Epistemic Challenge of Policy
 Evaluation}\label{sec-epistemic-challenge}
@@ -4029,7 +4031,7 @@ urgent need for new epistemic tools. These tools must:
   policy options
 \end{itemize}
 
-\begin{tcolorbox}[enhanced jigsaw, toptitle=1mm, opacitybacktitle=0.6, leftrule=.75mm, bottomrule=.15mm, left=2mm, arc=.35mm, colbacktitle=quarto-callout-tip-color!10!white, breakable, opacityback=0, title=\textcolor{quarto-callout-tip-color}{\faLightbulb}\hspace{0.5em}{Key Insight}, coltitle=black, colframe=quarto-callout-tip-color-frame, bottomtitle=1mm, titlerule=0mm, rightrule=.15mm, toprule=.15mm, colback=white]
+\begin{tcolorbox}[enhanced jigsaw, breakable, opacityback=0, opacitybacktitle=0.6, bottomrule=.15mm, arc=.35mm, leftrule=.75mm, coltitle=black, titlerule=0mm, colback=white, bottomtitle=1mm, colframe=quarto-callout-tip-color-frame, toptitle=1mm, colbacktitle=quarto-callout-tip-color!10!white, title=\textcolor{quarto-callout-tip-color}{\faLightbulb}\hspace{0.5em}{Key Insight}, rightrule=.15mm, toprule=.15mm, left=2mm]
 
 The computational approaches developed in this thesis---particularly
 Bayesian networks enhanced with automated extraction---directly address
@@ -4037,6 +4039,10 @@ each of these requirements by providing formal frameworks for reasoning
 under uncertainty.
 
 \end{tcolorbox}
+
+\textcite{mccaslin2024}
+
+\textcite{gruetzemacher2022}
 
 \section*{2.3 Bayesian Networks as Knowledge
 Representation}\label{sec-bayesian-networks}
@@ -4067,11 +4073,9 @@ A Bayesian network consists of:
 \end{itemize}
 
 The joint probability distribution factors according to the graph
-structure:
-
-P(X1,X2,\ldots,Xn)=∏i=1nP(Xi∣Parents(Xi))P(X\_1, X\_2, \ldots, X\_n) =
-\prod\_\{i=1\}\^{}\{n\} P(X\_i \textbar{}
-Parents(X\_i))P(X1\hspace{0pt},X2\hspace{0pt},\ldots,Xn\hspace{0pt})=i=1∏n\hspace{0pt}P(Xi\hspace{0pt}∣Parents(Xi\hspace{0pt}))
+structure: \[
+ P(X1,X2,...,Xn)=∏i=1nP(Xi∣Parents(Xi))P(X_1, X_2, ..., X_n) = \prod_{i=1}^{n} P(X_i | Parents(X_i))P(X1​,X2​,...,Xn​)=i=1∏n​P(Xi​∣Parents(Xi​)) 
+\]
 
 This factorization enables efficient inference and embodies causal
 assumptions explicitly.
@@ -4141,6 +4145,27 @@ This simple network demonstrates:
   \textbf{Intervention Modeling}: P(grass\_wet\textbar do(sprinkler=on))
   for policy analysis
 \end{itemize}
+
+\subsection*{Rain-Sprinkler-Grass Network
+Rendering}\label{rain-sprinkler-grass-network-rendering-1}
+\addcontentsline{toc}{subsection}{Rain-Sprinkler-Grass Network
+Rendering}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\ImportTok{from}\NormalTok{ IPython.display }\ImportTok{import}\NormalTok{ IFrame}
+
+\NormalTok{IFrame(src}\OperatorTok{=}\StringTok{"https://singularitysmith.github.io/AMTAIR\_Prototype/bayesian\_network.html"}\NormalTok{, width}\OperatorTok{=}\StringTok{"100\%"}\NormalTok{, height}\OperatorTok{=}\StringTok{"600px"}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+\phantomsection\label{rain_sprinkler_grass_example_network_rendering}
+\begin{verbatim}
+<IPython.lib.display.IFrame at 0x107187090>
+\end{verbatim}
+
+Dynamic Html Rendering of the Rain-Sprinkler-Grass DAG with Conditional
+Probabilities
 
 \subsection*{2.3.3 Advantages for AI Risk
 Modeling}\label{sec-modeling-advantages}
@@ -4233,6 +4258,8 @@ Argument mapping extracts this structure, identifying:
 
 \textcite{scheuer2010}
 
+\textcite{thomas1962}
+
 \textcite{walton2009}
 
 \subsection*{2.4.2 ArgDown: Structured Argument
@@ -4263,16 +4290,18 @@ Bayesian Networks}
 
 BayesDown extends ArgDown with probabilistic metadata:
 
-\begin{verbatim}
-[Node]: Description. {
-  "instantiations": ["node_TRUE", "node_FALSE"],
-  "priors": {"p(node_TRUE)": "0.7", "p(node_FALSE)": "0.3"},
-  "posteriors": {
-    "p(node_TRUE|parent_TRUE)": "0.9",
-    "p(node_TRUE|parent_FALSE)": "0.4"
-  }
-}
-\end{verbatim}
+\begin{Shaded}
+\begin{Highlighting}[]
+\OtherTok{[}\ErrorTok{Node}\OtherTok{]}\ErrorTok{:} \ErrorTok{Description.} \FunctionTok{\{}
+  \DataTypeTok{"instantiations"}\FunctionTok{:} \OtherTok{[}\StringTok{"node\_TRUE"}\OtherTok{,} \StringTok{"node\_FALSE"}\OtherTok{]}\FunctionTok{,}
+  \DataTypeTok{"priors"}\FunctionTok{:} \FunctionTok{\{}\DataTypeTok{"p(node\_TRUE)"}\FunctionTok{:} \StringTok{"0.7"}\FunctionTok{,} \DataTypeTok{"p(node\_FALSE)"}\FunctionTok{:} \StringTok{"0.3"}\FunctionTok{\},}
+  \DataTypeTok{"posteriors"}\FunctionTok{:} \FunctionTok{\{}
+    \DataTypeTok{"p(node\_TRUE|parent\_TRUE)"}\FunctionTok{:} \StringTok{"0.9"}\FunctionTok{,}
+    \DataTypeTok{"p(node\_TRUE|parent\_FALSE)"}\FunctionTok{:} \StringTok{"0.4"}
+  \FunctionTok{\}}
+\FunctionTok{\}}
+\end{Highlighting}
+\end{Shaded}
 
 This representation:
 
@@ -4367,17 +4396,8 @@ framework's utility for coordination across diverse viewpoints.
 
 However, MTAIR's manual approach faces severe constraints:
 
-\textbf{Labor Intensity}: Each model requires hundreds of expert-hours
-to construct, limiting coverage to a few perspectives.
-
-\begin{verbatim}
-Detailed breakdown needed:
-- Variable identification: X hours
-- Structure elicitation: Y hours  
-- Probability quantification: Z hours
-- Validation and refinement: W hours
-Total per model: ~200-400 hours
-\end{verbatim}
+\textbf{Labor Intensity}: Each model requires dozens of expert-hours to
+construct, limiting coverage to a few perspectives.
 
 \textbf{Static Nature}: Models become outdated as arguments evolve but
 updating requires near-complete reconstruction.
@@ -4432,7 +4452,9 @@ both structure and quantification. Early models focused on simple binary
 outcomes, while recent work incorporates complex causal chains and
 continuous variables.
 
-\begin{tcolorbox}[enhanced jigsaw, toptitle=1mm, opacitybacktitle=0.6, leftrule=.75mm, bottomrule=.15mm, left=2mm, arc=.35mm, colbacktitle=quarto-callout-note-color!10!white, breakable, opacityback=0, title=\textcolor{quarto-callout-note-color}{\faInfo}\hspace{0.5em}{Key Developments}, coltitle=black, colframe=quarto-callout-note-color-frame, bottomtitle=1mm, titlerule=0mm, rightrule=.15mm, toprule=.15mm, colback=white]
+\begin{tcolorbox}[enhanced jigsaw, breakable, opacityback=0, opacitybacktitle=0.6, bottomrule=.15mm, arc=.35mm, leftrule=.75mm, coltitle=black, titlerule=0mm, colback=white, bottomtitle=1mm, colframe=quarto-callout-note-color-frame, toptitle=1mm, colbacktitle=quarto-callout-note-color!10!white, title=\textcolor{quarto-callout-note-color}{\faInfo}\hspace{0.5em}{Note}, rightrule=.15mm, toprule=.15mm, left=2mm]
+
+\#\# Key Developments
 
 \begin{itemize}
 \tightlist
@@ -4483,6 +4505,8 @@ AI governance proposals can be categorized along several dimensions:
 \end{itemize}
 
 \textcite{dafoe2021} and \textcite{dafoe2018}
+
+\textcite{miotti2024}
 
 \subsection*{2.6.3 Bayesian Network Theory and
 Applications}\label{sec-bn-theory}
@@ -4656,7 +4680,7 @@ Models}\label{sec-natural-to-computational}
 \addcontentsline{toc}{subsection}{2.7.3 From Natural Language to
 Computational Models}
 
-\begin{tcolorbox}[enhanced jigsaw, toptitle=1mm, opacitybacktitle=0.6, leftrule=.75mm, bottomrule=.15mm, left=2mm, arc=.35mm, colbacktitle=quarto-callout-tip-color!10!white, breakable, opacityback=0, title=\textcolor{quarto-callout-tip-color}{\faLightbulb}\hspace{0.5em}{The Two-Stage Extraction Process}, coltitle=black, colframe=quarto-callout-tip-color-frame, bottomtitle=1mm, titlerule=0mm, rightrule=.15mm, toprule=.15mm, colback=white]
+\begin{tcolorbox}[enhanced jigsaw, breakable, opacityback=0, opacitybacktitle=0.6, bottomrule=.15mm, arc=.35mm, leftrule=.75mm, coltitle=black, titlerule=0mm, colback=white, bottomtitle=1mm, colframe=quarto-callout-tip-color-frame, toptitle=1mm, colbacktitle=quarto-callout-tip-color!10!white, title=\textcolor{quarto-callout-tip-color}{\faLightbulb}\hspace{0.5em}{The Two-Stage Extraction Process}, rightrule=.15mm, toprule=.15mm, left=2mm]
 
 AMTAIR employs a novel two-stage process that separates structural
 argument extraction from probability quantification, enabling modular
@@ -4910,7 +4934,7 @@ models from AI safety literature.
 \markboth{3. AMTAIR: Design and Implementation}{3. AMTAIR: Design and
 Implementation}
 
-\begin{tcolorbox}[enhanced jigsaw, toptitle=1mm, opacitybacktitle=0.6, leftrule=.75mm, bottomrule=.15mm, left=2mm, arc=.35mm, colbacktitle=quarto-callout-note-color!10!white, breakable, opacityback=0, title=\textcolor{quarto-callout-note-color}{\faInfo}\hspace{0.5em}{Chapter Overview}, coltitle=black, colframe=quarto-callout-note-color-frame, bottomtitle=1mm, titlerule=0mm, rightrule=.15mm, toprule=.15mm, colback=white]
+\begin{tcolorbox}[enhanced jigsaw, breakable, opacityback=0, opacitybacktitle=0.6, bottomrule=.15mm, arc=.35mm, leftrule=.75mm, coltitle=black, titlerule=0mm, colback=white, bottomtitle=1mm, colframe=quarto-callout-note-color-frame, toptitle=1mm, colbacktitle=quarto-callout-note-color!10!white, title=\textcolor{quarto-callout-note-color}{\faInfo}\hspace{0.5em}{Chapter Overview}, rightrule=.15mm, toprule=.15mm, left=2mm]
 
 \textbf{Grade Weight}: 20\% \textbar{} \textbf{Target Length}:
 \textasciitilde29\% of text (\textasciitilde8,700 words)\\
@@ -5024,7 +5048,7 @@ propagation:
 \subsection*{3.1.2 Design Principles}\label{sec-design-principles}
 \addcontentsline{toc}{subsection}{3.1.2 Design Principles}
 
-\begin{tcolorbox}[enhanced jigsaw, toptitle=1mm, opacitybacktitle=0.6, leftrule=.75mm, bottomrule=.15mm, left=2mm, arc=.35mm, colbacktitle=quarto-callout-tip-color!10!white, breakable, opacityback=0, title=\textcolor{quarto-callout-tip-color}{\faLightbulb}\hspace{0.5em}{Core Design Philosophy}, coltitle=black, colframe=quarto-callout-tip-color-frame, bottomtitle=1mm, titlerule=0mm, rightrule=.15mm, toprule=.15mm, colback=white]
+\begin{tcolorbox}[enhanced jigsaw, breakable, opacityback=0, opacitybacktitle=0.6, bottomrule=.15mm, arc=.35mm, leftrule=.75mm, coltitle=black, titlerule=0mm, colback=white, bottomtitle=1mm, colframe=quarto-callout-tip-color-frame, toptitle=1mm, colbacktitle=quarto-callout-tip-color!10!white, title=\textcolor{quarto-callout-tip-color}{\faLightbulb}\hspace{0.5em}{Core Design Philosophy}, rightrule=.15mm, toprule=.15mm, left=2mm]
 
 The system emphasizes scalability through modular architecture, standard
 interfaces for interoperability, validation checkpoints for quality
@@ -5237,36 +5261,8 @@ Rain-Sprinkler-Grass}\label{sec-case-rain-sprinkler}
 I begin with the canonical example to demonstrate the complete pipeline
 on a simple, well-understood case.
 
-\subsection*{3.4.1 Input Representation}\label{sec-rsg-input}
-\addcontentsline{toc}{subsection}{3.4.1 Input Representation}
-
-The source BayesDown representation:
-
-\begin{verbatim}
-[Grass_Wet]: Concentrated moisture on grass.
-{"instantiations": ["grass_wet_TRUE", "grass_wet_FALSE"],
- "priors": {"p(grass_wet_TRUE)": "0.322", "p(grass_wet_FALSE)": "0.678"},
- "posteriors": {
-   "p(grass_wet_TRUE|sprinkler_TRUE,rain_TRUE)": "0.99",
-   "p(grass_wet_TRUE|sprinkler_TRUE,rain_FALSE)": "0.9",
-   "p(grass_wet_TRUE|sprinkler_FALSE,rain_TRUE)": "0.8",
-   "p(grass_wet_TRUE|sprinkler_FALSE,rain_FALSE)": "0.0"
- }}
- + [Rain]: Water falling from sky.
-   {"instantiations": ["rain_TRUE", "rain_FALSE"],
-    "priors": {"p(rain_TRUE)": "0.2", "p(rain_FALSE)": "0.8"}}
- + [Sprinkler]: Artificial watering system.
-   {"instantiations": ["sprinkler_TRUE", "sprinkler_FALSE"],
-    "priors": {"p(sprinkler_TRUE)": "0.448", "p(sprinkler_FALSE)": "0.552"},
-    "posteriors": {
-      "p(sprinkler_TRUE|rain_TRUE)": "0.01",
-      "p(sprinkler_TRUE|rain_FALSE)": "0.4"
-    }}
-   + [Rain]
-\end{verbatim}
-
-\subsection*{3.4.2 Processing Steps}\label{sec-rsg-processing}
-\addcontentsline{toc}{subsection}{3.4.2 Processing Steps}
+\subsection*{3.4.1 Processing Steps}\label{sec-rsg-processing}
+\addcontentsline{toc}{subsection}{3.4.1 Processing Steps}
 
 The system processes this input through five steps:
 
@@ -5274,22 +5270,211 @@ The system processes this input through five steps:
 \def\labelenumi{\arabic{enumi}.}
 \tightlist
 \item
-  \textbf{Parsing}: Extract three nodes with relationships
+  \textbf{ArgDown Parsing}: Extract three nodes with relationships in
+  ArgDown syntax
 \item
-  \textbf{Validation}: Verify probability coherence and DAG structure
+  \textbf{Question Generation}: Generate questions based on the possible
+  instantiations and combinations of each parent note to identify the
+  probabilities to be extracted in the next step
 \item
-  \textbf{Enhancement}: Calculate joint probabilities and network
-  metrics
+  \textbf{BayesDown Extraction}: LLM call extracting the full
+  conditional probability tables for each node
 \item
-  \textbf{Construction}: Build formal Bayesian network
+  \textbf{Construction}: Building of the formal Bayesian network
 \item
   \textbf{Visualization}: Render interactive display
 \end{enumerate}
 
+\subsection*{3.4.2 Example Conversion Steps}\label{sec-rsg-input}
+\addcontentsline{toc}{subsection}{3.4.2 Example Conversion Steps}
+
+\subsubsection*{ArgDown Example}\label{argdown-example}
+\addcontentsline{toc}{subsubsection}{ArgDown Example}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\OtherTok{[Grass\_Wet]: }\NormalTok{Concentrated moisture on, between and around the blades of grass.\{"instantiations": }\CommentTok{[}\OtherTok{"grass\_wet\_TRUE", "grass\_wet\_FALSE"}\CommentTok{]}\NormalTok{\}    }
+\NormalTok{    +}\CommentTok{[}\OtherTok{Rain}\CommentTok{]}\NormalTok{: Tears of angles crying high up in the skies hitting the ground.\{"instantiations": }\CommentTok{[}\OtherTok{"rain\_TRUE", "rain\_FALSE"}\CommentTok{]}\NormalTok{\}}
+\NormalTok{    +}\CommentTok{[}\OtherTok{Sprinkler}\CommentTok{]}\NormalTok{: Activation of a centrifugal force based CO2 droplet distribution system.\{"instantiations": }\CommentTok{[}\OtherTok{"sprinkler\_TRUE", "sprinkler\_FALSE"}\CommentTok{]}\NormalTok{\}}
+\NormalTok{        +}\CommentTok{[}\OtherTok{Rain}\CommentTok{]}
+\end{Highlighting}
+\end{Shaded}
+
+\subsubsection*{Example of Questions for BayesDown
+extraction}\label{example-of-questions-for-bayesdown-extraction}
+\addcontentsline{toc}{subsubsection}{Example of Questions for BayesDown
+extraction}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\AnnotationTok{BayesDown Format Preview:}
+\FunctionTok{\# BayesDown Representation with Placeholder Probabilities}
+
+\NormalTok{/* This file contains BayesDown syntax with placeholder probabilities.}
+\NormalTok{   Replace the placeholders with actual probability values based on the }
+\NormalTok{   questions in the comments. */}
+
+\InformationTok{    /* What is the probability for Grass\_Wet=grass\_wet\_TRUE? */}
+\InformationTok{    /* What is the probability for Grass\_Wet=grass\_wet\_TRUE if Rain=rain\_TRUE, Sprinkler=sprinkler\_TRUE? */}
+\InformationTok{    /* What is the probability for Grass\_Wet=grass\_wet\_TRUE if Rain=rain\_TRUE, Sprinkler=sprinkler\_FALSE? */}
+\InformationTok{    /* What is the probability for Grass\_Wet=grass\_wet\_TRUE if Rain=rain\_FALSE, Sprinkler=sprinkler\_TRUE? */}
+\InformationTok{    /* What is the probability for Grass\_Wet=grass\_wet\_TRUE if Rain=rain\_FALSE, Sprinkler=sprinkler\_FALSE? */}
+\InformationTok{    /* What is the probability for Grass\_Wet=grass\_wet\_FALSE? */}
+\InformationTok{    /* What is the probability for Grass\_Wet=grass\_wet\_FALSE if Rain=rain\_TRUE, Sprinkler=sprinkler\_TRUE? */}
+\InformationTok{    /* What is the probability for Grass\_Wet=grass\_wet\_FALSE if Rain=rain\_TRUE, Sprinkler=sprinkler\_FALSE? */}
+\InformationTok{    /* What is the probability for Grass\_Wet=grass\_wet\_FALSE if Rain=rain\_FALSE, Sprinkler=sprinkler\_TRUE? */}
+\InformationTok{    /* What is the probability for Grass\_Wet=grass\_wet\_FALSE if Rain=rain\_FALSE, Sprinkler=sprinkler\_FALSE? */}
+\InformationTok{    [Grass\_Wet]: Concentrated moisture on, between and around the blades of grass. \{"instantiations": ["grass\_wet\_TRUE", "grass\_wet\_FALSE"], "priors": \{"What is the probability for Grass\_Wet=grass\_wet\_TRUE?": "\%?", "What is the probability for Grass\_Wet=grass\_wet\_FALSE?": "\%?"\}, "posteriors": \{"What is the probability for Grass\_Wet=grass\_wet\_TRUE if Rain=rain\_TRUE, Sprinkler=sprinkler\_TRUE?": "?\%", "What is the probability for Grass\_Wet=grass\_wet\_TRUE if Rain=rain\_TRUE, Sprinkler=sprinkler\_FALSE?": "?\%", "What is the probability for Grass\_Wet=grass\_wet\_TRUE if Rain=rain\_FALSE, Sprinkler=sprinkler\_TRUE?": "?\%", "What is the probability for Grass\_Wet=grass\_wet\_TRUE if Rain=rain\_FALSE, Sprinkler=sprinkler\_FALSE?": "?\%", "What is the probability for Grass\_Wet=grass\_wet\_FALSE if Rain=rain\_TRUE, Sprinkler=sprinkler\_TRUE?": "?\%", "What is the probability for Grass\_Wet=grass\_wet\_FALSE if Rain=rain\_TRUE, Sprinkler=sprinkler\_FALSE?": "?\%", "What is the probability for Grass\_Wet=grass\_wet\_FALSE if Rain=rain\_FALSE, Sprinkler=sprinkler\_TRUE?": "?\%", "What is the probability for Grass\_Wet=grass\_wet\_FALSE if Rain=rain\_FALSE, Sprinkler=sprinkler\_FALSE?": "?\%"\}\}}
+\InformationTok{        /* What is the probability for Rain=rain\_TRUE? */}
+\InformationTok{        /* What is the probability for Rain=rain\_FALSE? */}
+\InformationTok{        + [Rain]: Tears of angles crying high up in the skies hitting the ground. \{"instantiations": ["rain\_TRUE", "rain\_FALSE"], "priors": \{"What is the probability for Rain=rain\_TRUE?": "\%?", "What is the probability for Rain=rain\_FALSE?": "\%?"\}\}}
+\InformationTok{        /* What is the probability for Sprinkler=sprinkler\_TRUE? */}
+\InformationTok{        /* What is the probability for Sprinkler=sprinkler\_TRUE if Rain=rain\_TRUE? */}
+\InformationTok{        /* What is the probability for Sprinkler=sprinkler\_TRUE if Rain=rain\_FALSE? */}
+\InformationTok{        /* What is the probability for Sprinkler=sprinkler\_FALSE? */}
+\InformationTok{        /* What is the probability for Sprinkler=sprinkler\_FALSE if Rain=rain\_TRUE? */}
+\InformationTok{        /* What is the probability for Sprinkler=sprinkler\_FALSE if Rain=rain\_FALSE? */}
+\InformationTok{        + [Sprinkler]: Activation of a centrifugal force based CO2 droplet distribution system. \{"instantiations": ["sprinkler\_TRUE", "sprinkler\_FALSE"], "priors": \{"What is the probability for Sprinkler=sprinkler\_TRUE?": "\%?", "What is the probability for Sprinkler=sprinkler\_FALSE?": "\%?"\}, "posteriors": \{"What is the probability for Sprinkler=sprinkler\_TRUE if Rain=rain\_TRUE?": "?\%", "What is the probability for Sprinkler=sprinkler\_TRUE if Rain=rain\_FALSE?": "?\%", "What is the probability for Sprinkler=sprinkler\_FALSE if Rain=rain\_TRUE?": "?\%", "What is the probability for Sprinkler=sprinkler\_FALSE if Rain=rain\_FALSE?": "?\%"\}\}}
+\InformationTok{            /* What is the probability for Rain=rain\_TRUE? */}
+\InformationTok{            /* What is the probability for Rain=rain\_FALSE? */}
+\InformationTok{            + [Rain]}
+\end{Highlighting}
+\end{Shaded}
+
+\subsubsection*{Complete BayesDown
+Example}\label{complete-bayesdown-example}
+\addcontentsline{toc}{subsubsection}{Complete BayesDown Example}
+
+The source BayesDown syntax representating the fully specified network:
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\OtherTok{[Grass\_Wet]: }\NormalTok{Concentrated moisture on grass. \{"instantiations": }\CommentTok{[}\OtherTok{"grass\_wet\_TRUE", "grass\_wet\_FALSE"}\CommentTok{]}\NormalTok{,}
+\NormalTok{ "priors": \{"p(grass\_wet\_TRUE)": "0.322", "p(grass\_wet\_FALSE)": "0.678"\},}
+\NormalTok{ "posteriors": \{}
+\NormalTok{   "p(grass\_wet\_TRUE|sprinkler\_TRUE,rain\_TRUE)": "0.99",}
+\NormalTok{   "p(grass\_wet\_TRUE|sprinkler\_TRUE,rain\_FALSE)": "0.9",}
+\NormalTok{   "p(grass\_wet\_TRUE|sprinkler\_FALSE,rain\_TRUE)": "0.8",}
+\NormalTok{   "p(grass\_wet\_TRUE|sprinkler\_FALSE,rain\_FALSE)": "0.0"}
+\NormalTok{ \}\}}
+\SpecialStringTok{ + }\CommentTok{[}\OtherTok{Rain}\CommentTok{]}\NormalTok{: Water falling from sky. \{"instantiations": }\CommentTok{[}\OtherTok{"rain\_TRUE", "rain\_FALSE"}\CommentTok{]}\NormalTok{,}
+\NormalTok{    "priors": \{"p(rain\_TRUE)": "0.2", "p(rain\_FALSE)": "0.8"\}\}}
+\SpecialStringTok{ + }\CommentTok{[}\OtherTok{Sprinkler}\CommentTok{]}\NormalTok{: Artificial watering system. \{"instantiations": }\CommentTok{[}\OtherTok{"sprinkler\_TRUE", "sprinkler\_FALSE"}\CommentTok{]}\NormalTok{,}
+\NormalTok{    "priors": \{"p(sprinkler\_TRUE)": "0.448", "p(sprinkler\_FALSE)": "0.552"\},}
+\NormalTok{    "posteriors": \{}
+\NormalTok{      "p(sprinkler\_TRUE|rain\_TRUE)": "0.01",}
+\NormalTok{      "p(sprinkler\_TRUE|rain\_FALSE)": "0.4"}
+\NormalTok{    \}\}}
+\SpecialStringTok{   + }\CommentTok{[}\OtherTok{Rain}\CommentTok{]}
+\end{Highlighting}
+\end{Shaded}
+
+\subsubsection*{Resulting Rain-Sprinkler-Grass
+DataFrame}\label{resulting-rain-sprinkler-grass-dataframe}
+\addcontentsline{toc}{subsubsection}{Resulting Rain-Sprinkler-Grass
+DataFrame}
+
+\begin{landscape}
+
+\#\textbar{} column: page
+
+\begin{longtable}[]{@{}
+  >{\raggedright\arraybackslash}p{(\linewidth - 28\tabcolsep) * \real{0.0137}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 28\tabcolsep) * \real{0.0301}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 28\tabcolsep) * \real{0.1342}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 28\tabcolsep) * \real{0.0329}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 28\tabcolsep) * \real{0.0301}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 28\tabcolsep) * \real{0.0493}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 28\tabcolsep) * \real{0.0192}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 28\tabcolsep) * \real{0.0466}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 28\tabcolsep) * \real{0.0603}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 28\tabcolsep) * \real{0.0904}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 28\tabcolsep) * \real{0.1342}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 28\tabcolsep) * \real{0.1370}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 28\tabcolsep) * \real{0.0301}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 28\tabcolsep) * \real{0.0575}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 28\tabcolsep) * \real{0.1342}}@{}}
+\toprule\noalign{}
+\begin{minipage}[b]{\linewidth}\raggedright
+Title
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+Description
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+line
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+line\_numbers
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+indentation
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+indentation\_levels
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+Parents
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+Children
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+instantiations
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+priors
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+posteriors
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+No\_Parent
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+No\_Children
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+parent\_instantiations
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+\end{minipage} \\
+\midrule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+0 & Grass\_Wet & Concentrated moisture on, between and around t\ldots{}
+& 3 & {[}3{]} & 0 & {[}0{]} & {[}Rain, Sprinkler{]} & {[}{]} &
+{[}grass\_wet\_TRUE, grass\_wet\_FALSE{]} & \{`p(grass\_wet\_TRUE)':
+`0.322', 'p(grass\_wet\_FA\ldots{} &
+\{`p(grass\_wet\_TRUE\textbar sprinkler\_TRUE,rain\_TRUE)':\ldots{} &
+False & True & {[}{[}rain\_TRUE, rain\_FALSE{]}, {[}sprinkler\_TRUE,
+spr\ldots{} \\
+1 & Rain & Tears of angles crying high up in the skies hi\ldots{} & 4 &
+{[}4, 6{]} & 2 & {[}1, 2{]} & {[}{]} & {[}Grass\_Wet, Sprinkler{]} &
+{[}rain\_TRUE, rain\_FALSE{]} & \{`p(rain\_TRUE)': `0.2',
+`p(rain\_FALSE)': `0.8'\} & \{\} & True & False & {[}{]} \\
+2 & Sprinkler & Activation of a centrifugal force based CO2 dr\ldots{} &
+5 & {[}5{]} & 1 & {[}1{]} & {[}Rain{]} & {[}Grass\_Wet{]} &
+{[}sprinkler\_TRUE, sprinkler\_FALSE{]} & \{`p(sprinkler\_TRUE)':
+`0.44838', 'p(sprinkler\_\ldots{} &
+\{`p(sprinkler\_TRUE\textbar rain\_TRUE)': `0.01', 'p(spr\ldots{} &
+False & False & {[}{[}rain\_TRUE, rain\_FALSE{]}{]} \\
+\end{longtable}
+
+\end{landscape}
+
 \subsection*{3.4.3 Results}\label{sec-rsg-results}
 \addcontentsline{toc}{subsection}{3.4.3 Results}
 
-\begin{tcolorbox}[enhanced jigsaw, toptitle=1mm, opacitybacktitle=0.6, leftrule=.75mm, bottomrule=.15mm, left=2mm, arc=.35mm, colbacktitle=quarto-callout-tip-color!10!white, breakable, opacityback=0, title=\textcolor{quarto-callout-tip-color}{\faLightbulb}\hspace{0.5em}{Validation Success}, coltitle=black, colframe=quarto-callout-tip-color-frame, bottomtitle=1mm, titlerule=0mm, rightrule=.15mm, toprule=.15mm, colback=white]
+\subsection*{Rain-Sprinkler-Grass Network
+Rendering}\label{rain-sprinkler-grass-network-rendering-2}
+\addcontentsline{toc}{subsection}{Rain-Sprinkler-Grass Network
+Rendering}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\ImportTok{from}\NormalTok{ IPython.display }\ImportTok{import}\NormalTok{ IFrame}
+
+\NormalTok{IFrame(src}\OperatorTok{=}\StringTok{"https://singularitysmith.github.io/AMTAIR\_Prototype/bayesian\_network.html"}\NormalTok{, width}\OperatorTok{=}\StringTok{"100\%"}\NormalTok{, height}\OperatorTok{=}\StringTok{"600px"}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+\phantomsection\label{rain_sprinkler_grass_example_network_rendering2}
+\begin{verbatim}
+<IPython.lib.display.IFrame at 0x103badb10>
+\end{verbatim}
+
+Dynamic Html Rendering of the Rain-Sprinkler-Grass DAG with Conditional
+Probabilities
+
+\begin{tcolorbox}[enhanced jigsaw, breakable, opacityback=0, opacitybacktitle=0.6, bottomrule=.15mm, arc=.35mm, leftrule=.75mm, coltitle=black, titlerule=0mm, colback=white, bottomtitle=1mm, colframe=quarto-callout-tip-color-frame, toptitle=1mm, colbacktitle=quarto-callout-tip-color!10!white, title=\textcolor{quarto-callout-tip-color}{\faLightbulb}\hspace{0.5em}{Validation Success}, rightrule=.15mm, toprule=.15mm, left=2mm]
 
 The system successfully extracts complete network structure, preserves
 all probability information, calculates correct marginal probabilities,
@@ -5483,7 +5668,7 @@ interventions.
 \subsection*{3.7.3 Robustness Analysis}\label{sec-robustness}
 \addcontentsline{toc}{subsection}{3.7.3 Robustness Analysis}
 
-\begin{tcolorbox}[enhanced jigsaw, toptitle=1mm, opacitybacktitle=0.6, leftrule=.75mm, bottomrule=.15mm, left=2mm, arc=.35mm, colbacktitle=quarto-callout-tip-color!10!white, breakable, opacityback=0, title=\textcolor{quarto-callout-tip-color}{\faLightbulb}\hspace{0.5em}{Cross-Worldview Robustness}, coltitle=black, colframe=quarto-callout-tip-color-frame, bottomtitle=1mm, titlerule=0mm, rightrule=.15mm, toprule=.15mm, colback=white]
+\begin{tcolorbox}[enhanced jigsaw, breakable, opacityback=0, opacitybacktitle=0.6, bottomrule=.15mm, arc=.35mm, leftrule=.75mm, coltitle=black, titlerule=0mm, colback=white, bottomtitle=1mm, colframe=quarto-callout-tip-color-frame, toptitle=1mm, colbacktitle=quarto-callout-tip-color!10!white, title=\textcolor{quarto-callout-tip-color}{\faLightbulb}\hspace{0.5em}{Cross-Worldview Robustness}, rightrule=.15mm, toprule=.15mm, left=2mm]
 
 Policies must work across worldviews. AMTAIR enables multi-model
 evaluation, parameter sensitivity testing, scenario analysis, and
@@ -5549,7 +5734,7 @@ connection to live forecasting data.
 \subsection*{3.9.1 Design for Integration}\label{sec-integration-design}
 \addcontentsline{toc}{subsection}{3.9.1 Design for Integration}
 
-\begin{tcolorbox}[enhanced jigsaw, toptitle=1mm, opacitybacktitle=0.6, leftrule=.75mm, bottomrule=.15mm, left=2mm, arc=.35mm, colbacktitle=quarto-callout-note-color!10!white, breakable, opacityback=0, title=\textcolor{quarto-callout-note-color}{\faInfo}\hspace{0.5em}{Integration Architecture}, coltitle=black, colframe=quarto-callout-note-color-frame, bottomtitle=1mm, titlerule=0mm, rightrule=.15mm, toprule=.15mm, colback=white]
+\begin{tcolorbox}[enhanced jigsaw, breakable, opacityback=0, opacitybacktitle=0.6, bottomrule=.15mm, arc=.35mm, leftrule=.75mm, coltitle=black, titlerule=0mm, colback=white, bottomtitle=1mm, colframe=quarto-callout-note-color-frame, toptitle=1mm, colbacktitle=quarto-callout-note-color!10!white, title=\textcolor{quarto-callout-note-color}{\faInfo}\hspace{0.5em}{Integration Architecture}, rightrule=.15mm, toprule=.15mm, left=2mm]
 
 The system anticipates market connections through API specifications for
 major platforms, semantic matching algorithms, probability aggregation
@@ -5690,7 +5875,7 @@ Limitations}
 \markboth{4. Discussion: Implications and Limitations}{4. Discussion:
 Implications and Limitations}
 
-\begin{tcolorbox}[enhanced jigsaw, toptitle=1mm, opacitybacktitle=0.6, leftrule=.75mm, bottomrule=.15mm, left=2mm, arc=.35mm, colbacktitle=quarto-callout-note-color!10!white, breakable, opacityback=0, title=\textcolor{quarto-callout-note-color}{\faInfo}\hspace{0.5em}{Chapter Overview}, coltitle=black, colframe=quarto-callout-note-color-frame, bottomtitle=1mm, titlerule=0mm, rightrule=.15mm, toprule=.15mm, colback=white]
+\begin{tcolorbox}[enhanced jigsaw, breakable, opacityback=0, opacitybacktitle=0.6, bottomrule=.15mm, arc=.35mm, leftrule=.75mm, coltitle=black, titlerule=0mm, colback=white, bottomtitle=1mm, colframe=quarto-callout-note-color-frame, toptitle=1mm, colbacktitle=quarto-callout-note-color!10!white, title=\textcolor{quarto-callout-note-color}{\faInfo}\hspace{0.5em}{Chapter Overview}, rightrule=.15mm, toprule=.15mm, left=2mm]
 
 \textbf{Grade Weight}: 10\% \textbar{} \textbf{Target Length}:
 \textasciitilde14\% of text (\textasciitilde4,200 words)\\
@@ -6100,15 +6285,6 @@ parameters rather than requiring complete argument reconstruction
 \textbf{Exploration tools}: Stakeholders can modify assumptions and
 immediately see consequences, building intuition about model dynamics
 
-\begin{tcolorbox}[enhanced jigsaw, toptitle=1mm, opacitybacktitle=0.6, leftrule=.75mm, bottomrule=.15mm, left=2mm, arc=.35mm, colbacktitle=quarto-callout-tip-color!10!white, breakable, opacityback=0, title=\textcolor{quarto-callout-tip-color}{\faLightbulb}\hspace{0.5em}{Early Results}, coltitle=black, colframe=quarto-callout-tip-color-frame, bottomtitle=1mm, titlerule=0mm, rightrule=.15mm, toprule=.15mm, colback=white]
-
-Pilot studies with AI governance researchers show 40\% reduction in time
-to identify disagreements and 60\% improvement in agreement
-accuracy---though these specific quantitative claims require careful
-validation with larger samples.
-
-\end{tcolorbox}
-
 \section*{4.5 Scaling Challenges and Opportunities}\label{sec-scaling}
 \addcontentsline{toc}{section}{4.5 Scaling Challenges and Opportunities}
 
@@ -6276,6 +6452,11 @@ emerges from research and deployment
 \textbf{Uncertainty quantification}: Richer representation of deep
 uncertainty and model confidence
 
+\textcite{babakov2025}, \textcite{ban2023}, \textcite{bethard2007},
+\textcite{chen2023}, \textcite{duhem1954}, \textcite{heinze-deml2018},
+\textcite{meyer2022b}, \textcite{squires2023}, \textcite{squires2023},
+\textcite{yang2022}
+
 \subsection*{4.7.3 Application Domains}\label{sec-application-future}
 \addcontentsline{toc}{subsection}{4.7.3 Application Domains}
 
@@ -6412,7 +6593,7 @@ Governance}
 \markboth{5. Conclusion: Toward Coordinated AI Governance}{5.
 Conclusion: Toward Coordinated AI Governance}
 
-\begin{tcolorbox}[enhanced jigsaw, toptitle=1mm, opacitybacktitle=0.6, leftrule=.75mm, bottomrule=.15mm, left=2mm, arc=.35mm, colbacktitle=quarto-callout-note-color!10!white, breakable, opacityback=0, title=\textcolor{quarto-callout-note-color}{\faInfo}\hspace{0.5em}{Chapter Overview}, coltitle=black, colframe=quarto-callout-note-color-frame, bottomtitle=1mm, titlerule=0mm, rightrule=.15mm, toprule=.15mm, colback=white]
+\begin{tcolorbox}[enhanced jigsaw, breakable, opacityback=0, opacitybacktitle=0.6, bottomrule=.15mm, arc=.35mm, leftrule=.75mm, coltitle=black, titlerule=0mm, colback=white, bottomtitle=1mm, colframe=quarto-callout-note-color-frame, toptitle=1mm, colbacktitle=quarto-callout-note-color!10!white, title=\textcolor{quarto-callout-note-color}{\faInfo}\hspace{0.5em}{Chapter Overview}, rightrule=.15mm, toprule=.15mm, left=2mm]
 
 \textbf{Grade Weight}: 10\% \textbar{} \textbf{Target Length}:
 \textasciitilde14\% of text (\textasciitilde4,200 words)\\
@@ -6465,8 +6646,9 @@ Innovations}\label{sec-methodological-innovations}
 extraction (ArgDown) from probability quantification (BayesDown)
 addresses key challenges in automated formalization. This modularity
 enables human oversight at critical points, supports multiple
-quantification methods, and isolates different types of errors for
-targeted improvement.
+quantification methods, allows for unprecedented transparency and
+explainability of the entire process, and isolates different types of
+errors for targeted improvement.
 
 \textbf{BayesDown as Bridge Representation}: The development of
 BayesDown syntax creates a crucial intermediate representation
@@ -6509,9 +6691,10 @@ arguments like Carlsmith's model validates the core premise that
 implicit formal structures exist in natural language arguments and can
 be computationally recovered with reasonable fidelity.
 
-\textbf{Convergence Patterns}: Comparative analysis reveals surprising
-structural agreement across worldviews even when probability estimates
-diverge dramatically. This suggests shared causal understanding despite
+\textbf{Convergence Patterns}: Comparative analysis reveals structural
+agreement across repeated extraction even when probability estimates
+diverge substantially. This suggests shared understanding of the
+understanding causal models, argument structure and worldview despite
 parameter disagreements---a foundation for coordination.
 
 \textbf{Intervention Impacts}: Policy evaluation demonstrates how formal
@@ -6532,20 +6715,21 @@ capabilities and should guide appropriate use.
 Constraints}\label{sec-technical-constraints}
 \addcontentsline{toc}{subsection}{5.2.1 Technical Constraints}
 
-\textbf{Extraction Boundaries}: While 73-85\% accuracy suffices for many
-purposes, systematic biases remain. The system struggles with implicit
-assumptions, complex conditionals, and context-dependent meanings. These
-limitations necessitate human review for high-stakes applications.
+\textbf{Extraction Boundaries}: Potential sources of systematic biases
+and confounding variables remain. Similar to experts, the automated
+system still struggles with implicit and hidden assumptions and complex
+conditionals. These limitations necessitate human review for high-stakes
+applications.
 
-\textbf{Correlation Handling}: Standard Bayesian networks inadequately
-represent complex correlations in real systems. While extensions like
-copulas and explicit correlation nodes help, fully capturing
-interdependencies remains challenging.
+\textbf{Correlation Handling}: Over simplified Bayesian networks
+inadequately represent complex correlations in real systems. While
+extensions like copulas and explicit correlation nodes help, fully
+capturing interdependencies remains challenging.
 
-\textbf{Computational Scaling}: Very large networks (\textgreater50
-nodes) require approximations that may affect accuracy. As models grow
-to represent richer phenomena, computational constraints increasingly
-bind.
+\textbf{Computational Scaling}: Very large networks
+(\textgreater\textgreater500 nodes) require approximations that may
+affect accuracy. As models grow to represent richer phenomena,
+computational constraints increasingly bind.
 
 \subsection*{5.2.2 Conceptual
 Limitations}\label{sec-conceptual-limitations}
@@ -6553,15 +6737,15 @@ Limitations}\label{sec-conceptual-limitations}
 
 \textbf{Formalization Trade-offs}: Converting rich arguments to formal
 models necessarily loses nuance. While making assumptions explicit
-provides value, some insights resist mathematical representation.
+provides value, some unspoken insights may resist clear mathematical
+representation.
 
 \textbf{Probability Interpretation}: Deep uncertainty about
-unprecedented events challenges probabilistic representation. Numbers
-can create false precision even when explicitly conditional and
-uncertain.
+unprecedented events challenges probabilistic intuitions. Numbers can
+create false precision even when explicitly conditional and uncertain.
 
 \textbf{Social Complexity}: Institutional dynamics, cultural factors,
-and political processes influence AI development in ways that simple
+and political processes influence AI development in ways that purely
 causal models struggle to capture.
 
 \subsection*{5.2.3 Practical
@@ -6577,8 +6761,8 @@ and evidence emerges. Without sustained effort, formal representations
 quickly become outdated.
 
 \textbf{Context Dependence}: The approach works best for well-structured
-academic arguments. Application to informal discussions, political
-speeches, or social media remains challenging.
+academic arguments. Application to ``fuzzy'' informal discussions,
+political speeches, or social media remains challenging.
 
 \section*{5.3 Implications for AI
 Governance}\label{sec-governance-implications}
@@ -6687,7 +6871,7 @@ Researchers}\label{sec-researcher-recommendations}
   alongside traditional papers to enable cumulative building
 \end{enumerate}
 
-\begin{tcolorbox}[enhanced jigsaw, toptitle=1mm, opacitybacktitle=0.6, leftrule=.75mm, bottomrule=.15mm, left=2mm, arc=.35mm, colbacktitle=quarto-callout-tip-color!10!white, breakable, opacityback=0, title=\textcolor{quarto-callout-tip-color}{\faLightbulb}\hspace{0.5em}{Quick Start Guide}, coltitle=black, colframe=quarto-callout-tip-color-frame, bottomtitle=1mm, titlerule=0mm, rightrule=.15mm, toprule=.15mm, colback=white]
+\begin{tcolorbox}[enhanced jigsaw, breakable, opacityback=0, opacitybacktitle=0.6, bottomrule=.15mm, arc=.35mm, leftrule=.75mm, coltitle=black, titlerule=0mm, colback=white, bottomtitle=1mm, colframe=quarto-callout-tip-color-frame, toptitle=1mm, colbacktitle=quarto-callout-tip-color!10!white, title=\textcolor{quarto-callout-tip-color}{\faLightbulb}\hspace{0.5em}{Quick Start Guide}, rightrule=.15mm, toprule=.15mm, left=2mm]
 
 A comprehensive guide for researchers getting started with AMTAIR will
 be available at {[}project website{]}, including templates, tutorials,
@@ -6803,8 +6987,8 @@ interventions for epistemic security
 Expansion}\label{sec-application-expansion}
 \addcontentsline{toc}{subsection}{5.5.3 Application Expansion}
 
-\textbf{Domain Extensions}: - Climate risk assessment and policy
-evaluation - Biosecurity governance and pandemic preparedness - Nuclear
+\textbf{Domain Extensions}: - Biosecurity governance and pandemic
+preparedness - Cyber risk assessment and policy evaluation - Nuclear
 policy and deterrence stability - Emerging technology governance broadly
 
 \textbf{Institutional Integration}: - Embedding in regulatory impact
@@ -6852,7 +7036,7 @@ it's whether we can augment our collective intelligence with
 computational tools that help us reason together about futures too
 important to leave to chance.
 
-\begin{tcolorbox}[enhanced jigsaw, toptitle=1mm, opacitybacktitle=0.6, leftrule=.75mm, bottomrule=.15mm, left=2mm, arc=.35mm, colbacktitle=quarto-callout-important-color!10!white, breakable, opacityback=0, title=\textcolor{quarto-callout-important-color}{\faExclamation}\hspace{0.5em}{The Stakes}, coltitle=black, colframe=quarto-callout-important-color-frame, bottomtitle=1mm, titlerule=0mm, rightrule=.15mm, toprule=.15mm, colback=white]
+\begin{tcolorbox}[enhanced jigsaw, breakable, opacityback=0, opacitybacktitle=0.6, bottomrule=.15mm, arc=.35mm, leftrule=.75mm, coltitle=black, titlerule=0mm, colback=white, bottomtitle=1mm, colframe=quarto-callout-important-color-frame, toptitle=1mm, colbacktitle=quarto-callout-important-color!10!white, title=\textcolor{quarto-callout-important-color}{\faExclamation}\hspace{0.5em}{The Stakes}, rightrule=.15mm, toprule=.15mm, left=2mm]
 
 As AI capabilities advance toward transformative potential, the window
 for establishing effective governance narrows. We cannot afford
@@ -6878,211 +7062,7 @@ equal to the task, for all our futures depend on it.
 
 \printbibliography[heading=none]
 
-\bookmarksetup{startatroot}
-
-\chapter*{Appendices}\label{sec-appendices}
-\addcontentsline{toc}{chapter}{Appendices}
-
-\markboth{Appendices}{Appendices}
-
-\section*{Appendix A: Technical Implementation
-Details}\label{sec-appendix-technical}
-\addcontentsline{toc}{section}{Appendix A: Technical Implementation
-Details}
-
-\markright{Appendix A: Technical Implementation Details}
-
-\begin{verbatim}
-
-Contents:
-
-- Full API specifications
-- Architectural diagrams with component details
-- Code structure and organization
-- Deployment instructions
-- Performance optimization guides
-\end{verbatim}
-
-\subsection*{A.1 Core Data Structures}\label{sec-data-structures}
-\addcontentsline{toc}{subsection}{A.1 Core Data Structures}
-
-The AMTAIR system employs several custom data structures optimized for
-representing hierarchical arguments with probabilistic metadata:
-
-\begin{Shaded}
-\begin{Highlighting}[]
-\AttributeTok{@dataclass}
-\KeywordTok{class}\NormalTok{ BayesDownNode:}
-    \CommentTok{"""Represents a single node in the BayesDown format"""}
-\NormalTok{    title: }\BuiltInTok{str}
-\NormalTok{    description: }\BuiltInTok{str}
-\NormalTok{    instantiations: List[}\BuiltInTok{str}\NormalTok{]}
-\NormalTok{    priors: Dict[}\BuiltInTok{str}\NormalTok{, }\BuiltInTok{float}\NormalTok{] }\OperatorTok{=}\NormalTok{ field(default\_factory}\OperatorTok{=}\BuiltInTok{dict}\NormalTok{)}
-\NormalTok{    posteriors: Dict[}\BuiltInTok{str}\NormalTok{, }\BuiltInTok{float}\NormalTok{] }\OperatorTok{=}\NormalTok{ field(default\_factory}\OperatorTok{=}\BuiltInTok{dict}\NormalTok{)}
-\NormalTok{    parents: List[}\BuiltInTok{str}\NormalTok{] }\OperatorTok{=}\NormalTok{ field(default\_factory}\OperatorTok{=}\BuiltInTok{list}\NormalTok{)}
-\NormalTok{    children: List[}\BuiltInTok{str}\NormalTok{] }\OperatorTok{=}\NormalTok{ field(default\_factory}\OperatorTok{=}\BuiltInTok{list}\NormalTok{)}
-\NormalTok{    metadata: Dict[}\BuiltInTok{str}\NormalTok{, Any] }\OperatorTok{=}\NormalTok{ field(default\_factory}\OperatorTok{=}\BuiltInTok{dict}\NormalTok{)}
-\end{Highlighting}
-\end{Shaded}
-
-\subsection*{A.2 Extraction Algorithm
-Details}\label{sec-extraction-details}
-\addcontentsline{toc}{subsection}{A.2 Extraction Algorithm Details}
-
-\subsection*{A.3 API Specifications}\label{sec-api-specs}
-\addcontentsline{toc}{subsection}{A.3 API Specifications}
-
-\section*{Appendix B: Validation Datasets and
-Procedures}\label{sec-appendix-validation}
-\addcontentsline{toc}{section}{Appendix B: Validation Datasets and
-Procedures}
-
-\markright{Appendix B: Validation Datasets and Procedures}
-
-\begin{verbatim}
-Contents:
-- Benchmark dataset descriptions
-- Annotation guidelines
-- Inter-rater reliability protocols
-- Statistical analysis procedures
-- Replication instructions
-\end{verbatim}
-
-\subsection*{B.1 Expert Annotation
-Protocol}\label{sec-annotation-protocol}
-\addcontentsline{toc}{subsection}{B.1 Expert Annotation Protocol}
-
-\subsection*{B.2 Benchmark Dataset
-Construction}\label{sec-benchmark-construction}
-\addcontentsline{toc}{subsection}{B.2 Benchmark Dataset Construction}
-
-\subsection*{B.3 Validation Results}\label{sec-validation-results}
-\addcontentsline{toc}{subsection}{B.3 Validation Results}
-
-\section*{Appendix C: Extended Case Studies}\label{sec-appendix-cases}
-\addcontentsline{toc}{section}{Appendix C: Extended Case Studies}
-
-\markright{Appendix C: Extended Case Studies}
-
-\begin{verbatim}
-Include:
-- Christiano's "What failure looks like"
-- Critch's ARCHES model
-- Additional policy evaluation scenarios
-- Comparative analysis across models
-\end{verbatim}
-
-\subsection*{C.1 Christiano's ``What Failure Looks Like''
-Extraction}\label{sec-christiano-extraction}
-\addcontentsline{toc}{subsection}{C.1 Christiano's ``What Failure Looks
-Like'' Extraction}
-
-\subsection*{C.2 Critch's ARCHES Model}\label{sec-critch-extraction}
-\addcontentsline{toc}{subsection}{C.2 Critch's ARCHES Model}
-
-\subsection*{C.3 Policy Evaluation: A Narrow
-Path}\label{sec-narrow-path-evaluation}
-\addcontentsline{toc}{subsection}{C.3 Policy Evaluation: A Narrow Path}
-
-\section*{Appendix D: BayesDown Syntax
-Specification}\label{sec-appendix-bayesdown}
-\addcontentsline{toc}{section}{Appendix D: BayesDown Syntax
-Specification}
-
-\markright{Appendix D: BayesDown Syntax Specification}
-
-\begin{verbatim}
-Contents:
-- Full syntax definition
-- Validation rules
-- Example transformations
-- Implementation notes
-- Extension possibilities
-\end{verbatim}
-
-\section*{Appendix E: Prompt Engineering
-Details}\label{sec-appendix-prompts}
-\addcontentsline{toc}{section}{Appendix E: Prompt Engineering Details}
-
-\markright{Appendix E: Prompt Engineering Details}
-
-\begin{verbatim}
-Include:
-- Full extraction prompts with annotations
-- Iterative refinement history
-- Ablation study results
-- Best practices guide
-- Common failure patterns
-\end{verbatim}
-
-\section*{Appendix F: User Guide}\label{sec-appendix-userguide}
-\addcontentsline{toc}{section}{Appendix F: User Guide}
-
-\markright{Appendix F: User Guide}
-
-\begin{verbatim}
-Sections:
-- Getting started with AMTAIR
-- Creating your first extraction
-- Interpreting visualizations
-- Policy evaluation walkthrough
-- Troubleshooting common issues
-\end{verbatim}
-
-\section*{Appendix G: Jupyter Notebook
-Implementation}\label{sec-appendix-notebook}
-\addcontentsline{toc}{section}{Appendix G: Jupyter Notebook
-Implementation}
-
-\markright{Appendix G: Jupyter Notebook Implementation}
-
-The complete implementation is available as an interactive Jupyter
-notebook demonstrating:
-
-\begin{itemize}
-\tightlist
-\item
-  Environment setup and configuration
-\item
-  Step-by-step extraction pipeline
-\item
-  Visualization generation
-\item
-  Policy evaluation examples
-\item
-  Performance benchmarking
-\end{itemize}
-
-\section*{Appendix H: Ethical Considerations and
-Governance}\label{sec-appendix-ethical}
-\addcontentsline{toc}{section}{Appendix H: Ethical Considerations and
-Governance}
-
-\markright{Appendix H: Ethical Considerations and Governance}
-
-\subsection*{H.1 Potential Misuse Scenarios}\label{sec-misuse-scenarios}
-\addcontentsline{toc}{subsection}{H.1 Potential Misuse Scenarios}
-
-\subsection*{H.2 Democratic Participation
-Frameworks}\label{sec-democratic-frameworks}
-\addcontentsline{toc}{subsection}{H.2 Democratic Participation
-Frameworks}
-
-\subsection*{H.3 Responsibility Assignment}\label{sec-responsibility}
-\addcontentsline{toc}{subsection}{H.3 Responsibility Assignment}
-
-\section*{Appendix I: Full Extraction
-Examples}\label{sec-appendix-examples}
-\addcontentsline{toc}{section}{Appendix I: Full Extraction Examples}
-
-\markright{Appendix I: Full Extraction Examples}
-
-\section*{Appendix J: Software Installation and Usage
-Guide}\label{sec-appendix-software}
-\addcontentsline{toc}{section}{Appendix J: Software Installation and
-Usage Guide}
-
-\markright{Appendix J: Software Installation and Usage Guide}
+\texttt{\{\ embed\ I.Appendices.qmd\ \}}
 
 \bookmarksetup{startatroot}
 

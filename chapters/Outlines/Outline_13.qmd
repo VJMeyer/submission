@@ -51,23 +51,22 @@ I hope this work contributes to building the intellectual and technical infrastr
 ## Acknowledgments {.unnumbered}
 
 <!-- [ ] TODO: Add specific names and contributions --> 
+
+
 <!-- [ ] ADD CONDITIONAL ON INCLUSION OF EXTRA EXTRACTION SECTION: Mention/Acknowledgement of Johannes Meyer and Jelena Meyer for their help to verify the automated extraction procedure by manually extracting the argdown and bayesdown data from the carlsmith paper (AND extra, other second paper) -->
 
 I thank my supervisor Dr. Timo Speith for guidance throughout this project, the MTAIR team for pioneering the manual approach that inspired automation, and the AI safety community for creating the rich literature that made this work possible. Special recognition goes to technical advisors who provided invaluable feedback and Coleman Snell for his partnership and research collaboration with the AMTAIR project. Any errors or limitations remain my own responsibility.
 
-# Table of Contents {.unnumbered}
-
-<!-- Quarto auto-generates TOC -->
 
 # List of Figures {.unnumbered}
 
-<!-- [ ] TODO: Verify all figures are properly labeled and captioned --> 
+<!-- [ ] LATER VERIFY: Verify all figures are properly labeled and captioned --> 
 
 <!-- Quarto auto-generates LOF -->
 
 # List of Tables {.unnumbered}
 
-<!-- [ ] TODO: Ensure all tables have proper captions --> 
+<!-- [ ] LATER VERIFY: Ensure all tables have proper captions --> 
 
 <!-- Quarto auto-generates LOT -->
 
@@ -90,6 +89,16 @@ NLP - Natural Language Processing
 P&E - Philosophy & Economics  
 PDF - Portable Document Format  
 TAI - Transformative Artificial Intelligence
+
+
+
+
+
+
+
+
+
+
 
 # 1. Introduction: The Coordination Crisis in AI Governance {#sec-introduction}
 
@@ -151,13 +160,17 @@ Yet alongside this activity, we observe systematic coordination failures that ma
 
 ### 1.2.1 Safety Gaps from Misaligned Efforts {#sec-safety-gaps}
 
-<!-- [ ] TODO: Document how fragmentation systematically increases risk through specific examples -->
+<!-- [ ] TODO: Document how fragmentation systematically increases risk through with specific, good examples -->
 
 The fragmentation problem manifests in incompatible frameworks between technical researchers, policy specialists, and strategic analysts. Each community develops sophisticated approaches within their domain, yet translation between domains remains primitive. This creates systematic blind spots where risks emerge at the interfaces between technical capabilities, institutional responses, and strategic dynamics.
 
 When different communities operate with incompatible frameworks, critical risks fall through the cracks. Technical researchers may solve alignment problems under assumptions that policymakers' decisions invalidate. Regulations optimized for current systems may inadvertently incentivize dangerous development patterns. Without shared models of the risk landscape, our collective efforts resemble the parable of blind men describing an elephant—each accurate within their domain but missing the complete picture.
 
-<!-- [ ] FIND: @coordination-failure-examples: "Specific historical examples of coordination failures in technology governance" -->
+
+
+<!-- [ ] FIND: @coordination-failure-examples: "Specific historical examples of coordination failures in technology governance" -- arms races to nobodies benefit -- technological race to ?? -->
+
+
 
 <!-- [ ] ADD: @paul2023 from Url: https://www.prismaguard.com/the-elephaint-are-we-all-like-the-six-blind-men-when-it-comes-to-ai/ for blind men elephant vs ai risk analogy--> 
 
@@ -165,7 +178,7 @@ When different communities operate with incompatible frameworks, critical risks 
 
 ### 1.2.2 Resource Misallocation {#sec-resource-misallocation}
 
-<!-- [ ] TODO: Provide concrete statistics on research funding, publications, and initiatives -->
+<!-- [ ] TODO: Explain that duplicative efforts absorbing research funding, publications, and initiatives might sometimes improve reliability (think reproducing results) but tend to waste resources in expectation (opportuntity cost) -- change the tone of the paragraph accordingly  -->
 
 The AI safety community duplicates efforts while leaving critical areas underexplored. Multiple teams independently develop similar frameworks without building on each other's work. Funders struggle to identify high-impact opportunities across technical and governance domains. Talent flows toward well-publicized approaches while neglected strategies remain understaffed. This misallocation becomes more costly as the window for establishing effective governance narrows.
 
@@ -181,7 +194,25 @@ Perhaps most concerning, uncoordinated interventions can actively increase risk.
 Coordination failures systematically amplify existential risk through multiple pathways. Safety gaps emerge when technical solutions lack policy implementation pathways. Resource misallocation occurs when multiple teams unknowingly duplicate efforts while critical areas remain unaddressed. Most perniciously, locally optimized decisions by individual actors can create negative-sum dynamics that increase overall risk—an AI governance tragedy of the commons.
 :::
 
-<!-- [ ] FIND: @negative-sum-policy: "Game-theoretic analysis of how uncoordinated AI policies can backfire" -->
+<!-- [ ] ADD: @armstrong2016: "Racing to the precipice: a model of artificial intelligence development"
+    Add detailed explanation: "Game-theoretic analysis of how uncoordinated AI policies can backfire"  
+
+
+-->
+
+@armstrong2016
+
+<!-- [ ] ADD: @samuel2023, @hunt2025, @trager2025, 
+    Cite all and explain in detail: -- prisoners dilemma vs. stag hunt -- anbody builds it everyone dies
+-->
+
+
+
+@samuel2023, @hunt2025
+
+
+
+<!-- [ ] LATER ADD: Citation for unpublished "anbody builds it everyone dies (soares & yudkowsky)" -->
 
 ## 1.3 Historical Parallels and Temporal Urgency {#sec-historical-urgency}
 
@@ -233,7 +264,7 @@ To break this down into its components:
 
 The investigation encompasses both theoretical development and practical implementation, focusing specifically on existential risks from misaligned AI systems rather than broader AI ethics concerns. This narrowed scope enables deep technical development while addressing the highest-stakes coordination challenges.
 
-<!-- [ ] TODO: Refine thesis statement based on advisor feedback -->
+<!-- [ ] LATER TODO: Refine thesis statement based on advisor feedback -->
 
 ## 1.5 The Multiplicative Benefits Framework {#sec-multiplicative-benefits}
 
@@ -241,7 +272,10 @@ The investigation encompasses both theoretical development and practical impleme
 
 The central thesis of this work is that combining three elements—automated worldview extraction, prediction market integration, and formal policy evaluation—creates multiplicative rather than merely additive benefits for AI governance. Each component enhances the others, creating a system more valuable than the sum of its parts.
 
-<!-- [ ] CREATE: {#fig-multiplicative-benefits}: "Venn diagram showing synergies between extraction, markets, and evaluation" -->
+<!-- [ ] CREATE: {#fig-multiplicative-benefits}: "Venn diagram showing synergies between extraction, markets, and evaluation": 	Automation × Live Prediction Market Integrations × Policy Impact Evaluations
+
+    - re-reference in Conclusion
+ -->
 
 ### 1.5.1 Automated Worldview Extraction {#sec-automated-extraction}
 
@@ -340,12 +374,14 @@ Having established the coordination crisis and outlined how automated modeling c
 **Requirements**: Demonstrates understanding of relevant concepts, explains relevance, situates in debate, reconstructs arguments 
 :::
 
-<!-- [ ] TODO: Add conceptual dependency diagram showing prerequisite knowledge --> 
-<!-- [ ] TODO: Create "Background Knowledge" boxes for key concepts -->
+
+
+
+<!-- [ ] TODO: Create "Background Knowledge" footnotes for key concepts -->
 
 ## 2.1 AI Existential Risk: The Carlsmith Model {#sec-carlsmith-model}
 
-<!-- [ ] TODO: Examine Joe Carlsmith's probabilistic model of power-seeking AI -->
+<!-- [ ] TODO: Provide overview of Joe Carlsmith's probabilistic model of power-seeking AI -->
 
 ::: {.merge-candidate data-merge-with="Outline_11.7#carlsmith-model"} 
 Carlsmith's "Is Power-Seeking AI an Existential Risk?" (2021) represents one of the most structured approaches to assessing the probability of existential catastrophe from advanced AI. The analysis decomposes the overall risk into six key premises, each with an explicit probability estimate. 
@@ -368,39 +404,43 @@ To ground our discussion in concrete terms, I examine Joseph Carlsmith's "Is Pow
 
 ### 2.1.1 Six-Premise Decomposition {#sec-six-premise}
 
+<!-- [ ] ADD: @clarke2022 citation -->
+
 ::: {.duplicate-content data-source="Outline_11.7#six-premise"} 
-Carlsmith decomposes existential risk into a probabilistic chain with explicit estimates:
+According to the MTAIR model Carlsmith decomposes existential risk into a probabilistic chain with explicit estimates:
 
-1. **Premise 1**: Transformative AI development this century (P ≈ 0.80)
-2. **Premise 2**: AI systems pursuing objectives in the world (P ≈ 0.95)
-3. **Premise 3**: Systems with power-seeking instrumental incentives (P ≈ 0.40)
-4. **Premise 4**: Sufficient capability for existential threat (P ≈ 0.65)
-5. **Premise 5**: Misaligned systems despite safety efforts (P ≈ 0.50)
-6. **Premise 6**: Catastrophic outcomes from misaligned power-seeking (P ≈ 0.65)
+1. **Premise 1**: Transformative AI development this century $(P ≈ 0.80)$
+2. **Premise 2**: AI systems pursuing objectives in the world $(P ≈ 0.95)$
+3. **Premise 3**: Systems with power-seeking instrumental incentives $(P ≈ 0.40)$
+4. **Premise 4**: Sufficient capability for existential threat $(P ≈ 0.65)$
+5. **Premise 5**: Misaligned systems despite safety efforts $(P ≈ 0.50)$
+6. **Premise 6**: Catastrophic outcomes from misaligned power-seeking $(P ≈ 0.65)$
 
-**Composite Risk Calculation**: P(doom) ≈ 0.05 (5%) 
+**Composite Risk Calculation**: $P(doom) ≈ 0.05$ (5%) 
 :::
+
+<!-- [ ] CREATE: Mermaid flowchart of Carlsmith model with probabilities (in correct Quarto Syntax)-->
 
 Carlsmith structures his argument through six conditional premises, each assigned explicit probability estimates:
 
-**Premise 1: APS Systems by 2070** (P ≈ 0.65)^[The probability estimates vary between outlines; using more conservative estimates from 12.2] "By 2070, there will be AI systems with Advanced capability, Agentic planning, and Strategic awareness"—the conjunction of capabilities that could enable systematic pursuit of objectives in the world.
+**Premise 1: APS Systems by 2070** $(P ≈ 0.65)$^[The probability estimates vary between outlines; using more conservative estimates from 12.2] "By 2070, there will be AI systems with Advanced capability, Agentic planning, and Strategic awareness"—the conjunction of capabilities that could enable systematic pursuit of objectives in the world.
 
-**Premise 2: Alignment Difficulty** (P ≈ 0.40)  
+**Premise 2: Alignment Difficulty** $(P ≈ 0.40)  $
 "It will be harder to build aligned APS systems than misaligned systems that are still attractive to deploy"—capturing the challenge that safety may conflict with capability or efficiency.
 
-**Premise 3: Deployment Despite Misalignment** (P ≈ 0.70)  
+**Premise 3: Deployment Despite Misalignment** $(P ≈ 0.70)  $
 "Conditional on 1 and 2, we will deploy misaligned APS systems"—reflecting competitive pressures and limited coordination.
 
-**Premise 4: Power-Seeking Behavior** (P ≈ 0.65)  
+**Premise 4: Power-Seeking Behavior** $(P ≈ 0.65)  $
 "Conditional on 1-3, misaligned APS systems will seek power in high-impact ways"—based on instrumental convergence arguments.
 
-**Premise 5: Disempowerment Success** (P ≈ 0.40)  
+**Premise 5: Disempowerment Success** $(P ≈ 0.40)  $
 "Conditional on 1-4, power-seeking will scale to permanent human disempowerment"—despite potential resistance and safeguards.
 
-**Premise 6: Existential Catastrophe** (P ≈ 0.95)  
+**Premise 6: Existential Catastrophe** $(P ≈ 0.95)  $
 "Conditional on 1-5, this disempowerment constitutes existential catastrophe"—connecting power loss to permanent curtailment of human potential.
 
-**Overall Risk**: Multiplying through the conditional chain yields P(doom) ≈ 0.05 or 5% by 2070.
+**Overall Risk**: Multiplying through the conditional chain yields $P(doom) ≈ 0.05$ or 5% by 2070.
 
 This structured approach exemplifies the type of reasoning AMTAIR aims to formalize and automate. While Carlsmith spent months developing this model manually, similar rigor exists implicitly in many AI safety arguments awaiting extraction.
 
@@ -422,12 +462,14 @@ Carlsmith's model demonstrates several features that make it ideal for formal re
 
 **Documented Reasoning**: Extensive justification for each probability enables extraction of both structure and parameters from the source text.
 
-<!-- [ ] TODO: Extract two additional "inside view" world models for comparison --> 
+<!-- [ ] LATER TODO: Extract two additional "inside view" world models for comparison --> 
 <!-- [ ] ADD: @christiano2019: "Christiano, P. (2019). What failure looks like. AI Alignment Forum." -->
+
+@christiano2019
 
 ## 2.2 The Epistemic Challenge of Policy Evaluation {#sec-epistemic-challenge}
 
-<!-- [ ] TODO: Explore why evaluating AI governance policies is particularly difficult -->
+<!-- [ ] TODO: Explain why evaluating AI governance policies is particularly difficult -->
 
 AI governance policy evaluation faces unique epistemic challenges that render traditional policy analysis methods insufficient. Understanding these challenges motivates the need for new computational approaches.
 
@@ -479,7 +521,7 @@ These limitations create a methodological gap: we need approaches that handle de
 
 ### 2.2.3 Toward New Epistemic Tools {#sec-new-epistemic-tools}
 
-<!-- [ ] TODO: Bridge from limitations to the need for computational approaches -->
+<!-- [ ] TODO: Bridge from limitations to the need for automated, computational approaches -->
 
 The inadequacy of traditional methods for AI governance creates an urgent need for new epistemic tools. These tools must:
 
@@ -494,6 +536,37 @@ The inadequacy of traditional methods for AI governance creates an urgent need f
 
 The computational approaches developed in this thesis—particularly Bayesian networks enhanced with automated extraction—directly address each of these requirements by providing formal frameworks for reasoning under uncertainty.
 :::
+
+
+<!-- [ ] ADD: @mccaslin2024 cite and write about "Conditional Trees: A Method for Generating Informative Questions about Complex Topics" -->
+
+@mccaslin2024
+
+<!-- [ ] ADD @gruetzemacher2022 cite and summarize the relevant aspects, infered from his abstract:
+::: {.callout-tip}
+    We evaluate the strengths and weaknesses of
+    Bayesian networks and a specific subset of
+    Bayesian networks—conditional trees—for creating questions for forecasting tournaments, particularly in the context of high uncertainty forecasts
+    such as for technological forecasting or for the
+    forecasting of existential risk. A conditional tree
+    takes the probability of a final outcome and divides
+    it among a sequence of conditioning nodes that
+    would have the maximal impact on the final outcome. This framework can be used to identify the
+    maximally impactful questions to ask in forecasting tournaments through the evaluation of conditional trees using an evidence ratio. However, conditional trees are not without limitations. In this
+    study, we describe applications in which Bayesian
+    networks resolve some of the limitations of conditional trees, but often at additional costs. We further
+    discuss when it is best to use each of the methods,
+    and we make some suggestions for the particular
+    contexts of generating forecasting questions for
+    technological forecasting and the forecasting of
+    existential risk.
+:::
+
+-->
+
+
+@gruetzemacher2022
+
 
 ## 2.3 Bayesian Networks as Knowledge Representation {#sec-bayesian-networks}
 
@@ -510,8 +583,10 @@ A Bayesian network consists of:
 - **Conditional Probability Tables (CPTs)**: For each node, P(node|parents) quantifies relationships
 
 The joint probability distribution factors according to the graph structure:
-
-P(X1,X2,...,Xn)=∏i=1nP(Xi∣Parents(Xi))P(X_1, X_2, ..., X_n) = \prod_{i=1}^{n} P(X_i | Parents(X_i))P(X1​,X2​,...,Xn​)=i=1∏n​P(Xi​∣Parents(Xi​))
+<!-- [ ] CHECK: if this equation is correct -->
+$$
+ P(X1,X2,...,Xn)=∏i=1nP(Xi∣Parents(Xi))P(X_1, X_2, ..., X_n) = \prod_{i=1}^{n} P(X_i | Parents(X_i))P(X1​,X2​,...,Xn​)=i=1∏n​P(Xi​∣Parents(Xi​)) 
+$$
 
 This factorization enables efficient inference and embodies causal assumptions explicitly.
 :::
@@ -537,7 +612,12 @@ Network Structure:
 - **Sprinkler** (intermediate): P(sprinkler|rain) varies by rain state
 - **Grass_Wet** (effect): P(wet|rain, sprinkler) depends on both causes
 
+<!-- [ ] CREATE: Mermaid flowchart of Rain-Sprinkler-Grass model with probabilities (in correct Quarto Syntax)-->
+
 ::: {.merge-candidate data-merge-with="Outline_11.7#rain-sprinkler-code"}
+
+
+
 
 python
 
@@ -565,6 +645,23 @@ This simple network demonstrates:
 
 <!-- [ ] CREATE: {#fig-rain-sprinkler-network}: "Visual Bayesian network for rain-sprinkler-grass with CPTs" -->
 
+### Rain-Sprinkler-Grass Network Rendering
+```{python}
+#| label: rain_sprinkler_grass_example_network_rendering
+#| echo: true
+#| eval: true
+#| fig-cap: "Dynamic Html Rendering of the Rain-Sprinkler-Grass DAG with Conditional Probabilities"
+#| fig-link: "https://singularitysmith.github.io/AMTAIR_Prototype/bayesian_network.html"
+#| fig-alt: "Dynamic Html Rendering of the Rain-Sprinkler-Grass DAG"
+
+
+from IPython.display import IFrame
+
+IFrame(src="https://singularitysmith.github.io/AMTAIR_Prototype/bayesian_network.html", width="100%", height="600px")
+```
+
+
+
 ### 2.3.3 Advantages for AI Risk Modeling {#sec-modeling-advantages}
 
 ::: {.redundant-content data-better-version="Outline_11.7#modeling-advantages"} 
@@ -578,7 +675,6 @@ These features address key requirements for AI governance:
 - **Enabling Analysis**: Formal inference algorithms support systematic evaluation
 - **Facilitating Communication**: Visual structure aids cross-domain understanding
 
-<!-- [ ] IMPLEMENT: Interactive rain-sprinkler demo in supplementary materials -->
 
 ## 2.4 Argument Mapping and Formal Representations {#sec-argument-mapping}
 
@@ -604,7 +700,7 @@ Argument mapping extracts this structure, identifying:
 - **Uncertainty qualifications** 
 :::
 
-<!-- [ ] ADD: @anderson2007, @benn2011, @khartabil2021, @khartabil2020, @ngajie2020, @prokudin2024, @scheuer2010, @walton2009 as the citations and sources in a new sub-section: "Review of argument visualization techniques" (ensure to cover: ~informal logic, argument mapping, software support, formal representation, bayesian networks, belief networs etc. ) 
+<!-- [ ] ADD: @anderson2007, @benn2011, @khartabil2021, @khartabil2020, @ngajie2020, @prokudin2024, @thomas1962, @scheuer2010, @walton2009 as the citations and sources in a new sub-section: "Review of argument visualization techniques" (ensure to cover: ~informal logic, argument mapping, software support, formal representation, bayesian networks, belief networs etc. ) 
     - Write and integrate the entire subsection perfectly
     - adapt the surrounding text as necessary
     - also reference "Claimify"
@@ -623,6 +719,8 @@ Argument mapping extracts this structure, identifying:
 @prokudin2024
 
 @scheuer2010
+
+@thomas1962
 
 @walton2009
 
@@ -650,10 +748,14 @@ This notation captures argument structure while remaining human-readable and wri
 
 ### 2.4.3 BayesDown: The Bridge to Bayesian Networks {#sec-bayesdown}
 
+<!-- [ ] EXPLAIN: that BayesDown has been developed by the author himself by extending the ArgDown Syntax with JSON defintions to capture all probabilistic information to fully specify the Bayesian networks -->
+
+<!-- [ ] WRITE: Provide a detailed description and explanation of Bayesdown --> 
+
 ::: {.duplicate-content data-source="Outline_11.7#bayesdown"} 
 BayesDown extends ArgDown with probabilistic metadata:
 
-```
+```json
 [Node]: Description. {
   "instantiations": ["node_TRUE", "node_FALSE"],
   "priors": {"p(node_TRUE)": "0.7", "p(node_FALSE)": "0.3"},
@@ -681,7 +783,7 @@ The two-stage extraction process (ArgDown → BayesDown) separates concerns: fir
 
 ## 2.5 The MTAIR Framework: Achievements and Limitations {#sec-mtair-framework}
 
-<!-- [ ] TODO: Review the MTAIR project's approach to modeling AI risks -->
+<!-- [ ] TODO: Explain the MTAIR project's methodological approach -->
 
 The Modeling Transformative AI Risks (MTAIR) project, led by RAND researchers, pioneered formal modeling of AI existential risk arguments. Understanding its approach and limitations motivates the automation efforts of AMTAIR.
 
@@ -726,10 +828,10 @@ Despite its innovations, MTAIR faces fundamental limitations that motivate the a
 
 However, MTAIR's manual approach faces severe constraints:
 
-**Labor Intensity**: Each model requires hundreds of expert-hours to construct, limiting coverage to a few perspectives.
+**Labor Intensity**: Each model requires dozens of expert-hours to construct, limiting coverage to a few perspectives.
 
 <!-- [ ] TODO: Manual Extraction Time Analysis -->
-
+<!-- [ ] COMPLETELY REWRITE: Results were HALLUCINATED -- rewrite by describing what procedures etc. one would ideally follow (inferred from MTAIR materials)
 ```
 Detailed breakdown needed:
 - Variable identification: X hours
@@ -738,7 +840,7 @@ Detailed breakdown needed:
 - Validation and refinement: W hours
 Total per model: ~200-400 hours
 ```
-
+-->
 **Static Nature**: Models become outdated as arguments evolve but updating requires near-complete reconstruction.
 
 **Limited Accessibility**: Using the models requires Analytica software and significant technical sophistication.
@@ -746,6 +848,15 @@ Total per model: ~200-400 hours
 **Single Perspective**: Each model represents one worldview, making comparison across perspectives difficult.
 
 These limitations prevent MTAIR's approach from scaling to meet AI governance needs. As the pace of AI development accelerates and arguments proliferate, manual modeling cannot keep pace.
+
+
+
+
+
+
+
+
+
 
 ### 2.5.4 The Automation Opportunity {#sec-automation-opportunity}
 
@@ -764,7 +875,7 @@ This motivates AMTAIR's central innovation: using frontier language models to au
 
 ## 2.6 Literature Review: Content and Technical Levels {#sec-literature-review}
 
-<!-- [ ] TODO: Review existing AI risk models, governance proposals, and technical approaches -->
+<!-- [ ] TODO: Provide an overview of the key / most important existing AI risk models, governance proposals, and technical approaches -->
 
 ### 2.6.1 AI Risk Models Evolution {#sec-risk-models-evolution}
 
@@ -772,7 +883,7 @@ The evolution of AI risk models reflects increasing sophistication in both struc
 
 ::: {.callout-note}
 
-## Key Developments
+ ## Key Developments
 
 - **Early Phase (2000-2010)**: Qualitative arguments about intelligence explosion
 - **Formalization Phase (2010-2018)**: Introduction of structured scenarios
@@ -813,6 +924,58 @@ AI governance proposals can be categorized along several dimensions:
 
 
 <!-- [ ] TODO: Add analysis of "A Narrow Path" as case study --> 
+
+
+<!-- [ ] ADD: @miotti2024 cite and write a fantastic sub-section "Conditional Policy Proposal Example: A Narrow Path" -->
+
+
+
+@miotti2024
+
+
+<!-- [ ] FULLY REFORMULATE TO AVOID PLAGIARISM OR QUOTE PARTS DIRECTLY:
+        
+        There is a simple truth - humanityʼs extinction is possible. Recent history has also
+        shown us another truth - we can create artificial intelligence AI that can rival
+        humanity.
+        While most AI development is beneficial, artificial superintelligence threatens
+        humanity with extinction. We have no method to currently control an entity with
+        greater intelligence than us. We currently have no ability to predict the intelligence of
+        advanced AIs prior to developing them, and we have incredibly limited methods to
+        accurately measure their competence after development.
+        We now stand at a time of peril. Companies across the globe are investing to create
+        artificial superintelligence – that they believe will surpass the collective capabilities
+        of all humans. They publicly state that it is not a matter of “ifˮ such superintelligence
+        might exist, but “whenˮ.
+        We do not know how to control AI vastly more powerful than us. Should attempts to
+        build superintelligence succeed, this would risk our extinction as a species. But
+        humanity can choose a different future: there is a narrow path through.
+        A new and ambitious future lies beyond a narrow path. A future driven by human
+        advancement and technological progress. One where humanity fulfills the dreams
+        and aspirations of our ancestors to end disease and extreme poverty, achieves
+        virtually limitless energy, lives longer and healthier lives, and travels the cosmos.
+        That future requires us to be in control of that which we create, including AI.
+        We are currently on an unmanaged and uncontrolled path towards the creation of AI
+        that threatens the extinction of humanity. This document is our effort to
+        comprehensively outline what is needed to step off that dangerous path and tread an
+        alternate path for humanity. To achieve these goals, we have developed proposals
+        intended for action by policymakers, split into three Phases:
+        Phase 0 Safety - New institutions, legislation, and policies that countries should
+        implement immediately that prevent development of AI that we do not have control
+        of. With correct execution, the strength of these measures should prevent anyone
+        from developing artificial superintelligence for the next 20 years.
+        Phase 1 Stability - International institutions that ensure measures to control the
+        development of AI do not collapse under geopolitical rivalries or rogue development
+        by state and non-state actors. With correct execution, these measures should
+        ensure stability and lead to an international AI oversight system that does not
+        collapse over time.
+        Phase 2 Flourishing - With the development of rogue superintelligence prevented
+        and a stable international system in place, humanity can focus on the scientific
+        foundations for transformative AI under human control. Build a robust science and
+        metrology of intelligence, safe-by-design AI engineering, and other foundations
+        for transformative AI under human control.
+        -->
+
 
 
 
@@ -1079,7 +1242,8 @@ With these theoretical foundations and methodological approaches established, we
 **Requirements**: Critical evaluation, strong argument for position, original contribution
 :::
 
-<!-- [ ] TODO: Reduce code snippets to 3-5 key examples maximum --> <!-- [ ] TODO: Focus on conceptual explanations over implementation details -->
+<!-- [ ] TODO: Reduce code snippets to 3-5 key examples maximum --> 
+<!-- [ ] TODO: Focus on conceptual explanations over implementation details -->
 
 ## 3.1 System Architecture Overview {#sec-system-architecture}
 
@@ -1292,14 +1456,81 @@ The bottleneck shifts from extraction (linear in text length) to inference (expo
 
 I begin with the canonical example to demonstrate the complete pipeline on a simple, well-understood case.
 
-### 3.4.1 Input Representation {#sec-rsg-input}
+### 3.4.1 Processing Steps {#sec-rsg-processing}
 
-::: {.redundant-content data-better-version="Outline_11.7#rsg-input"}
-The source BayesDown representation:
+The system processes this input through five steps:
+
+1. **ArgDown Parsing**: Extract three nodes with relationships in ArgDown syntax
+2. **Question Generation**: Generate questions based on the possible instantiations and combinations of each parent note to identify the probabilities to be extracted in the next step
+3. **BayesDown Extraction**: LLM call extracting the full conditional probability tables for each node
+4. **Construction**: Building of the formal Bayesian network
+5. **Visualization**: Render interactive display
+
+<!-- [ ] CREATE: Mermaid flowchart showing the file format conversions: 
+    Pdf -> ArgDown -> CSV -> CSV (with quesions) -> Markdown (Extraction Questions) -> BayesDown -> CSV
+-->
+
+
+
+
+### 3.4.2 Example Conversion Steps {#sec-rsg-input}
+
+<!-- [ ] EXPAND: Add informative descriptions and explanations for everything in this section -->
+
+#### ArgDown Example
+
+```markdown
+[Grass_Wet]: Concentrated moisture on, between and around the blades of grass.{"instantiations": ["grass_wet_TRUE", "grass_wet_FALSE"]}    
+    +[Rain]: Tears of angles crying high up in the skies hitting the ground.{"instantiations": ["rain_TRUE", "rain_FALSE"]}
+    +[Sprinkler]: Activation of a centrifugal force based CO2 droplet distribution system.{"instantiations": ["sprinkler_TRUE", "sprinkler_FALSE"]}
+        +[Rain]
+```
+
+
+
+#### Example of Questions for BayesDown extraction
+
+```markdown
+BayesDown Format Preview:
+# BayesDown Representation with Placeholder Probabilities
+
+/* This file contains BayesDown syntax with placeholder probabilities.
+   Replace the placeholders with actual probability values based on the 
+   questions in the comments. */
+
+    /* What is the probability for Grass_Wet=grass_wet_TRUE? */
+    /* What is the probability for Grass_Wet=grass_wet_TRUE if Rain=rain_TRUE, Sprinkler=sprinkler_TRUE? */
+    /* What is the probability for Grass_Wet=grass_wet_TRUE if Rain=rain_TRUE, Sprinkler=sprinkler_FALSE? */
+    /* What is the probability for Grass_Wet=grass_wet_TRUE if Rain=rain_FALSE, Sprinkler=sprinkler_TRUE? */
+    /* What is the probability for Grass_Wet=grass_wet_TRUE if Rain=rain_FALSE, Sprinkler=sprinkler_FALSE? */
+    /* What is the probability for Grass_Wet=grass_wet_FALSE? */
+    /* What is the probability for Grass_Wet=grass_wet_FALSE if Rain=rain_TRUE, Sprinkler=sprinkler_TRUE? */
+    /* What is the probability for Grass_Wet=grass_wet_FALSE if Rain=rain_TRUE, Sprinkler=sprinkler_FALSE? */
+    /* What is the probability for Grass_Wet=grass_wet_FALSE if Rain=rain_FALSE, Sprinkler=sprinkler_TRUE? */
+    /* What is the probability for Grass_Wet=grass_wet_FALSE if Rain=rain_FALSE, Sprinkler=sprinkler_FALSE? */
+    [Grass_Wet]: Concentrated moisture on, between and around the blades of grass. {"instantiations": ["grass_wet_TRUE", "grass_wet_FALSE"], "priors": {"What is the probability for Grass_Wet=grass_wet_TRUE?": "%?", "What is the probability for Grass_Wet=grass_wet_FALSE?": "%?"}, "posteriors": {"What is the probability for Grass_Wet=grass_wet_TRUE if Rain=rain_TRUE, Sprinkler=sprinkler_TRUE?": "?%", "What is the probability for Grass_Wet=grass_wet_TRUE if Rain=rain_TRUE, Sprinkler=sprinkler_FALSE?": "?%", "What is the probability for Grass_Wet=grass_wet_TRUE if Rain=rain_FALSE, Sprinkler=sprinkler_TRUE?": "?%", "What is the probability for Grass_Wet=grass_wet_TRUE if Rain=rain_FALSE, Sprinkler=sprinkler_FALSE?": "?%", "What is the probability for Grass_Wet=grass_wet_FALSE if Rain=rain_TRUE, Sprinkler=sprinkler_TRUE?": "?%", "What is the probability for Grass_Wet=grass_wet_FALSE if Rain=rain_TRUE, Sprinkler=sprinkler_FALSE?": "?%", "What is the probability for Grass_Wet=grass_wet_FALSE if Rain=rain_FALSE, Sprinkler=sprinkler_TRUE?": "?%", "What is the probability for Grass_Wet=grass_wet_FALSE if Rain=rain_FALSE, Sprinkler=sprinkler_FALSE?": "?%"}}
+        /* What is the probability for Rain=rain_TRUE? */
+        /* What is the probability for Rain=rain_FALSE? */
+        + [Rain]: Tears of angles crying high up in the skies hitting the ground. {"instantiations": ["rain_TRUE", "rain_FALSE"], "priors": {"What is the probability for Rain=rain_TRUE?": "%?", "What is the probability for Rain=rain_FALSE?": "%?"}}
+        /* What is the probability for Sprinkler=sprinkler_TRUE? */
+        /* What is the probability for Sprinkler=sprinkler_TRUE if Rain=rain_TRUE? */
+        /* What is the probability for Sprinkler=sprinkler_TRUE if Rain=rain_FALSE? */
+        /* What is the probability for Sprinkler=sprinkler_FALSE? */
+        /* What is the probability for Sprinkler=sprinkler_FALSE if Rain=rain_TRUE? */
+        /* What is the probability for Sprinkler=sprinkler_FALSE if Rain=rain_FALSE? */
+        + [Sprinkler]: Activation of a centrifugal force based CO2 droplet distribution system. {"instantiations": ["sprinkler_TRUE", "sprinkler_FALSE"], "priors": {"What is the probability for Sprinkler=sprinkler_TRUE?": "%?", "What is the probability for Sprinkler=sprinkler_FALSE?": "%?"}, "posteriors": {"What is the probability for Sprinkler=sprinkler_TRUE if Rain=rain_TRUE?": "?%", "What is the probability for Sprinkler=sprinkler_TRUE if Rain=rain_FALSE?": "?%", "What is the probability for Sprinkler=sprinkler_FALSE if Rain=rain_TRUE?": "?%", "What is the probability for Sprinkler=sprinkler_FALSE if Rain=rain_FALSE?": "?%"}}
+            /* What is the probability for Rain=rain_TRUE? */
+            /* What is the probability for Rain=rain_FALSE? */
+            + [Rain]
 
 ```
-[Grass_Wet]: Concentrated moisture on grass.
-{"instantiations": ["grass_wet_TRUE", "grass_wet_FALSE"],
+ 
+#### Complete BayesDown Example
+
+The source BayesDown syntax representating the fully specified network:
+
+```markdown
+[Grass_Wet]: Concentrated moisture on grass. {"instantiations": ["grass_wet_TRUE", "grass_wet_FALSE"],
  "priors": {"p(grass_wet_TRUE)": "0.322", "p(grass_wet_FALSE)": "0.678"},
  "posteriors": {
    "p(grass_wet_TRUE|sprinkler_TRUE,rain_TRUE)": "0.99",
@@ -1307,11 +1538,9 @@ The source BayesDown representation:
    "p(grass_wet_TRUE|sprinkler_FALSE,rain_TRUE)": "0.8",
    "p(grass_wet_TRUE|sprinkler_FALSE,rain_FALSE)": "0.0"
  }}
- + [Rain]: Water falling from sky.
-   {"instantiations": ["rain_TRUE", "rain_FALSE"],
+ + [Rain]: Water falling from sky. {"instantiations": ["rain_TRUE", "rain_FALSE"],
     "priors": {"p(rain_TRUE)": "0.2", "p(rain_FALSE)": "0.8"}}
- + [Sprinkler]: Artificial watering system.
-   {"instantiations": ["sprinkler_TRUE", "sprinkler_FALSE"],
+ + [Sprinkler]: Artificial watering system. {"instantiations": ["sprinkler_TRUE", "sprinkler_FALSE"],
     "priors": {"p(sprinkler_TRUE)": "0.448", "p(sprinkler_FALSE)": "0.552"},
     "posteriors": {
       "p(sprinkler_TRUE|rain_TRUE)": "0.01",
@@ -1320,19 +1549,45 @@ The source BayesDown representation:
    + [Rain]
 ```
 
-:::
 
-### 3.4.2 Processing Steps {#sec-rsg-processing}
+#### Resulting Rain-Sprinkler-Grass DataFrame
+::: {.landscape}
+<!-- [ ] ADD: table formatting (alt tex, label etc. to this table) -->
 
-The system processes this input through five steps:
+#| column: page
 
-1. **Parsing**: Extract three nodes with relationships
-2. **Validation**: Verify probability coherence and DAG structure
-3. **Enhancement**: Calculate joint probabilities and network metrics
-4. **Construction**: Build formal Bayesian network
-5. **Visualization**: Render interactive display
+| Title | Description | line                                              | line_numbers | indentation | indentation_levels | Parents | Children          | instantiations         | priors                            | posteriors                                        | No_Parent                                          | No_Children | parent_instantiations |                                                   |
+| ----- | ----------- | ------------------------------------------------- | ------------ | ----------- | ------------------ | ------- | ----------------- | ---------------------- | --------------------------------- | ------------------------------------------------- | -------------------------------------------------- | ----------- | --------------------- | ------------------------------------------------- |
+| 0     | Grass_Wet   | Concentrated moisture on, between and around t... | 3            | [3]         | 0                  | [0]     | [Rain, Sprinkler] | []                     | [grass_wet_TRUE, grass_wet_FALSE] | {'p(grass_wet_TRUE)': '0.322', 'p(grass_wet_FA... | {'p(grass_wet_TRUE\|sprinkler_TRUE,rain_TRUE)':... | False       | True                  | [[rain_TRUE, rain_FALSE], [sprinkler_TRUE, spr... |
+| 1     | Rain        | Tears of angles crying high up in the skies hi... | 4            | [4, 6]      | 2                  | [1, 2]  | []                | [Grass_Wet, Sprinkler] | [rain_TRUE, rain_FALSE]           | {'p(rain_TRUE)': '0.2', 'p(rain_FALSE)': '0.8'}   | {}                                                 | True        | False                 | []                                                |
+| 2     | Sprinkler   | Activation of a centrifugal force based CO2 dr... | 5            | [5]         | 1                  | [1]     | [Rain]            | [Grass_Wet]            | [sprinkler_TRUE, sprinkler_FALSE] | {'p(sprinkler_TRUE)': '0.44838', 'p(sprinkler_... | {'p(sprinkler_TRUE\|rain_TRUE)': '0.01', 'p(spr... | False       | False                 | [[rain_TRUE, rain_FALSE]]                         |
+
+::: 
+
+
+
 
 ### 3.4.3 Results {#sec-rsg-results}
+
+### Rain-Sprinkler-Grass Network Rendering
+```{python}
+#| label: rain_sprinkler_grass_example_network_rendering2
+#| echo: true
+#| eval: true
+#| fig-cap: "Dynamic Html Rendering of the Rain-Sprinkler-Grass DAG with Conditional Probabilities"
+#| fig-link: "https://singularitysmith.github.io/AMTAIR_Prototype/bayesian_network.html"
+#| fig-alt: "Dynamic Html Rendering of the Rain-Sprinkler-Grass DAG"
+
+
+from IPython.display import IFrame
+
+IFrame(src="https://singularitysmith.github.io/AMTAIR_Prototype/bayesian_network.html", width="100%", height="600px")
+```
+
+
+
+
+
 
 ::: {.callout-tip}
 
@@ -1341,7 +1596,23 @@ The system processes this input through five steps:
 The system successfully extracts complete network structure, preserves all probability information, calculates correct marginal probabilities, generates interactive visualization, and enables inference queries—validating the basic pipeline functionality.
 :::
 
-<!-- [ ] CREATE: {#fig-rsg-visualization}: "Interactive rain-sprinkler-grass network visualization" -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 ## 3.5 Case Study: Carlsmith's Power-Seeking AI Model {#sec-case-carlsmith}
 
@@ -1748,7 +2019,8 @@ deployment_policy_effects = {
 
 :::
 
-<!-- [ ] TODO: Oultine/sketch policy evaluation example for "A Narrow Path" --> 
+<!-- [ ] TODO: Oultine/sketch policy evaluation examples for "A Narrow Path" --> 
+
 <!-- [ ] TODO: Outline/sketch evaluation for SB 1047 provisions -->
 
 -->
@@ -1896,7 +2168,7 @@ Rather than excluding non-technical stakeholders, proper implementation can demo
 
 The goal isn't creating perfect representations but useful ones. By making simplifications explicit and modifiable, formal models enable systematic improvement in ways mental models cannot.
 
-<!-- [ ] VERIFY: @box1976: "Box, G.E.P. (1976). Science and statistics" -->
+<!-- [ ] ADD: @box1976: "Box, G.E.P. (1976). Science and statistics" -->
 @box1976
 
 
@@ -1936,7 +2208,7 @@ I tested the system with deliberately challenging inputs:
 
 Key vulnerabilities of LLMs (and human experts) identified:
 
-<!-- [ ] VERIFY: Quantitative red-teaming results -->
+<!-- [ ] VERIFY: red-teaming results -->
 ```
 
 Specific metrics need validation:
@@ -2042,12 +2314,14 @@ AMTAIR enhances group epistemics through:
 
 **Exploration tools**: Stakeholders can modify assumptions and immediately see consequences, building intuition about model dynamics
 
+<!-- [ ] COMPLETELY REWRITE: Results were HALLUCINATED -- rewrite by describing what benefits one can plausibly anticipate
+
 ::: {.callout-tip}
 ## Early Results
 Pilot studies with AI governance researchers show 40% reduction in time to identify disagreements and 60% improvement in agreement accuracy—though these specific quantitative claims require careful validation with larger samples.
 :::
+-->
 
-<!-- [ ] VERIFY: Pilot study metrics with proper methodology -->
 
 ## 4.5 Scaling Challenges and Opportunities {#sec-scaling}
 
@@ -2173,7 +2447,7 @@ Multilateral bodies could leverage shared models for:
 
 Example: Building shared models for AGI development scenarios to inform international AI governance treaties.
 
-<!-- [ ] FIND: @international-ai-governance: "Precedents for technical cooperation in treaties" -->
+<!-- [ ] Improve this somehow -->
 
 ### 4.6.4 Organizational Decision-Making {#sec-organizational-integration}
 
@@ -2185,7 +2459,7 @@ Individual organizations could use AMTAIR for:
 
 Example: An AI lab modeling how different safety investments affect both capability advancement and risk mitigation.
 
-<!-- [ ] VERIFY: Organization use cases through interviews -->
+<!-- [ ] rewrite by describing what procedures etc. one would ideally follow to improve institutional decision making with AMTAIR -->
 
 ## 4.7 Future Research Directions {#sec-future-research}
 
@@ -2215,7 +2489,13 @@ Several research directions could enhance AMTAIR's capabilities and impact.
 
 **Uncertainty quantification**: Richer representation of deep uncertainty and model confidence
 
-<!-- [ ] FIND: @causal-discovery-nlp: "Methods for causal structure learning from text" -->
+<!-- [ ] ADD: @babakov2025, @ban2023, @bethard2007, @chen2023, @duhem1954, @heinze-deml2018, @meyer2022b, @squires2023, @squires2023, @yang2022
+    - add a brilliant deep-dive into "~ the theoretical reasons to be optimistic that AMTAIR is the beginning of a new research paradigm " based on the literature and the papers above
+    - cite all the above sources and make a "rock-solid case"
+: "Methods for causal structure learning from text" -->
+
+@babakov2025, @ban2023, @bethard2007, @chen2023, @duhem1954, @heinze-deml2018, @meyer2022b, @squires2023, @squires2023, @yang2022
+
 
 ### 4.7.3 Application Domains {#sec-application-future}
 
@@ -2241,7 +2521,7 @@ Several research directions could enhance AMTAIR's capabilities and impact.
 
 These directions could transform AMTAIR from a single tool into a broader ecosystem for enhanced reasoning about complex risks.
 
-<!-- [ ] IMPLEMENT: Community development roadmap -->
+<!-- [ ] DESCRIBE: Community development roadmap -->
 
 ## 4.8 Known Unknowns and Deep Uncertainties {#sec-deep-uncertainties}
 
@@ -2313,13 +2593,13 @@ This thesis has demonstrated both the need for and feasibility of computational 
 
 ### 5.1.2 Methodological Innovations {#sec-methodological-innovations}
 
-**Two-Stage Extraction Architecture**: Separating structural extraction (ArgDown) from probability quantification (BayesDown) addresses key challenges in automated formalization. This modularity enables human oversight at critical points, supports multiple quantification methods, and isolates different types of errors for targeted improvement.
+**Two-Stage Extraction Architecture**: Separating structural extraction (ArgDown) from probability quantification (BayesDown) addresses key challenges in automated formalization. This modularity enables human oversight at critical points, supports multiple quantification methods, allows for unprecedented transparency and explainability of the entire process, and isolates different types of errors for targeted improvement.
 
 **BayesDown as Bridge Representation**: The development of BayesDown syntax creates a crucial intermediate representation preserving both narrative accessibility and mathematical precision. This bridge enables the transformation from qualitative arguments to quantitative models while maintaining traceability and human readability.
 
 **Validation Framework**: The systematic approach to validating automated extraction—comparing against expert annotations, measuring multiple accuracy dimensions, and analyzing error patterns—establishes scientific standards for assessing formalization tools. This framework can guide future development in this emerging area.
 
-<!-- [ ] VERIFY: Contribution claims against evidence in previous chapters -->
+
 
 ### 5.1.3 Technical Achievements {#sec-technical-achievements}
 
@@ -2335,11 +2615,12 @@ This thesis has demonstrated both the need for and feasibility of computational 
 
 **Extraction Feasibility**: The successful extraction of complex arguments like Carlsmith's model validates the core premise that implicit formal structures exist in natural language arguments and can be computationally recovered with reasonable fidelity.
 
-**Convergence Patterns**: Comparative analysis reveals surprising structural agreement across worldviews even when probability estimates diverge dramatically. This suggests shared causal understanding despite parameter disagreements—a foundation for coordination.
+**Convergence Patterns**: Comparative analysis reveals structural agreement across repeated extraction even when probability estimates diverge substantially. This suggests shared understanding of the understanding causal models, argument structure and worldview despite parameter disagreements—a foundation for coordination.
 
 **Intervention Impacts**: Policy evaluation demonstrates how formal models enable rigorous assessment of governance options. The ability to quantify risk reduction across scenarios and identify robust strategies validates the practical value of formalization.
 
-<!-- [ ] IMPLEMENT: Summary statistics across all empirical studies -->
+
+
 
 ## 5.2 Limitations and Honest Assessment {#sec-limitations-assessment}
 
@@ -2347,21 +2628,22 @@ Despite these contributions, important limitations constrain current capabilitie
 
 ### 5.2.1 Technical Constraints {#sec-technical-constraints}
 
-**Extraction Boundaries**: While 73-85% accuracy suffices for many purposes, systematic biases remain. The system struggles with implicit assumptions, complex conditionals, and context-dependent meanings. These limitations necessitate human review for high-stakes applications.
+**Extraction Boundaries**: Potential sources of systematic biases and confounding variables remain. Similar to experts, the automated system still struggles with implicit and hidden assumptions and complex conditionals. These limitations necessitate human review for high-stakes applications.
 
-**Correlation Handling**: Standard Bayesian networks inadequately represent complex correlations in real systems. While extensions like copulas and explicit correlation nodes help, fully capturing interdependencies remains challenging.
+**Correlation Handling**: Over simplified Bayesian networks inadequately represent complex correlations in real systems. While extensions like copulas and explicit correlation nodes help, fully capturing interdependencies remains challenging.
 
-**Computational Scaling**: Very large networks (>50 nodes) require approximations that may affect accuracy. As models grow to represent richer phenomena, computational constraints increasingly bind.
+**Computational Scaling**: Very large networks (>>500 nodes) require approximations that may affect accuracy. As models grow to represent richer phenomena, computational constraints increasingly bind.
 
-<!-- [ ] VERIFY: Limitation claims are supported by evidence -->
 
 ### 5.2.2 Conceptual Limitations {#sec-conceptual-limitations}
 
-**Formalization Trade-offs**: Converting rich arguments to formal models necessarily loses nuance. While making assumptions explicit provides value, some insights resist mathematical representation.
+**Formalization Trade-offs**: Converting rich arguments to formal models necessarily loses nuance. While making assumptions explicit provides value, some unspoken insights may resist clear mathematical representation.
 
-**Probability Interpretation**: Deep uncertainty about unprecedented events challenges probabilistic representation. Numbers can create false precision even when explicitly conditional and uncertain.
+**Probability Interpretation**: Deep uncertainty about unprecedented events challenges probabilistic intuitions. Numbers can create false precision even when explicitly conditional and uncertain.
 
-**Social Complexity**: Institutional dynamics, cultural factors, and political processes influence AI development in ways that simple causal models struggle to capture.
+**Social Complexity**: Institutional dynamics, cultural factors, and political processes influence AI development in ways that purely causal models struggle to capture.
+
+
 
 ### 5.2.3 Practical Constraints {#sec-practical-constraints}
 
@@ -2369,7 +2651,7 @@ Despite these contributions, important limitations constrain current capabilitie
 
 **Maintenance Burden**: Models require updating as arguments evolve and evidence emerges. Without sustained effort, formal representations quickly become outdated.
 
-**Context Dependence**: The approach works best for well-structured academic arguments. Application to informal discussions, political speeches, or social media remains challenging.
+**Context Dependence**: The approach works best for well-structured academic arguments. Application to "fuzzy" informal discussions, political speeches, or social media remains challenging.
 
 <!-- [ ] CREATE: {#fig-limitation-landscape}: "Visual summary of system limitations" -->
 
@@ -2399,7 +2681,10 @@ Despite limitations, AMTAIR's approach offers significant implications for how A
 - Board-level strategic discussions grounded in formal analysis
 - International negotiations with explicit shared models
 
-<!-- [ ] CREATE: {#fig-near-term-impact}: "Pathways to immediate AMTAIR adoption" -->
+<!-- [ ] CREATE: {#fig-near-term-impact}: "Planned Pathways to AMTAIR adoption" -->
+
+
+
 
 ### 5.3.2 Medium-Term Transformation {#sec-medium-term}
 
@@ -2413,7 +2698,9 @@ As adoption spreads, we might see:
 
 **Quality Standards**: Community norms develop around model transparency, validation requirements, and appropriate use cases, preventing both dismissal and over-reliance on formal tools.
 
-<!-- [ ] FIND: @epistemic-commons: "Examples of shared knowledge infrastructure in other domains" -->
+
+
+
 
 ### 5.3.3 Long-Term Vision {#sec-long-term-vision}
 
@@ -2429,9 +2716,14 @@ Successfully scaling this approach could fundamentally alter AI governance:
 
 <!-- [ ] CREATE: {#fig-long-term-vision}: "Vision for AI governance with AMTAIR infrastructure" -->
 
+
+
+
 ## 5.4 Recommendations for Stakeholders {#sec-recommendations}
 
 Different communities can take concrete steps to realize these benefits:
+
+
 
 ### 5.4.1 For Researchers {#sec-researcher-recommendations}
 
@@ -2459,7 +2751,9 @@ A comprehensive guide for researchers getting started with AMTAIR will be availa
 
 4. **Design adaptively**: Create policies with explicit triggers based on model parameters to enable responsive governance
 
-<!-- [ ] CREATE: Policy evaluation template -->
+<!-- [ ] HIGHLIGHT: Benefits of AMTAIR for policy impact prediction -->
+
+
 
 ### 5.4.3 For Technologists {#sec-technologist-recommendations}
 
@@ -2471,7 +2765,14 @@ A comprehensive guide for researchers getting started with AMTAIR will be availa
 
 4. **Scale infrastructure**: Address computational challenges for larger models and broader deployment
 
-<!-- [ ] CREATE: Technical contribution guidelines -->
+<!-- [ ] ELABORATE: Possibilities for Technical contributions  -->
+
+
+
+
+
+
+
 
 ### 5.4.4 For Funders {#sec-funder-recommendations}
 
@@ -2483,7 +2784,11 @@ A comprehensive guide for researchers getting started with AMTAIR will be availa
 
 4. **Patient capital**: Recognize that epistemic infrastructure requires sustained investment to reach potential
 
-<!-- [ ] CREATE: Funding opportunity framework -->
+<!-- [ ] HIGHLIGHT: Opportunity AMTAIR could seize with adquate resources and funding -->
+
+
+
+
 
 ## 5.5 Future Research Agenda {#sec-future-research-agenda}
 
@@ -2511,6 +2816,9 @@ Building on this foundation, several research directions could amplify impact:
 
 <!-- [ ] CREATE: {#tbl-research-priorities}: "Technical research roadmap with timelines" -->
 
+<!-- [ ] EXPAND: Add more extensions opportunities -->
+
+
 ### 5.5.2 Methodological Development {#sec-methodological-development}
 
 **Validation Science**:
@@ -2531,13 +2839,16 @@ Building on this foundation, several research directions could amplify impact:
 - Understanding adoption barriers and facilitators
 - Designing interventions for epistemic security
 
-<!-- [ ] FIND: @human-ai-collaboration: "Best practices for human-AI teaming" -->
+<!-- [ ] EXPAND: explain more research directions that can improve the METHODOLOGIES underlying AMTAIR -->
+
+
+
 
 ### 5.5.3 Application Expansion {#sec-application-expansion}
 
 **Domain Extensions**:
-- Climate risk assessment and policy evaluation
 - Biosecurity governance and pandemic preparedness
+- Cyber risk assessment and policy evaluation
 - Nuclear policy and deterrence stability
 - Emerging technology governance broadly
 
@@ -2554,6 +2865,10 @@ Building on this foundation, several research directions could amplify impact:
 - Creating resilient distributed infrastructure
 
 <!-- [ ] CREATE: {#fig-application-roadmap}: "Expansion pathways across domains" -->
+
+
+
+
 
 ## 5.6 Closing Reflections {#sec-closing-reflections}
 
@@ -2575,6 +2890,8 @@ This thesis contributes technical foundations and demonstrates feasibility. The 
 
 <!-- [ ] CREATE: {#fig-closing-vision}: "The path from fragmentation to coordination" -->
 
+
+
 # References {#sec-references .unnumbered}
 
 <!-- Quarto will auto-generate from .bib file -->
@@ -2584,192 +2901,25 @@ This thesis contributes technical foundations and demonstrates feasibility. The 
 ::: {#refs}
 :::
 
-# Appendices {#sec-appendices .unnumbered}
-
-## Appendix A: Technical Implementation Details {#sec-appendix-technical .unnumbered}
-
-<!-- [ ] CREATE: Complete technical documentation -->
-```
-
-Contents:
-
-- Full API specifications
-- Architectural diagrams with component details
-- Code structure and organization
-- Deployment instructions
-- Performance optimization guides
-
-```
-
-### A.1 Core Data Structures {#sec-data-structures .unnumbered}
-
-The AMTAIR system employs several custom data structures optimized for representing hierarchical arguments with probabilistic metadata:
-
-```python
-@dataclass
-class BayesDownNode:
-    """Represents a single node in the BayesDown format"""
-    title: str
-    description: str
-    instantiations: List[str]
-    priors: Dict[str, float] = field(default_factory=dict)
-    posteriors: Dict[str, float] = field(default_factory=dict)
-    parents: List[str] = field(default_factory=list)
-    children: List[str] = field(default_factory=list)
-    metadata: Dict[str, Any] = field(default_factory=dict)
-```
-
-### A.2 Extraction Algorithm Details {#sec-extraction-details .unnumbered}
-
-<!-- [ ] TODO: Document complete extraction pipeline with pseudocode --> <!-- [ ] TODO: Include prompt templates and engineering decisions -->
-
-### A.3 API Specifications {#sec-api-specs .unnumbered}
-
-<!-- [ ] TODO: Complete API documentation for each component --> <!-- [ ] TODO: Include example usage and error handling -->
-
-## Appendix B: Validation Datasets and Procedures {#sec-appendix-validation .unnumbered}
-
-<!-- [ ] CREATE: Validation materials -->
-
-```
-Contents:
-- Benchmark dataset descriptions
-- Annotation guidelines
-- Inter-rater reliability protocols
-- Statistical analysis procedures
-- Replication instructions
-```
-
-### B.1 Expert Annotation Protocol {#sec-annotation-protocol .unnumbered}
-
-<!-- [ ] TODO: Detailed instructions for manual extraction --> <!-- [ ] TODO: Inter-annotator agreement methodology -->
-
-### B.2 Benchmark Dataset Construction {#sec-benchmark-construction .unnumbered}
-
-<!-- [ ] TODO: Dataset statistics and characteristics --> <!-- [ ] TODO: Quality control procedures -->
-
-### B.3 Validation Results {#sec-validation-results .unnumbered}
-
-<!-- [ ] TODO: Complete precision/recall tables --> <!-- [ ] TODO: Error analysis breakdowns -->
-
-## Appendix C: Extended Case Studies {#sec-appendix-cases .unnumbered}
-
-<!-- [ ] IMPLEMENT: Additional extraction examples -->
-
-```
-Include:
-- Christiano's "What failure looks like"
-- Critch's ARCHES model
-- Additional policy evaluation scenarios
-- Comparative analysis across models
-```
-
-### C.1 Christiano's "What Failure Looks Like" Extraction {#sec-christiano-extraction .unnumbered}
-
-<!-- [ ] TODO: Complete manual extraction for comparison --> <!-- [ ] TODO: Document extraction decisions and challenges -->
-
-### C.2 Critch's ARCHES Model {#sec-critch-extraction .unnumbered}
-
-<!-- [ ] TODO: Full model extraction and formalization --> <!-- [ ] TODO: Comparison with original presentation -->
-
-### C.3 Policy Evaluation: A Narrow Path {#sec-narrow-path-evaluation .unnumbered}
-
-<!-- [ ] TODO: Detailed analysis of policy proposals --> <!-- [ ] TODO: Sensitivity to implementation specifics -->
-
-## Appendix D: BayesDown Syntax Specification {#sec-appendix-bayesdown .unnumbered}
-
-<!-- [ ] CREATE: Complete formal specification -->
-
-```
-Contents:
-- Full syntax definition
-- Validation rules
-- Example transformations
-- Implementation notes
-- Extension possibilities
-```
-
-## Appendix E: Prompt Engineering Details {#sec-appendix-prompts .unnumbered}
-
-<!-- [ ] CREATE: Prompt documentation -->
-
-```
-Include:
-- Full extraction prompts with annotations
-- Iterative refinement history
-- Ablation study results
-- Best practices guide
-- Common failure patterns
-```
-
-## Appendix F: User Guide {#sec-appendix-userguide .unnumbered}
-
-<!-- [ ] CREATE: Practical user guide -->
-
-```
-Sections:
-- Getting started with AMTAIR
-- Creating your first extraction
-- Interpreting visualizations
-- Policy evaluation walkthrough
-- Troubleshooting common issues
-```
-
-## Appendix G: Jupyter Notebook Implementation {#sec-appendix-notebook .unnumbered}
-
-<!-- Link to embedded notebook as per _quarto.yml configuration -->
-
-The complete implementation is available as an interactive Jupyter notebook demonstrating:
-
-- Environment setup and configuration
-- Step-by-step extraction pipeline
-- Visualization generation
-- Policy evaluation examples
-- Performance benchmarking
-
-<!-- {{< embed /AMTAIR_Prototype/data/example_carlsmith/AMTAIR_Prototype_example_carlsmith.ipynb >}} -->
-
-## Appendix H: Ethical Considerations and Governance {#sec-appendix-ethical .unnumbered}
-
-<!-- [ ] TODO: Analyze ethical dimensions comprehensively --> 
-<!-- [ ] TODO: Include misuse analysis and mitigations --> 
-<!-- [ ] TODO: Document responsibility frameworks -->
-
-### H.1 Potential Misuse Scenarios {#sec-misuse-scenarios .unnumbered}
-
-<!-- [ ] TODO: Strategic manipulation of models --> 
-<!-- [ ] TODO: Technocratic capture risks --> 
-<!-- [ ] TODO: Mitigation strategies -->
-
-### H.2 Democratic Participation Frameworks {#sec-democratic-frameworks .unnumbered}
-
-<!-- [ ] TODO: Inclusivity design principles -->
-<!-- [ ] TODO: Stakeholder engagement protocols -->
-
-### H.3 Responsibility Assignment {#sec-responsibility .unnumbered}
-
-<!-- [ ] TODO: Model developer obligations -->
-<!-- [ ] TODO: User responsibilities --> 
-<!-- [ ] TODO: Institutional oversight needs -->
-
-## Appendix I: Full Extraction Examples {#sec-appendix-examples .unnumbered}
-
-<!-- [ ] TODO: Include complete worked examples --> 
-<!-- [ ] TODO: Show all intermediate steps -->
-<!-- [ ] TODO: Document decision points -->
-
-## Appendix J: Software Installation and Usage Guide {#sec-appendix-software .unnumbered}
-
-<!-- [ ] TODO: Complete installation instructions --> 
-<!-- [ ] TODO: Tutorial walkthrough --> 
-<!-- [ ] TODO: Troubleshooting guide -->
 
 
-<!-- [ ] FINAL CHECKLIST: --> 
-<!-- [ ] TODO: American spelling check throughout --> 
-<!-- [ ] TODO: Word count verification (~30,000 words) -->
-<!-- [ ] TODO: All figures and tables properly labeled --> 
-<!-- [ ] TODO: All citations verified -->
-<!-- [ ] TODO: Task management system fully implemented -->
-<!-- [ ] TODO: Quarto syntax validated -->
-<!-- [ ] TODO: Final review for consistency and completeness -->
+
+
+`{{ embed I.Appendices.qmd }}`
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
