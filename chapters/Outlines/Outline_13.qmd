@@ -1863,7 +1863,7 @@ Bounded “amount of information” per paper —> ~ for a given computation bud
 
 
 
-
+::: {.landscape}
 ## 3.4 Case Study: Rain-Sprinkler-Grass {#sec-case-rain-sprinkler}
 
 <!-- [ ] TODO: Demonstrate the pipeline using the canonical example -->
@@ -1890,7 +1890,7 @@ The system processes this input through five steps:
 ### 3.4.2 Example Conversion Steps {#sec-rsg-input}
 
 <!-- [ ] EXPAND: Add informative descriptions and explanations for everything in this section -->
-::: {.landscape}
+
 #### ArgDown Example
 
 ```markdown
@@ -1976,7 +1976,7 @@ The source BayesDown syntax representating the fully specified network:
 | 1     | Rain        | Tears of angles crying high up in the skies hi... | 4            | [4, 6]      | 2                  | [1, 2]  | []                | [Grass_Wet, Sprinkler] | [rain_TRUE, rain_FALSE]           | {'p(rain_TRUE)': '0.2', 'p(rain_FALSE)': '0.8'}   | {}                                                 | True        | False                 | []                                                |
 | 2     | Sprinkler   | Activation of a centrifugal force based CO2 dr... | 5            | [5]         | 1                  | [1]     | [Rain]            | [Grass_Wet]            | [sprinkler_TRUE, sprinkler_FALSE] | {'p(sprinkler_TRUE)': '0.44838', 'p(sprinkler_... | {'p(sprinkler_TRUE\|rain_TRUE)': '0.01', 'p(spr... | False       | False                 | [[rain_TRUE, rain_FALSE]]                         |
 
-::: 
+
 
 
 
@@ -2006,12 +2006,12 @@ IFrame(src="https://singularitysmith.github.io/AMTAIR_Prototype/bayesian_network
 
 
 
-::: {.callout-tip}
 
-## Validation Success
+
+**Validation Success**
 
 The system successfully extracts complete network structure, preserves all probability information, calculates correct marginal probabilities, generates interactive visualization, and enables inference queries—validating the basic pipeline functionality.
-:::
+
 
 
 
@@ -2042,14 +2042,14 @@ Applying AMTAIR to Carlsmith's model demonstrates scalability to realistic AI sa
 
 ### 3.5.1 Model Complexity {#sec-carlsmith-complexity}
 
-::: {.merge-candidate data-merge-with="Outline_11.7#carlsmith-complexity"}
+
 The Carlsmith model contains:
 
 - **23 nodes** representing different factors
 - **29 edges** encoding dependencies
 - **Multiple probability tables** with complex conditionals
 - **Six-level causal depth** from root causes to catastrophe
-:::
+
 
 This represents a significant increase in complexity from the pedagogical example.
 
@@ -2146,12 +2146,149 @@ These insights emerge naturally from formal analysis but remain implicit in text
 
 
 
+### 3.5.5 Interactive Visualization and Exploration
+
+Complex probabilistic models like Bayesian networks contain rich information, but they often remain inaccessible to many stakeholders. A conditional probability table with dozens of values conveys precise relationships, but few can intuitively grasp its implications. This accessibility gap limits the potential for coordinated action on AI governance challenges—what good is formalization if the resulting models remain opaque to most decision-makers?
+
+AMTAIR addresses this challenge through interactive visualization designed to make complex probabilistic relationships accessible to diverse stakeholders. The approach combines visual encoding of probability information, progressive disclosure of details, and interactive exploration capabilities to create intuitive interfaces for complex models.
+
+The visualization system follows several key design principles:
+
+First, **visual encoding of probability** uses color gradients to represent likelihood values. Nodes are colored on a spectrum from red (low probability) to green (high probability) based on their primary state's probability. This simple visual cue provides immediate insights into which outcomes are more or less likely without requiring numerical interpretation.
+
+Second, **structural classification** uses border colors to indicate node types based on network position. Blue borders designate root causes (nodes without parents), purple borders mark intermediate nodes (with both parents and children), and magenta borders highlight leaf nodes (final effects without children). This classification helps users understand the causal flow through the network.
+
+Third, **progressive disclosure** presents information in layers of increasing detail. Basic node information appears in the visualization itself, additional details emerge in tooltips on hover, and comprehensive probability tables display in modal windows on click. This layered approach prevents information overload while ensuring all details remain accessible.
+
+Fourth, **interactive exploration** allows users to reorganize nodes, zoom in on areas of interest, adjust physics parameters, and investigate probability values. These capabilities transform the visualization from a static image into an explorable knowledge landscape.
+
+Figure 6 shows the interactive visualization of Carlsmith's model, highlighting how color, border styling, and layout work together to represent complex causal relationships:
+
+[FIGURE 6: Interactive visualization of Carlsmith's model showing color-coded nodes and causal relationships]
+
+The visualization system implements these principles through a combination of NetworkX for graph representation and PyVis for interactive display, with custom HTML generation for tooltips and modals:
+
+```python
+def create_bayesian_network_with_probabilities(df):
+    """
+    Create an interactive Bayesian network visualization with enhanced probability visualization
+    and node classification based on network structure.
+    """
+    # Create network structure
+    G = nx.DiGraph()
+    
+    # Add nodes with attributes
+    for idx, row in df.iterrows():
+        title = row['Title']
+        description = row['Description']
+        priors = get_priors(row)
+        instantiations = get_instantiations(row)
+        
+        G.add_node(title, description=description, priors=priors, 
+                  instantiations=instantiations, posteriors=get_posteriors(row))
+    
+    # Add edges based on parent-child relationships
+    for idx, row in df.iterrows():
+        child = row['Title']
+        parents = get_parents(row)
+        
+        for parent in parents:
+            if parent in G.nodes():
+                G.add_edge(parent, child)
+    
+    # Classify nodes based on network structure
+    classify_nodes(G)
+    
+    # Create visualization network
+    net = Network(notebook=True, directed=True, cdn_resources="in_line", 
+                 height="600px", width="100%")
+    
+    # Configure physics for better layout
+    net.force_atlas_2based(gravity=-50, spring_length=100, spring_strength=0.02)
+    net.show_buttons(filter_=['physics'])
+    
+    # Add graph to network
+    net.from_nx(G)
+    
+    # Enhance node appearance
+    for node in net.nodes:
+        node_id = node['id']
+        node_data = G.nodes[node_id]
+        
+        # Set border color based on node type
+        node_type = node_data.get('node_type', 'unknown')
+        border_color = get_border_color(node_type)
+        
+        # Set background color based on probability
+        priors = node_data.get('priors', {})
+        background_color = get_probability_color(priors)
+        
+        # Create tooltip and expanded content
+        tooltip = create_tooltip(node_id, node_data)
+        node_data['expanded_content'] = create_expanded_content(node_id, node_data)
+        
+        # Set node attributes
+        node['title'] = tooltip
+        node['label'] = f"{node_id}\np={priors.get('true_prob', 0.5):.2f}"
+        node['shape'] = 'box'
+        node['color'] = {
+            'background': background_color,
+            'border': border_color,
+            'highlight': {
+                'background': background_color,
+                'border': border_color
+            }
+        }
+    
+    # Setup click handling for detailed information
+    # [Click handling JavaScript code omitted for brevity]
+    
+    return net.show('bayesian_network.html')
+```
+
+Beyond the core visualization, the system includes specialized components that enhance understanding of probabilistic relationships:
+
+1. **Probability bars** provide visual representations of probability distributions, showing relative likelihoods of different states using color-coded horizontal bars with numeric labels.
+    
+2. **Conditional probability tables** organize complex relationships into structured matrices, displaying how different combinations of parent states influence probability distributions.
+    
+3. **Sensitivity indicators** highlight which nodes and relationships most significantly affect outcomes, directing attention to critical factors.
+    
+
+These components work together to create an intuitive interface for complex probabilistic models. A user might start by exploring the overall structure to understand key factors and relationships, hover over nodes of interest to see probability summaries, then click on specific nodes to examine detailed conditional probabilities.
+
+The benefits of this visualization approach extend beyond aesthetic appeal to fundamental improvements in understanding and communication:
+
+First, **intuitive comprehension** of probability relationships becomes possible even for those without formal training in Bayesian statistics. The color coding provides immediate visual cues about which outcomes are more likely, while interactive exploration allows users to develop intuition about how different factors influence results.
+
+Second, **cross-stakeholder communication** improves through shared visual reference points. Technical experts can use the visualizations to explain complex relationships to policy specialists, while governance experts can identify institutional factors that might be incorporated into the models.
+
+Third, **disagreement identification** becomes more precise as stakeholders can point to specific nodes, relationships, or probability values where their views differ, focusing discussion on substantive issues rather than terminological confusion.
+
+Fourth, **intervention assessment** becomes more concrete as users can see how changing specific factors influences downstream effects, providing intuitive understanding of causal pathways and leverage points.
+
+The visualization system demonstrates how thoughtful interface design can overcome barriers to understanding complex formal models. By making probabilistic relationships visually intuitive and progressively disclosing details based on user interest, it creates bridges between mathematical precision and human comprehension—precisely the kind of bridge needed to support coordination across domains in AI governance.
+
+This approach reflects a broader principle: formalization is most valuable when it enhances rather than replaces human understanding. The AMTAIR visualization doesn't simplify complex relationships; it makes them more accessible by leveraging visual cognition, interactive exploration, and progressive disclosure. This human-centered approach to formalization creates tools that augment rather than replace expert judgment, enhancing our collective ability to understand and address complex governance challenges.
 
 
 
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+::: 
 
 
 

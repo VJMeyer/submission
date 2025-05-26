@@ -942,7 +942,7 @@ Third, **contextual preservation** maintains the connection to original argument
 
 Consider how these principles manifest in the BayesDown syntax. Each node begins with a bracketed title followed by a natural language description, preserving the core statement being formalized. The JSON metadata contains technical information like instantiations, priors, and posteriors, but keeps this information clearly separated from the narrative content. Hierarchical relationships use indentation and plus symbols, creating a visual structure that mirrors causal influence.
 
-```
+```json
 [Existential_Catastrophe]: The destruction of humanity's long-term potential due to AI systems we've lost control over. {
   "instantiations": ["existential_catastrophe_TRUE", "existential_catastrophe_FALSE"],
   "priors": {"p(existential_catastrophe_TRUE)": "0.05", "p(existential_catastrophe_FALSE)": "0.95"},
