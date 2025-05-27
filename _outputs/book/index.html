@@ -265,8 +265,9 @@ div.csl-indent {
 <!-- A concise overview highlighting the project's integration of frontier AI, Bayesian networks, and prediction markets to create a scalable framework for evaluating AI governance policies.
 Emphasize both technical contributions and policy relevance.-->
 <blockquote class="blockquote">
-<p>The coordination crisis in AI governance presents a paradoxical challenge: unprecedented investment in AI safety coexists alongside fundamental coordination failures across technical, policy, and ethical domains. These divisions systematically increase existential risk. This thesis introduces AMTAIR (Automating Transformative AI Risk Modeling), a computational approach addressing this coordination failure by automating the extraction of probabilistic world models from AI safety literature using frontier language models. The system implements an end-to-end pipeline transforming unstructured text into interactive Bayesian networks through a novel two-stage extraction process that bridges communication gaps between stakeholders.</p>
+<p>The rapid development of artificial intelligence poses existential risks that current governance structures struggle to address. This thesis diagnoses a critical coordination failure: while billions flow into AI safety research, efforts remain fragmented across technical, policy, and strategic communities operating with incompatible frameworks. I present AMTAIR (Automating Transformative AI Risk Modeling), a computational system that extracts formal probabilistic models from natural language arguments about AI risk. The approach uses frontier language models to transform unstructured text into Bayesian networks through a two-stage pipeline. First, arguments are parsed into hierarchical causal structures (ArgDown). Then, probability distributions are extracted and integrated (BayesDown). The resulting models enable systematic comparison across worldviews, evaluation of policy interventions, and integration with prediction markets for live updating. I demonstrate feasibility by successfully extracting complex models like Carlsmith’s power-seeking AI argument, transforming weeks of manual effort into minutes of computation. The implementation handles real-world complexity through modular architecture, progressive visualization, and thoughtful design choices that balance automation with human oversight. While extraction remains imperfect and validation preliminary, the system provides practical value by making implicit assumptions explicit and enabling evidence-based policy evaluation. This work contributes both theoretical frameworks for understanding coordination failures and practical tools for addressing them, offering a path toward more effective governance of transformative AI development.</p>
 </blockquote>
+<!-- > The coordination crisis in AI governance presents a paradoxical challenge: unprecedented investment in AI safety coexists alongside fundamental coordination failures across technical, policy, and ethical domains. These divisions systematically increase existential risk. This thesis introduces AMTAIR (Automating Transformative AI Risk Modeling), a computational approach addressing this coordination failure by automating the extraction of probabilistic world models from AI safety literature using frontier language models. The system implements an end-to-end pipeline transforming unstructured text into interactive Bayesian networks through a novel two-stage extraction process that bridges communication gaps between stakeholders. -->
 <!-- [ ] Write comprehensive abstract capturing coordination crisis, technical contribution, and policy implications -->
 <!-- [ ] Add key quantitative results and validation findings to Abstract-->
 <!-- # Prefatory Apparatus: Frontmatter {.unnumbered} -->
@@ -314,6 +315,8 @@ Emphasize both technical contributions and policy relevance.-->
 </li>
 <li><strong>Existential risk</strong>: Risk of permanent curtailment of humanity’s potential<br>
 </li>
+<li><strong>Mesa-optimization</strong>: A learned optimization process that emerges within a broader training objective<br>
+</li>
 <li><strong>Power-seeking AI</strong>: AI systems with instrumental incentives to acquire resources and power<br>
 </li>
 <li><strong>Prediction market</strong>: A market where participants trade contracts that resolve based on future events<br>
@@ -352,6 +355,20 @@ BayesDown
 : An extension of ArgDown that incorporates probabilistic information
 
 --></p>
+<!-- 
+
+### Additional Style Guidelines for Throughout the Thesis:
+
+1. **Replace "Let me" constructions** with direct academic language
+2. **Vary sentence lengths** more dramatically - mix short, punchy sentences with longer, more complex ones
+3. **Add occasional hedging** - "arguably," "perhaps," "it seems," rather than constant certainty
+4. **Include minor contradictions** that you later resolve - shows genuine thinking
+5. **Use more passive voice** in methods sections (traditional academic style)
+6. **Add personal asides** in footnotes rather than main text
+7. **Introduce technical terms gradually** rather than all at once
+8. **Occasionally acknowledge uncertainty** - "The reasons for this remain unclear"
+9. **Reference other sections less mechanically** - "As discussed earlier" rather than "See Section 2.3.4"
+10. **End paragraphs with varying styles** - not always conclusive statements -->
 
 
 <div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" role="list" style="display: none">

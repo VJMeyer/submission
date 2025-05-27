@@ -412,17 +412,31 @@ to Upscale Conditional Policy Assessments in Bayesian Networks on a Narrow Path 
 \chapter{Abstract}\label{sec-abstract}
 
 \begin{quote}
-The coordination crisis in AI governance presents a paradoxical
-challenge: unprecedented investment in AI safety coexists alongside
-fundamental coordination failures across technical, policy, and ethical
-domains. These divisions systematically increase existential risk. This
-thesis introduces AMTAIR (Automating Transformative AI Risk Modeling), a
-computational approach addressing this coordination failure by
-automating the extraction of probabilistic world models from AI safety
-literature using frontier language models. The system implements an
-end-to-end pipeline transforming unstructured text into interactive
-Bayesian networks through a novel two-stage extraction process that
-bridges communication gaps between stakeholders.
+The rapid development of artificial intelligence poses existential risks
+that current governance structures struggle to address. This thesis
+diagnoses a critical coordination failure: while billions flow into AI
+safety research, efforts remain fragmented across technical, policy, and
+strategic communities operating with incompatible frameworks. I present
+AMTAIR (Automating Transformative AI Risk Modeling), a computational
+system that extracts formal probabilistic models from natural language
+arguments about AI risk. The approach uses frontier language models to
+transform unstructured text into Bayesian networks through a two-stage
+pipeline. First, arguments are parsed into hierarchical causal
+structures (ArgDown). Then, probability distributions are extracted and
+integrated (BayesDown). The resulting models enable systematic
+comparison across worldviews, evaluation of policy interventions, and
+integration with prediction markets for live updating. I demonstrate
+feasibility by successfully extracting complex models like Carlsmith's
+power-seeking AI argument, transforming weeks of manual effort into
+minutes of computation. The implementation handles real-world complexity
+through modular architecture, progressive visualization, and thoughtful
+design choices that balance automation with human oversight. While
+extraction remains imperfect and validation preliminary, the system
+provides practical value by making implicit assumptions explicit and
+enabling evidence-based policy evaluation. This work contributes both
+theoretical frameworks for understanding coordination failures and
+practical tools for addressing them, offering a path toward more
+effective governance of transformative AI development.
 \end{quote}
 
 \section{Glossary}\label{sec-gloss.unnumbered}
@@ -447,6 +461,9 @@ bridges communication gaps between stakeholders.
 \item
   \textbf{Existential risk}: Risk of permanent curtailment of humanity's
   potential\\
+\item
+  \textbf{Mesa-optimization}: A learned optimization process that
+  emerges within a broader training objective\\
 \item
   \textbf{Power-seeking AI}: AI systems with instrumental incentives to
   acquire resources and power\\
@@ -544,24 +561,22 @@ Governance}\label{introduction-the-coordination-crisis-in-ai-governance}
 \section{1.1 Opening Scenario: The Policymaker's
 Dilemma}\label{opening-scenario-the-policymakers-dilemma}
 
-Imagine a senior policy advisor preparing recommendations for AI
-governance legislation. On her desk lie a dozen reports from leading AI
-safety researchers, each painting a different picture of the risks
-ahead. One argues that misaligned AI could pose existential risks within
-the decade, citing complex technical arguments about instrumental
-convergence and orthogonality. Another suggests these concerns are
-overblown, emphasizing uncertainty and the strength of existing
-institutions. A third proposes specific technical standards but
-acknowledges deep uncertainty about their effectiveness.
-
-Each report seems compelling in isolation, written by credentialed
-experts with sophisticated arguments. Yet they reach dramatically
-different conclusions about both the magnitude of risk and appropriate
-interventions. The technical arguments involve unfamiliar
-concepts---mesa-optimization, corrigibility, capability
-amplification---expressed through different frameworks and implicit
-assumptions. Time is limited, stakes are high, and the legislation could
-shape humanity's trajectory for decades.
+A senior policy advisor sits at her desk, drowning in reports. Twelve
+different documents from AI safety researchers, each compelling, each
+contradictory. One warns of existential catastrophe within the decade,
+citing concepts she half-understands---orthogonality, instrumental
+convergence. Another dismisses these fears as overblown. A third
+proposes technical standards but hedges with so many caveats it might as
+well propose nothing. The clock's ticking. Legislation needs drafting.
+Yet these experts, brilliant as they are individually, seem to inhabit
+different universes. The technical arguments involve mathematical
+formalism she lacks time to parse. The policy recommendations conflict
+at fundamental levels. She needs synthesis, not more analysis. She needs
+a way to see where these worldviews actually diverge versus where
+they're using different words for the same fears. This scenario plays
+out daily across Washington, Brussels, Beijing---wherever humans grapple
+with governing something that doesn't exist yet but might remake
+everything when it does.
 
 This scenario\footnote{The orthogonality thesis posits that intelligence
   and goals are independent---an AI can have any set of objectives
@@ -676,7 +691,7 @@ with accelerating AI development.
   >{\raggedright\arraybackslash}p{(\linewidth - 8\tabcolsep) * \real{0.2000}}
   >{\raggedright\arraybackslash}p{(\linewidth - 8\tabcolsep) * \real{0.2000}}
   >{\raggedright\arraybackslash}p{(\linewidth - 8\tabcolsep) * \real{0.2000}}@{}}
-\caption{Examples of duplicated AI safety efforts across
+\caption{Table 1.2.2: Examples of duplicated AI safety efforts across
 organizations}\label{tbl-resource-duplication}\tabularnewline
 \toprule\noalign{}
 \begin{minipage}[b]{\linewidth}\raggedright
@@ -1158,7 +1173,7 @@ ethical judgments that resist neutral expertise.
   >{\raggedright\arraybackslash}p{(\linewidth - 4\tabcolsep) * \real{0.3333}}
   >{\raggedright\arraybackslash}p{(\linewidth - 4\tabcolsep) * \real{0.3333}}
   >{\raggedright\arraybackslash}p{(\linewidth - 4\tabcolsep) * \real{0.3333}}@{}}
-\caption{Comparison of AI governance vs traditional policy
+\caption{Table 2.3.4: Comparison of AI governance vs traditional policy
 domains}\label{tbl-governance-challenges}\tabularnewline
 \toprule\noalign{}
 \begin{minipage}[b]{\linewidth}\raggedright
@@ -1491,7 +1506,7 @@ Rendering}\label{rain-sprinkler-grass-network-rendering}
 
 \phantomsection\label{rain_sprinkler_grass_example_network_rendering}
 \begin{verbatim}
-<IPython.lib.display.IFrame at 0x107b79890>
+<IPython.lib.display.IFrame at 0x119c72510>
 \end{verbatim}
 
 Dynamic Html Rendering of the Rain-Sprinkler-Grass DAG with Conditional
@@ -1915,9 +1930,17 @@ tour of the territories most relevant to AMTAIR's mission.
 \subsection{2.6.1 AI Risk Models
 Evolution}\label{sec-risk-models-evolution}
 
-The evolution of AI risk models traces a path from philosophical
-speculation to increasingly rigorous formalization---a journey from
-``what if?'' to ``how likely?''
+The intellectual history of AI risk thinking reads like a gradual
+awakening---from vague unease to mathematical precision, though perhaps
+losing something essential in translation.
+
+The field's prehistory belongs to the visionaries and worriers. Good's
+1966 meditation on the ultraintelligent machine feels almost quaint now,
+with its assumption that such a system would naturally be designed to
+serve human purposes. Vinge popularized the singularity concept, though
+his version emphasized speed rather than the strategic considerations
+that dominate current thinking. These early writings functioned more as
+philosophical provocations than actionable analyses.
 
 \textbf{Early Phase (2000-2010)}: The conversation began with broad
 conceptual arguments. Good's ultraintelligent machine
@@ -1926,6 +1949,15 @@ but these were more thought experiments than models. Yudkowsky's early
 writings \textcite{yudkowsky2008} introduced key concepts like recursive
 self-improvement and orthogonality but remained largely qualitative.
 
+Yudkowsky's contributions in the 2000s marked a transitional moment. His
+writing style---part manifesto, part technical argument---resisted easy
+categorization. Yet buried within the sometimes baroque prose lay
+genuinely novel insights. The orthogonality thesis (intelligence and
+goals vary independently) and instrumental convergence (diverse goals
+lead to similar intermediate strategies) provided conceptual tools that
+remain central to the field. Still, these arguments remained largely
+qualitative, more useful for establishing possibility than probability.
+
 \textbf{Formalization Phase (2010-2018)}: Bostrom's
 \emph{Superintelligence} \textcite{bostrom2014} marked a watershed,
 providing systematic analysis of pathways, capabilities, and risks. The
@@ -1933,6 +1965,24 @@ book's genius lay not in mathematical formalism but in conceptual
 clarity---decomposing the nebulous fear of ``robot overlords'' into
 specific mechanisms like instrumental convergence and infrastructure
 profusion.
+
+Bostrom's 2014 Superintelligence achieved what earlier work had not:
+respectability. Here was an Oxford philosopher writing with analytical
+precision about AI risk. The book's great contribution wasn't
+mathematical formalism---indeed, it contains remarkably few
+equations---but rather its systematic decomposition of the problem
+space. Bostrom transformed ``robots might kill us all'' into specific
+mechanisms: capability gain, goal preservation, resource acquisition.
+Suddenly, one could have serious discussions about AI risk without
+sounding like a science fiction enthusiast.
+
+The current quantitative turn, exemplified by Carlsmith's power-seeking
+analysis and Cotra's biological anchors, represents both progress and
+peril. We now assign numbers where before we had only words. Yet as any
+student of probability knows, precise numbers don't necessarily mean
+accurate predictions. The models grow more sophisticated, the
+mathematics more rigorous, but the fundamental uncertainties remain as
+daunting as ever.
 
 \textbf{Quantification Phase (2018-present)}: Recent years have seen
 explicit probability estimates entering mainstream discourse.
@@ -1948,6 +1998,10 @@ precision. As they become more complex, they risk inscrutability. AMTAIR
 attempts to navigate these tensions by preserving the narrative clarity
 of earlier work while enabling the mathematical rigor of recent
 approaches.
+
+The evolution of AI risk models traces a path from philosophical
+speculation to increasingly rigorous formalization---a journey from
+``what if?'' to ``how likely?''
 
 \subsection{2.6.2 Governance Proposals
 Taxonomy}\label{sec-governance-taxonomy}
@@ -2124,9 +2178,19 @@ conclusions.
 The methodology of this research resembles less a linear march from
 hypothesis to conclusion and more an iterative dance between theory and
 implementation, vision and reality. Let me walk you through the
-choreography.
+choreography. Actually, that's not quite right. It was messier than a
+dance. More like trying to build a bridge while crossing it, discovering
+halfway across that your blueprints assumed different gravity. The
+original plan seemed straightforward: take the MTAIR team's manual
+approach, automate it with language models, validate against their
+results. Simple. Reality laughed at this simplicity. Language models
+hallucinate. Arguments don't decompose cleanly. Probabilities hide in
+qualifying phrases that might mean 0.6 to one reader and 0.9 to another.
+Each solution spawned new problems in fractal recursion.
 
 \subsection{2.7.1 Research Design Overview}\label{sec-research-design}
+
+\subsubsection{The Original Plan}\label{the-original-plan}
 
 This research follows what methodologists might call a ``design
 science'' approach---we're not just studying existing phenomena but
@@ -2162,6 +2226,46 @@ next begins. Rather, insights from implementation fed back into theory,
 validation results shaped technical improvements, and application
 attempts revealed new requirements. The methodology itself embodied the
 iterative refinement it sought to enable.
+
+\subsubsection{Engineering Experience}\label{engineering-experience}
+
+The initial conception seemed straightforward enough. The MTAIR team had
+demonstrated that expert arguments about AI risk could be formalized
+into Bayesian networks. The process took hundreds of hours per model.
+Large language models had recently demonstrated remarkable capacity for
+understanding and generating structured text. The syllogism practically
+wrote itself: use LLMs to automate what MTAIR did manually. A few weeks
+of implementation, some validation, done.
+
+That naive optimism lasted approximately until the first extraction
+attempt\footnote{If I'm honest about how this research actually
+  developed, it looked nothing like the clean progression these
+  methodology sections usually imply. The reality was messier, more
+  iterative, occasionally frustrating, and ultimately more interesting
+  than any linear narrative could capture.}. The LLM cheerfully produced
+what looked like a reasonable argument structure, except half the nodes
+were subtly wrong, several causal relationships pointed backward, and
+the probability estimates bore no discernible relationship to the source
+text. Worse, different runs produced different structures entirely. The
+gap between ``looks plausible'' and ``actually correct'' proved wider
+than anticipated.
+
+What emerged from this initial failure was a recognition that the
+problem decomposed naturally into distinct challenges. Extracting
+structure---what relates to what---differed fundamentally from
+extracting probabilities. The former required understanding
+argumentative flow and causal language. The latter demanded interpreting
+uncertainty expressions and maintaining consistency across estimates.
+This insight led to the two-stage architecture that ultimately proved
+successful.
+
+The development process resembled less a march toward a predetermined
+goal and more a conversation between ambition and reality. Each
+implementation attempt revealed new constraints. Each constraint
+suggested workarounds. Some workarounds opened unexpected possibilities.
+The final system bears only passing resemblance to the initial
+conception, yet it works---imperfectly, with clear limitations, but well
+enough to demonstrate feasibility.
 
 \subsection{2.7.2 Formalizing World Models from AI Safety
 Literature}\label{sec-formalizing-world-models}
@@ -2388,16 +2492,16 @@ defeats, and the occasional moment of ``well, that's unexpected.''
 Overview}\label{sec-system-architecture}
 
 Picture, if you will, a factory for transforming arguments into models.
-Raw materials (PDFs, blog posts, research papers) enter at one end.
-Finished products (interactive Bayesian networks) emerge at the other.
-In between lies a carefully orchestrated pipeline where each stage
-performs its specialized transformation, passing refined materials to
-the next.
-
-The AMTAIR architecture embodies a philosophy: complex tasks become
-manageable when decomposed into focused components. Rather than building
-a monolithic ``argument-to-model'' black box, we created a series of
-specialized modules, each excellent at one thing.
+Raw materials enter at one end---PDFs thick with jargon, blog posts
+mixing insight with speculation, research papers where crucial
+assumptions hide in footnote 47. Finished products emerge at the other
+end---clean network diagrams where you can trace how Assumption A leads
+to Catastrophe B with probability 0.3. Actually, scratch the factory
+metaphor. It's too clean, too industrial. This is more like archaeology
+meets interpretation meets mathematics. You're digging through layers of
+argument, trying to distinguish the load-bearing claims from rhetorical
+flourishes, all while preserving enough context that the formalization
+means something.
 
 The pipeline consists of five main stages:
 
@@ -2573,9 +2677,9 @@ The system employs multiple strategies for probability extraction:
 (``we assign 70\% probability''), extraction is straightforward, though
 we must handle various formats and contexts.
 
-\textbf{Linguistic Mapping}: Qualitative expressions map to probability
-ranges based on calibration studies. ``Highly likely'' becomes
-approximately 0.85, though we maintain uncertainty about this mapping.
+\textbf{Linguistic Mapping}: While comprehensive validation remains
+future work, preliminary assessments using the methodology described
+above would likely reveal several patterns.
 
 \textbf{Comparative Reasoning}: Statements like ``more probable than
 not'' or ``at least as likely as X'' provide bounds even without exact
@@ -2642,6 +2746,40 @@ interoperability, and community support.
 
 \subsection{3.3.1 Technology Stack}\label{sec-tech-stack}
 
+Selecting technologies for a project like AMTAIR involves a peculiar
+form of fortune-telling. You're choosing tools not just for present
+needs but for future possibilities you can't fully anticipate. Early
+decisions cascade through the implementation, creating path dependencies
+that only become apparent months later.
+
+The choice of Python as the primary language was perhaps the only
+decision that never faced serious questioning. The ecosystem for
+scientific computing, the availability of sophisticated libraries, the
+community support---all pointed in the same direction. Yet even this
+``obvious'' choice carried hidden implications. Python's flexibility
+enabled rapid prototyping but occasionally masked performance issues
+until they became critical.
+
+NetworkX emerged as the natural choice for graph manipulation after
+brief flirtations with alternatives. Its maturity showed in countless
+small conveniences---algorithms I didn't have to implement, edge cases
+already handled, documentation for obscure functions. Pgmpy for Bayesian
+network operations was less obvious. Several libraries offered similar
+functionality, but pgmpy's API design aligned well with our extraction
+pipeline. The ability to construct networks incrementally, validate
+structure during construction, and perform inference without elaborate
+setup proved decisive.
+
+The visualization challenge nearly derailed the project. Initial
+attempts with matplotlib produced static images that technically
+displayed the network but failed to convey understanding. The
+breakthrough came with PyVis, which leveraged vis.js to create
+interactive web-based visualizations. Suddenly, complex networks became
+explorable. Users could drag nodes to untangle connections, click for
+details, adjust physics parameters to find optimal layouts. The
+difference between seeing and understanding turned out to be
+interactivity.
+
 The final ensemble performs beautifully:
 
 \begin{longtable}[]{@{}
@@ -2649,6 +2787,20 @@ The final ensemble performs beautifully:
   >{\raggedright\arraybackslash}p{(\linewidth - 6\tabcolsep) * \real{0.2500}}
   >{\raggedright\arraybackslash}p{(\linewidth - 6\tabcolsep) * \real{0.2500}}
   >{\raggedright\arraybackslash}p{(\linewidth - 6\tabcolsep) * \real{0.2500}}@{}}
+\caption{Table 3.3.1: Overview of Tech
+Stack}\label{tbl-tech-stack}\tabularnewline
+\toprule\noalign{}
+\begin{minipage}[b]{\linewidth}\raggedright
+Component
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+Technology
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+Purpose
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+Why This Choice
+\end{minipage} \\
+\midrule\noalign{}
+\endfirsthead
 \toprule\noalign{}
 \begin{minipage}[b]{\linewidth}\raggedright
 Component
@@ -2946,24 +3098,24 @@ probability distributions.
 
 \subsection{3.4.3 Results}\label{sec-rsg-results}
 
-\#\textbar{} column: page
-
 \begin{longtable}[]{@{}
-  >{\raggedright\arraybackslash}p{(\linewidth - 28\tabcolsep) * \real{0.0137}}
-  >{\raggedright\arraybackslash}p{(\linewidth - 28\tabcolsep) * \real{0.0301}}
-  >{\raggedright\arraybackslash}p{(\linewidth - 28\tabcolsep) * \real{0.1342}}
-  >{\raggedright\arraybackslash}p{(\linewidth - 28\tabcolsep) * \real{0.0329}}
-  >{\raggedright\arraybackslash}p{(\linewidth - 28\tabcolsep) * \real{0.0301}}
-  >{\raggedright\arraybackslash}p{(\linewidth - 28\tabcolsep) * \real{0.0493}}
-  >{\raggedright\arraybackslash}p{(\linewidth - 28\tabcolsep) * \real{0.0192}}
-  >{\raggedright\arraybackslash}p{(\linewidth - 28\tabcolsep) * \real{0.0466}}
-  >{\raggedright\arraybackslash}p{(\linewidth - 28\tabcolsep) * \real{0.0603}}
-  >{\raggedright\arraybackslash}p{(\linewidth - 28\tabcolsep) * \real{0.0904}}
-  >{\raggedright\arraybackslash}p{(\linewidth - 28\tabcolsep) * \real{0.1342}}
-  >{\raggedright\arraybackslash}p{(\linewidth - 28\tabcolsep) * \real{0.1370}}
-  >{\raggedright\arraybackslash}p{(\linewidth - 28\tabcolsep) * \real{0.0301}}
-  >{\raggedright\arraybackslash}p{(\linewidth - 28\tabcolsep) * \real{0.0575}}
-  >{\raggedright\arraybackslash}p{(\linewidth - 28\tabcolsep) * \real{0.1342}}@{}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 26\tabcolsep) * \real{0.0407}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 26\tabcolsep) * \real{0.0756}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 26\tabcolsep) * \real{0.0349}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 26\tabcolsep) * \real{0.0814}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 26\tabcolsep) * \real{0.0756}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 26\tabcolsep) * \real{0.1105}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 26\tabcolsep) * \real{0.0523}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 26\tabcolsep) * \real{0.0581}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 26\tabcolsep) * \real{0.0930}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 26\tabcolsep) * \real{0.0465}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 26\tabcolsep) * \real{0.0640}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 26\tabcolsep) * \real{0.0640}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 26\tabcolsep) * \real{0.0756}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 26\tabcolsep) * \real{0.1279}}@{}}
+\caption{Table 3.5.3: Extracted BayesDown data structure for
+rain-sprinkler-grass
+example}\label{tbl-rsg-extracted-data}\tabularnewline
 \toprule\noalign{}
 \begin{minipage}[b]{\linewidth}\raggedright
 Title
@@ -2993,29 +3145,64 @@ No\_Parent
 No\_Children
 \end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
 parent\_instantiations
+\end{minipage} \\
+\midrule\noalign{}
+\endfirsthead
+\toprule\noalign{}
+\begin{minipage}[b]{\linewidth}\raggedright
+Title
 \end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+Description
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+line
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+line\_numbers
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+indentation
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+indentation\_levels
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+Parents
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+Children
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+instantiations
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+priors
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+posteriors
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+No\_Parent
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+No\_Children
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+parent\_instantiations
 \end{minipage} \\
 \midrule\noalign{}
 \endhead
 \bottomrule\noalign{}
 \endlastfoot
-0 & Grass\_Wet & Concentrated moisture on, between and around t\ldots{}
-& 3 & {[}3{]} & 0 & {[}0{]} & {[}Rain, Sprinkler{]} & {[}{]} &
+Grass\_Wet & Concentrated moisture on, between and around the blades of
+grass & 3 & {[}3{]} & 0 & {[}0{]} & {[}Rain, Sprinkler{]} & {[}{]} &
 {[}grass\_wet\_TRUE, grass\_wet\_FALSE{]} & \{`p(grass\_wet\_TRUE)':
-`0.322', 'p(grass\_wet\_FA\ldots{} &
-\{`p(grass\_wet\_TRUE\textbar sprinkler\_TRUE,rain\_TRUE)':\ldots{} &
+`0.322', `p(grass\_wet\_FALSE)': `0.678'\} &
+\{`p(grass\_wet\_TRUE\textbar sprinkler\_TRUE,rain\_TRUE)': `0.99',
+`p(grass\_wet\_TRUE\textbar sprinkler\_TRUE,rain\_FALSE)': `0.9',
+`p(grass\_wet\_TRUE\textbar sprinkler\_FALSE,rain\_TRUE)': `0.8',
+`p(grass\_wet\_TRUE\textbar sprinkler\_FALSE,rain\_FALSE)': `0.01'\} &
 False & True & {[}{[}rain\_TRUE, rain\_FALSE{]}, {[}sprinkler\_TRUE,
-spr\ldots{} \\
-1 & Rain & Tears of angles crying high up in the skies hi\ldots{} & 4 &
-{[}4, 6{]} & 2 & {[}1, 2{]} & {[}{]} & {[}Grass\_Wet, Sprinkler{]} &
+sprinkler\_FALSE{]}{]} \\
+Rain & Tears of angles crying high up in the skies hitting the ground &
+4 & {[}4, 6{]} & 2 & {[}1, 2{]} & {[}{]} & {[}Grass\_Wet, Sprinkler{]} &
 {[}rain\_TRUE, rain\_FALSE{]} & \{`p(rain\_TRUE)': `0.2',
 `p(rain\_FALSE)': `0.8'\} & \{\} & True & False & {[}{]} \\
-2 & Sprinkler & Activation of a centrifugal force based CO2 dr\ldots{} &
-5 & {[}5{]} & 1 & {[}1{]} & {[}Rain{]} & {[}Grass\_Wet{]} &
-{[}sprinkler\_TRUE, sprinkler\_FALSE{]} & \{`p(sprinkler\_TRUE)':
-`0.44838', 'p(sprinkler\_\ldots{} &
-\{`p(sprinkler\_TRUE\textbar rain\_TRUE)': `0.01', 'p(spr\ldots{} &
-False & False & {[}{[}rain\_TRUE, rain\_FALSE{]}{]} \\
+Sprinkler & Activation of a centrifugal force based CO2 droplet
+distribution system & 5 & {[}5{]} & 1 & {[}1{]} & {[}Rain{]} &
+{[}Grass\_Wet{]} & {[}sprinkler\_TRUE, sprinkler\_FALSE{]} &
+\{`p(sprinkler\_TRUE)': `0.44838', `p(sprinkler\_FALSE)': `0.55162'\} &
+\{`p(sprinkler\_TRUE\textbar rain\_TRUE)': `0.01',
+`p(sprinkler\_TRUE\textbar rain\_FALSE)': `0.4'\} & False & False &
+{[}{[}rain\_TRUE, rain\_FALSE{]}{]} \\
 \end{longtable}
 
 The successfully processed rain-sprinkler-grass example demonstrates
@@ -3057,7 +3244,7 @@ Rendering}\label{rain-sprinkler-grass-network-rendering-1}
 
 \phantomsection\label{rain_sprinkler_grass_example_network_rendering2}
 \begin{verbatim}
-<IPython.lib.display.IFrame at 0x107b9c610>
+<IPython.lib.display.IFrame at 0x119c71f50>
 \end{verbatim}
 
 Dynamic Html Rendering of the Rain-Sprinkler-Grass DAG with Conditional
@@ -4292,10 +4479,10 @@ Validating AMTAIR's extraction required careful comparison with expert
 judgment. While comprehensive benchmarking remains future work,
 preliminary validation efforts provide encouraging signals.
 
-\textbf{Manual Baseline Creation}: Domain experts, including Johannes
-Meyer and Jelena Meyer, independently extracted ArgDown and BayesDown
-representations from Carlsmith's paper. This created ground truth
-accounting for legitimate interpretive variation---experts might
+\textbf{Manual Baseline Creation}: Johannes Meyer and Jelena Meyer,
+independently extracted ArgDown and BayesDown representations from
+Carlsmith's paper and Bucknall and Dori-Hacohen's. This created ground
+truth accounting for legitimate interpretive variation---experts might
 reasonably disagree on some structural choices or probability estimates.
 
 \textbf{Structural Comparison}: Comparing extracted causal structures
@@ -4510,6 +4697,90 @@ requires sophisticated discourse understanding.
 These limitations don't invalidate the approach but rather define its
 boundaries. Users who understand these constraints can work within them,
 leveraging automation's strengths while compensating for its weaknesses.
+
+\subsection{3.6.5 Independent Manual Extraction
+Validation}\label{sec-manual-validation}
+
+To establish ground truth for evaluating AMTAIR's extraction quality, I
+obtained independent manual extractions from domain experts. Johannes
+Meyer and Jelena Meyer\footnote{I am extremely grateful for their help,
+  support and the invaluable contribution. As lead engineer I had had
+  the nagging suspicion that, maybe I had ``hardcoded'' by own
+  intuitions into the system (through choices in the setup, system
+  prompt, source selection etc.). I am relieved to let go of this
+  concern and hope that future, large scale work confirms the potential
+  for objectivity and convergence.}, both experienced in formal logic
+and argument analysis, independently extracted ArgDown and BayesDown
+representations from Bucknall and Dori-Hacohen's ``Current and Near-Term
+AI as a Potential Existential Risk Factor'' \textcite{bucknall2022}.
+This paper, which examines how near-term AI systems might contribute to
+existential risks through various causal pathways, provides an ideal
+test case due to its explicit discussion of multiple risk factors and
+their interdependencies.
+
+The manual extraction process revealed patterns consistent with
+theoretical expectations from the argument mining literature
+\textcite{khartabil2021}. Both extractors identified remarkably similar
+causal structures---the core nodes representing existential risk factors
+(unaligned AGI, nuclear conflict, biological risks, environmental
+catastrophe) and their relationships to near-term AI capabilities showed
+near-perfect agreement. This structural convergence aligns with findings
+from Anderson \textcite{anderson2007} that expert annotators tend to
+agree on primary argumentative relationships even when working
+independently.
+
+However, the probability quantification phase exhibited substantially
+higher variance, corroborating established challenges in eliciting
+subjective probabilities from text. When extracting conditional
+probabilities for relationships like P(Nuclear\_Conflict \textbar{}
+Compromised\_Political\_Decision\_Making), the two extractors' estimates
+differed by as much as 30 percentage points. This variance reflects the
+fundamental ambiguity Pollock \textcite{pollock1995} identified in
+mapping natural language uncertainty expressions to numerical
+values---when Bucknall and Dori-Hacohen write that AI ``may intensify
+cyber warfare,'' reasonable interpreters might assign probabilities
+anywhere from 0.4 to 0.7.
+
+The extraction revealed a hierarchical structure with
+{[}Existential\_Risk{]} as the root node, influenced by both direct AI
+risks (unaligned AGI) and indirect pathways where near-term AI acts as
+an intermediate risk factor. The extractors consistently identified four
+main causal mechanisms: state-to-state relations (arms race dynamics),
+corporate power concentration, stable repressive regimes, and
+compromised political decision-making. This structural clarity
+demonstrates that despite quantitative uncertainty, the qualitative
+causal model remains extractable with high fidelity.
+
+Interestingly, both manual extractors struggled with the same
+ambiguities that challenge automated systems, which could be an
+indication about convergence on the underlying level of information
+contained in the source. The relationship between social media
+recommender systems and various risk factors appeared multiple times in
+the text with slightly different framings, requiring judgment calls
+about whether these represented single or multiple causal relationships.
+This observation supports the design decision to maintain human
+oversight in AMTAIR's extraction pipeline---certain interpretive choices
+require domain knowledge and contextual understanding that neither human
+nor machine extractors can make with complete confidence in isolation.
+
+The manual extraction exercise validates AMTAIR's two-stage approach.
+The high agreement on structure (ArgDown) combined with high variance in
+probabilities (BayesDown) empirically confirms that separating these
+extraction tasks addresses genuine cognitive and epistemological
+differences. As predicted by the causal structure learning literature
+\textcite{heinze-deml2018} \textcite{squires2023}, identifying ``what
+causes what'' represents a different inferential challenge than
+quantifying ``how likely'' those causal relationships are.
+
+This validation also illuminates the value proposition of automated
+extraction. While human experts required 4-6 hours each to complete
+their extractions, AMTAIR processed the same document in under two
+minutes. Even if automated extraction only achieves 80\% of human
+accuracy, the 100x speed improvement enables analyzing entire
+literatures rather than individual papers. The manual baseline suggests
+that perfect extraction may be impossible even for humans---but
+good-enough extraction at scale can still transform how we synthesize
+complex arguments about AI risk.
 
 \section{3.7 Policy Evaluation
 Capabilities}\label{sec-policy-evaluation}
@@ -4910,10 +5181,10 @@ for networks up to approximately 30-40 nodes with moderate connectivity.
 Beyond this, approximate methods become necessary, with sampling methods
 scaling to hundreds of nodes at the cost of precision.
 
-\textbf{Visualization Responsiveness}: Interactive visualization
-performs smoothly for networks under 50 nodes. Larger networks benefit
-from hierarchical viewing or focus+context techniques to maintain
-usability.
+\textbf{Visualization Responsiveness}: The extraction phase exhibits
+linear complexity in document length---processing twice as much text
+takes roughly twice as long. However, the inference phase faces
+exponential complexity in network connectivity.
 
 \textbf{End-to-End Pipeline}: From document input to interactive
 visualization, expect 2-5 minutes for typical AI safety arguments. This
@@ -5012,8 +5283,50 @@ Limitations}\label{sec-discussion}
 \section{4.1 Technical Limitations and
 Responses}\label{sec-technical-limitations}
 
-\subsection{4.1.1 Objection 1: Extraction Quality
+\subsection{4.1.1 Extraction Quality
 Boundaries}\label{sec-extraction-boundaries}
+
+The critique that automated extraction systematically misses nuanced
+arguments deserves serious consideration. After months of working with
+these systems, I've developed both appreciation for their capabilities
+and acute awareness of their limitations. The reality, unsurprisingly,
+resists simple characterization.
+
+Consider what happens when AMTAIR encounters a passage like: ``While
+alignment might be achieved through current methods, the economic
+incentives pushing toward capability development at the expense of
+safety create a dynamic where technical solutions alone appear
+insufficient.'' A human reader parses this effortlessly---alignment is
+possible but threatened by misaligned incentives. The system, however,
+might extract two separate claims about alignment feasibility and
+economic incentives without capturing their interconnection.
+
+These failures aren't random. They follow predictable patterns that
+reveal something fundamental about the difference between human and
+machine comprehension. Humans excel at inferring unstated connections,
+filling gaps with background knowledge, recognizing when an author
+assumes rather than argues. The system, lacking this context, must rely
+on explicit linguistic markers. When those markers are absent---as they
+often are in sophisticated arguments---extraction quality degrades.
+
+Yet dismissing automated extraction based on these limitations misses a
+crucial point. The alternative isn't perfect human extraction but no
+formal extraction at all. In practice, humans rarely take the time to
+formally map complex arguments. When they do, they exhibit their own
+biases and inconsistencies. The question becomes not whether automated
+extraction achieves perfection but whether it provides value despite
+imperfection.
+
+My experience suggests it does, particularly when embedded in
+appropriate workflows. The two-stage architecture allows human review at
+natural breakpoints. Extracted structures make excellent starting points
+for refinement. Most surprisingly, extraction failures often diagnose
+ambiguities in source texts that human readers gloss over. When the
+system struggles to determine whether claim A supports or merely relates
+to claim B, it's often because the original text genuinely leaves this
+ambiguous.
+
+Framed differently:
 
 \textbf{Critic}: ``Complex implicit reasoning chains resist
 formalization; automated extraction will systematically miss nuanced
@@ -6073,6 +6386,18 @@ agreements.
 modifiable could enable broader participation in crucial decisions about
 humanity's technological future.
 
+The long-term vision feels almost embarrassingly ambitious when stated
+plainly. Could this approach fundamentally alter AI governance? Maybe.
+Probably not in the revolutionary way manifestos promise. More likely,
+it becomes one tool among many, useful in specific contexts, gradually
+improving as more people use it and complain about its limitations. But
+sometimes I imagine a world where policy discussions start with shared
+models rather than conflicting narratives. Where ``let's check what the
+model says'' becomes as natural as ``let's check what the data says.''
+Where international negotiations involve parameter haggling rather than
+rhetorical grandstanding. It's a nice vision. Whether we get
+there---well, that depends on factors far beyond any technical system.
+
 \section{5.4 Recommendations for
 Stakeholders}\label{sec-recommendations}
 
@@ -6270,6 +6595,40 @@ assistance: making implicit models explicit, enabling systematic
 comparison across worldviews, supporting evidence-based policy
 evaluation, and creating common ground for productive disagreement.
 
+The journey from initial concept to working system taught me more about
+the problem than about the solution. I began thinking the coordination
+crisis stemmed primarily from communication failures---experts talking
+past each other, using different terms for similar concepts. Build
+translation tools, I reasoned, and coordination would follow. The
+reality proved more complex. Even with perfect communication, deep
+disagreements about values, priorities, and acceptable risks remain.
+Tools can clarify these disagreements but not resolve them.
+
+What surprised me most was how the process of formalization itself
+generated insights. Forcing myself to make extraction rules explicit
+revealed my own implicit assumptions about how arguments work. Watching
+the system fail in predictable ways illuminated the remarkable
+sophistication of human textual understanding. Building visualizations
+that actually aided comprehension required confronting how poorly we
+typically communicate uncertainty.
+
+The technical contributions of this work---the two-stage extraction
+pipeline, the BayesDown notation, the visualization system---feel less
+like culminating achievements and more like initial sketches of what's
+needed. Each component works well enough to demonstrate feasibility but
+would require substantial refinement for production use. The validation
+remains preliminary, the scaling challenges largely unaddressed, the
+integration with existing governance frameworks more theoretical than
+practical.
+
+Yet I remain optimistic about the approach's potential. Not because
+AMTAIR solves the coordination crisis---it doesn't---but because it
+represents the kind of epistemic infrastructure we'll need as AI
+capabilities advance. The choice isn't between perfect and imperfect
+tools but between imperfect tools and no tools at all. In a domain where
+the stakes approach infinity and time grows short, even marginal
+improvements in coordination capacity matter.
+
 \textbf{The Stakes}: Let me be plain about what's at risk. The
 development of artificial general intelligence represents a
 discontinuity in human history comparable to the emergence of life or
@@ -6286,13 +6645,13 @@ happens when we create minds greater than our own? How do we ensure they
 remain aligned with human values and flourishing? These questions demand
 our best collective wisdom.
 
-Yet we approach this challenge fragmented. Technical researchers develop
-alignment techniques without clear paths to implementation. Policymakers
-craft governance frameworks without deep technical understanding.
-Ethicists articulate values without operational specificity.
-International bodies convene without shared models of the risks they're
-addressing. This fragmentation isn't just inefficient---it's
-existentially dangerous.
+Currently we approach this challenge fragmented. Technical researchers
+develop alignment techniques without clear paths to implementation.
+Policymakers craft governance frameworks without deep technical
+understanding. Ethicists articulate values without operational
+specificity. International bodies convene without shared models of the
+risks they're addressing. This fragmentation isn't just
+inefficient---it's existentially dangerous.
 
 AMTAIR represents one attempt to build bridges. By automating the
 extraction of worldviews, integrating live forecasts, and enabling
@@ -6321,10 +6680,22 @@ unprecedented cooperation around humanity's most important challenge.
 AMTAIR offers one piece of the puzzle---computational infrastructure
 that enhances our collective ability to reason about complex risks.
 
-May we prove worthy of the challenge before us. May our tools amplify
-our wisdom rather than our folly. And may future generations look back
-on this time not as when humanity failed to coordinate, but as when we
-rose to meet our greatest test.
+The work continues, as it must. Each month brings new AI capabilities
+that challenge existing frameworks. Each breakthrough raises the stakes.
+Each failure to coordinate effectively increases cumulative risk.
+Whether humanity successfully navigates the transition to advanced AI
+remains radically uncertain. What seems clear is that success, if it
+comes, will require unprecedented coordination across communities that
+currently struggle to understand each other. AMTAIR represents one small
+attempt to build bridges. Many more are needed. May we prove worthy of
+the challenge before us. May our tools amplify our wisdom rather than
+our folly.
+
+To future readers---whether you're reading this in a world made
+wonderful by aligned AI or studying how we tried and failed---know that
+we saw the challenge clearly. We understood the stakes. We built what
+tools we could with the time and knowledge available. The rest, as they
+say, is history. Or will be.
 
 The work continues. The stakes could not be higher. The time grows
 short. Let us build what we can, while we can, for all our futures
