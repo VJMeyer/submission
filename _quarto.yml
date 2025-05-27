@@ -13,6 +13,9 @@ book:
   subtitle: "An Epistemic Framework for Leveraging Frontier AI Systems to Upscale Conditional Policy Assessments in Bayesian Networks on a Narrow Path towards Existential Safety"
   author: "Valentin Jakob Meyer"
   date: "2025-05-26"
+  # abstract: |
+  #   This thesis addresses coordination problems in AI safety by creating tools that automatically extract and formalize the assumptions and models underlying different approaches to AI governance.
+  #   By transforming complex arguments into interactive visualizations showing relationships and probabilities, AMTAIR helps bridge communication gaps between technical researchers, policy specialists, and other stakeholders working to address risks from advanced AI.
   search: true
   repo-url: https://github.com/VJMeyer/submission
   repo-actions: [edit]
@@ -80,6 +83,7 @@ format:
     
   pdf:
     documentclass: book    # vs scrbook
+    classoption: openany
     include-in-header: latex/preamble.tex
     pdf-engine: xelatex
     keep-tex: true

@@ -10,11 +10,21 @@
     ]
   },
   {
-    "objectID": "index.html#glossary",
-    "href": "index.html#glossary",
+    "objectID": "index.html#sec-gloss.unnumbered",
+    "href": "index.html#sec-gloss.unnumbered",
     "title": "Automating the Modelling of Transformative Artificial Intelligence Risks",
     "section": "Glossary",
-    "text": "Glossary\n\n\n\nArgument mapping: A method for visually representing the structure of arguments\n\nBayesDown: An extension of ArgDown that incorporates probabilistic information\n\nBayesian network: A probabilistic graphical model representing variables and their dependencies\n\nConditional probability: The probability of an event given that another event has occurred\n\nDirected Acyclic Graph (DAG): A graph with directed edges and no cycles\n\nExistential risk: Risk of permanent curtailment of humanity’s potential\n\nPower-seeking AI: AI systems with instrumental incentives to acquire resources and power\n\nPrediction market: A market where participants trade contracts that resolve based on future events\n\nd-separation: A criterion for identifying conditional independence relationships in Bayesian networks\n\nMonte Carlo sampling: A computational technique using random sampling to obtain numerical results\n\n\n\n\n\nBucknall, Benjamin S., and Shiri Dori-Hacohen. 2022. “Current and Near-Term AI as a Potential Existential Risk Factor.” In Proceedings of the 2022 AAAI/ACM Conference on AI, Ethics, and Society, 119–29. Oxford United Kingdom: ACM. https://doi.org/10.1145/3514094.3534146.",
+    "text": "Glossary\n\n\n\nArgument mapping: A method for visually representing the structure of arguments\n\nBayesDown: An extension of ArgDown that incorporates probabilistic information\n\nBayesian network: A probabilistic graphical model representing variables and their dependencies\n\nConditional probability: The probability of an event given that another event has occurred\n\nDirected Acyclic Graph (DAG): A graph with directed edges and no cycles\n\nExistential risk: Risk of permanent curtailment of humanity’s potential\n\nPower-seeking AI: AI systems with instrumental incentives to acquire resources and power\n\nPrediction market: A market where participants trade contracts that resolve based on future events\n\nd-separation: A criterion for identifying conditional independence relationships in Bayesian networks\n\nMonte Carlo sampling: A computational technique using random sampling to obtain numerical results",
+    "crumbs": [
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Abstract</span>"
+    ]
+  },
+  {
+    "objectID": "index.html#sec-abbr",
+    "href": "index.html#sec-abbr",
+    "title": "Automating the Modelling of Transformative Artificial Intelligence Risks",
+    "section": "List of Abbreviations",
+    "text": "List of Abbreviations\n\nAI - Artificial Intelligence\nAGI - Artificial General Intelligence\nAMTAIR - Automating Transformative AI Risk Modeling\nAPI - Application Programming Interface\nAPS - Advanced, Planning, Strategic (AI systems)\nBN - Bayesian Network\nCPT - Conditional Probability Table\nDAG - Directed Acyclic Graph\nLLM - Large Language Model\nML - Machine Learning\nMTAIR - Modeling Transformative AI Risks\nNLP - Natural Language Processing\nP&E - Philosophy & Economics\nPDF - Portable Document Format\nTAI - Transformative Artificial Intelligence \n\n\n\n\nBucknall, Benjamin S., and Shiri Dori-Hacohen. 2022. “Current and Near-Term AI as a Potential Existential Risk Factor.” In Proceedings of the 2022 AAAI/ACM Conference on AI, Ethics, and Society, 119–29. Oxford United Kingdom: ACM. https://doi.org/10.1145/3514094.3534146.",
     "crumbs": [
       "<span class='chapter-number'>1</span>  <span class='chapter-title'>Abstract</span>"
     ]
@@ -35,36 +45,6 @@
     "title": "2  Automating the Modeling of Transformative Artificial Intelligence Risks",
     "section": "Acknowledgments",
     "text": "Acknowledgments\n\nI thank my supervisor Dr. Timo Speith for his guidance throughout this project, providing both technical insights and philosophical grounding. The MTAIR team’s pioneering manual approach inspired this automation effort, and I am grateful for their foundational work.\n\nI acknowledge Johannes Meyer and Jelena Meyer for their invaluable assistance in verifying the automated extraction procedure through manual extraction of ArgDown and BayesDown data from the Carlsmith paper, providing crucial ground truth for validation.\nSpecial recognition goes to Coleman Snell for his partnership and research collaboration with the AMTAIR project, offering both technical expertise and strategic vision. The AI safety community’s creation of rich literature made this work possible, and I thank all researchers whose arguments provided the raw material for formalization.\nAny errors or limitations remain my own responsibility.",
-    "crumbs": [
-      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Automating the Modeling of Transformative Artificial Intelligence Risks</span>"
-    ]
-  },
-  {
-    "objectID": "chapters/Outlines/final_draft.html#list-of-figures",
-    "href": "chapters/Outlines/final_draft.html#list-of-figures",
-    "title": "2  Automating the Modeling of Transformative Artificial Intelligence Risks",
-    "section": "List of Figures",
-    "text": "List of Figures",
-    "crumbs": [
-      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Automating the Modeling of Transformative Artificial Intelligence Risks</span>"
-    ]
-  },
-  {
-    "objectID": "chapters/Outlines/final_draft.html#list-of-tables",
-    "href": "chapters/Outlines/final_draft.html#list-of-tables",
-    "title": "2  Automating the Modeling of Transformative Artificial Intelligence Risks",
-    "section": "List of Tables",
-    "text": "List of Tables",
-    "crumbs": [
-      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Automating the Modeling of Transformative Artificial Intelligence Risks</span>"
-    ]
-  },
-  {
-    "objectID": "chapters/Outlines/final_draft.html#list-of-abbreviations",
-    "href": "chapters/Outlines/final_draft.html#list-of-abbreviations",
-    "title": "2  Automating the Modeling of Transformative Artificial Intelligence Risks",
-    "section": "List of Abbreviations",
-    "text": "List of Abbreviations\n\nAI - Artificial Intelligence\nAGI - Artificial General Intelligence\nAMTAIR - Automating Transformative AI Risk Modeling\nAPI - Application Programming Interface\nAPS - Advanced, Planning, Strategic (AI systems)\nBN - Bayesian Network\nCPT - Conditional Probability Table\nDAG - Directed Acyclic Graph\nLLM - Large Language Model\nML - Machine Learning\nMTAIR - Modeling Transformative AI Risks\nNLP - Natural Language Processing\nP&E - Philosophy & Economics\nPDF - Portable Document Format\nTAI - Transformative Artificial Intelligence",
     "crumbs": [
       "<span class='chapter-number'>2</span>  <span class='chapter-title'>Automating the Modeling of Transformative Artificial Intelligence Risks</span>"
     ]
@@ -494,7 +474,7 @@
     "href": "chapters/manual_extraction_bucknall.html",
     "title": "Appendix A — Manual Extraction of ArgDown Data from Bucknall and Dori-Hacohen (2022)",
     "section": "",
-    "text": "[Existential_Risk]: Increase in existential risks for humanity. {“instantiations”: [TRUE”, “FALSE”]}\n\n[Unaligned_AGI_Risk]: Unaligned artificial general intelligence causes existential risk. {“instantiations”: [TRUE”, “FALSE”]}\n\n[State-State_Relations]\n\n[Near_term_AI]: Even if not unaligned AGI, near term AI can act as intermediate risk factor. {“instantiations”: [TRUE”, “FALSE”]}\n\n[State-State_Relations]: AI arms race dynamic inhibits international coordination, diverting resources from other pressing issues {“instantiations”: [TRUE”, “FALSE”]}\n\n[Cybersecurity]: Probably enhances Cyber-Attack-Offense, may intensify cyber warfare. {“instantiations”: [TRUE”, “FALSE”]}\n\n[State-Cooperation_Relations]: Cooperations have a lot of power and might have misaligned goals with society {“instantiations”: [TRUE”, “FALSE”]}\n[Stable_Repressive_Regime]: More repressive instruments, possibility of stable repressive regime. {“instantiations”: [“TRUE”, “FALSE”]}\n\n[State-Citizen_Relations]: AI helps regime monitor citizens {“instantiations”: [TRUE”, “FALSE”]}\n\n[Compromised_Political_Decision_Making]: AI can compromise political decision making. {“instantiations”: [“TRUE”, “FALSE”]}\n\n[Social_media_and_Recommender_Systems]: Influence of AI in social media on public opinion. {“instantiations”: [TRUE”, “FALSE”]}\n\n\n[Nuclear]: Probability that nuclear conflict escalates to end civilisation. {“instantiations”: [TRUE”, “FALSE”]}\n\n[Compromised_Political_Decision_Making]\n\n[Biological]: Probability that a natural or engineered pandemic poses existential risks. {“instantiations”: [“TRUE”, “FALSE”]}\n\n[Compromised_Political_Decision_Making]\n[Social_media_and_Recommender_Systems]\n\n[Natural]: Non-human caused existential risks, seem unrelated with AI. {“instantiations”: [“TRUE”, “FALSE”]}\n[Environmental]: Probability of climate catastrophe. {“instantiations”: [“TRUE”, “FALSE”]}\n\n[Compromised_Political_Decision_Making]\n[AI_resource_consumption]: Current AI models consume large amounts of energy having environmental impacts. {“instantiations”: [“TRUE”, “FALSE”]}\n[Social_media_and_Recommender_Systems]\n\n\n\n\n\n\n\nBucknall, Benjamin S., and Shiri Dori-Hacohen. 2022. “Current and Near-Term AI as a Potential Existential Risk Factor.” In Proceedings of the 2022 AAAI/ACM Conference on AI, Ethics, and Society, 119–29. Oxford United Kingdom: ACM. https://doi.org/10.1145/3514094.3534146.",
+    "text": "[Existential_Risk]: Increase in existential risks for humanity. {\"instantiations\": [TRUE\", \"FALSE\"]}\n\n- [Unaligned_AGI_Risk]: Unaligned artificial general intelligence causes existential risk. {\"instantiations\": [TRUE\", “FALSE”]}\n  - [State-State_Relations]\n- [Near_term_AI]: Even if not unaligned AGI, near term AI can act as intermediate risk factor. {\"instantiations\": [TRUE\", \"FALSE\"]}\n  - [State-State_Relations]: AI arms race dynamic inhibits international coordination, diverting resources from other pressing issues {\"instantiations\": [TRUE\", “FALSE”]}\n    - [Cybersecurity]: Probably enhances Cyber-Attack-Offense, may intensify cyber warfare. {\"instantiations\": [TRUE\", “FALSE”]}\n  - [State-Cooperation_Relations]: Cooperations have a lot of power and might have misaligned goals with society {\"instantiations\": [TRUE\", “FALSE\"]}\n  - [Stable_Repressive_Regime]: More repressive instruments, possibility of stable repressive regime. {\"instantiations\": [“TRUE\", \"FALSE\"]}\n    - [State-Citizen_Relations]: AI helps regime monitor citizens {\"instantiations\": [TRUE\", \"FALSE\"]}\n  - [Compromised_Political_Decision_Making]: AI can compromise political decision making. {\"instantiations\": [“TRUE\", \"FALSE\"]}\n    - [Social_media_and_Recommender_Systems]: Influence of AI in social media on public opinion. {\"instantiations\": [TRUE\", \"FALSE\"]}\n- [Nuclear]: Probability that nuclear conflict escalates to end civilisation. {\"instantiations\": [TRUE\", \"FALSE\"]}\n  - [Compromised_Political_Decision_Making]\n- [Biological]: Probability that a natural or engineered pandemic poses existential risks. {\"instantiations\": [\"TRUE\", “FALSE\"]}\n  - [Compromised_Political_Decision_Making]\n  - [Social_media_and_Recommender_Systems]\n- [Natural]: Non-human caused existential risks, seem unrelated with AI. {\"instantiations\": [\"TRUE\", “FALSE\"]}\n- [Environmental]: Probability of climate catastrophe. {\"instantiations\": [\"TRUE\", “FALSE\"]}\n  - [Compromised_Political_Decision_Making]\n  - [AI_resource_consumption]: Current AI models consume large amounts of energy having environmental impacts. {\"instantiations\": [\"TRUE\", “FALSE\"]}\n  - [Social_media_and_Recommender_Systems]\n\n\n\n\n\nBucknall, Benjamin S., and Shiri Dori-Hacohen. 2022. “Current and Near-Term AI as a Potential Existential Risk Factor.” In Proceedings of the 2022 AAAI/ACM Conference on AI, Ethics, and Society, 119–29. Oxford United Kingdom: ACM. https://doi.org/10.1145/3514094.3534146.",
     "crumbs": [
       "Appendices",
       "<span class='chapter-number'>A</span>  <span class='chapter-title'>Manual Extraction of ArgDown Data from @bucknall2022</span>"

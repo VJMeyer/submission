@@ -20,6 +20,41 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
+/* CSS for syntax highlighting */
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
 /* CSS for citations */
 div.csl-bib-body { }
 div.csl-entry {
@@ -228,46 +263,29 @@ div.csl-indent {
 </header>
 
 
-<p>[Existential_Risk]: Increase in existential risks for humanity. {“instantiations”: [TRUE”, “FALSE”]}</p>
-<ul>
-<li>[Unaligned_AGI_Risk]: Unaligned artificial general intelligence causes existential risk. {“instantiations”: [TRUE”, “FALSE”]}
-<ul>
-<li>[State-State_Relations]</li>
-</ul></li>
-<li>[Near_term_AI]: Even if not unaligned AGI, near term AI can act as intermediate risk factor. {“instantiations”: [TRUE”, “FALSE”]}
-<ul>
-<li>[State-State_Relations]: AI arms race dynamic inhibits international coordination, diverting resources from other pressing issues {“instantiations”: [TRUE”, “FALSE”]}
-<ul>
-<li>[Cybersecurity]: Probably enhances Cyber-Attack-Offense, may intensify cyber warfare. {“instantiations”: [TRUE”, “FALSE”]}</li>
-</ul></li>
-<li>[State-Cooperation_Relations]: Cooperations have a lot of power and might have misaligned goals with society {“instantiations”: [TRUE”, “FALSE”]}</li>
-<li>[Stable_Repressive_Regime]: More repressive instruments, possibility of stable repressive regime. {“instantiations”: [“TRUE”, “FALSE”]}
-<ul>
-<li>[State-Citizen_Relations]: AI helps regime monitor citizens {“instantiations”: [TRUE”, “FALSE”]}</li>
-</ul></li>
-<li>[Compromised_Political_Decision_Making]: AI can compromise political decision making. {“instantiations”: [“TRUE”, “FALSE”]}
-<ul>
-<li>[Social_media_and_Recommender_Systems]: Influence of AI in social media on public opinion. {“instantiations”: [TRUE”, “FALSE”]}</li>
-</ul></li>
-</ul></li>
-<li>[Nuclear]: Probability that nuclear conflict escalates to end civilisation. {“instantiations”: [TRUE”, “FALSE”]}
-<ul>
-<li>[Compromised_Political_Decision_Making]</li>
-</ul></li>
-<li>[Biological]: Probability that a natural or engineered pandemic poses existential risks. {“instantiations”: [“TRUE”, “FALSE”]}
-<ul>
-<li>[Compromised_Political_Decision_Making]</li>
-<li>[Social_media_and_Recommender_Systems]</li>
-</ul></li>
-<li>[Natural]: Non-human caused existential risks, seem unrelated with AI. {“instantiations”: [“TRUE”, “FALSE”]}</li>
-<li>[Environmental]: Probability of climate catastrophe. {“instantiations”: [“TRUE”, “FALSE”]}
-<ul>
-<li>[Compromised_Political_Decision_Making]</li>
-<li>[AI_resource_consumption]: Current AI models consume large amounts of energy having environmental impacts. {“instantiations”: [“TRUE”, “FALSE”]}</li>
-<li>[Social_media_and_Recommender_Systems]</li>
-</ul>
-<!-- [ ] Write proper acknowledgement for Ella and Hanni--></li>
-</ul>
+<div class="sourceCode" id="cb1"><pre class="sourceCode json code-with-copy"><code class="sourceCode json"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="ot">[</span><span class="er">Existential_Risk</span><span class="ot">]</span><span class="er">:</span> <span class="er">Increase</span> <span class="er">in</span> <span class="er">existential</span> <span class="er">risks</span> <span class="er">for</span> <span class="er">humanity.</span> <span class="fu">{</span><span class="dt">"instantiations"</span><span class="fu">:</span> <span class="ot">[</span><span class="er">TRUE</span><span class="st">", "</span><span class="er">FALSE</span><span class="st">"]}</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="st">- [Unaligned_AGI_Risk]: Unaligned artificial general intelligence causes existential risk. {"</span><span class="er">instantiations</span><span class="st">": [TRUE"</span><span class="ot">,</span> <span class="er">“FALSE”</span><span class="ot">]</span><span class="fu">}</span></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>  <span class="er">-</span> <span class="ot">[</span><span class="er">State-State_Relations</span><span class="ot">]</span></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="er">-</span> <span class="ot">[</span><span class="er">Near_term_AI</span><span class="ot">]</span><span class="er">:</span> <span class="er">Even</span> <span class="er">if</span> <span class="er">not</span> <span class="er">unaligned</span> <span class="er">AGI,</span> <span class="er">near</span> <span class="er">term</span> <span class="er">AI</span> <span class="er">can</span> <span class="er">act</span> <span class="er">as</span> <span class="er">intermediate</span> <span class="er">risk</span> <span class="er">factor.</span> <span class="fu">{</span><span class="dt">"instantiations"</span><span class="fu">:</span> <span class="ot">[</span><span class="er">TRUE</span><span class="st">", "</span><span class="er">FALSE</span><span class="st">"]}</span></span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="st">  - [State-State_Relations]: AI arms race dynamic inhibits international coordination, diverting resources from other pressing issues {"</span><span class="er">instantiations</span><span class="st">": [TRUE"</span><span class="ot">,</span> <span class="er">“FALSE”</span><span class="ot">]</span><span class="fu">}</span></span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>    <span class="er">-</span> <span class="ot">[</span><span class="er">Cybersecurity</span><span class="ot">]</span><span class="er">:</span> <span class="er">Probably</span> <span class="er">enhances</span> <span class="er">Cyber-Attack-Offense,</span> <span class="er">may</span> <span class="er">intensify</span> <span class="er">cyber</span> <span class="er">warfare.</span> <span class="fu">{</span><span class="dt">"instantiations"</span><span class="fu">:</span> <span class="ot">[</span><span class="er">TRUE</span><span class="st">", “FALSE”]}</span></span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a><span class="st">  - [State-Cooperation_Relations]: Cooperations have a lot of power and might have misaligned goals with society {"</span><span class="er">instantiations</span><span class="st">": [TRUE"</span><span class="ot">,</span> <span class="er">“FALSE</span><span class="st">"]}</span></span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a><span class="st">  - [Stable_Repressive_Regime]: More repressive instruments, possibility of stable repressive regime. {"</span><span class="er">instantiations</span><span class="st">": [“TRUE"</span><span class="ot">,</span> <span class="st">"FALSE"</span><span class="ot">]</span><span class="fu">}</span></span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a>    <span class="er">-</span> <span class="ot">[</span><span class="er">State-Citizen_Relations</span><span class="ot">]</span><span class="er">:</span> <span class="er">AI</span> <span class="er">helps</span> <span class="er">regime</span> <span class="er">monitor</span> <span class="er">citizens</span> <span class="fu">{</span><span class="dt">"instantiations"</span><span class="fu">:</span> <span class="ot">[</span><span class="er">TRUE</span><span class="st">", "</span><span class="er">FALSE</span><span class="st">"]}</span></span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a><span class="st">  - [Compromised_Political_Decision_Making]: AI can compromise political decision making. {"</span><span class="er">instantiations</span><span class="st">": [“TRUE"</span><span class="ot">,</span> <span class="st">"FALSE"</span><span class="ot">]</span><span class="fu">}</span></span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a>    <span class="er">-</span> <span class="ot">[</span><span class="er">Social_media_and_Recommender_Systems</span><span class="ot">]</span><span class="er">:</span> <span class="er">Influence</span> <span class="er">of</span> <span class="er">AI</span> <span class="er">in</span> <span class="er">social</span> <span class="er">media</span> <span class="er">on</span> <span class="er">public</span> <span class="er">opinion.</span> <span class="fu">{</span><span class="dt">"instantiations"</span><span class="fu">:</span> <span class="ot">[</span><span class="er">TRUE</span><span class="st">", "</span><span class="er">FALSE</span><span class="st">"]}</span></span>
+<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a><span class="st">- [Nuclear]: Probability that nuclear conflict escalates to end civilisation. {"</span><span class="er">instantiations</span><span class="st">": [TRUE"</span><span class="ot">,</span> <span class="st">"FALSE"</span><span class="ot">]</span><span class="fu">}</span></span>
+<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a>  <span class="er">-</span> <span class="ot">[</span><span class="er">Compromised_Political_Decision_Making</span><span class="ot">]</span></span>
+<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a><span class="er">-</span> <span class="ot">[</span><span class="er">Biological</span><span class="ot">]</span><span class="er">:</span> <span class="er">Probability</span> <span class="er">that</span> <span class="er">a</span> <span class="er">natural</span> <span class="er">or</span> <span class="er">engineered</span> <span class="er">pandemic</span> <span class="er">poses</span> <span class="er">existential</span> <span class="er">risks.</span> <span class="fu">{</span><span class="dt">"instantiations"</span><span class="fu">:</span> <span class="ot">[</span><span class="st">"TRUE"</span><span class="ot">,</span> <span class="er">“FALSE</span><span class="st">"]}</span></span>
+<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a><span class="st">  - [Compromised_Political_Decision_Making]</span></span>
+<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a><span class="st">  - [Social_media_and_Recommender_Systems]</span></span>
+<span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a><span class="st">- [Natural]: Non-human caused existential risks, seem unrelated with AI. {"</span><span class="er">instantiations</span><span class="st">": ["</span><span class="er">TRUE</span><span class="st">", “FALSE"</span><span class="ot">]</span><span class="fu">}</span></span>
+<span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a><span class="er">-</span> <span class="ot">[</span><span class="er">Environmental</span><span class="ot">]</span><span class="er">:</span> <span class="er">Probability</span> <span class="er">of</span> <span class="er">climate</span> <span class="er">catastrophe.</span> <span class="fu">{</span><span class="dt">"instantiations"</span><span class="fu">:</span> <span class="ot">[</span><span class="st">"TRUE"</span><span class="ot">,</span> <span class="er">“FALSE</span><span class="st">"]}</span></span>
+<span id="cb1-20"><a href="#cb1-20" aria-hidden="true" tabindex="-1"></a><span class="st">  - [Compromised_Political_Decision_Making]</span></span>
+<span id="cb1-21"><a href="#cb1-21" aria-hidden="true" tabindex="-1"></a><span class="st">  - [AI_resource_consumption]: Current AI models consume large amounts of energy having environmental impacts. {"</span><span class="er">instantiations</span><span class="st">": ["</span><span class="er">TRUE</span><span class="st">", “FALSE"</span><span class="ot">]</span><span class="fu">}</span></span>
+<span id="cb1-22"><a href="#cb1-22" aria-hidden="true" tabindex="-1"></a>  <span class="er">-</span> <span class="ot">[</span><span class="er">Social_media_and_Recommender_Systems</span><span class="ot">]</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p><!-- [ ] Write proper acknowledgement for Ella and Hanni--></p>
 
 
 <div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" role="list" style="display: none">

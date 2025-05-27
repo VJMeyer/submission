@@ -88,21 +88,24 @@ Special recognition goes to Coleman Snell for his partnership and research colla
 
 Any errors or limitations remain my own responsibility.
 
-## List of Figures
+<!-- ## List of Figures -->
 
 <!-- [-] LATER VERIFY: Verify all figures are properly labeled and captioned --> 
 
 <!-- Quarto auto-generates LOF -->
 
-## List of Tables
+<!-- ## List of Tables -->
 
 <!-- [-] LATER VERIFY: Ensure all tables have proper captions --> 
 
 <!-- Quarto auto-generates LOT -->
 
-## List of Abbreviations
-
 <!-- [-] TODO: Review and expand abbreviation list -->
+
+<!-- 
+## List of Abbreviations -- here only placeholder, original lives in index
+
+
 
 AI - Artificial Intelligence  
 AGI - Artificial General Intelligence  
@@ -118,7 +121,7 @@ MTAIR - Modeling Transformative AI Risks
 NLP - Natural Language Processing  
 P&E - Philosophy & Economics  
 PDF - Portable Document Format  
-TAI - Transformative Artificial Intelligence
+TAI - Transformative Artificial Intelligence -->
 
 
 <!-- [ ] Add to glossary and define: prediction markets & forecasting platforms -->

@@ -19,12 +19,12 @@
 \usepackage{fancyhdr}
 \pagestyle{fancy}
 \fancyhf{}
-% \fancyhead[LE,RO]{\slshape\nouppercase{\rightmark}}
-% \fancyhead[LO,RE]{\slshape\nouppercase{\leftmark}}
-% \fancyfoot[C]{\thepage}
-\fancyhead[L]{\makebox[0.45\textwidth][l]{\leftmark}}  % Left header (chapter)
-\fancyhead[R]{\makebox[0.45\textwidth][r]{\rightmark}} % Right header (section/subsection)
-\fancyhead[C]{}  % Clear center header
+\fancyhead[LE,RO]{\small\slshape\nouppercase{\rightmark}}
+\fancyhead[LO,RE]{\small\slshape\nouppercase{\leftmark}}
+\fancyfoot[C]{\thepage}
+% \fancyhead[L]{\makebox[0.2\textwidth][l]{\leftmark}}  % Left header (chapter)
+% \fancyhead[R]{\makebox[0.2\textwidth][r]{\rightmark}} % Right header (section/subsection)
+% \fancyhead[C]{\thepage}  % Clear center header
 
 % % Fix page breaks after title page
 % \newcommand{\cleartitlepage}{
@@ -34,7 +34,7 @@
 %   \clearpage
 % }
 
-
+\let\cleardoublepage\clearpage
 
 \renewcommand{\maketitle}{}
 

@@ -1,5 +1,6 @@
 # Manual Extraction of ArgDown Data from @bucknall2022 {#sec-bucknall2022}
 
+```json
 [Existential_Risk]: Increase in existential risks for humanity. {"instantiations": [TRUE", "FALSE"]}
 
 - [Unaligned_AGI_Risk]: Unaligned artificial general intelligence causes existential risk. {"instantiations": [TRUE", “FALSE”]}
@@ -22,5 +23,6 @@
   - [Compromised_Political_Decision_Making]
   - [AI_resource_consumption]: Current AI models consume large amounts of energy having environmental impacts. {"instantiations": ["TRUE", “FALSE"]}
   - [Social_media_and_Recommender_Systems]
+```
 
   <!-- [ ] Write proper acknowledgement for Ella and Hanni-->

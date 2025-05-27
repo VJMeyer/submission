@@ -71,7 +71,7 @@ Emphasize both technical contributions and policy relevance.-->
 - TAI - Transformative Artificial Intelligence
 -->
 
-## Glossary {.unnumbered .unlisted}
+## Glossary {#sec-gloss.unnumbered }
 
 <!-- [ ] Replace Placeholder Glossary with native Quarto Glossary -->
 
@@ -90,4 +90,34 @@ Emphasize both technical contributions and policy relevance.-->
 
 
 
+## List of Abbreviations {#sec-abbr .unnumbered }
 
+<!-- [-] TODO: Review and expand abbreviation list -->
+
+AI - Artificial Intelligence  
+AGI - Artificial General Intelligence  
+AMTAIR - Automating Transformative AI Risk Modeling  
+API - Application Programming Interface  
+APS - Advanced, Planning, Strategic (AI systems)  
+BN - Bayesian Network  
+CPT - Conditional Probability Table  
+DAG - Directed Acyclic Graph  
+LLM - Large Language Model  
+ML - Machine Learning  
+MTAIR - Modeling Transformative AI Risks  
+NLP - Natural Language Processing  
+P&E - Philosophy & Economics  
+PDF - Portable Document Format  
+TAI - Transformative Artificial Intelligence
+<!-- 
+term
+: definition
+
+
+Argument mapping
+: A method for visually representing the structure of arguments
+
+BayesDown
+: An extension of ArgDown that incorporates probabilistic information
+
+-->
