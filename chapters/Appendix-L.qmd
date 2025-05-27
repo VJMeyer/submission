@@ -1,0 +1,141 @@
+# Appendix L: Prompt Engineering - The Hidden Art {#sec-appendix-prompts-hidden .unnumbered}
+
+### L.1 The Unreasonable Effectiveness of Good Prompts {#sec-unreasonable-prompts .unnumbered}
+
+Behind AMTAIR's seemingly magical ability to transform prose into formal models lies a more mundane reality: hundreds of hours spent crafting, testing, and refining prompts. This appendix pulls back the curtain on this process—partly as documentation, partly as cautionary tale about the gap between demo and deployment.
+
+Prompt engineering for argument extraction resembles teaching a brilliant but literal-minded student. The model possesses vast knowledge and impressive reasoning capabilities, yet lacks the contextual understanding humans take for granted. Success requires anticipating every way instructions might be misinterpreted, then preemptively clarifying.
+
+### L.2 The Evolution of Extraction Prompts {#sec-prompt-evolution .unnumbered}
+
+The path from naive first attempts to functional prompts tells a story of gradual enlightenment punctuated by frustrating failures:
+
+**Generation 1: The Naive Optimist**
+
+```
+Extract the argument structure from this text as a directed graph.
+```
+
+Result: Complete chaos. The model returned everything from flowcharts to philosophical musings about the nature of arguments. Occasionally, by pure chance, something resembling ArgDown would emerge.
+
+**Generation 2: The Overspecifier**
+
+```
+Extract arguments as nodes and relationships as directed edges. 
+Nodes should be claims. Edges should represent support relationships.
+Use the format [Node]: Description. with children indented below.
+```
+
+Better, but the model began inventing nodes to fill out what it thought should be complete arguments. Worse, it couldn't distinguish causal claims from logical support, mixing deduction with empirical relationships.
+
+**Generation 3: The Pattern Teacher**
+
+```
+You are extracting causal models from arguments about AI risk.
+Follow this exact pattern:
+[Effect]: What is caused. {"instantiations": ["TRUE", "FALSE"]}
+ + [Cause]: What causes it. {"instantiations": ["TRUE", "FALSE"]}
+ 
+Focus on causal relationships, not logical support.
+Only extract claims explicitly made in the text.
+```
+
+Progress! The model began producing recognizable ArgDown. But new problems emerged: inconsistent node naming, difficulty with implicit relationships, confusion about what constituted a "claim" versus background information.
+
+**Generation 4: The Philosophical Guide**
+
+The breakthrough came from stopping trying to specify mechanical rules and instead explaining the deeper purpose:
+
+```
+You are participating in the AMTAIR project, extracting implicit 
+causal models from AI safety arguments. These models will help 
+diverse stakeholders understand and compare different views about 
+AI risk.
+
+Your task is to reveal the causal structure already present in 
+the author's thinking. You are not creating new arguments but 
+making explicit what is implicit.
+
+Think of yourself as an intellectual archaeologist, carefully 
+uncovering the bones of an argument without imposing your own 
+interpretations...
+```
+
+This anthropomorphic framing, combined with specific technical instructions, finally yielded consistent, high-quality extractions.
+
+### L.3 The Anatomy of Effective Prompts {#sec-prompt-anatomy .unnumbered}
+
+Effective extraction prompts share several characteristics discovered through painful trial and error:
+
+**Role Establishment**: Beginning with "You are..." frames the task appropriately. The model performs better when given a coherent identity aligned with the task.
+
+**Purpose Context**: Explaining why the task matters improves performance. "You are extracting arguments to help coordination" yields better results than "extract arguments."
+
+**Thinking Process**: Encouraging step-by-step reasoning dramatically improves quality. The `<analysis>`, `<variable_identification>`, `<causal_structure>` tags don't just organize output—they enforce systematic thinking.
+
+**Concrete Examples**: Showing desired output format with examples prevents creative reinterpretation. The rain-sprinkler-grass example anchors understanding.
+
+**Error Prevention**: Explicitly stating common mistakes ("Don't invent claims not in the text") preempts frequent failures.
+
+**Validation Instructions**: Asking the model to check its own work catches many errors before they propagate.
+
+### L.4 The Probability Extraction Challenge {#sec-probability-challenge .unnumbered}
+
+Extracting structure proved easier than extracting probabilities. Language models can identify relationships reasonably well but struggle with numerical precision:
+
+**The Calibration Problem**: When text says "highly likely," what probability should be extracted? Initial attempts using fixed mappings (likely = 0.7) produced nonsensical results when authors used terms idiosyncratically.
+
+**The Consistency Challenge**: Probabilities must sum correctly, respect logical constraints, and maintain coherence across related estimates. Models frequently violate these constraints when extracting piecemeal.
+
+**The Implicit Estimation Issue**: Authors rarely state all required probabilities explicitly. The model must infer reasonable values while maintaining uncertainty about these inferences.
+
+The solution involved separating probability extraction into its own phase with specialized prompts that emphasize consistency checking and uncertainty acknowledgment.
+
+### L.5 Prompt Engineering as Empirical Science {#sec-prompt-science .unnumbered}
+
+Developing effective prompts requires rigorous empirical methodology:
+
+**Test Set Construction**: We assembled diverse arguments—technical papers, blog posts, policy documents—to ensure prompts generalized beyond initial examples.
+
+**Ablation Studies**: Systematically removing prompt components revealed which elements truly mattered. Surprisingly, elaborate technical specifications often hurt more than helped.
+
+**Failure Analysis**: Cataloging extraction errors revealed patterns. Certain linguistic constructions reliably confused the model, leading to targeted prompt improvements.
+
+**Version Control**: Prompts evolved through dozens of iterations. Maintaining version history proved essential for understanding which changes helped versus hurt.
+
+### L.6 The Prompt Engineering Toolkit {#sec-prompt-toolkit .unnumbered}
+
+Several techniques proved invaluable:
+
+**Chain-of-Thought Prompting**: Forcing explicit reasoning steps improves extraction quality dramatically. The model must show its work, making errors visible and correctable.
+
+**Role-Playing**: Having the model adopt specific personas ("You are a careful academic") improves consistency and appropriate conservatism in claims.
+
+**Negative Examples**: Showing what NOT to do often works better than endless positive specifications. "Don't hallucinate nodes" beats complex instructions about fidelity.
+
+**Iterative Refinement**: Using model outputs to improve prompts creates a virtuous cycle. Each failure suggests prompt improvements.
+
+**Temperature Tuning**: Lower temperatures improve consistency but may miss creative interpretations. We settled on 0.3 for structure, 0.5 for probabilities.
+
+### L.7 Lessons for Future Systems {#sec-prompt-lessons .unnumbered}
+
+The prompt engineering journey offers broader lessons:
+
+**Brittle Brilliance**: Current models exhibit stunning capabilities wrapped in frustrating fragility. Small prompt changes cause dramatic performance shifts.
+
+**Hidden Complexity**: What seems simple to humans (extract the argument) requires extensive specification for machines. The prompt complexity reflects genuine task difficulty.
+
+**Moving Target**: As models evolve, optimal prompts change. GPT-4's best prompts differ from Claude's. Future models may require fundamental reconceptualization.
+
+**Human-AI Partnership**: The best results come from prompts that leverage model strengths while acknowledging limitations. Pure automation remains inferior to human-in-the-loop approaches.
+
+### L.8 Toward Prompt-Free Extraction {#sec-prompt-free .unnumbered}
+
+The current reliance on carefully crafted prompts represents a limitation, not a feature. Future research should explore:
+
+- **Fine-tuned Models**: Training specifically for argument extraction could eliminate prompt sensitivity
+- **Learned Prompting**: Systems that automatically discover optimal prompts for new domains
+- **Structured Interfaces**: Moving beyond text to specialized input/output formats
+- **Verification Systems**: Automated prompt quality assessment and improvement
+
+Until these advances materialize, prompt engineering remains the hidden art enabling AMTAIR's visible magic.

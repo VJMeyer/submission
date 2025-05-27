@@ -1,0 +1,217 @@
+# Appendix K: From Prototype to Platform: A Research Program Roadmap {#sec-appendix-roadmap .unnumbered}
+
+### K.1 The Arc of Scientific Progress {#sec-arc-progress .unnumbered}
+
+Every significant scientific tool begins as a crude prototype in someone's lab—or in our case, someone's Jupyter notebook. The microscope started as ground glass held between brass plates. The telescope began with Galileo squinting through wavering lenses. AMTAIR, in its current incarnation, occupies a similar position: functional enough to demonstrate possibility, rough enough to inspire imagination about what it could become.
+
+This appendix sketches that becoming. Not as idle speculation but as a concrete research program that could transform how humanity reasons collectively about existential risks. The gap between current implementation and envisioned platform isn't a failing—it's an opportunity space rich with research questions, engineering challenges, and potential for impact.
+
+### K.2 Technical Evolution: From Scripts to Systems {#sec-technical-evolution .unnumbered}
+
+The current AMTAIR implementation resembles a gifted graduate student—capable of impressive feats when everything goes right, prone to puzzling failures when encountering the unexpected. Transforming this into a robust system requires addressing several technical frontiers:
+
+**Extraction Engine Maturation**
+
+The two-stage extraction pipeline (ArgDown → BayesDown) represents a key insight, but its current implementation barely scratches the surface. Future development should explore:
+
+- **Fine-tuned Models**: Rather than relying on general-purpose LLMs with clever prompting, we could fine-tune models specifically for argument extraction. Imagine a model trained on thousands of argument-structure pairs, learning the subtle patterns that distinguish causal claims from mere correlations, conditional relationships from simple associations.
+    
+- **Multi-Modal Understanding**: Arguments don't live in text alone. Graphs, equations, diagrams—all carry crucial information. Next-generation extractors should parse a paper's Figure 3 showing feedback loops as naturally as they parse its prose.
+    
+- **Confidence-Aware Extraction**: Current systems extract with binary certainty—either they find a relationship or they don't. Mature systems should express uncertainty about their extractions, flagging ambiguous passages for human review rather than guessing silently.
+    
+
+**Scaling Infrastructure**
+
+Processing a single paper in minutes is impressive. Processing the entire AI safety literature in hours would be transformative. This requires:
+
+- **Distributed Processing**: Extraction tasks naturally parallelize. A coordinated fleet of extraction workers could process hundreds of documents simultaneously, building comprehensive models of entire research communities' thinking.
+    
+- **Incremental Updates**: As new papers appear daily, models should evolve continuously rather than requiring full reconstruction. This demands clever data structures that support efficient updates while maintaining consistency.
+    
+- **Caching and Optimization**: Many arguments share common substructures. Intelligent caching could dramatically reduce computation by recognizing when we're re-extracting variations on familiar themes.
+    
+
+### K.3 Methodological Innovations: Beyond Extraction {#sec-methodological-innovations .unnumbered}
+
+The most exciting developments may come not from improving what AMTAIR does but from expanding what it attempts:
+
+**Argument Evolution Tracking**
+
+Ideas don't spring forth fully formed—they evolve through academic conversation. Future systems should:
+
+- Track how arguments change across versions of papers
+- Identify when authors respond to critiques by modifying their models
+- Build "phylogenetic trees" of ideas showing intellectual lineage
+- Recognize when terminology shifts mask conceptual continuity
+
+This temporal dimension transforms static extractions into living intellectual history.
+
+**Community Model Synthesis**
+
+Individual papers offer perspectives; research communities build consensus (or reveal persistent disagreements). Advanced systems could:
+
+- Identify where multiple authors converge on similar models
+- Highlight crux disagreements that split communities
+- Weight models by citation influence and author credibility
+- Generate "consensus models" that fairly represent community views
+
+**Adversarial Robustness**
+
+As these tools gain influence, incentives for manipulation emerge. Research priorities include:
+
+- Detecting attempts to game extraction algorithms
+- Robustness to coordinated misinformation campaigns
+- Verification systems for high-stakes extractions
+- Audit trails enabling third-party validation
+
+### K.4 Interface Revolutions: Making Models Meaningful {#sec-interface-revolutions .unnumbered}
+
+The most sophisticated extraction means nothing if stakeholders can't engage meaningfully with results. Interface innovation deserves equal priority with algorithmic advancement:
+
+**Stakeholder-Specific Views**
+
+A Pentagon strategist, an AI safety researcher, and a congressional staffer need different things from the same model:
+
+- **Executive Dashboards**: High-level risk assessments, key uncertainties, decision-relevant parameters
+- **Research Workbenches**: Full model access, sensitivity analysis tools, comparison capabilities
+- **Policy Interfaces**: Intervention testing, robustness checking, implementation pathway analysis
+- **Public Portals**: Educational simplifications, interactive explorations, transparent methodology
+
+**Collaborative Modeling Environments**
+
+Future platforms should support:
+
+- Real-time collaborative model editing (think Google Docs for Bayesian networks)
+- Commenting and annotation systems for debating specific parameters
+- Version control for tracking model evolution
+- Permission systems balancing openness with security
+
+**Narrative Integration**
+
+Pure network visualizations can overwhelm. Advanced interfaces might:
+
+- Generate natural language summaries of model implications
+- Create interactive stories walking users through complex arguments
+- Produce policy briefs automatically from formal models
+- Enable "model-backed" writing where claims link directly to formal justifications
+
+### K.5 Institutional Architecture: Embedding in Reality {#sec-institutional-architecture .unnumbered}
+
+Technology alone doesn't create change—institutions do. AMTAIR's path to impact requires careful consideration of organizational realities:
+
+**Pilot Program Design**
+
+Strategic initial deployments could demonstrate value while revealing challenges:
+
+- **Think Tank Integration**: Partner with organizations like FHI, CSER, or GovAI to model their research portfolios, creating internal tools before public platforms
+- **Government Pilots**: Work with tech-forward agencies to prototype decision support systems, learning regulatory constraints early
+- **Academic Collaborations**: Integrate with journal submission systems, enabling authors to submit formal models alongside papers
+
+**Standards Development**
+
+For models to be comparable and composable, we need:
+
+- Common vocabularies for frequently-modeled concepts
+- Interoperability standards enabling model exchange
+- Quality benchmarks for extraction accuracy
+- Ethical guidelines for model construction and use
+
+**Governance Structures**
+
+As influence grows, governance becomes critical:
+
+- Who validates controversial extractions?
+- How do we adjudicate disputes about model structure?
+- What transparency requirements apply to high-stakes uses?
+- How do we prevent technocratic capture while maintaining quality?
+
+These questions demand thoughtful institutional design, not just technical solutions.
+
+### K.6 The Ecosystem Vision {#sec-ecosystem-vision .unnumbered}
+
+The ultimate goal isn't a better extraction tool—it's transformed epistemic infrastructure for navigating existential risks. Imagine:
+
+**Research Transformation**
+
+- Papers published with formal models as standard practice
+- Peer review including model validation
+- Citations that update downstream models automatically
+- Funding decisions informed by formal research gap analysis
+
+**Policy Integration**
+
+- Legislation accompanied by explicit impact models
+- International negotiations using shared formal frameworks
+- Regulatory agencies maintaining living models of their domains
+- Democratic deliberation enhanced by transparent assumptions
+
+**Public Engagement**
+
+- Citizens exploring expert models directly
+- Educational curricula teaching model thinking
+- Journalism that references and questions formal models
+- Public forecasting integrated with expert assessments
+
+This ecosystem doesn't emerge spontaneously—it requires coordinated development across technical, institutional, and social dimensions.
+
+### K.7 Critical Challenges and Honest Uncertainties {#sec-critical-challenges .unnumbered}
+
+Intellectual honesty demands acknowledging deep challenges that may resist solution:
+
+**The Formalization-Insight Tradeoff**
+
+Something is always lost in translation from rich prose to formal models. The question is whether what's gained exceeds what's lost. This tradeoff may vary by domain:
+
+- Technical arguments often formalize well
+- Ethical arguments may resist meaningful quantification
+- Historical analogies lose force when parameterized
+- Creative insights might not survive structuring
+
+Research must explore these boundaries empirically rather than assuming universal applicability.
+
+**Gaming and Manipulation**
+
+Any influential system invites gaming. Particular concerns include:
+
+- Authors crafting arguments to extract favorably
+- Coordinated campaigns to shift consensus models
+- Adversarial inputs designed to corrupt extractions
+- Political pressure on model validators
+
+Solutions require both technical robustness and institutional resilience.
+
+**Technocratic Risks**
+
+Tools that appear to objectify subjective judgments risk creating false authority:
+
+- Models treated as truth rather than structured opinions
+- Democratic deliberation replaced by parameter tweaking
+- Expert judgment elevated beyond appropriate bounds
+- Critical voices excluded for lacking formal models
+
+Avoiding these pitfalls requires careful design emphasizing models as tools for thinking, not substitutes for judgment.
+
+### K.8 A Decade Hence: Success Scenarios {#sec-success-scenarios .unnumbered}
+
+Ten years from now, what would success look like? Let me paint three scenarios:
+
+**The Conservative Success**: AMTAIR-derived tools become standard in AI safety research. Papers routinely include formal models. Disagreements focus on parameters rather than talking past each other. Policy discussions reference shared models. Progress is incremental but real.
+
+**The Transformative Success**: Formal modeling revolutionizes how humanity reasons about complex risks. International agreements rest on explicit shared models. Public understanding of AI risk dramatically improves through interactive visualizations. Coordination failures that seemed intractable dissolve under shared epistemic infrastructure.
+
+**The Pivotal Success**: At a crucial moment—perhaps during rapid AI capability advancement—formal models enable coordination that prevents catastrophe. The ability to quickly synthesize expert knowledge, test interventions, and achieve consensus across stakeholders makes the difference between successful navigation and disaster.
+
+Each scenario justifies the research investment. Together, they suggest the profound importance of building these capabilities now, before they're desperately needed.
+
+### K.9 The Call to Build {#sec-call-to-build .unnumbered}
+
+This appendix has sketched a research program spanning computer science, policy studies, institutional design, and philosophy. No single team can build this alone. The work requires:
+
+- **Technical pioneers** pushing extraction and modeling capabilities
+- **Interface designers** making complexity comprehensible
+- **Institutional architects** embedding tools in decision processes
+- **Domain experts** validating and extending models
+- **Critics and red-teamers** identifying failures before they matter
+
+The code is open. The vision is shared. The need is urgent. What remains is the building.

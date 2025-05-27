@@ -34,24 +34,28 @@ book:
   #       href: https://twitter.com/ 
   chapters:
     - index.qmd
+    - chapters/0.Frontmatter.qmd  
+    - chapters/1.Introduction.qmd
+    - chapters/2.0.Context.qmd
+    - chapters/3.0.AMTAIR.qmd
+    - chapters/4.Discussion.qmd
+    - chapters/5.Conclusion.qmd
     # - backup_index.qmd
     # - chapters/Outlines/Outline_13.qmd
-    - chapters/Outlines/final_draft.qmd
+    # - chapters/Outlines/final_draft.qmd
     # - chapters/Outlines/Outline_12.2.qmd
     # - chapters/Outlines/Outline_11.7.qmd
     # - chapters/code_improve/Code-Improvement-Plan_12.2.qmd
     # - chapters/code_improve/Code-Improvement-Plan_11.7.qmd
-    # - chapters/0.Frontmatter.qmd
-    # - chapters/1.Introduction.qmd
-    # - chapters/2.0.Context.qmd
-    # - chapters/3.0.AMTAIR.qmd
-    # - chapters/4.Discussion.qmd
-    # - chapters/5.Conclusion.qmd
     - ref/references.qmd
   appendices:
-    - chapters/manual_extraction_bucknall.qmd
+      - chapters/Appendix-K.qmd
+      - chapters/Appendix-L.qmd
+      - chapters/Appendix-M.qmd
+      - chapters/Appendix-N.qmd
+    # - chapters/manual_extraction_bucknall.qmd
     # - chapters/I.Appendices.qmd
-    # - AMTAIR_Prototype/data/example_carlsmith/AMTAIR_Prototype_example_carlsmith.ipynb
+      - AMTAIR_Prototype/data/example_carlsmith/AMTAIR_Prototype_example_carlsmith.ipynb
 
 # notebook-view:
 #   - notebook: AMTAIR_Prototype/data/example_carlsmith/AMTAIR_Prototype_example_carlsmith.ipynb
@@ -69,7 +73,7 @@ format:
     number-sections: true
     number-depth: 0
     code-links:
-      - text: Colab Notebook (Manual Link in .yml)
+      - text: Colab Notebook   # (Manual Link in .yml)
         icon: file-code
         href: https://colab.research.google.com/github/VJMeyer/submission/blob/main/AMTAIR_Prototype/data/example_carlsmith/AMTAIR_Prototype_example_carlsmith.ipynb
       - text: GitHub Repository
@@ -89,7 +93,7 @@ format:
     keep-tex: true
     toc: true
     toc-title: Table of Contents
-    toc-depth: 10
+    toc-depth: 3
     number-sections: false
     number-depth: 0
     lof: true

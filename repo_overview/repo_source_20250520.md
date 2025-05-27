@@ -9,7 +9,7 @@
 # # SWITCH BETWEEN BOOK AND MAUSCRIPT QUARTO BY (UN-)COMMENTING THE RESPECTIVE SECTION IN THIS _quarto.yml file
 
 
-
+      - chapters/Appendix-
 
 
 

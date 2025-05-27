@@ -74,8 +74,10 @@ I demonstrate feasibility by successfully extracting complex models like Carlsmi
 - MTAIR - Modeling Transformative AI Risks
 - TAI - Transformative Artificial Intelligence
 -->
+{{< pagebreak >}}
 
-## Glossary {#sec-gloss.unnumbered }
+
+## Glossary {#sec-gloss .unnumbered }
 
 <!-- [ ] Replace Placeholder Glossary with native Quarto Glossary -->
 
@@ -93,7 +95,7 @@ I demonstrate feasibility by successfully extracting complex models like Carlsmi
 -   **d-separation**: A criterion for identifying conditional independence relationships in Bayesian networks\
 -   **Monte Carlo sampling**: A computational technique using random sampling to obtain numerical results
 
-
+{{< pagebreak >}}
 
 ## List of Abbreviations {#sec-abbr .unnumbered }
 
