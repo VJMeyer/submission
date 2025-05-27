@@ -2,6 +2,70 @@
 
 ## Frontmatter: Preface
 
+<!-- 
+title: "Automating the Modelling of Transformative Artificial Intelligence Risks"
+subtitle: "An Epistemic Framework for Leveraging Frontier AI Systems to Upscale Conditional Policy Assessments in Bayesian Networks on a Narrow Path towards Existential Safety"
+#title-block-banner: true
+#title-block-banner: latex/uni-bayreuth-logo.png
+author:
+  - name: Valentin Jakob Meyer
+    orcid: 0009-0006-0889-5269
+    corresponding: true
+    email: Valentin.Meyer@uni-bayreuth.de
+    roles:
+      GraduateAuthor
+#      - Investigation
+#      - Project administration
+#      - Software
+#      - Visualization
+    affiliations:
+      - University of Bayreuth
+      - MCMP — LMU Munich
+  - name: Dr. Timo Speith       
+    orcid: 0000-0002-6675-154X    # from https://orcid.org/0000-0002-6675-154X
+    corresponding: false
+    roles: Supervisor
+#      [Supervisor]
+    affiliations:
+      - University of Bayreuth
+keywords:
+  - AMTAIR
+  - AI Governance
+  - Bayesian Networks
+  - Transformative AI
+  - Risk Assessment
+  - Argument Extraction
+abstract: |
+  This thesis addresses coordination problems in AI safety by creating tools that automatically extract and formalize the assumptions and models underlying different approaches to AI governance.
+  By transforming complex arguments into interactive visualizations showing relationships and probabilities, AMTAIR helps bridge communication gaps between technical researchers, policy specialists, and other stakeholders working to address risks from advanced AI.
+plain-language-summary: |
+  This thesis addresses coordination problems in AI safety by creating tools that automatically
+  extract and formalize the assumptions and models underlying different approaches to AI governance.
+  By transforming complex arguments into interactive visualizations showing relationships and
+  probabilities, AMTAIR helps bridge communication gaps between technical researchers, policy
+  specialists, and other stakeholders working to address risks from advanced AI.
+key-points:
+  - A novel extraction pipeline transforms argument structures into Bayesian networks through a two-stage process
+  - Interactive visualizations make complex probabilistic relationships accessible to diverse stakeholders
+  - Formal representation enables comparison across different worldviews and assumptions
+  - The approach addresses coordination failures by creating a common language for AI risk assessment
+metadata-submission:
+  field-of-study: "Philosophy & Economics M.A."
+  matriculation-number: 1828610
+  submission-date: "May 26, 2025"
+  word-count: 30000
+date: "2025-05-26"
+bibliography: ref/MAref.bib
+citation:
+  container-title: University of Bayreuth
+number-sections: true
+reference-location: margin
+citation-location: margin 
+-->
+
+
+
+
 <!-- [-] TODO: Expand preface to include personal journey and acknowledgments -->
 
 This thesis represents the culmination of interdisciplinary research at the intersection of AI safety, formal epistemology, and computational social science. The work emerged from recognizing a fundamental challenge in AI governance: while investment in AI safety research has grown exponentially, coordination between different stakeholder communities remains fragmented, potentially increasing existential risk through misaligned efforts.
@@ -56,6 +120,9 @@ P&E - Philosophy & Economics
 PDF - Portable Document Format  
 TAI - Transformative Artificial Intelligence
 
+
+<!-- [ ] Add to glossary and define: prediction markets & forecasting platforms -->
+
 # 1. Introduction: The Coordination Crisis in AI Governance
 <!-- 
 **Chapter Overview**  
@@ -65,7 +132,8 @@ TAI - Transformative Artificial Intelligence
 
 ## 1.1 Opening Scenario: The Policymaker's Dilemma
 
-<!-- [-] TODO: Polish opening scenario for maximum impact --> <!-- [-] ADD: @todd2024 add as reference for more resources towards AI safety -->
+<!-- [-] TODO: Polish opening scenario for maximum impact -->
+<!-- [-] ADD: @todd2024 add as reference for more resources towards AI safety -->
 
 Imagine a senior policy advisor preparing recommendations for AI governance legislation. On her desk lie a dozen reports from leading AI safety researchers, each painting a different picture of the risks ahead. One argues that misaligned AI could pose existential risks within the decade, citing complex technical arguments about instrumental convergence and orthogonality. Another suggests these concerns are overblown, emphasizing uncertainty and the strength of existing institutions. A third proposes specific technical standards but acknowledges deep uncertainty about their effectiveness.
 
@@ -75,13 +143,17 @@ Each report seems compelling in isolation, written by credentialed experts with 
 
 This scenario^[The orthogonality thesis posits that intelligence and goals are independent—an AI can have any set of objectives regardless of its intelligence level. The instrumental convergence thesis suggests that different AI systems may adopt similar instrumental goals (e.g., self-preservation, resource acquisition) to achieve their objectives.] plays out daily across government offices, corporate boardrooms, and research institutions worldwide. It exemplifies what I term the "coordination crisis" in AI governance: despite unprecedented attention and resources directed toward AI safety, we lack the epistemic infrastructure to synthesize diverse expert knowledge into actionable governance strategies @todd2024.
 
-<!-- [-] CREATE: {#fig-policymaker-dilemma}: "Visual representation of conflicting expert reports on advisor's desk" -->
-
+<!-- [-] CREATE: {#fig-policymaker-dilemma}: "Visual representation of conflicting expert reports on advisor's desk" 
 Show Image
+-->
+
+
 
 ## 1.2 The Coordination Crisis in AI Governance
 
-<!-- [-] TODO: Frame the problem as coordination failure rather than merely technical challenge --> <!-- [-] ADD: @maslej2025 Add citation for page 85 as evidence for accelerating capabilities --> <!-- [-] ADD: @samborska2025 Add as citation for accelerating capabilities -->
+<!-- [-] TODO: Frame the problem as coordination failure rather than merely technical challenge -->
+<!-- [-] ADD: @maslej2025 Add citation for page 85 as evidence for accelerating capabilities --> 
+<!-- [-] ADD: @samborska2025 Add as citation for accelerating capabilities -->
 
 As AI capabilities advance at an accelerating pace—demonstrated by the rapid progression from GPT-3 to GPT-4, Claude, and emerging multimodal systems @maslej2025 @samborska2025—humanity faces a governance challenge unlike any in history. The task of ensuring increasingly powerful AI systems remain aligned with human values and beneficial to our long-term flourishing grows more urgent with each capability breakthrough. This challenge becomes particularly acute when considering transformative AI systems that could drastically alter civilization's trajectory, potentially including existential risks from misaligned systems pursuing objectives counter to human welfare.
 
@@ -91,9 +163,18 @@ The current state of AI governance presents a striking paradox. On one hand, we 
 
 Yet alongside this activity, we observe systematic coordination failures that may prove catastrophic. Technical safety researchers develop sophisticated alignment techniques without clear implementation pathways. Policy specialists craft regulatory frameworks lacking technical grounding to ensure practical efficacy. Ethicists articulate normative principles that lack operational specificity. Strategy researchers identify critical uncertainties but struggle to translate these into actionable guidance. International bodies convene without shared frameworks for assessing interventions.
 
-<!-- [-] CREATE: {#fig-coordination-crisis}: "Systems diagram showing fragmentation between AI governance communities" -->
-
+<!-- [-] CREATE: {#fig-coordination-crisis}: "Systems diagram showing fragmentation between AI governance communities" 
 Show Image
+-->
+[![from @cottier2019: Key hypotheses across the AI alignment ecosystem](/images/hypotheses_diagram.pdf){
+    #fig-ai-hypotheses-map
+    fig-scap="Key hypotheses in AI alignment"
+    fig-alt="LARGE CONCEPT MAP. Nodes are colour-coded: red for problems that could lead to catastrophe, green for solutions or agendas, blue for scenarios or conceptual models. Bold-border nodes denote primary hypotheses such as ‘Discontinuity to AGI’, ‘Agentive AGI’, ‘Broad basin for corrigibility’, and ‘Mesa-optimisation’. Directed arrows link questions to hypotheses, questions to questions, and scenarios to hypotheses. Arrow labels (Yes, No, Defer, brief rationales) indicate how answering the tail node influences credence in the head node. A legend at the bottom explains colour categories and arrow semantics. Source: Ben Cottier & Rohin Shah (2019) @cottier2019 “Clarifying Some Key Hypotheses in AI Alignment”, AI Alignment Forum."
+    fig-align="center"
+    width="100%"
+}](https://www.lesswrong.com/posts/mJ5oNYnkYrd4sD5uE/clarifying-some-key-hypotheses-in-ai-alignment#Agentive_AGI_)
+
+
 
 ### 1.2.1 Safety Gaps from Misaligned Efforts
 
@@ -149,9 +230,11 @@ Yet AI presents unique coordination challenges that compress our response timeli
 
 **Governance Lag**: Traditional governance mechanisms—legislation, international treaties, professional standards—operate on timescales of years to decades. AI capabilities advance on timescales of months to years, creating an ever-widening capability-governance gap.
 
-<!-- [-] CREATE: {#fig-governance-lag}: "Timeline comparison of AI capability vs governance development" -->
-
+<!-- [-] CREATE: {#fig-governance-lag}: "Timeline comparison of AI capability vs governance development" 
 Show Image
+-->
+
+
 
 ## 1.4 Research Question and Scope
 
@@ -181,9 +264,11 @@ The investigation encompasses both theoretical development and practical impleme
 
 The central thesis of this work is that combining three elements—automated worldview extraction, prediction market integration, and formal policy evaluation—creates multiplicative rather than merely additive benefits for AI governance. Each component enhances the others, creating a system more valuable than the sum of its parts.
 
-<!-- [-] CREATE: {#fig-multiplicative-benefits}: "Venn diagram showing synergies between extraction, markets, and evaluation": Automation × Live Prediction Market Integrations × Policy Impact Evaluations -->
-
+<!-- [-] CREATE: {#fig-multiplicative-benefits}: "Venn diagram showing synergies between extraction, markets, and evaluation": Automation × Live Prediction Market Integrations × Policy Impact Evaluations
 Show Image
+-->
+
+
 
 ### 1.5.1 Automated Worldview Extraction
 
@@ -245,9 +330,11 @@ The remainder of this thesis develops the multiplicative benefits framework from
 
 Throughout this progression, I maintain dual focus on theoretical sophistication and practical utility. The framework aims not merely to advance academic understanding but to provide actionable tools for improving coordination in AI governance during this critical period.
 
-<!-- [-] CREATE: {#fig-thesis-roadmap}: "Visual flowchart of thesis structure and chapter connections" -->
-
+<!-- [-] CREATE: {#fig-thesis-roadmap}: "Visual flowchart of thesis structure and chapter connections"
 Show Image
+-->
+
+
 
 Having established the coordination crisis and outlined how automated modeling can address it, we now turn to the theoretical foundations that make this approach possible. The next chapter examines the unique epistemic challenges of AI governance and introduces the formal tools—particularly Bayesian networks—that enable rigorous reasoning under deep uncertainty.
 
@@ -277,46 +364,39 @@ To ground our discussion in concrete terms, I examine Joseph Carlsmith's "Is Pow
 
 According to the MTAIR model @clarke2022, Carlsmith decomposes existential risk into a probabilistic chain with explicit estimates^[Multiple versions of Carlsmith's paper exist with slight updates to probability estimates: @carlsmith2021, @carlsmith2022, @carlsmith2024. We primarily reference the version used by the MTAIR team for their extraction. Extended discussion and expert probability estimates can be found on LessWrong.]:
 
-1. **Premise 1**: Transformative AI development this century `(P≈0.80)`
-2. **Premise 2**: AI systems pursuing objectives in the world `(P≈0.95)`
-3. **Premise 3**: Systems with power-seeking instrumental incentives `(P≈0.40)`
-4. **Premise 4**: Sufficient capability for existential threat `(P≈0.65)`
-5. **Premise 5**: Misaligned systems despite safety efforts `(P≈0.50)`
-6. **Premise 6**: Catastrophic outcomes from misaligned power-seeking `(P≈0.65)`
+1. **Premise**: Transformative AI development this century^[**Premise 1: APS Systems by 2070** $(P≈0.65)$ "By 2070, there will be AI systems with Advanced capability, Agentic planning, and Strategic awareness"—the conjunction of capabilities that could enable systematic pursuit of objectives in the world.
+] $(P≈0.80)$^[**Premise 1: APS Systems by 2070** $(P≈0.65)$ "By 2070, there will be AI systems with Advanced capability, Agentic planning, and Strategic awareness"—the conjunction of capabilities that could enable systematic pursuit of objectives in the world.
+]
+2. **Premise**: AI systems pursuing objectives in the world^[**Premise 2: Alignment Difficulty** $(P≈0.40)$ "It will be harder to build aligned APS systems than misaligned systems that are still attractive to deploy"—capturing the challenge that safety may conflict with capability or efficiency.
+] $(P≈0.95)$
+3. **Premise**: Systems with power-seeking instrumental incentives^[**Premise 3: Deployment Despite Misalignment** $(P≈0.70)$ "Conditional on 1 and 2, we will deploy misaligned APS systems"—reflecting competitive pressures and limited coordination.
+] $(P≈0.40)$
+4. **Premise**: Sufficient capability for existential threat^[**Premise 4: Power-Seeking Behavior** $(P≈0.65)$ "Conditional on 1-3, misaligned APS systems will seek power in high-impact ways"—based on instrumental convergence arguments.
+] $(P≈0.65)$
+5. **Premise**: Misaligned systems despite safety efforts^[**Premise 5: Disempowerment Success** $(P≈0.40)$ "Conditional on 1-4, power-seeking will scale to permanent human disempowerment"—despite potential resistance and safeguards.
+] $(P≈0.50)$
+6. **Premise**: Catastrophic outcomes from misaligned power-seeking^[**Premise 6: Existential Catastrophe** $(P≈0.95)$ "Conditional on 1-5, this disempowerment constitutes existential catastrophe"—connecting power loss to permanent curtailment of human potential.
+] $(P≈0.65)$
 
-**Composite Risk Calculation**: `P(doom)≈0.05 (5%)`
+**Composite Risk Calculation**^[**Overall Risk**: Multiplying through the conditional chain yields $P(doom)≈0.05 $ or 5% by 2070.]: $P(doom)≈0.05$ (5%)
 
-<!-- [ ] REPAIR: Mermaid flowchart of Carlsmith model with probabilities (in correct Quarto Syntax)-->
 
-mermaid
-
-```mermaid
-flowchart TD
-    P1[Premise 1: Transformative AI<br/>P ≈ 0.80] --> P2[Premise 2: AI pursuing objectives<br/>P ≈ 0.95]
-    P2 --> P3[Premise 3: Power-seeking incentives<br/>P ≈ 0.40]
-    P3 --> P4[Premise 4: Existential capability<br/>P ≈ 0.65]
-    P4 --> P5[Premise 5: Misalignment despite safety<br/>P ≈ 0.50]
-    P5 --> P6[Premise 6: Catastrophic outcome<br/>P ≈ 0.65]
-    P6 --> D[Existential Catastrophe<br/>P ≈ 0.05]
-```
-
-Carlsmith structures his argument through six conditional premises, each assigned explicit probability estimates:
-
-**Premise 1: APS Systems by 2070** `(P≈0.65)` "By 2070, there will be AI systems with Advanced capability, Agentic planning, and Strategic awareness"—the conjunction of capabilities that could enable systematic pursuit of objectives in the world.
-
-**Premise 2: Alignment Difficulty** `(P≈0.40)` "It will be harder to build aligned APS systems than misaligned systems that are still attractive to deploy"—capturing the challenge that safety may conflict with capability or efficiency.
-
-**Premise 3: Deployment Despite Misalignment** `(P≈0.70)` "Conditional on 1 and 2, we will deploy misaligned APS systems"—reflecting competitive pressures and limited coordination.
-
-**Premise 4: Power-Seeking Behavior** `(P≈0.65)` "Conditional on 1-3, misaligned APS systems will seek power in high-impact ways"—based on instrumental convergence arguments.
-
-**Premise 5: Disempowerment Success** `(P≈0.40)` "Conditional on 1-4, power-seeking will scale to permanent human disempowerment"—despite potential resistance and safeguards.
-
-**Premise 6: Existential Catastrophe** `(P≈0.95)` "Conditional on 1-5, this disempowerment constitutes existential catastrophe"—connecting power loss to permanent curtailment of human potential.
-
-**Overall Risk**: Multiplying through the conditional chain yields `P(doom)≈0.05 ` or 5% by 2070.
 
 This structured approach exemplifies the type of reasoning AMTAIR aims to formalize and automate. While Carlsmith spent months developing this model manually, similar rigor exists implicitly in many AI safety arguments awaiting extraction.
+
+
+
+[![from @manheim2021: MTAIR integrated Carlsmith's model as the "inside view" in their Analytica Software Demonstration ](/images/mtair-insideoutside-base.jpg){
+    #fig-mtair-insideoutside-base
+    fig-scap="Base APS causal map (clean)"
+    fig-alt="Same node-and-arrow causal graph as the overlay figure but without the purple, violet, and red guiding circles. Blue bullet premises feed ‘Collection of inputs’ rectangle, cascading turquoise probability ovals lead to ‘Cr existential catastrophe | world model’. Lower left shows outside-view priors, right shows weighting logic, centre red oval ‘Cr existential catastrophe’. Provides uncluttered view of the structural model prior to explanatory overlay. SOURCE: David Manheim @manheim2021, MTAIR sequence, 2021."
+    fig-align="center"
+    width="120%"
+}](https://www.lesswrong.com/posts/sGkRDrpphsu6Jhega/a-model-based-approach-to-ai-existential-risk)
+
+
+
+
 
 <!-- [-] TODO: Verify manual extraction of Carlsmith model for ground truth with Ella and Johannes -->
 
@@ -332,11 +412,15 @@ Carlsmith's model demonstrates several features that make it ideal for formal re
 
 **Documented Reasoning**: Extensive justification for each probability enables extraction of both structure and parameters from the source text.
 
+
+
+
 <!-- [-] ADD: "foreshadowing" of how/why we will pick up with carlsmith model later-->
 
 We will return to Carlsmith's model in Chapter 3 as our primary complex case study, demonstrating how AMTAIR successfully extracts and formalizes this sophisticated multi-level argument.
 
-<!-- [-] LATER TODO: Extract two additional "inside view" world models for comparison --> <!-- [-] ADD: @christiano2019: "Christiano, P. (2019). What failure looks like. AI Alignment Forum." -->
+<!-- [-] LATER TODO: Extract two additional "inside view" world models for comparison -->
+<!-- [-] ADD: @christiano2019: "Christiano, P. (2019). What failure looks like. AI Alignment Forum." -->
 
 Beyond Carlsmith's model, other structured approaches to AI risk—such as Christiano's "What failure looks like" @christiano2019—provide additional targets for automated extraction, enabling comparative analysis across different expert worldviews.
 
@@ -419,15 +503,29 @@ The inadequacy of traditional methods for AI governance creates an urgent need f
 
 **Key Insight**: The computational approaches developed in this thesis—particularly Bayesian networks enhanced with automated extraction—directly address each of these requirements by providing formal frameworks for reasoning under uncertainty.
 
-<!-- [-] Images -->
+[![from @mccaslin2024: Conditional-tree Guide](/images/conditional_tree.jpg){
+  #fig-conditional_tree
+  fig-scap="Conditional-tree Guide"
+  fig-alt="CHART TYPE: annotated schematic of a three-level conditional tree. DATA: placeholders XX %, AA %, BB %, VV %, WW %, etc. PURPOSE: illustrates colour and label conventions—green for ultimate question, blue/purple for indicator questions, grey/red for branch probabilities, red for updated extinction probabilities and relative-risk factors. DETAILS: shows how each indicator’s TRUE or FALSE branch feeds probabilistically into the ultimate extinction outcome. SOURCE: McCaslin et al. 2024 @mccaslin2024, FRI Working Paper #3."
+  fig-align="center"
+    width="80%"
+}](https://static1.squarespace.com/static/635693acf15a3e2a14a56a4a/t/66ba37a144f1d6095de467df/1723479995772/AIConditionalTrees.pdf#page=5.78)
 
-Show Image
 
-Show Image
 
-Show Image
 
-Show Image
+
+
+[![from @mccaslin2024: Experts’ conditional-tree updates (2030-2070)](/images/concerned_experts.jpg){
+    #fig-concerned_experts
+    fig-scap="Experts’ conditional-tree updates (2030-2070)"
+    fig-alt="CHART TYPE: conditional-probability tree with three sequential indicator nodes. DATA: baseline AI-extinction probability 17 % in 2023; indicator 1 (2030 administrative disempowerment warning shot) TRUE=37 %, FALSE=63 %; two conditional probabilities for extinction in 2100: 31.6 % (relative-risk 1.9×) if TRUE, 14.3 % (0.9×) if FALSE. Indicator 2 (2050 power-seeking warning shot) TRUE=54 %, FALSE=46 %; corresponding extinction probabilities 23.4 % (1.4×) and 10.5 % (0.6×). Indicator 3 (2070 no aligned AGI) TRUE=46 %, FALSE=54 %; extinction probabilities 25.0 % (1.5×) and 13.7 % (0.8×). PURPOSE: quantifies how confirmation or disconfirmation of warning-shot events would shift expert-assessed AI-extinction risk. DETAILS: experts are most alarmed by earlier administrative disempowerment (1.9× increase) and least by absence of power-seeking shot (0.6×). SOURCE: McCaslin et al. 2024 @mccaslin2024, FRI Working Paper #3."
+    fig-align="center"
+    width="80%"
+}](https://static1.squarespace.com/static/635693acf15a3e2a14a56a4a/t/66ba37a144f1d6095de467df/1723479995772/AIConditionalTrees.pdf#page=5.78)
+
+
+
 
 <!-- [-] ADD: @mccaslin2024 cite and write about "Conditional Trees: A Method for Generating Informative Questions about Complex Topics" -->
 
@@ -437,9 +535,25 @@ Recent work on conditional trees demonstrates the value of structured approaches
 
 Tetlock's work with the Forecasting Research Institute @tetlock2022 exemplifies how prediction markets can provide empirical grounding for formal models. By structuring questions as conditional trees, they enable forecasters to express complex dependencies between events, providing exactly the type of data needed for Bayesian network parameterization.
 
+[![from @tetlock2022: Conditional-tree AI-risk forecasts](/images/conditional_metaculus.jpg){
+    #fig-conditional_metaculus
+    fig-scap="Conditional-tree AI-risk forecasts"
+    fig-alt="SCREENSHOT of a forecasting-platform interface titled ‘Series Contents’. A search bar and filter chips sit above five forecast cards: 1) ‘If, before 2050, AI kills more than 1 million people, will the policy response be insufficient?’ with a 75 percent gauge (green, arrow up 8 percent). 2) ‘Before 2050, will an AI system be shut down due to exhibiting power-seeking behavior?’ at 95 percent (arrow down 2 percent). 3) ‘Before 2100, will AI cause the human population to fall below 5000 individuals?’ at 4 percent. 4) ‘Before 2030, will there be an AI-caused administrative disempowerment?’ at 20 percent. 5) ‘Between 2023 and 2030, will revenue from deep learning double every two years?’ at 80 percent. Beneath several cards, grey CONDITION boxes branch to green bars labelled ‘CTs AI Extinction Before 2100’ with different probabilities for IF YES and IF NO scenarios (e.g. 26 % vs 37 %). Each question lists forecaster counts, closing dates (2030 or 2050), and the tag ‘Conditional Trees: AI Risk’. A footer card introduces the series report. CHART TYPE: mixed UI elements—gauge dials and horizontal bars—displaying probabilities and conditional probabilities. DATA: probabilities (% chances) for base and conditional events; no axes. PURPOSE: demonstrates how crowd-forecasting encodes marginal and counterfactual probabilities suitable as inputs for AMTAIR Bayesian-network nodes. DETAILS: notable high probability for power-seeking AI shutdown, low probability for population collapse, and large shifts in extinction risk under certain conditions. SOURCE: Forecasting Research Institute conditional-tree series, @tetlock2022."
+    fig-align="center"
+    width="80%"
+}](https://www.metaculus.com/tournament/3508/)
+
 <!-- [-] ADD @gruetzemacher2022 cite and summarize the relevant aspects -->
 
 Gruetzemacher @gruetzemacher2022 evaluates the tradeoffs between full Bayesian networks and conditional trees for forecasting tournaments. While conditional trees offer simplicity, Bayesian networks provide richer representation of dependencies—motivating AMTAIR's approach of using full networks while leveraging conditional tree insights for question generation.
+
+[![from @gruetzemacher2022: Bayes-net pruning → crux extraction → re-expansion](/images/bns_and_conditional_trees.jpg){
+    #fig-bayesnet-crux-flow
+    fig-scap="Bayes-net pruning → crux extraction → re-expansion"
+    fig-alt="THREE-PANEL DIAGRAM. Panel A (upper left) titled ‘Initial Bayes Net—Pruning Least Relevant Nodes’ shows eleven circular nodes connected by arrows inside a rounded rectangle. Solid circles remain; dashed or dotted ones are pruned. Arrows converge on a solid node labelled ‘AI causes human extinction’. Panel B (upper right) titled ‘Two Sets of Crux Events from Bayes Nets Isolated as Conditional Trees’ shows two short vertical chains of dotted or dashed circles. Chain 1: ‘AI alignment problem is solved’ → ‘China and the US cooperate on AI alignment’ → ‘Discontinuous progress in computational costs’. Chain 2: ‘Intergovernmental treaty on AI alignment’ ← ‘Robust AI-driven economic growth’ ← ‘Continual learning integrated with foundation models’. Panel C (bottom) titled ‘Top Set of Crux Events as Conditional Tree Decomposed to Bayes Net’ depicts a new Bayes net where context nodes such as ‘Photonic computing is used for CPU’, ‘US/China trade increases’, and ‘US grows increasingly authoritarian’ feed into ‘China and the US cooperate on AI alignment’, then into ‘AI alignment problem is solved’, and finally ‘AI causes human extinction’. Arrows between panels illustrate the workflow sequence. CHART TYPE: conceptual flow diagram with two Bayes nets and intermediate conditional trees. DATA: relationships among qualitative variables—no numeric axes. PURPOSE: illustrates AMTAIR’s iterative refinement pipeline from full Bayes net to crux-tree extraction and back. DETAILS: emphasises node styles (solid, dashed, dotted) for relevance; shows convergence toward the extinction outcome. SOURCE: @gruetzemacher2022, May 2025."
+    fig-align="center"                        
+    width="100%"
+}](https://bnma.co/uai2022-apps-workshop/papers/S5.pdf)
 
 ## 2.3 Bayesian Networks as Knowledge Representation
 
@@ -476,7 +590,7 @@ The canonical example illustrates key concepts^[This example, while simple, demo
 
 <!-- [-] EXPAND: Use this to elaborate and explain "from DAGs to Bayesian Networks" -->
 
-```
+```markdown
 [Grass_Wet]: Concentrated moisture on grass. 
  + [Rain]: Water falling from sky.
  + [Sprinkler]: Artificial watering system.
@@ -489,28 +603,11 @@ Network Structure:
 - **Sprinkler** (intermediate): P(sprinkler|rain) varies by rain state
 - **Grass_Wet** (effect): P(wet|rain, sprinkler) depends on both causes
 
-<!-- [-] CREATE: Mermaid flowchart of Rain-Sprinkler-Grass model with probabilities (in correct Quarto Syntax)-->
+<!-- [ ] FIX: Mermaid flowchart of Rain-Sprinkler-Grass model with probabilities (in correct Quarto Syntax)-->
 
-mermaid
+<!--
 
-```mermaid
-flowchart TD
-    R[Rain<br/>P(rain) = 0.2] --> S[Sprinkler]
-    R --> G[Grass_Wet]
-    S --> G
-    
-    subgraph CPT1[Sprinkler CPT]
-        S1[P(sprinkler|rain) = 0.01]
-        S2[P(sprinkler|¬rain) = 0.4]
-    end
-    
-    subgraph CPT2[Grass_Wet CPT]
-        G1[P(wet|rain,sprinkler) = 0.99]
-        G2[P(wet|rain,¬sprinkler) = 0.8]
-        G3[P(wet|¬rain,sprinkler) = 0.9]
-        G4[P(wet|¬rain,¬sprinkler) = 0.01]
-    end
-```
+-->
 
 python
 
@@ -536,11 +633,10 @@ This simple network demonstrates:
 
 <!-- [-] CREATE: {#fig-rain-sprinkler-network}: "Visual Bayesian network for rain-sprinkler-grass with CPTs" -->
 
-Show Image
 
-#### Rain-Sprinkler-Grass Network Rendering
+#### 2.3.3 Rain-Sprinkler-Grass Network Rendering
 
-```python
+```{python}
 #| label: rain_sprinkler_grass_example_network_rendering
 #| echo: true
 #| eval: true
@@ -550,10 +646,10 @@ Show Image
 
 from IPython.display import IFrame
 
-IFrame(src="https://singularitysmith.github.io/AMTAIR_Prototype/bayesian_network.html", width="100%", height="600px")
+IFrame(src="https://singularitysmith.github.io/AMTAIR_Prototype/bayesian_network.html", width="100%", height="800px")
 ```
 
-### 2.3.3 Advantages for AI Risk Modeling
+### 2.3.4 Advantages for AI Risk Modeling {#sec-modeling-advantages}
 
 These features address key requirements for AI governance:
 
@@ -562,12 +658,6 @@ These features address key requirements for AI governance:
 - **Enabling Analysis**: Formal inference algorithms support systematic evaluation
 - **Facilitating Communication**: Visual structure aids cross-domain understanding
 
-
-
-
-
-
-### 2.3.3 Advantages for AI Risk Modeling {#sec-modeling-advantages}
 
 Bayesian networks offer several compelling advantages for the peculiar challenge of modeling AI risks—a domain where we're essentially trying to reason about systems that don't yet exist, wielding capabilities we can barely imagine, potentially causing outcomes we desperately hope to avoid.
 
@@ -608,7 +698,17 @@ Recent advances in computational argument mining @anderson2007 @benn2011 @kharta
 
 Enter ArgDown @voigt2025, a markdown-inspired syntax that captures hierarchical argument structure while remaining human-readable. Think of it as the middle child between the wild expressiveness of natural language and the rigid formality of logic—inheriting the best traits of both parents while developing its own personality.
 
+
+```markdown
+[MainClaim]: Description of primary conclusion.
+ + [SupportingEvidence]: Evidence supporting the claim.
+   + [SubEvidence]: More specific support.
+ - [CounterArgument]: Evidence against the claim.
 ```
+
+This notation does several clever things simultaneously. The hierarchical structure mirrors how we naturally think about arguments—main claims supported by evidence, which in turn rest on more fundamental observations. The `+` and `-` symbols indicate support and opposition relationships, creating a visual flow of argumentative force. Most importantly, it preserves the semantic content of each claim while imposing just enough structure to enable computational processing.
+
+```markdown
 [AI_Poses_Risk]: Advanced AI systems may pose existential risk to humanity.
  + [Capability_Growth]: AI capabilities are growing exponentially.
    + [Compute_Scaling]: Available compute doubles every few months.
@@ -617,8 +717,6 @@ Enter ArgDown @voigt2025, a markdown-inspired syntax that captures hierarchical 
    - [Current_Progress]: Some progress on interpretability and oversight.
  - [Institutional_Response]: Institutions are mobilizing to address risks.
 ```
-
-This notation does several clever things simultaneously. The hierarchical structure mirrors how we naturally think about arguments—main claims supported by evidence, which in turn rest on more fundamental observations. The `+` and `-` symbols indicate support and opposition relationships, creating a visual flow of argumentative force. Most importantly, it preserves the semantic content of each claim while imposing just enough structure to enable computational processing.
 
 For AMTAIR, we adapt ArgDown specifically for causal arguments, where the hierarchy represents causal influence rather than logical support. This seemingly small change has profound implications—we're not just mapping what follows from what, but what causes what.
 
@@ -630,7 +728,16 @@ For AMTAIR, we adapt ArgDown specifically for causal arguments, where the hierar
 
 If ArgDown is the middle child, then BayesDown—developed specifically for this thesis—is the ambitious younger sibling who insists on quantifying everything. By extending ArgDown syntax with probabilistic metadata in JSON format, BayesDown creates a complete specification for Bayesian networks while maintaining human readability.
 
-json
+```json
+[Effect]: Description of effect. {"instantiations": ["effect_TRUE", "effect_FALSE"]}
+ + [Cause1]: Description of first cause. {"instantiations": ["cause1_TRUE", "cause1_FALSE"]}
+ + [Cause2]: Description of second cause. {"instantiations": ["cause2_TRUE", "cause2_FALSE"]}
+   + [Root_Cause]: A cause that influences Cause2. {"instantiations": ["root_TRUE", "root_FALSE"]}
+```
+
+
+This representation performs a delicate balancing act. The natural language descriptions preserve the semantic meaning that makes arguments comprehensible. The hierarchical structure maintains the causal relationships that give arguments their logical force. The JSON metadata adds the mathematical precision needed for formal analysis. Together, they create what I call a "hybrid representation"—neither fully natural nor fully formal, but something more useful than either alone.
+
 
 ```json
 [Existential_Catastrophe]: Permanent curtailment of humanity's potential. {
@@ -647,11 +754,28 @@ json
  }
 ```
 
-This representation performs a delicate balancing act. The natural language descriptions preserve the semantic meaning that makes arguments comprehensible. The hierarchical structure maintains the causal relationships that give arguments their logical force. The JSON metadata adds the mathematical precision needed for formal analysis. Together, they create what I call a "hybrid representation"—neither fully natural nor fully formal, but something more useful than either alone.
 
 The two-stage extraction process (ArgDown → BayesDown) mirrors how experts actually think about complex arguments. First, we identify what matters and how things relate causally (structure). Then, we consider how likely different scenarios are based on those relationships (quantification). This separation isn't just convenient for implementation—it's psychologically valid.
 
 <!-- [-] COMPLETED: Added detailed BayesDown explanation -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 ## 2.5 The MTAIR Framework: Achievements and Limitations {#sec-mtair-framework}
 
@@ -665,6 +789,17 @@ The MTAIR project, spearheaded by David Manheim and colleagues @clarke2022, emer
 
 Their prescription was equally elegant: manually translate influential AI risk arguments into formal Bayesian networks, making assumptions visible and disagreements quantifiable. Using Analytica software, the team embarked on what can only be described as an intellectual archaeology expedition, carefully excavating the implicit causal models buried in papers, blog posts, and treatises about AI risk.
 
+
+
+[![from @clarke2022: MTAIR Qualitative map structure](/images/mtair-qual-map.jpg){
+    #fig-mtair-qual-map
+    fig-scap="MTAIR Qualitative map structure"
+    fig-alt="NODE-LINK DIAGRAM titled ‘Qualitative Map’. Blue rectangles ‘Hypothesis 1’ and ‘Hypothesis 2’, cyan rectangles ‘Debated propositions 1 & 2’, green rectangles ‘Proposed agendas 1 & 2’, red rectangles ‘Catastrophe scenarios 1 & 2’. Arrows show causal influence path from hypotheses through debated propositions and agendas to catastrophes. No probability icons, no analysis panel. PURPOSE: foundational structure before numerical parametrisation, illustrating argumentative flow in MTAIR. SOURCE: David Manheim et. al, Modeling Transformative AI Risks (MTAIR) Project -- Summary Report, 2021."
+    fig-align="center"
+    width="25%"
+}](https://arxiv.org/pdf/2206.09360#page=10.75)
+
+
 The process was painstaking:
 
 1. **Systematic Decomposition**: Breaking complex arguments into component claims, identifying variables and relationships through close reading and expert consultation.
@@ -673,6 +808,19 @@ The process was painstaking:
 4. **Visual Communication**: Creating interactive models that stakeholders could explore, modify, and understand without deep technical training.
 
 The ambition was breathtaking—to create a formal lingua franca for AI risk discussions, enabling productive disagreement and cumulative progress.
+
+
+
+
+[![from @clarke2022: MTAIR Quantitative map structure](/images/mtair-quant-map.jpg){
+    #fig-mtair-quant-map
+    fig-scap="MTAIR Quantitative map structure"
+    fig-alt="FLOW DIAGRAM titled ‘Quantitative Model’. Blue and cyan rectangles (Hypotheses and Debated propositions) feed green ‘Proposed agenda’ boxes and a rose ‘Meta-uncertainty’ box, which all point to red ‘Catastrophe scenario’ boxes. Tiny mini-PDF icons depict probability distributions beside each variable. Right-hand analysis panel lists Effects of investment, Sensitivity analysis, What-if questions, Decision approaches, Analysis tools. PURPOSE: show how MTAIR converts a qualitative causal map into a quantified Bayesian network that supports downstream scenario and decision analysis. OURCE: David Manheim et. al, Modeling Transformative AI Risks (MTAIR) Project -- Summary Report, 2021."
+    fig-align="center"
+    width="60%"
+}](https://arxiv.org/pdf/2206.09360#page=10.75)
+
+
 
 <!-- [-] COMPLETED: Added comprehensive MTAIR description -->
 
@@ -687,6 +835,20 @@ Credit where credit is due: MTAIR demonstrated something many thought impossible
 **Cross-Perspective Communication**: The formal models created neutral ground where technical AI researchers and policy wonks could meet. Instead of talking past each other in incompatible languages, they could point to specific nodes and edges, making disagreements concrete and tractable.
 
 **Research Prioritization**: Perhaps most practically, sensitivity analysis revealed which empirical questions actually mattered. If changing your belief about technical parameter X from 0.3 to 0.7 doesn't meaningfully affect the conclusion about AI risk, maybe we should focus our research elsewhere.
+
+
+
+
+[![from @manheim2021: Overlay of inside/outside/assimilation views](/images/mtair-insideoutside-overlay.jpg){
+    #fig-mtair-insideoutside-overlay
+    fig-scap="Overlay of inside/outside/assimilation views"
+    fig-alt="CONCEPT MAP overlaid by three translucent circles captioned Inside view, Outside views, and Assimilation logic. Left bullet list of six APS assumptions feeds a central causal chain of probabilities (timeline, incentive, alignment, failure, disempowerment, catastrophe) leading to a node titled ‘Cr existential catastrophe | world model’. Lower-left cluster of rectangles represents outside-view priors (Second Species Argument, transformative-tech base rate, AGI timeline forecasts, etc.). Right-hand cluster shows weighting and integration logic combining world-model estimate with outside-view priors into a final existential-catastrophe credence. No numerical axes—pure structural relationships. PURPOSE: illustrate how MTAIR reconciles inside-view technical reasoning with outside-view priors using an assimilation weighting scheme. SOURCE: David Manheim @manheim2021, MTAIR sequence post #3, Jul 2021."
+    fig-align="center"
+    width="110%"
+}](https://www.lesswrong.com/posts/sGkRDrpphsu6Jhega/a-model-based-approach-to-ai-existential-risk)
+
+
+
 
 <!-- [-] COMPLETED: Added MTAIR achievements -->
 
@@ -904,14 +1066,14 @@ The methodology embraces rather than elides this challenge:
 
 **Calibration Studies**: Research on human probability expression shows systematic patterns. "Highly likely" typically maps to 0.8-0.9, "probable" to 0.6-0.8, though individual and cultural variation is substantial.
 
-**Extraction Strategies**: The system uses multiple approaches:
+**Extraction Strategies**: The system uses multiple approximations:
 
 - Direct extraction: "We estimate 65% probability"
 - Linguistic mapping: "Very likely" → 0.85 (with uncertainty)
 - Comparative extraction: "More likely than X" where P(X) is known
 - Bounded extraction: "At least 30%" → [0.30, 1.0]
 
-**Uncertainty Representation**: Rather than false precision, we maintain uncertainty about probabilities themselves. This might seem like uncertainty piled on uncertainty, but it's honest—and mathematically tractable through hierarchical models.
+**Uncertainty Representation**: Rather than false precision, we maintain uncertainty about probabilities themselves. This might seem like uncertainty piled on uncertainty, but it's honest, helps avoid systematic biases—and mathematically tractable through hierarchical models.
 
 The goal isn't perfect extraction but useful extraction. If we can narrow "significant risk" from [0, 1] to [0.15, 0.45], we've added information even if we haven't achieved precision.
 
@@ -1062,11 +1224,10 @@ The system employs multiple strategies for probability extraction:
 
 **Comparative Reasoning**: Statements like "more probable than not" or "at least as likely as X" provide bounds even without exact values.
 
-**Coherence Enforcement**: Probabilities must sum correctly. If P(A|B) = 0.7, then P(not A|B) must equal 0.3. The system detects and resolves inconsistencies.
+**Coherence Enforcement**: Probabilities must sum correctly. If P(A|B) = 0.7, then P(not A|B) must equal 0.3. The syntax allows future system to detect and resolve inconsistencies.
 
 The result is a complete BayesDown specification:
 
-json
 
 ```json
 [Existential_Risk]: Threat to humanity's continued existence. {
@@ -1139,12 +1300,31 @@ Beyond the libraries lie custom algorithms that address AMTAIR-specific challeng
 python
 
 ```python
-def parse_hierarchy(text, current_indent=0):
+#| label: example_use_case
+#| echo: true
+#| eval: true
+#| fig-cap: "example use case"
+#| fig-link: "https://colab.research.google.com/github/VJMeyer/submission/blob/main/AMTAIR_Prototype/data/example_carlsmith/AMTAIR_Prototype_example_carlsmith.ipynb#scrollTo=ibjjJ34v3sQn&line=4&uniqifier=1"
+#| fig-alt: "example use case"
+
+def parsing_argdown_bayesdown(text, current_indent=0):
     """Recursively parse indented structure maintaining relationships"""
     # Track nodes at each level for parent identification
     # Handle repeated nodes by reference
     # Validate DAG property during construction
 ```
+
+<!-- {{< embed /AMTAIR_Prototype/data/example_carlsmith/AMTAIR_Prototype_example_carlsmith.ipynb#parsing_argdown_bayesdown echo=true >}} -->
+<!-- 
+#| label: example_use_case
+#| echo: true
+#| eval: true
+#| fig-cap: "example use case"
+#| fig-link: "https://colab.research.google.com/github/VJMeyer/submission/blob/main/AMTAIR_Prototype/data/example_carlsmith/AMTAIR_Prototype_example_carlsmith.ipynb#scrollTo=ibjjJ34v3sQn&line=4&uniqifier=1"
+#| fig-alt: "example use case"
+-->
+
+
 
 **Probability Completion**: Real arguments rarely specify all required probabilities. Our completion algorithm uses maximum entropy principles—when uncertain, assume maximum disorder. This provides conservative estimates that can be refined with additional information.
 
@@ -1212,27 +1392,71 @@ Each step validates its outputs before proceeding, ensuring that errors don't ca
 
 <!-- [-] COMPLETED: Added processing steps -->
 
+:::{.landscape}
+
 ### 3.4.2 Example Conversion Steps {#sec-rsg-input}
 
 Let's trace the actual transformations to see the pipeline in action:
 
 **Initial ArgDown Extraction**:
 
-markdown
 
+<!-- 
 ```markdown
 [Grass_Wet]: Concentrated moisture on grass blades. {"instantiations": ["wet", "dry"]}    
  + [Rain]: Precipitation from the sky. {"instantiations": ["raining", "not_raining"]}
  + [Sprinkler]: Artificial watering system. {"instantiations": ["on", "off"]}
    + [Rain]
+``` -->
+
+```markdown
+[Grass_Wet]: Concentrated moisture on, between and around the blades of grass.{"instantiations": ["grass_wet_TRUE", "grass_wet_FALSE"]}    
+  + [Rain]: Tears of angles crying high up in the skies hitting the ground.{"instantiations": ["rain_TRUE", "rain_FALSE"]}
+  + [Sprinkler]: Activation of a centrifugal force based CO2 droplet distribution system.{"instantiations": ["sprinkler_TRUE", "sprinkler_FALSE"]}
+      + [Rain]
 ```
 
 The hierarchy captures that rain influences sprinkler usage—a subtle but important causal relationship that pure correlation would miss.
 
 **Generated Questions for Probability Extraction**:
 
-markdown
 
+```json
+BayesDown Format Preview:
+# BayesDown Representation with Placeholder Probabilities
+
+/* This file contains BayesDown syntax with placeholder probabilities.
+   Replace the placeholders with actual probability values based on the 
+   questions in the comments. */
+
+    /* What is the probability for Grass_Wet=grass_wet_TRUE? */
+    /* What is the probability for Grass_Wet=grass_wet_TRUE if Rain=rain_TRUE, Sprinkler=sprinkler_TRUE? */
+    /* What is the probability for Grass_Wet=grass_wet_TRUE if Rain=rain_TRUE, Sprinkler=sprinkler_FALSE? */
+    /* What is the probability for Grass_Wet=grass_wet_TRUE if Rain=rain_FALSE, Sprinkler=sprinkler_TRUE? */
+    /* What is the probability for Grass_Wet=grass_wet_TRUE if Rain=rain_FALSE, Sprinkler=sprinkler_FALSE? */
+    /* What is the probability for Grass_Wet=grass_wet_FALSE? */
+    /* What is the probability for Grass_Wet=grass_wet_FALSE if Rain=rain_TRUE, Sprinkler=sprinkler_TRUE? */
+    /* What is the probability for Grass_Wet=grass_wet_FALSE if Rain=rain_TRUE, Sprinkler=sprinkler_FALSE? */
+    /* What is the probability for Grass_Wet=grass_wet_FALSE if Rain=rain_FALSE, Sprinkler=sprinkler_TRUE? */
+    /* What is the probability for Grass_Wet=grass_wet_FALSE if Rain=rain_FALSE, Sprinkler=sprinkler_FALSE? */
+    [Grass_Wet]: Concentrated moisture on, between and around the blades of grass. {"instantiations": ["grass_wet_TRUE", "grass_wet_FALSE"], "priors": {"What is the probability for Grass_Wet=grass_wet_TRUE?": "%?", "What is the probability for Grass_Wet=grass_wet_FALSE?": "%?"}, "posteriors": {"What is the probability for Grass_Wet=grass_wet_TRUE if Rain=rain_TRUE, Sprinkler=sprinkler_TRUE?": "?%", "What is the probability for Grass_Wet=grass_wet_TRUE if Rain=rain_TRUE, Sprinkler=sprinkler_FALSE?": "?%", "What is the probability for Grass_Wet=grass_wet_TRUE if Rain=rain_FALSE, Sprinkler=sprinkler_TRUE?": "?%", "What is the probability for Grass_Wet=grass_wet_TRUE if Rain=rain_FALSE, Sprinkler=sprinkler_FALSE?": "?%", "What is the probability for Grass_Wet=grass_wet_FALSE if Rain=rain_TRUE, Sprinkler=sprinkler_TRUE?": "?%", "What is the probability for Grass_Wet=grass_wet_FALSE if Rain=rain_TRUE, Sprinkler=sprinkler_FALSE?": "?%", "What is the probability for Grass_Wet=grass_wet_FALSE if Rain=rain_FALSE, Sprinkler=sprinkler_TRUE?": "?%", "What is the probability for Grass_Wet=grass_wet_FALSE if Rain=rain_FALSE, Sprinkler=sprinkler_FALSE?": "?%"}}
+        /* What is the probability for Rain=rain_TRUE? */
+        /* What is the probability for Rain=rain_FALSE? */
+        + [Rain]: Tears of angles crying high up in the skies hitting the ground. {"instantiations": ["rain_TRUE", "rain_FALSE"], "priors": {"What is the probability for Rain=rain_TRUE?": "%?", "What is the probability for Rain=rain_FALSE?": "%?"}}
+        /* What is the probability for Sprinkler=sprinkler_TRUE? */
+        /* What is the probability for Sprinkler=sprinkler_TRUE if Rain=rain_TRUE? */
+        /* What is the probability for Sprinkler=sprinkler_TRUE if Rain=rain_FALSE? */
+        /* What is the probability for Sprinkler=sprinkler_FALSE? */
+        /* What is the probability for Sprinkler=sprinkler_FALSE if Rain=rain_TRUE? */
+        /* What is the probability for Sprinkler=sprinkler_FALSE if Rain=rain_FALSE? */
+        + [Sprinkler]: Activation of a centrifugal force based CO2 droplet distribution system. {"instantiations": ["sprinkler_TRUE", "sprinkler_FALSE"], "priors": {"What is the probability for Sprinkler=sprinkler_TRUE?": "%?", "What is the probability for Sprinkler=sprinkler_FALSE?": "%?"}, "posteriors": {"What is the probability for Sprinkler=sprinkler_TRUE if Rain=rain_TRUE?": "?%", "What is the probability for Sprinkler=sprinkler_TRUE if Rain=rain_FALSE?": "?%", "What is the probability for Sprinkler=sprinkler_FALSE if Rain=rain_TRUE?": "?%", "What is the probability for Sprinkler=sprinkler_FALSE if Rain=rain_FALSE?": "?%"}}
+            /* What is the probability for Rain=rain_TRUE? */
+            /* What is the probability for Rain=rain_FALSE? */
+            + [Rain]
+
+```
+
+<!-- 
 ```markdown
 /* Prior probabilities */
 - What is the probability that it rains?
@@ -1244,13 +1468,19 @@ markdown
 - What is the probability the grass is wet when it's raining and sprinkler is on?
 - [... and so on for all combinations]
 ```
-
-The system generates exactly the questions needed to fully specify the network—no more, no less.
+-->
+The system generates exactly the questions needed to fully specify the network.
 
 **Complete BayesDown Result**:
 
-json
+```markdown
+[Grass_Wet]: Concentrated moisture on, between and around the blades of grass.{"instantiations": ["grass_wet_TRUE", "grass_wet_FALSE"]}    
+    +[Rain]: Tears of angles crying high up in the skies hitting the ground.{"instantiations": ["rain_TRUE", "rain_FALSE"]}
+    +[Sprinkler]: Activation of a centrifugal force based CO2 droplet distribution system.{"instantiations": ["sprinkler_TRUE", "sprinkler_FALSE"]}
+        +[Rain]
+```
 
+<!-- 
 ```json
 [Grass_Wet]: Concentrated moisture on grass. {
   "instantiations": ["wet", "dry"],
@@ -1262,7 +1492,7 @@ json
     "p(wet|not_raining,off)": "0.01"
   }
 }
-```
+``` -->
 
 Notice how the probabilities tell a coherent story—grass is almost certainly wet if either water source is active, almost certainly dry if neither is.
 
@@ -1272,7 +1502,20 @@ The transformation into tabular format enables standard data analysis tools whil
 
 <!-- [-] COMPLETED: Added conversion examples -->
 
+
+
+
+
+
 ### 3.4.3 Results {#sec-rsg-results}
+
+#| column: page
+
+| Title | Description | line                                              | line_numbers | indentation | indentation_levels | Parents | Children          | instantiations         | priors                            | posteriors                                        | No_Parent                                          | No_Children | parent_instantiations |                                                   |
+| ----- | ----------- | ------------------------------------------------- | ------------ | ----------- | ------------------ | ------- | ----------------- | ---------------------- | --------------------------------- | ------------------------------------------------- | -------------------------------------------------- | ----------- | --------------------- | ------------------------------------------------- |
+| 0     | Grass_Wet   | Concentrated moisture on, between and around t... | 3            | [3]         | 0                  | [0]     | [Rain, Sprinkler] | []                     | [grass_wet_TRUE, grass_wet_FALSE] | {'p(grass_wet_TRUE)': '0.322', 'p(grass_wet_FA... | {'p(grass_wet_TRUE\|sprinkler_TRUE,rain_TRUE)':... | False       | True                  | [[rain_TRUE, rain_FALSE], [sprinkler_TRUE, spr... |
+| 1     | Rain        | Tears of angles crying high up in the skies hi... | 4            | [4, 6]      | 2                  | [1, 2]  | []                | [Grass_Wet, Sprinkler] | [rain_TRUE, rain_FALSE]           | {'p(rain_TRUE)': '0.2', 'p(rain_FALSE)': '0.8'}   | {}                                                 | True        | False                 | []                                                |
+| 2     | Sprinkler   | Activation of a centrifugal force based CO2 dr... | 5            | [5]         | 1                  | [1]     | [Rain]            | [Grass_Wet]            | [sprinkler_TRUE, sprinkler_FALSE] | {'p(sprinkler_TRUE)': '0.44838', 'p(sprinkler_... | {'p(sprinkler_TRUE\|rain_TRUE)': '0.01', 'p(spr... | False       | False                 | [[rain_TRUE, rain_FALSE]]                         |
 
 The successfully processed rain-sprinkler-grass example demonstrates several key capabilities:
 
@@ -1290,11 +1533,49 @@ This simple example validates the basic pipeline functionality. But the real tes
 
 <!-- [-] COMPLETED: Added results -->
 
+
+
+
+#### Rain-Sprinkler-Grass Network Rendering
+
+
+
+```{python}
+#| label: rain_sprinkler_grass_example_network_rendering2
+#| echo: true
+#| eval: true
+#| fig-cap: "Dynamic Html Rendering of the Rain-Sprinkler-Grass DAG with Conditional Probabilities"
+#| fig-link: "https://singularitysmith.github.io/AMTAIR_Prototype/bayesian_network.html"
+#| fig-alt: "Dynamic Html Rendering of the Rain-Sprinkler-Grass DAG"
+
+
+from IPython.display import IFrame
+
+IFrame(src="https://singularitysmith.github.io/AMTAIR_Prototype/bayesian_network.html", width="100%", height="600px")
+```
+
+:::
+
+
+
+
+
+
+
+
+
+
+
+
 ## 3.5 Case Study: Carlsmith's Power-Seeking AI Model {#sec-case-carlsmith}
 
 <!-- [-] TODO: Introduce and refine walkthrough of the pipeline with the more complex Carlsmith model -->
+Having validated the implementation on the canonical rain-sprinkler-lawn example, I applied the AMTAIR approach to a substantially more complex real-world case: Joseph Carlsmith's model of existential risk from power-seeking AI. This application demonstrates the system's ability to handle sophisticated multi-level arguments with numerous variables and relationships.
 
-From the gentle meadows of rain and sprinklers, we now ascend to the existential peaks of AI risk. Carlsmith's model represents a dramatic increase in complexity—both conceptually and computationally. Where rain-sprinkler-grass has 3 nodes, Carlsmith involves 23. Where grass wetness is intuitive, "mesa-optimization" and "corrigibility" require careful thought.
+Carlsmith's model represents a dramatic increase in complexity—both conceptually and computationally. Where rain-sprinkler-grass has 3 nodes, Carlsmith involves 23. Where grass wetness is intuitive, "mesa-optimization" and "corrigibility" require careful thought.
+
+
+
 
 ### 3.5.1 Model Complexity {#sec-carlsmith-complexity}
 
@@ -1311,13 +1592,33 @@ This is no longer a toy problem but a serious attempt to formalize one of the mo
 
 <!-- [-] COMPLETED: Added complexity analysis -->
 
+
+
+
+:::{.landscape}
+
 ### 3.5.2 Automated Extraction of the Carlsmith's Argument Structure {#sec-carlsmith-extraction}
 
 The extraction process began with feeding Carlsmith's paper to AMTAIR. Watching the system work felt like observing an archaeological excavation—layers of argument slowly revealed their structure.
 
-The LLM prompts for extraction deserve special attention. Through iterative refinement, we developed prompts that guide extraction while remaining flexible:
+The LLM prompts for extraction deserve special attention.
+Through iterative refinement, we developed prompts that guide extraction while remaining flexible:
 
-python
+
+
+```
+#| label: prompt_template_function
+#| echo: true
+#| eval: true
+#| fig-cap: "Prompt Template Function Definitions"
+#| fig-link: "https://colab.research.google.com/github/VJMeyer/submission/blob/main/AMTAIR_Prototype/data/example_carlsmith/AMTAIR_Prototype_example_carlsmith.ipynb#scrollTo=MJpgdepF2Ug3&line=5&uniqifier=1"
+#| fig-alt: "Prompt Template Function Definitions"
+```
+
+{{< embed /AMTAIR_Prototype/data/example_carlsmith/AMTAIR_Prototype_example_carlsmith.ipynb#prompt_template_function echo=true >}}
+
+
+<!-- python
 
 ```python
 ARGDOWN_EXTRACTION = PromptTemplate("""
@@ -1333,13 +1634,27 @@ For Carlsmith's argument about power-seeking AI, pay special attention to:
 - Conditional relationships (X matters only if Y)
 - Technical preconditions for risk
 """)
-```
+``` -->
+
+#### Prompting LLMs for ArgDown Extraction 
+
+
+<!-- 
+#| label: prompt_template_function
+#| echo: true
+#| eval: true
+#| fig-cap: "Prompt Template Function Definitions"
+#| fig-link: "https://colab.research.google.com/github/VJMeyer/submission/blob/main/AMTAIR_Prototype/data/example_carlsmith/AMTAIR_Prototype_example_carlsmith.ipynb#scrollTo=MJpgdepF2Ug3&line=5&uniqifier=1"
+#| fig-alt: "Prompt Template Function Definitions"
+-->
+
+
 
 The extraction revealed Carlsmith's elegant decomposition. At the highest level: capabilities enable power-seeking, which enables disempowerment, which constitutes catastrophe. But the details matter—deployment decisions mediated by incentives and deception, alignment difficulty influenced by multiple technical factors, corrective mechanisms that might interrupt the chain.
 
 The ArgDown representation captured this structure:
-
-```
+<!-- 
+```markdown
 [Existential_Catastrophe]: Permanent curtailment of humanity's potential
  + [Human_Disempowerment]: Humans lose control over future
    + [Scale_Of_Power_Seeking]: Power-seeking behavior becomes overwhelming
@@ -1350,6 +1665,19 @@ The ArgDown representation captured this structure:
          + [Incentives_To_Build]: Strong pressure to develop AI
          + [Deception]: AI systems hide misalignment
 ```
+-->
+
+{{< embed /AMTAIR_Prototype/data/example_carlsmith/AMTAIR_Prototype_example_carlsmith.ipynb#parsing_argdown_bayesdown echo=true >}}
+
+<!-- 
+#| label: parsing_argdown_bayesdown
+#| echo: true
+#| eval: true
+#| fig-cap: "Parsing ArgDown & BayesDown"
+#| fig-link: "https://colab.research.google.com/github/VJMeyer/submission/blob/main/AMTAIR_Prototype/data/example_carlsmith/AMTAIR_Prototype_example_carlsmith.ipynb#scrollTo=LTDQOBd7COIm&line=8&uniqifier=1"
+#| fig-alt: "Parsing ArgDown & BayesDown"
+-->
+
 
 The structure revealed insights. "Misaligned_Power_Seeking" emerged as a critical hub, influenced by multiple factors and influencing multiple outcomes. The pathway from incentives through deployment to risk became explicit.
 
@@ -1359,23 +1687,43 @@ The structure revealed insights. "Misaligned_Power_Seeking" emerged as a critica
 
 Adding probabilities to Carlsmith's structure presented unique challenges. Unlike rain-sprinkler probabilities that have intuitive values, what's the probability of "mesa-optimization" or "deceptive alignment"?
 
-The system generated over 100 probability questions for the full model. A sample:
-
-```
+The system generated over 100 probability questions for the full model. 
+<!-- 
+```markdown
 For [Deployment_Decisions]:
 - What is P(deploy)?
 - What is P(deploy|strong_incentives, deception)?
 - What is P(deploy|strong_incentives, no_deception)?
 - What is P(deploy|weak_incentives, deception)?
 - What is P(deploy|weak_incentives, no_deception)?
-```
+``` -->
+
+
 
 Each question targets a specific parameter needed for the Bayesian network. The conditional structure reflects Carlsmith's argument—deployment depends on both incentives (external pressure) and deception (hidden misalignment).
 
 The LLM extraction drew on Carlsmith's explicit estimates where available and inferred reasonable values elsewhere. The result captured both the structure and Carlsmith's quantitative risk assessment:
 
-json
 
+
+```json
+[Deployment_Decisions]: Decisions to deploy potentially misaligned AI systems. {
+  "instantiations": ["deployment_decisions_DEPLOY", "deployment_decisions_WITHHOLD"],
+  "priors": {
+    "p(deployment_decisions_DEPLOY)": "0.70",
+    "p(deployment_decisions_WITHHOLD)": "0.30"
+  },
+  "posteriors": {
+    "p(deployment_decisions_DEPLOY|incentives_to_build_aps_STRONG, deception_by_ai_TRUE)": "0.90",
+    "p(deployment_decisions_DEPLOY|incentives_to_build_aps_STRONG, deception_by_ai_FALSE)": "0.75",
+    "p(deployment_decisions_DEPLOY|incentives_to_build_aps_WEAK, deception_by_ai_TRUE)": "0.60",
+    "p(deployment_decisions_DEPLOY|incentives_to_build_aps_WEAK, deception_by_ai_FALSE)": "0.30"
+  }
+}
+```
+
+
+<!-- 
 ```json
 [Deployment_Decisions]: Decisions to deploy potentially misaligned AI. {
   "instantiations": ["deploy", "withhold"],
@@ -1388,12 +1736,98 @@ json
   }
 }
 ```
+-->
 
-The probabilities tell a plausible story: deployment becomes more likely with stronger incentives and successful deception, but even without deception, strong incentives create substantial deployment probability.
 
 <!-- [-] COMPLETED: Added BayesDown transformation -->
 
+This node has two possible states (DEPLOY or WITHHOLD), prior probabilities for each state, and conditional probabilities based on different combinations of its parent variables ("Incentives_To_Build_APS" and "Deception_By_AI").
+The probabilities tell a plausible story: deployment becomes more likely with stronger incentives and successful deception, but even without deception, strong incentives create substantial deployment probability.
+
+
+
+<!-- 
+#| label: generate_bayesdown
+#| echo: true
+#| eval: true
+#| fig-cap: "Questions Generated for BayesDown Extraction from Carlsmith model"
+#| fig-link: "https://colab.research.google.com/github/VJMeyer/submission/blob/main/AMTAIR_Prototype/data/example_carlsmith/AMTAIR_Prototype_example_carlsmith.ipynb#scrollTo=lBLyoERIT557&line=1&uniqifier=1"
+#| fig-alt: "Questions Generated for BayesDown Extraction from Carlsmith model"
+-->
+
+
+Along with these questions the following prompt is sent to the LLM:
+
+```json
+
+You are an expert in probabilistic reasoning and Bayesian networks. Your task is
+to extend the provided ArgDown structure with probability information,
+creating a BayesDown representation.
+
+For each statement in the ArgDown structure, you need to:
+1. Estimate prior probabilities for each possible state
+2. Estimate conditional probabilities given parent states
+3. Maintain the original structure and relationships
+
+Here is the format to follow:
+[Node]: Description. { "instantiations": ["node_TRUE", "node_FALSE"], "priors": { "p(node_TRUE)": "0.7", "p(node_FALSE)": "0.3" }, "posteriors": { "p(node_TRUE|parent_TRUE)": "0.9", "p(node_TRUE|parent_FALSE)": "0.4", "p(node_FALSE|parent_TRUE)": "0.1", "p(node_FALSE|parent_FALSE)": "0.6" } }
+ [Parent]: Parent description. {...}
+
+
+Here are the specific probability questions to answer:
+$questions
+
+ArgDown structure to enhance:
+$argdown
+
+Provide the complete BayesDown representation with probabilities:
+
+```
+
+
+
+#### Example BayesDown Excerpt from the Carlsmith model
+
+```json
+#| label: json_carlsmith_excerpt
+#| echo: true
+#| eval: true
+#| fig-cap: "Example BayesDown Excerpt from the Carlsmith model"
+#| fig-link: "https://colab.research.google.com/github/VJMeyer/submission/blob/main/AMTAIR_Prototype/data/example_carlsmith/AMTAIR_Prototype_example_carlsmith.ipynb#scrollTo=AFnu_1Ludahi"
+#| fig-alt: "Example BayesDown Excerpt from the Carlsmith model"
+
+
+
+[Existential_Catastrophe]: The destruction of humanity's long-term potential due to AI systems we've lost control over. {
+  "instantiations": ["existential_catastrophe_TRUE", "existential_catastrophe_FALSE"],
+  "priors": {"p(existential_catastrophe_TRUE)": "0.05", "p(existential_catastrophe_FALSE)": "0.95"},
+  "posteriors": {
+    "p(existential_catastrophe_TRUE|human_disempowerment_TRUE)": "0.95",
+    "p(existential_catastrophe_TRUE|human_disempowerment_FALSE)": "0.0"
+  }
+}
+ + [Human_Disempowerment]: Permanent and collective disempowerment of humanity relative to AI systems. {
+   "instantiations": ["human_disempowerment_TRUE", "human_disempowerment_FALSE"],
+   "priors": {"p(human_disempowerment_TRUE)": "0.208", "p(human_disempowerment_FALSE)": "0.792"},
+   "posteriors": {
+     "p(human_disempowerment_TRUE|scale_of_power_seeking_TRUE)": "1.0",
+     "p(human_disempowerment_TRUE|scale_of_power_seeking_FALSE)": "0.0"
+   }
+ }
+```
+
+This excerpt from the Carlsmith model representation illustrates how BayesDown preserves both the narrative description ("The destruction of humanity's long-term potential...") and the precise probability judgments. Someone without technical background can still understand the core claims and their relationships, while someone seeking quantitative precision can find exact probability values.
+
+The format supports multiple levels of engagement. At the most basic level, readers can follow the hierarchical structure to understand causal relationships between factors. At an intermediate level, they can examine probability judgments to assess the strength of different influences. At the most technical level, they can analyze the complete probabilistic model to perform inference and sensitivity analysis.
+
+
+
+
+
 ### 3.5.4 Practically Meaningful BayesDown {#sec-practically-meaningful}
+
+
+
 
 The BayesDown representation achieves something remarkable: it bridges the chasm between Carlsmith's nuanced prose and mathematical formalism without losing the essence of either.
 
@@ -1411,6 +1845,18 @@ This isn't just convenient—it's essential for coordination. When different com
 
 <!-- [-] COMPLETED: Added practical meaning -->
 
+
+
+
+
+
+
+
+
+
+
+
+
 ### 3.5.5 Interactive Visualization and Exploration {#sec-interactive-visualization}
 
 The moment when Carlsmith's model first rendered as an interactive network felt like putting on glasses after years of squinting. Suddenly, the complex web of relationships became navigable.
@@ -1425,39 +1871,79 @@ The visualization system employs multiple visual channels simultaneously:
 
 **Progressive Disclosure**: Hovering reveals probability summaries. Clicking opens detailed conditional probability tables. Dragging allows custom arrangement. Each interaction level serves different analytical needs.
 
-The implementation required careful attention to human factors:
 
-python
 
-```python
-def create_interactive_visualization(network_df):
-    """Transform formal model into explorable landscape"""
-    
-    # Initialize with thoughtful defaults
-    net = Network(height="720px", width="100%", directed=True)
-    
-    # Configure physics for clarity not just aesthetics
-    net.force_atlas_2based(
-        gravity=-50,      # Gentle spread
-        spring_length=150,  # Readable spacing
-        spring_strength=0.02  # Soft constraints
-    )
-    
-    # Add nodes with rich metadata
-    for node in nodes:
-        net.add_node(
-            node_id,
-            label=create_simple_label(node),      # "Deployment\np=0.70"
-            title=create_rich_tooltip(node),      # Full probability details
-            color=probability_to_color(node),     # Visual encoding
-            borderWidth=3,                        # Visible borders
-            shape="box"                          # Readable text
-        )
-```
+The figure below shows the interactive visualization of Carlsmith's model, highlighting how color, border styling, and layout work together to represent complex causal relationships:
+
+
+
+{{< embed /AMTAIR_Prototype/data/example_carlsmith/AMTAIR_Prototype_example_carlsmith.ipynb#main_visualization_function echo=true >}}
+<!-- 
+#| label: main_visualization_function
+#| echo: true
+#| eval: true
+#| fig-cap: "Main Visualization Function"
+#| fig-link: "https://colab.research.google.com/github/VJMeyer/submission/blob/main/AMTAIR_Prototype/data/example_carlsmith/AMTAIR_Prototype_example_carlsmith.ipynb#scrollTo=7UkPk-bm5_fm&line=8&uniqifier=1"
+#| fig-alt: "Main Visualization Function"
+-->
+
 
 The resulting visualization transforms abstract relationships into tangible understanding. Users report "aha" moments when exploring—suddenly seeing how technical factors compound into strategic risks, or identifying previously unnoticed bottlenecks in the causal chain.
 
+
+
+
+
+This visualization reveals several structural insights:
+
+1. **Central importance of "Misaligned_Power_Seeking"** as a hub node with multiple parents and children
+2. **Multiple pathways to "Existential_Catastrophe"** through different intermediate factors
+3. **Clusters of related variables** forming coherent subarguments (e.g., factors affecting alignment difficulty)
+4. **Flow of influence** from technical factors (bottom) through deployment decisions to ultimate outcomes (top)
+
+The implementation successfully handles the complexity of Carlsmith's model, correctly processing the multi-level structure, resolving repeated node references, and calculating appropriate probability distributions. The interactive visualization makes this complex model accessible, allowing users to explore different aspects of the argument through intuitive navigation.
+
+Several key aspects of the implementation were particularly important for handling this complex model:
+
+1. The **parent-child relationship detection algorithm** correctly identified hierarchical relationships despite the complex structure with repeated nodes and multiple levels.
+    
+2. The **probability question generation system** created appropriate questions for all variables, including those with multiple parents requiring factorial combinations of conditional probabilities.
+    
+3. The **network enhancement functions** calculated useful metrics like centrality measures and Markov blankets that help interpret the model structure.
+    
+4. The **visualization system** effectively presented the complex network through color-coding, interactive exploration, and progressive disclosure of details.
+    
+
+The successful application to Carlsmith's model demonstrates the AMTAIR approach's scalability to complex real-world arguments. While the canonical rain-sprinkler-lawn example validated correctness, this application proves practical utility for sophisticated multi-level arguments with dozens of variables and complex interdependencies—precisely the kind of arguments that characterize AI risk assessments.
+
+This capability addresses a core limitation of the original MTAIR framework: the labor intensity of manual formalization. Where manually converting Carlsmith's argument to a formal model might take days of expert time, the AMTAIR approach accomplished this in minutes, creating a foundation for further analysis and exploration.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 <!-- [-] COMPLETED: Added visualization details -->
+
+:::
+
+
+
+
+
+
+
+
+
 
 ### 3.5.6 Validation Against Original (From the MTAIR Project) {#sec-carlsmith-validation}
 
@@ -2546,5 +3032,8 @@ The coordination crisis in AI governance represents both existential risk and ex
 May we prove worthy of the challenge before us. May our tools amplify our wisdom rather than our folly. And may future generations look back on this time not as when humanity failed to coordinate, but as when we rose to meet our greatest test.
 
 The work continues. The stakes could not be higher. The time grows short. Let us build what we can, while we can, for all our futures depend on it.
+
+
+
 
 

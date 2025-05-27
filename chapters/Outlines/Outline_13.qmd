@@ -615,7 +615,7 @@ The computational approaches developed in this thesis—particularly Bayesian ne
 ::
 
 
-
+<!-- 
 from @tetlock2022
 
 [![Conditional-tree AI-risk forecasts](/images/conditional_metaculus.jpg){
@@ -670,7 +670,7 @@ from @mccaslin2024
 }](https://static1.squarespace.com/static/635693acf15a3e2a14a56a4a/t/66ba37a144f1d6095de467df/1723479995772/AIConditionalTrees.pdf#page=5.78)
 
 
-
+ -->
 
 
 
@@ -2230,16 +2230,16 @@ The system processes this input through five steps:
 
 ```markdown
 [Grass_Wet]: Concentrated moisture on, between and around the blades of grass.{"instantiations": ["grass_wet_TRUE", "grass_wet_FALSE"]}    
-    +[Rain]: Tears of angles crying high up in the skies hitting the ground.{"instantiations": ["rain_TRUE", "rain_FALSE"]}
-    +[Sprinkler]: Activation of a centrifugal force based CO2 droplet distribution system.{"instantiations": ["sprinkler_TRUE", "sprinkler_FALSE"]}
-        +[Rain]
+  + [Rain]: Tears of angles crying high up in the skies hitting the ground.{"instantiations": ["rain_TRUE", "rain_FALSE"]}
+  + [Sprinkler]: Activation of a centrifugal force based CO2 droplet distribution system.{"instantiations": ["sprinkler_TRUE", "sprinkler_FALSE"]}
+      + [Rain]
 ```
 
 
 
 #### Example of Questions for BayesDown extraction
 
-```markdown
+```json
 BayesDown Format Preview:
 # BayesDown Representation with Placeholder Probabilities
 
@@ -3666,7 +3666,7 @@ I tested the system with deliberately challenging inputs:
 
 <!-- [ ] CREATE: {#tbl-adversarial-results}: "Summary of red-teaming findings" -->
 
--->
+
 
 ### 4.3.2 Robustness Findings {#sec-robustness-findings}
 

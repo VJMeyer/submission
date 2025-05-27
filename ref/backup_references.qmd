@@ -858,3 +858,73 @@ This factorization enables efficient inference and embodies causal assumptions e
 
 @pearl2014
 
+<!-- [ ] REPAIR: Mermaid flowchart of Carlsmith model with probabilities (in correct Quarto Syntax)-->
+
+mermaid
+
+```{mermaid}
+flowchart TD
+    P1[Premise 1: Transformative AI<br/>P ≈ 0.80] --> P2[Premise 2: AI pursuing objectives<br/>P ≈ 0.95]
+    P2 --> P3[Premise 3: Power-seeking incentives<br/>P ≈ 0.40]
+    P3 --> P4[Premise 4: Existential capability<br/>P ≈ 0.65]
+    P4 --> P5[Premise 5: Misalignment despite safety<br/>P ≈ 0.50]
+    P5 --> P6[Premise 6: Catastrophic outcome<br/>P ≈ 0.65]
+    P6 --> D[Existential Catastrophe<br/>P ≈ 0.05]
+```
+mermaid
+
+
+
+```{mermaid}
+flowchart TB
+    c1-->a2
+    subgraph one
+    a1-->a2
+    end
+    subgraph two
+    b1-->b2
+    end
+    subgraph three
+    c1-->c2
+    end
+
+```
+
+mermaid
+
+```{mermaid}
+flowchart TD
+    R[Rain<br/>P(rain) = 0.2] --> S[Sprinkler]
+    R --> G[Grass_Wet]
+    S --> G
+    
+    subgraph CPT1[Sprinkler CPT]
+        S1[P(sprinkler|rain) = 0.01]
+        S2[P(sprinkler|¬rain) = 0.4]
+    end
+    
+    subgraph CPT2[Grass_Wet CPT]
+        G1[P(wet|rain,sprinkler) = 0.99]
+        G2[P(wet|rain,¬sprinkler) = 0.8]
+        G3[P(wet|¬rain,sprinkler) = 0.9]
+        G4[P(wet|¬rain,¬sprinkler) = 0.01]
+    end
+```
+<!-- [ ] save mermaids -->
+
+<!-- [ ] REPAIR: Mermaid flowchart of Carlsmith model with probabilities (in correct Quarto Syntax)-->
+
+```{mermaid}
+flowchart TD
+    P1[Premise 1: Transformative AI<br/>P = 0.80] --> P2[Premise 2: AI pursuing objectives<br/>P = 0.95]
+    P2 --> P3[Premise 3: Power-seeking incentives<br/>P = 0.40]
+    P3 --> P4[Premise 4: Existential capability<br/>P = 0.65]
+    P4 --> P5[Premise 5: Misalignment despite safety<br/>P = 0.50]
+    P5 --> P6[Premise 6: Catastrophic outcome<br/>P = 0.65]
+    P6 --> D[Existential Catastrophe<br/>P = 0.05]
+```
+
+
+https://mermaid.js.org/syntax/flowchart.html
+
+https://quarto.org/docs/authoring/diagrams.html

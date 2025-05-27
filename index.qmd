@@ -20,8 +20,7 @@ numbering:
 
 
 <!-- A concise overview highlighting the project's integration of frontier AI, Bayesian networks, and prediction markets to create a scalable framework for evaluating AI governance policies.
-Emphasize both technical contributions and policy relevance.
--->
+Emphasize both technical contributions and policy relevance.-->
 
 
 > The coordination crisis in AI governance presents a paradoxical challenge: unprecedented investment in AI safety coexists alongside fundamental coordination failures across technical, policy, and ethical domains. These divisions systematically increase existential risk. This thesis introduces AMTAIR (Automating Transformative AI Risk Modeling), a computational approach addressing this coordination failure by automating the extraction of probabilistic world models from AI safety literature using frontier language models. The system implements an end-to-end pipeline transforming unstructured text into interactive Bayesian networks through a novel two-stage extraction process that bridges communication gaps between stakeholders.

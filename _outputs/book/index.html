@@ -22,7 +22,27 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
-</style>
+/* CSS for citations */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+  margin-bottom: 0em;
+}
+.hanging-indent div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}</style>
 
 
 <script src="site_libs/quarto-nav/quarto-nav.js"></script>
@@ -175,13 +195,7 @@ ul.task-list li input[type="checkbox"] {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./chapters/manual_extraction_bucknall.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">A</span>&nbsp; <span class="chapter-title">manual_extraction_bucknall.html</span></span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./AMTAIR_Prototype/data/example_carlsmith/AMTAIR_Prototype_example_carlsmith.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">B</span>&nbsp; <span class="chapter-title"></span></span></a><a href="https://colab.research.google.com/github/SingularitySmith/AMTAIR_Prototype/blob/main/version_history/AMTAIR_Prototype_0_1.3.ipynb#scrollTo=lt8-AnebGUXr">AMTAIR Prototype Demonstration (Public Colab Notebook)</a>
+ <span class="menu-text"><span class="chapter-number">A</span>&nbsp; <span class="chapter-title">Manual Extraction of ArgDown Data from <span class="citation" data-cites="bucknall2022">Bucknall and Dori-Hacohen (</span></span></span></a><a href="#ref-bucknall2022" role="doc-biblioref">2022</a>)
   </div>
 </li>
       </ul>
@@ -196,7 +210,7 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">Table of contents</h2>
    
   <ul>
-  <li><a href="#sec-abstract" id="toc-sec-abstract" class="nav-link active" data-scroll-target="#sec-abstract"><span class="header-section-number">1</span> Abstract</a></li>
+  <li><a href="#sec-abstract" id="toc-sec-abstract" class="nav-link active" data-scroll-target="#sec-abstract">Abstract</a></li>
   </ul>
 <div class="toc-actions"><ul><li><a href="https://github.com/VJMeyer/submission/edit/main/index.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li></ul></div><div class="quarto-code-links"><h2>Code Links</h2><ul><li><a href="https://colab.research.google.com/github/VJMeyer/submission/blob/main/AMTAIR_Prototype/data/example_carlsmith/AMTAIR_Prototype_example_carlsmith.ipynb"><i class="bi bi-file-code"></i>Colab Notebook (Manual Link in .yml)</a></li><li><a href="https://github.com/VJMeyer/submission"><i class="bi bi-github"></i>GitHub Repository</a></li></ul></div></nav>
     </div>
@@ -242,11 +256,10 @@ ul.task-list li input[type="checkbox"] {
 <!-- [ ] Add guide for different reader types (technical, policy, general) -->
 <!-- [ ] Verify American spelling throughout document using US English spell checker -->
 <!-- [ ] Create style guide document listing preferred American English spellings for technical terms -->
-<section id="sec-abstract" class="level1" data-number="1">
-<h1 data-number="1"><span class="header-section-number">1</span> Abstract</h1><p><img src="images/cover.png" title="Automating the Modelling of Transformative Artificial Intelligence Risks" class="quarto-cover-image nolightbox img-fluid"></p>
+<section id="sec-abstract" class="level1">
+<h1>Abstract</h1><p><img src="images/cover.png" title="Automating the Modelling of Transformative Artificial Intelligence Risks" class="quarto-cover-image nolightbox img-fluid"></p>
 <!-- A concise overview highlighting the project's integration of frontier AI, Bayesian networks, and prediction markets to create a scalable framework for evaluating AI governance policies.
-Emphasize both technical contributions and policy relevance.
--->
+Emphasize both technical contributions and policy relevance.-->
 <blockquote class="blockquote">
 <p>The coordination crisis in AI governance presents a paradoxical challenge: unprecedented investment in AI safety coexists alongside fundamental coordination failures across technical, policy, and ethical domains. These divisions systematically increase existential risk. This thesis introduces AMTAIR (Automating Transformative AI Risk Modeling), a computational approach addressing this coordination failure by automating the extraction of probabilistic world models from AI safety literature using frontier language models. The system implements an end-to-end pipeline transforming unstructured text into interactive Bayesian networks through a novel two-stage extraction process that bridges communication gaps between stakeholders.</p>
 </blockquote>
@@ -307,6 +320,11 @@ Emphasize both technical contributions and policy relevance.
 </ul>
 
 
+<div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" role="list" style="display: none">
+<div id="ref-bucknall2022" class="csl-entry" role="listitem">
+Bucknall, Benjamin S., and Shiri Dori-Hacohen. 2022. <span>“Current and <span>Near-Term AI</span> as a <span>Potential Existential Risk Factor</span>.”</span> In <em>Proceedings of the 2022 <span>AAAI</span>/<span>ACM Conference</span> on <span>AI</span>, <span>Ethics</span>, and <span>Society</span></em>, 119–29. Oxford United Kingdom: ACM. <a href="https://doi.org/10.1145/3514094.3534146">https://doi.org/10.1145/3514094.3534146</a>.
+</div>
+</div>
 </section>
 </section>
 
