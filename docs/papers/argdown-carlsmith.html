@@ -1,0 +1,469 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Carlsmith (2022) — Argument Map | AMTAIR Extraction</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      background: #f5f5f5;
+      color: #333;
+    }
+    .header {
+      background: #1a1a2e;
+      color: white;
+      padding: 1.5rem 2rem;
+    }
+    .header h1 { font-size: 1.4rem; font-weight: 600; margin-bottom: 0.3rem; }
+    .header p { font-size: 0.9rem; opacity: 0.8; }
+    .header a { color: #88ccff; }
+    .map-container {
+      width: 100%;
+      height: calc(100vh - 80px);
+    }
+    .map-container .argdown-figure {
+      width: 100%;
+      height: 100%;
+      margin: 0;
+    }
+    argdown-map {
+      width: 100%;
+      height: 100%;
+    }
+  </style>
+<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/@argdown/web-components/dist/argdown-map.css"><script src="https://cdn.jsdelivr.net/npm/@webcomponents/webcomponentsjs/webcomponents-bundle.js" type="module"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@argdown/web-components/dist/argdown-map.js"></script>
+</head>
+<body>
+  <div class="header">
+    <h1>Carlsmith (2022) — Is Power-Seeking AI an Existential Risk?</h1>
+    <p>AMTAIR extraction (23 nodes) — Meyer (2025) | Used in <a href="https://vjmeyer.github.io/submission/papers/2025-VJM_PredictionMarketIntegration-AMTAIR_EpiOrgsPaper.html">EpiOrgs</a> and <a href="https://vjmeyer.github.io/submission/papers/2025-VJM_ModelPluralism-AMTAIR_PhilOfEconPaper.html">PhilOfEcon</a></p>
+  </div>
+  <div class="map-container">
+    <figure  role="group" class="argdown-figure"><argdown-map      initial-view="map"><div slot="source" class=""><pre class="language-argdown"><code class="language-argdown"><span class="hljs-meta">===
+title: Carlsmith (2022) — Is Power-Seeking AI an Existential Risk?
+author: Extracted by Meyer (2025) via AMTAIR
+subTitle: 23-node causal hierarchy with six conjunctive conditions for AI existential risk
+===</span>
+
+<span class="hljs-comment">// MAIN CAUSAL CHAIN</span>
+
+<span class="hljs-statement-title">[Existential_Catastrophe]:</span> The destruction of humanity&#x27;s long-term potential due to AI systems we&#x27;ve lost control over. <span class="hljs-tag">#conclusion</span>
+<span class="hljs-support">  +</span> <span class="hljs-statement-title">[Human_Disempowerment]</span>
+
+<span class="hljs-statement-title">[Human_Disempowerment]:</span> Permanent and collective disempowerment of humanity relative to AI systems. <span class="hljs-tag">#risk</span>
+<span class="hljs-support">  +</span> <span class="hljs-statement-title">[Scale_Of_Power_Seeking]</span>
+
+<span class="hljs-statement-title">[Scale_Of_Power_Seeking]:</span> Power-seeking scaling to permanently disempowering all of humanity. <span class="hljs-tag">#risk</span>
+<span class="hljs-support">  +</span> <span class="hljs-statement-title">[Misaligned_Power_Seeking]</span>
+<span class="hljs-attack">  -</span> <span class="hljs-argument-title">&lt;Corrective Capacity&gt;</span>
+<span class="hljs-support">    +</span> <span class="hljs-statement-title">[Corrective_Feedback]</span>
+
+<span class="hljs-statement-title">[Misaligned_Power_Seeking]:</span> Deployed AI systems seeking power in unintended and high-impact ways. P(TRUE) = 0<span class="hljs-tag">.338.</span> <span class="hljs-tag">#hub</span>
+<span class="hljs-support">  +</span> <span class="hljs-statement-title">[APS_Systems]</span>
+<span class="hljs-support">  +</span> <span class="hljs-statement-title">[Difficulty_Of_Alignment]</span>
+<span class="hljs-support">  +</span> <span class="hljs-statement-title">[Deployment_Decisions]</span>
+
+<span class="hljs-comment">// APS SYSTEMS BRANCH</span>
+
+<span class="hljs-statement-title">[APS_Systems]:</span> AI systems with advanced capabilities, agentic planning, and strategic awareness. <span class="hljs-tag">#condition</span>
+<span class="hljs-support">  +</span> <span class="hljs-statement-title">[Advanced_AI_Capability]:</span> Systems outperforming humans on tasks granting significant power. P(TRUE) = 0<span class="hljs-tag">.80.</span> <span class="hljs-tag">#leaf</span>
+<span class="hljs-support">  +</span> <span class="hljs-statement-title">[Agentic_Planning]:</span> Systems making and executing plans based on world models. <span class="hljs-tag">#leaf</span>
+<span class="hljs-support">  +</span> <span class="hljs-statement-title">[Strategic_Awareness]:</span> Systems with models accurately representing power dynamics. <span class="hljs-tag">#leaf</span>
+
+<span class="hljs-comment">// ALIGNMENT BRANCH</span>
+
+<span class="hljs-statement-title">[Difficulty_Of_Alignment]:</span> Harder to build aligned than misaligned systems attractive to deploy. P(TRUE) = 0<span class="hljs-tag">.70.</span> <span class="hljs-tag">#condition</span>
+<span class="hljs-support">  +</span> <span class="hljs-statement-title">[Instrumental_Convergence]:</span> Misaligned objectives tend to seek power instrumentally. <span class="hljs-tag">#mechanism</span>
+<span class="hljs-support">  +</span> <span class="hljs-statement-title">[Problems_With_Proxies]:</span> Proxy objectives break correlations with intended goals. <span class="hljs-tag">#mechanism</span>
+<span class="hljs-support">  +</span> <span class="hljs-statement-title">[Problems_With_Search]:</span> Search processes can yield systems with different objectives than intended. <span class="hljs-tag">#mechanism</span>
+
+<span class="hljs-comment">// DEPLOYMENT BRANCH</span>
+
+<span class="hljs-statement-title">[Deployment_Decisions]:</span> Decisions to deploy potentially misaligned AI systems. P(DEPLOY) = 0<span class="hljs-tag">.60.</span> <span class="hljs-tag">#condition</span>
+<span class="hljs-support">  +</span> <span class="hljs-statement-title">[Incentives_To_Build_APS]:</span> Strong incentives to build and deploy APS systems. <span class="hljs-tag">#driver</span>
+<span class="hljs-support">    +</span> <span class="hljs-statement-title">[Usefulness_Of_APS]:</span> APS systems useful for many valuable tasks. <span class="hljs-tag">#driver</span>
+<span class="hljs-support">    +</span> <span class="hljs-statement-title">[Competitive_Dynamics]:</span> Competitive pressures between AI developers. <span class="hljs-tag">#driver</span>
+<span class="hljs-support">  +</span> <span class="hljs-statement-title">[Deception_By_AI]:</span> AI systems deceiving humans about their true objectives. <span class="hljs-tag">#risk</span>
+
+<span class="hljs-comment">// CORRECTIVE FEEDBACK</span>
+
+<span class="hljs-statement-title">[Corrective_Feedback]:</span> Human society implementing corrections after observing problems. P(EFFECTIVE) = 0<span class="hljs-tag">.60.</span> <span class="hljs-tag">#defense</span>
+<span class="hljs-support">  +</span> <span class="hljs-statement-title">[Warning_Shots]:</span> Observable failures in weaker systems before catastrophic risks. <span class="hljs-tag">#condition</span>
+<span class="hljs-attack">  -</span> <span class="hljs-argument-title">&lt;Rapid Escalation&gt;</span>
+<span class="hljs-support">    +</span> <span class="hljs-statement-title">[Rapid_Capability_Escalation]:</span> Capabilities escalating very rapidly, limiting correction time. <span class="hljs-tag">#risk</span>
+
+<span class="hljs-comment">// AUXILIARY CONSEQUENCES</span>
+
+<span class="hljs-statement-title">[Barriers_To_Understanding]:</span> Difficulty understanding advanced AI internals. <span class="hljs-tag">#auxiliary</span>
+<span class="hljs-support">  +</span> <span class="hljs-statement-title">[Misaligned_Power_Seeking]</span>
+
+<span class="hljs-statement-title">[Adversarial_Dynamics]:</span> Adversarial human-AI relationships. <span class="hljs-tag">#auxiliary</span>
+<span class="hljs-support">  +</span> <span class="hljs-statement-title">[Misaligned_Power_Seeking]</span>
+
+<span class="hljs-statement-title">[Stakes_Of_Error]:</span> Escalating impact of mistakes. <span class="hljs-tag">#auxiliary</span>
+<span class="hljs-support">  +</span> <span class="hljs-statement-title">[Misaligned_Power_Seeking]</span>
+</code></pre></div><div slot="map">
+<!-- Generated by graphviz version 2.47.0 (20210316.0004)
+ -->
+<!-- Title: Argument Map Pages: 1 -->
+<svg width="720pt" height="217pt"
+ viewBox="0.00 0.00 720.00 217.26" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="graph0" class="graph" transform="scale(0.34 0.34) rotate(0) translate(4 644)">
+<title>Argument Map</title>
+<!-- n0 -->
+<g id="node1" class="node">
+<title>n0</title>
+<path fill="white" stroke="#d95f02" stroke-width="2" d="M1858.5,-640C1858.5,-640 1686.5,-640 1686.5,-640 1680.5,-640 1674.5,-634 1674.5,-628 1674.5,-628 1674.5,-588 1674.5,-588 1674.5,-582 1680.5,-576 1686.5,-576 1686.5,-576 1858.5,-576 1858.5,-576 1864.5,-576 1870.5,-582 1870.5,-588 1870.5,-588 1870.5,-628 1870.5,-628 1870.5,-634 1864.5,-640 1858.5,-640"/>
+<text text-anchor="start" x="1719.71" y="-626" font-family="arial" font-weight="bold" font-size="10.00" fill="#000000">Existential_Catastrophe</text>
+<text text-anchor="start" x="1684.71" y="-609" font-family="arial" font-size="10.00" fill="#000000">The destruction of humanity&#39;s long&#45;term</text>
+<text text-anchor="start" x="1687.76" y="-597" font-family="arial" font-size="10.00" fill="#000000"> potential due to AI systems we&#39;ve lost</text>
+<text text-anchor="start" x="1715.82" y="-585" font-family="arial" font-size="10.00" fill="#000000"> control over. #conclusion</text>
+</g>
+<!-- n1 -->
+<g id="node2" class="node">
+<title>n1</title>
+<path fill="white" stroke="#7570b3" stroke-width="2" d="M1866,-540C1866,-540 1679,-540 1679,-540 1673,-540 1667,-534 1667,-528 1667,-528 1667,-488 1667,-488 1667,-482 1673,-476 1679,-476 1679,-476 1866,-476 1866,-476 1872,-476 1878,-482 1878,-488 1878,-488 1878,-528 1878,-528 1878,-534 1872,-540 1866,-540"/>
+<text text-anchor="start" x="1715.22" y="-526" font-family="arial" font-weight="bold" font-size="10.00" fill="#000000">Human_Disempowerment</text>
+<text text-anchor="start" x="1677.43" y="-509" font-family="arial" font-size="10.00" fill="#000000">Permanent and collective disempowerment</text>
+<text text-anchor="start" x="1695.48" y="-497" font-family="arial" font-size="10.00" fill="#000000"> of humanity relative to AI systems.</text>
+<text text-anchor="start" x="1761.06" y="-485" font-family="arial" font-size="10.00" fill="#000000"> #risk</text>
+</g>
+<!-- n1&#45;&gt;n0 -->
+<g id="edge1" class="edge">
+<title>n1&#45;&gt;n0</title>
+<path fill="none" stroke="#00ff00" d="M1772.5,-540.01C1772.5,-548.14 1772.5,-557.04 1772.5,-565.62"/>
+<polygon fill="#00ff00" stroke="#00ff00" points="1769,-565.86 1772.5,-575.86 1776,-565.86 1769,-565.86"/>
+</g>
+<!-- n2 -->
+<g id="node3" class="node">
+<title>n2</title>
+<path fill="white" stroke="#7570b3" stroke-width="2" d="M1858.5,-440C1858.5,-440 1686.5,-440 1686.5,-440 1680.5,-440 1674.5,-434 1674.5,-428 1674.5,-428 1674.5,-400 1674.5,-400 1674.5,-394 1680.5,-388 1686.5,-388 1686.5,-388 1858.5,-388 1858.5,-388 1864.5,-388 1870.5,-394 1870.5,-400 1870.5,-400 1870.5,-428 1870.5,-428 1870.5,-434 1864.5,-440 1858.5,-440"/>
+<text text-anchor="start" x="1714.15" y="-426" font-family="arial" font-weight="bold" font-size="10.00" fill="#000000">Scale_Of_Power_Seeking</text>
+<text text-anchor="start" x="1688.04" y="-409" font-family="arial" font-size="10.00" fill="#000000">Power&#45;seeking scaling to permanently</text>
+<text text-anchor="start" x="1690.55" y="-397" font-family="arial" font-size="10.00" fill="#000000"> disempowering all of humanity. #risk</text>
+</g>
+<!-- n2&#45;&gt;n1 -->
+<g id="edge2" class="edge">
+<title>n2&#45;&gt;n1</title>
+<path fill="none" stroke="#00ff00" d="M1772.5,-440.14C1772.5,-448.09 1772.5,-457.1 1772.5,-465.87"/>
+<polygon fill="#00ff00" stroke="#00ff00" points="1769,-465.98 1772.5,-475.98 1776,-465.98 1769,-465.98"/>
+</g>
+<!-- n3 -->
+<g id="node4" class="node">
+<title>n3</title>
+<path fill="white" stroke="#e7298a" stroke-width="2" d="M1210.5,-352C1210.5,-352 1038.5,-352 1038.5,-352 1032.5,-352 1026.5,-346 1026.5,-340 1026.5,-340 1026.5,-300 1026.5,-300 1026.5,-294 1032.5,-288 1038.5,-288 1038.5,-288 1210.5,-288 1210.5,-288 1216.5,-288 1222.5,-294 1222.5,-300 1222.5,-300 1222.5,-340 1222.5,-340 1222.5,-346 1216.5,-352 1210.5,-352"/>
+<text text-anchor="start" x="1062.82" y="-338" font-family="arial" font-weight="bold" font-size="10.00" fill="#000000">Misaligned_Power_Seeking</text>
+<text text-anchor="start" x="1038.65" y="-321" font-family="arial" font-size="10.00" fill="#000000">Deployed AI systems seeking power in</text>
+<text text-anchor="start" x="1047.26" y="-309" font-family="arial" font-size="10.00" fill="#000000"> unintended and high&#45;impact ways.</text>
+<text text-anchor="start" x="1070.74" y="-297" font-family="arial" font-size="10.00" fill="#000000"> P(TRUE) = 0.338. #hub</text>
+</g>
+<!-- n3&#45;&gt;n2 -->
+<g id="edge3" class="edge">
+<title>n3&#45;&gt;n2</title>
+<path fill="none" stroke="#00ff00" d="M1222.57,-334.92C1341.38,-351.79 1540.91,-380.12 1664.16,-397.62"/>
+<polygon fill="#00ff00" stroke="#00ff00" points="1663.98,-401.13 1674.37,-399.07 1664.96,-394.2 1663.98,-401.13"/>
+</g>
+<!-- n20 -->
+<g id="node21" class="node">
+<title>n20</title>
+<path fill="white" stroke="#63aef2" stroke-width="2" d="M996.5,-440C996.5,-440 824.5,-440 824.5,-440 818.5,-440 812.5,-434 812.5,-428 812.5,-428 812.5,-400 812.5,-400 812.5,-394 818.5,-388 824.5,-388 824.5,-388 996.5,-388 996.5,-388 1002.5,-388 1008.5,-394 1008.5,-400 1008.5,-400 1008.5,-428 1008.5,-428 1008.5,-434 1002.5,-440 996.5,-440"/>
+<text text-anchor="start" x="849.1" y="-426" font-family="arial" font-weight="bold" font-size="10.00" fill="#000000">Barriers_To_Understanding</text>
+<text text-anchor="start" x="829.37" y="-409" font-family="arial" font-size="10.00" fill="#000000">Difficulty understanding advanced AI</text>
+<text text-anchor="start" x="866.33" y="-397" font-family="arial" font-size="10.00" fill="#000000"> internals. #auxiliary</text>
+</g>
+<!-- n3&#45;&gt;n20 -->
+<g id="edge22" class="edge">
+<title>n3&#45;&gt;n20</title>
+<path fill="none" stroke="#00ff00" d="M1052.35,-352.02C1028.35,-362.33 1001.73,-373.78 978.1,-383.94"/>
+<polygon fill="#00ff00" stroke="#00ff00" points="976.66,-380.75 968.85,-387.91 979.42,-387.18 976.66,-380.75"/>
+</g>
+<!-- n21 -->
+<g id="node22" class="node">
+<title>n21</title>
+<path fill="white" stroke="#63aef2" stroke-width="2" d="M1210.5,-440C1210.5,-440 1038.5,-440 1038.5,-440 1032.5,-440 1026.5,-434 1026.5,-428 1026.5,-428 1026.5,-400 1026.5,-400 1026.5,-394 1032.5,-388 1038.5,-388 1038.5,-388 1210.5,-388 1210.5,-388 1216.5,-388 1222.5,-394 1222.5,-400 1222.5,-400 1222.5,-428 1222.5,-428 1222.5,-434 1216.5,-440 1210.5,-440"/>
+<text text-anchor="start" x="1074.78" y="-426" font-family="arial" font-weight="bold" font-size="10.00" fill="#000000">Adversarial_Dynamics</text>
+<text text-anchor="start" x="1045.6" y="-409" font-family="arial" font-size="10.00" fill="#000000">Adversarial human&#45;AI relationships.</text>
+<text text-anchor="start" x="1102" y="-397" font-family="arial" font-size="10.00" fill="#000000"> #auxiliary</text>
+</g>
+<!-- n3&#45;&gt;n21 -->
+<g id="edge23" class="edge">
+<title>n3&#45;&gt;n21</title>
+<path fill="none" stroke="#00ff00" d="M1124.5,-352.15C1124.5,-360.45 1124.5,-369.47 1124.5,-377.97"/>
+<polygon fill="#00ff00" stroke="#00ff00" points="1121,-377.98 1124.5,-387.98 1128,-377.98 1121,-377.98"/>
+</g>
+<!-- n22 -->
+<g id="node23" class="node">
+<title>n22</title>
+<path fill="white" stroke="#63aef2" stroke-width="2" d="M1424.5,-440C1424.5,-440 1252.5,-440 1252.5,-440 1246.5,-440 1240.5,-434 1240.5,-428 1240.5,-428 1240.5,-400 1240.5,-400 1240.5,-394 1246.5,-388 1252.5,-388 1252.5,-388 1424.5,-388 1424.5,-388 1430.5,-388 1436.5,-394 1436.5,-400 1436.5,-400 1436.5,-428 1436.5,-428 1436.5,-434 1430.5,-440 1424.5,-440"/>
+<text text-anchor="start" x="1301.27" y="-426" font-family="arial" font-weight="bold" font-size="10.00" fill="#000000">Stakes_Of_Error</text>
+<text text-anchor="start" x="1271.27" y="-409" font-family="arial" font-size="10.00" fill="#000000">Escalating impact of mistakes.</text>
+<text text-anchor="start" x="1316" y="-397" font-family="arial" font-size="10.00" fill="#000000"> #auxiliary</text>
+</g>
+<!-- n3&#45;&gt;n22 -->
+<g id="edge24" class="edge">
+<title>n3&#45;&gt;n22</title>
+<path fill="none" stroke="#00ff00" d="M1196.65,-352.02C1220.65,-362.33 1247.27,-373.78 1270.9,-383.94"/>
+<polygon fill="#00ff00" stroke="#00ff00" points="1269.58,-387.18 1280.15,-387.91 1272.34,-380.75 1269.58,-387.18"/>
+</g>
+<!-- n4 -->
+<g id="node5" class="node">
+<title>n4</title>
+<path fill="white" stroke="#63aef2" stroke-width="2" d="M1918.5,-252C1918.5,-252 1736.5,-252 1736.5,-252 1730.5,-252 1724.5,-246 1724.5,-240 1724.5,-240 1724.5,-200 1724.5,-200 1724.5,-194 1730.5,-188 1736.5,-188 1736.5,-188 1918.5,-188 1918.5,-188 1924.5,-188 1930.5,-194 1930.5,-200 1930.5,-200 1930.5,-240 1930.5,-240 1930.5,-246 1924.5,-252 1918.5,-252"/>
+<text text-anchor="start" x="1779.99" y="-238" font-family="arial" font-weight="bold" font-size="10.00" fill="#000000">Corrective_Feedback</text>
+<text text-anchor="start" x="1737.49" y="-221" font-family="arial" font-size="10.00" fill="#000000">Human society implementing corrections</text>
+<text text-anchor="start" x="1734.16" y="-209" font-family="arial" font-size="10.00" fill="#000000"> after observing problems. P(EFFECTIVE)</text>
+<text text-anchor="start" x="1788.73" y="-197" font-family="arial" font-size="10.00" fill="#000000"> = 0.60. #defense</text>
+</g>
+<!-- n23 -->
+<g id="node24" class="node">
+<title>n23</title>
+<path fill="#1b9e77" stroke="black" d="M1885.5,-338C1885.5,-338 1713.5,-338 1713.5,-338 1707.5,-338 1701.5,-332 1701.5,-326 1701.5,-326 1701.5,-314 1701.5,-314 1701.5,-308 1707.5,-302 1713.5,-302 1713.5,-302 1885.5,-302 1885.5,-302 1891.5,-302 1897.5,-308 1897.5,-314 1897.5,-314 1897.5,-326 1897.5,-326 1897.5,-332 1891.5,-338 1885.5,-338"/>
+<text text-anchor="start" x="1755.89" y="-318" font-family="arial" font-weight="bold" font-size="10.00" fill="#000000">Corrective Capacity</text>
+</g>
+<!-- n4&#45;&gt;n23 -->
+<g id="edge4" class="edge">
+<title>n4&#45;&gt;n23</title>
+<path fill="none" stroke="#00ff00" d="M1818.64,-252.01C1814.96,-264.89 1810.73,-279.69 1807.18,-292.11"/>
+<polygon fill="#00ff00" stroke="#00ff00" points="1803.78,-291.3 1804.39,-301.87 1810.51,-293.22 1803.78,-291.3"/>
+</g>
+<!-- n5 -->
+<g id="node6" class="node">
+<title>n5</title>
+<path fill="white" stroke="#66a61e" stroke-width="2" d="M510.5,-252C510.5,-252 338.5,-252 338.5,-252 332.5,-252 326.5,-246 326.5,-240 326.5,-240 326.5,-200 326.5,-200 326.5,-194 332.5,-188 338.5,-188 338.5,-188 510.5,-188 510.5,-188 516.5,-188 522.5,-194 522.5,-200 522.5,-200 522.5,-240 522.5,-240 522.5,-246 516.5,-252 510.5,-252"/>
+<text text-anchor="start" x="392.55" y="-238" font-family="arial" font-weight="bold" font-size="10.00" fill="#000000">APS_Systems</text>
+<text text-anchor="start" x="339.21" y="-221" font-family="arial" font-size="10.00" fill="#000000">AI systems with advanced capabilities,</text>
+<text text-anchor="start" x="355.31" y="-209" font-family="arial" font-size="10.00" fill="#000000"> agentic planning, and strategic</text>
+<text text-anchor="start" x="373.37" y="-197" font-family="arial" font-size="10.00" fill="#000000"> awareness. #condition</text>
+</g>
+<!-- n5&#45;&gt;n3 -->
+<g id="edge6" class="edge">
+<title>n5&#45;&gt;n3</title>
+<path fill="none" stroke="#00ff00" d="M522.57,-234.73C652.61,-252.94 881.35,-284.96 1016.3,-303.85"/>
+<polygon fill="#00ff00" stroke="#00ff00" points="1015.86,-307.32 1026.25,-305.24 1016.83,-300.39 1015.86,-307.32"/>
+</g>
+<!-- n6 -->
+<g id="node7" class="node">
+<title>n6</title>
+<path fill="white" stroke="#66a61e" stroke-width="2" d="M1100.5,-252C1100.5,-252 928.5,-252 928.5,-252 922.5,-252 916.5,-246 916.5,-240 916.5,-240 916.5,-200 916.5,-200 916.5,-194 922.5,-188 928.5,-188 928.5,-188 1100.5,-188 1100.5,-188 1106.5,-188 1112.5,-194 1112.5,-200 1112.5,-200 1112.5,-240 1112.5,-240 1112.5,-246 1106.5,-252 1100.5,-252"/>
+<text text-anchor="start" x="962.55" y="-238" font-family="arial" font-weight="bold" font-size="10.00" fill="#000000">Difficulty_Of_Alignment</text>
+<text text-anchor="start" x="927.81" y="-221" font-family="arial" font-size="10.00" fill="#000000">Harder to build aligned than misaligned</text>
+<text text-anchor="start" x="928.38" y="-209" font-family="arial" font-size="10.00" fill="#000000"> systems attractive to deploy. P(TRUE)</text>
+<text text-anchor="start" x="973.51" y="-197" font-family="arial" font-size="10.00" fill="#000000"> = 0.70. #condition</text>
+</g>
+<!-- n6&#45;&gt;n3 -->
+<g id="edge7" class="edge">
+<title>n6&#45;&gt;n3</title>
+<path fill="none" stroke="#00ff00" d="M1049.3,-252.01C1059.64,-261.21 1071.07,-271.4 1081.84,-281"/>
+<polygon fill="#00ff00" stroke="#00ff00" points="1079.75,-283.82 1089.54,-287.86 1084.41,-278.59 1079.75,-283.82"/>
+</g>
+<!-- n7 -->
+<g id="node8" class="node">
+<title>n7</title>
+<path fill="white" stroke="#66a61e" stroke-width="2" d="M1479.5,-252C1479.5,-252 1307.5,-252 1307.5,-252 1301.5,-252 1295.5,-246 1295.5,-240 1295.5,-240 1295.5,-200 1295.5,-200 1295.5,-194 1301.5,-188 1307.5,-188 1307.5,-188 1479.5,-188 1479.5,-188 1485.5,-188 1491.5,-194 1491.5,-200 1491.5,-200 1491.5,-240 1491.5,-240 1491.5,-246 1485.5,-252 1479.5,-252"/>
+<text text-anchor="start" x="1342.38" y="-238" font-family="arial" font-weight="bold" font-size="10.00" fill="#000000">Deployment_Decisions</text>
+<text text-anchor="start" x="1326.26" y="-221" font-family="arial" font-size="10.00" fill="#000000">Decisions to deploy potentially</text>
+<text text-anchor="start" x="1308.35" y="-209" font-family="arial" font-size="10.00" fill="#000000"> misaligned AI systems. P(DEPLOY) =</text>
+<text text-anchor="start" x="1356.82" y="-197" font-family="arial" font-size="10.00" fill="#000000"> 0.60. #condition</text>
+</g>
+<!-- n7&#45;&gt;n3 -->
+<g id="edge8" class="edge">
+<title>n7&#45;&gt;n3</title>
+<path fill="none" stroke="#00ff00" d="M1308.39,-252.01C1280.18,-262.29 1248.6,-273.79 1219.68,-284.32"/>
+<polygon fill="#00ff00" stroke="#00ff00" points="1218.18,-281.15 1209.98,-287.86 1220.58,-287.72 1218.18,-281.15"/>
+</g>
+<!-- n8 -->
+<g id="node9" class="node">
+<title>n8</title>
+<path fill="white" stroke="#e6ab02" stroke-width="2" d="M189,-152C189,-152 12,-152 12,-152 6,-152 0,-146 0,-140 0,-140 0,-100 0,-100 0,-94 6,-88 12,-88 12,-88 189,-88 189,-88 195,-88 201,-94 201,-100 201,-100 201,-140 201,-140 201,-146 195,-152 189,-152"/>
+<text text-anchor="start" x="46.54" y="-138" font-family="arial" font-weight="bold" font-size="10.00" fill="#000000">Advanced_AI_Capability</text>
+<text text-anchor="start" x="10.42" y="-121" font-family="arial" font-size="10.00" fill="#000000">Systems outperforming humans on tasks</text>
+<text text-anchor="start" x="15.57" y="-109" font-family="arial" font-size="10.00" fill="#000000"> granting significant power. P(TRUE) =</text>
+<text text-anchor="start" x="76.27" y="-97" font-family="arial" font-size="10.00" fill="#000000"> 0.80. #leaf</text>
+</g>
+<!-- n8&#45;&gt;n5 -->
+<g id="edge9" class="edge">
+<title>n8&#45;&gt;n5</title>
+<path fill="none" stroke="#00ff00" d="M201.24,-151.47C237.82,-162.53 279.28,-175.08 316.46,-186.32"/>
+<polygon fill="#00ff00" stroke="#00ff00" points="315.74,-189.76 326.32,-189.3 317.76,-183.06 315.74,-189.76"/>
+</g>
+<!-- n9 -->
+<g id="node10" class="node">
+<title>n9</title>
+<path fill="white" stroke="#e6ab02" stroke-width="2" d="M403.5,-146C403.5,-146 231.5,-146 231.5,-146 225.5,-146 219.5,-140 219.5,-134 219.5,-134 219.5,-106 219.5,-106 219.5,-100 225.5,-94 231.5,-94 231.5,-94 403.5,-94 403.5,-94 409.5,-94 415.5,-100 415.5,-106 415.5,-106 415.5,-134 415.5,-134 415.5,-140 409.5,-146 403.5,-146"/>
+<text text-anchor="start" x="278.6" y="-132" font-family="arial" font-weight="bold" font-size="10.00" fill="#000000">Agentic_Planning</text>
+<text text-anchor="start" x="234.98" y="-115" font-family="arial" font-size="10.00" fill="#000000">Systems making and executing plans</text>
+<text text-anchor="start" x="251.09" y="-103" font-family="arial" font-size="10.00" fill="#000000"> based on world models. #leaf</text>
+</g>
+<!-- n9&#45;&gt;n5 -->
+<g id="edge10" class="edge">
+<title>n9&#45;&gt;n5</title>
+<path fill="none" stroke="#00ff00" d="M345.06,-146.24C356.65,-156.86 370.39,-169.44 383.15,-181.13"/>
+<polygon fill="#00ff00" stroke="#00ff00" points="380.8,-183.72 390.53,-187.89 385.52,-178.56 380.8,-183.72"/>
+</g>
+<!-- n10 -->
+<g id="node11" class="node">
+<title>n10</title>
+<path fill="white" stroke="#e6ab02" stroke-width="2" d="M617.5,-146C617.5,-146 445.5,-146 445.5,-146 439.5,-146 433.5,-140 433.5,-134 433.5,-134 433.5,-106 433.5,-106 433.5,-100 439.5,-94 445.5,-94 445.5,-94 617.5,-94 617.5,-94 623.5,-94 629.5,-100 629.5,-106 629.5,-106 629.5,-134 629.5,-134 629.5,-140 623.5,-146 617.5,-146"/>
+<text text-anchor="start" x="484.27" y="-132" font-family="arial" font-weight="bold" font-size="10.00" fill="#000000">Strategic_Awareness</text>
+<text text-anchor="start" x="460.38" y="-115" font-family="arial" font-size="10.00" fill="#000000">Systems with models accurately</text>
+<text text-anchor="start" x="451.21" y="-103" font-family="arial" font-size="10.00" fill="#000000"> representing power dynamics. #leaf</text>
+</g>
+<!-- n10&#45;&gt;n5 -->
+<g id="edge11" class="edge">
+<title>n10&#45;&gt;n5</title>
+<path fill="none" stroke="#00ff00" d="M503.94,-146.24C492.35,-156.86 478.61,-169.44 465.85,-181.13"/>
+<polygon fill="#00ff00" stroke="#00ff00" points="463.48,-178.56 458.47,-187.89 468.2,-183.72 463.48,-178.56"/>
+</g>
+<!-- n11 -->
+<g id="node12" class="node">
+<title>n11</title>
+<path fill="white" stroke="#a6761d" stroke-width="2" d="M831.5,-146C831.5,-146 659.5,-146 659.5,-146 653.5,-146 647.5,-140 647.5,-134 647.5,-134 647.5,-106 647.5,-106 647.5,-100 653.5,-94 659.5,-94 659.5,-94 831.5,-94 831.5,-94 837.5,-94 843.5,-100 843.5,-106 843.5,-106 843.5,-134 843.5,-134 843.5,-140 837.5,-146 831.5,-146"/>
+<text text-anchor="start" x="685.49" y="-132" font-family="arial" font-weight="bold" font-size="10.00" fill="#000000">Instrumental_Convergence</text>
+<text text-anchor="start" x="669.37" y="-115" font-family="arial" font-size="10.00" fill="#000000">Misaligned objectives tend to seek</text>
+<text text-anchor="start" x="667.16" y="-103" font-family="arial" font-size="10.00" fill="#000000"> power instrumentally. #mechanism</text>
+</g>
+<!-- n11&#45;&gt;n6 -->
+<g id="edge12" class="edge">
+<title>n11&#45;&gt;n6</title>
+<path fill="none" stroke="#00ff00" d="M814.42,-146.11C846.44,-157.77 885.02,-171.83 919.72,-184.47"/>
+<polygon fill="#00ff00" stroke="#00ff00" points="918.8,-187.86 929.4,-188 921.2,-181.28 918.8,-187.86"/>
+</g>
+<!-- n12 -->
+<g id="node13" class="node">
+<title>n12</title>
+<path fill="white" stroke="#a6761d" stroke-width="2" d="M1045.5,-146C1045.5,-146 873.5,-146 873.5,-146 867.5,-146 861.5,-140 861.5,-134 861.5,-134 861.5,-106 861.5,-106 861.5,-100 867.5,-94 873.5,-94 873.5,-94 1045.5,-94 1045.5,-94 1051.5,-94 1057.5,-100 1057.5,-106 1057.5,-106 1057.5,-134 1057.5,-134 1057.5,-140 1051.5,-146 1045.5,-146"/>
+<text text-anchor="start" x="906.16" y="-132" font-family="arial" font-weight="bold" font-size="10.00" fill="#000000">Problems_With_Proxies</text>
+<text text-anchor="start" x="881.99" y="-115" font-family="arial" font-size="10.00" fill="#000000">Proxy objectives break correlations</text>
+<text text-anchor="start" x="884.2" y="-103" font-family="arial" font-size="10.00" fill="#000000"> with intended goals. #mechanism</text>
+</g>
+<!-- n12&#45;&gt;n6 -->
+<g id="edge13" class="edge">
+<title>n12&#45;&gt;n6</title>
+<path fill="none" stroke="#00ff00" d="M973.66,-146.24C979.29,-156.26 985.9,-168.04 992.14,-179.16"/>
+<polygon fill="#00ff00" stroke="#00ff00" points="989.09,-180.88 997.04,-187.89 995.2,-177.46 989.09,-180.88"/>
+</g>
+<!-- n13 -->
+<g id="node14" class="node">
+<title>n13</title>
+<path fill="white" stroke="#a6761d" stroke-width="2" d="M1265.5,-152C1265.5,-152 1087.5,-152 1087.5,-152 1081.5,-152 1075.5,-146 1075.5,-140 1075.5,-140 1075.5,-100 1075.5,-100 1075.5,-94 1081.5,-88 1087.5,-88 1087.5,-88 1265.5,-88 1265.5,-88 1271.5,-88 1277.5,-94 1277.5,-100 1277.5,-100 1277.5,-140 1277.5,-140 1277.5,-146 1271.5,-152 1265.5,-152"/>
+<text text-anchor="start" x="1123.99" y="-138" font-family="arial" font-weight="bold" font-size="10.00" fill="#000000">Problems_With_Search</text>
+<text text-anchor="start" x="1085.37" y="-121" font-family="arial" font-size="10.00" fill="#000000">Search processes can yield systems with</text>
+<text text-anchor="start" x="1100.36" y="-109" font-family="arial" font-size="10.00" fill="#000000"> different objectives than intended.</text>
+<text text-anchor="start" x="1146.77" y="-97" font-family="arial" font-size="10.00" fill="#000000"> #mechanism</text>
+</g>
+<!-- n13&#45;&gt;n6 -->
+<g id="edge14" class="edge">
+<title>n13&#45;&gt;n6</title>
+<path fill="none" stroke="#00ff00" d="M1125.24,-152.01C1109.14,-161.75 1091.21,-172.59 1074.56,-182.67"/>
+<polygon fill="#00ff00" stroke="#00ff00" points="1072.73,-179.69 1065.98,-187.86 1076.35,-185.68 1072.73,-179.69"/>
+</g>
+<!-- n14 -->
+<g id="node15" class="node">
+<title>n14</title>
+<path fill="white" stroke="#666666" stroke-width="2" d="M1479.5,-146C1479.5,-146 1307.5,-146 1307.5,-146 1301.5,-146 1295.5,-140 1295.5,-134 1295.5,-134 1295.5,-106 1295.5,-106 1295.5,-100 1301.5,-94 1307.5,-94 1307.5,-94 1479.5,-94 1479.5,-94 1485.5,-94 1491.5,-100 1491.5,-106 1491.5,-106 1491.5,-134 1491.5,-134 1491.5,-140 1485.5,-146 1479.5,-146"/>
+<text text-anchor="start" x="1335.7" y="-132" font-family="arial" font-weight="bold" font-size="10.00" fill="#000000">Incentives_To_Build_APS</text>
+<text text-anchor="start" x="1311.81" y="-115" font-family="arial" font-size="10.00" fill="#000000">Strong incentives to build and deploy</text>
+<text text-anchor="start" x="1344.33" y="-103" font-family="arial" font-size="10.00" fill="#000000"> APS systems. #driver</text>
+</g>
+<!-- n14&#45;&gt;n7 -->
+<g id="edge17" class="edge">
+<title>n14&#45;&gt;n7</title>
+<path fill="none" stroke="#00ff00" d="M1393.5,-146.24C1393.5,-155.86 1393.5,-167.11 1393.5,-177.83"/>
+<polygon fill="#00ff00" stroke="#00ff00" points="1390,-177.89 1393.5,-187.89 1397,-177.89 1390,-177.89"/>
+</g>
+<!-- n15 -->
+<g id="node16" class="node">
+<title>n15</title>
+<path fill="white" stroke="#666666" stroke-width="2" d="M1372.5,-52C1372.5,-52 1200.5,-52 1200.5,-52 1194.5,-52 1188.5,-46 1188.5,-40 1188.5,-40 1188.5,-12 1188.5,-12 1188.5,-6 1194.5,0 1200.5,0 1200.5,0 1372.5,0 1372.5,0 1378.5,0 1384.5,-6 1384.5,-12 1384.5,-12 1384.5,-40 1384.5,-40 1384.5,-46 1378.5,-52 1372.5,-52"/>
+<text text-anchor="start" x="1240.93" y="-38" font-family="arial" font-weight="bold" font-size="10.00" fill="#000000">Usefulness_Of_APS</text>
+<text text-anchor="start" x="1201.2" y="-21" font-family="arial" font-size="10.00" fill="#000000">APS systems useful for many valuable</text>
+<text text-anchor="start" x="1255.39" y="-9" font-family="arial" font-size="10.00" fill="#000000"> tasks. #driver</text>
+</g>
+<!-- n15&#45;&gt;n14 -->
+<g id="edge15" class="edge">
+<title>n15&#45;&gt;n14</title>
+<path fill="none" stroke="#00ff00" d="M1315.74,-52.14C1328.36,-62.99 1343.27,-75.81 1356.63,-87.3"/>
+<polygon fill="#00ff00" stroke="#00ff00" points="1354.43,-90.03 1364.3,-93.89 1359,-84.72 1354.43,-90.03"/>
+</g>
+<!-- n16 -->
+<g id="node17" class="node">
+<title>n16</title>
+<path fill="white" stroke="#666666" stroke-width="2" d="M1586.5,-52C1586.5,-52 1414.5,-52 1414.5,-52 1408.5,-52 1402.5,-46 1402.5,-40 1402.5,-40 1402.5,-12 1402.5,-12 1402.5,-6 1408.5,0 1414.5,0 1414.5,0 1586.5,0 1586.5,0 1592.5,0 1598.5,-6 1598.5,-12 1598.5,-12 1598.5,-40 1598.5,-40 1598.5,-46 1592.5,-52 1586.5,-52"/>
+<text text-anchor="start" x="1449.39" y="-38" font-family="arial" font-weight="bold" font-size="10.00" fill="#000000">Competitive_Dynamics</text>
+<text text-anchor="start" x="1424.37" y="-21" font-family="arial" font-size="10.00" fill="#000000">Competitive pressures between AI</text>
+<text text-anchor="start" x="1456.6" y="-9" font-family="arial" font-size="10.00" fill="#000000"> developers. #driver</text>
+</g>
+<!-- n16&#45;&gt;n14 -->
+<g id="edge16" class="edge">
+<title>n16&#45;&gt;n14</title>
+<path fill="none" stroke="#00ff00" d="M1471.26,-52.14C1458.64,-62.99 1443.73,-75.81 1430.37,-87.3"/>
+<polygon fill="#00ff00" stroke="#00ff00" points="1428,-84.72 1422.7,-93.89 1432.57,-90.03 1428,-84.72"/>
+</g>
+<!-- n17 -->
+<g id="node18" class="node">
+<title>n17</title>
+<path fill="white" stroke="#7570b3" stroke-width="2" d="M1699.5,-146C1699.5,-146 1521.5,-146 1521.5,-146 1515.5,-146 1509.5,-140 1509.5,-134 1509.5,-134 1509.5,-106 1509.5,-106 1509.5,-100 1515.5,-94 1521.5,-94 1521.5,-94 1699.5,-94 1699.5,-94 1705.5,-94 1711.5,-100 1711.5,-106 1711.5,-106 1711.5,-134 1711.5,-134 1711.5,-140 1705.5,-146 1699.5,-146"/>
+<text text-anchor="start" x="1571.88" y="-132" font-family="arial" font-weight="bold" font-size="10.00" fill="#000000">Deception_By_AI</text>
+<text text-anchor="start" x="1519.37" y="-115" font-family="arial" font-size="10.00" fill="#000000">AI systems deceiving humans about their</text>
+<text text-anchor="start" x="1563.55" y="-103" font-family="arial" font-size="10.00" fill="#000000"> true objectives. #risk</text>
+</g>
+<!-- n17&#45;&gt;n7 -->
+<g id="edge18" class="edge">
+<title>n17&#45;&gt;n7</title>
+<path fill="none" stroke="#00ff00" d="M1554.9,-146.11C1529.51,-157.57 1499.01,-171.35 1471.4,-183.82"/>
+<polygon fill="#00ff00" stroke="#00ff00" points="1469.83,-180.69 1462.15,-188 1472.71,-187.07 1469.83,-180.69"/>
+</g>
+<!-- n18 -->
+<g id="node19" class="node">
+<title>n18</title>
+<path fill="white" stroke="#66a61e" stroke-width="2" d="M1913.5,-146C1913.5,-146 1741.5,-146 1741.5,-146 1735.5,-146 1729.5,-140 1729.5,-134 1729.5,-134 1729.5,-106 1729.5,-106 1729.5,-100 1735.5,-94 1741.5,-94 1741.5,-94 1913.5,-94 1913.5,-94 1919.5,-94 1925.5,-100 1925.5,-106 1925.5,-106 1925.5,-134 1925.5,-134 1925.5,-140 1919.5,-146 1913.5,-146"/>
+<text text-anchor="start" x="1793.33" y="-132" font-family="arial" font-weight="bold" font-size="10.00" fill="#000000">Warning_Shots</text>
+<text text-anchor="start" x="1741.93" y="-115" font-family="arial" font-size="10.00" fill="#000000">Observable failures in weaker systems</text>
+<text text-anchor="start" x="1746.37" y="-103" font-family="arial" font-size="10.00" fill="#000000"> before catastrophic risks. #condition</text>
+</g>
+<!-- n18&#45;&gt;n4 -->
+<g id="edge19" class="edge">
+<title>n18&#45;&gt;n4</title>
+<path fill="none" stroke="#00ff00" d="M1827.5,-146.24C1827.5,-155.86 1827.5,-167.11 1827.5,-177.83"/>
+<polygon fill="#00ff00" stroke="#00ff00" points="1824,-177.89 1827.5,-187.89 1831,-177.89 1824,-177.89"/>
+</g>
+<!-- n19 -->
+<g id="node20" class="node">
+<title>n19</title>
+<path fill="white" stroke="#7570b3" stroke-width="2" d="M2127.5,-52C2127.5,-52 1955.5,-52 1955.5,-52 1949.5,-52 1943.5,-46 1943.5,-40 1943.5,-40 1943.5,-12 1943.5,-12 1943.5,-6 1949.5,0 1955.5,0 1955.5,0 2127.5,0 2127.5,0 2133.5,0 2139.5,-6 2139.5,-12 2139.5,-12 2139.5,-40 2139.5,-40 2139.5,-46 2133.5,-52 2127.5,-52"/>
+<text text-anchor="start" x="1977.88" y="-38" font-family="arial" font-weight="bold" font-size="10.00" fill="#000000">Rapid_Capability_Escalation</text>
+<text text-anchor="start" x="1963.44" y="-21" font-family="arial" font-size="10.00" fill="#000000">Capabilities escalating very rapidly,</text>
+<text text-anchor="start" x="1977.06" y="-9" font-family="arial" font-size="10.00" fill="#000000"> limiting correction time. #risk</text>
+</g>
+<!-- n24 -->
+<g id="node25" class="node">
+<title>n24</title>
+<path fill="#1b9e77" stroke="black" d="M2127.5,-138C2127.5,-138 1955.5,-138 1955.5,-138 1949.5,-138 1943.5,-132 1943.5,-126 1943.5,-126 1943.5,-114 1943.5,-114 1943.5,-108 1949.5,-102 1955.5,-102 1955.5,-102 2127.5,-102 2127.5,-102 2133.5,-102 2139.5,-108 2139.5,-114 2139.5,-114 2139.5,-126 2139.5,-126 2139.5,-132 2133.5,-138 2127.5,-138"/>
+<text text-anchor="start" x="2003.99" y="-118" font-family="arial" font-weight="bold" font-size="10.00" fill="#000000">Rapid Escalation</text>
+</g>
+<!-- n19&#45;&gt;n24 -->
+<g id="edge20" class="edge">
+<title>n19&#45;&gt;n24</title>
+<path fill="none" stroke="#00ff00" d="M2041.5,-52.14C2041.5,-64.32 2041.5,-78.97 2041.5,-91.46"/>
+<polygon fill="#00ff00" stroke="#00ff00" points="2038,-91.75 2041.5,-101.75 2045,-91.75 2038,-91.75"/>
+</g>
+<!-- n23&#45;&gt;n2 -->
+<g id="edge5" class="edge">
+<title>n23&#45;&gt;n2</title>
+<path fill="none" stroke="#ff0000" d="M1794.42,-338.3C1791.13,-349.53 1786.72,-364.55 1782.72,-378.18"/>
+<polygon fill="#ff0000" stroke="#ff0000" points="1779.36,-377.2 1779.9,-387.78 1786.08,-379.17 1779.36,-377.2"/>
+</g>
+<!-- n24&#45;&gt;n4 -->
+<g id="edge21" class="edge">
+<title>n24&#45;&gt;n4</title>
+<path fill="none" stroke="#ff0000" d="M2004.22,-138.07C1976.86,-150.6 1938.72,-168.07 1904.87,-183.57"/>
+<polygon fill="#ff0000" stroke="#ff0000" points="1903.08,-180.54 1895.45,-187.88 1906,-186.9 1903.08,-180.54"/>
+</g>
+</g>
+</svg>
+</div></argdown-map><figcaption>Carlsmith (2022) — Is Power-Seeking AI an Existential Risk? — 23-node causal hierarchy with six conjunctive conditions for AI existential risk</figcaption></figure>
+  </div>
+</body>
+</html>

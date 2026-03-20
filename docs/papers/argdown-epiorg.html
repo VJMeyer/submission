@@ -1,0 +1,834 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>EpiOrgs — Argument Map | Meyer (2025)</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      background: #f5f5f5;
+      color: #333;
+    }
+    .header {
+      background: #1a1a2e;
+      color: white;
+      padding: 1.5rem 2rem;
+    }
+    .header h1 { font-size: 1.4rem; font-weight: 600; margin-bottom: 0.3rem; }
+    .header p { font-size: 0.9rem; opacity: 0.8; }
+    .header a { color: #88ccff; }
+    .map-container {
+      width: 100%;
+      height: calc(100vh - 80px);
+    }
+    .map-container .argdown-figure {
+      width: 100%;
+      height: 100%;
+      margin: 0;
+    }
+    argdown-map {
+      width: 100%;
+      height: 100%;
+    }
+  </style>
+<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/@argdown/web-components/dist/argdown-map.css"><script src="https://cdn.jsdelivr.net/npm/@webcomponents/webcomponentsjs/webcomponents-bundle.js" type="module"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@argdown/web-components/dist/argdown-map.js"></script>
+</head>
+<body>
+  <div class="header">
+    <h1>Live Models: Integrating Prediction Markets into AMTAIR</h1>
+    <p>Interactive argument map (17 nodes) — Meyer (2025) | <a href="https://vjmeyer.github.io/submission/papers/2025-VJM_PredictionMarketIntegration-AMTAIR_EpiOrgsPaper.html">Full paper</a></p>
+  </div>
+  <div class="map-container">
+<figure  role="group" class="argdown-figure"><argdown-map      initial-view="map"><div slot="source" class=""><pre class="language-argdown"><code class="language-argdown"><span class="hljs-meta">===
+title: &quot;Meyer (2025) — Live Models: Integrating Prediction Markets into AMTAIR&quot;
+author: &quot;Extracted by AMTAIR pipeline&quot;
+subTitle: &quot;Argument map of the paper&#x27;s own three-step elimination argument&quot;
+===</span>
+
+<span class="hljs-comment">// CONSTITUTIVE TENSION (Core Claim)</span>
+
+<span class="hljs-statement-title">[Constitutive_Tension]:</span> AMTAIR&#x27;s contamination problem is constitutive: properties the system needs (publicity, authority, broad uptake) ARE the properties that create contamination risk. <span class="hljs-tag">#core</span>
+<span class="hljs-support">  +</span> <span class="hljs-statement-title">[Value_Creates_Risk]</span>
+<span class="hljs-support">  +</span> <span class="hljs-statement-title">[Staleness_Necessitates_Integration]</span>
+
+<span class="hljs-statement-title">[Value_Creates_Risk]:</span> Each design feature that makes AMTAIR valuable simultaneously opens a contamination channel. Public accessibility, ensemble methods, author refinement, and broad uptake all create both value and risk. <span class="hljs-tag">#diagnostic</span>
+<span class="hljs-support">  +</span> <span class="hljs-statement-title">[Public_Accessibility]:</span> Public dashboards expose outputs to forecasters whose independent judgment the system needs. <span class="hljs-tag">#mechanism</span>
+<span class="hljs-support">  +</span> <span class="hljs-statement-title">[Broad_Uptake]:</span> Broad adoption correlates forecaster beliefs with AMTAIR models even without direct consultation. <span class="hljs-tag">#mechanism</span>
+<span class="hljs-support">  +</span> <span class="hljs-statement-title">[Author_Refinement]:</span> Authors adjusting formalizations risk within-repository contamination when matching priors. <span class="hljs-tag">#mechanism</span>
+
+<span class="hljs-comment">// STALENESS AND INTEGRATION NECESSITY</span>
+
+<span class="hljs-statement-title">[Staleness_Necessitates_Integration]:</span> AMTAIR models embed the epistemic state of authors at writing time, creating parametric and structural staleness that prediction markets can address. <span class="hljs-tag">#diagnostic</span>
+<span class="hljs-support">  +</span> <span class="hljs-statement-title">[Parametric_Staleness]:</span> Probability estimates become outdated while underlying argument structure remains valid. <span class="hljs-tag">#mechanism</span>
+<span class="hljs-support">  +</span> <span class="hljs-statement-title">[Structural_Staleness]:</span> Entire argumentative frameworks become obsolete as the field evolves. <span class="hljs-tag">#mechanism</span>
+<span class="hljs-support">  +</span> <span class="hljs-statement-title">[Correlated_Staleness]:</span> Shared empirical sources and theoretical frameworks create correlated obsolescence across ensembles. <span class="hljs-tag">#mechanism</span>
+
+<span class="hljs-statement-title">[Integration_Benefits]:</span> Prediction market integration provides structural transparency through BN decomposition and cross-boundary aggregation across fragmented communities. <span class="hljs-tag">#support</span>
+<span class="hljs-support">  +</span> <span class="hljs-statement-title">[Staleness_Necessitates_Integration]</span>
+
+<span class="hljs-statement-title">[Informal_Integration_Inevitable]:</span> Practitioners will connect PM and AMTAIR sources informally regardless; the question is whether integration is managed or ad hoc. <span class="hljs-tag">#support</span>
+<span class="hljs-support">  +</span> <span class="hljs-statement-title">[Staleness_Necessitates_Integration]</span>
+
+<span class="hljs-comment">// FEEDBACK LOOP</span>
+
+<span class="hljs-statement-title">[Feedback_Loop]:</span> Five-step contamination cycle: AMTAIR publishes, forecasters observe, markets shift, AMTAIR ingests contaminated prices, model confidence changes spuriously. <span class="hljs-tag">#risk</span>
+<span class="hljs-support">  +</span> <span class="hljs-statement-title">[Constitutive_Tension]</span>
+
+<span class="hljs-statement-title">[Three_Contamination_Types]:</span> Three distinct mechanisms: one-shot probabilistic anchoring (mean bias), feedback loop contamination (variance collapse), and framing contamination (dimensionality reduction). <span class="hljs-tag">#mechanism</span>
+<span class="hljs-support">  +</span> <span class="hljs-statement-title">[Feedback_Loop]</span>
+
+<span class="hljs-comment">// STEP 1: FULL-CONTROL STATISTICS (powerful but impractical)</span>
+
+<span class="hljs-statement-title">[Full_Control_Powerful]:</span> Under full platform control (as DAGGRE enjoyed), statistical tools become substantially more powerful: contamination is experimentally measurable through randomized assignment. <span class="hljs-tag">#condition</span>
+<span class="hljs-support">  +</span> <span class="hljs-statement-title">[DAGGRE_Comparison]:</span> DAGGRE demonstrated BN-forecast integration works in closed-loop systems with internal feedback containment. <span class="hljs-tag">#evidence</span>
+
+<span class="hljs-statement-title">[Full_Control_Impractical]:</span> AMTAIR&#x27;s aspiration to shared epistemic infrastructure requires open-loop bidirectionality with external forecasting communities, making DAGGRE-style control impossible. <span class="hljs-tag">#condition</span>
+<span class="hljs-attack">  -</span> <span class="hljs-statement-title">[Full_Control_Powerful]</span>
+
+<span class="hljs-statement-title">[Framing_Persists]:</span> Even under full platform control, framing contamination persists: AMTAIR&#x27;s causal decompositions must be public for peer review and these structure how forecasters reason. <span class="hljs-tag">#condition</span>
+<span class="hljs-attack">  -</span> <span class="hljs-statement-title">[Full_Control_Powerful]</span>
+
+<span class="hljs-argument-title">&lt;Tier_1_Elimination&gt;:</span> Full-control statistics nearly solves the problem but AMTAIR cannot exercise full control, and even full control leaves framing contamination intact.
+<span class="hljs-support">  +</span> <span class="hljs-statement-title">[Full_Control_Powerful]</span>
+<span class="hljs-support">  +</span> <span class="hljs-statement-title">[Full_Control_Impractical]</span>
+<span class="hljs-support">  +</span> <span class="hljs-statement-title">[Framing_Persists]</span>
+<span class="hljs-attack">  -&gt;</span> <span class="hljs-statement-title">[Statistical_Insufficiency]</span>
+
+<span class="hljs-comment">// STEP 2: DASHBOARD-ONLY STATISTICS (partial but needs org inputs)</span>
+
+<span class="hljs-statement-title">[Statistical_Insufficiency]:</span> Under AMTAIR&#x27;s dashboard-only architecture, practical tools degrade but remain useful, yet each requires organizational infrastructure it does not generate. <span class="hljs-tag">#hub</span>
+<span class="hljs-support">  +</span> <span class="hljs-statement-title">[Alpha_Needs_Infrastructure]:</span> Quality parameters require track-record infrastructure maintained by platform organizations. <span class="hljs-tag">#mechanism</span>
+<span class="hljs-support">  +</span> <span class="hljs-statement-title">[Gamma_Needs_Metadata]:</span> Contamination parameters require exposure metadata that someone must design, fund, and maintain. <span class="hljs-tag">#mechanism</span>
+<span class="hljs-support">  +</span> <span class="hljs-statement-title">[K_Unobservable]:</span> The number of forecasters who observed AMTAIR outputs becomes unobservable without organizational tracking. <span class="hljs-tag">#mechanism</span>
+<span class="hljs-support">  +</span> <span class="hljs-statement-title">[Embargo_Needs_Commitment]:</span> Embargo enforcement requires institutional commitment, not just software configuration. <span class="hljs-tag">#mechanism</span>
+
+<span class="hljs-comment">// STEP 3: ORGANIZATIONAL EPISTEMOLOGY</span>
+
+<span class="hljs-argument-title">&lt;Identification_Problem&gt;:</span> The statistical framework cannot KNOW what it needs: its parameters require organizational information environments outside the formal apparatus.
+<span class="hljs-support">  +</span> <span class="hljs-statement-title">[Statistical_Insufficiency]</span>
+<span class="hljs-support">  +</span> <span class="hljs-statement-title">[Alpha_Needs_Infrastructure]</span>
+<span class="hljs-support">  +</span> <span class="hljs-statement-title">[Gamma_Needs_Metadata]</span>
+<span class="hljs-attack">  -&gt;</span> <span class="hljs-statement-title">[Org_Gap]</span>
+
+<span class="hljs-argument-title">&lt;Amplification_Problem&gt;:</span> Even if parameters were perfectly estimated, organizational dynamics intervene between prescription and implementation.
+<span class="hljs-support">  +</span> <span class="hljs-statement-title">[Org_Gap]</span>
+<span class="hljs-attack">  -&gt;</span> <span class="hljs-statement-title">[Vices_Explain_Failure]</span>
+
+<span class="hljs-statement-title">[Org_Gap]:</span> The gap between statistical prescription and AMTAIR&#x27;s reality has two components: practical (architecture lacks conditions for full control) and principled (framing contamination persists regardless). <span class="hljs-tag">#hub</span>
+
+<span class="hljs-comment">// INDIVIDUAL VICES (amplified by structure)</span>
+
+<span class="hljs-statement-title">[Vices_Explain_Failure]:</span> Epistemic vices are not labels applied after the fact but causal explanations of why infrastructure statistical tools need is unlikely to emerge spontaneously. <span class="hljs-tag">#framework</span>
+<span class="hljs-support">  +</span> <span class="hljs-statement-title">[Hubris]:</span> Epistemic hubris explains why embargo protocols get overridden: AMTAIR&#x27;s quantitative precision creates an illusion of certainty making contamination controls appear unnecessary. <span class="hljs-tag">#vice</span>
+<span class="hljs-support">  +</span> <span class="hljs-statement-title">[Insouciance]:</span> Epistemic insouciance explains why exposure metadata never gets collected: AMTAIR&#x27;s institutional setting places it outside compliance mandates and contamination damage is subtle and delayed. <span class="hljs-tag">#vice</span>
+<span class="hljs-support">  +</span> <span class="hljs-statement-title">[Injustice]:</span> Epistemic injustice explains why authority overrides calibration: quantitative reasoning carries disproportionate credence in AMTAIR&#x27;s operating communities. <span class="hljs-tag">#vice</span>
+<span class="hljs-support">  +</span> <span class="hljs-statement-title">[Fragmentation]:</span> Organizational fragmentation means no single actor sees the whole contamination loop spanning AMTAIR operators, forecasting platforms, and policy teams. <span class="hljs-tag">#vice</span>
+<span class="hljs-support">  +</span> <span class="hljs-statement-title">[Complexity]:</span> Organizational complexity means multiple extractions, ensemble methods, author refinement, and cross-platform propagation create pathways too intricate for any individual to trace. <span class="hljs-tag">#vice</span>
+
+<span class="hljs-statement-title">[Individual_Collective_Distinction]:</span> Hubris, insouciance, and injustice are individual dispositions amplified by structure; fragmentation and complexity are genuinely collective vices irreducible to individual-level analysis. <span class="hljs-tag">#framework</span>
+<span class="hljs-support">  +</span> <span class="hljs-statement-title">[Vices_Explain_Failure]</span>
+
+<span class="hljs-comment">// VICE-VULNERABILITY MAPPING</span>
+
+<span class="hljs-statement-title">[Vice_Vulnerability_Mapping]:</span> Each vice maps a specific mechanism through which organizational dynamics prevent a statistical prerequisite from functioning, generating institution-specific prescriptions. <span class="hljs-tag">#product</span>
+<span class="hljs-support">  +</span> <span class="hljs-statement-title">[Vices_Explain_Failure]</span>
+<span class="hljs-support">  +</span> <span class="hljs-statement-title">[Statistical_Insufficiency]</span>
+
+<span class="hljs-comment">// RECURSIVE CAPSTONE</span>
+
+<span class="hljs-statement-title">[Recursive_Challenge]:</span> The institution operating AMTAIR would itself be subject to every vice the mapping identifies. Each governance layer reduces risk; none eliminates it. <span class="hljs-tag">#qualifier</span>
+<span class="hljs-support">  +</span> <span class="hljs-statement-title">[Vice_Vulnerability_Mapping]</span>
+
+<span class="hljs-comment">// CONCLUSION</span>
+
+<span class="hljs-argument-title">&lt;Main_Argument&gt;:</span> The constitutive tension, three-step elimination, and vice-vulnerability mapping establish the paper&#x27;s central conclusion.
+<span class="hljs-support">  +</span> <span class="hljs-statement-title">[Constitutive_Tension]</span>
+<span class="hljs-support">  +</span> <span class="hljs-statement-title">[Statistical_Insufficiency]</span>
+<span class="hljs-support">  +</span> <span class="hljs-statement-title">[Vices_Explain_Failure]</span>
+<span class="hljs-support">  +</span> <span class="hljs-statement-title">[Vice_Vulnerability_Mapping]</span>
+<span class="hljs-support">  +</span> <span class="hljs-statement-title">[Recursive_Challenge]</span>
+<span class="hljs-support">  +</span> <span class="hljs-statement-title">[Informal_Integration_Inevitable]</span>
+<span class="hljs-attack">  -&gt;</span> <span class="hljs-statement-title">[Managed_Over_Unmanaged]</span>
+
+<span class="hljs-statement-title">[Managed_Over_Unmanaged]:</span> Managed integration with named vulnerabilities and organizational safeguards is categorically preferable to unmanaged informal integration that will occur regardless. <span class="hljs-tag">#conclusion</span>
+</code></pre></div><div slot="map">
+<!-- Generated by graphviz version 2.47.0 (20210316.0004)
+ -->
+<!-- Title: Argument Map Pages: 1 -->
+<svg width="720pt" height="494pt"
+ viewBox="0.00 0.00 720.00 493.71" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="graph0" class="graph" transform="scale(0.3 0.3) rotate(0) translate(4 1640)">
+<title>Argument Map</title>
+<!-- n0 -->
+<g id="node1" class="node">
+<title>n0</title>
+<path fill="white" stroke="#d95f02" stroke-width="2" d="M844.5,-1388C844.5,-1388 672.5,-1388 672.5,-1388 666.5,-1388 660.5,-1382 660.5,-1376 660.5,-1376 660.5,-1312 660.5,-1312 660.5,-1306 666.5,-1300 672.5,-1300 672.5,-1300 844.5,-1300 844.5,-1300 850.5,-1300 856.5,-1306 856.5,-1312 856.5,-1312 856.5,-1376 856.5,-1376 856.5,-1382 850.5,-1388 844.5,-1388"/>
+<text text-anchor="start" x="711.82" y="-1374" font-family="arial" font-weight="bold" font-size="10.00" fill="#000000">Constitutive_Tension</text>
+<text text-anchor="start" x="679.06" y="-1357" font-family="arial" font-size="10.00" fill="#000000">AMTAIR&#39;s contamination problem is</text>
+<text text-anchor="start" x="681.54" y="-1345" font-family="arial" font-size="10.00" fill="#000000"> constitutive: properties the system</text>
+<text text-anchor="start" x="684.87" y="-1333" font-family="arial" font-size="10.00" fill="#000000"> needs (publicity, authority, broad</text>
+<text text-anchor="start" x="671.81" y="-1321" font-family="arial" font-size="10.00" fill="#000000"> uptake) ARE the properties that create</text>
+<text text-anchor="start" x="701.55" y="-1309" font-family="arial" font-size="10.00" fill="#000000"> contamination risk. #core</text>
+</g>
+<!-- n11 -->
+<g id="node12" class="node">
+<title>n11</title>
+<path fill="white" stroke="#e6ab02" stroke-width="2" d="M844.5,-1512C844.5,-1512 672.5,-1512 672.5,-1512 666.5,-1512 660.5,-1506 660.5,-1500 660.5,-1500 660.5,-1436 660.5,-1436 660.5,-1430 666.5,-1424 672.5,-1424 672.5,-1424 844.5,-1424 844.5,-1424 850.5,-1424 856.5,-1430 856.5,-1436 856.5,-1436 856.5,-1500 856.5,-1500 856.5,-1506 850.5,-1512 844.5,-1512"/>
+<text text-anchor="start" x="722.65" y="-1498" font-family="arial" font-weight="bold" font-size="10.00" fill="#000000">Feedback_Loop</text>
+<text text-anchor="start" x="670.99" y="-1481" font-family="arial" font-size="10.00" fill="#000000">Five&#45;step contamination cycle: AMTAIR</text>
+<text text-anchor="start" x="687.93" y="-1469" font-family="arial" font-size="10.00" fill="#000000"> publishes, forecasters observe,</text>
+<text text-anchor="start" x="689.88" y="-1457" font-family="arial" font-size="10.00" fill="#000000"> markets shift, AMTAIR ingests</text>
+<text text-anchor="start" x="670.42" y="-1445" font-family="arial" font-size="10.00" fill="#000000"> contaminated prices, model confidence</text>
+<text text-anchor="start" x="700.99" y="-1433" font-family="arial" font-size="10.00" fill="#000000"> changes spuriously. #risk</text>
+</g>
+<!-- n0&#45;&gt;n11 -->
+<g id="edge11" class="edge">
+<title>n0&#45;&gt;n11</title>
+<path fill="none" stroke="#00ff00" d="M758.5,-1388.01C758.5,-1396.4 758.5,-1405.28 758.5,-1413.94"/>
+<polygon fill="#00ff00" stroke="#00ff00" points="755,-1413.96 758.5,-1423.96 762,-1413.96 755,-1413.96"/>
+</g>
+<!-- n36 -->
+<g id="node37" class="node">
+<title>n36</title>
+<path fill="#1b9e77" stroke="black" d="M1472.5,-1506C1472.5,-1506 1300.5,-1506 1300.5,-1506 1294.5,-1506 1288.5,-1500 1288.5,-1494 1288.5,-1494 1288.5,-1442 1288.5,-1442 1288.5,-1436 1294.5,-1430 1300.5,-1430 1300.5,-1430 1472.5,-1430 1472.5,-1430 1478.5,-1430 1484.5,-1436 1484.5,-1442 1484.5,-1442 1484.5,-1494 1484.5,-1494 1484.5,-1500 1478.5,-1506 1472.5,-1506"/>
+<text text-anchor="start" x="1351.22" y="-1492" font-family="arial" font-weight="bold" font-size="10.00" fill="#000000">Main_Argument</text>
+<text text-anchor="start" x="1308.7" y="-1475" font-family="arial" font-size="10.00" fill="#000000">The constitutive tension, three&#45;step</text>
+<text text-anchor="start" x="1311.77" y="-1463" font-family="arial" font-size="10.00" fill="#000000"> elimination, and vice&#45;vulnerability</text>
+<text text-anchor="start" x="1302.32" y="-1451" font-family="arial" font-size="10.00" fill="#000000"> mapping establish the paper&#39;s central</text>
+<text text-anchor="start" x="1360.1" y="-1439" font-family="arial" font-size="10.00" fill="#000000"> conclusion.</text>
+</g>
+<!-- n0&#45;&gt;n36 -->
+<g id="edge39" class="edge">
+<title>n0&#45;&gt;n36</title>
+<path fill="none" stroke="#00ff00" d="M856.74,-1385.47C859.68,-1386.36 862.6,-1387.21 865.5,-1388 1005.3,-1426.13 1171.55,-1447.32 1278,-1457.93"/>
+<polygon fill="#00ff00" stroke="#00ff00" points="1277.82,-1461.43 1288.11,-1458.93 1278.5,-1454.47 1277.82,-1461.43"/>
+</g>
+<!-- n1 -->
+<g id="node2" class="node">
+<title>n1</title>
+<path fill="white" stroke="#7570b3" stroke-width="2" d="M520,-1264C520,-1264 343,-1264 343,-1264 337,-1264 331,-1258 331,-1252 331,-1252 331,-1164 331,-1164 331,-1158 337,-1152 343,-1152 343,-1152 520,-1152 520,-1152 526,-1152 532,-1158 532,-1164 532,-1164 532,-1252 532,-1252 532,-1258 526,-1264 520,-1264"/>
+<text text-anchor="start" x="386.44" y="-1250" font-family="arial" font-weight="bold" font-size="10.00" fill="#000000">Value_Creates_Risk</text>
+<text text-anchor="start" x="341.42" y="-1233" font-family="arial" font-size="10.00" fill="#000000">Each design feature that makes AMTAIR</text>
+<text text-anchor="start" x="358.37" y="-1221" font-family="arial" font-size="10.00" fill="#000000"> valuable simultaneously opens a</text>
+<text text-anchor="start" x="364.2" y="-1209" font-family="arial" font-size="10.00" fill="#000000"> contamination channel. Public</text>
+<text text-anchor="start" x="357.54" y="-1197" font-family="arial" font-size="10.00" fill="#000000"> accessibility, ensemble methods,</text>
+<text text-anchor="start" x="349.75" y="-1185" font-family="arial" font-size="10.00" fill="#000000"> author refinement, and broad uptake</text>
+<text text-anchor="start" x="365.59" y="-1173" font-family="arial" font-size="10.00" fill="#000000"> all create both value and risk.</text>
+<text text-anchor="start" x="405.32" y="-1161" font-family="arial" font-size="10.00" fill="#000000"> #diagnostic</text>
+</g>
+<!-- n1&#45;&gt;n0 -->
+<g id="edge1" class="edge">
+<title>n1&#45;&gt;n0</title>
+<path fill="none" stroke="#00ff00" d="M532.28,-1250.3C569.82,-1265.68 612.56,-1283.2 650.7,-1298.83"/>
+<polygon fill="#00ff00" stroke="#00ff00" points="649.72,-1302.2 660.3,-1302.76 652.37,-1295.73 649.72,-1302.2"/>
+</g>
+<!-- n2 -->
+<g id="node3" class="node">
+<title>n2</title>
+<path fill="white" stroke="#7570b3" stroke-width="2" d="M1066.5,-1252C1066.5,-1252 878.5,-1252 878.5,-1252 872.5,-1252 866.5,-1246 866.5,-1240 866.5,-1240 866.5,-1176 866.5,-1176 866.5,-1170 872.5,-1164 878.5,-1164 878.5,-1164 1066.5,-1164 1066.5,-1164 1072.5,-1164 1078.5,-1170 1078.5,-1176 1078.5,-1176 1078.5,-1240 1078.5,-1240 1078.5,-1246 1072.5,-1252 1066.5,-1252"/>
+<text text-anchor="start" x="892.75" y="-1238" font-family="arial" font-weight="bold" font-size="10.00" fill="#000000">Staleness_Necessitates_Integration</text>
+<text text-anchor="start" x="876.37" y="-1221" font-family="arial" font-size="10.00" fill="#000000">AMTAIR models embed the epistemic state</text>
+<text text-anchor="start" x="896.1" y="-1209" font-family="arial" font-size="10.00" fill="#000000"> of authors at writing time, creating</text>
+<text text-anchor="start" x="893.32" y="-1197" font-family="arial" font-size="10.00" fill="#000000"> parametric and structural staleness</text>
+<text text-anchor="start" x="890.54" y="-1185" font-family="arial" font-size="10.00" fill="#000000"> that prediction markets can address.</text>
+<text text-anchor="start" x="945.83" y="-1173" font-family="arial" font-size="10.00" fill="#000000"> #diagnostic</text>
+</g>
+<!-- n2&#45;&gt;n0 -->
+<g id="edge2" class="edge">
+<title>n2&#45;&gt;n0</title>
+<path fill="none" stroke="#00ff00" d="M903.61,-1252.14C882.04,-1265.64 858.09,-1280.64 835.96,-1294.49"/>
+<polygon fill="#00ff00" stroke="#00ff00" points="833.88,-1291.67 827.26,-1299.94 837.59,-1297.6 833.88,-1291.67"/>
+</g>
+<!-- n9 -->
+<g id="node10" class="node">
+<title>n9</title>
+<path fill="white" stroke="#66a61e" stroke-width="2" d="M1058.5,-1388C1058.5,-1388 886.5,-1388 886.5,-1388 880.5,-1388 874.5,-1382 874.5,-1376 874.5,-1376 874.5,-1312 874.5,-1312 874.5,-1306 880.5,-1300 886.5,-1300 886.5,-1300 1058.5,-1300 1058.5,-1300 1064.5,-1300 1070.5,-1306 1070.5,-1312 1070.5,-1312 1070.5,-1376 1070.5,-1376 1070.5,-1382 1064.5,-1388 1058.5,-1388"/>
+<text text-anchor="start" x="928.04" y="-1374" font-family="arial" font-weight="bold" font-size="10.00" fill="#000000">Integration_Benefits</text>
+<text text-anchor="start" x="888.6" y="-1357" font-family="arial" font-size="10.00" fill="#000000">Prediction market integration provides</text>
+<text text-anchor="start" x="893.6" y="-1345" font-family="arial" font-size="10.00" fill="#000000"> structural transparency through BN</text>
+<text text-anchor="start" x="893.31" y="-1333" font-family="arial" font-size="10.00" fill="#000000"> decomposition and cross&#45;boundary</text>
+<text text-anchor="start" x="901.92" y="-1321" font-family="arial" font-size="10.00" fill="#000000"> aggregation across fragmented</text>
+<text text-anchor="start" x="920.82" y="-1309" font-family="arial" font-size="10.00" fill="#000000"> communities. #support</text>
+</g>
+<!-- n2&#45;&gt;n9 -->
+<g id="edge9" class="edge">
+<title>n2&#45;&gt;n9</title>
+<path fill="none" stroke="#00ff00" d="M972.5,-1252.14C972.5,-1264.09 972.5,-1277.21 972.5,-1289.67"/>
+<polygon fill="#00ff00" stroke="#00ff00" points="969,-1289.94 972.5,-1299.94 976,-1289.94 969,-1289.94"/>
+</g>
+<!-- n10 -->
+<g id="node11" class="node">
+<title>n10</title>
+<path fill="white" stroke="#66a61e" stroke-width="2" d="M1272.5,-1382C1272.5,-1382 1100.5,-1382 1100.5,-1382 1094.5,-1382 1088.5,-1376 1088.5,-1370 1088.5,-1370 1088.5,-1318 1088.5,-1318 1088.5,-1312 1094.5,-1306 1100.5,-1306 1100.5,-1306 1272.5,-1306 1272.5,-1306 1278.5,-1306 1284.5,-1312 1284.5,-1318 1284.5,-1318 1284.5,-1370 1284.5,-1370 1284.5,-1376 1278.5,-1382 1272.5,-1382"/>
+<text text-anchor="start" x="1117.87" y="-1368" font-family="arial" font-weight="bold" font-size="10.00" fill="#000000">Informal_Integration_Inevitable</text>
+<text text-anchor="start" x="1112.88" y="-1351" font-family="arial" font-size="10.00" fill="#000000">Practitioners will connect PM and</text>
+<text text-anchor="start" x="1098.44" y="-1339" font-family="arial" font-size="10.00" fill="#000000"> AMTAIR sources informally regardless;</text>
+<text text-anchor="start" x="1103.98" y="-1327" font-family="arial" font-size="10.00" fill="#000000"> the question is whether integration is</text>
+<text text-anchor="start" x="1119.81" y="-1315" font-family="arial" font-size="10.00" fill="#000000"> managed or ad hoc. #support</text>
+</g>
+<!-- n2&#45;&gt;n10 -->
+<g id="edge10" class="edge">
+<title>n2&#45;&gt;n10</title>
+<path fill="none" stroke="#00ff00" d="M1041.39,-1252.14C1066.09,-1267.6 1093.91,-1285.02 1118.53,-1300.44"/>
+<polygon fill="#00ff00" stroke="#00ff00" points="1116.76,-1303.46 1127.1,-1305.8 1120.48,-1297.53 1116.76,-1303.46"/>
+</g>
+<!-- n3 -->
+<g id="node4" class="node">
+<title>n3</title>
+<path fill="white" stroke="#e7298a" stroke-width="2" d="M193,-1104C193,-1104 12,-1104 12,-1104 6,-1104 0,-1098 0,-1092 0,-1092 0,-1052 0,-1052 0,-1046 6,-1040 12,-1040 12,-1040 193,-1040 193,-1040 199,-1040 205,-1046 205,-1052 205,-1052 205,-1092 205,-1092 205,-1098 199,-1104 193,-1104"/>
+<text text-anchor="start" x="59.39" y="-1090" font-family="arial" font-weight="bold" font-size="10.00" fill="#000000">Public_Accessibility</text>
+<text text-anchor="start" x="21.02" y="-1073" font-family="arial" font-size="10.00" fill="#000000">Public dashboards expose outputs to</text>
+<text text-anchor="start" x="10.19" y="-1061" font-family="arial" font-size="10.00" fill="#000000"> forecasters whose independent judgment</text>
+<text text-anchor="start" x="31.32" y="-1049" font-family="arial" font-size="10.00" fill="#000000"> the system needs. #mechanism</text>
+</g>
+<!-- n3&#45;&gt;n1 -->
+<g id="edge3" class="edge">
+<title>n3&#45;&gt;n1</title>
+<path fill="none" stroke="#00ff00" d="M178.81,-1104.08C221.25,-1121.37 274.81,-1143.18 321.69,-1162.28"/>
+<polygon fill="#00ff00" stroke="#00ff00" points="320.39,-1165.53 330.97,-1166.06 323.03,-1159.04 320.39,-1165.53"/>
+</g>
+<!-- n4 -->
+<g id="node5" class="node">
+<title>n4</title>
+<path fill="white" stroke="#e7298a" stroke-width="2" d="M411.5,-1104C411.5,-1104 235.5,-1104 235.5,-1104 229.5,-1104 223.5,-1098 223.5,-1092 223.5,-1092 223.5,-1052 223.5,-1052 223.5,-1046 229.5,-1040 235.5,-1040 235.5,-1040 411.5,-1040 411.5,-1040 417.5,-1040 423.5,-1046 423.5,-1052 423.5,-1052 423.5,-1092 423.5,-1092 423.5,-1098 417.5,-1104 411.5,-1104"/>
+<text text-anchor="start" x="291.55" y="-1090" font-family="arial" font-weight="bold" font-size="10.00" fill="#000000">Broad_Uptake</text>
+<text text-anchor="start" x="242.65" y="-1073" font-family="arial" font-size="10.00" fill="#000000">Broad adoption correlates forecaster</text>
+<text text-anchor="start" x="247.38" y="-1061" font-family="arial" font-size="10.00" fill="#000000"> beliefs with AMTAIR models even</text>
+<text text-anchor="start" x="233.48" y="-1049" font-family="arial" font-size="10.00" fill="#000000"> without direct consultation. #mechanism</text>
+</g>
+<!-- n4&#45;&gt;n1 -->
+<g id="edge4" class="edge">
+<title>n4&#45;&gt;n1</title>
+<path fill="none" stroke="#00ff00" d="M348.55,-1104.08C358.13,-1115.97 369.45,-1130.01 380.58,-1143.82"/>
+<polygon fill="#00ff00" stroke="#00ff00" points="378.1,-1146.33 387.1,-1151.92 383.55,-1141.93 378.1,-1146.33"/>
+</g>
+<!-- n5 -->
+<g id="node6" class="node">
+<title>n5</title>
+<path fill="white" stroke="#e7298a" stroke-width="2" d="M625.5,-1104C625.5,-1104 453.5,-1104 453.5,-1104 447.5,-1104 441.5,-1098 441.5,-1092 441.5,-1092 441.5,-1052 441.5,-1052 441.5,-1046 447.5,-1040 453.5,-1040 453.5,-1040 625.5,-1040 625.5,-1040 631.5,-1040 637.5,-1046 637.5,-1052 637.5,-1052 637.5,-1092 637.5,-1092 637.5,-1098 631.5,-1104 625.5,-1104"/>
+<text text-anchor="start" x="496.43" y="-1090" font-family="arial" font-weight="bold" font-size="10.00" fill="#000000">Author_Refinement</text>
+<text text-anchor="start" x="459.49" y="-1073" font-family="arial" font-size="10.00" fill="#000000">Authors adjusting formalizations risk</text>
+<text text-anchor="start" x="455.88" y="-1061" font-family="arial" font-size="10.00" fill="#000000"> within&#45;repository contamination when</text>
+<text text-anchor="start" x="472.83" y="-1049" font-family="arial" font-size="10.00" fill="#000000"> matching priors. #mechanism</text>
+</g>
+<!-- n5&#45;&gt;n1 -->
+<g id="edge5" class="edge">
+<title>n5&#45;&gt;n1</title>
+<path fill="none" stroke="#00ff00" d="M514.45,-1104.08C504.87,-1115.97 493.55,-1130.01 482.42,-1143.82"/>
+<polygon fill="#00ff00" stroke="#00ff00" points="479.45,-1141.93 475.9,-1151.92 484.9,-1146.33 479.45,-1141.93"/>
+</g>
+<!-- n6 -->
+<g id="node7" class="node">
+<title>n6</title>
+<path fill="white" stroke="#e7298a" stroke-width="2" d="M839.5,-1104C839.5,-1104 667.5,-1104 667.5,-1104 661.5,-1104 655.5,-1098 655.5,-1092 655.5,-1092 655.5,-1052 655.5,-1052 655.5,-1046 661.5,-1040 667.5,-1040 667.5,-1040 839.5,-1040 839.5,-1040 845.5,-1040 851.5,-1046 851.5,-1052 851.5,-1052 851.5,-1092 851.5,-1092 851.5,-1098 845.5,-1104 839.5,-1104"/>
+<text text-anchor="start" x="704.6" y="-1090" font-family="arial" font-weight="bold" font-size="10.00" fill="#000000">Parametric_Staleness</text>
+<text text-anchor="start" x="667.37" y="-1073" font-family="arial" font-size="10.00" fill="#000000">Probability estimates become outdated</text>
+<text text-anchor="start" x="672.93" y="-1061" font-family="arial" font-size="10.00" fill="#000000"> while underlying argument structure</text>
+<text text-anchor="start" x="691.55" y="-1049" font-family="arial" font-size="10.00" fill="#000000"> remains valid. #mechanism</text>
+</g>
+<!-- n6&#45;&gt;n2 -->
+<g id="edge6" class="edge">
+<title>n6&#45;&gt;n2</title>
+<path fill="none" stroke="#00ff00" d="M804.29,-1104.08C830.74,-1120.26 863.68,-1140.42 893.39,-1158.59"/>
+<polygon fill="#00ff00" stroke="#00ff00" points="891.72,-1161.68 902.08,-1163.91 895.37,-1155.71 891.72,-1161.68"/>
+</g>
+<!-- n7 -->
+<g id="node8" class="node">
+<title>n7</title>
+<path fill="white" stroke="#e7298a" stroke-width="2" d="M1063,-1104C1063,-1104 882,-1104 882,-1104 876,-1104 870,-1098 870,-1092 870,-1092 870,-1052 870,-1052 870,-1046 876,-1040 882,-1040 882,-1040 1063,-1040 1063,-1040 1069,-1040 1075,-1046 1075,-1052 1075,-1052 1075,-1092 1075,-1092 1075,-1098 1069,-1104 1063,-1104"/>
+<text text-anchor="start" x="926.88" y="-1090" font-family="arial" font-weight="bold" font-size="10.00" fill="#000000">Structural_Staleness</text>
+<text text-anchor="start" x="880.49" y="-1073" font-family="arial" font-size="10.00" fill="#000000">Entire argumentative frameworks become</text>
+<text text-anchor="start" x="907.42" y="-1061" font-family="arial" font-size="10.00" fill="#000000"> obsolete as the field evolves.</text>
+<text text-anchor="start" x="943.27" y="-1049" font-family="arial" font-size="10.00" fill="#000000"> #mechanism</text>
+</g>
+<!-- n7&#45;&gt;n2 -->
+<g id="edge7" class="edge">
+<title>n7&#45;&gt;n2</title>
+<path fill="none" stroke="#00ff00" d="M972.5,-1104.08C972.5,-1118.81 972.5,-1136.82 972.5,-1153.63"/>
+<polygon fill="#00ff00" stroke="#00ff00" points="969,-1153.91 972.5,-1163.91 976,-1153.91 969,-1153.91"/>
+</g>
+<!-- n8 -->
+<g id="node9" class="node">
+<title>n8</title>
+<path fill="white" stroke="#e7298a" stroke-width="2" d="M1277.5,-1110C1277.5,-1110 1105.5,-1110 1105.5,-1110 1099.5,-1110 1093.5,-1104 1093.5,-1098 1093.5,-1098 1093.5,-1046 1093.5,-1046 1093.5,-1040 1099.5,-1034 1105.5,-1034 1105.5,-1034 1277.5,-1034 1277.5,-1034 1283.5,-1034 1289.5,-1040 1289.5,-1046 1289.5,-1046 1289.5,-1098 1289.5,-1098 1289.5,-1104 1283.5,-1110 1277.5,-1110"/>
+<text text-anchor="start" x="1143.43" y="-1096" font-family="arial" font-weight="bold" font-size="10.00" fill="#000000">Correlated_Staleness</text>
+<text text-anchor="start" x="1125.38" y="-1079" font-family="arial" font-size="10.00" fill="#000000">Shared empirical sources and</text>
+<text text-anchor="start" x="1124.55" y="-1067" font-family="arial" font-size="10.00" fill="#000000"> theoretical frameworks create</text>
+<text text-anchor="start" x="1119.82" y="-1055" font-family="arial" font-size="10.00" fill="#000000"> correlated obsolescence across</text>
+<text text-anchor="start" x="1134.82" y="-1043" font-family="arial" font-size="10.00" fill="#000000"> ensembles. #mechanism</text>
+</g>
+<!-- n8&#45;&gt;n2 -->
+<g id="edge8" class="edge">
+<title>n8&#45;&gt;n2</title>
+<path fill="none" stroke="#00ff00" d="M1130.79,-1110.15C1106.34,-1125.11 1077.8,-1142.57 1051.75,-1158.51"/>
+<polygon fill="#00ff00" stroke="#00ff00" points="1049.72,-1155.65 1043.02,-1163.85 1053.38,-1161.62 1049.72,-1155.65"/>
+</g>
+<!-- n10&#45;&gt;n36 -->
+<g id="edge44" class="edge">
+<title>n10&#45;&gt;n36</title>
+<path fill="none" stroke="#00ff00" d="M1247.32,-1382.1C1269.33,-1395.53 1294.35,-1410.79 1317.05,-1424.64"/>
+<polygon fill="#00ff00" stroke="#00ff00" points="1315.26,-1427.65 1325.62,-1429.87 1318.91,-1421.67 1315.26,-1427.65"/>
+</g>
+<!-- n12 -->
+<g id="node13" class="node">
+<title>n12</title>
+<path fill="white" stroke="#e7298a" stroke-width="2" d="M845.5,-1636C845.5,-1636 671.5,-1636 671.5,-1636 665.5,-1636 659.5,-1630 659.5,-1624 659.5,-1624 659.5,-1560 659.5,-1560 659.5,-1554 665.5,-1548 671.5,-1548 671.5,-1548 845.5,-1548 845.5,-1548 851.5,-1548 857.5,-1554 857.5,-1560 857.5,-1560 857.5,-1624 857.5,-1624 857.5,-1630 851.5,-1636 845.5,-1636"/>
+<text text-anchor="start" x="694.04" y="-1622" font-family="arial" font-weight="bold" font-size="10.00" fill="#000000">Three_Contamination_Types</text>
+<text text-anchor="start" x="676.82" y="-1605" font-family="arial" font-size="10.00" fill="#000000">Three distinct mechanisms: one&#45;shot</text>
+<text text-anchor="start" x="678.21" y="-1593" font-family="arial" font-size="10.00" fill="#000000"> probabilistic anchoring (mean bias),</text>
+<text text-anchor="start" x="671.53" y="-1581" font-family="arial" font-size="10.00" fill="#000000"> feedback loop contamination (variance</text>
+<text text-anchor="start" x="675.43" y="-1569" font-family="arial" font-size="10.00" fill="#000000"> collapse), and framing contamination</text>
+<text text-anchor="start" x="669.05" y="-1557" font-family="arial" font-size="10.00" fill="#000000"> (dimensionality reduction). #mechanism</text>
+</g>
+<!-- n11&#45;&gt;n12 -->
+<g id="edge12" class="edge">
+<title>n11&#45;&gt;n12</title>
+<path fill="none" stroke="#00ff00" d="M758.5,-1512.01C758.5,-1520.4 758.5,-1529.28 758.5,-1537.94"/>
+<polygon fill="#00ff00" stroke="#00ff00" points="755,-1537.96 758.5,-1547.96 762,-1537.96 755,-1537.96"/>
+</g>
+<!-- n13 -->
+<g id="node14" class="node">
+<title>n13</title>
+<path fill="white" stroke="#a6761d" stroke-width="2" d="M1939,-212C1939,-212 1766,-212 1766,-212 1760,-212 1754,-206 1754,-200 1754,-200 1754,-124 1754,-124 1754,-118 1760,-112 1766,-112 1766,-112 1939,-112 1939,-112 1945,-112 1951,-118 1951,-124 1951,-124 1951,-200 1951,-200 1951,-206 1945,-212 1939,-212"/>
+<text text-anchor="start" x="1803.83" y="-198" font-family="arial" font-weight="bold" font-size="10.00" fill="#000000">Full_Control_Powerful</text>
+<text text-anchor="start" x="1764.38" y="-181" font-family="arial" font-size="10.00" fill="#000000">Under full platform control (as DAGGRE</text>
+<text text-anchor="start" x="1777.98" y="-169" font-family="arial" font-size="10.00" fill="#000000"> enjoyed), statistical tools become</text>
+<text text-anchor="start" x="1789.66" y="-157" font-family="arial" font-size="10.00" fill="#000000"> substantially more powerful:</text>
+<text text-anchor="start" x="1781.88" y="-145" font-family="arial" font-size="10.00" fill="#000000"> contamination is experimentally</text>
+<text text-anchor="start" x="1779.65" y="-133" font-family="arial" font-size="10.00" fill="#000000"> measurable through randomized</text>
+<text text-anchor="start" x="1800.48" y="-121" font-family="arial" font-size="10.00" fill="#000000"> assignment. #condition</text>
+</g>
+<!-- n15 -->
+<g id="node16" class="node">
+<title>n15</title>
+<path fill="white" stroke="#a6761d" stroke-width="2" d="M1940.5,-348C1940.5,-348 1764.5,-348 1764.5,-348 1758.5,-348 1752.5,-342 1752.5,-336 1752.5,-336 1752.5,-260 1752.5,-260 1752.5,-254 1758.5,-248 1764.5,-248 1764.5,-248 1940.5,-248 1940.5,-248 1946.5,-248 1952.5,-254 1952.5,-260 1952.5,-260 1952.5,-336 1952.5,-336 1952.5,-342 1946.5,-348 1940.5,-348"/>
+<text text-anchor="start" x="1798.61" y="-334" font-family="arial" font-weight="bold" font-size="10.00" fill="#000000">Full_Control_Impractical</text>
+<text text-anchor="start" x="1762.22" y="-317" font-family="arial" font-size="10.00" fill="#000000">AMTAIR&#39;s aspiration to shared epistemic</text>
+<text text-anchor="start" x="1778.88" y="-305" font-family="arial" font-size="10.00" fill="#000000"> infrastructure requires open&#45;loop</text>
+<text text-anchor="start" x="1789.99" y="-293" font-family="arial" font-size="10.00" fill="#000000"> bidirectionality with external</text>
+<text text-anchor="start" x="1778.32" y="-281" font-family="arial" font-size="10.00" fill="#000000"> forecasting communities, making</text>
+<text text-anchor="start" x="1774.72" y="-269" font-family="arial" font-size="10.00" fill="#000000"> DAGGRE&#45;style control impossible.</text>
+<text text-anchor="start" x="1828.33" y="-257" font-family="arial" font-size="10.00" fill="#000000"> #condition</text>
+</g>
+<!-- n13&#45;&gt;n15 -->
+<g id="edge14" class="edge">
+<title>n13&#45;&gt;n15</title>
+<path fill="none" stroke="#ff0000" d="M1852.5,-212.14C1852.5,-220.42 1852.5,-229.1 1852.5,-237.61"/>
+<polygon fill="#ff0000" stroke="#ff0000" points="1849,-237.87 1852.5,-247.87 1856,-237.87 1849,-237.87"/>
+</g>
+<!-- n16 -->
+<g id="node17" class="node">
+<title>n16</title>
+<path fill="white" stroke="#a6761d" stroke-width="2" d="M2168.5,-348C2168.5,-348 1982.5,-348 1982.5,-348 1976.5,-348 1970.5,-342 1970.5,-336 1970.5,-336 1970.5,-260 1970.5,-260 1970.5,-254 1976.5,-248 1982.5,-248 1982.5,-248 2168.5,-248 2168.5,-248 2174.5,-248 2180.5,-254 2180.5,-260 2180.5,-260 2180.5,-336 2180.5,-336 2180.5,-342 2174.5,-348 2168.5,-348"/>
+<text text-anchor="start" x="2036.61" y="-334" font-family="arial" font-weight="bold" font-size="10.00" fill="#000000">Framing_Persists</text>
+<text text-anchor="start" x="2004.93" y="-317" font-family="arial" font-size="10.00" fill="#000000">Even under full platform control,</text>
+<text text-anchor="start" x="2004.93" y="-305" font-family="arial" font-size="10.00" fill="#000000"> framing contamination persists:</text>
+<text text-anchor="start" x="1980.49" y="-293" font-family="arial" font-size="10.00" fill="#000000"> AMTAIR&#39;s causal decompositions must be</text>
+<text text-anchor="start" x="2003.26" y="-281" font-family="arial" font-size="10.00" fill="#000000"> public for peer review and these</text>
+<text text-anchor="start" x="1999.93" y="-269" font-family="arial" font-size="10.00" fill="#000000"> structure how forecasters reason.</text>
+<text text-anchor="start" x="2051.32" y="-257" font-family="arial" font-size="10.00" fill="#000000"> #condition</text>
+</g>
+<!-- n13&#45;&gt;n16 -->
+<g id="edge15" class="edge">
+<title>n13&#45;&gt;n16</title>
+<path fill="none" stroke="#ff0000" d="M1934.27,-212.14C1950.78,-222.06 1968.24,-232.55 1985.03,-242.64"/>
+<polygon fill="#ff0000" stroke="#ff0000" points="1983.36,-245.72 1993.74,-247.87 1986.97,-239.72 1983.36,-245.72"/>
+</g>
+<!-- n33 -->
+<g id="node34" class="node">
+<title>n33</title>
+<path fill="#1b9e77" stroke="black" d="M1943,-460C1943,-460 1762,-460 1762,-460 1756,-460 1750,-454 1750,-448 1750,-448 1750,-396 1750,-396 1750,-390 1756,-384 1762,-384 1762,-384 1943,-384 1943,-384 1949,-384 1955,-390 1955,-396 1955,-396 1955,-448 1955,-448 1955,-454 1949,-460 1943,-460"/>
+<text text-anchor="start" x="1811.61" y="-446" font-family="arial" font-weight="bold" font-size="10.00" fill="#000000">Tier_1_Elimination</text>
+<text text-anchor="start" x="1777.16" y="-429" font-family="arial" font-size="10.00" fill="#000000">Full&#45;control statistics nearly solves</text>
+<text text-anchor="start" x="1760.2" y="-417" font-family="arial" font-size="10.00" fill="#000000"> the problem but AMTAIR cannot exercise</text>
+<text text-anchor="start" x="1781.32" y="-405" font-family="arial" font-size="10.00" fill="#000000"> full control, and even full control</text>
+<text text-anchor="start" x="1771.87" y="-393" font-family="arial" font-size="10.00" fill="#000000"> leaves framing contamination intact.</text>
+</g>
+<!-- n13&#45;&gt;n33 -->
+<g id="edge16" class="edge">
+<title>n13&#45;&gt;n33</title>
+<path fill="none" stroke="#00ff00" d="M1771.1,-212.17C1759.95,-222.56 1750.08,-234.52 1743.5,-248 1724,-287.94 1722.57,-308.79 1743.5,-348 1749.47,-359.18 1757.99,-368.94 1767.67,-377.38"/>
+<polygon fill="#00ff00" stroke="#00ff00" points="1765.69,-380.28 1775.66,-383.87 1770.1,-374.85 1765.69,-380.28"/>
+</g>
+<!-- n14 -->
+<g id="node15" class="node">
+<title>n14</title>
+<path fill="white" stroke="#666666" stroke-width="2" d="M1938.5,-76C1938.5,-76 1766.5,-76 1766.5,-76 1760.5,-76 1754.5,-70 1754.5,-64 1754.5,-64 1754.5,-12 1754.5,-12 1754.5,-6 1760.5,0 1766.5,0 1766.5,0 1938.5,0 1938.5,0 1944.5,0 1950.5,-6 1950.5,-12 1950.5,-12 1950.5,-64 1950.5,-64 1950.5,-70 1944.5,-76 1938.5,-76"/>
+<text text-anchor="start" x="1801.11" y="-62" font-family="arial" font-weight="bold" font-size="10.00" fill="#000000">DAGGRE_Comparison</text>
+<text text-anchor="start" x="1771.1" y="-45" font-family="arial" font-size="10.00" fill="#000000">DAGGRE demonstrated BN&#45;forecast</text>
+<text text-anchor="start" x="1781.1" y="-33" font-family="arial" font-size="10.00" fill="#000000"> integration works in closed&#45;loop</text>
+<text text-anchor="start" x="1783.04" y="-21" font-family="arial" font-size="10.00" fill="#000000"> systems with internal feedback</text>
+<text text-anchor="start" x="1798.32" y="-9" font-family="arial" font-size="10.00" fill="#000000"> containment. #evidence</text>
+</g>
+<!-- n14&#45;&gt;n13 -->
+<g id="edge13" class="edge">
+<title>n14&#45;&gt;n13</title>
+<path fill="none" stroke="#00ff00" d="M1852.5,-76.27C1852.5,-84.33 1852.5,-93.04 1852.5,-101.71"/>
+<polygon fill="#00ff00" stroke="#00ff00" points="1849,-101.82 1852.5,-111.82 1856,-101.82 1849,-101.82"/>
+</g>
+<!-- n15&#45;&gt;n33 -->
+<g id="edge17" class="edge">
+<title>n15&#45;&gt;n33</title>
+<path fill="none" stroke="#00ff00" d="M1852.5,-348.27C1852.5,-356.73 1852.5,-365.51 1852.5,-373.91"/>
+<polygon fill="#00ff00" stroke="#00ff00" points="1849,-373.93 1852.5,-383.93 1856,-373.93 1849,-373.93"/>
+</g>
+<!-- n16&#45;&gt;n33 -->
+<g id="edge18" class="edge">
+<title>n16&#45;&gt;n33</title>
+<path fill="none" stroke="#00ff00" d="M1985.76,-348.09C1967.04,-358.34 1947.47,-369.04 1929.27,-379"/>
+<polygon fill="#00ff00" stroke="#00ff00" points="1927.54,-375.96 1920.45,-383.83 1930.9,-382.1 1927.54,-375.96"/>
+</g>
+<!-- n17 -->
+<g id="node18" class="node">
+<title>n17</title>
+<path fill="white" stroke="#63aef2" stroke-width="2" d="M1938.5,-584C1938.5,-584 1766.5,-584 1766.5,-584 1760.5,-584 1754.5,-578 1754.5,-572 1754.5,-572 1754.5,-508 1754.5,-508 1754.5,-502 1760.5,-496 1766.5,-496 1766.5,-496 1938.5,-496 1938.5,-496 1944.5,-496 1950.5,-502 1950.5,-508 1950.5,-508 1950.5,-572 1950.5,-572 1950.5,-578 1944.5,-584 1938.5,-584"/>
+<text text-anchor="start" x="1800.82" y="-570" font-family="arial" font-weight="bold" font-size="10.00" fill="#000000">Statistical_Insufficiency</text>
+<text text-anchor="start" x="1779.16" y="-553" font-family="arial" font-size="10.00" fill="#000000">Under AMTAIR&#39;s dashboard&#45;only</text>
+<text text-anchor="start" x="1771.93" y="-541" font-family="arial" font-size="10.00" fill="#000000"> architecture, practical tools degrade</text>
+<text text-anchor="start" x="1771.65" y="-529" font-family="arial" font-size="10.00" fill="#000000"> but remain useful, yet each requires</text>
+<text text-anchor="start" x="1773.32" y="-517" font-family="arial" font-size="10.00" fill="#000000"> organizational infrastructure it does</text>
+<text text-anchor="start" x="1809.14" y="-505" font-family="arial" font-size="10.00" fill="#000000"> not generate. #hub</text>
+</g>
+<!-- n30 -->
+<g id="node31" class="node">
+<title>n30</title>
+<path fill="white" stroke="#63aef2" stroke-width="2" d="M1738.5,-1258C1738.5,-1258 1566.5,-1258 1566.5,-1258 1560.5,-1258 1554.5,-1252 1554.5,-1246 1554.5,-1246 1554.5,-1170 1554.5,-1170 1554.5,-1164 1560.5,-1158 1566.5,-1158 1566.5,-1158 1738.5,-1158 1738.5,-1158 1744.5,-1158 1750.5,-1164 1750.5,-1170 1750.5,-1170 1750.5,-1246 1750.5,-1246 1750.5,-1252 1744.5,-1258 1738.5,-1258"/>
+<text text-anchor="start" x="1590.82" y="-1244" font-family="arial" font-weight="bold" font-size="10.00" fill="#000000">Vice_Vulnerability_Mapping</text>
+<text text-anchor="start" x="1568.04" y="-1227" font-family="arial" font-size="10.00" fill="#000000">Each vice maps a specific mechanism</text>
+<text text-anchor="start" x="1564.98" y="-1215" font-family="arial" font-size="10.00" fill="#000000"> through which organizational dynamics</text>
+<text text-anchor="start" x="1580.82" y="-1203" font-family="arial" font-size="10.00" fill="#000000"> prevent a statistical prerequisite</text>
+<text text-anchor="start" x="1589.15" y="-1191" font-family="arial" font-size="10.00" fill="#000000"> from functioning, generating</text>
+<text text-anchor="start" x="1580.55" y="-1179" font-family="arial" font-size="10.00" fill="#000000"> institution&#45;specific prescriptions.</text>
+<text text-anchor="start" x="1631.66" y="-1167" font-family="arial" font-size="10.00" fill="#000000"> #product</text>
+</g>
+<!-- n17&#45;&gt;n30 -->
+<g id="edge37" class="edge">
+<title>n17&#45;&gt;n30</title>
+<path fill="none" stroke="#00ff00" d="M1852.5,-584.37C1852.5,-635.63 1852.5,-723.53 1852.5,-799 1852.5,-799 1852.5,-799 1852.5,-943 1852.5,-1028.26 1785.4,-1103.32 1728.94,-1151.39"/>
+<polygon fill="#00ff00" stroke="#00ff00" points="1726.47,-1148.89 1721.05,-1158 1730.96,-1154.26 1726.47,-1148.89"/>
+</g>
+<!-- n34 -->
+<g id="node35" class="node">
+<title>n34</title>
+<path fill="#1b9e77" stroke="black" d="M1687,-708C1687,-708 1514,-708 1514,-708 1508,-708 1502,-702 1502,-696 1502,-696 1502,-632 1502,-632 1502,-626 1508,-620 1514,-620 1514,-620 1687,-620 1687,-620 1693,-620 1699,-626 1699,-632 1699,-632 1699,-696 1699,-696 1699,-702 1693,-708 1687,-708"/>
+<text text-anchor="start" x="1551.55" y="-694" font-family="arial" font-weight="bold" font-size="10.00" fill="#000000">Identification_Problem</text>
+<text text-anchor="start" x="1512.38" y="-677" font-family="arial" font-size="10.00" fill="#000000">The statistical framework cannot KNOW</text>
+<text text-anchor="start" x="1518.76" y="-665" font-family="arial" font-size="10.00" fill="#000000"> what it needs: its parameters require</text>
+<text text-anchor="start" x="1542.38" y="-653" font-family="arial" font-size="10.00" fill="#000000"> organizational information</text>
+<text text-anchor="start" x="1528.48" y="-641" font-family="arial" font-size="10.00" fill="#000000"> environments outside the formal</text>
+<text text-anchor="start" x="1575.99" y="-629" font-family="arial" font-size="10.00" fill="#000000"> apparatus.</text>
+</g>
+<!-- n17&#45;&gt;n34 -->
+<g id="edge24" class="edge">
+<title>n17&#45;&gt;n34</title>
+<path fill="none" stroke="#00ff00" d="M1763.65,-584.01C1742.58,-594.22 1719.97,-605.16 1698.51,-615.55"/>
+<polygon fill="#00ff00" stroke="#00ff00" points="1696.87,-612.46 1689.39,-619.96 1699.92,-618.76 1696.87,-612.46"/>
+</g>
+<!-- n17&#45;&gt;n36 -->
+<g id="edge40" class="edge">
+<title>n17&#45;&gt;n36</title>
+<path fill="none" stroke="#00ff00" d="M1862.78,-584.08C1874.04,-635.08 1890.5,-722.71 1890.5,-799 1890.5,-799 1890.5,-799 1890.5,-1209 1890.5,-1385.45 1642.71,-1441.3 1494.62,-1458.92"/>
+<polygon fill="#00ff00" stroke="#00ff00" points="1494.11,-1455.46 1484.57,-1460.08 1494.91,-1462.41 1494.11,-1455.46"/>
+</g>
+<!-- n18 -->
+<g id="node19" class="node">
+<title>n18</title>
+<path fill="white" stroke="#e7298a" stroke-width="2" d="M1499.5,-454C1499.5,-454 1327.5,-454 1327.5,-454 1321.5,-454 1315.5,-448 1315.5,-442 1315.5,-442 1315.5,-402 1315.5,-402 1315.5,-396 1321.5,-390 1327.5,-390 1327.5,-390 1499.5,-390 1499.5,-390 1505.5,-390 1511.5,-396 1511.5,-402 1511.5,-402 1511.5,-442 1511.5,-442 1511.5,-448 1505.5,-454 1499.5,-454"/>
+<text text-anchor="start" x="1351.26" y="-440" font-family="arial" font-weight="bold" font-size="10.00" fill="#000000">Alpha_Needs_Infrastructure</text>
+<text text-anchor="start" x="1326.27" y="-423" font-family="arial" font-size="10.00" fill="#000000">Quality parameters require track&#45;record</text>
+<text text-anchor="start" x="1330.99" y="-411" font-family="arial" font-size="10.00" fill="#000000"> infrastructure maintained by platform</text>
+<text text-anchor="start" x="1351.27" y="-399" font-family="arial" font-size="10.00" fill="#000000"> organizations. #mechanism</text>
+</g>
+<!-- n18&#45;&gt;n17 -->
+<g id="edge20" class="edge">
+<title>n18&#45;&gt;n17</title>
+<path fill="none" stroke="#00ff00" d="M1500.86,-454C1507.48,-456.11 1514.08,-458.13 1520.5,-460 1594.63,-481.58 1679.32,-501.66 1744.6,-516.17"/>
+<polygon fill="#00ff00" stroke="#00ff00" points="1743.98,-519.62 1754.5,-518.37 1745.49,-512.79 1743.98,-519.62"/>
+</g>
+<!-- n18&#45;&gt;n34 -->
+<g id="edge25" class="edge">
+<title>n18&#45;&gt;n34</title>
+<path fill="none" stroke="#00ff00" d="M1437.95,-454.38C1469.11,-494.37 1523.4,-564.05 1560.6,-611.79"/>
+<polygon fill="#00ff00" stroke="#00ff00" points="1557.97,-614.11 1566.88,-619.85 1563.49,-609.81 1557.97,-614.11"/>
+</g>
+<!-- n19 -->
+<g id="node20" class="node">
+<title>n19</title>
+<path fill="white" stroke="#e7298a" stroke-width="2" d="M1719.5,-454C1719.5,-454 1541.5,-454 1541.5,-454 1535.5,-454 1529.5,-448 1529.5,-442 1529.5,-442 1529.5,-402 1529.5,-402 1529.5,-396 1535.5,-390 1541.5,-390 1541.5,-390 1719.5,-390 1719.5,-390 1725.5,-390 1731.5,-396 1731.5,-402 1731.5,-402 1731.5,-442 1731.5,-442 1731.5,-448 1725.5,-454 1719.5,-454"/>
+<text text-anchor="start" x="1571.87" y="-440" font-family="arial" font-weight="bold" font-size="10.00" fill="#000000">Gamma_Needs_Metadata</text>
+<text text-anchor="start" x="1554.66" y="-423" font-family="arial" font-size="10.00" fill="#000000">Contamination parameters require</text>
+<text text-anchor="start" x="1542.42" y="-411" font-family="arial" font-size="10.00" fill="#000000"> exposure metadata that someone must</text>
+<text text-anchor="start" x="1539.36" y="-399" font-family="arial" font-size="10.00" fill="#000000"> design, fund, and maintain. #mechanism</text>
+</g>
+<!-- n19&#45;&gt;n17 -->
+<g id="edge21" class="edge">
+<title>n19&#45;&gt;n17</title>
+<path fill="none" stroke="#00ff00" d="M1689.99,-454.09C1711.74,-465.45 1736.89,-478.59 1760.8,-491.08"/>
+<polygon fill="#00ff00" stroke="#00ff00" points="1759.41,-494.31 1769.89,-495.84 1762.65,-488.1 1759.41,-494.31"/>
+</g>
+<!-- n19&#45;&gt;n34 -->
+<g id="edge26" class="edge">
+<title>n19&#45;&gt;n34</title>
+<path fill="none" stroke="#00ff00" d="M1626.58,-454.38C1621.65,-493.79 1613.12,-562.04 1607.16,-609.71"/>
+<polygon fill="#00ff00" stroke="#00ff00" points="1603.66,-609.49 1605.89,-619.85 1610.61,-610.36 1603.66,-609.49"/>
+</g>
+<!-- n20 -->
+<g id="node21" class="node">
+<title>n20</title>
+<path fill="white" stroke="#e7298a" stroke-width="2" d="M2163.5,-460C2163.5,-460 1985.5,-460 1985.5,-460 1979.5,-460 1973.5,-454 1973.5,-448 1973.5,-448 1973.5,-396 1973.5,-396 1973.5,-390 1979.5,-384 1985.5,-384 1985.5,-384 2163.5,-384 2163.5,-384 2169.5,-384 2175.5,-390 2175.5,-396 2175.5,-396 2175.5,-448 2175.5,-448 2175.5,-454 2169.5,-460 2163.5,-460"/>
+<text text-anchor="start" x="2037.55" y="-446" font-family="arial" font-weight="bold" font-size="10.00" fill="#000000">K_Unobservable</text>
+<text text-anchor="start" x="1983.37" y="-429" font-family="arial" font-size="10.00" fill="#000000">The number of forecasters who observed</text>
+<text text-anchor="start" x="1983.37" y="-417" font-family="arial" font-size="10.00" fill="#000000"> AMTAIR outputs becomes unobservable</text>
+<text text-anchor="start" x="2004.49" y="-405" font-family="arial" font-size="10.00" fill="#000000"> without organizational tracking.</text>
+<text text-anchor="start" x="2044.77" y="-393" font-family="arial" font-size="10.00" fill="#000000"> #mechanism</text>
+</g>
+<!-- n20&#45;&gt;n17 -->
+<g id="edge22" class="edge">
+<title>n20&#45;&gt;n17</title>
+<path fill="none" stroke="#00ff00" d="M2003.65,-460.02C1984.72,-469.91 1963.99,-480.74 1944.12,-491.13"/>
+<polygon fill="#00ff00" stroke="#00ff00" points="1942.3,-488.13 1935.06,-495.86 1945.54,-494.33 1942.3,-488.13"/>
+</g>
+<!-- n21 -->
+<g id="node22" class="node">
+<title>n21</title>
+<path fill="white" stroke="#e7298a" stroke-width="2" d="M2377.5,-454C2377.5,-454 2205.5,-454 2205.5,-454 2199.5,-454 2193.5,-448 2193.5,-442 2193.5,-442 2193.5,-402 2193.5,-402 2193.5,-396 2199.5,-390 2205.5,-390 2205.5,-390 2377.5,-390 2377.5,-390 2383.5,-390 2389.5,-396 2389.5,-402 2389.5,-402 2389.5,-442 2389.5,-442 2389.5,-448 2383.5,-454 2377.5,-454"/>
+<text text-anchor="start" x="2222.88" y="-440" font-family="arial" font-weight="bold" font-size="10.00" fill="#000000">Embargo_Needs_Commitment</text>
+<text text-anchor="start" x="2222.6" y="-423" font-family="arial" font-size="10.00" fill="#000000">Embargo enforcement requires</text>
+<text text-anchor="start" x="2217.6" y="-411" font-family="arial" font-size="10.00" fill="#000000"> institutional commitment, not just</text>
+<text text-anchor="start" x="2210.1" y="-399" font-family="arial" font-size="10.00" fill="#000000"> software configuration. #mechanism</text>
+</g>
+<!-- n21&#45;&gt;n17 -->
+<g id="edge23" class="edge">
+<title>n21&#45;&gt;n17</title>
+<path fill="none" stroke="#00ff00" d="M2204.14,-454C2197.52,-456.11 2190.92,-458.13 2184.5,-460 2110.37,-481.58 2025.68,-501.66 1960.4,-516.17"/>
+<polygon fill="#00ff00" stroke="#00ff00" points="1959.51,-512.79 1950.5,-518.37 1961.02,-519.62 1959.51,-512.79"/>
+</g>
+<!-- n22 -->
+<g id="node23" class="node">
+<title>n22</title>
+<path fill="white" stroke="#63aef2" stroke-width="2" d="M1627.5,-856C1627.5,-856 1455.5,-856 1455.5,-856 1449.5,-856 1443.5,-850 1443.5,-844 1443.5,-844 1443.5,-756 1443.5,-756 1443.5,-750 1449.5,-744 1455.5,-744 1455.5,-744 1627.5,-744 1627.5,-744 1633.5,-744 1639.5,-750 1639.5,-756 1639.5,-756 1639.5,-844 1639.5,-844 1639.5,-850 1633.5,-856 1627.5,-856"/>
+<text text-anchor="start" x="1520.94" y="-842" font-family="arial" font-weight="bold" font-size="10.00" fill="#000000">Org_Gap</text>
+<text text-anchor="start" x="1480.93" y="-825" font-family="arial" font-size="10.00" fill="#000000">The gap between statistical</text>
+<text text-anchor="start" x="1456.5" y="-813" font-family="arial" font-size="10.00" fill="#000000"> prescription and AMTAIR&#39;s reality has</text>
+<text text-anchor="start" x="1482.32" y="-801" font-family="arial" font-size="10.00" fill="#000000"> two components: practical</text>
+<text text-anchor="start" x="1468.43" y="-789" font-family="arial" font-size="10.00" fill="#000000"> (architecture lacks conditions for</text>
+<text text-anchor="start" x="1463.44" y="-777" font-family="arial" font-size="10.00" fill="#000000"> full control) and principled (framing</text>
+<text text-anchor="start" x="1462.6" y="-765" font-family="arial" font-size="10.00" fill="#000000"> contamination persists regardless).</text>
+<text text-anchor="start" x="1528.99" y="-753" font-family="arial" font-size="10.00" fill="#000000"> #hub</text>
+</g>
+<!-- n35 -->
+<g id="node36" class="node">
+<title>n35</title>
+<path fill="#1b9e77" stroke="black" d="M1598.5,-980C1598.5,-980 1426.5,-980 1426.5,-980 1420.5,-980 1414.5,-974 1414.5,-968 1414.5,-968 1414.5,-916 1414.5,-916 1414.5,-910 1420.5,-904 1426.5,-904 1426.5,-904 1598.5,-904 1598.5,-904 1604.5,-904 1610.5,-910 1610.5,-916 1610.5,-916 1610.5,-968 1610.5,-968 1610.5,-974 1604.5,-980 1598.5,-980"/>
+<text text-anchor="start" x="1462.78" y="-966" font-family="arial" font-weight="bold" font-size="10.00" fill="#000000">Amplification_Problem</text>
+<text text-anchor="start" x="1438.04" y="-949" font-family="arial" font-size="10.00" fill="#000000">Even if parameters were perfectly</text>
+<text text-anchor="start" x="1433.04" y="-937" font-family="arial" font-size="10.00" fill="#000000"> estimated, organizational dynamics</text>
+<text text-anchor="start" x="1433.31" y="-925" font-family="arial" font-size="10.00" fill="#000000"> intervene between prescription and</text>
+<text text-anchor="start" x="1475.83" y="-913" font-family="arial" font-size="10.00" fill="#000000"> implementation.</text>
+</g>
+<!-- n22&#45;&gt;n35 -->
+<g id="edge28" class="edge">
+<title>n22&#45;&gt;n35</title>
+<path fill="none" stroke="#00ff00" d="M1530.04,-856.33C1527.47,-868.75 1524.76,-881.82 1522.26,-893.87"/>
+<polygon fill="#00ff00" stroke="#00ff00" points="1518.83,-893.21 1520.22,-903.71 1525.68,-894.63 1518.83,-893.21"/>
+</g>
+<!-- n23 -->
+<g id="node24" class="node">
+<title>n23</title>
+<path fill="white" stroke="#63aef2" stroke-width="2" d="M1491.5,-1116C1491.5,-1116 1319.5,-1116 1319.5,-1116 1313.5,-1116 1307.5,-1110 1307.5,-1104 1307.5,-1104 1307.5,-1040 1307.5,-1040 1307.5,-1034 1313.5,-1028 1319.5,-1028 1319.5,-1028 1491.5,-1028 1491.5,-1028 1497.5,-1028 1503.5,-1034 1503.5,-1040 1503.5,-1040 1503.5,-1104 1503.5,-1104 1503.5,-1110 1497.5,-1116 1491.5,-1116"/>
+<text text-anchor="start" x="1356.05" y="-1102" font-family="arial" font-weight="bold" font-size="10.00" fill="#000000">Vices_Explain_Failure</text>
+<text text-anchor="start" x="1322.15" y="-1085" font-family="arial" font-size="10.00" fill="#000000">Epistemic vices are not labels applied</text>
+<text text-anchor="start" x="1322.69" y="-1073" font-family="arial" font-size="10.00" fill="#000000"> after the fact but causal explanations</text>
+<text text-anchor="start" x="1337.16" y="-1061" font-family="arial" font-size="10.00" fill="#000000"> of why infrastructure statistical</text>
+<text text-anchor="start" x="1334.09" y="-1049" font-family="arial" font-size="10.00" fill="#000000"> tools need is unlikely to emerge</text>
+<text text-anchor="start" x="1342.99" y="-1037" font-family="arial" font-size="10.00" fill="#000000"> spontaneously. #framework</text>
+</g>
+<!-- n29 -->
+<g id="node30" class="node">
+<title>n29</title>
+<path fill="white" stroke="#63aef2" stroke-width="2" d="M1524.5,-1258C1524.5,-1258 1352.5,-1258 1352.5,-1258 1346.5,-1258 1340.5,-1252 1340.5,-1246 1340.5,-1246 1340.5,-1170 1340.5,-1170 1340.5,-1164 1346.5,-1158 1352.5,-1158 1352.5,-1158 1524.5,-1158 1524.5,-1158 1530.5,-1158 1536.5,-1164 1536.5,-1170 1536.5,-1170 1536.5,-1246 1536.5,-1246 1536.5,-1252 1530.5,-1258 1524.5,-1258"/>
+<text text-anchor="start" x="1367.1" y="-1244" font-family="arial" font-weight="bold" font-size="10.00" fill="#000000">Individual_Collective_Distinction</text>
+<text text-anchor="start" x="1355.71" y="-1227" font-family="arial" font-size="10.00" fill="#000000">Hubris, insouciance, and injustice are</text>
+<text text-anchor="start" x="1360.71" y="-1215" font-family="arial" font-size="10.00" fill="#000000"> individual dispositions amplified by</text>
+<text text-anchor="start" x="1374.59" y="-1203" font-family="arial" font-size="10.00" fill="#000000"> structure; fragmentation and</text>
+<text text-anchor="start" x="1360.15" y="-1191" font-family="arial" font-size="10.00" fill="#000000"> complexity are genuinely collective</text>
+<text text-anchor="start" x="1361.55" y="-1179" font-family="arial" font-size="10.00" fill="#000000"> vices irreducible to individual&#45;level</text>
+<text text-anchor="start" x="1390.16" y="-1167" font-family="arial" font-size="10.00" fill="#000000"> analysis. #framework</text>
+</g>
+<!-- n23&#45;&gt;n29 -->
+<g id="edge35" class="edge">
+<title>n23&#45;&gt;n29</title>
+<path fill="none" stroke="#00ff00" d="M1416.12,-1116.14C1418.63,-1126.33 1421.35,-1137.37 1424,-1148.12"/>
+<polygon fill="#00ff00" stroke="#00ff00" points="1420.62,-1149.02 1426.41,-1157.89 1427.41,-1147.34 1420.62,-1149.02"/>
+</g>
+<!-- n23&#45;&gt;n30 -->
+<g id="edge36" class="edge">
+<title>n23&#45;&gt;n30</title>
+<path fill="none" stroke="#00ff00" d="M1485.01,-1116.14C1506.68,-1127.89 1530.42,-1140.77 1553.04,-1153.04"/>
+<polygon fill="#00ff00" stroke="#00ff00" points="1551.52,-1156.2 1561.98,-1157.89 1554.86,-1150.05 1551.52,-1156.2"/>
+</g>
+<!-- n23&#45;&gt;n36 -->
+<g id="edge41" class="edge">
+<title>n23&#45;&gt;n36</title>
+<path fill="none" stroke="#00ff00" d="M1354.23,-1116.4C1344.95,-1127.01 1336.61,-1139.07 1331.5,-1152 1295.6,-1242.85 1335.04,-1357.64 1363.21,-1420.53"/>
+<polygon fill="#00ff00" stroke="#00ff00" points="1360.1,-1422.15 1367.44,-1429.79 1366.47,-1419.24 1360.1,-1422.15"/>
+</g>
+<!-- n24 -->
+<g id="node25" class="node">
+<title>n24</title>
+<path fill="white" stroke="#63aef2" stroke-width="2" d="M1812.5,-992C1812.5,-992 1640.5,-992 1640.5,-992 1634.5,-992 1628.5,-986 1628.5,-980 1628.5,-980 1628.5,-904 1628.5,-904 1628.5,-898 1634.5,-892 1640.5,-892 1640.5,-892 1812.5,-892 1812.5,-892 1818.5,-892 1824.5,-898 1824.5,-904 1824.5,-904 1824.5,-980 1824.5,-980 1824.5,-986 1818.5,-992 1812.5,-992"/>
+<text text-anchor="start" x="1712.06" y="-978" font-family="arial" font-weight="bold" font-size="10.00" fill="#000000">Hubris</text>
+<text text-anchor="start" x="1638.71" y="-961" font-family="arial" font-size="10.00" fill="#000000">Epistemic hubris explains why embargo</text>
+<text text-anchor="start" x="1646.22" y="-949" font-family="arial" font-size="10.00" fill="#000000"> protocols get overridden: AMTAIR&#39;s</text>
+<text text-anchor="start" x="1653.42" y="-937" font-family="arial" font-size="10.00" fill="#000000"> quantitative precision creates an</text>
+<text text-anchor="start" x="1666.49" y="-925" font-family="arial" font-size="10.00" fill="#000000"> illusion of certainty making</text>
+<text text-anchor="start" x="1658.15" y="-913" font-family="arial" font-size="10.00" fill="#000000"> contamination controls appear</text>
+<text text-anchor="start" x="1682.32" y="-901" font-family="arial" font-size="10.00" fill="#000000"> unnecessary. #vice</text>
+</g>
+<!-- n24&#45;&gt;n23 -->
+<g id="edge30" class="edge">
+<title>n24&#45;&gt;n23</title>
+<path fill="none" stroke="#00ff00" d="M1628.38,-988.28C1625.39,-989.55 1622.43,-990.79 1619.5,-992 1585.2,-1006.16 1547.35,-1020.54 1513.13,-1033.07"/>
+<polygon fill="#00ff00" stroke="#00ff00" points="1511.77,-1029.84 1503.58,-1036.56 1514.17,-1036.42 1511.77,-1029.84"/>
+</g>
+<!-- n25 -->
+<g id="node26" class="node">
+<title>n25</title>
+<path fill="white" stroke="#63aef2" stroke-width="2" d="M742.5,-992C742.5,-992 566.5,-992 566.5,-992 560.5,-992 554.5,-986 554.5,-980 554.5,-980 554.5,-904 554.5,-904 554.5,-898 560.5,-892 566.5,-892 566.5,-892 742.5,-892 742.5,-892 748.5,-892 754.5,-898 754.5,-904 754.5,-904 754.5,-980 754.5,-980 754.5,-986 748.5,-992 742.5,-992"/>
+<text text-anchor="start" x="627.82" y="-978" font-family="arial" font-weight="bold" font-size="10.00" fill="#000000">Insouciance</text>
+<text text-anchor="start" x="575.04" y="-961" font-family="arial" font-size="10.00" fill="#000000">Epistemic insouciance explains why</text>
+<text text-anchor="start" x="585.59" y="-949" font-family="arial" font-size="10.00" fill="#000000"> exposure metadata never gets</text>
+<text text-anchor="start" x="581.72" y="-937" font-family="arial" font-size="10.00" fill="#000000"> collected: AMTAIR&#39;s institutional</text>
+<text text-anchor="start" x="574.48" y="-925" font-family="arial" font-size="10.00" fill="#000000"> setting places it outside compliance</text>
+<text text-anchor="start" x="564.47" y="-913" font-family="arial" font-size="10.00" fill="#000000"> mandates and contamination damage is</text>
+<text text-anchor="start" x="596.7" y="-901" font-family="arial" font-size="10.00" fill="#000000"> subtle and delayed. #vice</text>
+</g>
+<!-- n25&#45;&gt;n23 -->
+<g id="edge31" class="edge">
+<title>n25&#45;&gt;n23</title>
+<path fill="none" stroke="#00ff00" d="M754.7,-989.6C757.64,-990.47 760.58,-991.27 763.5,-992 991.55,-1048.98 1064.19,-976.93 1297.55,-1028.01"/>
+<polygon fill="#00ff00" stroke="#00ff00" points="1296.82,-1031.43 1307.34,-1030.2 1298.35,-1024.6 1296.82,-1031.43"/>
+</g>
+<!-- n26 -->
+<g id="node27" class="node">
+<title>n26</title>
+<path fill="white" stroke="#63aef2" stroke-width="2" d="M956.5,-986C956.5,-986 784.5,-986 784.5,-986 778.5,-986 772.5,-980 772.5,-974 772.5,-974 772.5,-910 772.5,-910 772.5,-904 778.5,-898 784.5,-898 784.5,-898 956.5,-898 956.5,-898 962.5,-898 968.5,-904 968.5,-910 968.5,-910 968.5,-974 968.5,-974 968.5,-980 962.5,-986 956.5,-986"/>
+<text text-anchor="start" x="852.16" y="-972" font-family="arial" font-weight="bold" font-size="10.00" fill="#000000">Injustice</text>
+<text text-anchor="start" x="799.38" y="-955" font-family="arial" font-size="10.00" fill="#000000">Epistemic injustice explains why</text>
+<text text-anchor="start" x="802.43" y="-943" font-family="arial" font-size="10.00" fill="#000000"> authority overrides calibration:</text>
+<text text-anchor="start" x="803.82" y="-931" font-family="arial" font-size="10.00" fill="#000000"> quantitative reasoning carries</text>
+<text text-anchor="start" x="782.16" y="-919" font-family="arial" font-size="10.00" fill="#000000"> disproportionate credence in AMTAIR&#39;s</text>
+<text text-anchor="start" x="804.38" y="-907" font-family="arial" font-size="10.00" fill="#000000"> operating communities. #vice</text>
+</g>
+<!-- n26&#45;&gt;n23 -->
+<g id="edge32" class="edge">
+<title>n26&#45;&gt;n23</title>
+<path fill="none" stroke="#00ff00" d="M959.03,-986.1C965.2,-988.31 971.4,-990.31 977.5,-992 1112.73,-1029.51 1157.29,-994.56 1297.48,-1027.96"/>
+<polygon fill="#00ff00" stroke="#00ff00" points="1296.75,-1031.39 1307.3,-1030.38 1298.43,-1024.59 1296.75,-1031.39"/>
+</g>
+<!-- n27 -->
+<g id="node28" class="node">
+<title>n27</title>
+<path fill="white" stroke="#63aef2" stroke-width="2" d="M1170.5,-986C1170.5,-986 998.5,-986 998.5,-986 992.5,-986 986.5,-980 986.5,-974 986.5,-974 986.5,-910 986.5,-910 986.5,-904 992.5,-898 998.5,-898 998.5,-898 1170.5,-898 1170.5,-898 1176.5,-898 1182.5,-904 1182.5,-910 1182.5,-910 1182.5,-974 1182.5,-974 1182.5,-980 1176.5,-986 1170.5,-986"/>
+<text text-anchor="start" x="1052.27" y="-972" font-family="arial" font-weight="bold" font-size="10.00" fill="#000000">Fragmentation</text>
+<text text-anchor="start" x="996.98" y="-955" font-family="arial" font-size="10.00" fill="#000000">Organizational fragmentation means no</text>
+<text text-anchor="start" x="1022.82" y="-943" font-family="arial" font-size="10.00" fill="#000000"> single actor sees the whole</text>
+<text text-anchor="start" x="999.2" y="-931" font-family="arial" font-size="10.00" fill="#000000"> contamination loop spanning AMTAIR</text>
+<text text-anchor="start" x="1001.7" y="-919" font-family="arial" font-size="10.00" fill="#000000"> operators, forecasting platforms, and</text>
+<text text-anchor="start" x="1040.88" y="-907" font-family="arial" font-size="10.00" fill="#000000"> policy teams. #vice</text>
+</g>
+<!-- n27&#45;&gt;n23 -->
+<g id="edge33" class="edge">
+<title>n27&#45;&gt;n23</title>
+<path fill="none" stroke="#00ff00" d="M1177.04,-986.1C1181.91,-988.14 1186.75,-990.12 1191.5,-992 1235.42,-1009.39 1249.75,-1010.56 1297.93,-1027.87"/>
+<polygon fill="#00ff00" stroke="#00ff00" points="1296.74,-1031.16 1307.34,-1031.3 1299.14,-1024.58 1296.74,-1031.16"/>
+</g>
+<!-- n28 -->
+<g id="node29" class="node">
+<title>n28</title>
+<path fill="white" stroke="#63aef2" stroke-width="2" d="M1384.5,-992C1384.5,-992 1212.5,-992 1212.5,-992 1206.5,-992 1200.5,-986 1200.5,-980 1200.5,-980 1200.5,-904 1200.5,-904 1200.5,-898 1206.5,-892 1212.5,-892 1212.5,-892 1384.5,-892 1384.5,-892 1390.5,-892 1396.5,-898 1396.5,-904 1396.5,-904 1396.5,-980 1396.5,-980 1396.5,-986 1390.5,-992 1384.5,-992"/>
+<text text-anchor="start" x="1273.78" y="-978" font-family="arial" font-weight="bold" font-size="10.00" fill="#000000">Complexity</text>
+<text text-anchor="start" x="1224.88" y="-961" font-family="arial" font-size="10.00" fill="#000000">Organizational complexity means</text>
+<text text-anchor="start" x="1229.88" y="-949" font-family="arial" font-size="10.00" fill="#000000"> multiple extractions, ensemble</text>
+<text text-anchor="start" x="1224.87" y="-937" font-family="arial" font-size="10.00" fill="#000000"> methods, author refinement, and</text>
+<text text-anchor="start" x="1222.38" y="-925" font-family="arial" font-size="10.00" fill="#000000"> cross&#45;platform propagation create</text>
+<text text-anchor="start" x="1232.09" y="-913" font-family="arial" font-size="10.00" fill="#000000"> pathways too intricate for any</text>
+<text text-anchor="start" x="1243.77" y="-901" font-family="arial" font-size="10.00" fill="#000000"> individual to trace. #vice</text>
+</g>
+<!-- n28&#45;&gt;n23 -->
+<g id="edge34" class="edge">
+<title>n28&#45;&gt;n23</title>
+<path fill="none" stroke="#00ff00" d="M1339.56,-992.12C1347.13,-1001.17 1355.05,-1010.65 1362.67,-1019.76"/>
+<polygon fill="#00ff00" stroke="#00ff00" points="1360.17,-1022.23 1369.27,-1027.65 1365.54,-1017.74 1360.17,-1022.23"/>
+</g>
+<!-- n31 -->
+<g id="node32" class="node">
+<title>n31</title>
+<path fill="white" stroke="#63aef2" stroke-width="2" d="M1546.5,-1388C1546.5,-1388 1374.5,-1388 1374.5,-1388 1368.5,-1388 1362.5,-1382 1362.5,-1376 1362.5,-1376 1362.5,-1312 1362.5,-1312 1362.5,-1306 1368.5,-1300 1374.5,-1300 1374.5,-1300 1546.5,-1300 1546.5,-1300 1552.5,-1300 1558.5,-1306 1558.5,-1312 1558.5,-1312 1558.5,-1376 1558.5,-1376 1558.5,-1382 1552.5,-1388 1546.5,-1388"/>
+<text text-anchor="start" x="1412.99" y="-1374" font-family="arial" font-weight="bold" font-size="10.00" fill="#000000">Recursive_Challenge</text>
+<text text-anchor="start" x="1372.43" y="-1357" font-family="arial" font-size="10.00" fill="#000000">The institution operating AMTAIR would</text>
+<text text-anchor="start" x="1386.87" y="-1345" font-family="arial" font-size="10.00" fill="#000000"> itself be subject to every vice the</text>
+<text text-anchor="start" x="1377.14" y="-1333" font-family="arial" font-size="10.00" fill="#000000"> mapping identifies. Each governance</text>
+<text text-anchor="start" x="1382.15" y="-1321" font-family="arial" font-size="10.00" fill="#000000"> layer reduces risk; none eliminates</text>
+<text text-anchor="start" x="1433.55" y="-1309" font-family="arial" font-size="10.00" fill="#000000"> it. #qualifier</text>
+</g>
+<!-- n30&#45;&gt;n31 -->
+<g id="edge38" class="edge">
+<title>n30&#45;&gt;n31</title>
+<path fill="none" stroke="#00ff00" d="M1582.1,-1258.14C1565.42,-1269.78 1547.63,-1282.19 1530.95,-1293.83"/>
+<polygon fill="#00ff00" stroke="#00ff00" points="1528.54,-1291.25 1522.34,-1299.84 1532.54,-1296.99 1528.54,-1291.25"/>
+</g>
+<!-- n30&#45;&gt;n36 -->
+<g id="edge42" class="edge">
+<title>n30&#45;&gt;n36</title>
+<path fill="none" stroke="#00ff00" d="M1639.53,-1258.38C1626.92,-1297.92 1604.19,-1352.45 1567.5,-1388 1546.9,-1407.95 1520.44,-1423.3 1494.15,-1434.92"/>
+<polygon fill="#00ff00" stroke="#00ff00" points="1492.7,-1431.74 1484.87,-1438.88 1495.44,-1438.18 1492.7,-1431.74"/>
+</g>
+<!-- n31&#45;&gt;n36 -->
+<g id="edge43" class="edge">
+<title>n31&#45;&gt;n36</title>
+<path fill="none" stroke="#00ff00" d="M1434.41,-1388.01C1427.97,-1398.62 1421.05,-1410.03 1414.53,-1420.79"/>
+<polygon fill="#00ff00" stroke="#00ff00" points="1411.35,-1419.28 1409.16,-1429.64 1417.34,-1422.91 1411.35,-1419.28"/>
+</g>
+<!-- n32 -->
+<g id="node33" class="node">
+<title>n32</title>
+<path fill="white" stroke="#63aef2" stroke-width="2" d="M1472.5,-1636C1472.5,-1636 1300.5,-1636 1300.5,-1636 1294.5,-1636 1288.5,-1630 1288.5,-1624 1288.5,-1624 1288.5,-1560 1288.5,-1560 1288.5,-1554 1294.5,-1548 1300.5,-1548 1300.5,-1548 1472.5,-1548 1472.5,-1548 1478.5,-1548 1484.5,-1554 1484.5,-1560 1484.5,-1560 1484.5,-1624 1484.5,-1624 1484.5,-1630 1478.5,-1636 1472.5,-1636"/>
+<text text-anchor="start" x="1322.04" y="-1622" font-family="arial" font-weight="bold" font-size="10.00" fill="#000000">Managed_Over_Unmanaged</text>
+<text text-anchor="start" x="1313.98" y="-1605" font-family="arial" font-size="10.00" fill="#000000">Managed integration with named</text>
+<text text-anchor="start" x="1312.6" y="-1593" font-family="arial" font-size="10.00" fill="#000000"> vulnerabilities and organizational</text>
+<text text-anchor="start" x="1302.32" y="-1581" font-family="arial" font-size="10.00" fill="#000000"> safeguards is categorically preferable</text>
+<text text-anchor="start" x="1299.53" y="-1569" font-family="arial" font-size="10.00" fill="#000000"> to unmanaged informal integration that</text>
+<text text-anchor="start" x="1310.66" y="-1557" font-family="arial" font-size="10.00" fill="#000000"> will occur regardless. #conclusion</text>
+</g>
+<!-- n33&#45;&gt;n17 -->
+<g id="edge19" class="edge">
+<title>n33&#45;&gt;n17</title>
+<path fill="none" stroke="#ff0000" d="M1852.5,-460.02C1852.5,-468.22 1852.5,-477.06 1852.5,-485.76"/>
+<polygon fill="#ff0000" stroke="#ff0000" points="1849,-485.86 1852.5,-495.86 1856,-485.86 1849,-485.86"/>
+</g>
+<!-- n34&#45;&gt;n22 -->
+<g id="edge27" class="edge">
+<title>n34&#45;&gt;n22</title>
+<path fill="none" stroke="#ff0000" d="M1581.51,-708.14C1577.81,-716.54 1573.85,-725.52 1569.92,-734.44"/>
+<polygon fill="#ff0000" stroke="#ff0000" points="1566.68,-733.13 1565.85,-743.69 1573.08,-735.95 1566.68,-733.13"/>
+</g>
+<!-- n35&#45;&gt;n23 -->
+<g id="edge29" class="edge">
+<title>n35&#45;&gt;n23</title>
+<path fill="none" stroke="#ff0000" d="M1481.55,-980.02C1471.13,-992.49 1459.31,-1006.63 1448.15,-1019.98"/>
+<polygon fill="#ff0000" stroke="#ff0000" points="1445.4,-1017.82 1441.67,-1027.73 1450.77,-1022.31 1445.4,-1017.82"/>
+</g>
+<!-- n36&#45;&gt;n32 -->
+<g id="edge45" class="edge">
+<title>n36&#45;&gt;n32</title>
+<path fill="none" stroke="#ff0000" d="M1386.5,-1506.27C1386.5,-1516.25 1386.5,-1527.24 1386.5,-1537.9"/>
+<polygon fill="#ff0000" stroke="#ff0000" points="1383,-1537.98 1386.5,-1547.98 1390,-1537.98 1383,-1537.98"/>
+</g>
+</g>
+</svg>
+</div></argdown-map><figcaption>Meyer (2025) — Live Models: Integrating Prediction Markets into AMTAIR — Argument map of the paper's own three-step elimination argument</figcaption></figure>  </div>
+</body>
+</html>
